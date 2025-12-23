@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ProtectedRoute } from '@/components/common/ProtectedRoute';
 import { CardList } from '@/components/flashcard/CardList';
+import { CardTable } from '@/components/flashcard/CardTable';
 import { CardForm } from '@/components/flashcard/CardForm';
 import { ImportExport } from '@/components/flashcard/ImportExport';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,8 @@ import { Card, CardFormData, Deck, ImportCard } from '@/types';
 import { useCards } from '@/hooks/useCards';
 import { getDeck } from '@/services/deck';
 import { toast } from 'sonner';
-import { ArrowLeft, Plus } from 'lucide-react';
+import { ArrowLeft, Plus, LayoutGrid, List, Search, Play } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import {
   Dialog,
   DialogContent,
@@ -33,6 +35,8 @@ export default function DeckCardsPage() {
   const [showCardForm, setShowCardForm] = useState(false);
   const [editingCard, setEditingCard] = useState<Card | null>(null);
   const [deletingCard, setDeletingCard] = useState<Card | null>(null);
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     if (deckId) {
@@ -79,6 +83,16 @@ export default function DeckCardsPage() {
     return success;
   };
 
+  const filteredCards = cards.filter(card => {
+    const query = searchQuery.toLowerCase();
+    return (
+      card.vocab.toLowerCase().includes(query) ||
+      card.meaning.toLowerCase().includes(query) ||
+      card.example.toLowerCase().includes(query) ||
+      card.pronunciation.toLowerCase().includes(query)
+    );
+  });
+
   if (!deck) {
     return (
       <ProtectedRoute>
@@ -103,9 +117,42 @@ export default function DeckCardsPage() {
             <h1 className="text-2xl font-bold">{deck.name}</h1>
             <p className="text-muted-foreground">{cards.length} cards</p>
           </div>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search cards..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-9 w-64"
+            />
+          </div>
+          <div className="flex items-center border rounded-md">
+            <Button
+              variant={viewMode === 'grid' ? 'default' : 'ghost'}
+              size="icon-sm"
+              onClick={() => setViewMode('grid')}
+              className="rounded-r-none"
+            >
+              <LayoutGrid className="h-4 w-4" />
+            </Button>
+            <Button
+              variant={viewMode === 'table' ? 'default' : 'ghost'}
+              size="icon-sm"
+              onClick={() => setViewMode('table')}
+              className="rounded-l-none"
+            >
+              <List className="h-4 w-4" />
+            </Button>
+          </div>
           <Button onClick={() => setShowCardForm(true)}>
             <Plus className="mr-2 h-4 w-4" />
             Add Card
+          </Button>
+          <Button asChild variant="secondary">
+            <Link href={`/study/${deckId}`}>
+              <Play className="mr-2 h-4 w-4" />
+              Study
+            </Link>
           </Button>
         </div>
 
@@ -117,11 +164,21 @@ export default function DeckCardsPage() {
           <div className="flex justify-center py-12">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
           </div>
-        ) : (
+        ) : viewMode === 'grid' ? (
           <CardList
-            cards={cards}
+            cards={filteredCards}
             onEdit={(c) => setEditingCard(c)}
             onDelete={(c) => setDeletingCard(c)}
+            sourceLang={deck.sourceLang}
+            targetLang={deck.targetLang}
+          />
+        ) : (
+          <CardTable
+            cards={filteredCards}
+            onEdit={(c) => setEditingCard(c)}
+            onDelete={(c) => setDeletingCard(c)}
+            sourceLang={deck.sourceLang}
+            targetLang={deck.targetLang}
           />
         )}
 
