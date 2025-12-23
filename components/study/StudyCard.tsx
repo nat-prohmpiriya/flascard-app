@@ -7,8 +7,15 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 import { useTTS } from '@/hooks/useTTS';
-import { XCircle, HelpCircle, ThumbsUp, CheckCircle, Volume2, Pause, Play, Minus, Plus } from 'lucide-react';
+import { XCircle, HelpCircle, ThumbsUp, CheckCircle, Volume2, Pause, Play, Minus, Plus, Settings2 } from 'lucide-react';
 
 interface StudyCardProps {
   card: Card;
@@ -40,8 +47,40 @@ export function StudyCard({
   const [isPaused, setIsPaused] = useState(false);
   const [autoStep, setAutoStep] = useState<'idle' | 'reading-vocab' | 'waiting-flip' | 'reading-meaning' | 'reading-example' | 'reading-example-translation' | 'waiting-next'>('idle');
   const [speed, setSpeed] = useState(1.0);
+
+  // Auto Play read settings
+  const [readMeaning, setReadMeaning] = useState(true);
+  const [readExample, setReadExample] = useState(true);
+  const [readTranslation, setReadTranslation] = useState(true);
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const { speak, stop, isSpeaking, isSupported } = useTTS();
+
+  // Load settings from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('study-autoplay-settings');
+    if (saved) {
+      try {
+        const settings = JSON.parse(saved);
+        if (typeof settings.readMeaning === 'boolean') setReadMeaning(settings.readMeaning);
+        if (typeof settings.readExample === 'boolean') setReadExample(settings.readExample);
+        if (typeof settings.readTranslation === 'boolean') setReadTranslation(settings.readTranslation);
+        if (typeof settings.speed === 'number') setSpeed(settings.speed);
+      } catch (e) {
+        // Ignore parse errors
+      }
+    }
+  }, []);
+
+  // Save settings to localStorage when changed
+  useEffect(() => {
+    localStorage.setItem('study-autoplay-settings', JSON.stringify({
+      readMeaning,
+      readExample,
+      readTranslation,
+      speed,
+    }));
+  }, [readMeaning, readExample, readTranslation, speed]);
 
   // Helper to speak with language setting
   const speakText = (text: string, lang: Language, onEnd?: () => void) => {
@@ -71,45 +110,50 @@ export function StudyCard({
     }
   }, [card?.id, autoMode]);
 
+  // Helper to go to next card
+  const goToNextCard = () => {
+    setAutoStep('waiting-next');
+    timerRef.current = setTimeout(() => {
+      onAnswer(3); // Good
+      setAutoStep('idle');
+    }, 1500);
+  };
+
+  // Helper to read translation then next
+  const readTranslationThenNext = () => {
+    if (readTranslation && card.exampleTranslation) {
+      setAutoStep('reading-example-translation');
+      speakText(card.exampleTranslation, targetLang, () => {
+        if (!isPaused) goToNextCard();
+      });
+    } else {
+      goToNextCard();
+    }
+  };
+
+  // Helper to read example then translation
+  const readExampleThenNext = () => {
+    if (readExample && card.example) {
+      setAutoStep('reading-example');
+      speakText(card.example, sourceLang, () => {
+        if (!isPaused) readTranslationThenNext();
+      });
+    } else {
+      readTranslationThenNext();
+    }
+  };
+
   // Auto mode: Read meaning and example after flip
   useEffect(() => {
     if (autoMode && !isPaused && isFlipped && autoStep === 'waiting-flip') {
-      setAutoStep('reading-meaning');
-      // Read meaning first
-      speakText(card.meaning, targetLang, () => {
-        if (!isPaused && card.example) {
-          // Then read example
-          setAutoStep('reading-example');
-          speakText(card.example, sourceLang, () => {
-            if (!isPaused && card.exampleTranslation) {
-              // Then read example translation
-              setAutoStep('reading-example-translation');
-              speakText(card.exampleTranslation, targetLang, () => {
-                if (!isPaused) {
-                  setAutoStep('waiting-next');
-                  timerRef.current = setTimeout(() => {
-                    onAnswer(3); // Good
-                    setAutoStep('idle');
-                  }, 1500);
-                }
-              });
-            } else if (!isPaused) {
-              setAutoStep('waiting-next');
-              timerRef.current = setTimeout(() => {
-                onAnswer(3); // Good
-                setAutoStep('idle');
-              }, 1500);
-            }
-          });
-        } else if (!isPaused) {
-          // No example, go to next
-          setAutoStep('waiting-next');
-          timerRef.current = setTimeout(() => {
-            onAnswer(3); // Good
-            setAutoStep('idle');
-          }, 1500);
-        }
-      });
+      if (readMeaning) {
+        setAutoStep('reading-meaning');
+        speakText(card.meaning, targetLang, () => {
+          if (!isPaused) readExampleThenNext();
+        });
+      } else {
+        readExampleThenNext();
+      }
     }
   }, [isFlipped, autoStep, isPaused]);
 
@@ -178,26 +222,68 @@ export function StudyCard({
                 onCheckedChange={handleAutoModeToggle}
               />
             </div>
-            {autoMode && (
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-muted-foreground">
-                  {autoStep === 'reading-vocab' && 'Reading vocab...'}
-                  {autoStep === 'waiting-flip' && 'Flipping...'}
-                  {autoStep === 'reading-meaning' && 'Reading meaning...'}
-                  {autoStep === 'reading-example' && 'Reading example...'}
-                  {autoStep === 'reading-example-translation' && 'Reading translation...'}
-                  {autoStep === 'waiting-next' && 'Next...'}
-                </span>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8"
-                  onClick={handlePauseToggle}
-                >
-                  {isPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
-                </Button>
-              </div>
-            )}
+            <div className="flex items-center gap-2">
+              {/* Settings Dialog */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-8 w-8">
+                    <Settings2 className="h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[320px]">
+                  <DialogHeader>
+                    <DialogTitle>Auto Play Settings</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-4 py-4">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="read-meaning" className="cursor-pointer">Read Meaning</Label>
+                      <Switch
+                        id="read-meaning"
+                        checked={readMeaning}
+                        onCheckedChange={setReadMeaning}
+                      />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="read-example" className="cursor-pointer">Read Example</Label>
+                      <Switch
+                        id="read-example"
+                        checked={readExample}
+                        onCheckedChange={setReadExample}
+                      />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="read-translation" className="cursor-pointer">Read Translation</Label>
+                      <Switch
+                        id="read-translation"
+                        checked={readTranslation}
+                        onCheckedChange={setReadTranslation}
+                      />
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
+              {autoMode && (
+                <>
+                  <span className="text-xs text-muted-foreground">
+                    {autoStep === 'reading-vocab' && 'Reading vocab...'}
+                    {autoStep === 'waiting-flip' && 'Flipping...'}
+                    {autoStep === 'reading-meaning' && 'Reading meaning...'}
+                    {autoStep === 'reading-example' && 'Reading example...'}
+                    {autoStep === 'reading-example-translation' && 'Reading translation...'}
+                    {autoStep === 'waiting-next' && 'Next...'}
+                  </span>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={handlePauseToggle}
+                  >
+                    {isPaused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+                  </Button>
+                </>
+              )}
+            </div>
           </div>
           {/* Speed Control */}
           <div className="flex items-center justify-between">
