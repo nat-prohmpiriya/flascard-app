@@ -12,6 +12,8 @@ export interface UserSettings {
   theme: 'light' | 'dark' | 'system';
   dailyGoal: number;
   notifications: boolean;
+  streak: number;
+  lastStudyDate: string | null; // ISO date string (YYYY-MM-DD)
 }
 
 // Language types

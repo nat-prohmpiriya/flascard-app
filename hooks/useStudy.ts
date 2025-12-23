@@ -3,8 +3,10 @@
 import { useState, useCallback } from 'react';
 import { Card, ReviewQuality } from '@/types';
 import { getCardsForReview, reviewCard } from '@/services/card';
-import { createStudySession } from '@/services/progress';
+import { createStudySession, getTodayStats, calculateStreak } from '@/services/progress';
+import { updateUserSettings } from '@/services/auth';
 import { useAuth } from '@/contexts/AuthContext';
+import { toast } from 'sonner';
 
 interface StudyStats {
   total: number;
@@ -14,7 +16,7 @@ interface StudyStats {
 }
 
 export function useStudy(deckId?: string) {
-  const { firebaseUser } = useAuth();
+  const { firebaseUser, user } = useAuth();
   const [cards, setCards] = useState<Card[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -82,16 +84,49 @@ export function useStudy(deckId?: string) {
     if (!firebaseUser || !sessionStartTime || !deckId) return;
 
     const duration = Math.round((new Date().getTime() - sessionStartTime.getTime()) / 1000);
+    const cardsStudiedThisSession = stats.total - stats.remaining;
 
     try {
+      // Save study session
       await createStudySession(
         firebaseUser.uid,
         deckId,
-        stats.total - stats.remaining,
+        cardsStudiedThisSession,
         stats.correct,
         stats.incorrect,
         duration
       );
+
+      // Update streak
+      const currentStreak = user?.settings?.streak || 0;
+      const lastStudyDate = user?.settings?.lastStudyDate || null;
+      const { streak: newStreak, lastStudyDate: newLastStudyDate } = calculateStreak(currentStreak, lastStudyDate);
+
+      await updateUserSettings(firebaseUser.uid, {
+        streak: newStreak,
+        lastStudyDate: newLastStudyDate,
+      });
+
+      // Check if daily goal is reached
+      const dailyGoal = user?.settings?.dailyGoal || 20;
+      const todayStats = await getTodayStats(firebaseUser.uid);
+
+      if (todayStats.cardsStudied >= dailyGoal) {
+        // Check if this session pushed us over the goal
+        const previousTotal = todayStats.cardsStudied - cardsStudiedThisSession;
+        if (previousTotal < dailyGoal) {
+          toast.success('🎉 Daily Goal Reached!', {
+            description: `You studied ${todayStats.cardsStudied} cards today!`,
+          });
+        }
+      }
+
+      // Show streak milestone notifications
+      if (newStreak > currentStreak && newStreak % 7 === 0) {
+        toast.success(`🔥 ${newStreak} Day Streak!`, {
+          description: 'Keep up the great work!',
+        });
+      }
     } catch (err) {
       console.error('Failed to save study session:', err);
     }

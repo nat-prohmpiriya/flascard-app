@@ -5,6 +5,8 @@ export const DEFAULT_USER_SETTINGS: UserSettings = {
   theme: 'system',
   dailyGoal: 20,
   notifications: true,
+  streak: 0,
+  lastStudyDate: null,
 };
 
 export interface UserDocument {

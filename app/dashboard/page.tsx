@@ -14,7 +14,11 @@ import { Input } from '@/components/ui/input';
 import { Deck, DeckFormData, DailyProgress } from '@/types';
 import { getTodayStats, getDailyProgress } from '@/services/progress';
 import { toast } from 'sonner';
-import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { Card, CardContent } from '@/components/ui/card';
+import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { languages } from '@/data/typing-snippets';
 import {
   Dialog,
   DialogContent,
@@ -102,7 +106,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           <StatsCard
             title="Total Decks"
             value={decks.length}
@@ -114,22 +118,83 @@ export default function DashboardPage() {
             icon={Target}
           />
           <StatsCard
-            title="Studied Today"
-            value={todayStats.cardsStudied}
-            subtitle={`${todayAccuracy}% accuracy`}
+            title="Streak"
+            value={`${user?.settings?.streak || 0} days`}
             icon={Flame}
           />
           <StatsCard
-            title="Daily Goal"
-            value={`${Math.min(todayStats.cardsStudied, user?.settings?.dailyGoal || 20)}/${user?.settings?.dailyGoal || 20}`}
-            icon={TrendingUp}
+            title="Studied Today"
+            value={todayStats.cardsStudied}
+            subtitle={`${todayAccuracy}% accuracy`}
+            icon={Zap}
           />
+          {/* Daily Goal with Progress Bar */}
+          <Card>
+            <CardContent className="p-6">
+              <div className="flex items-center justify-between mb-3">
+                <div>
+                  <p className="text-sm font-medium text-muted-foreground">Daily Goal</p>
+                  <p className="text-2xl font-bold mt-1">
+                    {todayStats.cardsStudied}/{user?.settings?.dailyGoal || 20}
+                  </p>
+                </div>
+                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <Progress
+                value={Math.min((todayStats.cardsStudied / (user?.settings?.dailyGoal || 20)) * 100, 100)}
+                className="h-2"
+              />
+              {todayStats.cardsStudied >= (user?.settings?.dailyGoal || 20) && (
+                <p className="text-xs text-green-500 mt-2">🎉 Goal reached!</p>
+              )}
+            </CardContent>
+          </Card>
         </div>
 
         {/* Weekly Progress */}
         {weeklyProgress.length > 0 && (
           <ProgressChart data={weeklyProgress} />
         )}
+
+        {/* Typing Practice */}
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <Keyboard className="h-6 w-6" />
+              Typing Practice
+            </h2>
+            <Button variant="ghost" asChild>
+              <Link href="/typing" className="flex items-center gap-1">
+                View All
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {languages.slice(0, 4).map((lang) => (
+              <Link key={lang.id} href={`/typing/code/${lang.id}`}>
+                <div className="border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span
+                      className="w-10 h-10 rounded flex items-center justify-center text-white text-sm font-bold"
+                      style={{ backgroundColor: lang.color }}
+                    >
+                      {lang.icon}
+                    </span>
+                    <div>
+                      <p className="font-medium">{lang.name}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {lang.snippets.length} snippets
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
 
         {/* Decks */}
         <div>

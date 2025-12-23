@@ -164,3 +164,35 @@ export async function getTodayStats(userId: string): Promise<{
     { cardsStudied: 0, correctCount: 0, incorrectCount: 0 }
   );
 }
+
+// Calculate new streak based on lastStudyDate
+export function calculateStreak(
+  currentStreak: number,
+  lastStudyDate: string | null
+): { streak: number; lastStudyDate: string } {
+  const today = new Date();
+  const todayStr = today.toISOString().split('T')[0];
+
+  // If already studied today, no change needed
+  if (lastStudyDate === todayStr) {
+    return { streak: currentStreak, lastStudyDate: todayStr };
+  }
+
+  // If no previous study or first time
+  if (!lastStudyDate) {
+    return { streak: 1, lastStudyDate: todayStr };
+  }
+
+  // Check if lastStudyDate was yesterday
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayStr = yesterday.toISOString().split('T')[0];
+
+  if (lastStudyDate === yesterdayStr) {
+    // Consecutive day - increment streak
+    return { streak: currentStreak + 1, lastStudyDate: todayStr };
+  }
+
+  // Streak broken - reset to 1
+  return { streak: 1, lastStudyDate: todayStr };
+}
