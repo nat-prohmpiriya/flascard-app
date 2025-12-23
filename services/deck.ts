@@ -32,6 +32,8 @@ export async function createDeck(
     name: data.name,
     description: data.description,
     category: data.category,
+    sourceLang: data.sourceLang,
+    targetLang: data.targetLang,
     cardCount: 0,
     createdAt: now,
     updatedAt: now,
@@ -75,6 +77,12 @@ export async function updateDeck(
 
 export async function deleteDeck(deckId: string): Promise<void> {
   await deleteDoc(doc(getDb(), COLLECTION, deckId));
+}
+
+export async function deleteAllDecks(userId: string): Promise<void> {
+  const userDecks = await getUserDecks(userId);
+  const deletePromises = userDecks.map(deck => deleteDeck(deck.id));
+  await Promise.all(deletePromises);
 }
 
 export async function updateDeckCardCount(

@@ -7,6 +7,7 @@ import {
   createDeck,
   updateDeck,
   deleteDeck,
+  deleteAllDecks,
 } from '@/services/deck';
 import { useAuth } from '@/contexts/AuthContext';
 
@@ -82,6 +83,19 @@ export function useDecks() {
     }
   };
 
+  const removeAllDecks = async (): Promise<boolean> => {
+    if (!firebaseUser) return false;
+    try {
+      await deleteAllDecks(firebaseUser.uid);
+      setDecks([]);
+      return true;
+    } catch (err) {
+      setError('Failed to delete all decks');
+      console.error(err);
+      return false;
+    }
+  };
+
   return {
     decks,
     loading,
@@ -90,5 +104,6 @@ export function useDecks() {
     addDeck,
     editDeck,
     removeDeck,
+    removeAllDecks,
   };
 }
