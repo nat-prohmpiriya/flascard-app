@@ -36,6 +36,7 @@ export function SnippetForm({ snippet, onSuccess }: SnippetFormProps) {
     language: snippet?.language || 'javascript',
     languageName: snippet?.languageName || 'JavaScript',
     title: snippet?.title || '',
+    description: snippet?.description || '',
     code: snippet?.code || '',
     difficulty: snippet?.difficulty || 'medium',
     isPublic: snippet?.isPublic || false,
@@ -130,6 +131,18 @@ export function SnippetForm({ snippet, onSuccess }: SnippetFormProps) {
               value={formData.title}
               onChange={(e) => setFormData((prev) => ({ ...prev, title: e.target.value }))}
               placeholder="e.g., Hello World, useState Hook"
+            />
+          </div>
+
+          {/* Description */}
+          <div className="space-y-2">
+            <Label htmlFor="description">Description (optional)</Label>
+            <Textarea
+              id="description"
+              value={formData.description || ''}
+              onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
+              placeholder="Explain what this code does or what you're practicing..."
+              className="min-h-[80px]"
             />
           </div>
 

@@ -24,6 +24,11 @@ import {
 
 const COLLECTION = 'typingSnippets';
 
+// Normalize line endings: CRLF → LF, CR → LF
+function normalizeCode(code: string): string {
+  return code.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+}
+
 function getDb() {
   if (!db) throw new Error('Firebase Firestore not initialized');
   return db;
@@ -40,7 +45,8 @@ export async function createTypingSnippet(
     language: data.language,
     languageName: data.languageName,
     title: data.title,
-    code: data.code,
+    description: data.description,
+    code: normalizeCode(data.code),
     difficulty: data.difficulty,
     isPreset: false,
     isPublic: data.isPublic,
@@ -68,7 +74,8 @@ export async function bulkCreateTypingSnippets(
       language: snippet.language,
       languageName: snippet.languageName,
       title: snippet.title,
-      code: snippet.code,
+      description: snippet.description,
+      code: normalizeCode(snippet.code),
       difficulty: snippet.difficulty,
       isPreset: false,
       isPublic: snippet.isPublic,
@@ -183,8 +190,12 @@ export async function updateTypingSnippet(
   data: Partial<TypingSnippetFormData>
 ): Promise<void> {
   const docRef = doc(getDb(), COLLECTION, snippetId);
+  const updateData = { ...data };
+  if (updateData.code) {
+    updateData.code = normalizeCode(updateData.code);
+  }
   await updateDoc(docRef, {
-    ...data,
+    ...updateData,
     updatedAt: Timestamp.now(),
   });
 }

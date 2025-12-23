@@ -75,7 +75,8 @@ export function parseMarkdownToSnippets(content: string): ParseResult {
     }
 
     const codeLanguage = codeBlockMatch[1];
-    const code = codeBlockMatch[2].trim();
+    // Normalize line endings: CRLF → LF, CR → LF
+    const code = codeBlockMatch[2].trim().replace(/\r\n/g, '\n').replace(/\r/g, '\n');
 
     if (!code) {
       errors.push(`Empty code block for "${title}"`);
