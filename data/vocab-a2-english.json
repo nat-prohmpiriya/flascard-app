@@ -1,0 +1,1154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-12-23T06:26:29.139Z",
+  "deck": {
+    "name": "English Vocabulary A2",
+    "description": "Elementary level English vocabulary for everyday communication - covering topics like travel, food, work, family, health, shopping, and more.",
+    "category": "English",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "appointment",
+      "pronunciation": "อะพ้อยท์เมินท์",
+      "meaning": "การนัดหมาย",
+      "example": "I have a doctor's appointment at 3 PM.",
+      "exampleTranslation": "ฉันมีนัดหมอตอนบ่ายสามโมง"
+    },
+    {
+      "vocab": "available",
+      "pronunciation": "อะเวลละเบิล",
+      "meaning": "ว่าง, มีอยู่",
+      "example": "Is this seat available?",
+      "exampleTranslation": "ที่นั่งนี้ว่างไหม?"
+    },
+    {
+      "vocab": "borrow",
+      "pronunciation": "บ๊อร์โร่ว",
+      "meaning": "ยืม",
+      "example": "Can I borrow your pen?",
+      "exampleTranslation": "ขอยืมปากกาหน่อยได้ไหม?"
+    },
+    {
+      "vocab": "lend",
+      "pronunciation": "เลนด์",
+      "meaning": "ให้ยืม",
+      "example": "Could you lend me some money?",
+      "exampleTranslation": "คุณช่วยให้ฉันยืมเงินหน่อยได้ไหม?"
+    },
+    {
+      "vocab": "crowded",
+      "pronunciation": "คราวด์เด็ด",
+      "meaning": "แออัด, คนเยอะ",
+      "example": "The train is very crowded in the morning.",
+      "exampleTranslation": "รถไฟคนแน่นมากตอนเช้า"
+    },
+    {
+      "vocab": "delayed",
+      "pronunciation": "ดีเลย์ด",
+      "meaning": "ล่าช้า",
+      "example": "The flight is delayed by two hours.",
+      "exampleTranslation": "เที่ยวบินล่าช้าสองชั่วโมง"
+    },
+    {
+      "vocab": "departure",
+      "pronunciation": "ดีพาร์เชอร์",
+      "meaning": "การออกเดินทาง",
+      "example": "The departure time is 9 AM.",
+      "exampleTranslation": "เวลาออกเดินทางคือ 9 โมงเช้า"
+    },
+    {
+      "vocab": "arrival",
+      "pronunciation": "อะไรเวิล",
+      "meaning": "การมาถึง",
+      "example": "Please check the arrival time on the screen.",
+      "exampleTranslation": "กรุณาตรวจสอบเวลามาถึงบนหน้าจอ"
+    },
+    {
+      "vocab": "destination",
+      "pronunciation": "เดสทิเนชั่น",
+      "meaning": "จุดหมายปลายทาง",
+      "example": "What is your final destination?",
+      "exampleTranslation": "จุดหมายปลายทางสุดท้ายของคุณคือที่ไหน?"
+    },
+    {
+      "vocab": "luggage",
+      "pronunciation": "ลักเกจ",
+      "meaning": "กระเป๋าเดินทาง",
+      "example": "Please keep your luggage with you.",
+      "exampleTranslation": "กรุณาเก็บกระเป๋าเดินทางไว้กับตัว"
+    },
+    {
+      "vocab": "passport",
+      "pronunciation": "พาสปอร์ต",
+      "meaning": "หนังสือเดินทาง",
+      "example": "Don't forget to bring your passport.",
+      "exampleTranslation": "อย่าลืมเอาหนังสือเดินทางมาด้วย"
+    },
+    {
+      "vocab": "reservation",
+      "pronunciation": "เรเซอร์เวชั่น",
+      "meaning": "การจอง",
+      "example": "I have a reservation under the name Smith.",
+      "exampleTranslation": "ฉันมีการจองในชื่อสมิธ"
+    },
+    {
+      "vocab": "cancel",
+      "pronunciation": "แคนเซิล",
+      "meaning": "ยกเลิก",
+      "example": "I need to cancel my reservation.",
+      "exampleTranslation": "ฉันต้องยกเลิกการจอง"
+    },
+    {
+      "vocab": "confirm",
+      "pronunciation": "คอนเฟิร์ม",
+      "meaning": "ยืนยัน",
+      "example": "Can you confirm my booking?",
+      "exampleTranslation": "คุณช่วยยืนยันการจองของฉันได้ไหม?"
+    },
+    {
+      "vocab": "receipt",
+      "pronunciation": "รีซีท",
+      "meaning": "ใบเสร็จ",
+      "example": "Could I have the receipt, please?",
+      "exampleTranslation": "ขอใบเสร็จหน่อยได้ไหม?"
+    },
+    {
+      "vocab": "discount",
+      "pronunciation": "ดิสเคานท์",
+      "meaning": "ส่วนลด",
+      "example": "Is there any discount for students?",
+      "exampleTranslation": "มีส่วนลดสำหรับนักศึกษาไหม?"
+    },
+    {
+      "vocab": "refund",
+      "pronunciation": "รีฟันด์",
+      "meaning": "คืนเงิน",
+      "example": "I would like to get a refund.",
+      "exampleTranslation": "ฉันต้องการขอคืนเงิน"
+    },
+    {
+      "vocab": "exchange",
+      "pronunciation": "เอ็กซ์เชนจ์",
+      "meaning": "แลกเปลี่ยน",
+      "example": "Can I exchange this for a larger size?",
+      "exampleTranslation": "ฉันสามารถเปลี่ยนเป็นไซส์ใหญ่กว่านี้ได้ไหม?"
+    },
+    {
+      "vocab": "cash",
+      "pronunciation": "แคช",
+      "meaning": "เงินสด",
+      "example": "Do you accept cash?",
+      "exampleTranslation": "รับเงินสดไหม?"
+    },
+    {
+      "vocab": "credit card",
+      "pronunciation": "เครดิตการ์ด",
+      "meaning": "บัตรเครดิต",
+      "example": "Can I pay by credit card?",
+      "exampleTranslation": "ฉันจ่ายด้วยบัตรเครดิตได้ไหม?"
+    },
+    {
+      "vocab": "expensive",
+      "pronunciation": "เอ็กซ์เพนซีฟ",
+      "meaning": "แพง",
+      "example": "This hotel is too expensive.",
+      "exampleTranslation": "โรงแรมนี้แพงเกินไป"
+    },
+    {
+      "vocab": "cheap",
+      "pronunciation": "ชีป",
+      "meaning": "ถูก",
+      "example": "I'm looking for something cheaper.",
+      "exampleTranslation": "ฉันกำลังหาของที่ถูกกว่านี้"
+    },
+    {
+      "vocab": "afford",
+      "pronunciation": "อะฟอร์ด",
+      "meaning": "มีกำลังซื้อ, จ่ายไหว",
+      "example": "I can't afford this car.",
+      "exampleTranslation": "ฉันซื้อรถคันนี้ไม่ไหว"
+    },
+    {
+      "vocab": "colleague",
+      "pronunciation": "คอลลีก",
+      "meaning": "เพื่อนร่วมงาน",
+      "example": "I'm having lunch with my colleagues.",
+      "exampleTranslation": "ฉันกินข้าวกลางวันกับเพื่อนร่วมงาน"
+    },
+    {
+      "vocab": "employer",
+      "pronunciation": "เอ็มพลอยเออร์",
+      "meaning": "นายจ้าง",
+      "example": "My employer offers good benefits.",
+      "exampleTranslation": "นายจ้างของฉันให้สวัสดิการที่ดี"
+    },
+    {
+      "vocab": "employee",
+      "pronunciation": "เอ็มพลอยอี",
+      "meaning": "ลูกจ้าง, พนักงาน",
+      "example": "The company has 500 employees.",
+      "exampleTranslation": "บริษัทมีพนักงาน 500 คน"
+    },
+    {
+      "vocab": "salary",
+      "pronunciation": "แซลารี่",
+      "meaning": "เงินเดือน",
+      "example": "The salary is paid monthly.",
+      "exampleTranslation": "เงินเดือนจ่ายทุกเดือน"
+    },
+    {
+      "vocab": "overtime",
+      "pronunciation": "โอเวอร์ไทม์",
+      "meaning": "ทำงานล่วงเวลา",
+      "example": "I worked overtime yesterday.",
+      "exampleTranslation": "ฉันทำโอทีเมื่อวาน"
+    },
+    {
+      "vocab": "deadline",
+      "pronunciation": "เดดไลน์",
+      "meaning": "กำหนดส่ง",
+      "example": "The deadline is next Friday.",
+      "exampleTranslation": "กำหนดส่งคือวันศุกร์หน้า"
+    },
+    {
+      "vocab": "meeting",
+      "pronunciation": "มีทติ้ง",
+      "meaning": "การประชุม",
+      "example": "We have a meeting at 2 PM.",
+      "exampleTranslation": "เรามีประชุมตอนบ่ายสองโมง"
+    },
+    {
+      "vocab": "schedule",
+      "pronunciation": "สเค็ดดูล",
+      "meaning": "ตารางเวลา, กำหนดการ",
+      "example": "Let me check my schedule.",
+      "exampleTranslation": "ขอเช็คตารางของฉันก่อน"
+    },
+    {
+      "vocab": "organize",
+      "pronunciation": "ออร์กะไนซ์",
+      "meaning": "จัดการ, จัดระเบียบ",
+      "example": "I need to organize my desk.",
+      "exampleTranslation": "ฉันต้องจัดระเบียบโต๊ะทำงาน"
+    },
+    {
+      "vocab": "attend",
+      "pronunciation": "อะเทนด์",
+      "meaning": "เข้าร่วม",
+      "example": "Will you attend the conference?",
+      "exampleTranslation": "คุณจะเข้าร่วมการประชุมไหม?"
+    },
+    {
+      "vocab": "experience",
+      "pronunciation": "เอ็กซ์พีเรียนซ์",
+      "meaning": "ประสบการณ์",
+      "example": "Do you have any experience in sales?",
+      "exampleTranslation": "คุณมีประสบการณ์ด้านการขายไหม?"
+    },
+    {
+      "vocab": "interview",
+      "pronunciation": "อินเทอร์วิว",
+      "meaning": "สัมภาษณ์",
+      "example": "I have a job interview tomorrow.",
+      "exampleTranslation": "ฉันมีสัมภาษณ์งานพรุ่งนี้"
+    },
+    {
+      "vocab": "apply",
+      "pronunciation": "อะพลาย",
+      "meaning": "สมัคร",
+      "example": "I applied for the position online.",
+      "exampleTranslation": "ฉันสมัครตำแหน่งนี้ทางออนไลน์"
+    },
+    {
+      "vocab": "hire",
+      "pronunciation": "ไฮร์",
+      "meaning": "จ้าง",
+      "example": "We're looking to hire new staff.",
+      "exampleTranslation": "เรากำลังหาจ้างพนักงานใหม่"
+    },
+    {
+      "vocab": "resign",
+      "pronunciation": "รีไซน์",
+      "meaning": "ลาออก",
+      "example": "He resigned from his job.",
+      "exampleTranslation": "เขาลาออกจากงาน"
+    },
+    {
+      "vocab": "retire",
+      "pronunciation": "รีไทร์",
+      "meaning": "เกษียณ",
+      "example": "My father retired last year.",
+      "exampleTranslation": "พ่อของฉันเกษียณเมื่อปีที่แล้ว"
+    },
+    {
+      "vocab": "relative",
+      "pronunciation": "เรลาทีฟ",
+      "meaning": "ญาติ",
+      "example": "I'm visiting my relatives this weekend.",
+      "exampleTranslation": "ฉันจะไปเยี่ยมญาติสุดสัปดาห์นี้"
+    },
+    {
+      "vocab": "neighbor",
+      "pronunciation": "เนเบอร์",
+      "meaning": "เพื่อนบ้าน",
+      "example": "My neighbor is very friendly.",
+      "exampleTranslation": "เพื่อนบ้านของฉันเป็นมิตรมาก"
+    },
+    {
+      "vocab": "stranger",
+      "pronunciation": "สเตรนเจอร์",
+      "meaning": "คนแปลกหน้า",
+      "example": "Don't talk to strangers.",
+      "exampleTranslation": "อย่าคุยกับคนแปลกหน้า"
+    },
+    {
+      "vocab": "guest",
+      "pronunciation": "เกสท์",
+      "meaning": "แขก",
+      "example": "We have guests coming for dinner.",
+      "exampleTranslation": "เรามีแขกมาทานข้าวเย็น"
+    },
+    {
+      "vocab": "introduce",
+      "pronunciation": "อินโทรดิวซ์",
+      "meaning": "แนะนำ, แนะนำตัว",
+      "example": "Let me introduce myself.",
+      "exampleTranslation": "ขอแนะนำตัวเองครับ/ค่ะ"
+    },
+    {
+      "vocab": "apologize",
+      "pronunciation": "อะพ็อลโลไจซ์",
+      "meaning": "ขอโทษ",
+      "example": "I apologize for being late.",
+      "exampleTranslation": "ฉันขอโทษที่มาสาย"
+    },
+    {
+      "vocab": "complain",
+      "pronunciation": "คอมเพลน",
+      "meaning": "ร้องเรียน, บ่น",
+      "example": "I want to complain about the service.",
+      "exampleTranslation": "ฉันต้องการร้องเรียนเรื่องบริการ"
+    },
+    {
+      "vocab": "recommend",
+      "pronunciation": "เรคคอมเมนด์",
+      "meaning": "แนะนำ",
+      "example": "Can you recommend a good restaurant?",
+      "exampleTranslation": "คุณช่วยแนะนำร้านอาหารดีๆ ได้ไหม?"
+    },
+    {
+      "vocab": "suggest",
+      "pronunciation": "ซักเจสท์",
+      "meaning": "เสนอแนะ",
+      "example": "I suggest we leave early.",
+      "exampleTranslation": "ฉันแนะนำให้เราออกเดินทางเช้า"
+    },
+    {
+      "vocab": "agree",
+      "pronunciation": "อะกรี",
+      "meaning": "เห็นด้วย",
+      "example": "I agree with your opinion.",
+      "exampleTranslation": "ฉันเห็นด้วยกับความคิดเห็นของคุณ"
+    },
+    {
+      "vocab": "disagree",
+      "pronunciation": "ดิสอะกรี",
+      "meaning": "ไม่เห็นด้วย",
+      "example": "I disagree with this decision.",
+      "exampleTranslation": "ฉันไม่เห็นด้วยกับการตัดสินใจนี้"
+    },
+    {
+      "vocab": "refuse",
+      "pronunciation": "รีฟิวส์",
+      "meaning": "ปฏิเสธ",
+      "example": "He refused to help.",
+      "exampleTranslation": "เขาปฏิเสธที่จะช่วย"
+    },
+    {
+      "vocab": "accept",
+      "pronunciation": "แอคเซ็ปท์",
+      "meaning": "ยอมรับ",
+      "example": "I accept your apology.",
+      "exampleTranslation": "ฉันยอมรับคำขอโทษของคุณ"
+    },
+    {
+      "vocab": "promise",
+      "pronunciation": "พรอมมิส",
+      "meaning": "สัญญา",
+      "example": "I promise I'll be there.",
+      "exampleTranslation": "ฉันสัญญาว่าจะไปที่นั่น"
+    },
+    {
+      "vocab": "explain",
+      "pronunciation": "เอ็กซ์เพลน",
+      "meaning": "อธิบาย",
+      "example": "Can you explain this to me?",
+      "exampleTranslation": "คุณช่วยอธิบายเรื่องนี้ให้ฉันได้ไหม?"
+    },
+    {
+      "vocab": "describe",
+      "pronunciation": "ดิสไครบ์",
+      "meaning": "อธิบาย, บรรยาย",
+      "example": "Can you describe what happened?",
+      "exampleTranslation": "คุณช่วยเล่าว่าเกิดอะไรขึ้นได้ไหม?"
+    },
+    {
+      "vocab": "mention",
+      "pronunciation": "เมนชั่น",
+      "meaning": "กล่าวถึง, พูดถึง",
+      "example": "She mentioned your name.",
+      "exampleTranslation": "เธอพูดถึงชื่อของคุณ"
+    },
+    {
+      "vocab": "remind",
+      "pronunciation": "รีไมนด์",
+      "meaning": "เตือน",
+      "example": "Please remind me to call her.",
+      "exampleTranslation": "ช่วยเตือนฉันให้โทรหาเธอด้วย"
+    },
+    {
+      "vocab": "forget",
+      "pronunciation": "ฟอร์เก็ต",
+      "meaning": "ลืม",
+      "example": "I forgot my password.",
+      "exampleTranslation": "ฉันลืมรหัสผ่าน"
+    },
+    {
+      "vocab": "remember",
+      "pronunciation": "รีเมมเบอร์",
+      "meaning": "จำได้",
+      "example": "I remember meeting you before.",
+      "exampleTranslation": "ฉันจำได้ว่าเคยพบคุณมาก่อน"
+    },
+    {
+      "vocab": "recognize",
+      "pronunciation": "เร็คคอกไนซ์",
+      "meaning": "จำได้, รับรู้",
+      "example": "I didn't recognize you with your new haircut.",
+      "exampleTranslation": "ฉันจำคุณไม่ได้เลยกับทรงผมใหม่"
+    },
+    {
+      "vocab": "delicious",
+      "pronunciation": "ดีลิเชียส",
+      "meaning": "อร่อย",
+      "example": "This soup is delicious!",
+      "exampleTranslation": "ซุปนี้อร่อยมาก!"
+    },
+    {
+      "vocab": "spicy",
+      "pronunciation": "สไปซี่",
+      "meaning": "เผ็ด",
+      "example": "Thai food is very spicy.",
+      "exampleTranslation": "อาหารไทยเผ็ดมาก"
+    },
+    {
+      "vocab": "sour",
+      "pronunciation": "ซาวร์",
+      "meaning": "เปรี้ยว",
+      "example": "This lemon is too sour.",
+      "exampleTranslation": "มะนาวนี้เปรี้ยวเกินไป"
+    },
+    {
+      "vocab": "bitter",
+      "pronunciation": "บิทเทอร์",
+      "meaning": "ขม",
+      "example": "The coffee tastes bitter.",
+      "exampleTranslation": "กาแฟรสชาติขม"
+    },
+    {
+      "vocab": "salty",
+      "pronunciation": "ซอลตี้",
+      "meaning": "เค็ม",
+      "example": "The soup is too salty.",
+      "exampleTranslation": "ซุปเค็มเกินไป"
+    },
+    {
+      "vocab": "fresh",
+      "pronunciation": "เฟรช",
+      "meaning": "สด",
+      "example": "I prefer fresh vegetables.",
+      "exampleTranslation": "ฉันชอบผักสดมากกว่า"
+    },
+    {
+      "vocab": "frozen",
+      "pronunciation": "โฟรเซ่น",
+      "meaning": "แช่แข็ง",
+      "example": "We only have frozen fish.",
+      "exampleTranslation": "เรามีแค่ปลาแช่แข็ง"
+    },
+    {
+      "vocab": "raw",
+      "pronunciation": "รอว์",
+      "meaning": "ดิบ",
+      "example": "I don't eat raw fish.",
+      "exampleTranslation": "ฉันไม่กินปลาดิบ"
+    },
+    {
+      "vocab": "boiled",
+      "pronunciation": "บอยด์",
+      "meaning": "ต้ม",
+      "example": "Would you like boiled eggs?",
+      "exampleTranslation": "คุณอยากได้ไข่ต้มไหม?"
+    },
+    {
+      "vocab": "fried",
+      "pronunciation": "ฟรายด์",
+      "meaning": "ทอด",
+      "example": "Fried chicken is my favorite.",
+      "exampleTranslation": "ไก่ทอดเป็นอาหารโปรดของฉัน"
+    },
+    {
+      "vocab": "grilled",
+      "pronunciation": "กริลด์",
+      "meaning": "ย่าง",
+      "example": "I ordered grilled salmon.",
+      "exampleTranslation": "ฉันสั่งแซลมอนย่าง"
+    },
+    {
+      "vocab": "baked",
+      "pronunciation": "เบคด์",
+      "meaning": "อบ",
+      "example": "I love freshly baked bread.",
+      "exampleTranslation": "ฉันชอบขนมปังอบใหม่ๆ"
+    },
+    {
+      "vocab": "allergic",
+      "pronunciation": "อะเลอร์จิค",
+      "meaning": "แพ้",
+      "example": "I'm allergic to peanuts.",
+      "exampleTranslation": "ฉันแพ้ถั่วลิสง"
+    },
+    {
+      "vocab": "vegetarian",
+      "pronunciation": "เวจจิแทเรียน",
+      "meaning": "มังสวิรัติ",
+      "example": "Do you have vegetarian options?",
+      "exampleTranslation": "มีตัวเลือกมังสวิรัติไหม?"
+    },
+    {
+      "vocab": "ingredient",
+      "pronunciation": "อินกรีเดียนท์",
+      "meaning": "ส่วนผสม",
+      "example": "What are the ingredients in this dish?",
+      "exampleTranslation": "อาหารจานนี้มีส่วนผสมอะไรบ้าง?"
+    },
+    {
+      "vocab": "portion",
+      "pronunciation": "พอร์ชั่น",
+      "meaning": "ปริมาณ, ส่วน",
+      "example": "The portions are very big here.",
+      "exampleTranslation": "ที่นี่ปริมาณอาหารเยอะมาก"
+    },
+    {
+      "vocab": "headache",
+      "pronunciation": "เฮดเอค",
+      "meaning": "ปวดหัว",
+      "example": "I have a terrible headache.",
+      "exampleTranslation": "ฉันปวดหัวมาก"
+    },
+    {
+      "vocab": "stomachache",
+      "pronunciation": "สตอมเมคเอค",
+      "meaning": "ปวดท้อง",
+      "example": "I have a stomachache.",
+      "exampleTranslation": "ฉันปวดท้อง"
+    },
+    {
+      "vocab": "fever",
+      "pronunciation": "ฟีเวอร์",
+      "meaning": "ไข้",
+      "example": "She has a high fever.",
+      "exampleTranslation": "เธอมีไข้สูง"
+    },
+    {
+      "vocab": "cough",
+      "pronunciation": "คอฟ",
+      "meaning": "ไอ",
+      "example": "I can't stop coughing.",
+      "exampleTranslation": "ฉันหยุดไอไม่ได้"
+    },
+    {
+      "vocab": "sneeze",
+      "pronunciation": "สนีซ",
+      "meaning": "จาม",
+      "example": "I keep sneezing because of allergies.",
+      "exampleTranslation": "ฉันจามไม่หยุดเพราะแพ้"
+    },
+    {
+      "vocab": "dizzy",
+      "pronunciation": "ดิซซี่",
+      "meaning": "เวียนหัว",
+      "example": "I feel dizzy.",
+      "exampleTranslation": "ฉันรู้สึกเวียนหัว"
+    },
+    {
+      "vocab": "medicine",
+      "pronunciation": "เมดิซิน",
+      "meaning": "ยา",
+      "example": "Did you take your medicine?",
+      "exampleTranslation": "คุณกินยาแล้วหรือยัง?"
+    },
+    {
+      "vocab": "prescription",
+      "pronunciation": "พรีสคริปชั่น",
+      "meaning": "ใบสั่งยา",
+      "example": "You need a prescription for this medicine.",
+      "exampleTranslation": "คุณต้องมีใบสั่งยาสำหรับยานี้"
+    },
+    {
+      "vocab": "pharmacy",
+      "pronunciation": "ฟาร์มาซี",
+      "meaning": "ร้านขายยา",
+      "example": "Is there a pharmacy nearby?",
+      "exampleTranslation": "มีร้านขายยาใกล้ๆ ไหม?"
+    },
+    {
+      "vocab": "emergency",
+      "pronunciation": "อีเมอร์เจนซี่",
+      "meaning": "ฉุกเฉิน",
+      "example": "Call 911 in case of emergency.",
+      "exampleTranslation": "โทร 911 ในกรณีฉุกเฉิน"
+    },
+    {
+      "vocab": "ambulance",
+      "pronunciation": "แอมบิวแลนซ์",
+      "meaning": "รถพยาบาล",
+      "example": "Call an ambulance!",
+      "exampleTranslation": "เรียกรถพยาบาลด่วน!"
+    },
+    {
+      "vocab": "insurance",
+      "pronunciation": "อินชัวรันซ์",
+      "meaning": "ประกัน",
+      "example": "Do you have health insurance?",
+      "exampleTranslation": "คุณมีประกันสุขภาพไหม?"
+    },
+    {
+      "vocab": "symptom",
+      "pronunciation": "ซิมพ์ทอม",
+      "meaning": "อาการ",
+      "example": "What are your symptoms?",
+      "exampleTranslation": "คุณมีอาการอะไรบ้าง?"
+    },
+    {
+      "vocab": "recover",
+      "pronunciation": "รีคัฟเวอร์",
+      "meaning": "ฟื้นตัว, หายป่วย",
+      "example": "I hope you recover soon.",
+      "exampleTranslation": "หวังว่าคุณจะหายเร็วๆ"
+    },
+    {
+      "vocab": "improve",
+      "pronunciation": "อิมพรูฟ",
+      "meaning": "ปรับปรุง, ดีขึ้น",
+      "example": "My English is improving.",
+      "exampleTranslation": "ภาษาอังกฤษของฉันดีขึ้น"
+    },
+    {
+      "vocab": "develop",
+      "pronunciation": "ดีเวลลอป",
+      "meaning": "พัฒนา",
+      "example": "We need to develop new skills.",
+      "exampleTranslation": "เราต้องพัฒนาทักษะใหม่ๆ"
+    },
+    {
+      "vocab": "achieve",
+      "pronunciation": "อะชีฟ",
+      "meaning": "บรรลุ, ทำสำเร็จ",
+      "example": "I achieved my goals.",
+      "exampleTranslation": "ฉันบรรลุเป้าหมายแล้ว"
+    },
+    {
+      "vocab": "succeed",
+      "pronunciation": "ซักซีด",
+      "meaning": "สำเร็จ",
+      "example": "He succeeded in his career.",
+      "exampleTranslation": "เขาประสบความสำเร็จในอาชีพ"
+    },
+    {
+      "vocab": "fail",
+      "pronunciation": "เฟล",
+      "meaning": "ล้มเหลว",
+      "example": "Don't be afraid to fail.",
+      "exampleTranslation": "อย่ากลัวที่จะล้มเหลว"
+    },
+    {
+      "vocab": "attempt",
+      "pronunciation": "อะเท็มพท์",
+      "meaning": "พยายาม",
+      "example": "This is my second attempt.",
+      "exampleTranslation": "นี่คือความพยายามครั้งที่สองของฉัน"
+    },
+    {
+      "vocab": "effort",
+      "pronunciation": "เอฟเฟิร์ท",
+      "meaning": "ความพยายาม",
+      "example": "Thank you for your effort.",
+      "exampleTranslation": "ขอบคุณสำหรับความพยายามของคุณ"
+    },
+    {
+      "vocab": "opportunity",
+      "pronunciation": "ออพเพอร์ทูนิตี้",
+      "meaning": "โอกาส",
+      "example": "This is a great opportunity.",
+      "exampleTranslation": "นี่คือโอกาสที่ดี"
+    },
+    {
+      "vocab": "convenient",
+      "pronunciation": "คอนวีเนียนท์",
+      "meaning": "สะดวก",
+      "example": "The location is very convenient.",
+      "exampleTranslation": "ทำเลสะดวกมาก"
+    },
+    {
+      "vocab": "comfortable",
+      "pronunciation": "คอมฟอร์ทเทเบิล",
+      "meaning": "สบาย",
+      "example": "This chair is comfortable.",
+      "exampleTranslation": "เก้าอี้ตัวนี้นั่งสบาย"
+    },
+    {
+      "vocab": "uncomfortable",
+      "pronunciation": "อันคอมฟอร์ทเทเบิล",
+      "meaning": "ไม่สบาย",
+      "example": "I feel uncomfortable here.",
+      "exampleTranslation": "ฉันรู้สึกไม่สบายใจที่นี่"
+    },
+    {
+      "vocab": "crowded",
+      "pronunciation": "คราวด์เด็ด",
+      "meaning": "แออัด",
+      "example": "The bus is very crowded.",
+      "exampleTranslation": "รถเมล์คนแน่นมาก"
+    },
+    {
+      "vocab": "empty",
+      "pronunciation": "เอ็มพ์ตี้",
+      "meaning": "ว่างเปล่า",
+      "example": "The room is empty.",
+      "exampleTranslation": "ห้องว่างเปล่า"
+    },
+    {
+      "vocab": "full",
+      "pronunciation": "ฟูล",
+      "meaning": "เต็ม",
+      "example": "The parking lot is full.",
+      "exampleTranslation": "ที่จอดรถเต็ม"
+    },
+    {
+      "vocab": "single",
+      "pronunciation": "ซิงเกิล",
+      "meaning": "โสด, เดี่ยว",
+      "example": "I'd like a single room.",
+      "exampleTranslation": "ฉันต้องการห้องเดี่ยว"
+    },
+    {
+      "vocab": "double",
+      "pronunciation": "ดับเบิล",
+      "meaning": "คู่, สองเท่า",
+      "example": "We need a double room.",
+      "exampleTranslation": "เราต้องการห้องคู่"
+    },
+    {
+      "vocab": "separate",
+      "pronunciation": "เซพาเรท",
+      "meaning": "แยก",
+      "example": "Can we have separate checks?",
+      "exampleTranslation": "เราขอแยกบิลได้ไหม?"
+    },
+    {
+      "vocab": "together",
+      "pronunciation": "ทูเก็ทเธอร์",
+      "meaning": "ด้วยกัน",
+      "example": "Let's go together.",
+      "exampleTranslation": "ไปด้วยกันเถอะ"
+    },
+    {
+      "vocab": "direction",
+      "pronunciation": "ไดเร็คชั่น",
+      "meaning": "ทิศทาง",
+      "example": "Can you give me directions?",
+      "exampleTranslation": "คุณช่วยบอกทางให้ฉันได้ไหม?"
+    },
+    {
+      "vocab": "straight",
+      "pronunciation": "สเตรท",
+      "meaning": "ตรงไป",
+      "example": "Go straight for two blocks.",
+      "exampleTranslation": "เดินตรงไปสองบล็อก"
+    },
+    {
+      "vocab": "turn",
+      "pronunciation": "เทิร์น",
+      "meaning": "เลี้ยว",
+      "example": "Turn left at the traffic light.",
+      "exampleTranslation": "เลี้ยวซ้ายที่ไฟแดง"
+    },
+    {
+      "vocab": "corner",
+      "pronunciation": "คอร์เนอร์",
+      "meaning": "มุม",
+      "example": "The shop is on the corner.",
+      "exampleTranslation": "ร้านอยู่ตรงหัวมุม"
+    },
+    {
+      "vocab": "opposite",
+      "pronunciation": "ออพโพสิท",
+      "meaning": "ตรงข้าม",
+      "example": "The bank is opposite the post office.",
+      "exampleTranslation": "ธนาคารอยู่ตรงข้ามไปรษณีย์"
+    },
+    {
+      "vocab": "between",
+      "pronunciation": "บีทวีน",
+      "meaning": "ระหว่าง",
+      "example": "The cafe is between the bank and the bookstore.",
+      "exampleTranslation": "คาเฟ่อยู่ระหว่างธนาคารกับร้านหนังสือ"
+    },
+    {
+      "vocab": "beside",
+      "pronunciation": "บีไซด์",
+      "meaning": "ข้างๆ",
+      "example": "Sit beside me.",
+      "exampleTranslation": "นั่งข้างๆ ฉันสิ"
+    },
+    {
+      "vocab": "distance",
+      "pronunciation": "ดิสแทนซ์",
+      "meaning": "ระยะทาง",
+      "example": "What's the distance to the airport?",
+      "exampleTranslation": "ระยะทางไปสนามบินเท่าไหร่?"
+    },
+    {
+      "vocab": "abroad",
+      "pronunciation": "อะบรอด",
+      "meaning": "ต่างประเทศ",
+      "example": "I've never been abroad.",
+      "exampleTranslation": "ฉันไม่เคยไปต่างประเทศ"
+    },
+    {
+      "vocab": "local",
+      "pronunciation": "โลคอล",
+      "meaning": "ท้องถิ่น",
+      "example": "Try the local food.",
+      "exampleTranslation": "ลองอาหารท้องถิ่นดูสิ"
+    },
+    {
+      "vocab": "foreign",
+      "pronunciation": "ฟอเรน",
+      "meaning": "ต่างประเทศ, ต่างชาติ",
+      "example": "I'm learning a foreign language.",
+      "exampleTranslation": "ฉันกำลังเรียนภาษาต่างประเทศ"
+    },
+    {
+      "vocab": "return",
+      "pronunciation": "รีเทิร์น",
+      "meaning": "กลับ, คืน",
+      "example": "When will you return?",
+      "exampleTranslation": "คุณจะกลับมาเมื่อไหร่?"
+    },
+    {
+      "vocab": "provide",
+      "pronunciation": "โพรไวด์",
+      "meaning": "จัดให้, ให้",
+      "example": "The hotel provides free Wi-Fi.",
+      "exampleTranslation": "โรงแรมให้บริการ Wi-Fi ฟรี"
+    },
+    {
+      "vocab": "include",
+      "pronunciation": "อินคลูด",
+      "meaning": "รวม",
+      "example": "Is breakfast included?",
+      "exampleTranslation": "รวมอาหารเช้าด้วยไหม?"
+    },
+    {
+      "vocab": "exclude",
+      "pronunciation": "เอ็กซ์คลูด",
+      "meaning": "ไม่รวม",
+      "example": "Tax is excluded from the price.",
+      "exampleTranslation": "ราคานี้ไม่รวมภาษี"
+    },
+    {
+      "vocab": "charge",
+      "pronunciation": "ชาร์จ",
+      "meaning": "คิดค่า, ชาร์จ",
+      "example": "Is there an extra charge?",
+      "exampleTranslation": "มีค่าใช้จ่ายเพิ่มเติมไหม?"
+    },
+    {
+      "vocab": "reduce",
+      "pronunciation": "รีดิวซ์",
+      "meaning": "ลด",
+      "example": "They reduced the price by 20%.",
+      "exampleTranslation": "พวกเขาลดราคา 20%"
+    },
+    {
+      "vocab": "increase",
+      "pronunciation": "อินครีส",
+      "meaning": "เพิ่ม",
+      "example": "Prices have increased this year.",
+      "exampleTranslation": "ราคาเพิ่มขึ้นปีนี้"
+    },
+    {
+      "vocab": "compare",
+      "pronunciation": "คอมแพร์",
+      "meaning": "เปรียบเทียบ",
+      "example": "Compare prices before buying.",
+      "exampleTranslation": "เปรียบเทียบราคาก่อนซื้อ"
+    },
+    {
+      "vocab": "prefer",
+      "pronunciation": "พรีเฟอร์",
+      "meaning": "ชอบมากกว่า",
+      "example": "I prefer tea to coffee.",
+      "exampleTranslation": "ฉันชอบชามากกว่ากาแฟ"
+    },
+    {
+      "vocab": "consider",
+      "pronunciation": "คอนซิดเดอร์",
+      "meaning": "พิจารณา",
+      "example": "I'll consider your offer.",
+      "exampleTranslation": "ฉันจะพิจารณาข้อเสนอของคุณ"
+    },
+    {
+      "vocab": "decide",
+      "pronunciation": "ดีไซด์",
+      "meaning": "ตัดสินใจ",
+      "example": "Have you decided yet?",
+      "exampleTranslation": "คุณตัดสินใจแล้วหรือยัง?"
+    },
+    {
+      "vocab": "choose",
+      "pronunciation": "ชูส",
+      "meaning": "เลือก",
+      "example": "Choose any color you like.",
+      "exampleTranslation": "เลือกสีที่คุณชอบได้เลย"
+    },
+    {
+      "vocab": "select",
+      "pronunciation": "ซีเล็คท์",
+      "meaning": "เลือก",
+      "example": "Please select your seat.",
+      "exampleTranslation": "กรุณาเลือกที่นั่งของคุณ"
+    },
+    {
+      "vocab": "order",
+      "pronunciation": "ออร์เดอร์",
+      "meaning": "สั่ง",
+      "example": "Are you ready to order?",
+      "exampleTranslation": "พร้อมสั่งอาหารหรือยัง?"
+    },
+    {
+      "vocab": "deliver",
+      "pronunciation": "ดีลิเวอร์",
+      "meaning": "จัดส่ง",
+      "example": "Can you deliver to my address?",
+      "exampleTranslation": "คุณส่งถึงที่อยู่ของฉันได้ไหม?"
+    },
+    {
+      "vocab": "receive",
+      "pronunciation": "รีซีฟ",
+      "meaning": "ได้รับ",
+      "example": "Did you receive my email?",
+      "exampleTranslation": "คุณได้รับอีเมลของฉันไหม?"
+    },
+    {
+      "vocab": "send",
+      "pronunciation": "เซนด์",
+      "meaning": "ส่ง",
+      "example": "I'll send you the document.",
+      "exampleTranslation": "ฉันจะส่งเอกสารให้คุณ"
+    },
+    {
+      "vocab": "arrive",
+      "pronunciation": "อะไรฟ์",
+      "meaning": "มาถึง",
+      "example": "What time will you arrive?",
+      "exampleTranslation": "คุณจะมาถึงกี่โมง?"
+    },
+    {
+      "vocab": "leave",
+      "pronunciation": "ลีฟ",
+      "meaning": "ออก, ทิ้ง",
+      "example": "I have to leave now.",
+      "exampleTranslation": "ฉันต้องไปแล้ว"
+    },
+    {
+      "vocab": "miss",
+      "pronunciation": "มิส",
+      "meaning": "พลาด, คิดถึง",
+      "example": "I missed the bus.",
+      "exampleTranslation": "ฉันพลาดรถเมล์"
+    },
+    {
+      "vocab": "catch",
+      "pronunciation": "แค็ทช์",
+      "meaning": "จับ, ทัน",
+      "example": "I need to catch the train.",
+      "exampleTranslation": "ฉันต้องขึ้นรถไฟให้ทัน"
+    },
+    {
+      "vocab": "expect",
+      "pronunciation": "เอ็กซ์เพ็คท์",
+      "meaning": "คาดหวัง",
+      "example": "I didn't expect to see you here.",
+      "exampleTranslation": "ฉันไม่คาดคิดว่าจะเจอคุณที่นี่"
+    },
+    {
+      "vocab": "suppose",
+      "pronunciation": "ซะโพส",
+      "meaning": "คิดว่า, ควรจะ",
+      "example": "I suppose you're right.",
+      "exampleTranslation": "ฉันคิดว่าคุณพูดถูก"
+    },
+    {
+      "vocab": "doubt",
+      "pronunciation": "เดาท์",
+      "meaning": "สงสัย",
+      "example": "I doubt that's true.",
+      "exampleTranslation": "ฉันสงสัยว่าจะจริง"
+    },
+    {
+      "vocab": "wonder",
+      "pronunciation": "วันเดอร์",
+      "meaning": "สงสัย, อยากรู้",
+      "example": "I wonder what time it is.",
+      "exampleTranslation": "ฉันสงสัยว่าตอนนี้กี่โมงแล้ว"
+    },
+    {
+      "vocab": "seem",
+      "pronunciation": "ซีม",
+      "meaning": "ดูเหมือน",
+      "example": "You seem tired.",
+      "exampleTranslation": "คุณดูเหนื่อย"
+    },
+    {
+      "vocab": "appear",
+      "pronunciation": "อะเพียร์",
+      "meaning": "ปรากฏ, ดูเหมือน",
+      "example": "He appears to be happy.",
+      "exampleTranslation": "เขาดูเหมือนมีความสุข"
+    },
+    {
+      "vocab": "belong",
+      "pronunciation": "บีลอง",
+      "meaning": "เป็นของ",
+      "example": "This belongs to me.",
+      "exampleTranslation": "นี่เป็นของฉัน"
+    },
+    {
+      "vocab": "contain",
+      "pronunciation": "คอนเทน",
+      "meaning": "บรรจุ, มี",
+      "example": "This drink contains sugar.",
+      "exampleTranslation": "เครื่องดื่มนี้มีน้ำตาล"
+    },
+    {
+      "vocab": "require",
+      "pronunciation": "รีไควร์",
+      "meaning": "ต้องการ",
+      "example": "This job requires experience.",
+      "exampleTranslation": "งานนี้ต้องการประสบการณ์"
+    },
+    {
+      "vocab": "necessary",
+      "pronunciation": "เน็คเซสซารี่",
+      "meaning": "จำเป็น",
+      "example": "Is it necessary to book in advance?",
+      "exampleTranslation": "จำเป็นต้องจองล่วงหน้าไหม?"
+    },
+    {
+      "vocab": "essential",
+      "pronunciation": "เอสเซนเชียล",
+      "meaning": "จำเป็นอย่างยิ่ง",
+      "example": "Water is essential for life.",
+      "exampleTranslation": "น้ำจำเป็นสำหรับชีวิต"
+    },
+    {
+      "vocab": "important",
+      "pronunciation": "อิมพอร์แทนท์",
+      "meaning": "สำคัญ",
+      "example": "This meeting is very important.",
+      "exampleTranslation": "การประชุมนี้สำคัญมาก"
+    },
+    {
+      "vocab": "urgent",
+      "pronunciation": "เออร์เจนท์",
+      "meaning": "เร่งด่วน",
+      "example": "This is urgent.",
+      "exampleTranslation": "เรื่องนี้เร่งด่วน"
+    },
+    {
+      "vocab": "immediately",
+      "pronunciation": "อิมมีเดียทลี่",
+      "meaning": "ทันที",
+      "example": "Please respond immediately.",
+      "exampleTranslation": "กรุณาตอบกลับทันที"
+    },
+    {
+      "vocab": "eventually",
+      "pronunciation": "อีเวนชวลลี่",
+      "meaning": "ในที่สุด",
+      "example": "Eventually, he found a job.",
+      "exampleTranslation": "ในที่สุดเขาก็หางานได้"
+    },
+    {
+      "vocab": "recently",
+      "pronunciation": "รีเซนท์ลี่",
+      "meaning": "เมื่อเร็วๆ นี้",
+      "example": "I recently moved here.",
+      "exampleTranslation": "ฉันเพิ่งย้ายมาที่นี่"
+    },
+    {
+      "vocab": "currently",
+      "pronunciation": "เคอเรนท์ลี่",
+      "meaning": "ในปัจจุบัน",
+      "example": "I'm currently looking for a job.",
+      "exampleTranslation": "ตอนนี้ฉันกำลังหางาน"
+    },
+    {
+      "vocab": "especially",
+      "pronunciation": "เอสเปเชียลลี่",
+      "meaning": "โดยเฉพาะ",
+      "example": "I love fruits, especially mangoes.",
+      "exampleTranslation": "ฉันชอบผลไม้ โดยเฉพาะมะม่วง"
+    },
+    {
+      "vocab": "actually",
+      "pronunciation": "แอคชวลลี่",
+      "meaning": "จริงๆ แล้ว",
+      "example": "Actually, I changed my mind.",
+      "exampleTranslation": "จริงๆ แล้วฉันเปลี่ยนใจแล้ว"
+    },
+    {
+      "vocab": "probably",
+      "pronunciation": "พร็อบบาบลี่",
+      "meaning": "น่าจะ",
+      "example": "It will probably rain tomorrow.",
+      "exampleTranslation": "พรุ่งนี้น่าจะฝนตก"
+    },
+    {
+      "vocab": "perhaps",
+      "pronunciation": "เพอร์แฮปส์",
+      "meaning": "บางที",
+      "example": "Perhaps we should wait.",
+      "exampleTranslation": "บางทีเราควรรอ"
+    },
+    {
+      "vocab": "certainly",
+      "pronunciation": "เซอร์เทนลี่",
+      "meaning": "แน่นอน",
+      "example": "I will certainly help you.",
+      "exampleTranslation": "ฉันจะช่วยคุณแน่นอน"
+    },
+    {
+      "vocab": "definitely",
+      "pronunciation": "เดฟินิทลี่",
+      "meaning": "แน่นอน",
+      "example": "I will definitely come.",
+      "exampleTranslation": "ฉันจะมาแน่นอน"
+    }
+  ]
+}
