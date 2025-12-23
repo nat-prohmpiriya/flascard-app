@@ -1,8 +1,8 @@
 import Papa from 'papaparse';
-import { ExportData, ImportCard, Card } from '@/types';
+import { ExportData, ImportCard, Card, Language } from '@/types';
 import { Deck } from '@/types';
 
-const EXPORT_VERSION = '1.0';
+const EXPORT_VERSION = '2.0';
 
 // JSON Export/Import
 export function exportToJSON(deck: Deck, cards: Card[]): string {
@@ -13,10 +13,15 @@ export function exportToJSON(deck: Deck, cards: Card[]): string {
       name: deck.name,
       description: deck.description,
       category: deck.category,
+      sourceLang: deck.sourceLang,
+      targetLang: deck.targetLang,
     },
     cards: cards.map((card) => ({
-      front: card.front,
-      back: card.back,
+      vocab: card.vocab,
+      pronunciation: card.pronunciation || '',
+      meaning: card.meaning,
+      example: card.example || '',
+      exampleTranslation: card.exampleTranslation || '',
     })),
   };
 
@@ -24,19 +29,36 @@ export function exportToJSON(deck: Deck, cards: Card[]): string {
 }
 
 export function parseJSON(jsonString: string): {
-  deck: { name: string; description: string; category: string };
+  deck: { name: string; description: string; category: string; sourceLang?: Language; targetLang?: Language };
   cards: ImportCard[];
 } | null {
   try {
-    const data: ExportData = JSON.parse(jsonString);
+    const data = JSON.parse(jsonString);
 
     if (!data.deck || !Array.isArray(data.cards)) {
       return null;
     }
 
+    // Support both old format (front/back) and new format (vocab/meaning)
+    const cards: ImportCard[] = data.cards
+      .filter((card: Record<string, string>) => (card.vocab && card.meaning) || (card.front && card.back))
+      .map((card: Record<string, string>) => ({
+        vocab: card.vocab || card.front || '',
+        pronunciation: card.pronunciation || '',
+        meaning: card.meaning || card.back || '',
+        example: card.example || '',
+        exampleTranslation: card.exampleTranslation || '',
+      }));
+
     return {
-      deck: data.deck,
-      cards: data.cards.filter((card) => card.front && card.back),
+      deck: {
+        name: data.deck.name,
+        description: data.deck.description,
+        category: data.deck.category,
+        sourceLang: data.deck.sourceLang,
+        targetLang: data.deck.targetLang,
+      },
+      cards,
     };
   } catch {
     return null;
@@ -46,8 +68,11 @@ export function parseJSON(jsonString: string): {
 // CSV Export/Import
 export function exportToCSV(cards: Card[]): string {
   const csvData = cards.map((card) => ({
-    front: card.front,
-    back: card.back,
+    vocab: card.vocab,
+    pronunciation: card.pronunciation || '',
+    meaning: card.meaning,
+    example: card.example || '',
+    exampleTranslation: card.exampleTranslation || '',
   }));
 
   return Papa.unparse(csvData, {
@@ -56,8 +81,19 @@ export function exportToCSV(cards: Card[]): string {
   });
 }
 
+interface CSVRow {
+  vocab?: string;
+  pronunciation?: string;
+  meaning?: string;
+  example?: string;
+  exampletranslation?: string;
+  // Legacy support
+  front?: string;
+  back?: string;
+}
+
 export function parseCSV(csvString: string): ImportCard[] {
-  const result = Papa.parse<{ front: string; back: string }>(csvString, {
+  const result = Papa.parse<CSVRow>(csvString, {
     header: true,
     skipEmptyLines: true,
     transformHeader: (header) => header.toLowerCase().trim(),
@@ -67,11 +103,15 @@ export function parseCSV(csvString: string): ImportCard[] {
     console.error('CSV parse errors:', result.errors);
   }
 
+  // Support both old format (front/back) and new format (vocab/meaning)
   return result.data
-    .filter((row) => row.front && row.back)
+    .filter((row) => (row.vocab && row.meaning) || (row.front && row.back))
     .map((row) => ({
-      front: row.front.trim(),
-      back: row.back.trim(),
+      vocab: (row.vocab || row.front || '').trim(),
+      pronunciation: (row.pronunciation || '').trim(),
+      meaning: (row.meaning || row.back || '').trim(),
+      example: (row.example || '').trim(),
+      exampleTranslation: (row.exampletranslation || '').trim(),
     }));
 }
 

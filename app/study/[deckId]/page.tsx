@@ -11,7 +11,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useStudy } from '@/hooks/useStudy';
 import { getDeck } from '@/services/deck';
 import { Deck } from '@/types';
-import { ArrowLeft, Play } from 'lucide-react';
+import { ArrowLeft, Play, MoreVertical, ListChecks, Settings2 } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 export default function StudyPage() {
   const params = useParams();
@@ -80,16 +86,39 @@ export default function StudyPage() {
     <ProtectedRoute>
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="/dashboard">
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
-          </Button>
-          <div>
-            <h1 className="text-xl font-bold">Study: {deck.name}</h1>
-            <p className="text-sm text-muted-foreground">{deck.cardCount} cards in deck</p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="/dashboard">
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
+            </Button>
+            <div>
+              <h1 className="text-xl font-bold">Study: {deck.name}</h1>
+              <p className="text-sm text-muted-foreground">{deck.cardCount} cards in deck</p>
+            </div>
           </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <MoreVertical className="h-5 w-5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link href={`/decks/${deckId}/cards`} className="flex items-center gap-2">
+                  <ListChecks className="h-4 w-4" />
+                  Manage Cards
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/settings" className="flex items-center gap-2">
+                  <Settings2 className="h-4 w-4" />
+                  Settings
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Content */}
@@ -131,6 +160,8 @@ export default function StudyPage() {
             onFlip={flipCard}
             onAnswer={answerCard}
             stats={stats}
+            sourceLang={deck.sourceLang}
+            targetLang={deck.targetLang}
           />
         ) : (
           // No cards to review

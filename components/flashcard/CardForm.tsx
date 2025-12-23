@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Card, CardFormData } from '@/types';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -21,19 +22,25 @@ interface CardFormProps {
 }
 
 export function CardForm({ open, onClose, onSubmit, initialData }: CardFormProps) {
-  const [front, setFront] = useState(initialData?.front || '');
-  const [back, setBack] = useState(initialData?.back || '');
+  const [vocab, setVocab] = useState(initialData?.vocab || '');
+  const [pronunciation, setPronunciation] = useState(initialData?.pronunciation || '');
+  const [meaning, setMeaning] = useState(initialData?.meaning || '');
+  const [example, setExample] = useState(initialData?.example || '');
+  const [exampleTranslation, setExampleTranslation] = useState(initialData?.exampleTranslation || '');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!front.trim() || !back.trim()) return;
+    if (!vocab.trim() || !meaning.trim()) return;
 
     setLoading(true);
     try {
-      await onSubmit({ front, back });
-      setFront('');
-      setBack('');
+      await onSubmit({ vocab, pronunciation, meaning, example, exampleTranslation });
+      setVocab('');
+      setPronunciation('');
+      setMeaning('');
+      setExample('');
+      setExampleTranslation('');
       onClose();
     } finally {
       setLoading(false);
@@ -49,43 +56,60 @@ export function CardForm({ open, onClose, onSubmit, initialData }: CardFormProps
 
         <form onSubmit={handleSubmit}>
           <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="vocab">Vocabulary *</Label>
+                <Input
+                  id="vocab"
+                  value={vocab}
+                  onChange={(e) => setVocab(e.target.value)}
+                  placeholder="e.g., lend"
+                  required
+                />
+              </div>
+
+              <div className="grid gap-2">
+                <Label htmlFor="pronunciation">Pronunciation</Label>
+                <Input
+                  id="pronunciation"
+                  value={pronunciation}
+                  onChange={(e) => setPronunciation(e.target.value)}
+                  placeholder="e.g., /lend/"
+                />
+              </div>
+            </div>
+
             <div className="grid gap-2">
-              <Label htmlFor="front">
-                Front <span className="text-muted-foreground">(supports Markdown)</span>
-              </Label>
-              <Textarea
-                id="front"
-                value={front}
-                onChange={(e) => setFront(e.target.value)}
-                placeholder="e.g., What does 'ephemeral' mean?"
-                rows={4}
+              <Label htmlFor="meaning">Meaning *</Label>
+              <Input
+                id="meaning"
+                value={meaning}
+                onChange={(e) => setMeaning(e.target.value)}
+                placeholder="e.g., ให้ยืม"
                 required
               />
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="back">
-                Back <span className="text-muted-foreground">(supports Markdown)</span>
-              </Label>
+              <Label htmlFor="example">Example Sentence</Label>
               <Textarea
-                id="back"
-                value={back}
-                onChange={(e) => setBack(e.target.value)}
-                placeholder="e.g., ## Ephemeral&#10;*adjective*&#10;&#10;Lasting for a very short time.&#10;&#10;**Example:** The ephemeral beauty of cherry blossoms."
-                rows={6}
-                required
+                id="example"
+                value={example}
+                onChange={(e) => setExample(e.target.value)}
+                placeholder="e.g., Could you lend me some money?"
+                rows={2}
               />
             </div>
 
-            <div className="text-sm text-muted-foreground">
-              <p className="font-medium mb-1">Markdown tips:</p>
-              <ul className="list-disc list-inside space-y-1">
-                <li><code>**bold**</code> for <strong>bold</strong></li>
-                <li><code>*italic*</code> for <em>italic</em></li>
-                <li><code>`code`</code> for <code>code</code></li>
-                <li><code>## Heading</code> for headings</li>
-                <li><code>- item</code> for lists</li>
-              </ul>
+            <div className="grid gap-2">
+              <Label htmlFor="exampleTranslation">Example Translation</Label>
+              <Textarea
+                id="exampleTranslation"
+                value={exampleTranslation}
+                onChange={(e) => setExampleTranslation(e.target.value)}
+                placeholder="e.g., คุณช่วยให้ฉันยืมเงินหน่อยได้ไหม?"
+                rows={2}
+              />
             </div>
           </div>
 
@@ -93,7 +117,7 @@ export function CardForm({ open, onClose, onSubmit, initialData }: CardFormProps
             <Button type="button" variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit" disabled={loading || !front.trim() || !back.trim()}>
+            <Button type="submit" disabled={loading || !vocab.trim() || !meaning.trim()}>
               {loading ? 'Saving...' : initialData ? 'Save Changes' : 'Create Card'}
             </Button>
           </DialogFooter>

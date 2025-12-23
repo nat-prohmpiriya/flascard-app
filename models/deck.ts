@@ -1,5 +1,5 @@
 import { Timestamp } from 'firebase/firestore';
-import { Deck } from '@/types';
+import { Deck, Language } from '@/types';
 
 export interface DeckDocument {
   id: string;
@@ -7,6 +7,8 @@ export interface DeckDocument {
   name: string;
   description: string;
   category: string;
+  sourceLang: Language;
+  targetLang: Language;
   cardCount: number;
   createdAt: Timestamp;
   updatedAt: Timestamp;

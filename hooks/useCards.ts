@@ -18,7 +18,7 @@ export function useCards(deckId: string | null) {
   const [error, setError] = useState<string | null>(null);
 
   const fetchCards = useCallback(async () => {
-    if (!deckId) {
+    if (!deckId || !firebaseUser) {
       setCards([]);
       setLoading(false);
       return;
@@ -26,7 +26,7 @@ export function useCards(deckId: string | null) {
 
     try {
       setLoading(true);
-      const deckCards = await getDeckCards(deckId);
+      const deckCards = await getDeckCards(deckId, firebaseUser.uid);
       setCards(deckCards);
       setError(null);
     } catch (err) {
@@ -35,7 +35,7 @@ export function useCards(deckId: string | null) {
     } finally {
       setLoading(false);
     }
-  }, [deckId]);
+  }, [deckId, firebaseUser]);
 
   useEffect(() => {
     fetchCards();

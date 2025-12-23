@@ -5,8 +5,11 @@ export interface CardDocument {
   id: string;
   deckId: string;
   userId: string;
-  front: string;
-  back: string;
+  vocab: string;
+  pronunciation: string;
+  meaning: string;
+  example: string;
+  exampleTranslation: string;
   nextReview: Timestamp;
   interval: number;
   easeFactor: number;

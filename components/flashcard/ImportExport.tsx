@@ -117,12 +117,12 @@ export function ImportExport({ deck, cards, onImport }: ImportExportProps) {
             {importedCards.slice(0, 5).map((card, index) => (
               <div key={index} className="mb-4 last:mb-0 pb-4 last:pb-0 border-b last:border-0">
                 <p className="text-sm">
-                  <span className="font-medium">Front:</span> {card.front.slice(0, 50)}
-                  {card.front.length > 50 && '...'}
+                  <span className="font-medium">Vocab:</span> {card.vocab.slice(0, 50)}
+                  {card.vocab.length > 50 && '...'}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium">Back:</span> {card.back.slice(0, 50)}
-                  {card.back.length > 50 && '...'}
+                  <span className="font-medium">Meaning:</span> {card.meaning.slice(0, 50)}
+                  {card.meaning.length > 50 && '...'}
                 </p>
               </div>
             ))}

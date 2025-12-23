@@ -50,10 +50,9 @@ export default function RegisterPage() {
     try {
       await signInWithGoogle();
       toast.success('Account created successfully!');
-      router.push('/dashboard');
+      window.location.href = '/dashboard';
     } catch (error: any) {
       toast.error(error.message || 'Failed to sign up with Google');
-    } finally {
       setLoading(false);
     }
   };

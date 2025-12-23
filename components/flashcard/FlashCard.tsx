@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import { Card } from '@/types';
+import { Card, Language, LANG_TO_TTS } from '@/types';
 import { Card as UICard } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useTTS } from '@/hooks/useTTS';
@@ -15,10 +13,19 @@ interface FlashCardProps {
   isFlipped: boolean;
   onFlip: () => void;
   showAudio?: boolean;
+  sourceLang?: Language;
+  targetLang?: Language;
 }
 
-export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCardProps) {
-  const { speakEnglish, stop, isSpeaking, isSupported } = useTTS();
+export function FlashCard({
+  card,
+  isFlipped,
+  onFlip,
+  showAudio = true,
+  sourceLang = 'en',
+  targetLang = 'th'
+}: FlashCardProps) {
+  const { speak, stop, isSpeaking, isSupported } = useTTS();
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleFlip = () => {
@@ -28,14 +35,13 @@ export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCa
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  const handleSpeak = (text: string, e: React.MouseEvent) => {
+  const handleSpeak = (text: string, lang: Language, e: React.MouseEvent) => {
     e.stopPropagation();
     if (isSpeaking) {
       stop();
     } else {
-      // Remove markdown and speak plain text
       const plainText = text.replace(/[#*`>\[\]()_~]/g, '').trim();
-      speakEnglish(plainText);
+      speak(plainText, { lang: LANG_TO_TTS[lang] });
     }
   };
 
@@ -55,18 +61,18 @@ export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCa
         }}
         onClick={handleFlip}
       >
-        {/* Front */}
+        {/* Front - Vocab & Pronunciation */}
         <UICard
           className="absolute inset-0 w-full min-h-[300px] flex flex-col backface-hidden p-6"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="flex justify-between items-start mb-4">
-            <span className="text-sm text-muted-foreground">Front</span>
+            <span className="text-sm text-muted-foreground">Vocabulary</span>
             {showAudio && isSupported && (
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={(e) => handleSpeak(card.front, e)}
+                onClick={(e) => handleSpeak(card.vocab, sourceLang, e)}
               >
                 {isSpeaking ? (
                   <VolumeX className="h-5 w-5" />
@@ -76,19 +82,18 @@ export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCa
               </Button>
             )}
           </div>
-          <div className="flex-1 flex items-center justify-center">
-            <div className="prose dark:prose-invert max-w-none text-center">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {card.front}
-              </ReactMarkdown>
-            </div>
+          <div className="flex-1 flex flex-col items-center justify-center">
+            <span className="text-3xl font-bold mb-2">{card.vocab}</span>
+            {card.pronunciation && (
+              <span className="text-lg text-muted-foreground">{card.pronunciation}</span>
+            )}
           </div>
           <div className="flex justify-center mt-4">
             <span className="text-sm text-muted-foreground">Click to flip</span>
           </div>
         </UICard>
 
-        {/* Back */}
+        {/* Back - Meaning & Example */}
         <UICard
           className="absolute inset-0 w-full min-h-[300px] flex flex-col backface-hidden p-6 rotate-y-180"
           style={{
@@ -97,13 +102,13 @@ export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCa
           }}
         >
           <div className="flex justify-between items-start mb-4">
-            <span className="text-sm text-muted-foreground">Back</span>
+            <span className="text-sm text-muted-foreground">Meaning</span>
             <div className="flex gap-2">
               {showAudio && isSupported && (
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={(e) => handleSpeak(card.back, e)}
+                  onClick={(e) => handleSpeak(card.meaning, targetLang, e)}
                 >
                   {isSpeaking ? (
                     <VolumeX className="h-5 w-5" />
@@ -124,12 +129,43 @@ export function FlashCard({ card, isFlipped, onFlip, showAudio = true }: FlashCa
               </Button>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center overflow-auto">
-            <div className="prose dark:prose-invert max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {card.back}
-              </ReactMarkdown>
-            </div>
+          <div className="flex-1 flex flex-col items-center justify-center space-y-4">
+            <span className="text-2xl font-semibold text-center">{card.meaning}</span>
+            {(card.example || card.exampleTranslation) && (
+              <div className="text-center">
+                <span className="text-sm text-muted-foreground block mb-1">Example:</span>
+                {card.example && (
+                  <div className="flex items-center justify-center">
+                    <span className="text-base italic">{card.example}</span>
+                    {showAudio && isSupported && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="ml-1"
+                        onClick={(e) => handleSpeak(card.example, sourceLang, e)}
+                      >
+                        <Volume2 className="h-4 w-4" />
+                      </Button>
+                    )}
+                  </div>
+                )}
+                {card.exampleTranslation && (
+                  <div className="flex items-center justify-center mt-1">
+                    <span className="text-sm text-muted-foreground">{card.exampleTranslation}</span>
+                    {showAudio && isSupported && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="ml-1"
+                        onClick={(e) => handleSpeak(card.exampleTranslation, targetLang, e)}
+                      >
+                        <Volume2 className="h-3 w-3" />
+                      </Button>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </UICard>
       </div>

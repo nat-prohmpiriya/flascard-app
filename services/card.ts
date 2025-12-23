@@ -33,8 +33,11 @@ export async function createCard(
   const cardData: Omit<CardDocument, 'id'> = {
     userId,
     deckId,
-    front: data.front,
-    back: data.back,
+    vocab: data.vocab,
+    pronunciation: data.pronunciation,
+    meaning: data.meaning,
+    example: data.example,
+    exampleTranslation: data.exampleTranslation,
     nextReview: now,
     interval: DEFAULT_CARD_SRS.interval,
     easeFactor: DEFAULT_CARD_SRS.easeFactor,
@@ -56,13 +59,18 @@ export async function getCard(cardId: string): Promise<Card | null> {
   return toCard({ id: docSnap.id, ...docSnap.data() } as CardDocument);
 }
 
-export async function getDeckCards(deckId: string): Promise<Card[]> {
+export async function getDeckCards(deckId: string, userId?: string): Promise<Card[]> {
   if (!db) return [];
-  const q = query(
-    collection(db, COLLECTION),
+  const constraints = [
     where('deckId', '==', deckId),
     orderBy('createdAt', 'desc')
-  );
+  ];
+
+  if (userId) {
+    constraints.unshift(where('userId', '==', userId));
+  }
+
+  const q = query(collection(db, COLLECTION), ...constraints);
   const querySnapshot = await getDocs(q);
   return querySnapshot.docs.map((d) =>
     toCard({ id: d.id, ...d.data() } as CardDocument)
@@ -174,8 +182,11 @@ export async function bulkCreateCards(
     const cardData: Omit<CardDocument, 'id'> = {
       userId,
       deckId,
-      front: card.front,
-      back: card.back,
+      vocab: card.vocab,
+      pronunciation: card.pronunciation,
+      meaning: card.meaning,
+      example: card.example,
+      exampleTranslation: card.exampleTranslation,
       nextReview: now,
       interval: DEFAULT_CARD_SRS.interval,
       easeFactor: DEFAULT_CARD_SRS.easeFactor,

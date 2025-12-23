@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Deck, DeckFormData } from '@/types';
+import { Deck, DeckFormData, Language, LANGUAGES } from '@/types';
 import { DECK_CATEGORIES } from '@/models/deck';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -26,6 +26,8 @@ export function DeckForm({ open, onClose, onSubmit, initialData }: DeckFormProps
   const [name, setName] = useState(initialData?.name || '');
   const [description, setDescription] = useState(initialData?.description || '');
   const [category, setCategory] = useState(initialData?.category || 'other');
+  const [sourceLang, setSourceLang] = useState<Language>(initialData?.sourceLang || 'en');
+  const [targetLang, setTargetLang] = useState<Language>(initialData?.targetLang || 'th');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,10 +36,12 @@ export function DeckForm({ open, onClose, onSubmit, initialData }: DeckFormProps
 
     setLoading(true);
     try {
-      await onSubmit({ name, description, category });
+      await onSubmit({ name, description, category, sourceLang, targetLang });
       setName('');
       setDescription('');
       setCategory('other');
+      setSourceLang('en');
+      setTargetLang('th');
       onClose();
     } finally {
       setLoading(false);
@@ -89,6 +93,41 @@ export function DeckForm({ open, onClose, onSubmit, initialData }: DeckFormProps
                   </option>
                 ))}
               </select>
+            </div>
+
+            {/* Language Settings */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="sourceLang">Vocab Language</Label>
+                <select
+                  id="sourceLang"
+                  value={sourceLang}
+                  onChange={(e) => setSourceLang(e.target.value as Language)}
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  {LANGUAGES.map((lang) => (
+                    <option key={lang.code} value={lang.code}>
+                      {lang.flag} {lang.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid gap-2">
+                <Label htmlFor="targetLang">Meaning Language</Label>
+                <select
+                  id="targetLang"
+                  value={targetLang}
+                  onChange={(e) => setTargetLang(e.target.value as Language)}
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  {LANGUAGES.map((lang) => (
+                    <option key={lang.code} value={lang.code}>
+                      {lang.flag} {lang.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
 

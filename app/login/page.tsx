@@ -37,10 +37,9 @@ export default function LoginPage() {
     try {
       await signInWithGoogle();
       toast.success('Welcome back!');
-      router.push('/dashboard');
+      window.location.href = '/dashboard';
     } catch (error: any) {
       toast.error(error.message || 'Failed to sign in with Google');
-    } finally {
       setLoading(false);
     }
   };

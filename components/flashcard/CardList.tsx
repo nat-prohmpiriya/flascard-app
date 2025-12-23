@@ -1,8 +1,6 @@
 'use client';
 
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import { Card } from '@/types';
+import { Card, Language, LANG_TO_TTS } from '@/types';
 import { Card as UICard, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import {
@@ -18,10 +16,22 @@ interface CardListProps {
   cards: Card[];
   onEdit: (card: Card) => void;
   onDelete: (card: Card) => void;
+  sourceLang?: Language;
+  targetLang?: Language;
 }
 
-export function CardList({ cards, onEdit, onDelete }: CardListProps) {
-  const { speakEnglish, isSupported } = useTTS();
+export function CardList({
+  cards,
+  onEdit,
+  onDelete,
+  sourceLang = 'en',
+  targetLang = 'th'
+}: CardListProps) {
+  const { speak, isSupported } = useTTS();
+
+  const handleSpeak = (text: string, lang: Language) => {
+    speak(text, { lang: LANG_TO_TTS[lang] });
+  };
 
   if (cards.length === 0) {
     return (
@@ -38,52 +48,57 @@ export function CardList({ cards, onEdit, onDelete }: CardListProps) {
           <CardContent className="p-4">
             <div className="flex gap-4">
               <div className="flex-1 grid md:grid-cols-2 gap-4">
-                {/* Front */}
+                {/* Vocab & Pronunciation */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs font-medium text-muted-foreground uppercase">
-                      Front
+                      Vocabulary
                     </span>
                     {isSupported && (
                       <Button
                         variant="ghost"
                         size="icon"
                         className="h-6 w-6"
-                        onClick={() => speakEnglish(card.front)}
+                        onClick={() => handleSpeak(card.vocab, sourceLang)}
                       >
                         <Volume2 className="h-3 w-3" />
                       </Button>
                     )}
                   </div>
-                  <div className="prose dark:prose-invert prose-sm max-w-none">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {card.front}
-                    </ReactMarkdown>
-                  </div>
+                  <div className="text-lg font-semibold">{card.vocab}</div>
+                  {card.pronunciation && (
+                    <div className="text-sm text-muted-foreground">{card.pronunciation}</div>
+                  )}
                 </div>
 
-                {/* Back */}
+                {/* Meaning & Example */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs font-medium text-muted-foreground uppercase">
-                      Back
+                      Meaning
                     </span>
                     {isSupported && (
                       <Button
                         variant="ghost"
                         size="icon"
                         className="h-6 w-6"
-                        onClick={() => speakEnglish(card.back)}
+                        onClick={() => handleSpeak(card.meaning, targetLang)}
                       >
                         <Volume2 className="h-3 w-3" />
                       </Button>
                     )}
                   </div>
-                  <div className="prose dark:prose-invert prose-sm max-w-none line-clamp-4">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {card.back}
-                    </ReactMarkdown>
-                  </div>
+                  <div className="text-base">{card.meaning}</div>
+                  {card.example && (
+                    <div className="text-sm text-muted-foreground mt-1 italic line-clamp-2">
+                      {card.example}
+                    </div>
+                  )}
+                  {card.exampleTranslation && (
+                    <div className="text-sm text-muted-foreground mt-1 line-clamp-2">
+                      {card.exampleTranslation}
+                    </div>
+                  )}
                 </div>
               </div>
 
