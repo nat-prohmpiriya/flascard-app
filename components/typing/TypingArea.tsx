@@ -9,6 +9,7 @@ interface TypingAreaProps {
   errors: Set<number>;
   userInput: string;
   isPlaying: boolean;
+  isCode?: boolean;
   onKeyPress: (key: string) => void;
   onBackspace: () => void;
   onStart: () => void;
@@ -20,6 +21,7 @@ export function TypingArea({
   errors,
   userInput,
   isPlaying,
+  isCode = true,
   onKeyPress,
   onBackspace,
   onStart,
@@ -116,7 +118,8 @@ export function TypingArea({
       tabIndex={0}
       onClick={() => !isPlaying && onStart()}
       className={cn(
-        'relative p-6 rounded-lg border-2 font-mono text-lg leading-relaxed whitespace-pre-wrap',
+        'relative p-6 rounded-lg border-2 text-lg leading-relaxed',
+        isCode ? 'font-mono whitespace-pre-wrap' : 'font-sans whitespace-pre-wrap',
         'focus:outline-none focus:ring-2 focus:ring-primary',
         'bg-card text-card-foreground',
         !isPlaying && 'cursor-pointer hover:border-primary/50',

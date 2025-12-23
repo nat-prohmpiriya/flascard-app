@@ -18,7 +18,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { ArrowLeft, RotateCcw, Shuffle, Trophy, Loader2, Plus } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
+import { deleteTypingSnippet } from '@/services/typingSnippet';
+import { toast } from 'sonner';
+import { ArrowLeft, RotateCcw, Shuffle, Trophy, Loader2, Plus, Settings, MoreVertical, Pencil, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 
 interface PageProps {
@@ -36,6 +54,7 @@ export default function CodeTypingPage({ params }: PageProps) {
   const [difficulty, setDifficulty] = useState<string>('all');
   const [currentSnippet, setCurrentSnippet] = useState<TypingSnippet | null>(null);
   const [showResults, setShowResults] = useState(false);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
 
   // Load snippets
   useEffect(() => {
@@ -153,6 +172,28 @@ export default function CodeTypingPage({ params }: PageProps) {
     reset();
   };
 
+  const handleDelete = async () => {
+    if (!deleteId) return;
+
+    try {
+      await deleteTypingSnippet(deleteId);
+      setSnippets((prev) => prev.filter((s) => s.id !== deleteId));
+      if (currentSnippet?.id === deleteId) {
+        const remaining = snippets.filter((s) => s.id !== deleteId);
+        setCurrentSnippet(remaining.length > 0 ? remaining[0] : null);
+      }
+      toast.success('Snippet deleted');
+      reset();
+    } catch (error) {
+      console.error('Failed to delete snippet:', error);
+      toast.error('Failed to delete snippet');
+    } finally {
+      setDeleteId(null);
+    }
+  };
+
+  const isOwnSnippet = currentSnippet && firebaseUser && currentSnippet.userId === firebaseUser.uid;
+
   const getDifficultyColor = (diff: string) => {
     switch (diff) {
       case 'easy':
@@ -190,17 +231,24 @@ export default function CodeTypingPage({ params }: PageProps) {
           </div>
         </div>
 
-        <Select value={difficulty} onValueChange={handleDifficultyChange}>
-          <SelectTrigger className="w-[140px]">
-            <SelectValue placeholder="Difficulty" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Levels</SelectItem>
-            <SelectItem value="easy">Easy</SelectItem>
-            <SelectItem value="medium">Medium</SelectItem>
-            <SelectItem value="hard">Hard</SelectItem>
-          </SelectContent>
-        </Select>
+        <div className="flex items-center gap-2">
+          <Select value={difficulty} onValueChange={handleDifficultyChange}>
+            <SelectTrigger className="w-[140px]">
+              <SelectValue placeholder="Difficulty" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Levels</SelectItem>
+              <SelectItem value="easy">Easy</SelectItem>
+              <SelectItem value="medium">Medium</SelectItem>
+              <SelectItem value="hard">Hard</SelectItem>
+            </SelectContent>
+          </Select>
+          <Button variant="outline" size="icon" asChild>
+            <Link href="/typing/snippets">
+              <Settings className="h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
 
       {/* Stats Bar */}
@@ -211,10 +259,41 @@ export default function CodeTypingPage({ params }: PageProps) {
         <Card>
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-lg">{currentSnippet.title}</CardTitle>
-              <Badge className={getDifficultyColor(currentSnippet.difficulty)}>
-                {currentSnippet.difficulty}
-              </Badge>
+              <div>
+                <CardTitle className="text-lg">{currentSnippet.title}</CardTitle>
+                {currentSnippet.description && (
+                  <p className="text-sm text-muted-foreground mt-1">{currentSnippet.description}</p>
+                )}
+              </div>
+              <div className="flex items-center gap-2">
+                <Badge className={getDifficultyColor(currentSnippet.difficulty)}>
+                  {currentSnippet.difficulty}
+                </Badge>
+                {isOwnSnippet && (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon">
+                        <MoreVertical className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem asChild>
+                        <Link href={`/typing/snippets/${currentSnippet.id}/edit`}>
+                          <Pencil className="mr-2 h-4 w-4" />
+                          Edit
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        className="text-red-600"
+                        onClick={() => setDeleteId(currentSnippet.id)}
+                      >
+                        <Trash2 className="mr-2 h-4 w-4" />
+                        Delete
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                )}
+              </div>
             </div>
           </CardHeader>
         </Card>
@@ -228,6 +307,7 @@ export default function CodeTypingPage({ params }: PageProps) {
           errors={state.errors}
           userInput={state.userInput}
           isPlaying={isPlaying}
+          isCode={languageInfo?.isCode !== false}
           onKeyPress={handleKeyPress}
           onBackspace={handleBackspace}
           onStart={start}
@@ -269,6 +349,24 @@ export default function CodeTypingPage({ params }: PageProps) {
           </Button>
         </div>
       )}
+
+      {/* Delete Confirmation */}
+      <AlertDialog open={!!deleteId} onOpenChange={() => setDeleteId(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete Snippet?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete the snippet.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleDelete} className="bg-red-600 hover:bg-red-700">
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
