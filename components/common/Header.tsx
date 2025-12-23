@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen } from 'lucide-react';
+import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen, Keyboard } from 'lucide-react';
 
 export function Header() {
   const router = useRouter();
@@ -108,6 +108,12 @@ export function Header() {
                       <Link href="/dashboard">
                         <User className="mr-2 h-4 w-4" />
                         Dashboard
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link href="/typing">
+                        <Keyboard className="mr-2 h-4 w-4" />
+                        Typing Practice
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>

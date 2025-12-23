@@ -18,7 +18,7 @@ import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
 import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { languages } from '@/data/typing-snippets';
+import { SUPPORTED_LANGUAGES } from '@/models/typingSnippet';
 import {
   Dialog,
   DialogContent,
@@ -173,7 +173,7 @@ export default function DashboardPage() {
             </Button>
           </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {languages.slice(0, 4).map((lang) => (
+            {SUPPORTED_LANGUAGES.slice(0, 4).map((lang) => (
               <Link key={lang.id} href={`/typing/code/${lang.id}`}>
                 <div className="border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
                   <div className="flex items-center gap-3 mb-2">
@@ -181,12 +181,12 @@ export default function DashboardPage() {
                       className="w-10 h-10 rounded flex items-center justify-center text-white text-sm font-bold"
                       style={{ backgroundColor: lang.color }}
                     >
-                      {lang.icon}
+                      {lang.name.slice(0, 2)}
                     </span>
                     <div>
                       <p className="font-medium">{lang.name}</p>
                       <p className="text-sm text-muted-foreground">
-                        {lang.snippets.length} snippets
+                        Practice typing
                       </p>
                     </div>
                   </div>
