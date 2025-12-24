@@ -2,6 +2,7 @@ import { TypingSnippetFormData, SUPPORTED_LANGUAGES } from '@/models/typingSnipp
 
 interface ParsedSnippet {
   title: string;
+  description?: string;
   code: string;
   difficulty: 'easy' | 'medium' | 'hard';
   language?: string;
@@ -23,6 +24,7 @@ interface ParseResult {
  *
  * ## Snippet Title
  * - difficulty: easy|medium|hard
+ * - description: Optional description of what the code does
  *
  * ```language
  * code here
@@ -67,6 +69,10 @@ export function parseMarkdownToSnippets(content: string): ParseResult {
     const difficultyMatch = section.match(/[-*]\s*difficulty:\s*(easy|medium|hard)/i);
     const difficulty = (difficultyMatch?.[1]?.toLowerCase() || 'medium') as 'easy' | 'medium' | 'hard';
 
+    // Extract description
+    const descriptionMatch = section.match(/[-*]\s*description:\s*(.+)$/im);
+    const description = descriptionMatch?.[1]?.trim();
+
     // Extract code block
     const codeBlockMatch = section.match(/```(\w+)?\n([\s\S]*?)```/);
     if (!codeBlockMatch) {
@@ -97,6 +103,7 @@ export function parseMarkdownToSnippets(content: string): ParseResult {
 
     snippets.push({
       title,
+      description,
       code,
       difficulty,
       language: snippetLanguage,
@@ -126,6 +133,7 @@ export function convertToFormData(
     language: snippet.language || parseResult.language,
     languageName: parseResult.languageName,
     title: snippet.title,
+    description: snippet.description,
     code: snippet.code,
     difficulty: snippet.difficulty,
     isPublic,
@@ -140,6 +148,7 @@ export function generateMarkdownTemplate(language: string = 'JavaScript'): strin
 
 ## Hello World
 - difficulty: easy
+- description: Basic console output
 
 \`\`\`javascript
 console.log("Hello, World!");
@@ -147,6 +156,7 @@ console.log("Hello, World!");
 
 ## Arrow Function
 - difficulty: easy
+- description: Modern function syntax with arrow functions
 
 \`\`\`javascript
 const greet = (name) => \`Hello, \${name}!\`;
@@ -154,6 +164,7 @@ const greet = (name) => \`Hello, \${name}!\`;
 
 ## Async/Await
 - difficulty: medium
+- description: Asynchronous data fetching with async/await
 
 \`\`\`javascript
 async function fetchData(url) {
