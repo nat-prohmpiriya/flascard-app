@@ -32,6 +32,7 @@ export async function createDeck(
     name: data.name,
     description: data.description,
     category: data.category,
+    tags: data.tags || [],
     sourceLang: data.sourceLang,
     targetLang: data.targetLang,
     cardCount: 0,

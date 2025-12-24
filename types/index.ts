@@ -51,6 +51,7 @@ export interface Deck {
   name: string;
   description: string;
   category: string;
+  tags: string[];        // Dynamic tags for filtering (e.g., ["english", "A2", "vocabulary"])
   sourceLang: Language;  // Language of vocab/example
   targetLang: Language;  // Language of meaning
   cardCount: number;
@@ -62,6 +63,7 @@ export interface DeckFormData {
   name: string;
   description: string;
   category: string;
+  tags?: string[];
   sourceLang: Language;
   targetLang: Language;
 }
@@ -133,6 +135,7 @@ export interface ExportData {
     name: string;
     description: string;
     category: string;
+    tags?: string[];
     sourceLang: Language;
     targetLang: Language;
   };

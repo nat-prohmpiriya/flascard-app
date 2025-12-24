@@ -13,6 +13,7 @@ export function exportToJSON(deck: Deck, cards: Card[]): string {
       name: deck.name,
       description: deck.description,
       category: deck.category,
+      tags: deck.tags || [],
       sourceLang: deck.sourceLang,
       targetLang: deck.targetLang,
     },
@@ -30,7 +31,7 @@ export function exportToJSON(deck: Deck, cards: Card[]): string {
 }
 
 export function parseJSON(jsonString: string): {
-  deck: { name: string; description: string; category: string; sourceLang?: Language; targetLang?: Language };
+  deck: { name: string; description: string; category: string; tags?: string[]; sourceLang?: Language; targetLang?: Language };
   cards: ImportCard[];
 } | null {
   try {
@@ -57,6 +58,7 @@ export function parseJSON(jsonString: string): {
         name: data.deck.name,
         description: data.deck.description,
         category: data.deck.category,
+        tags: data.deck.tags || [],
         sourceLang: data.deck.sourceLang,
         targetLang: data.deck.targetLang,
       },

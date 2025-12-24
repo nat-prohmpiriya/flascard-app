@@ -7,6 +7,7 @@ export interface DeckDocument {
   name: string;
   description: string;
   category: string;
+  tags: string[];
   sourceLang: Language;
   targetLang: Language;
   cardCount: number;
@@ -17,6 +18,7 @@ export interface DeckDocument {
 export function toDeck(doc: DeckDocument): Deck {
   return {
     ...doc,
+    tags: doc.tags || [],  // Handle old documents without tags
     createdAt: doc.createdAt.toDate(),
     updatedAt: doc.updatedAt.toDate(),
   };
