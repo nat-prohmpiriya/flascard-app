@@ -76,6 +76,8 @@ export interface Card {
   meaning: string;              // Translation (targetLang)
   example: string;              // Example sentence (sourceLang)
   exampleTranslation: string;   // Example translated to targetLang
+  imageUrl?: string;            // Optional image URL from Firebase Storage
+  imageStoragePath?: string;    // Storage path for deletion
   // SRS fields
   nextReview: Date;
   interval: number;
@@ -91,6 +93,8 @@ export interface CardFormData {
   meaning: string;
   example: string;
   exampleTranslation: string;
+  imageUrl?: string;
+  imageStoragePath?: string;
 }
 
 // SRS types
@@ -138,6 +142,7 @@ export interface ExportData {
     meaning: string;
     example: string;
     exampleTranslation: string;
+    imageUrl?: string;
   }[];
 }
 
@@ -147,4 +152,5 @@ export interface ImportCard {
   meaning: string;
   example: string;
   exampleTranslation: string;
+  imageUrl?: string;
 }

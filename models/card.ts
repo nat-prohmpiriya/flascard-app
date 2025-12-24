@@ -10,6 +10,8 @@ export interface CardDocument {
   meaning: string;
   example: string;
   exampleTranslation: string;
+  imageUrl?: string;
+  imageStoragePath?: string;
   nextReview: Timestamp;
   interval: number;
   easeFactor: number;
