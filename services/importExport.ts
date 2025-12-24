@@ -2,7 +2,7 @@ import Papa from 'papaparse';
 import { ExportData, ImportCard, Card, Language } from '@/types';
 import { Deck } from '@/types';
 
-const EXPORT_VERSION = '2.0';
+const EXPORT_VERSION = '2.1';
 
 // JSON Export/Import
 export function exportToJSON(deck: Deck, cards: Card[]): string {
@@ -22,6 +22,7 @@ export function exportToJSON(deck: Deck, cards: Card[]): string {
       meaning: card.meaning,
       example: card.example || '',
       exampleTranslation: card.exampleTranslation || '',
+      ...(card.imageUrl && { imageUrl: card.imageUrl }),
     })),
   };
 
@@ -48,6 +49,7 @@ export function parseJSON(jsonString: string): {
         meaning: card.meaning || card.back || '',
         example: card.example || '',
         exampleTranslation: card.exampleTranslation || '',
+        ...(card.imageUrl && { imageUrl: card.imageUrl }),
       }));
 
     return {
@@ -73,6 +75,7 @@ export function exportToCSV(cards: Card[]): string {
     meaning: card.meaning,
     example: card.example || '',
     exampleTranslation: card.exampleTranslation || '',
+    imageUrl: card.imageUrl || '',
   }));
 
   return Papa.unparse(csvData, {
@@ -87,6 +90,7 @@ interface CSVRow {
   meaning?: string;
   example?: string;
   exampletranslation?: string;
+  imageurl?: string;
   // Legacy support
   front?: string;
   back?: string;
@@ -112,6 +116,7 @@ export function parseCSV(csvString: string): ImportCard[] {
       meaning: (row.meaning || row.back || '').trim(),
       example: (row.example || '').trim(),
       exampleTranslation: (row.exampletranslation || '').trim(),
+      ...(row.imageurl && { imageUrl: row.imageurl.trim() }),
     }));
 }
 
