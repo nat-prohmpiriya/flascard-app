@@ -1,0 +1,398 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Phrasal Verbs",
+    "description": "B2 level phrasal verbs for upper-intermediate learners",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "phrasal verbs"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "break down",
+      "pronunciation": "เบรค-ดาวน์",
+      "meaning": "เสีย, พัง / แยกย่อย / อารมณ์พัง",
+      "example": "The car broke down on the highway.",
+      "exampleTranslation": "รถเสียบนทางด่วน"
+    },
+    {
+      "vocab": "bring about",
+      "pronunciation": "บริง-อะ-เบาท์",
+      "meaning": "ทำให้เกิดขึ้น, ก่อให้เกิด",
+      "example": "Technology has brought about major changes.",
+      "exampleTranslation": "เทคโนโลยีก่อให้เกิดการเปลี่ยนแปลงครั้งใหญ่"
+    },
+    {
+      "vocab": "bring up",
+      "pronunciation": "บริง-อัพ",
+      "meaning": "เลี้ยงดู / หยิบยกขึ้นมาพูด",
+      "example": "She was brought up in a small village.",
+      "exampleTranslation": "เธอถูกเลี้ยงดูในหมู่บ้านเล็กๆ"
+    },
+    {
+      "vocab": "call off",
+      "pronunciation": "คอล-ออฟ",
+      "meaning": "ยกเลิก",
+      "example": "They called off the meeting due to the storm.",
+      "exampleTranslation": "พวกเขายกเลิกการประชุมเนื่องจากพายุ"
+    },
+    {
+      "vocab": "carry out",
+      "pronunciation": "แคร์-รี่-เอาท์",
+      "meaning": "ดำเนินการ, ปฏิบัติ",
+      "example": "The police carried out an investigation.",
+      "exampleTranslation": "ตำรวจดำเนินการสอบสวน"
+    },
+    {
+      "vocab": "come across",
+      "pronunciation": "คัม-อะ-ครอส",
+      "meaning": "พบโดยบังเอิญ / ดูเหมือนว่า",
+      "example": "I came across an old photo in the drawer.",
+      "exampleTranslation": "ฉันพบรูปเก่าโดยบังเอิญในลิ้นชัก"
+    },
+    {
+      "vocab": "come up with",
+      "pronunciation": "คัม-อัพ-วิธ",
+      "meaning": "คิดขึ้นมาได้, นึกออก",
+      "example": "She came up with a brilliant solution.",
+      "exampleTranslation": "เธอคิดวิธีแก้ปัญหาที่ยอดเยี่ยมออกมาได้"
+    },
+    {
+      "vocab": "cut back on",
+      "pronunciation": "คัท-แบค-ออน",
+      "meaning": "ลดการใช้, ตัดทอน",
+      "example": "We need to cut back on expenses.",
+      "exampleTranslation": "เราต้องลดค่าใช้จ่าย"
+    },
+    {
+      "vocab": "deal with",
+      "pronunciation": "ดีล-วิธ",
+      "meaning": "จัดการ, รับมือ",
+      "example": "How do you deal with stress?",
+      "exampleTranslation": "คุณรับมือกับความเครียดอย่างไร?"
+    },
+    {
+      "vocab": "do away with",
+      "pronunciation": "ดู-อะ-เวย์-วิธ",
+      "meaning": "เลิก, ยกเลิก",
+      "example": "The company did away with the old policy.",
+      "exampleTranslation": "บริษัทยกเลิกนโยบายเก่า"
+    },
+    {
+      "vocab": "draw up",
+      "pronunciation": "ดรอว์-อัพ",
+      "meaning": "ร่าง, จัดทำ (เอกสาร)",
+      "example": "The lawyer drew up the contract.",
+      "exampleTranslation": "ทนายความร่างสัญญา"
+    },
+    {
+      "vocab": "drop out",
+      "pronunciation": "ดร็อพ-เอาท์",
+      "meaning": "ออกกลางคัน, ถอนตัว",
+      "example": "He dropped out of university after one year.",
+      "exampleTranslation": "เขาออกจากมหาวิทยาลัยกลางคันหลังจากหนึ่งปี"
+    },
+    {
+      "vocab": "figure out",
+      "pronunciation": "ฟิก-เกอะ-เอาท์",
+      "meaning": "คิดออก, เข้าใจ",
+      "example": "I finally figured out how to solve the problem.",
+      "exampleTranslation": "ในที่สุดฉันก็คิดออกว่าจะแก้ปัญหาอย่างไร"
+    },
+    {
+      "vocab": "get along with",
+      "pronunciation": "เก็ท-อะ-ลอง-วิธ",
+      "meaning": "เข้ากันได้, มีสัมพันธ์ที่ดี",
+      "example": "She gets along with all her colleagues.",
+      "exampleTranslation": "เธอเข้ากันได้ดีกับเพื่อนร่วมงานทุกคน"
+    },
+    {
+      "vocab": "get over",
+      "pronunciation": "เก็ท-โอ-เวอะ",
+      "meaning": "ฟื้นตัว, ก้าวข้าม",
+      "example": "It took months to get over the breakup.",
+      "exampleTranslation": "ใช้เวลาหลายเดือนในการก้าวข้ามการเลิกรา"
+    },
+    {
+      "vocab": "give up",
+      "pronunciation": "กิฟ-อัพ",
+      "meaning": "ยอมแพ้, เลิก",
+      "example": "Never give up on your dreams.",
+      "exampleTranslation": "อย่ายอมแพ้กับความฝันของคุณ"
+    },
+    {
+      "vocab": "go through",
+      "pronunciation": "โก-ธรู",
+      "meaning": "ประสบ, ผ่านพ้น / ตรวจสอบ",
+      "example": "She went through a difficult time last year.",
+      "exampleTranslation": "เธอผ่านช่วงเวลาที่ยากลำบากเมื่อปีที่แล้ว"
+    },
+    {
+      "vocab": "hand in",
+      "pronunciation": "แฮนด์-อิน",
+      "meaning": "ส่ง (งาน)",
+      "example": "Please hand in your assignments by Friday.",
+      "exampleTranslation": "กรุณาส่งงานภายในวันศุกร์"
+    },
+    {
+      "vocab": "hold on",
+      "pronunciation": "โฮลด์-ออน",
+      "meaning": "รอ, ยึดไว้",
+      "example": "Hold on, I'll check for you.",
+      "exampleTranslation": "รอสักครู่ ฉันจะตรวจสอบให้"
+    },
+    {
+      "vocab": "keep up with",
+      "pronunciation": "คีพ-อัพ-วิธ",
+      "meaning": "ตามทัน, ไม่ตกยุค",
+      "example": "It's hard to keep up with the latest technology.",
+      "exampleTranslation": "มันยากที่จะตามทันเทคโนโลยีล่าสุด"
+    },
+    {
+      "vocab": "lay off",
+      "pronunciation": "เลย์-ออฟ",
+      "meaning": "ปลดพนักงาน",
+      "example": "The company laid off 500 workers.",
+      "exampleTranslation": "บริษัทปลดพนักงาน 500 คน"
+    },
+    {
+      "vocab": "look forward to",
+      "pronunciation": "ลุค-ฟอร์-เวิร์ด-ทู",
+      "meaning": "ตั้งตารอ, คอยด้วยความหวัง",
+      "example": "I'm looking forward to meeting you.",
+      "exampleTranslation": "ฉันตั้งตารอที่จะพบคุณ"
+    },
+    {
+      "vocab": "look into",
+      "pronunciation": "ลุค-อิน-ทู",
+      "meaning": "ตรวจสอบ, สืบสวน",
+      "example": "The police are looking into the matter.",
+      "exampleTranslation": "ตำรวจกำลังตรวจสอบเรื่องนี้"
+    },
+    {
+      "vocab": "make up",
+      "pronunciation": "เมค-อัพ",
+      "meaning": "แต่งหน้า / คืนดี / แต่งเรื่อง",
+      "example": "They made up after the argument.",
+      "exampleTranslation": "พวกเขาคืนดีกันหลังการทะเลาะ"
+    },
+    {
+      "vocab": "make up for",
+      "pronunciation": "เมค-อัพ-ฟอร์",
+      "meaning": "ชดเชย",
+      "example": "He tried to make up for his mistake.",
+      "exampleTranslation": "เขาพยายามชดเชยความผิดพลาดของเขา"
+    },
+    {
+      "vocab": "pass away",
+      "pronunciation": "พาส-อะ-เวย์",
+      "meaning": "เสียชีวิต, ถึงแก่กรรม",
+      "example": "His grandmother passed away last week.",
+      "exampleTranslation": "ยายของเขาเสียชีวิตเมื่อสัปดาห์ที่แล้ว"
+    },
+    {
+      "vocab": "pick up",
+      "pronunciation": "พิค-อัพ",
+      "meaning": "หยิบขึ้น / รับ(คน) / เรียนรู้",
+      "example": "Can you pick up some groceries on your way home?",
+      "exampleTranslation": "คุณช่วยซื้อของชำระหว่างทางกลับบ้านได้ไหม?"
+    },
+    {
+      "vocab": "point out",
+      "pronunciation": "พอยท์-เอาท์",
+      "meaning": "ชี้ให้เห็น, บอกให้รู้",
+      "example": "She pointed out the errors in my report.",
+      "exampleTranslation": "เธอชี้ให้เห็นข้อผิดพลาดในรายงานของฉัน"
+    },
+    {
+      "vocab": "put off",
+      "pronunciation": "พุท-ออฟ",
+      "meaning": "เลื่อนออกไป, ทำให้เบื่อ",
+      "example": "Don't put off important decisions.",
+      "exampleTranslation": "อย่าเลื่อนการตัดสินใจสำคัญออกไป"
+    },
+    {
+      "vocab": "put up with",
+      "pronunciation": "พุท-อัพ-วิธ",
+      "meaning": "ทน, อดทน",
+      "example": "I can't put up with his behavior anymore.",
+      "exampleTranslation": "ฉันทนพฤติกรรมของเขาไม่ได้อีกแล้ว"
+    },
+    {
+      "vocab": "run into",
+      "pronunciation": "รัน-อิน-ทู",
+      "meaning": "เจอโดยบังเอิญ / ประสบ",
+      "example": "I ran into an old friend at the mall.",
+      "exampleTranslation": "ฉันเจอเพื่อนเก่าโดยบังเอิญที่ห้าง"
+    },
+    {
+      "vocab": "run out of",
+      "pronunciation": "รัน-เอาท์-ออฟ",
+      "meaning": "หมด, ไม่เหลือ",
+      "example": "We've run out of time.",
+      "exampleTranslation": "เราหมดเวลาแล้ว"
+    },
+    {
+      "vocab": "set up",
+      "pronunciation": "เซท-อัพ",
+      "meaning": "จัดตั้ง, ติดตั้ง",
+      "example": "They set up a new company last year.",
+      "exampleTranslation": "พวกเขาจัดตั้งบริษัทใหม่เมื่อปีที่แล้ว"
+    },
+    {
+      "vocab": "show up",
+      "pronunciation": "โชว์-อัพ",
+      "meaning": "ปรากฏตัว, มาถึง",
+      "example": "He didn't show up for the meeting.",
+      "exampleTranslation": "เขาไม่มาประชุม"
+    },
+    {
+      "vocab": "sort out",
+      "pronunciation": "ซอร์ท-เอาท์",
+      "meaning": "จัดการ, แก้ไข",
+      "example": "We need to sort out this problem quickly.",
+      "exampleTranslation": "เราต้องจัดการปัญหานี้อย่างรวดเร็ว"
+    },
+    {
+      "vocab": "stand for",
+      "pronunciation": "สแตนด์-ฟอร์",
+      "meaning": "ย่อมาจาก / สนับสนุน",
+      "example": "What does AI stand for?",
+      "exampleTranslation": "AI ย่อมาจากอะไร?"
+    },
+    {
+      "vocab": "take after",
+      "pronunciation": "เทค-อาฟ-เทอะ",
+      "meaning": "เหมือน (พ่อแม่)",
+      "example": "She takes after her mother.",
+      "exampleTranslation": "เธอเหมือนแม่ของเธอ"
+    },
+    {
+      "vocab": "take over",
+      "pronunciation": "เทค-โอ-เวอะ",
+      "meaning": "เข้าควบคุม, รับช่วง",
+      "example": "The company was taken over by a larger firm.",
+      "exampleTranslation": "บริษัทถูกเข้าซื้อกิจการโดยบริษัทที่ใหญ่กว่า"
+    },
+    {
+      "vocab": "turn down",
+      "pronunciation": "เทิร์น-ดาวน์",
+      "meaning": "ปฏิเสธ / หรี่ลง",
+      "example": "She turned down the job offer.",
+      "exampleTranslation": "เธอปฏิเสธข้อเสนองาน"
+    },
+    {
+      "vocab": "turn out",
+      "pronunciation": "เทิร์น-เอาท์",
+      "meaning": "กลายเป็น, ปรากฏว่า",
+      "example": "The event turned out to be a success.",
+      "exampleTranslation": "งานกลายเป็นความสำเร็จ"
+    },
+    {
+      "vocab": "turn up",
+      "pronunciation": "เทิร์น-อัพ",
+      "meaning": "ปรากฏตัว / เพิ่มเสียง",
+      "example": "Guess who turned up at the party?",
+      "exampleTranslation": "เดาสิว่าใครปรากฏตัวที่งานปาร์ตี้?"
+    },
+    {
+      "vocab": "work out",
+      "pronunciation": "เวิร์ค-เอาท์",
+      "meaning": "ออกกำลังกาย / คิดออก / สำเร็จ",
+      "example": "Everything worked out in the end.",
+      "exampleTranslation": "ทุกอย่างลงตัวในที่สุด"
+    },
+    {
+      "vocab": "back up",
+      "pronunciation": "แบค-อัพ",
+      "meaning": "สำรองข้อมูล / สนับสนุน",
+      "example": "Always back up your important files.",
+      "exampleTranslation": "สำรองไฟล์สำคัญของคุณเสมอ"
+    },
+    {
+      "vocab": "break out",
+      "pronunciation": "เบรค-เอาท์",
+      "meaning": "ปะทุ, เกิดขึ้นอย่างกะทันหัน",
+      "example": "War broke out in the region.",
+      "exampleTranslation": "สงครามปะทุขึ้นในภูมิภาค"
+    },
+    {
+      "vocab": "catch up",
+      "pronunciation": "แคทช์-อัพ",
+      "meaning": "ตามทัน, พูดคุยให้ทัน",
+      "example": "Let's meet for coffee and catch up.",
+      "exampleTranslation": "มาเจอกันดื่มกาแฟและคุยกันเถอะ"
+    },
+    {
+      "vocab": "fill in",
+      "pronunciation": "ฟิล-อิน",
+      "meaning": "กรอก (แบบฟอร์ม) / ทำแทน",
+      "example": "Please fill in the application form.",
+      "exampleTranslation": "กรุณากรอกใบสมัคร"
+    },
+    {
+      "vocab": "give in",
+      "pronunciation": "กิฟ-อิน",
+      "meaning": "ยอม, ยอมจำนน",
+      "example": "After hours of negotiation, they gave in.",
+      "exampleTranslation": "หลังจากเจรจาหลายชั่วโมง พวกเขายอมจำนน"
+    },
+    {
+      "vocab": "hold back",
+      "pronunciation": "โฮลด์-แบค",
+      "meaning": "กั้น, ยับยั้ง",
+      "example": "She couldn't hold back her tears.",
+      "exampleTranslation": "เธอไม่สามารถกั้นน้ำตาได้"
+    },
+    {
+      "vocab": "let down",
+      "pronunciation": "เล็ท-ดาวน์",
+      "meaning": "ทำให้ผิดหวัง",
+      "example": "I promise not to let you down.",
+      "exampleTranslation": "ฉันสัญญาว่าจะไม่ทำให้คุณผิดหวัง"
+    },
+    {
+      "vocab": "pull off",
+      "pronunciation": "พูล-ออฟ",
+      "meaning": "ทำสำเร็จ (สิ่งยาก)",
+      "example": "They managed to pull off the impossible.",
+      "exampleTranslation": "พวกเขาสามารถทำสิ่งที่เป็นไปไม่ได้สำเร็จ"
+    },
+    {
+      "vocab": "see through",
+      "pronunciation": "ซี-ธรู",
+      "meaning": "เห็นทะลุ (เล่ห์เหลี่ยม) / ทำให้สำเร็จ",
+      "example": "I can see through your lies.",
+      "exampleTranslation": "ฉันเห็นทะลุคำโกหกของคุณ"
+    },
+    {
+      "vocab": "wear out",
+      "pronunciation": "แวร์-เอาท์",
+      "meaning": "สึกหรอ, ทำให้เหนื่อยมาก",
+      "example": "These shoes are completely worn out.",
+      "exampleTranslation": "รองเท้าคู่นี้สึกหรอหมดแล้ว"
+    },
+    {
+      "vocab": "wind up",
+      "pronunciation": "ไวนด์-อัพ",
+      "meaning": "จบลง, ลงเอย",
+      "example": "We wound up staying until midnight.",
+      "exampleTranslation": "เราลงเอยด้วยการอยู่จนถึงเที่ยงคืน"
+    },
+    {
+      "vocab": "account for",
+      "pronunciation": "อะ-เคานท์-ฟอร์",
+      "meaning": "อธิบาย, คิดเป็นสัดส่วน",
+      "example": "How do you account for the missing money?",
+      "exampleTranslation": "คุณอธิบายเรื่องเงินหายไปอย่างไร?"
+    },
+    {
+      "vocab": "boil down to",
+      "pronunciation": "บอยล์-ดาวน์-ทู",
+      "meaning": "สรุปได้ว่า",
+      "example": "The issue boils down to money.",
+      "exampleTranslation": "ปัญหาสรุปได้ว่าคือเรื่องเงิน"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "HSK1 - Things & Food",
+    "description": "HSK1 Level - Objects, food, drinks, and everyday items",
+    "category": "HSK1",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "hsk1", "nouns", "things", "food", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "东西",
+      "pronunciation": "dōngxi",
+      "meaning": "สิ่งของ",
+      "example": "买东西。",
+      "exampleTranslation": "ซื้อของ"
+    },
+    {
+      "vocab": "书",
+      "pronunciation": "shū",
+      "meaning": "หนังสือ",
+      "example": "这是一本书。",
+      "exampleTranslation": "นี่คือหนังสือหนึ่งเล่ม"
+    },
+    {
+      "vocab": "字",
+      "pronunciation": "zì",
+      "meaning": "ตัวอักษร",
+      "example": "写字。",
+      "exampleTranslation": "เขียนหนังสือ"
+    },
+    {
+      "vocab": "电脑",
+      "pronunciation": "diànnǎo",
+      "meaning": "คอมพิวเตอร์",
+      "example": "我的电脑很好。",
+      "exampleTranslation": "คอมพิวเตอร์ของฉันดีมาก"
+    },
+    {
+      "vocab": "电视",
+      "pronunciation": "diànshì",
+      "meaning": "โทรทัศน์",
+      "example": "看电视。",
+      "exampleTranslation": "ดูทีวี"
+    },
+    {
+      "vocab": "电影",
+      "pronunciation": "diànyǐng",
+      "meaning": "ภาพยนตร์",
+      "example": "看电影。",
+      "exampleTranslation": "ดูหนัง"
+    },
+    {
+      "vocab": "电话",
+      "pronunciation": "diànhuà",
+      "meaning": "โทรศัพท์",
+      "example": "打电话。",
+      "exampleTranslation": "โทรศัพท์"
+    },
+    {
+      "vocab": "钱",
+      "pronunciation": "qián",
+      "meaning": "เงิน",
+      "example": "多少钱？",
+      "exampleTranslation": "เท่าไหร่?"
+    },
+    {
+      "vocab": "块",
+      "pronunciation": "kuài",
+      "meaning": "หยวน (หน่วยเงิน)",
+      "example": "十块钱。",
+      "exampleTranslation": "สิบหยวน"
+    },
+    {
+      "vocab": "衣服",
+      "pronunciation": "yīfu",
+      "meaning": "เสื้อผ้า",
+      "example": "这件衣服很漂亮。",
+      "exampleTranslation": "เสื้อผ้าตัวนี้สวยมาก"
+    },
+    {
+      "vocab": "水",
+      "pronunciation": "shuǐ",
+      "meaning": "น้ำ",
+      "example": "喝水。",
+      "exampleTranslation": "ดื่มน้ำ"
+    },
+    {
+      "vocab": "茶",
+      "pronunciation": "chá",
+      "meaning": "ชา",
+      "example": "喝茶。",
+      "exampleTranslation": "ดื่มชา"
+    },
+    {
+      "vocab": "米饭",
+      "pronunciation": "mǐfàn",
+      "meaning": "ข้าวสวย",
+      "example": "吃米饭。",
+      "exampleTranslation": "กินข้าว"
+    },
+    {
+      "vocab": "菜",
+      "pronunciation": "cài",
+      "meaning": "ผัก, กับข้าว",
+      "example": "这个菜很好吃。",
+      "exampleTranslation": "กับข้าวนี้อร่อยมาก"
+    },
+    {
+      "vocab": "苹果",
+      "pronunciation": "píngguǒ",
+      "meaning": "แอปเปิล",
+      "example": "我喜欢吃苹果。",
+      "exampleTranslation": "ฉันชอบกินแอปเปิล"
+    },
+    {
+      "vocab": "水果",
+      "pronunciation": "shuǐguǒ",
+      "meaning": "ผลไม้",
+      "example": "我喜欢吃水果。",
+      "exampleTranslation": "ฉันชอบกินผลไม้"
+    },
+    {
+      "vocab": "饭",
+      "pronunciation": "fàn",
+      "meaning": "ข้าว, อาหาร",
+      "example": "吃饭。",
+      "exampleTranslation": "กินข้าว"
+    },
+    {
+      "vocab": "杯子",
+      "pronunciation": "bēizi",
+      "meaning": "แก้ว, ถ้วย",
+      "example": "一杯水。",
+      "exampleTranslation": "น้ำหนึ่งแก้ว"
+    },
+    {
+      "vocab": "桌子",
+      "pronunciation": "zhuōzi",
+      "meaning": "โต๊ะ",
+      "example": "书在桌子上。",
+      "exampleTranslation": "หนังสืออยู่บนโต๊ะ"
+    },
+    {
+      "vocab": "椅子",
+      "pronunciation": "yǐzi",
+      "meaning": "เก้าอี้",
+      "example": "请坐在椅子上。",
+      "exampleTranslation": "กรุณานั่งบนเก้าอี้"
+    },
+    {
+      "vocab": "车",
+      "pronunciation": "chē",
+      "meaning": "รถ",
+      "example": "坐车。",
+      "exampleTranslation": "นั่งรถ"
+    },
+    {
+      "vocab": "出租车",
+      "pronunciation": "chūzūchē",
+      "meaning": "รถแท็กซี่",
+      "example": "坐出租车。",
+      "exampleTranslation": "นั่งแท็กซี่"
+    },
+    {
+      "vocab": "飞机",
+      "pronunciation": "fēijī",
+      "meaning": "เครื่องบิน",
+      "example": "坐飞机。",
+      "exampleTranslation": "นั่งเครื่องบิน"
+    },
+    {
+      "vocab": "本",
+      "pronunciation": "běn",
+      "meaning": "ลักษณนาม (หนังสือ)",
+      "example": "一本书。",
+      "exampleTranslation": "หนังสือหนึ่งเล่ม"
+    }
+  ]
+}

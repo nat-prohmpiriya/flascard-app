@@ -1,0 +1,175 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Pinyin Initials",
+    "description": "21 Chinese consonants (initials) - b, p, m, f, d, t, n, l, g, k, h, j, q, x, zh, ch, sh, r, z, c, s",
+    "category": "Pinyin Basics",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "pinyin", "initials", "consonants", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "爸",
+      "pronunciation": "bà (b = บ ไม่มีลม)",
+      "meaning": "พ่อ",
+      "example": "爸爸好。",
+      "exampleTranslation": "พ่อสบายดี"
+    },
+    {
+      "vocab": "怕",
+      "pronunciation": "pà (p = พ มีลมออก)",
+      "meaning": "กลัว",
+      "example": "我不怕。",
+      "exampleTranslation": "ฉันไม่กลัว"
+    },
+    {
+      "vocab": "妈",
+      "pronunciation": "mā (m = ม)",
+      "meaning": "แม่",
+      "example": "妈妈爱我。",
+      "exampleTranslation": "แม่รักฉัน"
+    },
+    {
+      "vocab": "发",
+      "pronunciation": "fā (f = ฟ)",
+      "meaning": "ส่ง, ออก",
+      "example": "发短信。",
+      "exampleTranslation": "ส่งข้อความ"
+    },
+    {
+      "vocab": "大",
+      "pronunciation": "dà (d = ด ไม่มีลม)",
+      "meaning": "ใหญ่",
+      "example": "很大。",
+      "exampleTranslation": "ใหญ่มาก"
+    },
+    {
+      "vocab": "他",
+      "pronunciation": "tā (t = ท มีลมออก)",
+      "meaning": "เขา (ชาย)",
+      "example": "他是我朋友。",
+      "exampleTranslation": "เขาเป็นเพื่อนฉัน"
+    },
+    {
+      "vocab": "你",
+      "pronunciation": "nǐ (n = น)",
+      "meaning": "คุณ",
+      "example": "你好！",
+      "exampleTranslation": "สวัสดี!"
+    },
+    {
+      "vocab": "来",
+      "pronunciation": "lái (l = ล)",
+      "meaning": "มา",
+      "example": "快来！",
+      "exampleTranslation": "มาเร็ว!"
+    },
+    {
+      "vocab": "哥",
+      "pronunciation": "gē (g = ก ไม่มีลม)",
+      "meaning": "พี่ชาย",
+      "example": "哥哥很高。",
+      "exampleTranslation": "พี่ชายสูงมาก"
+    },
+    {
+      "vocab": "可",
+      "pronunciation": "kě (k = ค มีลมออก)",
+      "meaning": "สามารถ",
+      "example": "可以吗？",
+      "exampleTranslation": "ได้ไหม?"
+    },
+    {
+      "vocab": "好",
+      "pronunciation": "hǎo (h = ฮ)",
+      "meaning": "ดี",
+      "example": "很好！",
+      "exampleTranslation": "ดีมาก!"
+    },
+    {
+      "vocab": "鸡",
+      "pronunciation": "jī (j = จ ปากยิ้ม)",
+      "meaning": "ไก่",
+      "example": "我喜欢吃鸡。",
+      "exampleTranslation": "ฉันชอบกินไก่"
+    },
+    {
+      "vocab": "七",
+      "pronunciation": "qī (q = ช มีลม ปากยิ้ม)",
+      "meaning": "เจ็ด",
+      "example": "七点钟。",
+      "exampleTranslation": "เจ็ดโมง"
+    },
+    {
+      "vocab": "西",
+      "pronunciation": "xī (x = ซ ปากยิ้ม)",
+      "meaning": "ตะวันตก",
+      "example": "西边。",
+      "exampleTranslation": "ทางตะวันตก"
+    },
+    {
+      "vocab": "中",
+      "pronunciation": "zhōng (zh = จ ลิ้นม้วน)",
+      "meaning": "กลาง, จีน",
+      "example": "中国。",
+      "exampleTranslation": "ประเทศจีน"
+    },
+    {
+      "vocab": "吃",
+      "pronunciation": "chī (ch = ช ลิ้นม้วน มีลม)",
+      "meaning": "กิน",
+      "example": "吃饭。",
+      "exampleTranslation": "กินข้าว"
+    },
+    {
+      "vocab": "是",
+      "pronunciation": "shì (sh = ซ ลิ้นม้วน)",
+      "meaning": "เป็น, คือ",
+      "example": "我是学生。",
+      "exampleTranslation": "ฉันเป็นนักเรียน"
+    },
+    {
+      "vocab": "人",
+      "pronunciation": "rén (r = ร อเมริกัน ลิ้นม้วน)",
+      "meaning": "คน",
+      "example": "中国人。",
+      "exampleTranslation": "คนจีน"
+    },
+    {
+      "vocab": "在",
+      "pronunciation": "zài (z = จ ฟันชิด)",
+      "meaning": "อยู่",
+      "example": "我在家。",
+      "exampleTranslation": "ฉันอยู่บ้าน"
+    },
+    {
+      "vocab": "菜",
+      "pronunciation": "cài (c = ช ฟันชิด มีลม)",
+      "meaning": "ผัก, อาหาร",
+      "example": "点菜。",
+      "exampleTranslation": "สั่งอาหาร"
+    },
+    {
+      "vocab": "三",
+      "pronunciation": "sān (s = ซ ฟันชิด)",
+      "meaning": "สาม",
+      "example": "三个人。",
+      "exampleTranslation": "สามคน"
+    },
+    {
+      "vocab": "我",
+      "pronunciation": "wǒ (w = ว)",
+      "meaning": "ฉัน",
+      "example": "我爱你。",
+      "exampleTranslation": "ฉันรักคุณ"
+    },
+    {
+      "vocab": "也",
+      "pronunciation": "yě (y = ย)",
+      "meaning": "ก็, ด้วย",
+      "example": "我也要。",
+      "exampleTranslation": "ฉันก็ต้องการ"
+    }
+  ]
+}

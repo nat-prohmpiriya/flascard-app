@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Health & Lifestyle",
+    "description": "B1 level vocabulary for health and lifestyle topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "lifestyle",
+      "pronunciation": "ไลฟ์-สไตล์",
+      "meaning": "วิถีชีวิต, ไลฟ์สไตล์",
+      "example": "A healthy lifestyle is important.",
+      "exampleTranslation": "วิถีชีวิตที่ดีต่อสุขภาพมีความสำคัญ"
+    },
+    {
+      "vocab": "exercise",
+      "pronunciation": "เอ็กซ์-เซอะ-ไซส์",
+      "meaning": "ออกกำลังกาย",
+      "example": "I exercise three times a week.",
+      "exampleTranslation": "ฉันออกกำลังกายสามครั้งต่อสัปดาห์"
+    },
+    {
+      "vocab": "workout",
+      "pronunciation": "เวิร์ค-เอาท์",
+      "meaning": "การออกกำลังกาย",
+      "example": "I had a great workout today.",
+      "exampleTranslation": "วันนี้ฉันออกกำลังกายได้ดีมาก"
+    },
+    {
+      "vocab": "fitness",
+      "pronunciation": "ฟิท-เนส",
+      "meaning": "ความฟิต, สมรรถภาพ",
+      "example": "I want to improve my fitness.",
+      "exampleTranslation": "ฉันต้องการปรับปรุงความฟิตของตัวเอง"
+    },
+    {
+      "vocab": "muscle",
+      "pronunciation": "มัส-เซิล",
+      "meaning": "กล้ามเนื้อ",
+      "example": "My muscles are sore.",
+      "exampleTranslation": "กล้ามเนื้อของฉันปวด"
+    },
+    {
+      "vocab": "strength",
+      "pronunciation": "สเตรงธ์",
+      "meaning": "ความแข็งแรง",
+      "example": "Strength training is good for you.",
+      "exampleTranslation": "การฝึกความแข็งแรงดีสำหรับคุณ"
+    },
+    {
+      "vocab": "weight",
+      "pronunciation": "เวท",
+      "meaning": "น้ำหนัก",
+      "example": "I want to lose weight.",
+      "exampleTranslation": "ฉันต้องการลดน้ำหนัก"
+    },
+    {
+      "vocab": "diet",
+      "pronunciation": "ได-เอ็ท",
+      "meaning": "อาหาร, การควบคุมอาหาร",
+      "example": "A balanced diet is essential.",
+      "exampleTranslation": "อาหารที่สมดุลเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "nutrition",
+      "pronunciation": "นิว-ทริ-ชั่น",
+      "meaning": "โภชนาการ",
+      "example": "Good nutrition keeps you healthy.",
+      "exampleTranslation": "โภชนาการที่ดีทำให้คุณมีสุขภาพดี"
+    },
+    {
+      "vocab": "protein",
+      "pronunciation": "โพร-ทีน",
+      "meaning": "โปรตีน",
+      "example": "Eggs are high in protein.",
+      "exampleTranslation": "ไข่มีโปรตีนสูง"
+    },
+    {
+      "vocab": "vitamin",
+      "pronunciation": "ไว-ทะ-มิน",
+      "meaning": "วิตามิน",
+      "example": "Oranges have a lot of vitamin C.",
+      "exampleTranslation": "ส้มมีวิตามินซีมาก"
+    },
+    {
+      "vocab": "calorie",
+      "pronunciation": "แคล-ลอ-รี",
+      "meaning": "แคลอรี่",
+      "example": "This food is low in calories.",
+      "exampleTranslation": "อาหารนี้มีแคลอรี่ต่ำ"
+    },
+    {
+      "vocab": "vegetarian",
+      "pronunciation": "เวจ-จิ-แท-เรียน",
+      "meaning": "มังสวิรัติ",
+      "example": "She has been vegetarian for years.",
+      "exampleTranslation": "เธอเป็นมังสวิรัติมาหลายปี"
+    },
+    {
+      "vocab": "ingredient",
+      "pronunciation": "อิน-กรี-เดียนท์",
+      "meaning": "ส่วนผสม",
+      "example": "Check the ingredients on the label.",
+      "exampleTranslation": "ตรวจสอบส่วนผสมบนฉลาก"
+    },
+    {
+      "vocab": "symptom",
+      "pronunciation": "ซิม-ทอม",
+      "meaning": "อาการ",
+      "example": "What are your symptoms?",
+      "exampleTranslation": "คุณมีอาการอะไรบ้าง?"
+    },
+    {
+      "vocab": "disease",
+      "pronunciation": "ดิ-ซีส",
+      "meaning": "โรค",
+      "example": "Heart disease is common.",
+      "exampleTranslation": "โรคหัวใจเป็นเรื่องธรรมดา"
+    },
+    {
+      "vocab": "illness",
+      "pronunciation": "อิล-เนส",
+      "meaning": "การเจ็บป่วย, โรค",
+      "example": "He is recovering from illness.",
+      "exampleTranslation": "เขากำลังฟื้นตัวจากการเจ็บป่วย"
+    },
+    {
+      "vocab": "infection",
+      "pronunciation": "อิน-เฟ็ค-ชั่น",
+      "meaning": "การติดเชื้อ",
+      "example": "The wound has an infection.",
+      "exampleTranslation": "บาดแผลมีการติดเชื้อ"
+    },
+    {
+      "vocab": "virus",
+      "pronunciation": "ไว-รัส",
+      "meaning": "ไวรัส",
+      "example": "A virus caused the sickness.",
+      "exampleTranslation": "ไวรัสเป็นสาเหตุของการเจ็บป่วย"
+    },
+    {
+      "vocab": "bacteria",
+      "pronunciation": "แบค-ทีเรีย",
+      "meaning": "แบคทีเรีย",
+      "example": "Bacteria can cause infections.",
+      "exampleTranslation": "แบคทีเรียสามารถทำให้เกิดการติดเชื้อ"
+    },
+    {
+      "vocab": "cure",
+      "pronunciation": "คิวร์",
+      "meaning": "รักษา, การรักษา",
+      "example": "There is no cure for this disease.",
+      "exampleTranslation": "ไม่มีวิธีรักษาโรคนี้"
+    },
+    {
+      "vocab": "treatment",
+      "pronunciation": "ทรีท-เมินท์",
+      "meaning": "การรักษา",
+      "example": "The treatment takes six weeks.",
+      "exampleTranslation": "การรักษาใช้เวลาหกสัปดาห์"
+    },
+    {
+      "vocab": "recover",
+      "pronunciation": "รี-คัฟ-เวอะ",
+      "meaning": "ฟื้นตัว, หายป่วย",
+      "example": "I hope you recover soon.",
+      "exampleTranslation": "หวังว่าคุณจะหายเร็วๆ"
+    },
+    {
+      "vocab": "heal",
+      "pronunciation": "ฮีล",
+      "meaning": "รักษา, หาย",
+      "example": "The wound will heal in a week.",
+      "exampleTranslation": "บาดแผลจะหายในหนึ่งสัปดาห์"
+    },
+    {
+      "vocab": "medicine",
+      "pronunciation": "เมด-ดิ-ซิน",
+      "meaning": "ยา, การแพทย์",
+      "example": "Take this medicine twice a day.",
+      "exampleTranslation": "กินยานี้วันละสองครั้ง"
+    },
+    {
+      "vocab": "prescription",
+      "pronunciation": "พรี-สคริป-ชั่น",
+      "meaning": "ใบสั่งยา",
+      "example": "You need a prescription for this.",
+      "exampleTranslation": "คุณต้องมีใบสั่งยาสำหรับยานี้"
+    },
+    {
+      "vocab": "painkiller",
+      "pronunciation": "เพน-คิล-เลอะ",
+      "meaning": "ยาแก้ปวด",
+      "example": "I took a painkiller for my headache.",
+      "exampleTranslation": "ฉันกินยาแก้ปวดสำหรับอาการปวดหัว"
+    },
+    {
+      "vocab": "antibiotic",
+      "pronunciation": "แอน-ที-ไบ-ออท-ทิค",
+      "meaning": "ยาปฏิชีวนะ",
+      "example": "The doctor gave me antibiotics.",
+      "exampleTranslation": "หมอให้ยาปฏิชีวนะฉัน"
+    },
+    {
+      "vocab": "vaccine",
+      "pronunciation": "แวค-ซีน",
+      "meaning": "วัคซีน",
+      "example": "Did you get the vaccine?",
+      "exampleTranslation": "คุณฉีดวัคซีนแล้วหรือยัง?"
+    },
+    {
+      "vocab": "injection",
+      "pronunciation": "อิน-เจ็ค-ชั่น",
+      "meaning": "การฉีดยา",
+      "example": "The injection was painless.",
+      "exampleTranslation": "การฉีดยาไม่เจ็บ"
+    },
+    {
+      "vocab": "surgery",
+      "pronunciation": "เซอร์-เจอ-รี",
+      "meaning": "การผ่าตัด",
+      "example": "She needs surgery on her knee.",
+      "exampleTranslation": "เธอต้องผ่าตัดเข่า"
+    },
+    {
+      "vocab": "operation",
+      "pronunciation": "ออพ-เพอ-เร-ชั่น",
+      "meaning": "การผ่าตัด",
+      "example": "The operation was successful.",
+      "exampleTranslation": "การผ่าตัดประสบความสำเร็จ"
+    },
+    {
+      "vocab": "appointment",
+      "pronunciation": "แอพ-พอยท์-เมินท์",
+      "meaning": "นัดหมาย",
+      "example": "I have a doctor's appointment.",
+      "exampleTranslation": "ฉันมีนัดหมายกับหมอ"
+    },
+    {
+      "vocab": "check-up",
+      "pronunciation": "เช็ค-อัพ",
+      "meaning": "การตรวจสุขภาพ",
+      "example": "I need a regular check-up.",
+      "exampleTranslation": "ฉันต้องตรวจสุขภาพประจำ"
+    },
+    {
+      "vocab": "patient",
+      "pronunciation": "เพ-เชินท์",
+      "meaning": "ผู้ป่วย, คนไข้",
+      "example": "The patient is getting better.",
+      "exampleTranslation": "ผู้ป่วยดีขึ้น"
+    },
+    {
+      "vocab": "nurse",
+      "pronunciation": "เนิร์ส",
+      "meaning": "พยาบาล",
+      "example": "The nurse was very kind.",
+      "exampleTranslation": "พยาบาลใจดีมาก"
+    },
+    {
+      "vocab": "blood pressure",
+      "pronunciation": "บลัด เพร็ช-เชอะ",
+      "meaning": "ความดันเลือด",
+      "example": "My blood pressure is normal.",
+      "exampleTranslation": "ความดันเลือดของฉันปกติ"
+    },
+    {
+      "vocab": "heartbeat",
+      "pronunciation": "ฮาร์ท-บีท",
+      "meaning": "การเต้นของหัวใจ",
+      "example": "Your heartbeat is too fast.",
+      "exampleTranslation": "หัวใจของคุณเต้นเร็วเกินไป"
+    },
+    {
+      "vocab": "breath",
+      "pronunciation": "เบรธ",
+      "meaning": "ลมหายใจ",
+      "example": "Take a deep breath.",
+      "exampleTranslation": "หายใจเข้าลึกๆ"
+    },
+    {
+      "vocab": "breathe",
+      "pronunciation": "บรีธ",
+      "meaning": "หายใจ",
+      "example": "It's hard to breathe here.",
+      "exampleTranslation": "หายใจยากที่นี่"
+    },
+    {
+      "vocab": "mental health",
+      "pronunciation": "เมน-ทอล เฮลธ์",
+      "meaning": "สุขภาพจิต",
+      "example": "Mental health is as important as physical health.",
+      "exampleTranslation": "สุขภาพจิตสำคัญเท่ากับสุขภาพกาย"
+    },
+    {
+      "vocab": "stress",
+      "pronunciation": "สเตร็ส",
+      "meaning": "ความเครียด",
+      "example": "Too much stress is unhealthy.",
+      "exampleTranslation": "ความเครียดมากเกินไปไม่ดีต่อสุขภาพ"
+    },
+    {
+      "vocab": "anxiety",
+      "pronunciation": "แอง-ไซ-เอะ-ตี้",
+      "meaning": "ความวิตกกังวล",
+      "example": "She suffers from anxiety.",
+      "exampleTranslation": "เธอมีอาการวิตกกังวล"
+    },
+    {
+      "vocab": "depression",
+      "pronunciation": "ดิ-เพร็ช-ชั่น",
+      "meaning": "ภาวะซึมเศร้า",
+      "example": "Depression is a serious condition.",
+      "exampleTranslation": "ภาวะซึมเศร้าเป็นอาการที่ร้ายแรง"
+    },
+    {
+      "vocab": "therapy",
+      "pronunciation": "เธอ-รา-พี",
+      "meaning": "การบำบัด",
+      "example": "She is going to therapy.",
+      "exampleTranslation": "เธอไปรับการบำบัด"
+    },
+    {
+      "vocab": "relax",
+      "pronunciation": "รี-แลกซ์",
+      "meaning": "ผ่อนคลาย",
+      "example": "You need to relax more.",
+      "exampleTranslation": "คุณต้องผ่อนคลายมากขึ้น"
+    },
+    {
+      "vocab": "meditation",
+      "pronunciation": "เมด-ดิ-เท-ชั่น",
+      "meaning": "การทำสมาธิ",
+      "example": "Meditation helps reduce stress.",
+      "exampleTranslation": "การทำสมาธิช่วยลดความเครียด"
+    },
+    {
+      "vocab": "yoga",
+      "pronunciation": "โย-กะ",
+      "meaning": "โยคะ",
+      "example": "I do yoga every morning.",
+      "exampleTranslation": "ฉันทำโยคะทุกเช้า"
+    },
+    {
+      "vocab": "sleep",
+      "pronunciation": "สลีป",
+      "meaning": "นอน, การนอนหลับ",
+      "example": "I need more sleep.",
+      "exampleTranslation": "ฉันต้องการนอนมากขึ้น"
+    },
+    {
+      "vocab": "insomnia",
+      "pronunciation": "อิน-ซอม-เนีย",
+      "meaning": "โรคนอนไม่หลับ",
+      "example": "He suffers from insomnia.",
+      "exampleTranslation": "เขามีอาการนอนไม่หลับ"
+    },
+    {
+      "vocab": "habit",
+      "pronunciation": "แฮ-บิท",
+      "meaning": "นิสัย, ความเคยชิน",
+      "example": "Smoking is a bad habit.",
+      "exampleTranslation": "การสูบบุหรี่เป็นนิสัยที่ไม่ดี"
+    },
+    {
+      "vocab": "addiction",
+      "pronunciation": "แอด-ดิค-ชั่น",
+      "meaning": "การเสพติด",
+      "example": "Phone addiction is common now.",
+      "exampleTranslation": "การเสพติดโทรศัพท์เป็นเรื่องธรรมดาในปัจจุบัน"
+    },
+    {
+      "vocab": "alcohol",
+      "pronunciation": "แอล-กอ-ฮอล",
+      "meaning": "แอลกอฮอล์",
+      "example": "Don't drink too much alcohol.",
+      "exampleTranslation": "อย่าดื่มแอลกอฮอล์มากเกินไป"
+    },
+    {
+      "vocab": "tobacco",
+      "pronunciation": "ทะ-แบ็ค-โค",
+      "meaning": "ยาสูบ",
+      "example": "Tobacco is harmful to health.",
+      "exampleTranslation": "ยาสูบเป็นอันตรายต่อสุขภาพ"
+    },
+    {
+      "vocab": "quit",
+      "pronunciation": "ควิท",
+      "meaning": "เลิก, ลาออก",
+      "example": "I want to quit smoking.",
+      "exampleTranslation": "ฉันต้องการเลิกสูบบุหรี่"
+    },
+    {
+      "vocab": "immune system",
+      "pronunciation": "อิม-มิวน ซิส-เท็ม",
+      "meaning": "ระบบภูมิคุ้มกัน",
+      "example": "A strong immune system fights illness.",
+      "exampleTranslation": "ระบบภูมิคุ้มกันที่แข็งแรงต่อสู้กับโรค"
+    },
+    {
+      "vocab": "allergy",
+      "pronunciation": "แอล-เลอ-จี",
+      "meaning": "ภูมิแพ้",
+      "example": "I have an allergy to nuts.",
+      "exampleTranslation": "ฉันแพ้ถั่ว"
+    },
+    {
+      "vocab": "allergic",
+      "pronunciation": "อะ-เลอ-จิค",
+      "meaning": "แพ้, เป็นภูมิแพ้",
+      "example": "Are you allergic to anything?",
+      "exampleTranslation": "คุณแพ้อะไรไหม?"
+    },
+    {
+      "vocab": "prevent",
+      "pronunciation": "พรี-เวนท์",
+      "meaning": "ป้องกัน",
+      "example": "Exercise can prevent many diseases.",
+      "exampleTranslation": "การออกกำลังกายสามารถป้องกันหลายโรค"
+    }
+  ]
+}

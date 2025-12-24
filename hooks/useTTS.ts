@@ -12,30 +12,50 @@ interface TTSOptions {
 
 interface TextSegment {
   text: string;
-  lang: 'th-TH' | 'en-US';
+  lang: 'th-TH' | 'en-US' | 'zh-CN' | 'ja-JP' | 'ko-KR';
 }
 
-// Split text into segments by language (Thai vs English)
+// Unicode ranges for different languages
+const LANG_PATTERNS: { lang: TextSegment['lang']; regex: RegExp }[] = [
+  { lang: 'th-TH', regex: /[\u0E00-\u0E7F]+/g },           // Thai
+  { lang: 'zh-CN', regex: /[\u4E00-\u9FFF\u3400-\u4DBF]+/g }, // Chinese (CJK Unified)
+  { lang: 'ja-JP', regex: /[\u3040-\u309F\u30A0-\u30FF]+/g }, // Japanese (Hiragana + Katakana)
+  { lang: 'ko-KR', regex: /[\uAC00-\uD7AF\u1100-\u11FF]+/g }, // Korean (Hangul)
+];
+
+// Split text into segments by language (supports Thai, Chinese, Japanese, Korean, English)
 function splitByLanguage(text: string): TextSegment[] {
   const segments: TextSegment[] = [];
-  // Thai Unicode range: \u0E00-\u0E7F
-  const thaiRegex = /[\u0E00-\u0E7F]+/g;
+
+  // Create combined regex for all non-English languages
+  const allNonEnglish = /[\u0E00-\u0E7F\u4E00-\u9FFF\u3400-\u4DBF\u3040-\u309F\u30A0-\u30FF\uAC00-\uD7AF\u1100-\u11FF]+/g;
 
   let lastIndex = 0;
   let match;
 
-  while ((match = thaiRegex.exec(text)) !== null) {
-    // Add English segment before Thai (if any)
+  while ((match = allNonEnglish.exec(text)) !== null) {
+    // Add English segment before this match (if any)
     if (match.index > lastIndex) {
       const engText = text.slice(lastIndex, match.index).trim();
       if (engText) {
         segments.push({ text: engText, lang: 'en-US' });
       }
     }
-    // Add Thai segment
-    const thaiText = match[0].trim();
-    if (thaiText) {
-      segments.push({ text: thaiText, lang: 'th-TH' });
+
+    // Detect which language this segment is
+    const matchedText = match[0];
+    let detectedLang: TextSegment['lang'] = 'en-US';
+
+    for (const { lang, regex } of LANG_PATTERNS) {
+      regex.lastIndex = 0; // Reset regex state
+      if (regex.test(matchedText)) {
+        detectedLang = lang;
+        break;
+      }
+    }
+
+    if (matchedText.trim()) {
+      segments.push({ text: matchedText.trim(), lang: detectedLang });
     }
     lastIndex = match.index + match[0].length;
   }
@@ -130,6 +150,27 @@ export function useTTS() {
     [speak]
   );
 
+  const speakChinese = useCallback(
+    (text: string) => {
+      speak(text, { lang: 'zh-CN' });
+    },
+    [speak]
+  );
+
+  const speakJapanese = useCallback(
+    (text: string) => {
+      speak(text, { lang: 'ja-JP' });
+    },
+    [speak]
+  );
+
+  const speakKorean = useCallback(
+    (text: string) => {
+      speak(text, { lang: 'ko-KR' });
+    },
+    [speak]
+  );
+
   // Speak text with multiple languages (auto-detect and switch)
   const speakMultiLang = useCallback(
     (text: string, options: Omit<TTSOptions, 'lang'> = {}) => {
@@ -192,6 +233,9 @@ export function useTTS() {
     speak,
     speakEnglish,
     speakThai,
+    speakChinese,
+    speakJapanese,
+    speakKorean,
     speakMultiLang,
     stop,
     isSpeaking,

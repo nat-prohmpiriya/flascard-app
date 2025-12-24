@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "HSK1 - People & Family",
+    "description": "HSK1 Level - People, family members, and occupations",
+    "category": "HSK1",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "hsk1", "nouns", "people", "family", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "人",
+      "pronunciation": "rén",
+      "meaning": "คน",
+      "example": "中国人。",
+      "exampleTranslation": "คนจีน"
+    },
+    {
+      "vocab": "名字",
+      "pronunciation": "míngzi",
+      "meaning": "ชื่อ",
+      "example": "你叫什么名字？",
+      "exampleTranslation": "คุณชื่ออะไร?"
+    },
+    {
+      "vocab": "爸爸",
+      "pronunciation": "bàba",
+      "meaning": "พ่อ",
+      "example": "我爸爸是医生。",
+      "exampleTranslation": "พ่อของฉันเป็นหมอ"
+    },
+    {
+      "vocab": "妈妈",
+      "pronunciation": "māma",
+      "meaning": "แม่",
+      "example": "我妈妈是老师。",
+      "exampleTranslation": "แม่ของฉันเป็นครู"
+    },
+    {
+      "vocab": "儿子",
+      "pronunciation": "érzi",
+      "meaning": "ลูกชาย",
+      "example": "他有一个儿子。",
+      "exampleTranslation": "เขามีลูกชายหนึ่งคน"
+    },
+    {
+      "vocab": "女儿",
+      "pronunciation": "nǚ'ér",
+      "meaning": "ลูกสาว",
+      "example": "她有两个女儿。",
+      "exampleTranslation": "เธอมีลูกสาวสองคน"
+    },
+    {
+      "vocab": "家",
+      "pronunciation": "jiā",
+      "meaning": "บ้าน, ครอบครัว",
+      "example": "我家有五个人。",
+      "exampleTranslation": "ครอบครัวฉันมีห้าคน"
+    },
+    {
+      "vocab": "朋友",
+      "pronunciation": "péngyou",
+      "meaning": "เพื่อน",
+      "example": "他是我的好朋友。",
+      "exampleTranslation": "เขาเป็นเพื่อนที่ดีของฉัน"
+    },
+    {
+      "vocab": "同学",
+      "pronunciation": "tóngxué",
+      "meaning": "เพื่อนร่วมชั้น",
+      "example": "我们是同学。",
+      "exampleTranslation": "พวกเราเป็นเพื่อนร่วมชั้น"
+    },
+    {
+      "vocab": "老师",
+      "pronunciation": "lǎoshī",
+      "meaning": "ครู, อาจารย์",
+      "example": "王老师很好。",
+      "exampleTranslation": "ครูหวังดีมาก"
+    },
+    {
+      "vocab": "学生",
+      "pronunciation": "xuésheng",
+      "meaning": "นักเรียน, นักศึกษา",
+      "example": "我是学生。",
+      "exampleTranslation": "ฉันเป็นนักเรียน"
+    },
+    {
+      "vocab": "医生",
+      "pronunciation": "yīshēng",
+      "meaning": "หมอ",
+      "example": "他是医生。",
+      "exampleTranslation": "เขาเป็นหมอ"
+    },
+    {
+      "vocab": "先生",
+      "pronunciation": "xiānsheng",
+      "meaning": "คุณ (ผู้ชาย), สามี",
+      "example": "王先生好！",
+      "exampleTranslation": "สวัสดีคุณหวัง!"
+    },
+    {
+      "vocab": "小姐",
+      "pronunciation": "xiǎojiě",
+      "meaning": "คุณ (ผู้หญิง), นางสาว",
+      "example": "李小姐很漂亮。",
+      "exampleTranslation": "คุณหลี่สวยมาก"
+    },
+    {
+      "vocab": "服务员",
+      "pronunciation": "fúwùyuán",
+      "meaning": "พนักงานบริการ",
+      "example": "服务员，买单！",
+      "exampleTranslation": "พนักงาน, เก็บเงิน!"
+    },
+    {
+      "vocab": "中国",
+      "pronunciation": "Zhōngguó",
+      "meaning": "ประเทศจีน",
+      "example": "我是中国人。",
+      "exampleTranslation": "ฉันเป็นคนจีน"
+    },
+    {
+      "vocab": "北京",
+      "pronunciation": "Běijīng",
+      "meaning": "ปักกิ่ง",
+      "example": "我住在北京。",
+      "exampleTranslation": "ฉันอาศัยอยู่ที่ปักกิ่ง"
+    },
+    {
+      "vocab": "汉语",
+      "pronunciation": "Hànyǔ",
+      "meaning": "ภาษาจีน",
+      "example": "我学习汉语。",
+      "exampleTranslation": "ฉันเรียนภาษาจีน"
+    },
+    {
+      "vocab": "中文",
+      "pronunciation": "Zhōngwén",
+      "meaning": "ภาษาจีน (เขียน)",
+      "example": "我会说中文。",
+      "exampleTranslation": "ฉันพูดภาษาจีนได้"
+    },
+    {
+      "vocab": "岁",
+      "pronunciation": "suì",
+      "meaning": "ปี (อายุ)",
+      "example": "我二十岁。",
+      "exampleTranslation": "ฉันอายุยี่สิบปี"
+    }
+  ]
+}

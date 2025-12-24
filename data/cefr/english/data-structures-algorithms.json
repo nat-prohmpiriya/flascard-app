@@ -1,0 +1,545 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Data Structures & Algorithms",
+    "description": "Essential DSA vocabulary for software developers",
+    "category": "Technical English",
+    "tags": ["english", "programming", "DSA", "algorithms"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "array",
+      "pronunciation": "อะ-เรย์",
+      "meaning": "โครงสร้างข้อมูลแบบเรียงลำดับต่อเนื่อง",
+      "example": "Arrays have O(1) access time by index.",
+      "exampleTranslation": "Array เข้าถึงด้วย index ได้ใน O(1)"
+    },
+    {
+      "vocab": "linked list",
+      "pronunciation": "ลิงค์-ลิสท์",
+      "meaning": "รายการที่เชื่อมต่อกันด้วย pointer",
+      "example": "Insertion in a linked list is O(1).",
+      "exampleTranslation": "การแทรกใน linked list เป็น O(1)"
+    },
+    {
+      "vocab": "stack",
+      "pronunciation": "สแต็ค",
+      "meaning": "โครงสร้างแบบ LIFO (เข้าหลังออกก่อน)",
+      "example": "The call stack tracks function calls.",
+      "exampleTranslation": "Call stack ติดตามการเรียกฟังก์ชัน"
+    },
+    {
+      "vocab": "queue",
+      "pronunciation": "คิว",
+      "meaning": "โครงสร้างแบบ FIFO (เข้าก่อนออกก่อน)",
+      "example": "Use a queue for BFS traversal.",
+      "exampleTranslation": "ใช้ queue สำหรับการท่องแบบ BFS"
+    },
+    {
+      "vocab": "deque",
+      "pronunciation": "เด็ค",
+      "meaning": "คิวสองหัว (เพิ่ม/ลบได้ทั้งสองด้าน)",
+      "example": "A deque allows insertion at both ends.",
+      "exampleTranslation": "Deque สามารถแทรกได้ทั้งสองด้าน"
+    },
+    {
+      "vocab": "hash table",
+      "pronunciation": "แฮช-เท-เบิล",
+      "meaning": "โครงสร้างที่ใช้ hash function จัดเก็บข้อมูล",
+      "example": "Hash tables provide O(1) average lookup.",
+      "exampleTranslation": "Hash table ค้นหาได้เฉลี่ย O(1)"
+    },
+    {
+      "vocab": "hash map",
+      "pronunciation": "แฮช-แมพ",
+      "meaning": "โครงสร้าง key-value ที่ใช้ hash",
+      "example": "Use a hash map to count occurrences.",
+      "exampleTranslation": "ใช้ hash map นับจำนวนครั้ง"
+    },
+    {
+      "vocab": "set",
+      "pronunciation": "เซ็ท",
+      "meaning": "กลุ่มข้อมูลที่ไม่ซ้ำกัน",
+      "example": "A set automatically removes duplicates.",
+      "exampleTranslation": "Set ลบข้อมูลซ้ำโดยอัตโนมัติ"
+    },
+    {
+      "vocab": "tree",
+      "pronunciation": "ทรี",
+      "meaning": "โครงสร้างแบบลำดับชั้น มี root และ children",
+      "example": "A tree has nodes connected by edges.",
+      "exampleTranslation": "Tree มี node เชื่อมต่อด้วย edge"
+    },
+    {
+      "vocab": "binary tree",
+      "pronunciation": "ไบ-นา-รี่-ทรี",
+      "meaning": "tree ที่แต่ละ node มีลูกไม่เกิน 2",
+      "example": "Each node in a binary tree has at most two children.",
+      "exampleTranslation": "แต่ละ node ใน binary tree มีลูกไม่เกิน 2"
+    },
+    {
+      "vocab": "binary search tree",
+      "pronunciation": "ไบ-นา-รี่-เซิร์ช-ทรี",
+      "meaning": "BST - tree ที่เรียงลำดับสำหรับค้นหา",
+      "example": "BST has O(log n) search time when balanced.",
+      "exampleTranslation": "BST ค้นหาได้ใน O(log n) เมื่อสมดุล"
+    },
+    {
+      "vocab": "balanced tree",
+      "pronunciation": "บา-แลนซ์-ทรี",
+      "meaning": "tree ที่ความสูงทั้งสองด้านใกล้เคียงกัน",
+      "example": "AVL and Red-Black trees are balanced trees.",
+      "exampleTranslation": "AVL และ Red-Black tree เป็น balanced tree"
+    },
+    {
+      "vocab": "heap",
+      "pronunciation": "ฮีพ",
+      "meaning": "tree ที่ parent มากกว่า/น้อยกว่า children เสมอ",
+      "example": "A min-heap always has the smallest element at the root.",
+      "exampleTranslation": "Min-heap มีค่าน้อยสุดอยู่ที่ root เสมอ"
+    },
+    {
+      "vocab": "priority queue",
+      "pronunciation": "ไพร-ออ-ริ-ที่-คิว",
+      "meaning": "คิวที่เรียงตามความสำคัญ",
+      "example": "Priority queues are often implemented with heaps.",
+      "exampleTranslation": "Priority queue มักทำด้วย heap"
+    },
+    {
+      "vocab": "graph",
+      "pronunciation": "กราฟ",
+      "meaning": "โครงสร้างที่มี node และ edge เชื่อมกัน",
+      "example": "Social networks can be modeled as graphs.",
+      "exampleTranslation": "โซเชียลเน็ตเวิร์คจำลองได้ด้วย graph"
+    },
+    {
+      "vocab": "directed graph",
+      "pronunciation": "ได-เร็ค-เท็ด-กราฟ",
+      "meaning": "กราฟที่ edge มีทิศทาง",
+      "example": "A directed graph has arrows indicating direction.",
+      "exampleTranslation": "Directed graph มีลูกศรบอกทิศทาง"
+    },
+    {
+      "vocab": "undirected graph",
+      "pronunciation": "อัน-ได-เร็ค-เท็ด-กราฟ",
+      "meaning": "กราฟที่ edge ไม่มีทิศทาง",
+      "example": "Friendships form an undirected graph.",
+      "exampleTranslation": "ความเป็นเพื่อนเป็น undirected graph"
+    },
+    {
+      "vocab": "weighted graph",
+      "pronunciation": "เวท-เท็ด-กราฟ",
+      "meaning": "กราฟที่ edge มีน้ำหนัก/ค่าใช้จ่าย",
+      "example": "Road maps are weighted graphs with distances.",
+      "exampleTranslation": "แผนที่ถนนเป็น weighted graph ที่มีระยะทาง"
+    },
+    {
+      "vocab": "adjacency list",
+      "pronunciation": "อะ-เจ-เซน-ซี่-ลิสท์",
+      "meaning": "วิธีเก็บ graph ด้วยรายการเพื่อนบ้าน",
+      "example": "Adjacency lists are memory-efficient for sparse graphs.",
+      "exampleTranslation": "Adjacency list ประหยัดหน่วยความจำสำหรับ sparse graph"
+    },
+    {
+      "vocab": "adjacency matrix",
+      "pronunciation": "อะ-เจ-เซน-ซี่-เม-ทริกซ์",
+      "meaning": "วิธีเก็บ graph ด้วยตาราง 2 มิติ",
+      "example": "Adjacency matrices allow O(1) edge lookup.",
+      "exampleTranslation": "Adjacency matrix ค้นหา edge ได้ใน O(1)"
+    },
+    {
+      "vocab": "node",
+      "pronunciation": "โนด",
+      "meaning": "จุดในโครงสร้างข้อมูล",
+      "example": "Each node stores a value and pointers.",
+      "exampleTranslation": "แต่ละ node เก็บค่าและ pointer"
+    },
+    {
+      "vocab": "edge",
+      "pronunciation": "เอ็จ",
+      "meaning": "เส้นเชื่อมระหว่าง node",
+      "example": "An edge connects two nodes in a graph.",
+      "exampleTranslation": "Edge เชื่อมสอง node ใน graph"
+    },
+    {
+      "vocab": "vertex",
+      "pronunciation": "เวอร์-เท็กซ์",
+      "meaning": "จุดยอดใน graph (เหมือน node)",
+      "example": "A graph has vertices and edges.",
+      "exampleTranslation": "Graph มี vertex และ edge"
+    },
+    {
+      "vocab": "root",
+      "pronunciation": "รูท",
+      "meaning": "node บนสุดของ tree",
+      "example": "The root has no parent node.",
+      "exampleTranslation": "Root ไม่มี parent node"
+    },
+    {
+      "vocab": "leaf",
+      "pronunciation": "ลีฟ",
+      "meaning": "node ที่ไม่มีลูก",
+      "example": "Leaf nodes have no children.",
+      "exampleTranslation": "Leaf node ไม่มีลูก"
+    },
+    {
+      "vocab": "depth",
+      "pronunciation": "เด็พธ์",
+      "meaning": "ความลึกจาก root ถึง node",
+      "example": "The depth of the root is 0.",
+      "exampleTranslation": "ความลึกของ root คือ 0"
+    },
+    {
+      "vocab": "height",
+      "pronunciation": "ไฮท์",
+      "meaning": "ความสูงจาก node ถึง leaf ไกลสุด",
+      "example": "The height of a leaf is 0.",
+      "exampleTranslation": "ความสูงของ leaf คือ 0"
+    },
+    {
+      "vocab": "trie",
+      "pronunciation": "ทราย",
+      "meaning": "tree สำหรับเก็บ string แบบ prefix",
+      "example": "Tries are used for autocomplete features.",
+      "exampleTranslation": "Trie ใช้สำหรับ autocomplete"
+    },
+    {
+      "vocab": "Big O notation",
+      "pronunciation": "บิ๊ก-โอ-โน-เท-ชั่น",
+      "meaning": "สัญลักษณ์แสดงความซับซ้อน",
+      "example": "Big O describes the worst-case complexity.",
+      "exampleTranslation": "Big O อธิบายความซับซ้อนกรณีแย่สุด"
+    },
+    {
+      "vocab": "time complexity",
+      "pronunciation": "ไทม์-คอม-เพล็ก-ซิ-ที่",
+      "meaning": "ความซับซ้อนด้านเวลา",
+      "example": "The time complexity is O(n log n).",
+      "exampleTranslation": "ความซับซ้อนด้านเวลาคือ O(n log n)"
+    },
+    {
+      "vocab": "space complexity",
+      "pronunciation": "สเปซ-คอม-เพล็ก-ซิ-ที่",
+      "meaning": "ความซับซ้อนด้านหน่วยความจำ",
+      "example": "The space complexity is O(n).",
+      "exampleTranslation": "ความซับซ้อนด้านหน่วยความจำคือ O(n)"
+    },
+    {
+      "vocab": "constant time",
+      "pronunciation": "คอน-สแตนท์-ไทม์",
+      "meaning": "O(1) - เวลาคงที่ไม่ขึ้นกับ input",
+      "example": "Array access is constant time.",
+      "exampleTranslation": "การเข้าถึง array เป็น constant time"
+    },
+    {
+      "vocab": "linear time",
+      "pronunciation": "ลิ-เนียร์-ไทม์",
+      "meaning": "O(n) - เวลาเพิ่มตาม input",
+      "example": "Searching an unsorted array is linear time.",
+      "exampleTranslation": "การค้นหา array ที่ไม่เรียงเป็น linear time"
+    },
+    {
+      "vocab": "logarithmic time",
+      "pronunciation": "ลอ-กา-ริธ-มิค-ไทม์",
+      "meaning": "O(log n) - เวลาเพิ่มช้ามาก",
+      "example": "Binary search runs in logarithmic time.",
+      "exampleTranslation": "Binary search ทำงานใน logarithmic time"
+    },
+    {
+      "vocab": "quadratic time",
+      "pronunciation": "ควอด-รา-ทิค-ไทม์",
+      "meaning": "O(n²) - เวลาเพิ่มแบบกำลังสอง",
+      "example": "Bubble sort has quadratic time complexity.",
+      "exampleTranslation": "Bubble sort มีความซับซ้อนแบบ quadratic"
+    },
+    {
+      "vocab": "exponential time",
+      "pronunciation": "เอ็กซ์-โพ-เนน-เชียล-ไทม์",
+      "meaning": "O(2^n) - เวลาเพิ่มแบบทวีคูณ",
+      "example": "Brute force solutions are often exponential.",
+      "exampleTranslation": "วิธี brute force มักเป็น exponential"
+    },
+    {
+      "vocab": "sorting",
+      "pronunciation": "ซอร์ท-ติง",
+      "meaning": "การเรียงลำดับข้อมูล",
+      "example": "Sorting is a fundamental algorithm topic.",
+      "exampleTranslation": "การ sorting เป็นหัวข้อพื้นฐานของ algorithm"
+    },
+    {
+      "vocab": "bubble sort",
+      "pronunciation": "บับ-เบิล-ซอร์ท",
+      "meaning": "การเรียงแบบเปรียบเทียบคู่ติดกัน",
+      "example": "Bubble sort is simple but inefficient.",
+      "exampleTranslation": "Bubble sort ง่ายแต่ไม่มีประสิทธิภาพ"
+    },
+    {
+      "vocab": "quick sort",
+      "pronunciation": "ควิก-ซอร์ท",
+      "meaning": "การเรียงแบบแบ่งตาม pivot",
+      "example": "Quick sort has O(n log n) average case.",
+      "exampleTranslation": "Quick sort มีค่าเฉลี่ย O(n log n)"
+    },
+    {
+      "vocab": "merge sort",
+      "pronunciation": "เมิร์จ-ซอร์ท",
+      "meaning": "การเรียงแบบแบ่งแล้วรวม",
+      "example": "Merge sort is stable and O(n log n).",
+      "exampleTranslation": "Merge sort เป็น stable และ O(n log n)"
+    },
+    {
+      "vocab": "insertion sort",
+      "pronunciation": "อิน-เซอร์-ชั่น-ซอร์ท",
+      "meaning": "การเรียงแบบแทรก",
+      "example": "Insertion sort works well for small arrays.",
+      "exampleTranslation": "Insertion sort ทำงานดีกับ array เล็ก"
+    },
+    {
+      "vocab": "heap sort",
+      "pronunciation": "ฮีพ-ซอร์ท",
+      "meaning": "การเรียงโดยใช้ heap",
+      "example": "Heap sort has O(n log n) worst case.",
+      "exampleTranslation": "Heap sort มีกรณีแย่สุด O(n log n)"
+    },
+    {
+      "vocab": "binary search",
+      "pronunciation": "ไบ-นา-รี่-เซิร์ช",
+      "meaning": "การค้นหาแบบแบ่งครึ่ง",
+      "example": "Binary search requires a sorted array.",
+      "exampleTranslation": "Binary search ต้องใช้กับ array ที่เรียงแล้ว"
+    },
+    {
+      "vocab": "linear search",
+      "pronunciation": "ลิ-เนียร์-เซิร์ช",
+      "meaning": "การค้นหาแบบไล่ทีละตัว",
+      "example": "Linear search checks each element one by one.",
+      "exampleTranslation": "Linear search ตรวจสอบทีละ element"
+    },
+    {
+      "vocab": "BFS",
+      "pronunciation": "บี-เอฟ-เอส",
+      "meaning": "Breadth-First Search - ค้นหาแบบกว้างก่อน",
+      "example": "BFS uses a queue to traverse level by level.",
+      "exampleTranslation": "BFS ใช้ queue ท่องทีละระดับ"
+    },
+    {
+      "vocab": "DFS",
+      "pronunciation": "ดี-เอฟ-เอส",
+      "meaning": "Depth-First Search - ค้นหาแบบลึกก่อน",
+      "example": "DFS uses a stack or recursion.",
+      "exampleTranslation": "DFS ใช้ stack หรือ recursion"
+    },
+    {
+      "vocab": "traversal",
+      "pronunciation": "ทรา-เวอร์-ซัล",
+      "meaning": "การท่องไปทุก node",
+      "example": "Tree traversal visits all nodes.",
+      "exampleTranslation": "การท่อง tree เยี่ยมทุก node"
+    },
+    {
+      "vocab": "in-order traversal",
+      "pronunciation": "อิน-ออร์-เดอะ-ทรา-เวอร์-ซัล",
+      "meaning": "ท่อง tree: left -> root -> right",
+      "example": "In-order traversal of BST gives sorted order.",
+      "exampleTranslation": "In-order ของ BST ให้ผลเรียงลำดับ"
+    },
+    {
+      "vocab": "pre-order traversal",
+      "pronunciation": "พรี-ออร์-เดอะ-ทรา-เวอร์-ซัล",
+      "meaning": "ท่อง tree: root -> left -> right",
+      "example": "Pre-order is useful for copying trees.",
+      "exampleTranslation": "Pre-order มีประโยชน์สำหรับคัดลอก tree"
+    },
+    {
+      "vocab": "post-order traversal",
+      "pronunciation": "โพสท์-ออร์-เดอะ-ทรา-เวอร์-ซัล",
+      "meaning": "ท่อง tree: left -> right -> root",
+      "example": "Post-order is used for deleting trees.",
+      "exampleTranslation": "Post-order ใช้สำหรับลบ tree"
+    },
+    {
+      "vocab": "recursion",
+      "pronunciation": "รี-เคอะ-ชั่น",
+      "meaning": "ฟังก์ชันที่เรียกตัวเอง",
+      "example": "Recursion needs a base case to stop.",
+      "exampleTranslation": "Recursion ต้องมี base case เพื่อหยุด"
+    },
+    {
+      "vocab": "base case",
+      "pronunciation": "เบส-เคส",
+      "meaning": "เงื่อนไขหยุด recursion",
+      "example": "The base case prevents infinite recursion.",
+      "exampleTranslation": "Base case ป้องกัน recursion ไม่สิ้นสุด"
+    },
+    {
+      "vocab": "memoization",
+      "pronunciation": "เม-โม-อิ-เซ-ชั่น",
+      "meaning": "เก็บผลลัพธ์เพื่อไม่ต้องคำนวณซ้ำ",
+      "example": "Memoization speeds up recursive solutions.",
+      "exampleTranslation": "Memoization เร่งความเร็วให้ recursive solution"
+    },
+    {
+      "vocab": "dynamic programming",
+      "pronunciation": "ได-นา-มิค-โปร-แกรม-มิง",
+      "meaning": "แก้ปัญหาย่อยแล้วรวมเป็นคำตอบ",
+      "example": "Dynamic programming avoids redundant calculations.",
+      "exampleTranslation": "Dynamic programming หลีกเลี่ยงการคำนวณซ้ำ"
+    },
+    {
+      "vocab": "greedy algorithm",
+      "pronunciation": "กรี-ดี้-อัล-กอ-ริ-ธึม",
+      "meaning": "เลือกทางที่ดีที่สุดในแต่ละขั้น",
+      "example": "Greedy algorithms make locally optimal choices.",
+      "exampleTranslation": "Greedy algorithm เลือกทางที่ดีที่สุดในท้องถิ่น"
+    },
+    {
+      "vocab": "divide and conquer",
+      "pronunciation": "ดิ-ไวด์-แอนด์-คอง-เคอะ",
+      "meaning": "แบ่งปัญหาย่อย แก้แล้วรวม",
+      "example": "Merge sort uses divide and conquer.",
+      "exampleTranslation": "Merge sort ใช้ divide and conquer"
+    },
+    {
+      "vocab": "backtracking",
+      "pronunciation": "แบ็ค-แทร็ค-คิง",
+      "meaning": "ลองแล้วย้อนกลับถ้าไม่ได้",
+      "example": "Sudoku solvers use backtracking.",
+      "exampleTranslation": "โปรแกรมแก้ Sudoku ใช้ backtracking"
+    },
+    {
+      "vocab": "brute force",
+      "pronunciation": "บรูท-ฟอร์ซ",
+      "meaning": "ลองทุกความเป็นไปได้",
+      "example": "Brute force tries all combinations.",
+      "exampleTranslation": "Brute force ลองทุก combination"
+    },
+    {
+      "vocab": "two pointers",
+      "pronunciation": "ทู-พอยน์-เทอร์ส",
+      "meaning": "เทคนิคใช้ 2 pointer วิ่งใน array",
+      "example": "Two pointers can find pairs in O(n).",
+      "exampleTranslation": "Two pointers หาคู่ได้ใน O(n)"
+    },
+    {
+      "vocab": "sliding window",
+      "pronunciation": "สไล-ดิง-วิน-โดว์",
+      "meaning": "เทคนิคหน้าต่างเลื่อนใน array",
+      "example": "Sliding window solves subarray problems.",
+      "exampleTranslation": "Sliding window แก้ปัญหา subarray"
+    },
+    {
+      "vocab": "shortest path",
+      "pronunciation": "ชอร์-เทสท์-พาธ",
+      "meaning": "เส้นทางสั้นที่สุดใน graph",
+      "example": "Dijkstra finds the shortest path.",
+      "exampleTranslation": "Dijkstra หาเส้นทางสั้นที่สุด"
+    },
+    {
+      "vocab": "Dijkstra",
+      "pronunciation": "ไดค์-สตร้า",
+      "meaning": "algorithm หาเส้นทางสั้นสุด",
+      "example": "Dijkstra works with non-negative weights.",
+      "exampleTranslation": "Dijkstra ใช้ได้กับน้ำหนักที่ไม่ติดลบ"
+    },
+    {
+      "vocab": "topological sort",
+      "pronunciation": "โท-โพ-โล-จิ-คัล-ซอร์ท",
+      "meaning": "เรียง node ตาม dependency",
+      "example": "Build systems use topological sort.",
+      "exampleTranslation": "ระบบ build ใช้ topological sort"
+    },
+    {
+      "vocab": "cycle detection",
+      "pronunciation": "ไซ-เคิล-ดี-เท็ค-ชั่น",
+      "meaning": "การตรวจจับวงรอบใน graph",
+      "example": "Detect cycles to prevent infinite loops.",
+      "exampleTranslation": "ตรวจจับ cycle เพื่อป้องกัน infinite loop"
+    },
+    {
+      "vocab": "connected component",
+      "pronunciation": "คอน-เน็ค-เท็ด-คอม-โพ-เนนท์",
+      "meaning": "กลุ่ม node ที่เชื่อมถึงกัน",
+      "example": "Find all connected components in the graph.",
+      "exampleTranslation": "หา connected component ทั้งหมดใน graph"
+    },
+    {
+      "vocab": "spanning tree",
+      "pronunciation": "สแปน-นิง-ทรี",
+      "meaning": "tree ที่เชื่อมทุก node ใน graph",
+      "example": "A minimum spanning tree has the least total weight.",
+      "exampleTranslation": "Minimum spanning tree มีน้ำหนักรวมน้อยที่สุด"
+    },
+    {
+      "vocab": "union-find",
+      "pronunciation": "ยู-เนียน-ไฟนด์",
+      "meaning": "โครงสร้างจัดกลุ่ม/ตรวจสอบกลุ่ม",
+      "example": "Union-find is useful for Kruskal's algorithm.",
+      "exampleTranslation": "Union-find มีประโยชน์สำหรับ Kruskal's algorithm"
+    },
+    {
+      "vocab": "hashing",
+      "pronunciation": "แฮช-ชิง",
+      "meaning": "การแปลง key เป็นค่า index",
+      "example": "Hashing enables fast key-value lookup.",
+      "exampleTranslation": "Hashing ทำให้ค้นหา key-value ได้เร็ว"
+    },
+    {
+      "vocab": "collision",
+      "pronunciation": "คอล-ลิ-ชั่น",
+      "meaning": "เมื่อ 2 key ได้ hash เดียวกัน",
+      "example": "Handle collisions with chaining or open addressing.",
+      "exampleTranslation": "จัดการ collision ด้วย chaining หรือ open addressing"
+    },
+    {
+      "vocab": "load factor",
+      "pronunciation": "โหลด-แฟค-เทอะ",
+      "meaning": "อัตราส่วนข้อมูล/ขนาด hash table",
+      "example": "Resize the hash table when load factor is high.",
+      "exampleTranslation": "ขยาย hash table เมื่อ load factor สูง"
+    },
+    {
+      "vocab": "stable sort",
+      "pronunciation": "สเต-เบิล-ซอร์ท",
+      "meaning": "การ sort ที่รักษาลำดับเดิมของค่าเท่ากัน",
+      "example": "Merge sort is a stable sorting algorithm.",
+      "exampleTranslation": "Merge sort เป็น stable sorting algorithm"
+    },
+    {
+      "vocab": "in-place",
+      "pronunciation": "อิน-เพลซ",
+      "meaning": "ทำงานโดยไม่ใช้หน่วยความจำเพิ่ม",
+      "example": "Quick sort is an in-place algorithm.",
+      "exampleTranslation": "Quick sort เป็น in-place algorithm"
+    },
+    {
+      "vocab": "amortized",
+      "pronunciation": "อะ-มอร์-ไทซ์ด",
+      "meaning": "ค่าเฉลี่ยต่อ operation ในระยะยาว",
+      "example": "Dynamic array has O(1) amortized append.",
+      "exampleTranslation": "Dynamic array มี amortized O(1) สำหรับ append"
+    },
+    {
+      "vocab": "worst case",
+      "pronunciation": "เวิร์สท์-เคส",
+      "meaning": "กรณีแย่ที่สุด",
+      "example": "Quick sort's worst case is O(n²).",
+      "exampleTranslation": "กรณีแย่สุดของ Quick sort คือ O(n²)"
+    },
+    {
+      "vocab": "average case",
+      "pronunciation": "แอฟ-เวอ-เรจ-เคส",
+      "meaning": "กรณีเฉลี่ย",
+      "example": "Average case assumes random input.",
+      "exampleTranslation": "Average case สมมติ input สุ่ม"
+    },
+    {
+      "vocab": "best case",
+      "pronunciation": "เบสท์-เคส",
+      "meaning": "กรณีดีที่สุด",
+      "example": "Best case for insertion sort is O(n).",
+      "exampleTranslation": "กรณีดีสุดของ insertion sort คือ O(n)"
+    }
+  ]
+}

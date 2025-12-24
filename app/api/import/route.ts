@@ -6,7 +6,7 @@ import { getAdminDb } from '@/lib/firebase-admin';
 import { Language } from '@/types';
 import { Timestamp } from 'firebase-admin/firestore';
 
-const DATA_DIR = path.join(process.cwd(), 'data/cefr/english/a2');
+const DATA_DIR = path.join(process.cwd(), 'data/cefr/english');
 
 // Default SRS values
 const DEFAULT_CARD_SRS = {

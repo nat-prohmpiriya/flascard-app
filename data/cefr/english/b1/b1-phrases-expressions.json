@@ -1,0 +1,412 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Phrases & Expressions",
+    "description": "B1 level useful phrases and expressions",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "phrase"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "As far as I know",
+      "pronunciation": "แอส ฟาร์ แอส ไอ โนว์",
+      "meaning": "เท่าที่ฉันรู้",
+      "example": "As far as I know, the meeting is at 3 PM.",
+      "exampleTranslation": "เท่าที่ฉันรู้ การประชุมอยู่ที่ 3 โมงเย็น"
+    },
+    {
+      "vocab": "As a matter of fact",
+      "pronunciation": "แอส อะ แมท-เทอะ ออฟ แฟ็คท์",
+      "meaning": "ที่จริงแล้ว",
+      "example": "As a matter of fact, I've already finished.",
+      "exampleTranslation": "ที่จริงแล้ว ฉันทำเสร็จแล้ว"
+    },
+    {
+      "vocab": "By the way",
+      "pronunciation": "บาย เดอะ เวย์",
+      "meaning": "อย่างไรก็ตาม, ว่าแต่",
+      "example": "By the way, have you seen my keys?",
+      "exampleTranslation": "ว่าแต่ คุณเห็นกุญแจฉันไหม?"
+    },
+    {
+      "vocab": "In my opinion",
+      "pronunciation": "อิน มาย โอ-พิน-เยิน",
+      "meaning": "ในความคิดของฉัน",
+      "example": "In my opinion, this is the best option.",
+      "exampleTranslation": "ในความคิดของฉัน นี่คือตัวเลือกที่ดีที่สุด"
+    },
+    {
+      "vocab": "To be honest",
+      "pronunciation": "ทู บี ออน-เนสท์",
+      "meaning": "พูดตรงๆ นะ",
+      "example": "To be honest, I didn't like the movie.",
+      "exampleTranslation": "พูดตรงๆ นะ ฉันไม่ชอบหนังเรื่องนี้"
+    },
+    {
+      "vocab": "On the other hand",
+      "pronunciation": "ออน ดิ อัธ-เธอะ แฮนด์",
+      "meaning": "ในทางกลับกัน",
+      "example": "It's expensive. On the other hand, it's very good quality.",
+      "exampleTranslation": "มันแพง ในทางกลับกัน คุณภาพดีมาก"
+    },
+    {
+      "vocab": "As soon as possible",
+      "pronunciation": "แอส ซูน แอส พอส-สิ-เบิล",
+      "meaning": "โดยเร็วที่สุด",
+      "example": "Please reply as soon as possible.",
+      "exampleTranslation": "กรุณาตอบกลับโดยเร็วที่สุด"
+    },
+    {
+      "vocab": "First of all",
+      "pronunciation": "เฟิร์สท ออฟ ออล",
+      "meaning": "ก่อนอื่น",
+      "example": "First of all, let me introduce myself.",
+      "exampleTranslation": "ก่อนอื่น ขอแนะนำตัวเอง"
+    },
+    {
+      "vocab": "All in all",
+      "pronunciation": "ออล อิน ออล",
+      "meaning": "โดยรวมแล้ว",
+      "example": "All in all, it was a good trip.",
+      "exampleTranslation": "โดยรวมแล้ว เป็นทริปที่ดี"
+    },
+    {
+      "vocab": "In addition",
+      "pronunciation": "อิน แอด-ดิ-ชั่น",
+      "meaning": "นอกจากนี้",
+      "example": "In addition, we offer free delivery.",
+      "exampleTranslation": "นอกจากนี้ เรามีบริการส่งฟรี"
+    },
+    {
+      "vocab": "As a result",
+      "pronunciation": "แอส อะ รี-ซัลท์",
+      "meaning": "เป็นผลให้",
+      "example": "He studied hard. As a result, he passed the exam.",
+      "exampleTranslation": "เขาเรียนหนัก เป็นผลให้เขาสอบผ่าน"
+    },
+    {
+      "vocab": "In other words",
+      "pronunciation": "อิน อัธ-เธอะ เวิร์ดส์",
+      "meaning": "อีกนัยหนึ่ง, พูดง่ายๆ ว่า",
+      "example": "It's 10 PM. In other words, we're late.",
+      "exampleTranslation": "ตอนนี้สี่ทุ่ม พูดง่ายๆ ว่าเราสาย"
+    },
+    {
+      "vocab": "For instance",
+      "pronunciation": "ฟอร์ อิน-สแทนซ์",
+      "meaning": "ตัวอย่างเช่น",
+      "example": "Many countries speak English. For instance, Australia.",
+      "exampleTranslation": "หลายประเทศพูดภาษาอังกฤษ ตัวอย่างเช่น ออสเตรเลีย"
+    },
+    {
+      "vocab": "In case",
+      "pronunciation": "อิน เคส",
+      "meaning": "ในกรณีที่",
+      "example": "Bring an umbrella in case it rains.",
+      "exampleTranslation": "เอาร่มไปในกรณีที่ฝนตก"
+    },
+    {
+      "vocab": "As long as",
+      "pronunciation": "แอส ลอง แอส",
+      "meaning": "ตราบใดที่",
+      "example": "You can stay as long as you want.",
+      "exampleTranslation": "คุณอยู่ได้ตราบใดที่คุณต้องการ"
+    },
+    {
+      "vocab": "Even though",
+      "pronunciation": "อีฟ-เวิน โธว์",
+      "meaning": "แม้ว่า, ถึงแม้ว่า",
+      "example": "Even though it was cold, we went swimming.",
+      "exampleTranslation": "แม้ว่าจะหนาว เราก็ไปว่ายน้ำ"
+    },
+    {
+      "vocab": "As well as",
+      "pronunciation": "แอส เวล แอส",
+      "meaning": "รวมถึง, เช่นเดียวกับ",
+      "example": "She speaks English as well as French.",
+      "exampleTranslation": "เธอพูดภาษาอังกฤษรวมถึงภาษาฝรั่งเศส"
+    },
+    {
+      "vocab": "Instead of",
+      "pronunciation": "อิน-สเต็ด ออฟ",
+      "meaning": "แทนที่จะ",
+      "example": "Let's walk instead of taking a taxi.",
+      "exampleTranslation": "เราเดินกันเถอะแทนที่จะนั่งแท็กซี่"
+    },
+    {
+      "vocab": "Due to",
+      "pronunciation": "ดิว ทู",
+      "meaning": "เนื่องจาก",
+      "example": "The flight was cancelled due to bad weather.",
+      "exampleTranslation": "เที่ยวบินถูกยกเลิกเนื่องจากอากาศไม่ดี"
+    },
+    {
+      "vocab": "According to",
+      "pronunciation": "แอค-คอร์-ดิง ทู",
+      "meaning": "ตามที่, อ้างอิงจาก",
+      "example": "According to the news, it will rain tomorrow.",
+      "exampleTranslation": "ตามข่าว พรุ่งนี้ฝนจะตก"
+    },
+    {
+      "vocab": "Apart from",
+      "pronunciation": "อะ-พาร์ท ฟรอม",
+      "meaning": "นอกจาก",
+      "example": "Apart from English, she speaks Thai.",
+      "exampleTranslation": "นอกจากภาษาอังกฤษ เธอพูดภาษาไทย"
+    },
+    {
+      "vocab": "In spite of",
+      "pronunciation": "อิน สไปท์ ออฟ",
+      "meaning": "ทั้งๆ ที่",
+      "example": "In spite of the rain, we had fun.",
+      "exampleTranslation": "ทั้งๆ ที่ฝนตก เราก็สนุก"
+    },
+    {
+      "vocab": "On purpose",
+      "pronunciation": "ออน เพอร์-พัส",
+      "meaning": "โดยตั้งใจ",
+      "example": "Did you do that on purpose?",
+      "exampleTranslation": "คุณทำแบบนั้นโดยตั้งใจเหรอ?"
+    },
+    {
+      "vocab": "By accident",
+      "pronunciation": "บาย แอค-ซิ-เดินท์",
+      "meaning": "โดยบังเอิญ",
+      "example": "I broke the vase by accident.",
+      "exampleTranslation": "ฉันทำแจกันแตกโดยบังเอิญ"
+    },
+    {
+      "vocab": "At least",
+      "pronunciation": "แอท ลีสท์",
+      "meaning": "อย่างน้อย",
+      "example": "It will take at least two hours.",
+      "exampleTranslation": "มันจะใช้เวลาอย่างน้อยสองชั่วโมง"
+    },
+    {
+      "vocab": "At most",
+      "pronunciation": "แอท โมสท์",
+      "meaning": "อย่างมาก",
+      "example": "It will cost at most $100.",
+      "exampleTranslation": "มันจะราคาอย่างมาก 100 ดอลลาร์"
+    },
+    {
+      "vocab": "More or less",
+      "pronunciation": "มอร์ ออร์ เลส",
+      "meaning": "ประมาณ, ไม่มากก็น้อย",
+      "example": "It takes more or less an hour.",
+      "exampleTranslation": "ใช้เวลาประมาณหนึ่งชั่วโมง"
+    },
+    {
+      "vocab": "Sooner or later",
+      "pronunciation": "ซูน-เนอะ ออร์ เลท-เทอะ",
+      "meaning": "ไม่ช้าก็เร็ว",
+      "example": "Sooner or later, you'll understand.",
+      "exampleTranslation": "ไม่ช้าก็เร็ว คุณจะเข้าใจ"
+    },
+    {
+      "vocab": "Now and then",
+      "pronunciation": "นาว แอนด์ เด็น",
+      "meaning": "บางครั้งบางคราว",
+      "example": "I see her now and then.",
+      "exampleTranslation": "ฉันเจอเธอบางครั้งบางคราว"
+    },
+    {
+      "vocab": "Once in a while",
+      "pronunciation": "วันซ์ อิน อะ ไวล์",
+      "meaning": "นานๆ ครั้ง",
+      "example": "I eat fast food once in a while.",
+      "exampleTranslation": "ฉันกินฟาสต์ฟู้ดนานๆ ครั้ง"
+    },
+    {
+      "vocab": "What's more",
+      "pronunciation": "ว็อทส์ มอร์",
+      "meaning": "ยิ่งกว่านั้น",
+      "example": "It's cheap. What's more, it's high quality.",
+      "exampleTranslation": "มันถูก ยิ่งกว่านั้น คุณภาพดี"
+    },
+    {
+      "vocab": "On the whole",
+      "pronunciation": "ออน เดอะ โฮล",
+      "meaning": "โดยทั่วไป, โดยรวม",
+      "example": "On the whole, the event was successful.",
+      "exampleTranslation": "โดยรวม งานประสบความสำเร็จ"
+    },
+    {
+      "vocab": "To sum up",
+      "pronunciation": "ทู ซัม อัพ",
+      "meaning": "สรุปคือ",
+      "example": "To sum up, we need more time.",
+      "exampleTranslation": "สรุปคือ เราต้องการเวลาเพิ่ม"
+    },
+    {
+      "vocab": "In conclusion",
+      "pronunciation": "อิน คอน-คลู-ชั่น",
+      "meaning": "โดยสรุป",
+      "example": "In conclusion, I support this plan.",
+      "exampleTranslation": "โดยสรุป ฉันสนับสนุนแผนนี้"
+    },
+    {
+      "vocab": "For the time being",
+      "pronunciation": "ฟอร์ เดอะ ไทม์ บี-อิง",
+      "meaning": "ในตอนนี้, ชั่วคราว",
+      "example": "For the time being, we'll stay here.",
+      "exampleTranslation": "ในตอนนี้ เราจะอยู่ที่นี่"
+    },
+    {
+      "vocab": "In the long run",
+      "pronunciation": "อิน เดอะ ลอง รัน",
+      "meaning": "ในระยะยาว",
+      "example": "In the long run, it's cheaper to buy.",
+      "exampleTranslation": "ในระยะยาว การซื้อถูกกว่า"
+    },
+    {
+      "vocab": "In the meantime",
+      "pronunciation": "อิน เดอะ มีน-ไทม์",
+      "meaning": "ในระหว่างนั้น",
+      "example": "I'll be back soon. In the meantime, wait here.",
+      "exampleTranslation": "ฉันจะกลับมาเร็วๆ ในระหว่างนั้น รอที่นี่"
+    },
+    {
+      "vocab": "Out of the question",
+      "pronunciation": "เอาท์ ออฟ เดอะ เควส-ชั่น",
+      "meaning": "เป็นไปไม่ได้",
+      "example": "A pay raise is out of the question.",
+      "exampleTranslation": "การขึ้นเงินเดือนเป็นไปไม่ได้"
+    },
+    {
+      "vocab": "Under no circumstances",
+      "pronunciation": "อัน-เดอะ โน เซอร์-คัม-สแตน-เซส",
+      "meaning": "ไม่ว่ากรณีใดๆ",
+      "example": "Under no circumstances should you open that door.",
+      "exampleTranslation": "ไม่ว่ากรณีใดๆ คุณไม่ควรเปิดประตูนั้น"
+    },
+    {
+      "vocab": "No wonder",
+      "pronunciation": "โน วัน-เดอะ",
+      "meaning": "ไม่น่าแปลกใจ",
+      "example": "No wonder you're tired. You worked all day!",
+      "exampleTranslation": "ไม่น่าแปลกใจที่คุณเหนื่อย คุณทำงานทั้งวัน!"
+    },
+    {
+      "vocab": "How come?",
+      "pronunciation": "ฮาว คัม",
+      "meaning": "ทำไม?",
+      "example": "How come you didn't call me?",
+      "exampleTranslation": "ทำไมคุณไม่โทรหาฉัน?"
+    },
+    {
+      "vocab": "What for?",
+      "pronunciation": "ว็อท ฟอร์",
+      "meaning": "เพื่ออะไร?",
+      "example": "Why do you need it? What for?",
+      "exampleTranslation": "ทำไมคุณต้องการมัน? เพื่ออะไร?"
+    },
+    {
+      "vocab": "So far",
+      "pronunciation": "โซ ฟาร์",
+      "meaning": "จนถึงตอนนี้",
+      "example": "So far, so good.",
+      "exampleTranslation": "จนถึงตอนนี้ ก็ดี"
+    },
+    {
+      "vocab": "From now on",
+      "pronunciation": "ฟรอม นาว ออน",
+      "meaning": "ตั้งแต่นี้เป็นต้นไป",
+      "example": "From now on, I'll wake up early.",
+      "exampleTranslation": "ตั้งแต่นี้เป็นต้นไป ฉันจะตื่นเช้า"
+    },
+    {
+      "vocab": "That depends",
+      "pronunciation": "แดท ดิ-เพ็นดส์",
+      "meaning": "มันขึ้นอยู่กับ...",
+      "example": "Are you coming? That depends on the weather.",
+      "exampleTranslation": "คุณจะมาไหม? มันขึ้นอยู่กับสภาพอากาศ"
+    },
+    {
+      "vocab": "It doesn't matter",
+      "pronunciation": "อิท ดัส-เซินท์ แมท-เทอะ",
+      "meaning": "ไม่เป็นไร, ไม่สำคัญ",
+      "example": "It doesn't matter what they think.",
+      "exampleTranslation": "ไม่สำคัญว่าพวกเขาคิดอย่างไร"
+    },
+    {
+      "vocab": "Never mind",
+      "pronunciation": "เนฟ-เวอะ มายด์",
+      "meaning": "ช่างเถอะ, ไม่เป็นไร",
+      "example": "Never mind, I'll do it myself.",
+      "exampleTranslation": "ช่างเถอะ ฉันจะทำเอง"
+    },
+    {
+      "vocab": "It's up to you",
+      "pronunciation": "อิทส์ อัพ ทู ยู",
+      "meaning": "แล้วแต่คุณ",
+      "example": "Where should we eat? It's up to you.",
+      "exampleTranslation": "เราจะกินที่ไหนดี? แล้วแต่คุณ"
+    },
+    {
+      "vocab": "I'm afraid so",
+      "pronunciation": "ไอม์ แอฟ-เฟรด โซ",
+      "meaning": "เกรงว่าจะเป็นอย่างนั้น",
+      "example": "Is the store closed? I'm afraid so.",
+      "exampleTranslation": "ร้านปิดเหรอ? เกรงว่าจะเป็นอย่างนั้น"
+    },
+    {
+      "vocab": "I'm afraid not",
+      "pronunciation": "ไอม์ แอฟ-เฟรด น็อท",
+      "meaning": "เกรงว่าจะไม่ใช่",
+      "example": "Can you help me? I'm afraid not.",
+      "exampleTranslation": "คุณช่วยฉันได้ไหม? เกรงว่าจะไม่ได้"
+    },
+    {
+      "vocab": "I have no idea",
+      "pronunciation": "ไอ แฮฟ โน ไอ-เดีย",
+      "meaning": "ฉันไม่รู้เลย",
+      "example": "Where is he? I have no idea.",
+      "exampleTranslation": "เขาอยู่ไหน? ฉันไม่รู้เลย"
+    },
+    {
+      "vocab": "That makes sense",
+      "pronunciation": "แดท เมคส์ เซนส์",
+      "meaning": "เข้าใจแล้ว, สมเหตุสมผล",
+      "example": "Oh, that makes sense now.",
+      "exampleTranslation": "โอ้ เข้าใจแล้ว"
+    },
+    {
+      "vocab": "I can't help it",
+      "pronunciation": "ไอ คานท์ เฮลพ์ อิท",
+      "meaning": "ฉันช่วยไม่ได้",
+      "example": "I can't help it if I'm nervous.",
+      "exampleTranslation": "ฉันช่วยไม่ได้ถ้าฉันประหม่า"
+    },
+    {
+      "vocab": "There's no point",
+      "pronunciation": "แดร์ส โน พอยท์",
+      "meaning": "ไม่มีประโยชน์",
+      "example": "There's no point in arguing.",
+      "exampleTranslation": "ไม่มีประโยชน์ที่จะเถียง"
+    },
+    {
+      "vocab": "You'd better",
+      "pronunciation": "ยู๊ด เบท-เทอะ",
+      "meaning": "คุณควรจะ",
+      "example": "You'd better hurry up.",
+      "exampleTranslation": "คุณควรจะรีบหน่อย"
+    },
+    {
+      "vocab": "I'd rather",
+      "pronunciation": "ไอด์ รา-เธอะ",
+      "meaning": "ฉันอยากจะ... มากกว่า",
+      "example": "I'd rather stay home tonight.",
+      "exampleTranslation": "คืนนี้ฉันอยากอยู่บ้านมากกว่า"
+    },
+    {
+      "vocab": "I wonder",
+      "pronunciation": "ไอ วัน-เดอะ",
+      "meaning": "ฉันสงสัยว่า",
+      "example": "I wonder if he's coming.",
+      "exampleTranslation": "ฉันสงสัยว่าเขาจะมาไหม"
+    }
+  ]
+}

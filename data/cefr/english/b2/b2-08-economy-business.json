@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Economy & Business",
+    "description": "B2 level vocabulary for economics and business topics",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "inflation",
+      "pronunciation": "อิน-เฟล-ชั่น",
+      "meaning": "เงินเฟ้อ, ภาวะเงินเฟ้อ",
+      "example": "High inflation erodes purchasing power.",
+      "exampleTranslation": "เงินเฟ้อสูงกัดกร่อนอำนาจซื้อ"
+    },
+    {
+      "vocab": "recession",
+      "pronunciation": "ริ-เซส-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจถดถอย",
+      "example": "The country entered a recession after the crisis.",
+      "exampleTranslation": "ประเทศเข้าสู่ภาวะเศรษฐกิจถดถอยหลังวิกฤต"
+    },
+    {
+      "vocab": "depression",
+      "pronunciation": "ดิ-เพรส-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจตกต่ำรุนแรง",
+      "example": "The Great Depression of the 1930s affected the whole world.",
+      "exampleTranslation": "ภาวะเศรษฐกิจตกต่ำครั้งใหญ่ในทศวรรษ 1930 ส่งผลกระทบต่อทั้งโลก"
+    },
+    {
+      "vocab": "deficit",
+      "pronunciation": "เดฟ-ฟิ-ซิท",
+      "meaning": "การขาดดุล, ส่วนขาด",
+      "example": "The government is struggling with a budget deficit.",
+      "exampleTranslation": "รัฐบาลกำลังดิ้นรนกับการขาดดุลงบประมาณ"
+    },
+    {
+      "vocab": "surplus",
+      "pronunciation": "เซอ-พลัส",
+      "meaning": "ส่วนเกิน, ยอดเกิน",
+      "example": "The trade surplus increased exports revenue.",
+      "exampleTranslation": "ส่วนเกินทางการค้าเพิ่มรายได้จากการส่งออก"
+    },
+    {
+      "vocab": "gross domestic product",
+      "pronunciation": "โกรส-โด-เมส-ทิค-พรอ-ดัคท์",
+      "meaning": "ผลิตภัณฑ์มวลรวมในประเทศ (GDP)",
+      "example": "GDP growth indicates economic health.",
+      "exampleTranslation": "การเติบโตของ GDP บ่งชี้สุขภาพทางเศรษฐกิจ"
+    },
+    {
+      "vocab": "monetary policy",
+      "pronunciation": "มอน-นิ-ทา-รี่-พอล-ลิ-ซี่",
+      "meaning": "นโยบายการเงิน",
+      "example": "The central bank adjusts monetary policy to control inflation.",
+      "exampleTranslation": "ธนาคารกลางปรับนโยบายการเงินเพื่อควบคุมเงินเฟ้อ"
+    },
+    {
+      "vocab": "fiscal policy",
+      "pronunciation": "ฟิส-คัล-พอล-ลิ-ซี่",
+      "meaning": "นโยบายการคลัง",
+      "example": "Fiscal policy involves government spending and taxation.",
+      "exampleTranslation": "นโยบายการคลังเกี่ยวข้องกับการใช้จ่ายของรัฐและการเก็บภาษี"
+    },
+    {
+      "vocab": "interest rate",
+      "pronunciation": "อิน-เทอ-เรสท์-เรท",
+      "meaning": "อัตราดอกเบี้ย",
+      "example": "Rising interest rates affect mortgage payments.",
+      "exampleTranslation": "อัตราดอกเบี้ยที่เพิ่มขึ้นส่งผลต่อการชำระสินเชื่อบ้าน"
+    },
+    {
+      "vocab": "commodity",
+      "pronunciation": "คอม-มอด-ดิ-ที่",
+      "meaning": "สินค้าโภคภัณฑ์, สินค้าขั้นพื้นฐาน",
+      "example": "Oil and gold are important global commodities.",
+      "exampleTranslation": "น้ำมันและทองคำเป็นสินค้าโภคภัณฑ์โลกที่สำคัญ"
+    },
+    {
+      "vocab": "stock market",
+      "pronunciation": "สต็อค-มาร์-เก็ท",
+      "meaning": "ตลาดหุ้น",
+      "example": "The stock market crashed during the financial crisis.",
+      "exampleTranslation": "ตลาดหุ้นล่มสลายในช่วงวิกฤตการเงิน"
+    },
+    {
+      "vocab": "portfolio",
+      "pronunciation": "พอร์ท-โฟ-ลิ-โอ",
+      "meaning": "พอร์ตการลงทุน, แฟ้มผลงาน",
+      "example": "Diversifying your portfolio reduces risk.",
+      "exampleTranslation": "การกระจายพอร์ตการลงทุนช่วยลดความเสี่ยง"
+    },
+    {
+      "vocab": "dividend",
+      "pronunciation": "ดิ-วิ-เดนด์",
+      "meaning": "เงินปันผล",
+      "example": "Shareholders receive dividends quarterly.",
+      "exampleTranslation": "ผู้ถือหุ้นได้รับเงินปันผลทุกไตรมาส"
+    },
+    {
+      "vocab": "equity",
+      "pronunciation": "เอ-ควิ-ที่",
+      "meaning": "ส่วนของผู้ถือหุ้น, ทุน",
+      "example": "The company raised equity through share offerings.",
+      "exampleTranslation": "บริษัทระดมทุนผ่านการเสนอขายหุ้น"
+    },
+    {
+      "vocab": "venture capital",
+      "pronunciation": "เวน-เชอะ-แคป-ปิ-ทัล",
+      "meaning": "ทุนร่วมลงทุน, เงินร่วมทุน",
+      "example": "Startups often seek venture capital funding.",
+      "exampleTranslation": "สตาร์ทอัพมักหาเงินทุนร่วมลงทุน"
+    },
+    {
+      "vocab": "entrepreneur",
+      "pronunciation": "ออน-ทริ-พริ-เนอร์",
+      "meaning": "ผู้ประกอบการ, นักธุรกิจ",
+      "example": "Successful entrepreneurs take calculated risks.",
+      "exampleTranslation": "ผู้ประกอบการที่ประสบความสำเร็จรับความเสี่ยงที่คำนวณแล้ว"
+    },
+    {
+      "vocab": "bankruptcy",
+      "pronunciation": "แบงค์-รัพท์-ซี่",
+      "meaning": "การล้มละลาย",
+      "example": "The company filed for bankruptcy protection.",
+      "exampleTranslation": "บริษัทยื่นขอความคุ้มครองจากการล้มละลาย"
+    },
+    {
+      "vocab": "liquidation",
+      "pronunciation": "ลิ-ควิ-เด-ชั่น",
+      "meaning": "การชำระบัญชี, การเลิกกิจการ",
+      "example": "The company went into liquidation after failed restructuring.",
+      "exampleTranslation": "บริษัทเข้าสู่การชำระบัญชีหลังการปรับโครงสร้างล้มเหลว"
+    },
+    {
+      "vocab": "acquisition",
+      "pronunciation": "แอค-ควิ-ซิ-ชั่น",
+      "meaning": "การเข้าซื้อกิจการ",
+      "example": "The acquisition of the startup cost $2 billion.",
+      "exampleTranslation": "การเข้าซื้อกิจการสตาร์ทอัพมีมูลค่า 2 พันล้านดอลลาร์"
+    },
+    {
+      "vocab": "monopoly",
+      "pronunciation": "โม-นอพ-โพ-ลี่",
+      "meaning": "การผูกขาด",
+      "example": "Regulators prevented the merger to avoid monopoly.",
+      "exampleTranslation": "หน่วยงานกำกับดูแลยับยั้งการควบรวมเพื่อหลีกเลี่ยงการผูกขาด"
+    },
+    {
+      "vocab": "oligopoly",
+      "pronunciation": "ออ-ลิ-กอพ-โพ-ลี่",
+      "meaning": "ตลาดที่มีผู้ขายน้อยราย",
+      "example": "The telecom industry is often an oligopoly.",
+      "exampleTranslation": "อุตสาหกรรมโทรคมนาคมมักเป็นตลาดที่มีผู้ขายน้อยราย"
+    },
+    {
+      "vocab": "antitrust",
+      "pronunciation": "แอน-ที-ทรัสท์",
+      "meaning": "ต่อต้านการผูกขาด",
+      "example": "Antitrust laws prevent unfair business practices.",
+      "exampleTranslation": "กฎหมายต่อต้านการผูกขาดป้องกันการปฏิบัติทางธุรกิจที่ไม่เป็นธรรม"
+    },
+    {
+      "vocab": "subsidy",
+      "pronunciation": "ซับ-ซิ-ดี้",
+      "meaning": "เงินอุดหนุน, เงินสนับสนุน",
+      "example": "Government subsidies support the agricultural sector.",
+      "exampleTranslation": "เงินอุดหนุนจากรัฐบาลสนับสนุนภาคเกษตรกรรม"
+    },
+    {
+      "vocab": "tariff",
+      "pronunciation": "ทา-ริฟ",
+      "meaning": "ภาษีศุลกากร, อัตราค่าบริการ",
+      "example": "Import tariffs increased the price of foreign goods.",
+      "exampleTranslation": "ภาษีศุลกากรนำเข้าทำให้ราคาสินค้าต่างประเทศเพิ่มขึ้น"
+    },
+    {
+      "vocab": "quota",
+      "pronunciation": "โคว-ต้า",
+      "meaning": "โควตา, ปริมาณที่จำกัด",
+      "example": "The country imposed import quotas on steel.",
+      "exampleTranslation": "ประเทศกำหนดโควตาการนำเข้าเหล็กกล้า"
+    },
+    {
+      "vocab": "sanction",
+      "pronunciation": "แซงค์-ชั่น",
+      "meaning": "มาตรการคว่ำบาตร, การลงโทษ",
+      "example": "Economic sanctions were imposed on the country.",
+      "exampleTranslation": "มาตรการคว่ำบาตรทางเศรษฐกิจถูกบังคับใช้กับประเทศ"
+    },
+    {
+      "vocab": "embargo",
+      "pronunciation": "เอม-บาร์-โก",
+      "meaning": "การห้ามค้าขาย, การคว่ำบาตรการค้า",
+      "example": "The oil embargo caused fuel shortages.",
+      "exampleTranslation": "การห้ามค้าน้ำมันทำให้เกิดการขาดแคลนเชื้อเพลิง"
+    },
+    {
+      "vocab": "deregulation",
+      "pronunciation": "ดี-เร-กู-เล-ชั่น",
+      "meaning": "การยกเลิกกฎระเบียบ",
+      "example": "Deregulation opened the market to new competitors.",
+      "exampleTranslation": "การยกเลิกกฎระเบียบเปิดตลาดให้คู่แข่งใหม่"
+    },
+    {
+      "vocab": "privatization",
+      "pronunciation": "ไพร-เวท-ไท-เซ-ชั่น",
+      "meaning": "การแปรรูปรัฐวิสาหกิจ",
+      "example": "Privatization of state companies is controversial.",
+      "exampleTranslation": "การแปรรูปบริษัทของรัฐเป็นเรื่องที่มีข้อถกเถียง"
+    },
+    {
+      "vocab": "outsourcing",
+      "pronunciation": "เอาท์-ซอร์-ซิง",
+      "meaning": "การจ้างหน่วยงานภายนอก",
+      "example": "Many companies outsource IT services abroad.",
+      "exampleTranslation": "หลายบริษัทจ้างหน่วยงานภายนอกในต่างประเทศให้บริการ IT"
+    },
+    {
+      "vocab": "downsizing",
+      "pronunciation": "ดาวน์-ไซ-ซิง",
+      "meaning": "การลดขนาดองค์กร",
+      "example": "Downsizing led to thousands of job losses.",
+      "exampleTranslation": "การลดขนาดองค์กรทำให้สูญเสียงานหลายพันตำแหน่ง"
+    },
+    {
+      "vocab": "diversification",
+      "pronunciation": "ได-เวอร์-ซิ-ฟิ-เค-ชั่น",
+      "meaning": "การกระจายความเสี่ยง, การขยายธุรกิจ",
+      "example": "Diversification helps reduce business risk.",
+      "exampleTranslation": "การกระจายความเสี่ยงช่วยลดความเสี่ยงทางธุรกิจ"
+    },
+    {
+      "vocab": "revenue",
+      "pronunciation": "เรฟ-เวน-นิว",
+      "meaning": "รายได้, รายรับ",
+      "example": "Annual revenue exceeded expectations.",
+      "exampleTranslation": "รายได้ประจำปีเกินความคาดหมาย"
+    },
+    {
+      "vocab": "profit margin",
+      "pronunciation": "พรอ-ฟิท-มาร์-จิน",
+      "meaning": "อัตรากำไร",
+      "example": "The company improved its profit margin by cutting costs.",
+      "exampleTranslation": "บริษัทปรับปรุงอัตรากำไรโดยการลดต้นทุน"
+    },
+    {
+      "vocab": "turnover",
+      "pronunciation": "เทิร์น-โอ-เวอะ",
+      "meaning": "ยอดขาย, อัตราการเปลี่ยนพนักงาน",
+      "example": "High employee turnover affects productivity.",
+      "exampleTranslation": "อัตราการเปลี่ยนพนักงานสูงส่งผลต่อประสิทธิภาพการผลิต"
+    },
+    {
+      "vocab": "overhead",
+      "pronunciation": "โอ-เวอะ-เฮด",
+      "meaning": "ค่าใช้จ่ายดำเนินงาน",
+      "example": "Reducing overhead is essential for profitability.",
+      "exampleTranslation": "การลดค่าใช้จ่ายดำเนินงานเป็นสิ่งจำเป็นสำหรับการทำกำไร"
+    },
+    {
+      "vocab": "break-even point",
+      "pronunciation": "เบรค-อี-เวน-พอยท์",
+      "meaning": "จุดคุ้มทุน",
+      "example": "The business reached break-even point after two years.",
+      "exampleTranslation": "ธุรกิจถึงจุดคุ้มทุนหลังจากสองปี"
+    },
+    {
+      "vocab": "cash flow",
+      "pronunciation": "แคช-โฟลว์",
+      "meaning": "กระแสเงินสด",
+      "example": "Managing cash flow is crucial for small businesses.",
+      "exampleTranslation": "การจัดการกระแสเงินสดเป็นสิ่งสำคัญสำหรับธุรกิจขนาดเล็ก"
+    },
+    {
+      "vocab": "liability",
+      "pronunciation": "ไล-อะ-บิล-ลิ-ที่",
+      "meaning": "หนี้สิน, ความรับผิด",
+      "example": "Total liabilities exceeded the company's assets.",
+      "exampleTranslation": "หนี้สินรวมเกินกว่าสินทรัพย์ของบริษัท"
+    },
+    {
+      "vocab": "asset",
+      "pronunciation": "แอส-เซท",
+      "meaning": "สินทรัพย์, ทรัพย์สิน",
+      "example": "Real estate is considered a valuable asset.",
+      "exampleTranslation": "อสังหาริมทรัพย์ถือเป็นสินทรัพย์ที่มีค่า"
+    },
+    {
+      "vocab": "depreciation",
+      "pronunciation": "ดิ-พรี-ชี-เอ-ชั่น",
+      "meaning": "ค่าเสื่อมราคา",
+      "example": "Depreciation affects the value of equipment over time.",
+      "exampleTranslation": "ค่าเสื่อมราคาส่งผลต่อมูลค่าของอุปกรณ์เมื่อเวลาผ่านไป"
+    },
+    {
+      "vocab": "fluctuation",
+      "pronunciation": "ฟลัค-ชู-เอ-ชั่น",
+      "meaning": "ความผันผวน",
+      "example": "Currency fluctuations affect international trade.",
+      "exampleTranslation": "ความผันผวนของค่าเงินส่งผลต่อการค้าระหว่างประเทศ"
+    },
+    {
+      "vocab": "volatility",
+      "pronunciation": "โว-ลา-ทิล-ลิ-ที่",
+      "meaning": "ความผันผวนรุนแรง",
+      "example": "Market volatility increases during uncertain times.",
+      "exampleTranslation": "ความผันผวนของตลาดเพิ่มขึ้นในช่วงเวลาที่ไม่แน่นอน"
+    },
+    {
+      "vocab": "speculation",
+      "pronunciation": "สเปค-คิว-เล-ชั่น",
+      "meaning": "การเก็งกำไร",
+      "example": "Property speculation drove up housing prices.",
+      "exampleTranslation": "การเก็งกำไรอสังหาริมทรัพย์ทำให้ราคาที่อยู่อาศัยสูงขึ้น"
+    },
+    {
+      "vocab": "hedge",
+      "pronunciation": "เฮดจ์",
+      "meaning": "ป้องกันความเสี่ยง",
+      "example": "Companies hedge against currency risk.",
+      "exampleTranslation": "บริษัทป้องกันความเสี่ยงจากอัตราแลกเปลี่ยน"
+    },
+    {
+      "vocab": "audit",
+      "pronunciation": "ออ-ดิท",
+      "meaning": "การตรวจสอบบัญชี",
+      "example": "The annual audit revealed some discrepancies.",
+      "exampleTranslation": "การตรวจสอบบัญชีประจำปีเผยให้เห็นความไม่สอดคล้องบางประการ"
+    },
+    {
+      "vocab": "compliance",
+      "pronunciation": "คอม-ไพล-เอนซ์",
+      "meaning": "การปฏิบัติตามกฎระเบียบ",
+      "example": "Regulatory compliance is mandatory for all firms.",
+      "exampleTranslation": "การปฏิบัติตามกฎระเบียบเป็นสิ่งบังคับสำหรับทุกบริษัท"
+    },
+    {
+      "vocab": "transparency",
+      "pronunciation": "ทรานส์-พา-เรน-ซี่",
+      "meaning": "ความโปร่งใส",
+      "example": "Investors demand greater financial transparency.",
+      "exampleTranslation": "นักลงทุนต้องการความโปร่งใสทางการเงินมากขึ้น"
+    },
+    {
+      "vocab": "accountability",
+      "pronunciation": "อะ-เคาน์-ทา-บิล-ลิ-ที่",
+      "meaning": "ความรับผิดชอบ",
+      "example": "Corporate accountability is essential for trust.",
+      "exampleTranslation": "ความรับผิดชอบขององค์กรเป็นสิ่งจำเป็นสำหรับความไว้วางใจ"
+    },
+    {
+      "vocab": "procurement",
+      "pronunciation": "โพร-คิว-เมนท์",
+      "meaning": "การจัดซื้อจัดจ้าง",
+      "example": "The procurement process must be transparent.",
+      "exampleTranslation": "กระบวนการจัดซื้อจัดจ้างต้องมีความโปร่งใส"
+    },
+    {
+      "vocab": "logistics",
+      "pronunciation": "โล-จิส-ทิคส์",
+      "meaning": "โลจิสติกส์, การจัดการขนส่ง",
+      "example": "Efficient logistics reduce delivery times.",
+      "exampleTranslation": "โลจิสติกส์ที่มีประสิทธิภาพลดเวลาจัดส่ง"
+    },
+    {
+      "vocab": "supply chain",
+      "pronunciation": "ซัพ-พลาย-เชน",
+      "meaning": "ห่วงโซ่อุปทาน",
+      "example": "Global supply chains were disrupted by the pandemic.",
+      "exampleTranslation": "ห่วงโซ่อุปทานโลกถูกหยุดชะงักจากการระบาดใหญ่"
+    },
+    {
+      "vocab": "benchmark",
+      "pronunciation": "เบนช์-มาร์ค",
+      "meaning": "มาตรฐานเปรียบเทียบ",
+      "example": "The company uses industry benchmarks to measure performance.",
+      "exampleTranslation": "บริษัทใช้มาตรฐานเปรียบเทียบในอุตสาหกรรมเพื่อวัดผลการดำเนินงาน"
+    },
+    {
+      "vocab": "forecast",
+      "pronunciation": "ฟอร์-คาสท์",
+      "meaning": "การพยากรณ์, คาดการณ์",
+      "example": "Economic forecasts predict moderate growth.",
+      "exampleTranslation": "การพยากรณ์ทางเศรษฐกิจคาดการณ์การเติบโตปานกลาง"
+    }
+  ]
+}

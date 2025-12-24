@@ -1,0 +1,629 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Forex Fundamentals",
+    "description": "Essential forex trading terminology for algo traders",
+    "category": "Finance",
+    "tags": ["english", "forex", "trading", "finance", "algo-trading"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "Forex (Foreign Exchange)",
+      "pronunciation": "ฟอ-เร็กซ์",
+      "meaning": "ตลาดแลกเปลี่ยนเงินตราต่างประเทศ, ตลาดที่ใหญ่ที่สุดในโลก",
+      "example": "The forex market trades over $6 trillion daily.",
+      "exampleTranslation": "ตลาด forex มีการซื้อขายมากกว่า 6 ล้านล้านดอลลาร์ต่อวัน"
+    },
+    {
+      "vocab": "currency pair",
+      "pronunciation": "เคอ-เรน-ซี แพร์",
+      "meaning": "คู่สกุลเงิน, การเทียบค่าระหว่างสองสกุลเงิน",
+      "example": "EUR/USD is the most traded currency pair in the world.",
+      "exampleTranslation": "EUR/USD เป็นคู่สกุลเงินที่มีการซื้อขายมากที่สุดในโลก"
+    },
+    {
+      "vocab": "base currency",
+      "pronunciation": "เบส เคอ-เรน-ซี",
+      "meaning": "สกุลเงินหลัก, สกุลเงินตัวแรกในคู่เงิน",
+      "example": "In EUR/USD, EUR is the base currency.",
+      "exampleTranslation": "ใน EUR/USD, EUR คือสกุลเงินหลัก"
+    },
+    {
+      "vocab": "quote currency",
+      "pronunciation": "โควท เคอ-เรน-ซี",
+      "meaning": "สกุลเงินอ้างอิง, สกุลเงินตัวหลังในคู่เงิน",
+      "example": "In EUR/USD, USD is the quote currency.",
+      "exampleTranslation": "ใน EUR/USD, USD คือสกุลเงินอ้างอิง"
+    },
+    {
+      "vocab": "major pairs",
+      "pronunciation": "เม-เจอร์ แพร์ส",
+      "meaning": "คู่เงินหลัก, คู่เงินที่มี USD และมีสภาพคล่องสูง",
+      "example": "Major pairs include EUR/USD, GBP/USD, and USD/JPY.",
+      "exampleTranslation": "คู่เงินหลักรวมถึง EUR/USD, GBP/USD, และ USD/JPY"
+    },
+    {
+      "vocab": "minor pairs (cross pairs)",
+      "pronunciation": "ไม-เนอร์ แพร์ส / ครอส แพร์ส",
+      "meaning": "คู่เงินรอง, คู่เงินที่ไม่มี USD",
+      "example": "EUR/GBP and EUR/JPY are examples of minor pairs.",
+      "exampleTranslation": "EUR/GBP และ EUR/JPY เป็นตัวอย่างของคู่เงินรอง"
+    },
+    {
+      "vocab": "exotic pairs",
+      "pronunciation": "เอ็ก-โซ-ติก แพร์ส",
+      "meaning": "คู่เงินแปลกใหม่, คู่เงินที่มีสกุลเงินของประเทศเกิดใหม่",
+      "example": "USD/THB and EUR/TRY are exotic pairs with higher spreads.",
+      "exampleTranslation": "USD/THB และ EUR/TRY เป็นคู่เงินแปลกใหม่ที่มี spread สูงกว่า"
+    },
+    {
+      "vocab": "pip (percentage in point)",
+      "pronunciation": "พิพ",
+      "meaning": "หน่วยวัดการเปลี่ยนแปลงราคาที่เล็กที่สุด (ทศนิยมตำแหน่งที่ 4)",
+      "example": "EUR/USD moved 50 pips from 1.1000 to 1.1050.",
+      "exampleTranslation": "EUR/USD เคลื่อนที่ 50 pips จาก 1.1000 ไป 1.1050"
+    },
+    {
+      "vocab": "pipette (fractional pip)",
+      "pronunciation": "พิ-เพ็ท",
+      "meaning": "เศษส่วนของ pip, ทศนิยมตำแหน่งที่ 5",
+      "example": "The price moved from 1.10000 to 1.10015, a change of 1.5 pips or 15 pipettes.",
+      "exampleTranslation": "ราคาเคลื่อนจาก 1.10000 ไป 1.10015 เปลี่ยนแปลง 1.5 pips หรือ 15 pipettes"
+    },
+    {
+      "vocab": "point",
+      "pronunciation": "พอยท์",
+      "meaning": "จุด, หน่วยเล็กที่สุดของราคา (เท่ากับ pipette)",
+      "example": "The EA calculates profit in points for precision.",
+      "exampleTranslation": "EA คำนวณกำไรเป็น points เพื่อความแม่นยำ"
+    },
+    {
+      "vocab": "bid price",
+      "pronunciation": "บิด ไพรซ์",
+      "meaning": "ราคาเสนอซื้อ, ราคาที่โบรกเกอร์จะซื้อจากคุณ",
+      "example": "The bid price is the price at which you can sell.",
+      "exampleTranslation": "ราคา bid คือราคาที่คุณสามารถขายได้"
+    },
+    {
+      "vocab": "ask price (offer)",
+      "pronunciation": "แอสค์ ไพรซ์",
+      "meaning": "ราคาเสนอขาย, ราคาที่โบรกเกอร์จะขายให้คุณ",
+      "example": "The ask price is always higher than the bid price.",
+      "exampleTranslation": "ราคา ask จะสูงกว่าราคา bid เสมอ"
+    },
+    {
+      "vocab": "spread",
+      "pronunciation": "สเปรด",
+      "meaning": "ส่วนต่างระหว่างราคา bid และ ask, ค่าใช้จ่ายในการเทรด",
+      "example": "EUR/USD has a tight spread of 0.1 pips during high liquidity.",
+      "exampleTranslation": "EUR/USD มี spread แคบเพียง 0.1 pips ในช่วงสภาพคล่องสูง"
+    },
+    {
+      "vocab": "lot",
+      "pronunciation": "ล็อท",
+      "meaning": "หน่วยขนาดการเทรด, 1 lot = 100,000 หน่วยสกุลเงินหลัก",
+      "example": "Trading 1 standard lot of EUR/USD means trading 100,000 EUR.",
+      "exampleTranslation": "การเทรด 1 standard lot ของ EUR/USD หมายถึงเทรด 100,000 EUR"
+    },
+    {
+      "vocab": "standard lot",
+      "pronunciation": "สแตน-ดาร์ด ล็อท",
+      "meaning": "ล็อทมาตรฐาน, 100,000 หน่วยสกุลเงิน",
+      "example": "1 pip movement on a standard lot equals $10.",
+      "exampleTranslation": "การเคลื่อนที่ 1 pip บน standard lot เท่ากับ $10"
+    },
+    {
+      "vocab": "mini lot",
+      "pronunciation": "มิ-นี่ ล็อท",
+      "meaning": "ล็อทขนาดเล็ก, 10,000 หน่วยสกุลเงิน (0.1 lot)",
+      "example": "A mini lot is 10% of a standard lot.",
+      "exampleTranslation": "mini lot คือ 10% ของ standard lot"
+    },
+    {
+      "vocab": "micro lot",
+      "pronunciation": "ไม-โคร ล็อท",
+      "meaning": "ล็อทขนาดจิ๋ว, 1,000 หน่วยสกุลเงิน (0.01 lot)",
+      "example": "Beginners often start with micro lots to minimize risk.",
+      "exampleTranslation": "ผู้เริ่มต้นมักเริ่มด้วย micro lots เพื่อลดความเสี่ยง"
+    },
+    {
+      "vocab": "leverage",
+      "pronunciation": "เล-เวอ-เรจ",
+      "meaning": "การใช้เงินยืม, อัตราทด เช่น 1:100 หมายถึงควบคุมเงิน 100 เท่าของทุน",
+      "example": "With 1:100 leverage, you can control $100,000 with just $1,000.",
+      "exampleTranslation": "ด้วย leverage 1:100 คุณสามารถควบคุม $100,000 ด้วยเงินเพียง $1,000"
+    },
+    {
+      "vocab": "margin",
+      "pronunciation": "มาร์-จิ้น",
+      "meaning": "เงินค้ำประกัน, เงินที่ต้องวางเพื่อเปิดสถานะ",
+      "example": "The margin requirement for this trade is $1,000.",
+      "exampleTranslation": "ความต้องการ margin สำหรับการเทรดนี้คือ $1,000"
+    },
+    {
+      "vocab": "free margin",
+      "pronunciation": "ฟรี มาร์-จิ้น",
+      "meaning": "มาร์จิ้นว่าง, เงินที่ยังไม่ได้ใช้ค้ำประกันและสามารถเทรดเพิ่มได้",
+      "example": "You need enough free margin to open a new position.",
+      "exampleTranslation": "คุณต้องมี free margin เพียงพอเพื่อเปิดสถานะใหม่"
+    },
+    {
+      "vocab": "margin call",
+      "pronunciation": "มาร์-จิ้น คอล",
+      "meaning": "การแจ้งเตือนเมื่อ margin ต่ำเกินไป, ต้องเติมเงินหรือปิดสถานะ",
+      "example": "A margin call occurs when your equity falls below the required margin.",
+      "exampleTranslation": "margin call เกิดขึ้นเมื่อ equity ของคุณต่ำกว่า margin ที่ต้องการ"
+    },
+    {
+      "vocab": "stop out",
+      "pronunciation": "สต็อป เอาท์",
+      "meaning": "การปิดสถานะอัตโนมัติเมื่อ margin level ต่ำเกินไป",
+      "example": "The broker will stop out your positions at 20% margin level.",
+      "exampleTranslation": "โบรกเกอร์จะ stop out สถานะของคุณที่ margin level 20%"
+    },
+    {
+      "vocab": "margin level",
+      "pronunciation": "มาร์-จิ้น เล-เวล",
+      "meaning": "อัตราส่วน equity ต่อ margin ที่ใช้ (เป็นเปอร์เซ็นต์)",
+      "example": "Your margin level is 500%, which is safe.",
+      "exampleTranslation": "margin level ของคุณคือ 500% ซึ่งปลอดภัย"
+    },
+    {
+      "vocab": "equity",
+      "pronunciation": "เอ-ควิ-ที",
+      "meaning": "มูลค่าบัญชีปัจจุบัน = balance + กำไร/ขาดทุนที่ยังไม่ปิด",
+      "example": "Your equity changes in real-time based on open positions.",
+      "exampleTranslation": "equity ของคุณเปลี่ยนแปลงตามเวลาจริงตามสถานะที่เปิดอยู่"
+    },
+    {
+      "vocab": "balance",
+      "pronunciation": "บา-แลนซ์",
+      "meaning": "ยอดเงินในบัญชี (ไม่รวมกำไร/ขาดทุนที่ยังไม่ปิด)",
+      "example": "Your balance only updates when you close a trade.",
+      "exampleTranslation": "balance ของคุณจะอัปเดตเมื่อคุณปิดการเทรดเท่านั้น"
+    },
+    {
+      "vocab": "long position (buy)",
+      "pronunciation": "ลอง โพ-ซิ-ชัน",
+      "meaning": "สถานะซื้อ, เปิดสถานะหวังว่าราคาจะขึ้น",
+      "example": "Go long on EUR/USD if you expect the Euro to strengthen.",
+      "exampleTranslation": "เปิด long EUR/USD ถ้าคุณคาดว่า Euro จะแข็งค่า"
+    },
+    {
+      "vocab": "short position (sell)",
+      "pronunciation": "ชอร์ท โพ-ซิ-ชัน",
+      "meaning": "สถานะขาย, เปิดสถานะหวังว่าราคาจะลง",
+      "example": "Go short on GBP/USD if you expect the Pound to weaken.",
+      "exampleTranslation": "เปิด short GBP/USD ถ้าคุณคาดว่า Pound จะอ่อนค่า"
+    },
+    {
+      "vocab": "open position",
+      "pronunciation": "โอ-เพ่น โพ-ซิ-ชัน",
+      "meaning": "สถานะที่เปิดอยู่, การเทรดที่ยังไม่ได้ปิด",
+      "example": "You have 3 open positions in your account.",
+      "exampleTranslation": "คุณมี 3 สถานะที่เปิดอยู่ในบัญชี"
+    },
+    {
+      "vocab": "close position",
+      "pronunciation": "โคลส โพ-ซิ-ชัน",
+      "meaning": "ปิดสถานะ, จบการเทรดและรับรู้กำไร/ขาดทุน",
+      "example": "Close your position to lock in profits.",
+      "exampleTranslation": "ปิดสถานะเพื่อล็อคกำไร"
+    },
+    {
+      "vocab": "market order",
+      "pronunciation": "มาร์-เก็ต ออร์-เดอร์",
+      "meaning": "คำสั่งซื้อขายทันทีที่ราคาปัจจุบัน",
+      "example": "A market order executes immediately at the best available price.",
+      "exampleTranslation": "market order จะทำการซื้อขายทันทีที่ราคาดีที่สุดที่มี"
+    },
+    {
+      "vocab": "limit order",
+      "pronunciation": "ลิ-มิท ออร์-เดอร์",
+      "meaning": "คำสั่งซื้อขายที่ราคาที่กำหนด หรือดีกว่า",
+      "example": "Set a buy limit order below the current price.",
+      "exampleTranslation": "ตั้ง buy limit order ต่ำกว่าราคาปัจจุบัน"
+    },
+    {
+      "vocab": "buy limit",
+      "pronunciation": "บาย ลิ-มิท",
+      "meaning": "คำสั่งซื้อที่ราคาต่ำกว่าปัจจุบัน (รอราคาลงมาซื้อ)",
+      "example": "Place a buy limit at 1.0950 if the current price is 1.1000.",
+      "exampleTranslation": "วาง buy limit ที่ 1.0950 ถ้าราคาปัจจุบันคือ 1.1000"
+    },
+    {
+      "vocab": "sell limit",
+      "pronunciation": "เซล ลิ-มิท",
+      "meaning": "คำสั่งขายที่ราคาสูงกว่าปัจจุบัน (รอราคาขึ้นไปขาย)",
+      "example": "Place a sell limit at 1.1050 to sell at a better price.",
+      "exampleTranslation": "วาง sell limit ที่ 1.1050 เพื่อขายที่ราคาดีกว่า"
+    },
+    {
+      "vocab": "stop order",
+      "pronunciation": "สต็อป ออร์-เดอร์",
+      "meaning": "คำสั่งซื้อขายเมื่อราคาถึงจุดที่กำหนด",
+      "example": "A stop order becomes a market order when the price is reached.",
+      "exampleTranslation": "stop order จะกลายเป็น market order เมื่อราคาถึงจุดที่กำหนด"
+    },
+    {
+      "vocab": "buy stop",
+      "pronunciation": "บาย สต็อป",
+      "meaning": "คำสั่งซื้อที่ราคาสูงกว่าปัจจุบัน (รอราคาทะลุขึ้นแล้วซื้อ)",
+      "example": "Place a buy stop above resistance to catch breakouts.",
+      "exampleTranslation": "วาง buy stop เหนือแนวต้านเพื่อจับการ breakout"
+    },
+    {
+      "vocab": "sell stop",
+      "pronunciation": "เซล สต็อป",
+      "meaning": "คำสั่งขายที่ราคาต่ำกว่าปัจจุบัน (รอราคาทะลุลงแล้วขาย)",
+      "example": "Place a sell stop below support to catch breakdowns.",
+      "exampleTranslation": "วาง sell stop ใต้แนวรับเพื่อจับการ breakdown"
+    },
+    {
+      "vocab": "stop loss (SL)",
+      "pronunciation": "สต็อป ลอส",
+      "meaning": "จุดตัดขาดทุน, ราคาที่ปิดสถานะอัตโนมัติเพื่อจำกัดการขาดทุน",
+      "example": "Always set a stop loss to protect your capital.",
+      "exampleTranslation": "ตั้ง stop loss เสมอเพื่อปกป้องเงินทุนของคุณ"
+    },
+    {
+      "vocab": "take profit (TP)",
+      "pronunciation": "เทค โปร-ฟิท",
+      "meaning": "จุดทำกำไร, ราคาที่ปิดสถานะอัตโนมัติเพื่อล็อคกำไร",
+      "example": "Set your take profit at the next resistance level.",
+      "exampleTranslation": "ตั้ง take profit ที่แนวต้านถัดไป"
+    },
+    {
+      "vocab": "trailing stop",
+      "pronunciation": "เทรล-ลิ่ง สต็อป",
+      "meaning": "stop loss ที่เลื่อนตามราคาอัตโนมัติเมื่อกำไรเพิ่ม",
+      "example": "A trailing stop locks in profits as the price moves in your favor.",
+      "exampleTranslation": "trailing stop ล็อคกำไรเมื่อราคาเคลื่อนที่ไปในทิศทางที่คุณต้องการ"
+    },
+    {
+      "vocab": "slippage",
+      "pronunciation": "สลิป-เพจ",
+      "meaning": "ความแตกต่างระหว่างราคาที่ต้องการกับราคาที่ได้จริง",
+      "example": "High volatility can cause significant slippage.",
+      "exampleTranslation": "ความผันผวนสูงอาจทำให้เกิด slippage มาก"
+    },
+    {
+      "vocab": "requote",
+      "pronunciation": "รี-โควท",
+      "meaning": "การเสนอราคาใหม่เมื่อราคาเปลี่ยนก่อนคำสั่งจะถูกดำเนินการ",
+      "example": "Requotes are common during high volatility periods.",
+      "exampleTranslation": "requotes พบได้บ่อยในช่วงที่มีความผันผวนสูง"
+    },
+    {
+      "vocab": "execution",
+      "pronunciation": "เอ็ก-ซิ-คิว-ชัน",
+      "meaning": "การดำเนินการคำสั่ง, การซื้อขายจริง",
+      "example": "ECN brokers offer faster execution speeds.",
+      "exampleTranslation": "โบรกเกอร์ ECN ให้ความเร็วในการ execution ที่เร็วกว่า"
+    },
+    {
+      "vocab": "liquidity",
+      "pronunciation": "ลิ-ควิ-ดิ-ที",
+      "meaning": "สภาพคล่อง, ความง่ายในการซื้อขายโดยไม่กระทบราคา",
+      "example": "EUR/USD has the highest liquidity in the forex market.",
+      "exampleTranslation": "EUR/USD มีสภาพคล่องสูงที่สุดในตลาด forex"
+    },
+    {
+      "vocab": "volatility",
+      "pronunciation": "โว-ลา-ทิ-ลิ-ที",
+      "meaning": "ความผันผวน, การเปลี่ยนแปลงของราคา",
+      "example": "News events often increase market volatility.",
+      "exampleTranslation": "ข่าวมักเพิ่มความผันผวนของตลาด"
+    },
+    {
+      "vocab": "swap (rollover)",
+      "pronunciation": "สว็อป / โรล-โอ-เวอร์",
+      "meaning": "ค่าธรรมเนียมหรือดอกเบี้ยจากการถือสถานะข้ามคืน",
+      "example": "You'll pay or receive swap depending on the interest rate differential.",
+      "exampleTranslation": "คุณจะจ่ายหรือได้รับ swap ขึ้นอยู่กับส่วนต่างอัตราดอกเบี้ย"
+    },
+    {
+      "vocab": "commission",
+      "pronunciation": "คอม-มิช-ชัน",
+      "meaning": "ค่าคอมมิชชัน, ค่าธรรมเนียมต่อการเทรด",
+      "example": "ECN brokers charge commission instead of widening spreads.",
+      "exampleTranslation": "โบรกเกอร์ ECN คิดค่า commission แทนการขยาย spread"
+    },
+    {
+      "vocab": "broker",
+      "pronunciation": "โบร-เกอร์",
+      "meaning": "ตัวกลางในการซื้อขาย, บริษัทที่ให้บริการเทรด",
+      "example": "Choose a regulated broker for safety.",
+      "exampleTranslation": "เลือกโบรกเกอร์ที่มีการกำกับดูแลเพื่อความปลอดภัย"
+    },
+    {
+      "vocab": "ECN (Electronic Communication Network)",
+      "pronunciation": "อี-ซี-เอ็น",
+      "meaning": "เครือข่ายอิเล็กทรอนิกส์ที่เชื่อมต่อผู้ซื้อขายโดยตรง",
+      "example": "ECN brokers provide direct market access with tight spreads.",
+      "exampleTranslation": "โบรกเกอร์ ECN ให้การเข้าถึงตลาดโดยตรงพร้อม spread แคบ"
+    },
+    {
+      "vocab": "STP (Straight Through Processing)",
+      "pronunciation": "เอส-ที-พี",
+      "meaning": "ระบบส่งคำสั่งตรงไปยังผู้ให้สภาพคล่องโดยไม่ผ่าน dealing desk",
+      "example": "STP brokers pass your orders directly to liquidity providers.",
+      "exampleTranslation": "โบรกเกอร์ STP ส่งคำสั่งของคุณตรงไปยังผู้ให้สภาพคล่อง"
+    },
+    {
+      "vocab": "market maker",
+      "pronunciation": "มาร์-เก็ต เม-เกอร์",
+      "meaning": "ผู้สร้างตลาด, โบรกเกอร์ที่เป็นคู่ค้ากับคุณเอง",
+      "example": "Market makers may have conflicts of interest with traders.",
+      "exampleTranslation": "market makers อาจมีผลประโยชน์ทับซ้อนกับเทรดเดอร์"
+    },
+    {
+      "vocab": "dealing desk",
+      "pronunciation": "ดีล-ลิ่ง เด็สค์",
+      "meaning": "โต๊ะเทรดของโบรกเกอร์, มีการแทรกแซงคำสั่ง",
+      "example": "Dealing desk brokers may trade against their clients.",
+      "exampleTranslation": "โบรกเกอร์ที่มี dealing desk อาจเทรดสวนลูกค้า"
+    },
+    {
+      "vocab": "no dealing desk (NDD)",
+      "pronunciation": "โน ดีล-ลิ่ง เด็สค์",
+      "meaning": "ไม่มีโต๊ะเทรด, ส่งคำสั่งตรงไปตลาด",
+      "example": "NDD brokers offer more transparent pricing.",
+      "exampleTranslation": "โบรกเกอร์ NDD ให้ราคาที่โปร่งใสกว่า"
+    },
+    {
+      "vocab": "trading session",
+      "pronunciation": "เทรด-ดิ้ง เซส-ชัน",
+      "meaning": "ช่วงเวลาเทรดตามตลาดหลักของโลก",
+      "example": "The London and New York sessions overlap creates high volatility.",
+      "exampleTranslation": "ช่วง session London และ New York ทับซ้อนกันสร้างความผันผวนสูง"
+    },
+    {
+      "vocab": "Asian session",
+      "pronunciation": "เอ-เชียน เซส-ชัน",
+      "meaning": "ช่วงตลาดเอเชีย (Tokyo), มักมีความผันผวนต่ำ",
+      "example": "The Asian session is known for range-bound trading.",
+      "exampleTranslation": "session เอเชียเป็นที่รู้จักในเรื่องการเทรดในกรอบ"
+    },
+    {
+      "vocab": "London session",
+      "pronunciation": "ลอน-ดอน เซส-ชัน",
+      "meaning": "ช่วงตลาดยุโรป, มีปริมาณการเทรดสูงสุด",
+      "example": "The London session accounts for about 35% of all forex trading.",
+      "exampleTranslation": "session London คิดเป็นประมาณ 35% ของการเทรด forex ทั้งหมด"
+    },
+    {
+      "vocab": "New York session",
+      "pronunciation": "นิว-ยอร์ค เซส-ชัน",
+      "meaning": "ช่วงตลาดอเมริกา, มีผลกระทบจากข่าวเศรษฐกิจสหรัฐ",
+      "example": "Major US economic news is released during the New York session.",
+      "exampleTranslation": "ข่าวเศรษฐกิจสหรัฐสำคัญถูกปล่อยในช่วง session New York"
+    },
+    {
+      "vocab": "fundamental analysis",
+      "pronunciation": "ฟัน-ดา-เมน-ทัล อะ-นา-ลิ-ซิส",
+      "meaning": "การวิเคราะห์ปัจจัยพื้นฐาน เช่น เศรษฐกิจ, ดอกเบี้ย, GDP",
+      "example": "Fundamental analysis examines economic data and central bank policies.",
+      "exampleTranslation": "การวิเคราะห์ปัจจัยพื้นฐานตรวจสอบข้อมูลเศรษฐกิจและนโยบายธนาคารกลาง"
+    },
+    {
+      "vocab": "technical analysis",
+      "pronunciation": "เทค-นิ-คัล อะ-นา-ลิ-ซิส",
+      "meaning": "การวิเคราะห์ทางเทคนิค, ใช้กราฟและ indicators",
+      "example": "Technical analysis uses price charts and indicators to predict movements.",
+      "exampleTranslation": "การวิเคราะห์ทางเทคนิคใช้กราฟราคาและ indicators เพื่อคาดการณ์การเคลื่อนไหว"
+    },
+    {
+      "vocab": "bullish",
+      "pronunciation": "บูล-ลิช",
+      "meaning": "แนวโน้มขาขึ้น, คาดว่าราคาจะเพิ่ม",
+      "example": "The market sentiment is bullish after the positive jobs report.",
+      "exampleTranslation": "ความเชื่อมั่นตลาดเป็นขาขึ้นหลังรายงานการจ้างงานเชิงบวก"
+    },
+    {
+      "vocab": "bearish",
+      "pronunciation": "แบร์-ริช",
+      "meaning": "แนวโน้มขาลง, คาดว่าราคาจะลด",
+      "example": "Traders are bearish on the Dollar due to rate cut expectations.",
+      "exampleTranslation": "เทรดเดอร์มองขาลงต่อดอลลาร์เนื่องจากคาดว่าจะลดดอกเบี้ย"
+    },
+    {
+      "vocab": "trend",
+      "pronunciation": "เทรนด์",
+      "meaning": "แนวโน้ม, ทิศทางการเคลื่อนไหวของราคา",
+      "example": "The trend is your friend - trade in the direction of the trend.",
+      "exampleTranslation": "เทรนด์คือเพื่อนของคุณ - เทรดในทิศทางของเทรนด์"
+    },
+    {
+      "vocab": "uptrend",
+      "pronunciation": "อัพ-เทรนด์",
+      "meaning": "แนวโน้มขาขึ้น, higher highs และ higher lows",
+      "example": "An uptrend is characterized by higher highs and higher lows.",
+      "exampleTranslation": "แนวโน้มขาขึ้นมีลักษณะคือ higher highs และ higher lows"
+    },
+    {
+      "vocab": "downtrend",
+      "pronunciation": "ดาวน์-เทรนด์",
+      "meaning": "แนวโน้มขาลง, lower highs และ lower lows",
+      "example": "A downtrend shows lower highs and lower lows.",
+      "exampleTranslation": "แนวโน้มขาลงแสดง lower highs และ lower lows"
+    },
+    {
+      "vocab": "sideways (ranging)",
+      "pronunciation": "ไซด์-เวย์ส",
+      "meaning": "ตลาด sideway, ราคาเคลื่อนไหวในกรอบไม่มีทิศทางชัดเจน",
+      "example": "The market is moving sideways between support and resistance.",
+      "exampleTranslation": "ตลาดกำลังเคลื่อนที่ sideway ระหว่างแนวรับและแนวต้าน"
+    },
+    {
+      "vocab": "consolidation",
+      "pronunciation": "คอน-โซ-ลิ-เด-ชัน",
+      "meaning": "การพักตัว, ราคาเคลื่อนไหวในกรอบแคบก่อนเคลื่อนที่ต่อ",
+      "example": "Price is in consolidation before the next breakout.",
+      "exampleTranslation": "ราคาอยู่ในช่วงพักตัวก่อนการ breakout ครั้งต่อไป"
+    },
+    {
+      "vocab": "breakout",
+      "pronunciation": "เบรค-เอาท์",
+      "meaning": "การทะลุ, ราคาเคลื่อนที่ผ่านแนวรับหรือแนวต้าน",
+      "example": "A breakout above resistance signals a potential uptrend.",
+      "exampleTranslation": "การ breakout เหนือแนวต้านส่งสัญญาณแนวโน้มขาขึ้นที่เป็นไปได้"
+    },
+    {
+      "vocab": "reversal",
+      "pronunciation": "รี-เวอร์-ซัล",
+      "meaning": "การกลับตัว, การเปลี่ยนทิศทางของเทรนด์",
+      "example": "Look for reversal patterns at key support and resistance levels.",
+      "exampleTranslation": "มองหารูปแบบการกลับตัวที่แนวรับและแนวต้านสำคัญ"
+    },
+    {
+      "vocab": "retracement",
+      "pronunciation": "รี-เทรซ-เมนท์",
+      "meaning": "การย่อตัว, การพักตัวชั่วคราวก่อนไปต่อในทิศทางเดิม",
+      "example": "Buy on retracements in an uptrend for better entry prices.",
+      "exampleTranslation": "ซื้อตอนย่อตัวในขาขึ้นเพื่อราคาเข้าที่ดีกว่า"
+    },
+    {
+      "vocab": "pip value",
+      "pronunciation": "พิพ วา-ลู",
+      "meaning": "มูลค่าของ 1 pip ในสกุลเงินบัญชี",
+      "example": "Calculate pip value to determine position size.",
+      "exampleTranslation": "คำนวณ pip value เพื่อกำหนดขนาดสถานะ"
+    },
+    {
+      "vocab": "position size",
+      "pronunciation": "โพ-ซิ-ชัน ไซส์",
+      "meaning": "ขนาดของสถานะ, จำนวน lots ที่เทรด",
+      "example": "Calculate your position size based on your risk tolerance.",
+      "exampleTranslation": "คำนวณขนาดสถานะตามความเสี่ยงที่คุณยอมรับได้"
+    },
+    {
+      "vocab": "risk-reward ratio",
+      "pronunciation": "ริสค์-รี-วอร์ด เร-ชิโอ",
+      "meaning": "อัตราส่วนความเสี่ยงต่อผลตอบแทน",
+      "example": "A 1:2 risk-reward ratio means risking $100 to make $200.",
+      "exampleTranslation": "อัตราส่วนความเสี่ยงต่อผลตอบแทน 1:2 หมายถึงเสี่ยง $100 เพื่อทำกำไร $200"
+    },
+    {
+      "vocab": "drawdown",
+      "pronunciation": "ดรอว์-ดาวน์",
+      "meaning": "การลดลงของเงินทุนจากจุดสูงสุด",
+      "example": "The strategy has a maximum drawdown of 15%.",
+      "exampleTranslation": "กลยุทธ์นี้มี drawdown สูงสุด 15%"
+    },
+    {
+      "vocab": "profit factor",
+      "pronunciation": "โปร-ฟิท แฟค-เตอร์",
+      "meaning": "อัตราส่วนกำไรรวมต่อขาดทุนรวม",
+      "example": "A profit factor above 1.5 indicates a robust strategy.",
+      "exampleTranslation": "profit factor เกิน 1.5 บ่งบอกว่ากลยุทธ์แข็งแกร่ง"
+    },
+    {
+      "vocab": "win rate",
+      "pronunciation": "วิน เรท",
+      "meaning": "เปอร์เซ็นต์การเทรดที่ชนะ",
+      "example": "A 40% win rate can still be profitable with good risk-reward.",
+      "exampleTranslation": "win rate 40% ยังทำกำไรได้ถ้ามี risk-reward ที่ดี"
+    },
+    {
+      "vocab": "risk per trade",
+      "pronunciation": "ริสค์ เพอร์ เทรด",
+      "meaning": "ความเสี่ยงต่อการเทรดหนึ่งครั้ง (มักเป็น % ของทุน)",
+      "example": "Never risk more than 2% of your account per trade.",
+      "exampleTranslation": "อย่าเสี่ยงเกิน 2% ของบัญชีต่อการเทรดหนึ่งครั้ง"
+    },
+    {
+      "vocab": "demo account",
+      "pronunciation": "เด-โม่ แอค-เคาท์",
+      "meaning": "บัญชีทดลอง, เทรดด้วยเงินปลอม",
+      "example": "Practice on a demo account before risking real money.",
+      "exampleTranslation": "ฝึกฝนบนบัญชี demo ก่อนเสี่ยงเงินจริง"
+    },
+    {
+      "vocab": "live account",
+      "pronunciation": "ไลฟ์ แอค-เคาท์",
+      "meaning": "บัญชีจริง, เทรดด้วยเงินจริง",
+      "example": "Only trade a live account when consistently profitable on demo.",
+      "exampleTranslation": "เทรดบัญชีจริงเมื่อทำกำไรได้สม่ำเสมอบน demo แล้วเท่านั้น"
+    },
+    {
+      "vocab": "MT4/MT5 (MetaTrader)",
+      "pronunciation": "เอ็ม-ที-โฟร์ / เอ็ม-ที-ไฟว์",
+      "meaning": "แพลตฟอร์มเทรด forex ยอดนิยม",
+      "example": "MT5 supports more timeframes and order types than MT4.",
+      "exampleTranslation": "MT5 รองรับ timeframes และประเภทคำสั่งมากกว่า MT4"
+    },
+    {
+      "vocab": "EA (Expert Advisor)",
+      "pronunciation": "อี-เอ",
+      "meaning": "โปรแกรมเทรดอัตโนมัติบน MetaTrader",
+      "example": "The EA executes trades automatically based on programmed rules.",
+      "exampleTranslation": "EA ดำเนินการเทรดอัตโนมัติตามกฎที่เขียนโปรแกรมไว้"
+    },
+    {
+      "vocab": "indicator",
+      "pronunciation": "อิน-ดิ-เค-เตอร์",
+      "meaning": "ตัวบ่งชี้, เครื่องมือวิเคราะห์ทางเทคนิค",
+      "example": "Moving averages are lagging indicators.",
+      "exampleTranslation": "เส้นค่าเฉลี่ยเคลื่อนที่เป็น indicators ประเภทตามหลัง"
+    },
+    {
+      "vocab": "timeframe",
+      "pronunciation": "ไทม์-เฟรม",
+      "meaning": "กรอบเวลาของกราฟ เช่น M1, H1, D1",
+      "example": "Use higher timeframes for trend direction and lower for entries.",
+      "exampleTranslation": "ใช้ timeframe สูงสำหรับดูทิศทางเทรนด์และ timeframe ต่ำสำหรับจุดเข้า"
+    },
+    {
+      "vocab": "candlestick",
+      "pronunciation": "แคน-เดิล-สติก",
+      "meaning": "แท่งเทียน, การแสดงราคาแบบ OHLC",
+      "example": "Each candlestick shows open, high, low, and close prices.",
+      "exampleTranslation": "แท่งเทียนแต่ละอันแสดงราคาเปิด, สูงสุด, ต่ำสุด, และปิด"
+    },
+    {
+      "vocab": "OHLC",
+      "pronunciation": "โอ-เอช-แอล-ซี",
+      "meaning": "Open, High, Low, Close - ราคา 4 จุดของแท่งเทียน",
+      "example": "OHLC data is essential for technical analysis.",
+      "exampleTranslation": "ข้อมูล OHLC จำเป็นสำหรับการวิเคราะห์ทางเทคนิค"
+    },
+    {
+      "vocab": "order book",
+      "pronunciation": "ออร์-เดอร์ บุ๊ค",
+      "meaning": "สมุดคำสั่ง, แสดง bid/ask orders ที่รอดำเนินการ",
+      "example": "The order book shows pending buy and sell orders at each price.",
+      "exampleTranslation": "order book แสดงคำสั่งซื้อและขายที่รอดำเนินการในแต่ละราคา"
+    },
+    {
+      "vocab": "tick",
+      "pronunciation": "ทิก",
+      "meaning": "การเปลี่ยนแปลงราคาที่เล็กที่สุด, ทุกครั้งที่ราคาเปลี่ยน",
+      "example": "High-frequency trading operates at the tick level.",
+      "exampleTranslation": "การเทรดความถี่สูงทำงานที่ระดับ tick"
+    },
+    {
+      "vocab": "quote",
+      "pronunciation": "โควท",
+      "meaning": "ราคาเสนอ, ราคา bid/ask ปัจจุบัน",
+      "example": "Get real-time quotes from your broker's data feed.",
+      "exampleTranslation": "รับ quotes แบบเรียลไทม์จาก data feed ของโบรกเกอร์"
+    },
+    {
+      "vocab": "fill",
+      "pronunciation": "ฟิลล์",
+      "meaning": "การดำเนินการคำสั่งสำเร็จ",
+      "example": "Your order was filled at 1.1005.",
+      "exampleTranslation": "คำสั่งของคุณถูกดำเนินการที่ 1.1005"
+    },
+    {
+      "vocab": "partial fill",
+      "pronunciation": "พาร์-เชียล ฟิลล์",
+      "meaning": "การดำเนินการคำสั่งบางส่วน",
+      "example": "Large orders may receive partial fills due to limited liquidity.",
+      "exampleTranslation": "คำสั่งใหญ่อาจได้รับการดำเนินการบางส่วนเนื่องจากสภาพคล่องจำกัด"
+    }
+  ]
+}

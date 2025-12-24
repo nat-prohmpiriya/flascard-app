@@ -1,0 +1,489 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Meeting & Communication Phrases",
+    "description": "Common phrases for tech meetings, standups, and professional communication",
+    "category": "Technology",
+    "tags": ["english", "programming", "meeting", "communication", "professional"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "Let's get started",
+      "pronunciation": "เล็ทส์ เก็ท สตาร์-เท็ด",
+      "meaning": "มาเริ่มกันเถอะ",
+      "example": "Everyone's here, so let's get started with the sprint planning.",
+      "exampleTranslation": "ทุกคนมาครบแล้ว มาเริ่ม sprint planning กันเถอะ"
+    },
+    {
+      "vocab": "Can everyone hear me?",
+      "pronunciation": "แคน เอฟ-รี-วัน เฮียร์ มี?",
+      "meaning": "ทุกคนได้ยินผมไหม?",
+      "example": "Can everyone hear me? I think there might be audio issues.",
+      "exampleTranslation": "ทุกคนได้ยินผมไหม? ผมคิดว่าอาจมีปัญหาเรื่องเสียง"
+    },
+    {
+      "vocab": "You're on mute",
+      "pronunciation": "ยัวร์ ออน มิวท์",
+      "meaning": "คุณปิดไมค์อยู่",
+      "example": "Sorry to interrupt - you're on mute.",
+      "exampleTranslation": "ขอโทษที่ขัด - คุณปิดไมค์อยู่"
+    },
+    {
+      "vocab": "Can you share your screen?",
+      "pronunciation": "แคน ยู แชร์ ยัวร์ สกรีน?",
+      "meaning": "ช่วยแชร์หน้าจอได้ไหม?",
+      "example": "Can you share your screen so we can look at the code together?",
+      "exampleTranslation": "ช่วยแชร์หน้าจอได้ไหมเพื่อที่เราจะดูโค้ดด้วยกัน?"
+    },
+    {
+      "vocab": "I'll share my screen",
+      "pronunciation": "ไอล์ แชร์ มาย สกรีน",
+      "meaning": "ผมจะแชร์หน้าจอ",
+      "example": "Let me pull up the diagram. I'll share my screen.",
+      "exampleTranslation": "ขอผมเปิด diagram ก่อน ผมจะแชร์หน้าจอ"
+    },
+    {
+      "vocab": "What did I miss?",
+      "pronunciation": "ว็อท ดิด ไอ มิส?",
+      "meaning": "ผมพลาดอะไรไป?",
+      "example": "Sorry I'm late. What did I miss?",
+      "exampleTranslation": "ขอโทษที่มาสาย ผมพลาดอะไรไป?"
+    },
+    {
+      "vocab": "Let me give you a quick update",
+      "pronunciation": "เล็ท มี กิฟ ยู อะ ควิก อัพ-เดท",
+      "meaning": "ให้ผมอัปเดตคุณสั้นๆ",
+      "example": "Let me give you a quick update on the backend progress.",
+      "exampleTranslation": "ให้ผมอัปเดตคุณสั้นๆ เกี่ยวกับความคืบหน้าของ backend"
+    },
+    {
+      "vocab": "What I'm working on",
+      "pronunciation": "ว็อท ไอม์ เวิร์ค-กิ้ง ออน",
+      "meaning": "สิ่งที่ผมกำลังทำอยู่",
+      "example": "What I'm working on is the authentication flow refactoring.",
+      "exampleTranslation": "สิ่งที่ผมกำลังทำอยู่คือการ refactor authentication flow"
+    },
+    {
+      "vocab": "I'm blocked on...",
+      "pronunciation": "ไอม์ บล็อคด์ ออน...",
+      "meaning": "ผมติดอยู่ที่...",
+      "example": "I'm blocked on the API integration - waiting for credentials.",
+      "exampleTranslation": "ผมติดอยู่ที่การเชื่อมต่อ API - รอ credentials อยู่"
+    },
+    {
+      "vocab": "I could use some help with...",
+      "pronunciation": "ไอ คูด ยูส ซัม เฮลป์ วิธ...",
+      "meaning": "ผมอยากได้ความช่วยเหลือเรื่อง...",
+      "example": "I could use some help with the database schema design.",
+      "exampleTranslation": "ผมอยากได้ความช่วยเหลือเรื่องการออกแบบ database schema"
+    },
+    {
+      "vocab": "Does anyone have bandwidth to help?",
+      "pronunciation": "ดัส เอ-นี-วัน แฮฟ แบนด์-วิดธ์ ทู เฮลป์?",
+      "meaning": "มีใครพอมีเวลาช่วยไหม?",
+      "example": "Does anyone have bandwidth to help with the testing?",
+      "exampleTranslation": "มีใครพอมีเวลาช่วยเรื่อง testing ไหม?"
+    },
+    {
+      "vocab": "I'll take that",
+      "pronunciation": "ไอล์ เทค แดท",
+      "meaning": "ผมรับงานนั้นเอง",
+      "example": "I'll take that task. I have some spare time this sprint.",
+      "exampleTranslation": "ผมรับงานนั้นเอง ผมมีเวลาว่างบ้าง sprint นี้"
+    },
+    {
+      "vocab": "Let's take this offline",
+      "pronunciation": "เล็ทส์ เทค ดิส ออฟ-ไลน์",
+      "meaning": "มาคุยกันนอกที่ประชุม",
+      "example": "This is getting detailed. Let's take this offline.",
+      "exampleTranslation": "เรื่องนี้ซับซ้อนเกินไป มาคุยกันนอกที่ประชุม"
+    },
+    {
+      "vocab": "Let's table this for now",
+      "pronunciation": "เล็ทส์ เท-เบิล ดิส ฟอร์ นาว",
+      "meaning": "เก็บเรื่องนี้ไว้ก่อน, ค่อยมาคุยทีหลัง",
+      "example": "Let's table this for now and focus on the priority items.",
+      "exampleTranslation": "เก็บเรื่องนี้ไว้ก่อนและโฟกัสที่เรื่องสำคัญ"
+    },
+    {
+      "vocab": "Can we circle back to this?",
+      "pronunciation": "แคน วี เซอร์-เคิล แบค ทู ดิส?",
+      "meaning": "เราค่อยกลับมาเรื่องนี้ได้ไหม?",
+      "example": "Can we circle back to this after we discuss the blockers?",
+      "exampleTranslation": "เราค่อยกลับมาเรื่องนี้หลังจากคุยเรื่อง blockers ได้ไหม?"
+    },
+    {
+      "vocab": "Any blockers or dependencies?",
+      "pronunciation": "เอ-นี่ บล็อค-เกอร์ส ออร์ ดี-เพน-เดน-ซีส?",
+      "meaning": "มีอะไรติดขัดหรือ dependencies ไหม?",
+      "example": "Before we end, any blockers or dependencies we should discuss?",
+      "exampleTranslation": "ก่อนจบ มีอะไรติดขัดหรือ dependencies ที่ต้องคุยไหม?"
+    },
+    {
+      "vocab": "What's the ETA on that?",
+      "pronunciation": "ว็อทส์ ดิ อี-ที-เอ ออน แดท?",
+      "meaning": "คาดว่าจะเสร็จเมื่อไหร่?",
+      "example": "What's the ETA on the API integration?",
+      "exampleTranslation": "การเชื่อมต่อ API คาดว่าจะเสร็จเมื่อไหร่?"
+    },
+    {
+      "vocab": "I should be able to finish by...",
+      "pronunciation": "ไอ ชูด บี เอ-เบิล ทู ฟิ-นิช บาย...",
+      "meaning": "ผมน่าจะเสร็จภายใน...",
+      "example": "I should be able to finish by end of day tomorrow.",
+      "exampleTranslation": "ผมน่าจะเสร็จภายในสิ้นวันพรุ่งนี้"
+    },
+    {
+      "vocab": "Let me walk you through...",
+      "pronunciation": "เล็ท มี วอล์ค ยู ธรู...",
+      "meaning": "ให้ผมพาคุณดู... / อธิบาย...",
+      "example": "Let me walk you through the architecture diagram.",
+      "exampleTranslation": "ให้ผมพาคุณดู architecture diagram"
+    },
+    {
+      "vocab": "Does that make sense?",
+      "pronunciation": "ดัส แดท เมค เซนส์?",
+      "meaning": "เข้าใจไหม? / สมเหตุสมผลไหม?",
+      "example": "We'll split the work into two phases. Does that make sense?",
+      "exampleTranslation": "เราจะแบ่งงานออกเป็นสองเฟส เข้าใจไหม?"
+    },
+    {
+      "vocab": "I have a question about...",
+      "pronunciation": "ไอ แฮฟ อะ เควส-ชัน อะ-เบาท์...",
+      "meaning": "ผมมีคำถามเกี่ยวกับ...",
+      "example": "I have a question about the deployment process.",
+      "exampleTranslation": "ผมมีคำถามเกี่ยวกับกระบวนการ deployment"
+    },
+    {
+      "vocab": "Just to clarify...",
+      "pronunciation": "จัสท์ ทู คลา-ริ-ฟาย...",
+      "meaning": "เพื่อให้ชัดเจน...",
+      "example": "Just to clarify - are we deploying to staging or production?",
+      "exampleTranslation": "เพื่อให้ชัดเจน - เรากำลัง deploy ไป staging หรือ production?"
+    },
+    {
+      "vocab": "If I understand correctly...",
+      "pronunciation": "อิฟ ไอ อัน-เดอร์-สแตนด์ คอ-เรค-ลี...",
+      "meaning": "ถ้าผมเข้าใจถูก...",
+      "example": "If I understand correctly, we need to finish this by Friday?",
+      "exampleTranslation": "ถ้าผมเข้าใจถูก เราต้องทำให้เสร็จภายในวันศุกร์?"
+    },
+    {
+      "vocab": "Can you elaborate on that?",
+      "pronunciation": "แคน ยู อิ-แล็บ-โบ-เรท ออน แดท?",
+      "meaning": "ช่วยอธิบายเพิ่มเติมได้ไหม?",
+      "example": "Can you elaborate on that? I'm not sure I follow.",
+      "exampleTranslation": "ช่วยอธิบายเพิ่มเติมได้ไหม? ผมไม่แน่ใจว่าตามทัน"
+    },
+    {
+      "vocab": "I'm not sure I follow",
+      "pronunciation": "ไอม์ น็อท ชัวร์ ไอ ฟอล-โล",
+      "meaning": "ผมไม่แน่ใจว่าตามทัน / เข้าใจ",
+      "example": "I'm not sure I follow - could you explain the flow again?",
+      "exampleTranslation": "ผมไม่แน่ใจว่าตามทัน - ช่วยอธิบาย flow อีกครั้งได้ไหม?"
+    },
+    {
+      "vocab": "Let me rephrase that",
+      "pronunciation": "เล็ท มี รี-เฟรส แดท",
+      "meaning": "ให้ผมพูดใหม่อีกแบบ",
+      "example": "Let me rephrase that - what I mean is we need more testing.",
+      "exampleTranslation": "ให้ผมพูดใหม่อีกแบบ - ที่ผมหมายคือเราต้องทดสอบมากขึ้น"
+    },
+    {
+      "vocab": "To summarize...",
+      "pronunciation": "ทู ซัม-มา-ไรส์...",
+      "meaning": "สรุปคือ...",
+      "example": "To summarize, we have three action items from this meeting.",
+      "exampleTranslation": "สรุปคือ เรามีสิ่งที่ต้องทำสามอย่างจากการประชุมนี้"
+    },
+    {
+      "vocab": "What are the action items?",
+      "pronunciation": "ว็อท อาร์ ดิ แอค-ชัน ไอ-เท็มส์?",
+      "meaning": "สิ่งที่ต้องทำคืออะไร?",
+      "example": "Before we wrap up, what are the action items?",
+      "exampleTranslation": "ก่อนจบ สิ่งที่ต้องทำคืออะไร?"
+    },
+    {
+      "vocab": "Who's responsible for...?",
+      "pronunciation": "ฮูส รี-สปอน-ซิ-เบิล ฟอร์...?",
+      "meaning": "ใครรับผิดชอบเรื่อง...?",
+      "example": "Who's responsible for setting up the CI pipeline?",
+      "exampleTranslation": "ใครรับผิดชอบเรื่องการตั้งค่า CI pipeline?"
+    },
+    {
+      "vocab": "I'll follow up on that",
+      "pronunciation": "ไอล์ ฟอล-โล อัพ ออน แดท",
+      "meaning": "ผมจะติดตามเรื่องนั้น",
+      "example": "I'll follow up on that and send an update by tomorrow.",
+      "exampleTranslation": "ผมจะติดตามเรื่องนั้นและส่งอัปเดตภายในพรุ่งนี้"
+    },
+    {
+      "vocab": "Let's sync up later",
+      "pronunciation": "เล็ทส์ ซิงค์ อัพ เล-เทอร์",
+      "meaning": "มาคุยกันทีหลัง",
+      "example": "Let's sync up later today to discuss the implementation details.",
+      "exampleTranslation": "มาคุยกันทีหลังวันนี้เพื่อพูดคุยรายละเอียดการ implement"
+    },
+    {
+      "vocab": "Can we schedule a follow-up?",
+      "pronunciation": "แคน วี สเกด-ดูล อะ ฟอล-โล-อัพ?",
+      "meaning": "เรานัดประชุมติดตามผลได้ไหม?",
+      "example": "Can we schedule a follow-up meeting for next week?",
+      "exampleTranslation": "เรานัดประชุมติดตามผลสัปดาห์หน้าได้ไหม?"
+    },
+    {
+      "vocab": "Any other questions or concerns?",
+      "pronunciation": "เอ-นี่ อา-เธอร์ เควส-ชันส์ ออร์ คอน-เซิร์นส์?",
+      "meaning": "มีคำถามหรือข้อกังวลอื่นไหม?",
+      "example": "Any other questions or concerns before we end the meeting?",
+      "exampleTranslation": "มีคำถามหรือข้อกังวลอื่นไหมก่อนจบการประชุม?"
+    },
+    {
+      "vocab": "Thanks for your time",
+      "pronunciation": "แธงส์ ฟอร์ ยัวร์ ไทม์",
+      "meaning": "ขอบคุณสำหรับเวลา",
+      "example": "Thanks for your time, everyone. Talk to you later.",
+      "exampleTranslation": "ขอบคุณสำหรับเวลาทุกคน แล้วเจอกัน"
+    },
+    {
+      "vocab": "I think we're aligned",
+      "pronunciation": "ไอ ธิงค์ วี อาร์ อะ-ไลน์ด",
+      "meaning": "ผมคิดว่าเราเห็นตรงกันแล้ว",
+      "example": "I think we're aligned on the approach. Let's move forward.",
+      "exampleTranslation": "ผมคิดว่าเราเห็นตรงกันแล้วเรื่องแนวทาง มาเดินหน้ากันเถอะ"
+    },
+    {
+      "vocab": "We need to align on...",
+      "pronunciation": "วี นีด ทู อะ-ไลน์ ออน...",
+      "meaning": "เราต้องตกลงกันเรื่อง...",
+      "example": "We need to align on the priorities before starting.",
+      "exampleTranslation": "เราต้องตกลงกันเรื่องลำดับความสำคัญก่อนเริ่ม"
+    },
+    {
+      "vocab": "What's the scope of this?",
+      "pronunciation": "ว็อทส์ เดอะ สโคป ออฟ ดิส?",
+      "meaning": "ขอบเขตของเรื่องนี้คืออะไร?",
+      "example": "What's the scope of this feature request?",
+      "exampleTranslation": "ขอบเขตของ feature request นี้คืออะไร?"
+    },
+    {
+      "vocab": "That's out of scope",
+      "pronunciation": "แดทส์ เอาท์ ออฟ สโคป",
+      "meaning": "นั่นอยู่นอกขอบเขต",
+      "example": "That's out of scope for this sprint. We can add it to the backlog.",
+      "exampleTranslation": "นั่นอยู่นอกขอบเขตของ sprint นี้ เราสามารถเพิ่มไว้ใน backlog"
+    },
+    {
+      "vocab": "Let's prioritize this",
+      "pronunciation": "เล็ทส์ ไพร-ออ-ริ-ไทส์ ดิส",
+      "meaning": "มาจัดลำดับความสำคัญเรื่องนี้กัน",
+      "example": "This bug is critical. Let's prioritize this over the new feature.",
+      "exampleTranslation": "บั๊กนี้สำคัญมาก มาจัดลำดับความสำคัญเรื่องนี้เหนือฟีเจอร์ใหม่"
+    },
+    {
+      "vocab": "What's the priority here?",
+      "pronunciation": "ว็อทส์ เดอะ ไพร-ออ-ริ-ที เฮียร์?",
+      "meaning": "ความสำคัญของเรื่องนี้คืออะไร?",
+      "example": "What's the priority here - speed to market or code quality?",
+      "exampleTranslation": "ความสำคัญของเรื่องนี้คืออะไร - ความเร็วสู่ตลาดหรือคุณภาพโค้ด?"
+    },
+    {
+      "vocab": "Can we push this to the next sprint?",
+      "pronunciation": "แคน วี พุช ดิส ทู เดอะ เน็กซ์ สปรินท์?",
+      "meaning": "เราเลื่อนเรื่องนี้ไป sprint หน้าได้ไหม?",
+      "example": "This is taking longer than expected. Can we push this to the next sprint?",
+      "exampleTranslation": "เรื่องนี้ใช้เวลานานกว่าที่คาด เราเลื่อนไป sprint หน้าได้ไหม?"
+    },
+    {
+      "vocab": "We're running behind schedule",
+      "pronunciation": "วี อาร์ รัน-นิ่ง บิ-ไฮนด์ สเกด-ดูล",
+      "meaning": "เราล่าช้ากว่ากำหนด",
+      "example": "We're running behind schedule on the frontend work.",
+      "exampleTranslation": "เราล่าช้ากว่ากำหนดเรื่องงาน frontend"
+    },
+    {
+      "vocab": "We're on track",
+      "pronunciation": "วี อาร์ ออน แทร็ค",
+      "meaning": "เราเป็นไปตามแผน",
+      "example": "Despite some challenges, we're on track to deliver by Friday.",
+      "exampleTranslation": "แม้จะมีอุปสรรค แต่เราเป็นไปตามแผนที่จะส่งมอบภายในวันศุกร์"
+    },
+    {
+      "vocab": "What's the status of...?",
+      "pronunciation": "ว็อทส์ เดอะ สเต-ตัส ออฟ...?",
+      "meaning": "สถานะของ...เป็นยังไงบ้าง?",
+      "example": "What's the status of the payment integration?",
+      "exampleTranslation": "สถานะของการเชื่อมต่อ payment เป็นยังไงบ้าง?"
+    },
+    {
+      "vocab": "It's in progress",
+      "pronunciation": "อิทส์ อิน โปร-เกรส",
+      "meaning": "กำลังทำอยู่",
+      "example": "The API refactoring is in progress. Should be done by tomorrow.",
+      "exampleTranslation": "การ refactor API กำลังทำอยู่ น่าจะเสร็จพรุ่งนี้"
+    },
+    {
+      "vocab": "It's done / completed",
+      "pronunciation": "อิทส์ ดัน / คอม-พลี-เท็ด",
+      "meaning": "เสร็จแล้ว",
+      "example": "The bug fix is done and deployed to staging.",
+      "exampleTranslation": "การแก้บั๊กเสร็จแล้วและ deploy ไป staging แล้ว"
+    },
+    {
+      "vocab": "It's pending review",
+      "pronunciation": "อิทส์ เพน-ดิ้ง รี-วิว",
+      "meaning": "รอ review อยู่",
+      "example": "The feature is complete. It's pending review.",
+      "exampleTranslation": "ฟีเจอร์เสร็จแล้ว รอ review อยู่"
+    },
+    {
+      "vocab": "I'll keep you posted",
+      "pronunciation": "ไอล์ คีพ ยู โพส-เท็ด",
+      "meaning": "ผมจะแจ้งความคืบหน้าให้",
+      "example": "Still investigating the issue. I'll keep you posted.",
+      "exampleTranslation": "กำลังตรวจสอบปัญหาอยู่ ผมจะแจ้งความคืบหน้าให้"
+    },
+    {
+      "vocab": "Let me know if you need anything",
+      "pronunciation": "เล็ท มี โนว์ อิฟ ยู นีด เอ-นี่-ธิง",
+      "meaning": "บอกได้เลยถ้าต้องการอะไร",
+      "example": "Let me know if you need anything to unblock your work.",
+      "exampleTranslation": "บอกได้เลยถ้าต้องการอะไรเพื่อปลดบล็อกงานของคุณ"
+    },
+    {
+      "vocab": "Happy to help",
+      "pronunciation": "แฮป-ปี้ ทู เฮลป์",
+      "meaning": "ยินดีช่วย",
+      "example": "If you have any questions, I'm happy to help.",
+      "exampleTranslation": "ถ้ามีคำถามอะไร ผมยินดีช่วย"
+    },
+    {
+      "vocab": "Can you give me more context?",
+      "pronunciation": "แคน ยู กิฟ มี มอร์ คอน-เท็กซ์?",
+      "meaning": "ช่วยให้ข้อมูลเพิ่มเติมได้ไหม?",
+      "example": "Can you give me more context on why this change is needed?",
+      "exampleTranslation": "ช่วยให้ข้อมูลเพิ่มเติมได้ไหมว่าทำไมต้องเปลี่ยนแปลงนี้?"
+    },
+    {
+      "vocab": "For context...",
+      "pronunciation": "ฟอร์ คอน-เท็กซ์...",
+      "meaning": "เพื่อเป็นข้อมูลพื้นฐาน...",
+      "example": "For context, this is a critical path for the checkout flow.",
+      "exampleTranslation": "เพื่อเป็นข้อมูลพื้นฐาน นี่เป็น critical path สำหรับ checkout flow"
+    },
+    {
+      "vocab": "What's the rationale behind...?",
+      "pronunciation": "ว็อทส์ เดอะ แร-ชัน-แนล บิ-ไฮนด์...?",
+      "meaning": "เหตุผลเบื้องหลัง...คืออะไร?",
+      "example": "What's the rationale behind using a NoSQL database?",
+      "exampleTranslation": "เหตุผลเบื้องหลังการใช้ NoSQL database คืออะไร?"
+    },
+    {
+      "vocab": "The trade-off is...",
+      "pronunciation": "เดอะ เทรด-ออฟ อิส...",
+      "meaning": "ข้อแลกเปลี่ยนคือ...",
+      "example": "The trade-off is we get faster queries but lose some flexibility.",
+      "exampleTranslation": "ข้อแลกเปลี่ยนคือเราได้ query เร็วขึ้นแต่สูญเสียความยืดหยุ่นบางส่วน"
+    },
+    {
+      "vocab": "What's the impact of...?",
+      "pronunciation": "ว็อทส์ ดิ อิม-แพคท์ ออฟ...?",
+      "meaning": "ผลกระทบของ...คืออะไร?",
+      "example": "What's the impact of delaying this feature?",
+      "exampleTranslation": "ผลกระทบของการเลื่อนฟีเจอร์นี้คืออะไร?"
+    },
+    {
+      "vocab": "We need to escalate this",
+      "pronunciation": "วี นีด ทู เอส-คา-เลท ดิส",
+      "meaning": "เราต้องยกระดับเรื่องนี้ (แจ้งผู้บริหาร)",
+      "example": "This is affecting production. We need to escalate this.",
+      "exampleTranslation": "เรื่องนี้กระทบ production เราต้องยกระดับเรื่องนี้"
+    },
+    {
+      "vocab": "Let's loop in...",
+      "pronunciation": "เล็ทส์ ลูป อิน...",
+      "meaning": "มาเชิญ...เข้ามาด้วย",
+      "example": "Let's loop in the security team for this discussion.",
+      "exampleTranslation": "มาเชิญทีม security เข้ามาร่วมพูดคุยด้วย"
+    },
+    {
+      "vocab": "FYI (For Your Information)",
+      "pronunciation": "เอฟ-วาย-ไอ",
+      "meaning": "เพื่อทราบ, แจ้งให้ทราบ",
+      "example": "FYI, we're deploying to production tonight.",
+      "exampleTranslation": "แจ้งให้ทราบ เราจะ deploy ไป production คืนนี้"
+    },
+    {
+      "vocab": "ASAP (As Soon As Possible)",
+      "pronunciation": "เอ-แซป",
+      "meaning": "โดยเร็วที่สุด",
+      "example": "We need this hotfix deployed ASAP.",
+      "exampleTranslation": "เราต้อง deploy hotfix นี้โดยเร็วที่สุด"
+    },
+    {
+      "vocab": "EOD (End of Day)",
+      "pronunciation": "อี-โอ-ดี",
+      "meaning": "ภายในสิ้นวัน",
+      "example": "Can you have this ready by EOD?",
+      "exampleTranslation": "คุณทำให้พร้อมภายในสิ้นวันได้ไหม?"
+    },
+    {
+      "vocab": "ETA (Estimated Time of Arrival)",
+      "pronunciation": "อี-ที-เอ",
+      "meaning": "เวลาโดยประมาณที่จะเสร็จ/มาถึง",
+      "example": "What's the ETA for the fix?",
+      "exampleTranslation": "การแก้ไขจะเสร็จเมื่อไหร่?"
+    },
+    {
+      "vocab": "TL;DR (Too Long; Didn't Read)",
+      "pronunciation": "ที-แอล-ดี-อาร์",
+      "meaning": "สรุปสั้นๆ, ยาวไปไม่อ่าน",
+      "example": "TL;DR: We need to migrate to the new API by next month.",
+      "exampleTranslation": "สรุปสั้นๆ: เราต้องย้ายไปใช้ API ใหม่ภายในเดือนหน้า"
+    },
+    {
+      "vocab": "IMO / IMHO (In My Opinion / In My Humble Opinion)",
+      "pronunciation": "ไอ-เอ็ม-โอ / ไอ-เอ็ม-เอช-โอ",
+      "meaning": "ในความเห็นของผม",
+      "example": "IMO, we should rewrite this module instead of patching it.",
+      "exampleTranslation": "ในความเห็นของผม เราควรเขียน module นี้ใหม่แทนที่จะ patch"
+    },
+    {
+      "vocab": "FWIW (For What It's Worth)",
+      "pronunciation": "เอฟ-ดับบลิว-ไอ-ดับบลิว",
+      "meaning": "สำหรับข้อมูลที่อาจเป็นประโยชน์",
+      "example": "FWIW, the legacy system had the same issue.",
+      "exampleTranslation": "สำหรับข้อมูลที่อาจเป็นประโยชน์ ระบบเก่าก็มีปัญหาเดียวกัน"
+    },
+    {
+      "vocab": "What went well?",
+      "pronunciation": "ว็อท เวนท์ เวลล์?",
+      "meaning": "อะไรที่ทำได้ดี? (ใน retrospective)",
+      "example": "Let's start with what went well this sprint.",
+      "exampleTranslation": "มาเริ่มกันด้วยอะไรที่ทำได้ดี sprint นี้"
+    },
+    {
+      "vocab": "What could be improved?",
+      "pronunciation": "ว็อท คูด บี อิม-พรูฟด์?",
+      "meaning": "อะไรที่ปรับปรุงได้? (ใน retrospective)",
+      "example": "What could be improved in our code review process?",
+      "exampleTranslation": "อะไรที่ปรับปรุงได้ในกระบวนการ code review ของเรา?"
+    },
+    {
+      "vocab": "Lessons learned",
+      "pronunciation": "เลส-สันส์ เลิร์นด์",
+      "meaning": "บทเรียนที่ได้รับ",
+      "example": "One of the lessons learned is to test more thoroughly before release.",
+      "exampleTranslation": "หนึ่งในบทเรียนที่ได้รับคือการทดสอบอย่างละเอียดก่อน release"
+    },
+    {
+      "vocab": "Going forward...",
+      "pronunciation": "โก-อิ้ง ฟอร์-เวิร์ด...",
+      "meaning": "ต่อไปนี้... / จากนี้ไป...",
+      "example": "Going forward, let's have daily check-ins on this project.",
+      "exampleTranslation": "ต่อไปนี้ มา check-in กันทุกวันเกี่ยวกับโปรเจคนี้"
+    }
+  ]
+}

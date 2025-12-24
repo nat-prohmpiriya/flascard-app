@@ -1,0 +1,363 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Grammar Patterns",
+    "description": "B2 level grammar structures and patterns for advanced communication",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "grammar"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "If I had known..., I would have...",
+      "pronunciation": "อิฟ-ไอ-แฮด-โนน-ไอ-วูด-แฮฟ",
+      "meaning": "Third conditional - สมมติในอดีตที่เปลี่ยนแปลงไม่ได้",
+      "example": "If I had known about the meeting, I would have attended.",
+      "exampleTranslation": "ถ้าฉันรู้เรื่องประชุม ฉันคงไปร่วมแล้ว"
+    },
+    {
+      "vocab": "I wish I had...",
+      "pronunciation": "ไอ-วิช-ไอ-แฮด",
+      "meaning": "แสดงความเสียใจกับอดีต",
+      "example": "I wish I had studied harder for the exam.",
+      "exampleTranslation": "ฉันอยากให้ตัวเองอ่านหนังสือหนักกว่านี้สำหรับสอบ"
+    },
+    {
+      "vocab": "If only I could...",
+      "pronunciation": "อิฟ-โอน-ลี่-ไอ-คูด",
+      "meaning": "แสดงความปรารถนาอย่างแรงกล้า",
+      "example": "If only I could turn back time.",
+      "exampleTranslation": "ถ้าเพียงแค่ฉันสามารถย้อนเวลากลับได้"
+    },
+    {
+      "vocab": "It's about time + past tense",
+      "pronunciation": "อิทส์-อะ-เบาท์-ไทม์",
+      "meaning": "ถึงเวลาแล้วที่... (ควรทำมานานแล้ว)",
+      "example": "It's about time you got a job.",
+      "exampleTranslation": "ถึงเวลาแล้วที่คุณควรจะหางานทำ"
+    },
+    {
+      "vocab": "I'd rather you + past tense",
+      "pronunciation": "ไอด์-รา-เธอะ-ยู",
+      "meaning": "ฉันอยากให้คุณ... (preference for others)",
+      "example": "I'd rather you didn't tell anyone.",
+      "exampleTranslation": "ฉันอยากให้คุณไม่บอกใคร"
+    },
+    {
+      "vocab": "Suppose/Supposing...",
+      "pronunciation": "ซัพ-โพส/ซัพ-โพ-ซิง",
+      "meaning": "สมมติว่า...",
+      "example": "Suppose you won the lottery, what would you do?",
+      "exampleTranslation": "สมมติว่าคุณถูกหวย คุณจะทำอะไร?"
+    },
+    {
+      "vocab": "Were I to...",
+      "pronunciation": "เวียร์-ไอ-ทู",
+      "meaning": "ถ้าฉันจะ... (formal conditional)",
+      "example": "Were I to accept the offer, I would have to relocate.",
+      "exampleTranslation": "ถ้าฉันจะรับข้อเสนอ ฉันจะต้องย้ายที่อยู่"
+    },
+    {
+      "vocab": "Had I known...",
+      "pronunciation": "แฮด-ไอ-โนน",
+      "meaning": "ถ้าฉันรู้... (formal inversion)",
+      "example": "Had I known earlier, I would have helped.",
+      "exampleTranslation": "ถ้าฉันรู้เร็วกว่านี้ ฉันคงช่วยแล้ว"
+    },
+    {
+      "vocab": "should + subject + verb",
+      "pronunciation": "ชูด-ซับ-เจ็คท์-เวิร์บ",
+      "meaning": "ในกรณีที่... (formal condition)",
+      "example": "Should you need help, please contact us.",
+      "exampleTranslation": "ในกรณีที่คุณต้องการความช่วยเหลือ กรุณาติดต่อเรา"
+    },
+    {
+      "vocab": "The more..., the more...",
+      "pronunciation": "เดอะ-มอร์-เดอะ-มอร์",
+      "meaning": "ยิ่ง...ยิ่ง...",
+      "example": "The more you practice, the better you become.",
+      "exampleTranslation": "ยิ่งคุณฝึกมากเท่าไหร่ คุณก็ยิ่งเก่งมากเท่านั้น"
+    },
+    {
+      "vocab": "Not only... but also...",
+      "pronunciation": "น็อท-โอน-ลี่-บัท-ออล-โซ",
+      "meaning": "ไม่เพียงแต่...แต่ยัง...",
+      "example": "Not only did she pass, but she also got the highest score.",
+      "exampleTranslation": "เธอไม่เพียงแต่สอบผ่าน แต่ยังได้คะแนนสูงสุด"
+    },
+    {
+      "vocab": "No sooner... than...",
+      "pronunciation": "โน-ซู-เนอะ-แดน",
+      "meaning": "พอ...ก็... (ทันทีที่)",
+      "example": "No sooner had I arrived than it started to rain.",
+      "exampleTranslation": "พอฉันมาถึงก็เริ่มฝนตก"
+    },
+    {
+      "vocab": "Hardly... when...",
+      "pronunciation": "ฮาร์ด-ลี่-เวน",
+      "meaning": "แทบจะยังไม่ทัน...ก็...",
+      "example": "Hardly had I sat down when the phone rang.",
+      "exampleTranslation": "แทบจะยังไม่ทันนั่งลง โทรศัพท์ก็ดัง"
+    },
+    {
+      "vocab": "Scarcely... when...",
+      "pronunciation": "สแกซ-ลี่-เวน",
+      "meaning": "แทบจะยังไม่...ก็...",
+      "example": "Scarcely had we left when it started snowing.",
+      "exampleTranslation": "แทบจะยังไม่ทันออกไปก็เริ่มหิมะตก"
+    },
+    {
+      "vocab": "Only when... do/did...",
+      "pronunciation": "โอน-ลี่-เวน-ดู/ดิด",
+      "meaning": "เมื่อ...เท่านั้น...ถึงจะ...",
+      "example": "Only when you lose something do you appreciate it.",
+      "exampleTranslation": "เมื่อคุณสูญเสียบางอย่างเท่านั้น คุณถึงจะซาบซึ้งมัน"
+    },
+    {
+      "vocab": "Little did I know...",
+      "pronunciation": "ลิท-เทิล-ดิด-ไอ-โน",
+      "meaning": "ฉันไม่รู้เลยว่า...",
+      "example": "Little did I know that my life would change completely.",
+      "exampleTranslation": "ฉันไม่รู้เลยว่าชีวิตจะเปลี่ยนไปโดยสิ้นเชิง"
+    },
+    {
+      "vocab": "Rarely/Seldom do...",
+      "pronunciation": "แรร์-ลี่/เซล-ดัม-ดู",
+      "meaning": "ไม่ค่อย...",
+      "example": "Rarely do we see such talent.",
+      "exampleTranslation": "ไม่ค่อยเห็นพรสวรรค์เช่นนี้"
+    },
+    {
+      "vocab": "Under no circumstances should...",
+      "pronunciation": "อัน-เดอะ-โน-เซอร์-คัม-สแตน-เซส-ชูด",
+      "meaning": "ไม่ว่าในกรณีใดก็ตามไม่ควร...",
+      "example": "Under no circumstances should you give out your password.",
+      "exampleTranslation": "ไม่ว่าในกรณีใดก็ตามคุณไม่ควรบอกรหัสผ่าน"
+    },
+    {
+      "vocab": "In no way is/was...",
+      "pronunciation": "อิน-โน-เวย์-อิส/วอส",
+      "meaning": "ไม่มีทางที่...เลย",
+      "example": "In no way was I responsible for the failure.",
+      "exampleTranslation": "ไม่มีทางที่ฉันจะรับผิดชอบต่อความล้มเหลวเลย"
+    },
+    {
+      "vocab": "be supposed to",
+      "pronunciation": "บี-ซัพ-โพสด์-ทู",
+      "meaning": "ควรจะ, คาดว่าจะ",
+      "example": "You're supposed to arrive by 9 AM.",
+      "exampleTranslation": "คุณควรจะมาถึงภายใน 9 โมงเช้า"
+    },
+    {
+      "vocab": "be bound to",
+      "pronunciation": "บี-บาวนด์-ทู",
+      "meaning": "จะต้อง...แน่ๆ",
+      "example": "She's bound to succeed with her talent.",
+      "exampleTranslation": "เธอจะต้องประสบความสำเร็จแน่ๆ ด้วยพรสวรรค์ของเธอ"
+    },
+    {
+      "vocab": "be liable to",
+      "pronunciation": "บี-ไล-อะ-เบิล-ทู",
+      "meaning": "มีแนวโน้มที่จะ (เชิงลบ)",
+      "example": "The road is liable to flood during heavy rain.",
+      "exampleTranslation": "ถนนมีแนวโน้มที่จะน้ำท่วมในช่วงฝนตกหนัก"
+    },
+    {
+      "vocab": "be apt to",
+      "pronunciation": "บี-แอพท์-ทู",
+      "meaning": "มักจะ, มีแนวโน้มที่จะ",
+      "example": "Children are apt to forget things quickly.",
+      "exampleTranslation": "เด็กๆ มักจะลืมสิ่งต่างๆ อย่างรวดเร็ว"
+    },
+    {
+      "vocab": "There's no point in + -ing",
+      "pronunciation": "แดร์ส-โน-พอยท์-อิน",
+      "meaning": "ไม่มีประโยชน์ที่จะ...",
+      "example": "There's no point in arguing about it.",
+      "exampleTranslation": "ไม่มีประโยชน์ที่จะโต้เถียงเรื่องนี้"
+    },
+    {
+      "vocab": "It's no use + -ing",
+      "pronunciation": "อิทส์-โน-ยูส",
+      "meaning": "ไม่มีประโยชน์ที่จะ...",
+      "example": "It's no use crying over spilt milk.",
+      "exampleTranslation": "ไม่มีประโยชน์ที่จะร้องไห้กับน้ำนมที่หกไปแล้ว"
+    },
+    {
+      "vocab": "It's worth + -ing",
+      "pronunciation": "อิทส์-เวิร์ธ",
+      "meaning": "มันคุ้มค่าที่จะ...",
+      "example": "It's worth visiting the museum.",
+      "exampleTranslation": "มันคุ้มค่าที่จะไปเยี่ยมชมพิพิธภัณฑ์"
+    },
+    {
+      "vocab": "It goes without saying that...",
+      "pronunciation": "อิท-โกส-วิธ-เอาท์-เซ-อิง-แดท",
+      "meaning": "ไม่ต้องบอกก็รู้ว่า...",
+      "example": "It goes without saying that health is important.",
+      "exampleTranslation": "ไม่ต้องบอกก็รู้ว่าสุขภาพสำคัญ"
+    },
+    {
+      "vocab": "There's no denying that...",
+      "pronunciation": "แดร์ส-โน-ดิ-ไน-อิง-แดท",
+      "meaning": "ปฏิเสธไม่ได้ว่า...",
+      "example": "There's no denying that technology has changed our lives.",
+      "exampleTranslation": "ปฏิเสธไม่ได้ว่าเทคโนโลยีเปลี่ยนแปลงชีวิตของเรา"
+    },
+    {
+      "vocab": "What with... and...",
+      "pronunciation": "วอท-วิธ-แอนด์",
+      "meaning": "ด้วย...และ... (เหตุผล)",
+      "example": "What with the rain and the traffic, we were late.",
+      "exampleTranslation": "ด้วยฝนและการจราจร เรามาสาย"
+    },
+    {
+      "vocab": "be said to + infinitive",
+      "pronunciation": "บี-เซด-ทู",
+      "meaning": "ว่ากันว่า...",
+      "example": "He is said to be the richest man in town.",
+      "exampleTranslation": "ว่ากันว่าเขาเป็นคนรวยที่สุดในเมือง"
+    },
+    {
+      "vocab": "be reported to + infinitive",
+      "pronunciation": "บี-รี-พอร์-เท็ด-ทู",
+      "meaning": "มีรายงานว่า...",
+      "example": "The company is reported to be in financial trouble.",
+      "exampleTranslation": "มีรายงานว่าบริษัทกำลังมีปัญหาทางการเงิน"
+    },
+    {
+      "vocab": "be believed to + infinitive",
+      "pronunciation": "บี-บิ-ลีฟด์-ทู",
+      "meaning": "เชื่อกันว่า...",
+      "example": "The ruins are believed to be over 2,000 years old.",
+      "exampleTranslation": "เชื่อกันว่าซากปรักหักพังมีอายุมากกว่า 2,000 ปี"
+    },
+    {
+      "vocab": "However + adjective/adverb",
+      "pronunciation": "ฮาว-เอ-เวอะ",
+      "meaning": "ไม่ว่าจะ...แค่ไหน",
+      "example": "However hard you try, you can't please everyone.",
+      "exampleTranslation": "ไม่ว่าคุณจะพยายามแค่ไหน คุณก็ทำให้ทุกคนพอใจไม่ได้"
+    },
+    {
+      "vocab": "Whatever/Whoever/Whenever",
+      "pronunciation": "วอท-เอ-เวอะ/ฮู-เอ-เวอะ/เวน-เอ-เวอะ",
+      "meaning": "ไม่ว่าอะไร/ใคร/เมื่อไหร่",
+      "example": "Whatever happens, I'll support you.",
+      "exampleTranslation": "ไม่ว่าจะเกิดอะไรขึ้น ฉันจะสนับสนุนคุณ"
+    },
+    {
+      "vocab": "as if/as though + past tense",
+      "pronunciation": "แอส-อิฟ/แอส-โธ",
+      "meaning": "ราวกับว่า (ไม่จริง)",
+      "example": "She acts as if she owned the place.",
+      "exampleTranslation": "เธอทำราวกับว่าเธอเป็นเจ้าของสถานที่"
+    },
+    {
+      "vocab": "can't help + -ing",
+      "pronunciation": "คานท์-เฮลพ์",
+      "meaning": "อดไม่ได้ที่จะ...",
+      "example": "I can't help feeling nervous.",
+      "exampleTranslation": "ฉันอดรู้สึกกระวนกระวายไม่ได้"
+    },
+    {
+      "vocab": "what I find... is...",
+      "pronunciation": "วอท-ไอ-ไฟนด์-อิส",
+      "meaning": "สิ่งที่ฉันพบว่า...คือ...",
+      "example": "What I find surprising is her calmness.",
+      "exampleTranslation": "สิ่งที่ฉันพบว่าน่าประหลาดใจคือความสงบของเธอ"
+    },
+    {
+      "vocab": "the fact that...",
+      "pronunciation": "เดอะ-แฟคท์-แดท",
+      "meaning": "ความจริงที่ว่า...",
+      "example": "The fact that he lied upset everyone.",
+      "exampleTranslation": "ความจริงที่ว่าเขาโกหกทำให้ทุกคนไม่พอใจ"
+    },
+    {
+      "vocab": "It's (high/about) time + past",
+      "pronunciation": "อิทส์-ไฮ/อะ-เบาท์-ไทม์",
+      "meaning": "ถึงเวลาแล้วที่ (ควรทำนานแล้ว)",
+      "example": "It's high time we addressed this issue.",
+      "exampleTranslation": "ถึงเวลาแล้วที่เราควรจัดการปัญหานี้"
+    },
+    {
+      "vocab": "would rather + bare infinitive",
+      "pronunciation": "วูด-รา-เธอะ",
+      "meaning": "อยากจะ...มากกว่า",
+      "example": "I would rather stay home than go out.",
+      "exampleTranslation": "ฉันอยากอยู่บ้านมากกว่าออกไปข้างนอก"
+    },
+    {
+      "vocab": "might/may as well",
+      "pronunciation": "ไมท์/เมย์-แอส-เวล",
+      "meaning": "ทำ...ก็ได้ (เนื่องจากไม่มีทางเลือกอื่น)",
+      "example": "We might as well wait here since it's raining.",
+      "exampleTranslation": "เรารอที่นี่ก็ได้เนื่องจากฝนตก"
+    },
+    {
+      "vocab": "could/might have + past participle",
+      "pronunciation": "คูด/ไมท์-แฮฟ",
+      "meaning": "น่าจะ...แล้ว (ความเป็นไปได้ในอดีต)",
+      "example": "She could have been delayed by traffic.",
+      "exampleTranslation": "เธอน่าจะถูกหน่วงจากการจราจร"
+    },
+    {
+      "vocab": "should/must have + past participle",
+      "pronunciation": "ชูด/มัสท์-แฮฟ",
+      "meaning": "ต้อง/น่าจะ...แล้ว (ความเชื่อ/สมมติฐาน)",
+      "example": "They must have left already.",
+      "exampleTranslation": "พวกเขาต้องออกไปแล้ว"
+    },
+    {
+      "vocab": "needn't have + past participle",
+      "pronunciation": "นีดึนท์-แฮฟ",
+      "meaning": "ไม่จำเป็นต้อง...เลย (แต่ทำไปแล้ว)",
+      "example": "You needn't have brought a gift.",
+      "exampleTranslation": "คุณไม่จำเป็นต้องนำของขวัญมาเลย"
+    },
+    {
+      "vocab": "be accustomed to + -ing",
+      "pronunciation": "บี-อะ-คัส-ทัมด์-ทู",
+      "meaning": "คุ้นเคยกับการ...",
+      "example": "She's accustomed to working under pressure.",
+      "exampleTranslation": "เธอคุ้นเคยกับการทำงานภายใต้ความกดดัน"
+    },
+    {
+      "vocab": "be prone to + noun/-ing",
+      "pronunciation": "บี-โพรน-ทู",
+      "meaning": "มีแนวโน้มที่จะ...",
+      "example": "He's prone to making mistakes when tired.",
+      "exampleTranslation": "เขามีแนวโน้มที่จะทำผิดพลาดเมื่อเหนื่อย"
+    },
+    {
+      "vocab": "Despite/In spite of + noun/-ing",
+      "pronunciation": "ดิส-ไพท์/อิน-สไปท์-ออฟ",
+      "meaning": "แม้ว่า..., ทั้งๆ ที่...",
+      "example": "Despite being tired, she continued working.",
+      "exampleTranslation": "แม้จะเหนื่อย เธอก็ยังทำงานต่อ"
+    },
+    {
+      "vocab": "Given that...",
+      "pronunciation": "กิฟ-เวน-แดท",
+      "meaning": "เมื่อพิจารณาว่า...",
+      "example": "Given that you're new, you're doing well.",
+      "exampleTranslation": "เมื่อพิจารณาว่าคุณเป็นมือใหม่ คุณทำได้ดี"
+    },
+    {
+      "vocab": "so + adjective + that",
+      "pronunciation": "โซ-แอดจ์-แดท",
+      "meaning": "...มากจน...",
+      "example": "The book was so boring that I fell asleep.",
+      "exampleTranslation": "หนังสือน่าเบื่อมากจนฉันหลับไป"
+    },
+    {
+      "vocab": "such + noun + that",
+      "pronunciation": "ซัช-นาว-แดท",
+      "meaning": "...มากจน...",
+      "example": "It was such a difficult test that many failed.",
+      "exampleTranslation": "มันเป็นการสอบที่ยากมากจนหลายคนสอบตก"
+    }
+  ]
+}

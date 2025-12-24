@@ -1,0 +1,601 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Technical Analysis",
+    "description": "Chart patterns, indicators, and price action for algo trading",
+    "category": "Finance",
+    "tags": ["english", "forex", "trading", "technical-analysis", "algo-trading"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "support",
+      "pronunciation": "ซัพ-พอร์ท",
+      "meaning": "แนวรับ, ระดับราคาที่มีแรงซื้อมากพอจะหยุดการลง",
+      "example": "Price bounced off the support level at 1.0800.",
+      "exampleTranslation": "ราคาเด้งจากแนวรับที่ 1.0800"
+    },
+    {
+      "vocab": "resistance",
+      "pronunciation": "รี-ซิส-แทนซ์",
+      "meaning": "แนวต้าน, ระดับราคาที่มีแรงขายมากพอจะหยุดการขึ้น",
+      "example": "The price failed to break through resistance at 1.1000.",
+      "exampleTranslation": "ราคาไม่สามารถทะลุแนวต้านที่ 1.1000 ได้"
+    },
+    {
+      "vocab": "support and resistance (S/R)",
+      "pronunciation": "ซัพ-พอร์ท แอนด์ รี-ซิส-แทนซ์",
+      "meaning": "แนวรับแนวต้าน, จุดสำคัญที่ราคามักจะหยุดหรือกลับตัว",
+      "example": "Identify key S/R levels before entering a trade.",
+      "exampleTranslation": "ระบุจุด S/R สำคัญก่อนเข้าเทรด"
+    },
+    {
+      "vocab": "trendline",
+      "pronunciation": "เทรนด์-ไลน์",
+      "meaning": "เส้นแนวโน้ม, เส้นที่ลากเชื่อมจุดสูงหรือต่ำของราคา",
+      "example": "Draw a trendline connecting the higher lows in an uptrend.",
+      "exampleTranslation": "ลากเส้นแนวโน้มเชื่อม higher lows ในขาขึ้น"
+    },
+    {
+      "vocab": "channel",
+      "pronunciation": "แชน-เนล",
+      "meaning": "ช่องราคา, เส้นคู่ขนานที่ราคาเคลื่อนที่อยู่ภายใน",
+      "example": "Price is trading within an ascending channel.",
+      "exampleTranslation": "ราคากำลังเทรดภายในช่องราคาขาขึ้น"
+    },
+    {
+      "vocab": "higher high",
+      "pronunciation": "ไฮ-เออร์ ไฮ",
+      "meaning": "จุดสูงสุดใหม่ที่สูงกว่าจุดสูงสุดก่อนหน้า",
+      "example": "Higher highs confirm the uptrend is intact.",
+      "exampleTranslation": "higher highs ยืนยันว่าขาขึ้นยังคงอยู่"
+    },
+    {
+      "vocab": "higher low",
+      "pronunciation": "ไฮ-เออร์ โลว์",
+      "meaning": "จุดต่ำสุดใหม่ที่สูงกว่าจุดต่ำสุดก่อนหน้า",
+      "example": "Higher lows indicate buyers are stepping in earlier.",
+      "exampleTranslation": "higher lows บ่งบอกว่าผู้ซื้อเข้ามาเร็วขึ้น"
+    },
+    {
+      "vocab": "lower high",
+      "pronunciation": "โลว์-เออร์ ไฮ",
+      "meaning": "จุดสูงสุดใหม่ที่ต่ำกว่าจุดสูงสุดก่อนหน้า",
+      "example": "Lower highs signal weakening bullish momentum.",
+      "exampleTranslation": "lower highs ส่งสัญญาณว่าแรงขาขึ้นอ่อนแอลง"
+    },
+    {
+      "vocab": "lower low",
+      "pronunciation": "โลว์-เออร์ โลว์",
+      "meaning": "จุดต่ำสุดใหม่ที่ต่ำกว่าจุดต่ำสุดก่อนหน้า",
+      "example": "Lower lows confirm the downtrend continuation.",
+      "exampleTranslation": "lower lows ยืนยันการต่อเนื่องของขาลง"
+    },
+    {
+      "vocab": "swing high",
+      "pronunciation": "สวิง ไฮ",
+      "meaning": "จุดสูงสุดชั่วคราว, จุดกลับตัวจากขึ้นเป็นลง",
+      "example": "Place your stop loss above the recent swing high.",
+      "exampleTranslation": "วาง stop loss เหนือ swing high ล่าสุด"
+    },
+    {
+      "vocab": "swing low",
+      "pronunciation": "สวิง โลว์",
+      "meaning": "จุดต่ำสุดชั่วคราว, จุดกลับตัวจากลงเป็นขึ้น",
+      "example": "A break below the swing low triggers more selling.",
+      "exampleTranslation": "การทะลุใต้ swing low กระตุ้นการขายเพิ่มขึ้น"
+    },
+    {
+      "vocab": "price action",
+      "pronunciation": "ไพรซ์ แอค-ชัน",
+      "meaning": "การเคลื่อนไหวของราคา, การวิเคราะห์จากกราฟราคาโดยไม่ใช้ indicators",
+      "example": "Price action traders focus on candlestick patterns and S/R.",
+      "exampleTranslation": "เทรดเดอร์ price action โฟกัสที่รูปแบบแท่งเทียนและ S/R"
+    },
+    {
+      "vocab": "Moving Average (MA)",
+      "pronunciation": "มูฟ-วิ่ง เอ-เวอ-เรจ",
+      "meaning": "เส้นค่าเฉลี่ยเคลื่อนที่, ค่าเฉลี่ยราคาในช่วงเวลาที่กำหนด",
+      "example": "The 200 MA is often used to determine the long-term trend.",
+      "exampleTranslation": "เส้น MA 200 มักใช้กำหนดเทรนด์ระยะยาว"
+    },
+    {
+      "vocab": "Simple Moving Average (SMA)",
+      "pronunciation": "ซิม-เพิล มูฟ-วิ่ง เอ-เวอ-เรจ",
+      "meaning": "ค่าเฉลี่ยเคลื่อนที่แบบธรรมดา, ให้น้ำหนักเท่ากันทุกจุด",
+      "example": "The 50 SMA crossed above the 200 SMA - a golden cross.",
+      "exampleTranslation": "เส้น SMA 50 ตัดขึ้นเหนือ SMA 200 - golden cross"
+    },
+    {
+      "vocab": "Exponential Moving Average (EMA)",
+      "pronunciation": "เอ็กซ์-โพ-เนน-เชียล มูฟ-วิ่ง เอ-เวอ-เรจ",
+      "meaning": "ค่าเฉลี่ยเคลื่อนที่แบบถ่วงน้ำหนัก, ให้น้ำหนักราคาล่าสุดมากกว่า",
+      "example": "EMA reacts faster to price changes than SMA.",
+      "exampleTranslation": "EMA ตอบสนองต่อการเปลี่ยนแปลงราคาเร็วกว่า SMA"
+    },
+    {
+      "vocab": "golden cross",
+      "pronunciation": "โกล-เดน ครอส",
+      "meaning": "สัญญาณขาขึ้น, เส้น MA ระยะสั้นตัดขึ้นเหนือ MA ระยะยาว",
+      "example": "A golden cross on the daily chart signals a potential bull market.",
+      "exampleTranslation": "golden cross บนกราฟรายวันส่งสัญญาณตลาดขาขึ้นที่เป็นไปได้"
+    },
+    {
+      "vocab": "death cross",
+      "pronunciation": "เด็ธ ครอส",
+      "meaning": "สัญญาณขาลง, เส้น MA ระยะสั้นตัดลงใต้ MA ระยะยาว",
+      "example": "The death cross often precedes a significant downtrend.",
+      "exampleTranslation": "death cross มักเกิดก่อนขาลงที่รุนแรง"
+    },
+    {
+      "vocab": "crossover",
+      "pronunciation": "ครอส-โอ-เวอร์",
+      "meaning": "การตัดกัน, เมื่อเส้นหนึ่งตัดผ่านอีกเส้นหนึ่ง",
+      "example": "A bullish crossover occurs when the fast MA crosses above the slow MA.",
+      "exampleTranslation": "crossover ขาขึ้นเกิดเมื่อ MA เร็วตัดขึ้นเหนือ MA ช้า"
+    },
+    {
+      "vocab": "RSI (Relative Strength Index)",
+      "pronunciation": "อาร์-เอส-ไอ",
+      "meaning": "ดัชนีความแข็งแกร่งสัมพัทธ์, วัดความเร็วและการเปลี่ยนแปลงของราคา (0-100)",
+      "example": "RSI above 70 indicates overbought conditions.",
+      "exampleTranslation": "RSI เกิน 70 บ่งบอกว่าอยู่ในสภาวะ overbought"
+    },
+    {
+      "vocab": "overbought",
+      "pronunciation": "โอ-เวอร์-บอท",
+      "meaning": "ซื้อมากเกินไป, สภาวะที่ราคาอาจปรับตัวลง",
+      "example": "The market is overbought - consider taking profits.",
+      "exampleTranslation": "ตลาดอยู่ในสภาวะ overbought - พิจารณาทำกำไร"
+    },
+    {
+      "vocab": "oversold",
+      "pronunciation": "โอ-เวอร์-โซลด์",
+      "meaning": "ขายมากเกินไป, สภาวะที่ราคาอาจดีดตัวขึ้น",
+      "example": "RSI below 30 suggests oversold conditions - watch for reversal.",
+      "exampleTranslation": "RSI ต่ำกว่า 30 บ่งบอก oversold - จับตาดูการกลับตัว"
+    },
+    {
+      "vocab": "divergence",
+      "pronunciation": "ได-เวอร์-เจนซ์",
+      "meaning": "การแยกตัว, เมื่อราคาและ indicator เคลื่อนที่สวนทางกัน",
+      "example": "Bearish divergence occurs when price makes higher highs but RSI makes lower highs.",
+      "exampleTranslation": "bearish divergence เกิดเมื่อราคาทำ higher highs แต่ RSI ทำ lower highs"
+    },
+    {
+      "vocab": "bullish divergence",
+      "pronunciation": "บูล-ลิช ได-เวอร์-เจนซ์",
+      "meaning": "การแยกตัวขาขึ้น, ราคาทำ lower low แต่ indicator ทำ higher low",
+      "example": "Bullish divergence on RSI suggests a potential reversal up.",
+      "exampleTranslation": "bullish divergence บน RSI บ่งบอกการกลับตัวขึ้นที่เป็นไปได้"
+    },
+    {
+      "vocab": "bearish divergence",
+      "pronunciation": "แบร์-ริช ได-เวอร์-เจนซ์",
+      "meaning": "การแยกตัวขาลง, ราคาทำ higher high แต่ indicator ทำ lower high",
+      "example": "Bearish divergence warns of weakening upward momentum.",
+      "exampleTranslation": "bearish divergence เตือนว่าแรงขาขึ้นอ่อนแอลง"
+    },
+    {
+      "vocab": "MACD (Moving Average Convergence Divergence)",
+      "pronunciation": "แม็ค-ดี",
+      "meaning": "ตัวบ่งชี้ที่วัดความสัมพันธ์ระหว่าง EMA สองเส้น",
+      "example": "MACD crossing above zero signals bullish momentum.",
+      "exampleTranslation": "MACD ตัดขึ้นเหนือศูนย์ส่งสัญญาณแรงขาขึ้น"
+    },
+    {
+      "vocab": "MACD line",
+      "pronunciation": "แม็ค-ดี ไลน์",
+      "meaning": "เส้น MACD หลัก = EMA 12 - EMA 26",
+      "example": "When the MACD line crosses above the signal line, it's a buy signal.",
+      "exampleTranslation": "เมื่อเส้น MACD ตัดขึ้นเหนือ signal line เป็นสัญญาณซื้อ"
+    },
+    {
+      "vocab": "signal line",
+      "pronunciation": "ซิก-นัล ไลน์",
+      "meaning": "เส้นสัญญาณ = EMA 9 ของ MACD line",
+      "example": "The signal line smooths out the MACD for clearer signals.",
+      "exampleTranslation": "signal line ทำให้ MACD เรียบขึ้นเพื่อสัญญาณที่ชัดเจนกว่า"
+    },
+    {
+      "vocab": "MACD histogram",
+      "pronunciation": "แม็ค-ดี ฮิส-โต-แกรม",
+      "meaning": "แท่งแสดงความต่างระหว่าง MACD line และ signal line",
+      "example": "Shrinking histogram bars indicate momentum is fading.",
+      "exampleTranslation": "แท่ง histogram ที่หดตัวบ่งบอกว่าโมเมนตัมกำลังจางลง"
+    },
+    {
+      "vocab": "Bollinger Bands",
+      "pronunciation": "โบ-ลิน-เจอร์ แบนด์ส",
+      "meaning": "แถบโบลินเจอร์, เส้น MA พร้อมแถบ 2 SD ด้านบนและล่าง",
+      "example": "Price touching the upper Bollinger Band may indicate overbought.",
+      "exampleTranslation": "ราคาแตะแถบ Bollinger บนอาจบ่งบอก overbought"
+    },
+    {
+      "vocab": "standard deviation",
+      "pronunciation": "สแตน-ดาร์ด ดี-วิ-เอ-ชัน",
+      "meaning": "ค่าเบี่ยงเบนมาตรฐาน, วัดการกระจายของราคาจากค่าเฉลี่ย",
+      "example": "Bollinger Bands use 2 standard deviations from the moving average.",
+      "exampleTranslation": "Bollinger Bands ใช้ 2 ค่าเบี่ยงเบนมาตรฐานจากเส้นค่าเฉลี่ย"
+    },
+    {
+      "vocab": "squeeze",
+      "pronunciation": "สควีซ",
+      "meaning": "การบีบตัว, แถบ Bollinger แคบลงบ่งบอกการ breakout ที่จะเกิด",
+      "example": "A Bollinger Band squeeze often precedes a big move.",
+      "exampleTranslation": "การบีบตัวของ Bollinger Band มักเกิดก่อนการเคลื่อนที่ครั้งใหญ่"
+    },
+    {
+      "vocab": "Stochastic Oscillator",
+      "pronunciation": "สโต-แคส-ติก ออส-ซิล-เล-เตอร์",
+      "meaning": "ตัวบ่งชี้เปรียบเทียบราคาปิดกับช่วงราคาในระยะเวลาที่กำหนด",
+      "example": "Stochastic above 80 indicates overbought conditions.",
+      "exampleTranslation": "Stochastic เกิน 80 บ่งบอกสภาวะ overbought"
+    },
+    {
+      "vocab": "%K line",
+      "pronunciation": "เปอร์-เซ็นต์ เค ไลน์",
+      "meaning": "เส้นหลักของ Stochastic, แสดงตำแหน่งราคาปัจจุบันในช่วง",
+      "example": "The %K line is faster and more sensitive to price changes.",
+      "exampleTranslation": "เส้น %K เร็วกว่าและไวต่อการเปลี่ยนแปลงราคามากกว่า"
+    },
+    {
+      "vocab": "%D line",
+      "pronunciation": "เปอร์-เซ็นต์ ดี ไลน์",
+      "meaning": "เส้นสัญญาณของ Stochastic, เป็นค่าเฉลี่ยของ %K",
+      "example": "A buy signal occurs when %K crosses above %D.",
+      "exampleTranslation": "สัญญาณซื้อเกิดเมื่อ %K ตัดขึ้นเหนือ %D"
+    },
+    {
+      "vocab": "ATR (Average True Range)",
+      "pronunciation": "เอ-ที-อาร์",
+      "meaning": "ค่าเฉลี่ยช่วงราคาที่แท้จริง, วัดความผันผวน",
+      "example": "Use ATR to set stop loss distances based on volatility.",
+      "exampleTranslation": "ใช้ ATR ตั้งระยะ stop loss ตามความผันผวน"
+    },
+    {
+      "vocab": "true range",
+      "pronunciation": "ทรู เรนจ์",
+      "meaning": "ช่วงราคาที่แท้จริง, รวม gap จากราคาปิดก่อนหน้า",
+      "example": "True range accounts for gaps between sessions.",
+      "exampleTranslation": "true range รวมช่องว่างระหว่าง sessions"
+    },
+    {
+      "vocab": "Fibonacci retracement",
+      "pronunciation": "ฟิ-โบ-นา-ชี รี-เทรซ-เมนท์",
+      "meaning": "เครื่องมือวัดระดับการย่อตัว ใช้อัตราส่วน Fibonacci",
+      "example": "The 61.8% Fibonacci retracement is a key level to watch.",
+      "exampleTranslation": "Fibonacci retracement 61.8% เป็นระดับสำคัญที่ต้องจับตา"
+    },
+    {
+      "vocab": "Fibonacci extension",
+      "pronunciation": "ฟิ-โบ-นา-ชี เอ็กซ์-เทน-ชัน",
+      "meaning": "เครื่องมือหาเป้าหมายราคา ใช้อัตราส่วน Fibonacci",
+      "example": "Set take profit at the 161.8% Fibonacci extension.",
+      "exampleTranslation": "ตั้ง take profit ที่ Fibonacci extension 161.8%"
+    },
+    {
+      "vocab": "pivot point",
+      "pronunciation": "พิ-วอท พอยท์",
+      "meaning": "จุดหมุน, ระดับราคาที่คำนวณจาก H, L, C ของช่วงก่อนหน้า",
+      "example": "Price above the daily pivot suggests bullish bias.",
+      "exampleTranslation": "ราคาเหนือ pivot รายวันบ่งบอกแนวโน้มขาขึ้น"
+    },
+    {
+      "vocab": "candlestick pattern",
+      "pronunciation": "แคน-เดิล-สติก แพท-เทิร์น",
+      "meaning": "รูปแบบแท่งเทียน, การอ่านสัญญาณจากรูปร่างแท่งเทียน",
+      "example": "Learn to recognize candlestick patterns for better entries.",
+      "exampleTranslation": "เรียนรู้การจดจำรูปแบบแท่งเทียนเพื่อจุดเข้าที่ดีกว่า"
+    },
+    {
+      "vocab": "doji",
+      "pronunciation": "โด-จิ",
+      "meaning": "แท่งเทียนที่ราคาเปิดและปิดเท่ากัน, บ่งบอกความไม่แน่นอน",
+      "example": "A doji after a strong trend may signal reversal.",
+      "exampleTranslation": "doji หลังเทรนด์แรงอาจส่งสัญญาณการกลับตัว"
+    },
+    {
+      "vocab": "hammer",
+      "pronunciation": "แฮม-เมอร์",
+      "meaning": "แท่งเทียนรูปค้อน, หางยาวด้านล่าง ตัวสั้นด้านบน - สัญญาณกลับตัวขึ้น",
+      "example": "A hammer at support suggests buyers are stepping in.",
+      "exampleTranslation": "hammer ที่แนวรับบ่งบอกว่าผู้ซื้อเข้ามา"
+    },
+    {
+      "vocab": "inverted hammer",
+      "pronunciation": "อิน-เวิร์ท-เท็ด แฮม-เมอร์",
+      "meaning": "ค้อนกลับหัว, หางยาวด้านบน - สัญญาณกลับตัวขึ้นที่อาจเกิดขึ้น",
+      "example": "An inverted hammer in a downtrend needs confirmation.",
+      "exampleTranslation": "inverted hammer ในขาลงต้องการการยืนยัน"
+    },
+    {
+      "vocab": "hanging man",
+      "pronunciation": "แฮง-กิ้ง แมน",
+      "meaning": "แท่งเทียนรูปคนแขวน, หน้าตาเหมือน hammer แต่เกิดในขาขึ้น - สัญญาณกลับตัวลง",
+      "example": "A hanging man at resistance warns of potential reversal.",
+      "exampleTranslation": "hanging man ที่แนวต้านเตือนการกลับตัวที่อาจเกิดขึ้น"
+    },
+    {
+      "vocab": "shooting star",
+      "pronunciation": "ชู้ท-ติ้ง สตาร์",
+      "meaning": "แท่งเทียนดาวตก, หางยาวด้านบน - สัญญาณกลับตัวลง",
+      "example": "A shooting star after an uptrend signals potential reversal.",
+      "exampleTranslation": "shooting star หลังขาขึ้นส่งสัญญาณการกลับตัวที่เป็นไปได้"
+    },
+    {
+      "vocab": "engulfing pattern",
+      "pronunciation": "เอ็น-กัล-ฟิ่ง แพท-เทิร์น",
+      "meaning": "รูปแบบกลืน, แท่งเทียนที่กลืนแท่งก่อนหน้าทั้งตัว",
+      "example": "A bullish engulfing at support is a strong buy signal.",
+      "exampleTranslation": "bullish engulfing ที่แนวรับเป็นสัญญาณซื้อที่แข็งแกร่ง"
+    },
+    {
+      "vocab": "bullish engulfing",
+      "pronunciation": "บูล-ลิช เอ็น-กัล-ฟิ่ง",
+      "meaning": "รูปแบบกลืนขาขึ้น, แท่งเขียวกลืนแท่งแดงก่อนหน้า",
+      "example": "Bullish engulfing indicates strong buying pressure.",
+      "exampleTranslation": "bullish engulfing บ่งบอกแรงซื้อที่แข็งแกร่ง"
+    },
+    {
+      "vocab": "bearish engulfing",
+      "pronunciation": "แบร์-ริช เอ็น-กัล-ฟิ่ง",
+      "meaning": "รูปแบบกลืนขาลง, แท่งแดงกลืนแท่งเขียวก่อนหน้า",
+      "example": "Bearish engulfing at resistance confirms selling pressure.",
+      "exampleTranslation": "bearish engulfing ที่แนวต้านยืนยันแรงขาย"
+    },
+    {
+      "vocab": "morning star",
+      "pronunciation": "มอร์-นิ่ง สตาร์",
+      "meaning": "ดาวรุ่ง, รูปแบบ 3 แท่งเทียนส่งสัญญาณกลับตัวขึ้น",
+      "example": "A morning star pattern indicates a potential bullish reversal.",
+      "exampleTranslation": "รูปแบบ morning star บ่งบอกการกลับตัวขึ้นที่เป็นไปได้"
+    },
+    {
+      "vocab": "evening star",
+      "pronunciation": "อีฟ-นิ่ง สตาร์",
+      "meaning": "ดาวค่ำ, รูปแบบ 3 แท่งเทียนส่งสัญญาณกลับตัวลง",
+      "example": "Evening star at a high signals potential downside.",
+      "exampleTranslation": "evening star ที่จุดสูงส่งสัญญาณขาลงที่เป็นไปได้"
+    },
+    {
+      "vocab": "pin bar",
+      "pronunciation": "พิน บาร์",
+      "meaning": "แท่งเทียนหางยาว, แสดงการปฏิเสธราคา",
+      "example": "A pin bar rejection at key levels offers high-probability setups.",
+      "exampleTranslation": "pin bar ที่ระดับสำคัญให้ setup ที่มีโอกาสชนะสูง"
+    },
+    {
+      "vocab": "inside bar",
+      "pronunciation": "อิน-ไซด์ บาร์",
+      "meaning": "แท่งเทียนที่อยู่ภายในช่วงของแท่งก่อนหน้า, บ่งบอกการพักตัว",
+      "example": "An inside bar breakout can lead to strong momentum.",
+      "exampleTranslation": "การ breakout จาก inside bar อาจนำไปสู่โมเมนตัมที่แรง"
+    },
+    {
+      "vocab": "double top",
+      "pronunciation": "ดับ-เบิล ท็อป",
+      "meaning": "ยอดคู่, รูปแบบกลับตัวเป็นขาลง มีจุดสูงสุด 2 จุดเท่ากัน",
+      "example": "A double top at resistance signals potential reversal down.",
+      "exampleTranslation": "double top ที่แนวต้านส่งสัญญาณการกลับตัวลงที่เป็นไปได้"
+    },
+    {
+      "vocab": "double bottom",
+      "pronunciation": "ดับ-เบิล บ็อท-ทอม",
+      "meaning": "ก้นคู่, รูปแบบกลับตัวเป็นขาขึ้น มีจุดต่ำสุด 2 จุดเท่ากัน",
+      "example": "A double bottom at support is a bullish reversal pattern.",
+      "exampleTranslation": "double bottom ที่แนวรับเป็นรูปแบบกลับตัวขาขึ้น"
+    },
+    {
+      "vocab": "head and shoulders",
+      "pronunciation": "เฮด แอนด์ โชล-เดอร์ส",
+      "meaning": "หัวไหล่, รูปแบบกลับตัวขาลง มี 3 ยอด ยอดกลางสูงสุด",
+      "example": "Head and shoulders is a reliable reversal pattern.",
+      "exampleTranslation": "head and shoulders เป็นรูปแบบกลับตัวที่น่าเชื่อถือ"
+    },
+    {
+      "vocab": "inverse head and shoulders",
+      "pronunciation": "อิน-เวิร์ส เฮด แอนด์ โชล-เดอร์ส",
+      "meaning": "หัวไหล่กลับหัว, รูปแบบกลับตัวขาขึ้น",
+      "example": "Inverse head and shoulders at support signals bullish reversal.",
+      "exampleTranslation": "inverse head and shoulders ที่แนวรับส่งสัญญาณกลับตัวขาขึ้น"
+    },
+    {
+      "vocab": "neckline",
+      "pronunciation": "เน็ค-ไลน์",
+      "meaning": "เส้นคอ, เส้นแนวรับ/ต้านในรูปแบบหัวไหล่",
+      "example": "A break below the neckline confirms the head and shoulders pattern.",
+      "exampleTranslation": "การทะลุใต้ neckline ยืนยันรูปแบบ head and shoulders"
+    },
+    {
+      "vocab": "triangle pattern",
+      "pronunciation": "ไทร-แอง-เกิล แพท-เทิร์น",
+      "meaning": "รูปแบบสามเหลี่ยม, ราคาบีบตัวก่อน breakout",
+      "example": "Triangles indicate consolidation before a breakout.",
+      "exampleTranslation": "รูปแบบสามเหลี่ยมบ่งบอกการพักตัวก่อน breakout"
+    },
+    {
+      "vocab": "ascending triangle",
+      "pronunciation": "แอส-เซน-ดิ้ง ไทร-แอง-เกิล",
+      "meaning": "สามเหลี่ยมขาขึ้น, แนวต้านแนวนอน แนวรับเฉียงขึ้น",
+      "example": "Ascending triangles typically break out to the upside.",
+      "exampleTranslation": "ascending triangles มักจะ breakout ไปด้านบน"
+    },
+    {
+      "vocab": "descending triangle",
+      "pronunciation": "ดี-เซน-ดิ้ง ไทร-แอง-เกิล",
+      "meaning": "สามเหลี่ยมขาลง, แนวรับแนวนอน แนวต้านเฉียงลง",
+      "example": "Descending triangles usually break down.",
+      "exampleTranslation": "descending triangles มักจะ break down"
+    },
+    {
+      "vocab": "symmetrical triangle",
+      "pronunciation": "ซิม-เมท-ทริ-คัล ไทร-แอง-เกิล",
+      "meaning": "สามเหลี่ยมสมมาตร, สามารถ breakout ได้ทั้งสองทาง",
+      "example": "Wait for symmetrical triangle breakout before entering.",
+      "exampleTranslation": "รอการ breakout ของ symmetrical triangle ก่อนเข้า"
+    },
+    {
+      "vocab": "wedge pattern",
+      "pronunciation": "เวดจ์ แพท-เทิร์น",
+      "meaning": "รูปแบบลิ่ม, คล้ายสามเหลี่ยมแต่ทั้งสองเส้นเฉียงไปทางเดียวกัน",
+      "example": "A rising wedge is typically a bearish pattern.",
+      "exampleTranslation": "rising wedge มักเป็นรูปแบบขาลง"
+    },
+    {
+      "vocab": "flag pattern",
+      "pronunciation": "แฟล็ก แพท-เทิร์น",
+      "meaning": "รูปแบบธง, การพักตัวในช่องขนานก่อนไปต่อในทิศทางเดิม",
+      "example": "A bull flag indicates continuation of the uptrend.",
+      "exampleTranslation": "bull flag บ่งบอกการต่อเนื่องของขาขึ้น"
+    },
+    {
+      "vocab": "pennant",
+      "pronunciation": "เพน-แนนท์",
+      "meaning": "รูปแบบธงสามเหลี่ยม, คล้าย flag แต่เป็นรูปสามเหลี่ยมบีบตัว",
+      "example": "A bullish pennant suggests the uptrend will continue.",
+      "exampleTranslation": "bullish pennant บ่งบอกว่าขาขึ้นจะต่อเนื่อง"
+    },
+    {
+      "vocab": "cup and handle",
+      "pronunciation": "คัพ แอนด์ แฮน-เดิล",
+      "meaning": "รูปแบบถ้วยและหูจับ, รูปแบบต่อเนื่องขาขึ้น",
+      "example": "The cup and handle pattern is a bullish continuation signal.",
+      "exampleTranslation": "รูปแบบ cup and handle เป็นสัญญาณต่อเนื่องขาขึ้น"
+    },
+    {
+      "vocab": "volume",
+      "pronunciation": "วอ-ลุ่ม",
+      "meaning": "ปริมาณการซื้อขาย",
+      "example": "High volume confirms the strength of a breakout.",
+      "exampleTranslation": "volume สูงยืนยันความแข็งแกร่งของ breakout"
+    },
+    {
+      "vocab": "volume spike",
+      "pronunciation": "วอ-ลุ่ม สไปค์",
+      "meaning": "ปริมาณการซื้อขายที่พุ่งสูงผิดปกติ",
+      "example": "A volume spike often signals a significant move.",
+      "exampleTranslation": "volume spike มักส่งสัญญาณการเคลื่อนที่ที่สำคัญ"
+    },
+    {
+      "vocab": "momentum",
+      "pronunciation": "โม-เมน-ตัม",
+      "meaning": "แรงเหวี่ยง, ความเร็วของการเปลี่ยนแปลงราคา",
+      "example": "Strong momentum suggests the trend will continue.",
+      "exampleTranslation": "momentum แรงบ่งบอกว่าเทรนด์จะต่อเนื่อง"
+    },
+    {
+      "vocab": "momentum indicator",
+      "pronunciation": "โม-เมน-ตัม อิน-ดิ-เค-เตอร์",
+      "meaning": "ตัวบ่งชี้แรงเหวี่ยง เช่น RSI, MACD, Stochastic",
+      "example": "Use momentum indicators to confirm trend strength.",
+      "exampleTranslation": "ใช้ momentum indicators เพื่อยืนยันความแข็งแกร่งของเทรนด์"
+    },
+    {
+      "vocab": "lagging indicator",
+      "pronunciation": "แล็ก-กิ้ง อิน-ดิ-เค-เตอร์",
+      "meaning": "ตัวบ่งชี้ที่ตามหลังราคา เช่น Moving Averages",
+      "example": "Lagging indicators confirm trends but give late signals.",
+      "exampleTranslation": "lagging indicators ยืนยันเทรนด์แต่ให้สัญญาณช้า"
+    },
+    {
+      "vocab": "leading indicator",
+      "pronunciation": "ลี-ดิ้ง อิน-ดิ-เค-เตอร์",
+      "meaning": "ตัวบ่งชี้ที่นำหน้าราคา เช่น RSI, Stochastic",
+      "example": "Leading indicators predict reversals before they happen.",
+      "exampleTranslation": "leading indicators ทำนายการกลับตัวก่อนที่จะเกิด"
+    },
+    {
+      "vocab": "oscillator",
+      "pronunciation": "ออส-ซิล-เล-เตอร์",
+      "meaning": "ตัวบ่งชี้ที่แกว่งระหว่างค่าที่กำหนด เช่น RSI (0-100)",
+      "example": "Oscillators work best in ranging markets.",
+      "exampleTranslation": "oscillators ทำงานได้ดีที่สุดในตลาด sideway"
+    },
+    {
+      "vocab": "confirmation",
+      "pronunciation": "คอน-เฟอร์-เม-ชัน",
+      "meaning": "การยืนยัน, สัญญาณเพิ่มเติมที่สนับสนุนการตัดสินใจ",
+      "example": "Wait for candlestick confirmation before entering.",
+      "exampleTranslation": "รอการยืนยันจากแท่งเทียนก่อนเข้า"
+    },
+    {
+      "vocab": "false breakout (fakeout)",
+      "pronunciation": "ฟอลส์ เบรค-เอาท์ / เฟค-เอาท์",
+      "meaning": "การทะลุหลอก, ราคาทะลุแล้วกลับมา",
+      "example": "Use volume to distinguish real breakouts from fakeouts.",
+      "exampleTranslation": "ใช้ volume แยกแยะ breakout จริงจาก fakeout"
+    },
+    {
+      "vocab": "pullback",
+      "pronunciation": "พูล-แบค",
+      "meaning": "การย่อตัวกลับมาทดสอบระดับที่ทะลุไป",
+      "example": "Enter on the pullback after a breakout for better risk-reward.",
+      "exampleTranslation": "เข้าตอน pullback หลัง breakout เพื่อ risk-reward ที่ดีกว่า"
+    },
+    {
+      "vocab": "retest",
+      "pronunciation": "รี-เทสต์",
+      "meaning": "การกลับมาทดสอบระดับราคาอีกครั้ง",
+      "example": "Wait for the retest of support before going long.",
+      "exampleTranslation": "รอการ retest ของแนวรับก่อนเปิด long"
+    },
+    {
+      "vocab": "gap",
+      "pronunciation": "แก็ป",
+      "meaning": "ช่องว่างราคา, ราคาเปิดต่างจากราคาปิดก่อนหน้ามาก",
+      "example": "Gaps often get filled as price returns to that level.",
+      "exampleTranslation": "gaps มักถูกเติมเต็มเมื่อราคากลับมาที่ระดับนั้น"
+    },
+    {
+      "vocab": "gap fill",
+      "pronunciation": "แก็ป ฟิลล์",
+      "meaning": "การเติมช่องว่าง, ราคากลับมาที่ระดับก่อน gap",
+      "example": "Traders often trade gap fills as a mean reversion strategy.",
+      "exampleTranslation": "เทรดเดอร์มักเทรด gap fills เป็นกลยุทธ์ mean reversion"
+    },
+    {
+      "vocab": "multiple timeframe analysis",
+      "pronunciation": "มัล-ติ-เพิล ไทม์-เฟรม อะ-นา-ลิ-ซิส",
+      "meaning": "การวิเคราะห์หลาย timeframe, ดูภาพรวมจากหลายช่วงเวลา",
+      "example": "Use multiple timeframe analysis for better trade decisions.",
+      "exampleTranslation": "ใช้การวิเคราะห์หลาย timeframe เพื่อตัดสินใจเทรดที่ดีขึ้น"
+    },
+    {
+      "vocab": "confluence",
+      "pronunciation": "คอน-ฟลู-เอนซ์",
+      "meaning": "จุดบรรจบ, ระดับที่มีหลายปัจจัยสนับสนุน",
+      "example": "Look for confluence zones where multiple indicators align.",
+      "exampleTranslation": "มองหาโซน confluence ที่หลาย indicators มาบรรจบกัน"
+    },
+    {
+      "vocab": "risk-on",
+      "pronunciation": "ริสค์-ออน",
+      "meaning": "สภาวะตลาดที่นักลงทุนเต็มใจรับความเสี่ยง",
+      "example": "In risk-on environments, traders buy riskier assets.",
+      "exampleTranslation": "ในสภาวะ risk-on เทรดเดอร์ซื้อสินทรัพย์ที่มีความเสี่ยงสูง"
+    },
+    {
+      "vocab": "risk-off",
+      "pronunciation": "ริสค์-ออฟ",
+      "meaning": "สภาวะตลาดที่นักลงทุนหลีกเลี่ยงความเสี่ยง",
+      "example": "During risk-off, safe-haven currencies like JPY strengthen.",
+      "exampleTranslation": "ในช่วง risk-off สกุลเงิน safe-haven เช่น JPY แข็งค่า"
+    },
+    {
+      "vocab": "safe-haven currency",
+      "pronunciation": "เซฟ-เฮ-เวน เคอ-เรน-ซี",
+      "meaning": "สกุลเงินปลอดภัย, แข็งค่าในช่วงวิกฤต เช่น USD, JPY, CHF",
+      "example": "JPY is a traditional safe-haven currency.",
+      "exampleTranslation": "JPY เป็นสกุลเงิน safe-haven ดั้งเดิม"
+    },
+    {
+      "vocab": "market sentiment",
+      "pronunciation": "มาร์-เก็ต เซน-ทิ-เมนท์",
+      "meaning": "ความเชื่อมั่นตลาด, ทัศนคติโดยรวมของนักลงทุน",
+      "example": "Market sentiment shifted from bullish to bearish after the news.",
+      "exampleTranslation": "ความเชื่อมั่นตลาดเปลี่ยนจากขาขึ้นเป็นขาลงหลังข่าว"
+    }
+  ]
+}

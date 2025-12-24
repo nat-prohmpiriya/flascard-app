@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Society & Culture",
+    "description": "B1 level vocabulary for society and culture topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "society",
+      "pronunciation": "โซ-ไซ-เอะ-ตี้",
+      "meaning": "สังคม",
+      "example": "We live in a diverse society.",
+      "exampleTranslation": "เราอยู่ในสังคมที่หลากหลาย"
+    },
+    {
+      "vocab": "culture",
+      "pronunciation": "คัล-เชอะ",
+      "meaning": "วัฒนธรรม",
+      "example": "Every country has its own culture.",
+      "exampleTranslation": "ทุกประเทศมีวัฒนธรรมเป็นของตัวเอง"
+    },
+    {
+      "vocab": "tradition",
+      "pronunciation": "ทรา-ดิ-ชั่น",
+      "meaning": "ประเพณี, ธรรมเนียม",
+      "example": "We follow old family traditions.",
+      "exampleTranslation": "เราปฏิบัติตามประเพณีครอบครัวเก่าแก่"
+    },
+    {
+      "vocab": "custom",
+      "pronunciation": "คัส-ทอม",
+      "meaning": "ธรรมเนียมปฏิบัติ",
+      "example": "It's a local custom to bow.",
+      "exampleTranslation": "การโค้งเป็นธรรมเนียมท้องถิ่น"
+    },
+    {
+      "vocab": "ceremony",
+      "pronunciation": "เซ-ริ-โม-นี",
+      "meaning": "พิธี, พิธีการ",
+      "example": "The wedding ceremony was beautiful.",
+      "exampleTranslation": "พิธีแต่งงานสวยงามมาก"
+    },
+    {
+      "vocab": "celebrate",
+      "pronunciation": "เซล-ลิ-เบรท",
+      "meaning": "ฉลอง, เฉลิมฉลอง",
+      "example": "We celebrate New Year together.",
+      "exampleTranslation": "เราฉลองปีใหม่ด้วยกัน"
+    },
+    {
+      "vocab": "celebration",
+      "pronunciation": "เซล-ลิ-เบร-ชั่น",
+      "meaning": "การเฉลิมฉลอง, งานเฉลิมฉลอง",
+      "example": "The celebration lasted all night.",
+      "exampleTranslation": "งานเฉลิมฉลองกินเวลาทั้งคืน"
+    },
+    {
+      "vocab": "festival",
+      "pronunciation": "เฟส-ติ-วัล",
+      "meaning": "เทศกาล",
+      "example": "The music festival was amazing.",
+      "exampleTranslation": "เทศกาลดนตรียอดเยี่ยมมาก"
+    },
+    {
+      "vocab": "religion",
+      "pronunciation": "รี-ลิ-เจิน",
+      "meaning": "ศาสนา",
+      "example": "People have different religions.",
+      "exampleTranslation": "คนมีศาสนาที่แตกต่างกัน"
+    },
+    {
+      "vocab": "religious",
+      "pronunciation": "รี-ลิ-เจิส",
+      "meaning": "เกี่ยวกับศาสนา, เคร่งศาสนา",
+      "example": "It's a religious holiday.",
+      "exampleTranslation": "เป็นวันหยุดทางศาสนา"
+    },
+    {
+      "vocab": "belief",
+      "pronunciation": "บิ-ลีฟ",
+      "meaning": "ความเชื่อ",
+      "example": "Everyone has different beliefs.",
+      "exampleTranslation": "ทุกคนมีความเชื่อที่แตกต่างกัน"
+    },
+    {
+      "vocab": "community",
+      "pronunciation": "คอม-มิว-นิ-ตี้",
+      "meaning": "ชุมชน",
+      "example": "We have a strong community here.",
+      "exampleTranslation": "เรามีชุมชนที่เข้มแข็งที่นี่"
+    },
+    {
+      "vocab": "citizen",
+      "pronunciation": "ซิท-ทิ-เซน",
+      "meaning": "พลเมือง, ประชาชน",
+      "example": "Every citizen has rights.",
+      "exampleTranslation": "พลเมืองทุกคนมีสิทธิ์"
+    },
+    {
+      "vocab": "government",
+      "pronunciation": "กัฟ-เวิร์น-เมินท์",
+      "meaning": "รัฐบาล",
+      "example": "The government made new laws.",
+      "exampleTranslation": "รัฐบาลออกกฎหมายใหม่"
+    },
+    {
+      "vocab": "politics",
+      "pronunciation": "พอล-ลิ-ทิคส์",
+      "meaning": "การเมือง",
+      "example": "I'm not interested in politics.",
+      "exampleTranslation": "ฉันไม่สนใจการเมือง"
+    },
+    {
+      "vocab": "political",
+      "pronunciation": "พอ-ลิ-ทิ-คัล",
+      "meaning": "เกี่ยวกับการเมือง",
+      "example": "It was a political decision.",
+      "exampleTranslation": "มันเป็นการตัดสินใจทางการเมือง"
+    },
+    {
+      "vocab": "election",
+      "pronunciation": "อิ-เล็ค-ชั่น",
+      "meaning": "การเลือกตั้ง",
+      "example": "The election will be next month.",
+      "exampleTranslation": "การเลือกตั้งจะมีขึ้นเดือนหน้า"
+    },
+    {
+      "vocab": "vote",
+      "pronunciation": "โวท",
+      "meaning": "ลงคะแนน, โหวต",
+      "example": "Everyone should vote.",
+      "exampleTranslation": "ทุกคนควรไปลงคะแนน"
+    },
+    {
+      "vocab": "democracy",
+      "pronunciation": "ดิ-มอค-ครา-ซี",
+      "meaning": "ประชาธิปไตย",
+      "example": "We live in a democracy.",
+      "exampleTranslation": "เราอยู่ในระบอบประชาธิปไตย"
+    },
+    {
+      "vocab": "law",
+      "pronunciation": "ลอว์",
+      "meaning": "กฎหมาย",
+      "example": "Breaking the law is serious.",
+      "exampleTranslation": "การฝ่าฝืนกฎหมายเป็นเรื่องร้ายแรง"
+    },
+    {
+      "vocab": "legal",
+      "pronunciation": "ลี-กัล",
+      "meaning": "ถูกกฎหมาย",
+      "example": "Is this legal in your country?",
+      "exampleTranslation": "สิ่งนี้ถูกกฎหมายในประเทศคุณไหม?"
+    },
+    {
+      "vocab": "illegal",
+      "pronunciation": "อิล-ลี-กัล",
+      "meaning": "ผิดกฎหมาย",
+      "example": "Parking here is illegal.",
+      "exampleTranslation": "การจอดรถที่นี่ผิดกฎหมาย"
+    },
+    {
+      "vocab": "right",
+      "pronunciation": "ไรท์",
+      "meaning": "สิทธิ์",
+      "example": "Everyone has the right to education.",
+      "exampleTranslation": "ทุกคนมีสิทธิ์ในการศึกษา"
+    },
+    {
+      "vocab": "freedom",
+      "pronunciation": "ฟรี-ดอม",
+      "meaning": "เสรีภาพ, อิสรภาพ",
+      "example": "Freedom of speech is important.",
+      "exampleTranslation": "เสรีภาพในการพูดมีความสำคัญ"
+    },
+    {
+      "vocab": "equality",
+      "pronunciation": "อี-ควอล-ลิ-ตี้",
+      "meaning": "ความเท่าเทียม",
+      "example": "We fight for equality.",
+      "exampleTranslation": "เราต่อสู้เพื่อความเท่าเทียม"
+    },
+    {
+      "vocab": "discrimination",
+      "pronunciation": "ดิส-คริม-มิ-เน-ชั่น",
+      "meaning": "การเลือกปฏิบัติ",
+      "example": "Discrimination is wrong.",
+      "exampleTranslation": "การเลือกปฏิบัติเป็นสิ่งที่ผิด"
+    },
+    {
+      "vocab": "immigrant",
+      "pronunciation": "อิม-มิ-กรันท์",
+      "meaning": "ผู้อพยพ",
+      "example": "Many immigrants come for work.",
+      "exampleTranslation": "ผู้อพยพหลายคนมาเพื่อทำงาน"
+    },
+    {
+      "vocab": "refugee",
+      "pronunciation": "เร็ฟ-ฟิว-จี",
+      "meaning": "ผู้ลี้ภัย",
+      "example": "Refugees need our help.",
+      "exampleTranslation": "ผู้ลี้ภัยต้องการความช่วยเหลือจากเรา"
+    },
+    {
+      "vocab": "population",
+      "pronunciation": "พอพ-พิว-เล-ชั่น",
+      "meaning": "ประชากร",
+      "example": "The population is growing fast.",
+      "exampleTranslation": "ประชากรเพิ่มขึ้นเร็ว"
+    },
+    {
+      "vocab": "poverty",
+      "pronunciation": "พอฟ-เวอะ-ตี้",
+      "meaning": "ความยากจน",
+      "example": "Many people live in poverty.",
+      "exampleTranslation": "หลายคนอาศัยอยู่ในความยากจน"
+    },
+    {
+      "vocab": "wealthy",
+      "pronunciation": "เวล-ธี",
+      "meaning": "ร่ำรวย, มั่งคั่ง",
+      "example": "Not everyone is wealthy.",
+      "exampleTranslation": "ไม่ใช่ทุกคนที่ร่ำรวย"
+    },
+    {
+      "vocab": "charity",
+      "pronunciation": "แช-ริ-ตี้",
+      "meaning": "การกุศล, องค์กรการกุศล",
+      "example": "I donate to charity.",
+      "exampleTranslation": "ฉันบริจาคให้การกุศล"
+    },
+    {
+      "vocab": "volunteer",
+      "pronunciation": "วอล-ลัน-เทียร์",
+      "meaning": "อาสาสมัคร",
+      "example": "I work as a volunteer.",
+      "exampleTranslation": "ฉันทำงานเป็นอาสาสมัคร"
+    },
+    {
+      "vocab": "generation",
+      "pronunciation": "เจน-เนอ-เร-ชั่น",
+      "meaning": "รุ่น, ยุค",
+      "example": "The younger generation thinks differently.",
+      "exampleTranslation": "คนรุ่นใหม่คิดต่างออกไป"
+    },
+    {
+      "vocab": "elderly",
+      "pronunciation": "เอล-เดอะ-ลี",
+      "meaning": "สูงอายุ, ผู้สูงอายุ",
+      "example": "We should respect the elderly.",
+      "exampleTranslation": "เราควรเคารพผู้สูงอายุ"
+    },
+    {
+      "vocab": "youth",
+      "pronunciation": "ยูธ",
+      "meaning": "เยาวชน, วัยหนุ่มสาว",
+      "example": "The youth of today are tech-savvy.",
+      "exampleTranslation": "เยาวชนในปัจจุบันเก่งเทคโนโลยี"
+    },
+    {
+      "vocab": "minority",
+      "pronunciation": "ไม-นอ-ริ-ตี้",
+      "meaning": "ชนกลุ่มน้อย, ส่วนน้อย",
+      "example": "Minorities need protection.",
+      "exampleTranslation": "ชนกลุ่มน้อยต้องการการคุ้มครอง"
+    },
+    {
+      "vocab": "majority",
+      "pronunciation": "เม-จอ-ริ-ตี้",
+      "meaning": "คนส่วนใหญ่, เสียงข้างมาก",
+      "example": "The majority voted yes.",
+      "exampleTranslation": "คนส่วนใหญ่โหวตเห็นด้วย"
+    },
+    {
+      "vocab": "identity",
+      "pronunciation": "ไอ-เด็น-ทิ-ตี้",
+      "meaning": "อัตลักษณ์, ตัวตน",
+      "example": "Cultural identity is important.",
+      "exampleTranslation": "อัตลักษณ์ทางวัฒนธรรมมีความสำคัญ"
+    },
+    {
+      "vocab": "heritage",
+      "pronunciation": "เฮ-ริ-เทจ",
+      "meaning": "มรดก (ทางวัฒนธรรม)",
+      "example": "We must protect our heritage.",
+      "exampleTranslation": "เราต้องปกป้องมรดกของเรา"
+    },
+    {
+      "vocab": "influence",
+      "pronunciation": "อิน-ฟลู-เอินซ์",
+      "meaning": "อิทธิพล, มีอิทธิพลต่อ",
+      "example": "Media has a big influence on people.",
+      "exampleTranslation": "สื่อมีอิทธิพลมากต่อผู้คน"
+    },
+    {
+      "vocab": "opinion",
+      "pronunciation": "โอ-พิน-เยิน",
+      "meaning": "ความคิดเห็น",
+      "example": "Everyone has their own opinion.",
+      "exampleTranslation": "ทุกคนมีความคิดเห็นของตัวเอง"
+    },
+    {
+      "vocab": "debate",
+      "pronunciation": "ดิ-เบท",
+      "meaning": "การโต้วาที, ถกเถียง",
+      "example": "There's a big debate about this.",
+      "exampleTranslation": "มีการถกเถียงอย่างมากเรื่องนี้"
+    },
+    {
+      "vocab": "argue",
+      "pronunciation": "อาร์-กิว",
+      "meaning": "โต้แย้ง, ทะเลาะ",
+      "example": "They always argue about politics.",
+      "exampleTranslation": "พวกเขาทะเลาะกันเรื่องการเมืองเสมอ"
+    },
+    {
+      "vocab": "protest",
+      "pronunciation": "โพร-เทสท์",
+      "meaning": "การประท้วง, ประท้วง",
+      "example": "People protest against the law.",
+      "exampleTranslation": "คนประท้วงต่อต้านกฎหมาย"
+    },
+    {
+      "vocab": "support",
+      "pronunciation": "ซัพ-พอร์ท",
+      "meaning": "สนับสนุน, ช่วยเหลือ",
+      "example": "I support this cause.",
+      "exampleTranslation": "ฉันสนับสนุนเรื่องนี้"
+    },
+    {
+      "vocab": "issue",
+      "pronunciation": "อิช-ชู",
+      "meaning": "ประเด็น, ปัญหา",
+      "example": "This is an important social issue.",
+      "exampleTranslation": "นี่เป็นประเด็นทางสังคมที่สำคัญ"
+    },
+    {
+      "vocab": "conflict",
+      "pronunciation": "คอน-ฟลิคท์",
+      "meaning": "ความขัดแย้ง",
+      "example": "War causes so much conflict.",
+      "exampleTranslation": "สงครามทำให้เกิดความขัดแย้งมากมาย"
+    },
+    {
+      "vocab": "peace",
+      "pronunciation": "พีซ",
+      "meaning": "สันติภาพ, ความสงบ",
+      "example": "We all want peace.",
+      "exampleTranslation": "เราทุกคนต้องการสันติภาพ"
+    },
+    {
+      "vocab": "violence",
+      "pronunciation": "ไว-โอ-เลินซ์",
+      "meaning": "ความรุนแรง",
+      "example": "Violence is never the answer.",
+      "exampleTranslation": "ความรุนแรงไม่ใช่คำตอบ"
+    },
+    {
+      "vocab": "crime",
+      "pronunciation": "ไครม์",
+      "meaning": "อาชญากรรม",
+      "example": "Crime rates have decreased.",
+      "exampleTranslation": "อัตราอาชญากรรมลดลง"
+    },
+    {
+      "vocab": "criminal",
+      "pronunciation": "คริม-มิ-นัล",
+      "meaning": "อาชญากร, ผู้ร้าย",
+      "example": "The criminal was caught.",
+      "exampleTranslation": "อาชญากรถูกจับแล้ว"
+    },
+    {
+      "vocab": "justice",
+      "pronunciation": "จัส-ทิส",
+      "meaning": "ความยุติธรรม",
+      "example": "Everyone deserves justice.",
+      "exampleTranslation": "ทุกคนสมควรได้รับความยุติธรรม"
+    },
+    {
+      "vocab": "fair",
+      "pronunciation": "แฟร์",
+      "meaning": "ยุติธรรม, เป็นธรรม",
+      "example": "That's not fair.",
+      "exampleTranslation": "นั่นไม่ยุติธรรม"
+    },
+    {
+      "vocab": "unfair",
+      "pronunciation": "อัน-แฟร์",
+      "meaning": "ไม่ยุติธรรม",
+      "example": "The decision was unfair.",
+      "exampleTranslation": "การตัดสินใจไม่ยุติธรรม"
+    },
+    {
+      "vocab": "respect",
+      "pronunciation": "รี-สเป็คท์",
+      "meaning": "ความเคารพ, เคารพ",
+      "example": "We should respect each other.",
+      "exampleTranslation": "เราควรเคารพซึ่งกันและกัน"
+    },
+    {
+      "vocab": "tolerance",
+      "pronunciation": "ทอล-เลอ-เรินซ์",
+      "meaning": "ความอดทน, ความอดกลั้น",
+      "example": "Tolerance is key to living together.",
+      "exampleTranslation": "ความอดกลั้นคือกุญแจสู่การอยู่ร่วมกัน"
+    },
+    {
+      "vocab": "diverse",
+      "pronunciation": "ได-เวิร์ส",
+      "meaning": "หลากหลาย",
+      "example": "Our team is very diverse.",
+      "exampleTranslation": "ทีมของเรามีความหลากหลายมาก"
+    },
+    {
+      "vocab": "diversity",
+      "pronunciation": "ได-เวอร์-ซิ-ตี้",
+      "meaning": "ความหลากหลาย",
+      "example": "Diversity makes us stronger.",
+      "exampleTranslation": "ความหลากหลายทำให้เราแข็งแกร่งขึ้น"
+    }
+  ]
+}

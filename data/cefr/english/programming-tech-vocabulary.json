@@ -1,0 +1,1077 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Programming & Tech Vocabulary",
+    "description": "Essential vocabulary for software developers and programmers",
+    "category": "Technical English",
+    "tags": ["english", "programming", "tech", "developer"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "algorithm",
+      "pronunciation": "อัล-กอ-ริ-ธึม",
+      "meaning": "ขั้นตอนวิธี, อัลกอริทึม",
+      "example": "We need to optimize this algorithm for better performance.",
+      "exampleTranslation": "เราต้องปรับปรุงอัลกอริทึมนี้เพื่อประสิทธิภาพที่ดีขึ้น"
+    },
+    {
+      "vocab": "refactor",
+      "pronunciation": "รี-แฟค-เทอะ",
+      "meaning": "ปรับโครงสร้างโค้ดโดยไม่เปลี่ยนพฤติกรรม",
+      "example": "Let's refactor this function to make it more readable.",
+      "exampleTranslation": "มาปรับโครงสร้างฟังก์ชันนี้ให้อ่านง่ายขึ้น"
+    },
+    {
+      "vocab": "deploy",
+      "pronunciation": "ดิ-พลอย",
+      "meaning": "นำขึ้นระบบ, ติดตั้งบน server",
+      "example": "We'll deploy the new version tonight.",
+      "exampleTranslation": "เราจะ deploy เวอร์ชันใหม่คืนนี้"
+    },
+    {
+      "vocab": "debug",
+      "pronunciation": "ดี-บัก",
+      "meaning": "แก้ไขข้อผิดพลาดในโค้ด",
+      "example": "I spent hours debugging this issue.",
+      "exampleTranslation": "ฉันใช้เวลาหลายชั่วโมง debug ปัญหานี้"
+    },
+    {
+      "vocab": "compile",
+      "pronunciation": "คอม-ไพล์",
+      "meaning": "แปลงโค้ดเป็นภาษาเครื่อง",
+      "example": "The code failed to compile due to syntax errors.",
+      "exampleTranslation": "โค้ด compile ไม่ผ่านเพราะมี syntax error"
+    },
+    {
+      "vocab": "runtime",
+      "pronunciation": "รัน-ไทม์",
+      "meaning": "ช่วงเวลาที่โปรแกรมทำงาน",
+      "example": "This error only occurs at runtime.",
+      "exampleTranslation": "ข้อผิดพลาดนี้เกิดขึ้นตอน runtime เท่านั้น"
+    },
+    {
+      "vocab": "repository",
+      "pronunciation": "รี-พอ-ซิ-ทอ-รี่",
+      "meaning": "ที่เก็บโค้ด (repo)",
+      "example": "Clone the repository from GitHub.",
+      "exampleTranslation": "Clone repository จาก GitHub"
+    },
+    {
+      "vocab": "branch",
+      "pronunciation": "บรานช์",
+      "meaning": "สาขาของโค้ด (git)",
+      "example": "Create a new branch for this feature.",
+      "exampleTranslation": "สร้าง branch ใหม่สำหรับ feature นี้"
+    },
+    {
+      "vocab": "merge",
+      "pronunciation": "เมิร์จ",
+      "meaning": "รวมโค้ดเข้าด้วยกัน",
+      "example": "Merge your branch into main when ready.",
+      "exampleTranslation": "Merge branch ของคุณเข้า main เมื่อพร้อม"
+    },
+    {
+      "vocab": "pull request",
+      "pronunciation": "พูล-รี-เควสท์",
+      "meaning": "คำขอรวมโค้ด (PR)",
+      "example": "Please review my pull request.",
+      "exampleTranslation": "กรุณา review pull request ของผม"
+    },
+    {
+      "vocab": "commit",
+      "pronunciation": "คอม-มิท",
+      "meaning": "บันทึกการเปลี่ยนแปลงโค้ด",
+      "example": "Make small, frequent commits.",
+      "exampleTranslation": "ทำ commit เล็กๆ บ่อยๆ"
+    },
+    {
+      "vocab": "push",
+      "pronunciation": "พุช",
+      "meaning": "ส่งโค้ดขึ้น remote",
+      "example": "Push your changes to the remote repository.",
+      "exampleTranslation": "Push การเปลี่ยนแปลงของคุณไปยัง remote repository"
+    },
+    {
+      "vocab": "pull",
+      "pronunciation": "พูล",
+      "meaning": "ดึงโค้ดจาก remote",
+      "example": "Pull the latest changes before starting.",
+      "exampleTranslation": "Pull การเปลี่ยนแปลงล่าสุดก่อนเริ่มงาน"
+    },
+    {
+      "vocab": "conflict",
+      "pronunciation": "คอน-ฟลิคท์",
+      "meaning": "ความขัดแย้งของโค้ด",
+      "example": "Resolve the merge conflicts before proceeding.",
+      "exampleTranslation": "แก้ไข merge conflict ก่อนดำเนินการต่อ"
+    },
+    {
+      "vocab": "sprint",
+      "pronunciation": "สปรินท์",
+      "meaning": "รอบการทำงานสั้นๆ (Agile)",
+      "example": "We'll complete this feature in the next sprint.",
+      "exampleTranslation": "เราจะทำ feature นี้เสร็จใน sprint หน้า"
+    },
+    {
+      "vocab": "standup",
+      "pronunciation": "สแตนด์-อัพ",
+      "meaning": "ประชุมสั้นประจำวัน",
+      "example": "Let's discuss this in tomorrow's standup.",
+      "exampleTranslation": "มาคุยเรื่องนี้ใน standup พรุ่งนี้"
+    },
+    {
+      "vocab": "backlog",
+      "pronunciation": "แบ็ค-ล็อก",
+      "meaning": "รายการงานที่รอทำ",
+      "example": "Add this task to the product backlog.",
+      "exampleTranslation": "เพิ่มงานนี้เข้า product backlog"
+    },
+    {
+      "vocab": "ticket",
+      "pronunciation": "ทิค-เก็ท",
+      "meaning": "รายการงาน/บัก (Jira)",
+      "example": "Create a ticket for this bug.",
+      "exampleTranslation": "สร้าง ticket สำหรับบัคนี้"
+    },
+    {
+      "vocab": "blocker",
+      "pronunciation": "บล็อค-เกอะ",
+      "meaning": "สิ่งที่ขัดขวางการทำงาน",
+      "example": "This bug is a blocker for the release.",
+      "exampleTranslation": "บัคนี้เป็น blocker สำหรับการ release"
+    },
+    {
+      "vocab": "scope",
+      "pronunciation": "สโคป",
+      "meaning": "ขอบเขตของงาน/ตัวแปร",
+      "example": "We need to define the scope of this project.",
+      "exampleTranslation": "เราต้องกำหนดขอบเขตของโปรเจคนี้"
+    },
+    {
+      "vocab": "dependency",
+      "pronunciation": "ดี-เพน-เดน-ซี่",
+      "meaning": "สิ่งที่โค้ดต้องพึ่งพา (library)",
+      "example": "Update all dependencies to the latest version.",
+      "exampleTranslation": "อัพเดท dependency ทั้งหมดเป็นเวอร์ชันล่าสุด"
+    },
+    {
+      "vocab": "deprecated",
+      "pronunciation": "เดพ-พริ-เค-เท็ด",
+      "meaning": "ล้าสมัย, ไม่แนะนำให้ใช้แล้ว",
+      "example": "This API is deprecated and will be removed soon.",
+      "exampleTranslation": "API นี้ deprecated แล้วและจะถูกลบเร็วๆ นี้"
+    },
+    {
+      "vocab": "legacy code",
+      "pronunciation": "เล-กา-ซี่-โค้ด",
+      "meaning": "โค้ดเก่าที่ยากต่อการแก้ไข",
+      "example": "We inherited a lot of legacy code.",
+      "exampleTranslation": "เราได้รับมรดก legacy code มามาก"
+    },
+    {
+      "vocab": "tech debt",
+      "pronunciation": "เท็ค-เด็ท",
+      "meaning": "หนี้ทางเทคนิค",
+      "example": "We need to address the tech debt soon.",
+      "exampleTranslation": "เราต้องจัดการ tech debt เร็วๆ นี้"
+    },
+    {
+      "vocab": "scalable",
+      "pronunciation": "สเกล-ละ-เบิล",
+      "meaning": "ขยายขนาดได้",
+      "example": "The architecture must be scalable.",
+      "exampleTranslation": "สถาปัตยกรรมต้อง scalable ได้"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี่",
+      "meaning": "ความหน่วง, เวลาตอบสนอง",
+      "example": "We reduced API latency by 50%.",
+      "exampleTranslation": "เราลด latency ของ API ลง 50%"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงานที่ประมวลผลได้",
+      "example": "The system handles high throughput.",
+      "exampleTranslation": "ระบบรองรับ throughput สูง"
+    },
+    {
+      "vocab": "bottleneck",
+      "pronunciation": "บ็อท-เทิล-เน็ค",
+      "meaning": "จุดคอขวด, ส่วนที่ช้าที่สุด",
+      "example": "The database is the bottleneck.",
+      "exampleTranslation": "ฐานข้อมูลเป็น bottleneck"
+    },
+    {
+      "vocab": "cache",
+      "pronunciation": "แคช",
+      "meaning": "หน่วยความจำชั่วคราวเพื่อเพิ่มความเร็ว",
+      "example": "Clear the cache and try again.",
+      "exampleTranslation": "ล้าง cache แล้วลองใหม่"
+    },
+    {
+      "vocab": "endpoint",
+      "pronunciation": "เอนด์-พอยท์",
+      "meaning": "จุดเชื่อมต่อ API",
+      "example": "Call the /users endpoint to get user data.",
+      "exampleTranslation": "เรียก endpoint /users เพื่อดึงข้อมูลผู้ใช้"
+    },
+    {
+      "vocab": "payload",
+      "pronunciation": "เพย์-โหลด",
+      "meaning": "ข้อมูลที่ส่งไปกับ request",
+      "example": "Check the request payload for errors.",
+      "exampleTranslation": "ตรวจสอบ payload ของ request ว่ามีข้อผิดพลาดไหม"
+    },
+    {
+      "vocab": "authentication",
+      "pronunciation": "ออ-เธน-ทิ-เค-ชั่น",
+      "meaning": "การยืนยันตัวตน",
+      "example": "Implement JWT authentication.",
+      "exampleTranslation": "ทำระบบ authentication ด้วย JWT"
+    },
+    {
+      "vocab": "authorization",
+      "pronunciation": "ออ-เธอะ-ไร-เซ-ชั่น",
+      "meaning": "การอนุญาตสิทธิ์",
+      "example": "Check authorization before accessing resources.",
+      "exampleTranslation": "ตรวจสอบ authorization ก่อนเข้าถึงทรัพยากร"
+    },
+    {
+      "vocab": "middleware",
+      "pronunciation": "มิด-เดิล-แวร์",
+      "meaning": "ซอฟต์แวร์ตัวกลาง",
+      "example": "Add logging middleware to track requests.",
+      "exampleTranslation": "เพิ่ม logging middleware เพื่อติดตาม request"
+    },
+    {
+      "vocab": "query",
+      "pronunciation": "ควี-รี่",
+      "meaning": "คำสั่งดึงข้อมูล",
+      "example": "Optimize your database queries.",
+      "exampleTranslation": "ปรับปรุง query ฐานข้อมูลของคุณ"
+    },
+    {
+      "vocab": "migration",
+      "pronunciation": "ไม-เกร-ชั่น",
+      "meaning": "การย้ายข้อมูล/โครงสร้าง DB",
+      "example": "Run the database migration before deploying.",
+      "exampleTranslation": "รัน migration ก่อน deploy"
+    },
+    {
+      "vocab": "schema",
+      "pronunciation": "สคี-ม่า",
+      "meaning": "โครงสร้างข้อมูล",
+      "example": "Update the database schema.",
+      "exampleTranslation": "อัพเดท schema ของฐานข้อมูล"
+    },
+    {
+      "vocab": "index",
+      "pronunciation": "อิน-เด็กซ์",
+      "meaning": "ดัชนีช่วยค้นหาเร็วขึ้น",
+      "example": "Add an index on the email column.",
+      "exampleTranslation": "เพิ่ม index บนคอลัมน์ email"
+    },
+    {
+      "vocab": "transaction",
+      "pronunciation": "ทราน-แซค-ชั่น",
+      "meaning": "การดำเนินการที่ต้องสำเร็จทั้งหมดหรือไม่สำเร็จเลย",
+      "example": "Wrap these operations in a transaction.",
+      "exampleTranslation": "ครอบการดำเนินการเหล่านี้ด้วย transaction"
+    },
+    {
+      "vocab": "rollback",
+      "pronunciation": "โรล-แบ็ค",
+      "meaning": "ย้อนกลับการเปลี่ยนแปลง",
+      "example": "We had to rollback the deployment.",
+      "exampleTranslation": "เราต้อง rollback การ deploy"
+    },
+    {
+      "vocab": "CI/CD",
+      "pronunciation": "ซี-ไอ-ซี-ดี",
+      "meaning": "ระบบ build และ deploy อัตโนมัติ",
+      "example": "Set up CI/CD pipeline for automated testing.",
+      "exampleTranslation": "ตั้งค่า CI/CD pipeline สำหรับ test อัตโนมัติ"
+    },
+    {
+      "vocab": "pipeline",
+      "pronunciation": "ไปป์-ไลน์",
+      "meaning": "ขั้นตอนการทำงานอัตโนมัติ",
+      "example": "The pipeline failed at the test stage.",
+      "exampleTranslation": "Pipeline ล้มเหลวที่ขั้นตอน test"
+    },
+    {
+      "vocab": "container",
+      "pronunciation": "คอน-เท-เนอะ",
+      "meaning": "สภาพแวดล้อมแยกสำหรับรันแอป (Docker)",
+      "example": "Run the app in a Docker container.",
+      "exampleTranslation": "รันแอปใน Docker container"
+    },
+    {
+      "vocab": "orchestration",
+      "pronunciation": "ออร์-เคส-เทร-ชั่น",
+      "meaning": "การจัดการ container หลายตัว",
+      "example": "Kubernetes handles container orchestration.",
+      "exampleTranslation": "Kubernetes จัดการ container orchestration"
+    },
+    {
+      "vocab": "load balancer",
+      "pronunciation": "โหลด-บา-แลน-เซอะ",
+      "meaning": "ตัวกระจายโหลด",
+      "example": "The load balancer distributes traffic across servers.",
+      "exampleTranslation": "Load balancer กระจาย traffic ไปยัง server ต่างๆ"
+    },
+    {
+      "vocab": "microservices",
+      "pronunciation": "ไม-โคร-เซอร์-วิส",
+      "meaning": "สถาปัตยกรรมแบบบริการย่อย",
+      "example": "We're migrating to a microservices architecture.",
+      "exampleTranslation": "เรากำลังย้ายไปใช้สถาปัตยกรรม microservices"
+    },
+    {
+      "vocab": "monolith",
+      "pronunciation": "มอ-โน-ลิธ",
+      "meaning": "แอปพลิเคชันก้อนเดียว",
+      "example": "The monolith is becoming hard to maintain.",
+      "exampleTranslation": "Monolith เริ่ม maintain ยากขึ้น"
+    },
+    {
+      "vocab": "serverless",
+      "pronunciation": "เซิร์ฟ-เวอะ-เลส",
+      "meaning": "ไม่ต้องจัดการ server เอง",
+      "example": "Deploy the function to a serverless platform.",
+      "exampleTranslation": "Deploy ฟังก์ชันไปยัง serverless platform"
+    },
+    {
+      "vocab": "webhook",
+      "pronunciation": "เว็บ-ฮุค",
+      "meaning": "การแจ้งเตือนอัตโนมัติผ่าน HTTP",
+      "example": "Set up a webhook to receive notifications.",
+      "exampleTranslation": "ตั้งค่า webhook เพื่อรับการแจ้งเตือน"
+    },
+    {
+      "vocab": "SDK",
+      "pronunciation": "เอส-ดี-เค",
+      "meaning": "ชุดเครื่องมือพัฒนาซอฟต์แวร์",
+      "example": "Install the Firebase SDK.",
+      "exampleTranslation": "ติดตั้ง Firebase SDK"
+    },
+    {
+      "vocab": "library",
+      "pronunciation": "ไล-บรา-รี่",
+      "meaning": "ชุดโค้ดสำเร็จรูป",
+      "example": "Use a date library instead of writing your own.",
+      "exampleTranslation": "ใช้ library จัดการวันที่แทนการเขียนเอง"
+    },
+    {
+      "vocab": "framework",
+      "pronunciation": "เฟรม-เวิร์ค",
+      "meaning": "โครงสร้างพื้นฐานสำหรับพัฒนาแอป",
+      "example": "React is a popular frontend framework.",
+      "exampleTranslation": "React เป็น frontend framework ที่นิยม"
+    },
+    {
+      "vocab": "boilerplate",
+      "pronunciation": "บอย-เลอะ-เพลท",
+      "meaning": "โค้ดพื้นฐานที่ต้องเขียนซ้ำๆ",
+      "example": "Use a starter template to avoid boilerplate.",
+      "exampleTranslation": "ใช้ template เริ่มต้นเพื่อหลีกเลี่ยง boilerplate"
+    },
+    {
+      "vocab": "snippet",
+      "pronunciation": "สนิป-เพ็ท",
+      "meaning": "ส่วนย่อยของโค้ด",
+      "example": "Save this code snippet for later use.",
+      "exampleTranslation": "บันทึก code snippet นี้ไว้ใช้ทีหลัง"
+    },
+    {
+      "vocab": "syntax",
+      "pronunciation": "ซิน-แท็กซ์",
+      "meaning": "ไวยากรณ์ของภาษาโปรแกรม",
+      "example": "Check your syntax - there's a missing semicolon.",
+      "exampleTranslation": "ตรวจสอบ syntax - มี semicolon หายไป"
+    },
+    {
+      "vocab": "parameter",
+      "pronunciation": "พา-รา-มิ-เทอะ",
+      "meaning": "ค่าที่ส่งเข้าฟังก์ชัน",
+      "example": "Pass the user ID as a parameter.",
+      "exampleTranslation": "ส่ง user ID เป็น parameter"
+    },
+    {
+      "vocab": "argument",
+      "pronunciation": "อาร์-กิว-เมนท์",
+      "meaning": "ค่าจริงที่ส่งเข้าฟังก์ชัน",
+      "example": "The function requires two arguments.",
+      "exampleTranslation": "ฟังก์ชันต้องการ argument สองตัว"
+    },
+    {
+      "vocab": "callback",
+      "pronunciation": "คอล-แบ็ค",
+      "meaning": "ฟังก์ชันที่เรียกหลังงานเสร็จ",
+      "example": "Use a callback to handle the response.",
+      "exampleTranslation": "ใช้ callback เพื่อจัดการ response"
+    },
+    {
+      "vocab": "async/await",
+      "pronunciation": "เอ-ซิงค์/อะ-เวท",
+      "meaning": "การเขียนโค้ดแบบ asynchronous",
+      "example": "Use async/await for cleaner async code.",
+      "exampleTranslation": "ใช้ async/await เพื่อโค้ด async ที่สะอาดขึ้น"
+    },
+    {
+      "vocab": "promise",
+      "pronunciation": "พรอ-มิส",
+      "meaning": "object แทนค่าที่จะมีในอนาคต",
+      "example": "The API returns a promise.",
+      "exampleTranslation": "API คืนค่า promise"
+    },
+    {
+      "vocab": "exception",
+      "pronunciation": "เอ็กซ์-เซพ-ชั่น",
+      "meaning": "ข้อผิดพลาดที่เกิดขึ้นขณะรัน",
+      "example": "Handle exceptions properly.",
+      "exampleTranslation": "จัดการ exception อย่างเหมาะสม"
+    },
+    {
+      "vocab": "stack trace",
+      "pronunciation": "สแต็ค-เทรซ",
+      "meaning": "ลำดับการเรียกฟังก์ชันเมื่อเกิด error",
+      "example": "Check the stack trace to find the bug.",
+      "exampleTranslation": "ดู stack trace เพื่อหาบัค"
+    },
+    {
+      "vocab": "breakpoint",
+      "pronunciation": "เบรค-พอยท์",
+      "meaning": "จุดหยุดเพื่อ debug",
+      "example": "Set a breakpoint on line 42.",
+      "exampleTranslation": "ตั้ง breakpoint ที่บรรทัด 42"
+    },
+    {
+      "vocab": "log",
+      "pronunciation": "ล็อก",
+      "meaning": "บันทึกการทำงานของระบบ",
+      "example": "Check the logs for errors.",
+      "exampleTranslation": "ตรวจสอบ log หาข้อผิดพลาด"
+    },
+    {
+      "vocab": "unit test",
+      "pronunciation": "ยู-นิท-เทสท์",
+      "meaning": "การทดสอบส่วนย่อยของโค้ด",
+      "example": "Write unit tests for all functions.",
+      "exampleTranslation": "เขียน unit test สำหรับทุกฟังก์ชัน"
+    },
+    {
+      "vocab": "integration test",
+      "pronunciation": "อิน-ทิ-เกร-ชั่น-เทสท์",
+      "meaning": "การทดสอบการทำงานร่วมกัน",
+      "example": "Run integration tests before deploying.",
+      "exampleTranslation": "รัน integration test ก่อน deploy"
+    },
+    {
+      "vocab": "mock",
+      "pronunciation": "ม็อค",
+      "meaning": "ตัวแทนปลอมสำหรับ test",
+      "example": "Use mocks to simulate API responses.",
+      "exampleTranslation": "ใช้ mock เพื่อจำลอง API response"
+    },
+    {
+      "vocab": "coverage",
+      "pronunciation": "คัฟ-เวอ-เรจ",
+      "meaning": "เปอร์เซ็นต์โค้ดที่ถูก test",
+      "example": "Aim for 80% code coverage.",
+      "exampleTranslation": "ตั้งเป้า code coverage 80%"
+    },
+    {
+      "vocab": "regression",
+      "pronunciation": "รี-เกรส-ชั่น",
+      "meaning": "บัคที่เกิดจากการแก้โค้ด",
+      "example": "Run regression tests after changes.",
+      "exampleTranslation": "รัน regression test หลังแก้ไขโค้ด"
+    },
+    {
+      "vocab": "hotfix",
+      "pronunciation": "ฮอท-ฟิกซ์",
+      "meaning": "การแก้บัคเร่งด่วน",
+      "example": "Deploy a hotfix for the critical bug.",
+      "exampleTranslation": "Deploy hotfix สำหรับบัควิกฤต"
+    },
+    {
+      "vocab": "production",
+      "pronunciation": "โพร-ดัค-ชั่น",
+      "meaning": "สภาพแวดล้อมจริงที่ผู้ใช้เข้าถึง",
+      "example": "Never test in production.",
+      "exampleTranslation": "อย่า test บน production"
+    },
+    {
+      "vocab": "staging",
+      "pronunciation": "สเต-จิง",
+      "meaning": "สภาพแวดล้อมทดสอบก่อน production",
+      "example": "Test on staging before going live.",
+      "exampleTranslation": "ทดสอบบน staging ก่อนขึ้น production"
+    },
+    {
+      "vocab": "environment variable",
+      "pronunciation": "เอน-ไว-รอน-เมนท์-แว-ริ-เอ-เบิล",
+      "meaning": "ค่าตั้งต่าที่กำหนดตามสภาพแวดล้อม",
+      "example": "Store secrets in environment variables.",
+      "exampleTranslation": "เก็บ secret ใน environment variable"
+    },
+    {
+      "vocab": "hard-coded",
+      "pronunciation": "ฮาร์ด-โค้ด-เด็ด",
+      "meaning": "ค่าที่เขียนตายตัวในโค้ด",
+      "example": "Don't hard-code the API URL.",
+      "exampleTranslation": "อย่า hard-code URL ของ API"
+    },
+    {
+      "vocab": "edge case",
+      "pronunciation": "เอ็จ-เคส",
+      "meaning": "กรณีพิเศษที่ไม่ค่อยเกิดขึ้น",
+      "example": "Consider edge cases in your logic.",
+      "exampleTranslation": "คิดถึง edge case ใน logic ของคุณ"
+    },
+    {
+      "vocab": "race condition",
+      "pronunciation": "เรซ-คอน-ดิ-ชั่น",
+      "meaning": "บัคจากการแข่งกันทำงาน",
+      "example": "This bug is caused by a race condition.",
+      "exampleTranslation": "บัคนี้เกิดจาก race condition"
+    },
+    {
+      "vocab": "deadlock",
+      "pronunciation": "เด็ด-ล็อค",
+      "meaning": "สถานะที่ระบบค้างเพราะรอกันวนลูป",
+      "example": "Avoid deadlocks in concurrent code.",
+      "exampleTranslation": "หลีกเลี่ยง deadlock ในโค้ดที่ทำงานพร้อมกัน"
+    },
+    {
+      "vocab": "memory leak",
+      "pronunciation": "เม-โม-รี่-ลีค",
+      "meaning": "หน่วยความจำรั่วไหล",
+      "example": "Fix the memory leak in the component.",
+      "exampleTranslation": "แก้ไข memory leak ใน component"
+    },
+    {
+      "vocab": "garbage collection",
+      "pronunciation": "การ์-เบจ-คอล-เล็ค-ชั่น",
+      "meaning": "การเคลียร์หน่วยความจำอัตโนมัติ",
+      "example": "JavaScript uses garbage collection.",
+      "exampleTranslation": "JavaScript ใช้ garbage collection"
+    },
+    {
+      "vocab": "recursion",
+      "pronunciation": "รี-เคอะ-ชั่น",
+      "meaning": "ฟังก์ชันที่เรียกตัวเอง",
+      "example": "Use recursion to traverse the tree.",
+      "exampleTranslation": "ใช้ recursion เพื่อวนผ่าน tree"
+    },
+    {
+      "vocab": "iterate",
+      "pronunciation": "อิท-เทอ-เรท",
+      "meaning": "วนซ้ำ",
+      "example": "Iterate over the array to find the value.",
+      "exampleTranslation": "วนซ้ำ array เพื่อหาค่า"
+    },
+    {
+      "vocab": "traverse",
+      "pronunciation": "ทรา-เวิร์ส",
+      "meaning": "เดินผ่านโครงสร้างข้อมูล",
+      "example": "Traverse the DOM tree.",
+      "exampleTranslation": "เดินผ่าน DOM tree"
+    },
+    {
+      "vocab": "parse",
+      "pronunciation": "พาร์ส",
+      "meaning": "แยกวิเคราะห์ข้อมูล",
+      "example": "Parse the JSON response.",
+      "exampleTranslation": "Parse JSON response"
+    },
+    {
+      "vocab": "serialize",
+      "pronunciation": "ซี-เรียล-ไลซ์",
+      "meaning": "แปลง object เป็น string/bytes",
+      "example": "Serialize the data before sending.",
+      "exampleTranslation": "Serialize ข้อมูลก่อนส่ง"
+    },
+    {
+      "vocab": "deserialize",
+      "pronunciation": "ดี-ซี-เรียล-ไลซ์",
+      "meaning": "แปลง string/bytes กลับเป็น object",
+      "example": "Deserialize the response into an object.",
+      "exampleTranslation": "Deserialize response เป็น object"
+    },
+    {
+      "vocab": "validate",
+      "pronunciation": "แว-ลิ-เดท",
+      "meaning": "ตรวจสอบความถูกต้อง",
+      "example": "Validate user input before processing.",
+      "exampleTranslation": "ตรวจสอบ input ของผู้ใช้ก่อนประมวลผล"
+    },
+    {
+      "vocab": "sanitize",
+      "pronunciation": "แซน-นิ-ไทซ์",
+      "meaning": "ทำความสะอาดข้อมูลป้องกัน attack",
+      "example": "Sanitize input to prevent XSS attacks.",
+      "exampleTranslation": "Sanitize input เพื่อป้องกัน XSS attack"
+    },
+    {
+      "vocab": "escape",
+      "pronunciation": "เอส-เคป",
+      "meaning": "แปลงอักขระพิเศษให้ปลอดภัย",
+      "example": "Escape special characters in the string.",
+      "exampleTranslation": "Escape อักขระพิเศษใน string"
+    },
+    {
+      "vocab": "encrypt",
+      "pronunciation": "เอน-คริพท์",
+      "meaning": "เข้ารหัสข้อมูล",
+      "example": "Encrypt sensitive data at rest.",
+      "exampleTranslation": "เข้ารหัสข้อมูลสำคัญที่จัดเก็บ"
+    },
+    {
+      "vocab": "hash",
+      "pronunciation": "แฮช",
+      "meaning": "แปลงข้อมูลเป็นค่าเฉพาะแบบทางเดียว",
+      "example": "Hash passwords before storing.",
+      "exampleTranslation": "Hash รหัสผ่านก่อนจัดเก็บ"
+    },
+    {
+      "vocab": "token",
+      "pronunciation": "โท-เคน",
+      "meaning": "รหัสยืนยันตัวตนชั่วคราว",
+      "example": "The access token expires in 1 hour.",
+      "exampleTranslation": "Access token หมดอายุใน 1 ชั่วโมง"
+    },
+    {
+      "vocab": "session",
+      "pronunciation": "เซส-ชั่น",
+      "meaning": "ช่วงการเชื่อมต่อของผู้ใช้",
+      "example": "Store user data in the session.",
+      "exampleTranslation": "เก็บข้อมูลผู้ใช้ใน session"
+    },
+    {
+      "vocab": "cookie",
+      "pronunciation": "คุก-กี้",
+      "meaning": "ข้อมูลเล็กๆ ที่เก็บใน browser",
+      "example": "Set a cookie for the auth token.",
+      "exampleTranslation": "ตั้ง cookie สำหรับ auth token"
+    },
+    {
+      "vocab": "CORS",
+      "pronunciation": "คอร์ส",
+      "meaning": "นโยบายการเข้าถึงข้ามโดเมน",
+      "example": "Enable CORS for the API.",
+      "exampleTranslation": "เปิดใช้งาน CORS สำหรับ API"
+    },
+    {
+      "vocab": "SSL/TLS",
+      "pronunciation": "เอส-เอส-แอล/ที-แอล-เอส",
+      "meaning": "โปรโตคอลเข้ารหัสการสื่อสาร",
+      "example": "Use SSL/TLS for secure connections.",
+      "exampleTranslation": "ใช้ SSL/TLS สำหรับการเชื่อมต่อที่ปลอดภัย"
+    },
+    {
+      "vocab": "inject",
+      "pronunciation": "อิน-เจ็คท์",
+      "meaning": "ใส่/ฉีดเข้าไป (dependency/attack)",
+      "example": "Use dependency injection for better testing.",
+      "exampleTranslation": "ใช้ dependency injection เพื่อ test ง่ายขึ้น"
+    },
+    {
+      "vocab": "render",
+      "pronunciation": "เรน-เดอะ",
+      "meaning": "แสดงผล UI",
+      "example": "The component renders when state changes.",
+      "exampleTranslation": "Component จะ render เมื่อ state เปลี่ยน"
+    },
+    {
+      "vocab": "hydrate",
+      "pronunciation": "ไฮ-เดรท",
+      "meaning": "เติม interactivity ให้ HTML ที่ render จาก server",
+      "example": "React hydrates the server-rendered HTML.",
+      "exampleTranslation": "React hydrate HTML ที่ render จาก server"
+    },
+    {
+      "vocab": "prop",
+      "pronunciation": "พร็อพ",
+      "meaning": "ค่าที่ส่งเข้า component",
+      "example": "Pass the data as a prop.",
+      "exampleTranslation": "ส่งข้อมูลเป็น prop"
+    },
+    {
+      "vocab": "state",
+      "pronunciation": "สเตท",
+      "meaning": "ข้อมูลภายใน component ที่เปลี่ยนได้",
+      "example": "Update the component state.",
+      "exampleTranslation": "อัพเดท state ของ component"
+    },
+    {
+      "vocab": "hook",
+      "pronunciation": "ฮุค",
+      "meaning": "ฟังก์ชันพิเศษใน React",
+      "example": "Use the useState hook to manage state.",
+      "exampleTranslation": "ใช้ useState hook เพื่อจัดการ state"
+    },
+    {
+      "vocab": "lifecycle",
+      "pronunciation": "ไลฟ์-ไซ-เคิล",
+      "meaning": "วงจรชีวิตของ component",
+      "example": "useEffect runs during the component lifecycle.",
+      "exampleTranslation": "useEffect ทำงานระหว่าง lifecycle ของ component"
+    },
+    {
+      "vocab": "responsive",
+      "pronunciation": "ริส-พอน-ซิฟ",
+      "meaning": "ปรับตามขนาดหน้าจอ",
+      "example": "Make the design responsive for mobile.",
+      "exampleTranslation": "ทำให้ design responsive สำหรับมือถือ"
+    },
+    {
+      "vocab": "viewport",
+      "pronunciation": "วิว-พอร์ท",
+      "meaning": "พื้นที่แสดงผลบนหน้าจอ",
+      "example": "Set the viewport meta tag for mobile.",
+      "exampleTranslation": "ตั้งค่า viewport meta tag สำหรับมือถือ"
+    },
+    {
+      "vocab": "synchronous",
+      "pronunciation": "ซิง-โคร-นัส",
+      "meaning": "ทำงานตามลำดับ, รอจนเสร็จก่อนทำต่อ",
+      "example": "Synchronous code blocks until the operation completes.",
+      "exampleTranslation": "โค้ด synchronous จะบล็อคจนกว่าการทำงานจะเสร็จ"
+    },
+    {
+      "vocab": "asynchronous",
+      "pronunciation": "เอ-ซิง-โคร-นัส",
+      "meaning": "ทำงานโดยไม่ต้องรอ, ไม่บล็อค",
+      "example": "Asynchronous operations don't block the main thread.",
+      "exampleTranslation": "การทำงานแบบ asynchronous ไม่บล็อค main thread"
+    },
+    {
+      "vocab": "distributed",
+      "pronunciation": "ดิส-ทริ-บิว-เท็ด",
+      "meaning": "กระจาย, ทำงานหลายเครื่อง",
+      "example": "A distributed system runs across multiple servers.",
+      "exampleTranslation": "ระบบ distributed ทำงานข้ามหลาย server"
+    },
+    {
+      "vocab": "concurrent",
+      "pronunciation": "คอน-เคอ-เรนท์",
+      "meaning": "ทำงานพร้อมกัน (สลับ context)",
+      "example": "Handle concurrent requests efficiently.",
+      "exampleTranslation": "จัดการ request ที่เกิดพร้อมกันอย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "parallel",
+      "pronunciation": "พา-รา-เลล",
+      "meaning": "ประมวลผลขนาน (หลาย core พร้อมกัน)",
+      "example": "Use parallel processing for CPU-intensive tasks.",
+      "exampleTranslation": "ใช้การประมวลผลขนานสำหรับงานที่ใช้ CPU หนัก"
+    },
+    {
+      "vocab": "thread",
+      "pronunciation": "เธรด",
+      "meaning": "หน่วยย่อยของ process ที่ทำงานได้",
+      "example": "Each thread can execute code independently.",
+      "exampleTranslation": "แต่ละ thread สามารถรันโค้ดได้อิสระ"
+    },
+    {
+      "vocab": "event loop",
+      "pronunciation": "อี-เวนท์-ลูป",
+      "meaning": "กลไกจัดการ event ใน JavaScript",
+      "example": "The event loop handles async callbacks.",
+      "exampleTranslation": "Event loop จัดการ async callback"
+    },
+    {
+      "vocab": "blocking",
+      "pronunciation": "บล็อค-คิง",
+      "meaning": "การทำงานที่หยุดรอ",
+      "example": "Avoid blocking I/O operations.",
+      "exampleTranslation": "หลีกเลี่ยงการทำงาน I/O แบบ blocking"
+    },
+    {
+      "vocab": "non-blocking",
+      "pronunciation": "นอน-บล็อค-คิง",
+      "meaning": "การทำงานที่ไม่หยุดรอ",
+      "example": "Node.js uses non-blocking I/O.",
+      "exampleTranslation": "Node.js ใช้ I/O แบบ non-blocking"
+    },
+    {
+      "vocab": "API",
+      "pronunciation": "เอ-พี-ไอ",
+      "meaning": "ส่วนเชื่อมต่อระหว่างซอฟต์แวร์",
+      "example": "Call the REST API to fetch data.",
+      "exampleTranslation": "เรียก REST API เพื่อดึงข้อมูล"
+    },
+    {
+      "vocab": "REST",
+      "pronunciation": "เรสท์",
+      "meaning": "รูปแบบการออกแบบ API ยอดนิยม",
+      "example": "Design the API following REST principles.",
+      "exampleTranslation": "ออกแบบ API ตามหลัก REST"
+    },
+    {
+      "vocab": "GraphQL",
+      "pronunciation": "กราฟ-คิว-แอล",
+      "meaning": "ภาษา query สำหรับ API",
+      "example": "GraphQL lets clients request specific data.",
+      "exampleTranslation": "GraphQL ให้ client เลือกดึงข้อมูลที่ต้องการได้"
+    },
+    {
+      "vocab": "WebSocket",
+      "pronunciation": "เว็บ-ซ็อค-เก็ท",
+      "meaning": "การเชื่อมต่อแบบ real-time สองทาง",
+      "example": "Use WebSocket for real-time chat.",
+      "exampleTranslation": "ใช้ WebSocket สำหรับแชทแบบ real-time"
+    },
+    {
+      "vocab": "idempotent",
+      "pronunciation": "ไอ-เด็ม-โพ-เทนท์",
+      "meaning": "ทำซ้ำกี่ครั้งก็ได้ผลเหมือนกัน",
+      "example": "PUT requests should be idempotent.",
+      "exampleTranslation": "PUT request ควรเป็น idempotent"
+    },
+    {
+      "vocab": "stateless",
+      "pronunciation": "สเตท-เลส",
+      "meaning": "ไม่เก็บสถานะระหว่าง request",
+      "example": "REST APIs are typically stateless.",
+      "exampleTranslation": "REST API โดยทั่วไปเป็น stateless"
+    },
+    {
+      "vocab": "stateful",
+      "pronunciation": "สเตท-ฟูล",
+      "meaning": "เก็บสถานะระหว่าง request",
+      "example": "WebSocket connections are stateful.",
+      "exampleTranslation": "การเชื่อมต่อ WebSocket เป็น stateful"
+    },
+    {
+      "vocab": "immutable",
+      "pronunciation": "อิม-มิว-ทา-เบิล",
+      "meaning": "เปลี่ยนแปลงไม่ได้",
+      "example": "Use immutable data structures for predictability.",
+      "exampleTranslation": "ใช้ข้อมูลแบบ immutable เพื่อความคาดเดาได้"
+    },
+    {
+      "vocab": "mutable",
+      "pronunciation": "มิว-ทา-เบิล",
+      "meaning": "เปลี่ยนแปลงได้",
+      "example": "Be careful with mutable state.",
+      "exampleTranslation": "ระวังกับ state ที่เป็น mutable"
+    },
+    {
+      "vocab": "queue",
+      "pronunciation": "คิว",
+      "meaning": "คิวข้อมูล/งาน (FIFO)",
+      "example": "Add the job to the message queue.",
+      "exampleTranslation": "เพิ่มงานเข้า message queue"
+    },
+    {
+      "vocab": "pub/sub",
+      "pronunciation": "พับ-ซับ",
+      "meaning": "รูปแบบ publish/subscribe",
+      "example": "Use pub/sub for event-driven architecture.",
+      "exampleTranslation": "ใช้ pub/sub สำหรับสถาปัตยกรรมแบบ event-driven"
+    },
+    {
+      "vocab": "throttle",
+      "pronunciation": "ธร็อท-เทิล",
+      "meaning": "จำกัดความถี่การเรียก",
+      "example": "Throttle API calls to prevent overload.",
+      "exampleTranslation": "Throttle การเรียก API เพื่อป้องกัน overload"
+    },
+    {
+      "vocab": "debounce",
+      "pronunciation": "ดี-เบาซ์",
+      "meaning": "หน่วงเวลาก่อนทำงาน",
+      "example": "Debounce the search input to reduce API calls.",
+      "exampleTranslation": "Debounce ช่อง search เพื่อลดการเรียก API"
+    },
+    {
+      "vocab": "lazy loading",
+      "pronunciation": "เล-ซี่-โหลด-ดิง",
+      "meaning": "โหลดเมื่อต้องการใช้งาน",
+      "example": "Use lazy loading for images below the fold.",
+      "exampleTranslation": "ใช้ lazy loading สำหรับรูปที่อยู่ด้านล่าง"
+    },
+    {
+      "vocab": "pagination",
+      "pronunciation": "เพ-จิ-เน-ชั่น",
+      "meaning": "แบ่งข้อมูลเป็นหน้า",
+      "example": "Implement pagination for large datasets.",
+      "exampleTranslation": "ทำ pagination สำหรับข้อมูลจำนวนมาก"
+    },
+    {
+      "vocab": "rate limiting",
+      "pronunciation": "เรท-ลิ-มิท-ติง",
+      "meaning": "จำกัดจำนวน request ต่อเวลา",
+      "example": "API rate limiting prevents abuse.",
+      "exampleTranslation": "Rate limiting ของ API ป้องกันการใช้งานเกินขนาด"
+    },
+    {
+      "vocab": "timeout",
+      "pronunciation": "ไทม์-เอาท์",
+      "meaning": "หมดเวลารอ",
+      "example": "Set a timeout for the API request.",
+      "exampleTranslation": "ตั้ง timeout สำหรับ API request"
+    },
+    {
+      "vocab": "retry",
+      "pronunciation": "รี-ทราย",
+      "meaning": "ลองใหม่อีกครั้ง",
+      "example": "Implement retry logic for failed requests.",
+      "exampleTranslation": "ทำ logic สำหรับ retry request ที่ล้มเหลว"
+    },
+    {
+      "vocab": "fallback",
+      "pronunciation": "ฟอล-แบ็ค",
+      "meaning": "ทางเลือกสำรอง",
+      "example": "Provide a fallback if the API fails.",
+      "exampleTranslation": "มี fallback ถ้า API ล้มเหลว"
+    },
+    {
+      "vocab": "ORM",
+      "pronunciation": "โอ-อาร์-เอ็ม",
+      "meaning": "เครื่องมือแปลง object เป็น SQL",
+      "example": "Use an ORM like Prisma for database access.",
+      "exampleTranslation": "ใช้ ORM เช่น Prisma สำหรับเข้าถึงฐานข้อมูล"
+    },
+    {
+      "vocab": "CRUD",
+      "pronunciation": "ครัด",
+      "meaning": "Create, Read, Update, Delete",
+      "example": "Build CRUD operations for the resource.",
+      "exampleTranslation": "สร้าง CRUD operations สำหรับ resource"
+    },
+    {
+      "vocab": "SSR",
+      "pronunciation": "เอส-เอส-อาร์",
+      "meaning": "Server-Side Rendering",
+      "example": "Use SSR for better SEO.",
+      "exampleTranslation": "ใช้ SSR เพื่อ SEO ที่ดีขึ้น"
+    },
+    {
+      "vocab": "SSG",
+      "pronunciation": "เอส-เอส-จี",
+      "meaning": "Static Site Generation",
+      "example": "SSG generates pages at build time.",
+      "exampleTranslation": "SSG สร้างหน้าตอน build"
+    },
+    {
+      "vocab": "SPA",
+      "pronunciation": "เอส-พี-เอ",
+      "meaning": "Single Page Application",
+      "example": "React apps are typically SPAs.",
+      "exampleTranslation": "แอป React โดยทั่วไปเป็น SPA"
+    },
+    {
+      "vocab": "SEO",
+      "pronunciation": "เอส-อี-โอ",
+      "meaning": "Search Engine Optimization",
+      "example": "Optimize the page for SEO.",
+      "exampleTranslation": "ปรับแต่งหน้าสำหรับ SEO"
+    },
+    {
+      "vocab": "a11y",
+      "pronunciation": "เอ-อี-เลฟ-เวน-วาย",
+      "meaning": "Accessibility (การเข้าถึงได้)",
+      "example": "Ensure the site meets a11y standards.",
+      "exampleTranslation": "ให้แน่ใจว่าเว็บผ่านมาตรฐาน a11y"
+    },
+    {
+      "vocab": "i18n",
+      "pronunciation": "ไอ-เอท-ทีน-เอ็น",
+      "meaning": "Internationalization (รองรับหลายภาษา)",
+      "example": "Set up i18n for multi-language support.",
+      "exampleTranslation": "ตั้งค่า i18n เพื่อรองรับหลายภาษา"
+    },
+    {
+      "vocab": "abstraction",
+      "pronunciation": "แอบ-สแทรค-ชั่น",
+      "meaning": "การซ่อนรายละเอียดที่ซับซ้อน",
+      "example": "Create an abstraction layer for the database.",
+      "exampleTranslation": "สร้าง abstraction layer สำหรับฐานข้อมูล"
+    },
+    {
+      "vocab": "encapsulation",
+      "pronunciation": "เอน-แคป-ซู-เล-ชั่น",
+      "meaning": "การห่อหุ้มข้อมูลและ method",
+      "example": "Encapsulation hides internal implementation.",
+      "exampleTranslation": "Encapsulation ซ่อนการทำงานภายใน"
+    },
+    {
+      "vocab": "inheritance",
+      "pronunciation": "อิน-เฮ-ริ-แทนซ์",
+      "meaning": "การสืบทอดคุณสมบัติ",
+      "example": "The class inherits from the parent class.",
+      "exampleTranslation": "Class นี้สืบทอดจาก parent class"
+    },
+    {
+      "vocab": "polymorphism",
+      "pronunciation": "โพ-ลี่-มอร์-ฟิ-ซึม",
+      "meaning": "ความสามารถทำงานได้หลายรูปแบบ",
+      "example": "Polymorphism allows different implementations.",
+      "exampleTranslation": "Polymorphism ให้มี implementation ที่แตกต่างได้"
+    },
+    {
+      "vocab": "interface",
+      "pronunciation": "อิน-เทอะ-เฟซ",
+      "meaning": "สัญญาที่ class ต้องทำตาม",
+      "example": "Define an interface for the service.",
+      "exampleTranslation": "กำหนด interface สำหรับ service"
+    },
+    {
+      "vocab": "singleton",
+      "pronunciation": "ซิง-เกิล-ทัน",
+      "meaning": "pattern ที่มี instance เดียว",
+      "example": "Use the singleton pattern for the config.",
+      "exampleTranslation": "ใช้ singleton pattern สำหรับ config"
+    },
+    {
+      "vocab": "design pattern",
+      "pronunciation": "ดี-ไซน์-แพท-เทิร์น",
+      "meaning": "รูปแบบการออกแบบที่ใช้ซ้ำได้",
+      "example": "Learn common design patterns.",
+      "exampleTranslation": "เรียนรู้ design pattern ที่ใช้บ่อย"
+    },
+    {
+      "vocab": "DRY",
+      "pronunciation": "ดราย",
+      "meaning": "Don't Repeat Yourself - อย่าเขียนซ้ำ",
+      "example": "Follow the DRY principle.",
+      "exampleTranslation": "ทำตามหลัก DRY"
+    },
+    {
+      "vocab": "SOLID",
+      "pronunciation": "โซ-ลิด",
+      "meaning": "5 หลักการออกแบบ OOP",
+      "example": "Apply SOLID principles in your code.",
+      "exampleTranslation": "ใช้หลัก SOLID ในโค้ดของคุณ"
+    },
+    {
+      "vocab": "optimize",
+      "pronunciation": "ออพ-ทิ-ไมซ์",
+      "meaning": "ปรับปรุงประสิทธิภาพ",
+      "example": "Optimize the query for better performance.",
+      "exampleTranslation": "Optimize query เพื่อประสิทธิภาพที่ดีขึ้น"
+    },
+    {
+      "vocab": "benchmark",
+      "pronunciation": "เบนช์-มาร์ค",
+      "meaning": "ทดสอบวัดประสิทธิภาพ",
+      "example": "Run a benchmark to compare implementations.",
+      "exampleTranslation": "รัน benchmark เพื่อเปรียบเทียบ implementation"
+    },
+    {
+      "vocab": "profiling",
+      "pronunciation": "โพร-ไฟล์-ลิง",
+      "meaning": "วิเคราะห์หาจุดที่ช้า",
+      "example": "Use profiling to find performance issues.",
+      "exampleTranslation": "ใช้ profiling หาปัญหาด้านประสิทธิภาพ"
+    }
+  ]
+}

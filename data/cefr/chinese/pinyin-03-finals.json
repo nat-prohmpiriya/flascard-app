@@ -1,0 +1,259 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Pinyin Finals",
+    "description": "Chinese vowels and finals - simple finals, compound finals, nasal finals",
+    "category": "Pinyin Basics",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "pinyin", "finals", "vowels", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "大",
+      "pronunciation": "dà (a = อา)",
+      "meaning": "ใหญ่",
+      "example": "大家好！",
+      "exampleTranslation": "สวัสดีทุกคน!"
+    },
+    {
+      "vocab": "哥",
+      "pronunciation": "gē (e = เออ)",
+      "meaning": "พี่ชาย",
+      "example": "哥哥来了。",
+      "exampleTranslation": "พี่ชายมาแล้ว"
+    },
+    {
+      "vocab": "一",
+      "pronunciation": "yī (i = อี)",
+      "meaning": "หนึ่ง",
+      "example": "一个。",
+      "exampleTranslation": "หนึ่งอัน"
+    },
+    {
+      "vocab": "五",
+      "pronunciation": "wǔ (u = อู)",
+      "meaning": "ห้า",
+      "example": "五个人。",
+      "exampleTranslation": "ห้าคน"
+    },
+    {
+      "vocab": "女",
+      "pronunciation": "nǚ (ü = ปากจู๋ ลิ้นหน้า)",
+      "meaning": "ผู้หญิง",
+      "example": "女孩。",
+      "exampleTranslation": "เด็กผู้หญิง"
+    },
+    {
+      "vocab": "爱",
+      "pronunciation": "ài (ai = ไอ)",
+      "meaning": "รัก",
+      "example": "我爱你。",
+      "exampleTranslation": "ฉันรักคุณ"
+    },
+    {
+      "vocab": "北",
+      "pronunciation": "běi (ei = เอย)",
+      "meaning": "เหนือ",
+      "example": "北京。",
+      "exampleTranslation": "ปักกิ่ง"
+    },
+    {
+      "vocab": "好",
+      "pronunciation": "hǎo (ao = เอา)",
+      "meaning": "ดี",
+      "example": "很好！",
+      "exampleTranslation": "ดีมาก!"
+    },
+    {
+      "vocab": "走",
+      "pronunciation": "zǒu (ou = โอว)",
+      "meaning": "เดิน, ไป",
+      "example": "走吧！",
+      "exampleTranslation": "ไปเถอะ!"
+    },
+    {
+      "vocab": "三",
+      "pronunciation": "sān (an = อาน)",
+      "meaning": "สาม",
+      "example": "三天。",
+      "exampleTranslation": "สามวัน"
+    },
+    {
+      "vocab": "很",
+      "pronunciation": "hěn (en = เอิน)",
+      "meaning": "มาก",
+      "example": "很好。",
+      "exampleTranslation": "ดีมาก"
+    },
+    {
+      "vocab": "忙",
+      "pronunciation": "máng (ang = อาง)",
+      "meaning": "ยุ่ง",
+      "example": "我很忙。",
+      "exampleTranslation": "ฉันยุ่งมาก"
+    },
+    {
+      "vocab": "冷",
+      "pronunciation": "lěng (eng = เอิง)",
+      "meaning": "หนาว",
+      "example": "今天很冷。",
+      "exampleTranslation": "วันนี้หนาวมาก"
+    },
+    {
+      "vocab": "听",
+      "pronunciation": "tīng (ing = อิง)",
+      "meaning": "ฟัง",
+      "example": "听音乐。",
+      "exampleTranslation": "ฟังเพลง"
+    },
+    {
+      "vocab": "中",
+      "pronunciation": "zhōng (ong = อง ปากกลม)",
+      "meaning": "กลาง",
+      "example": "中国。",
+      "exampleTranslation": "ประเทศจีน"
+    },
+    {
+      "vocab": "家",
+      "pronunciation": "jiā (ia = เอีย)",
+      "meaning": "บ้าน",
+      "example": "回家。",
+      "exampleTranslation": "กลับบ้าน"
+    },
+    {
+      "vocab": "写",
+      "pronunciation": "xiě (ie = เอีย)",
+      "meaning": "เขียน",
+      "example": "写字。",
+      "exampleTranslation": "เขียนหนังสือ"
+    },
+    {
+      "vocab": "小",
+      "pronunciation": "xiǎo (iao = เอียว)",
+      "meaning": "เล็ก",
+      "example": "小狗。",
+      "exampleTranslation": "สุนัขตัวเล็ก"
+    },
+    {
+      "vocab": "六",
+      "pronunciation": "liù (iu = อิว)",
+      "meaning": "หก",
+      "example": "六点。",
+      "exampleTranslation": "หกโมง"
+    },
+    {
+      "vocab": "天",
+      "pronunciation": "tiān (ian = เอียน)",
+      "meaning": "วัน, ฟ้า",
+      "example": "今天。",
+      "exampleTranslation": "วันนี้"
+    },
+    {
+      "vocab": "心",
+      "pronunciation": "xīn (in = อิน)",
+      "meaning": "หัวใจ",
+      "example": "开心。",
+      "exampleTranslation": "มีความสุข"
+    },
+    {
+      "vocab": "想",
+      "pronunciation": "xiǎng (iang = เอียง)",
+      "meaning": "คิด, อยาก",
+      "example": "我想你。",
+      "exampleTranslation": "ฉันคิดถึงคุณ"
+    },
+    {
+      "vocab": "名",
+      "pronunciation": "míng (ing = อิง)",
+      "meaning": "ชื่อ",
+      "example": "你叫什么名字？",
+      "exampleTranslation": "คุณชื่ออะไร?"
+    },
+    {
+      "vocab": "花",
+      "pronunciation": "huā (ua = อัว)",
+      "meaning": "ดอกไม้",
+      "example": "这朵花很漂亮。",
+      "exampleTranslation": "ดอกไม้นี้สวยมาก"
+    },
+    {
+      "vocab": "国",
+      "pronunciation": "guó (uo = อัว)",
+      "meaning": "ประเทศ",
+      "example": "中国。",
+      "exampleTranslation": "ประเทศจีน"
+    },
+    {
+      "vocab": "快",
+      "pronunciation": "kuài (uai = อวย)",
+      "meaning": "เร็ว",
+      "example": "快点！",
+      "exampleTranslation": "เร็วหน่อย!"
+    },
+    {
+      "vocab": "对",
+      "pronunciation": "duì (ui = อุย)",
+      "meaning": "ถูกต้อง",
+      "example": "对不起。",
+      "exampleTranslation": "ขอโทษ"
+    },
+    {
+      "vocab": "短",
+      "pronunciation": "duǎn (uan = อวน)",
+      "meaning": "สั้น",
+      "example": "太短了。",
+      "exampleTranslation": "สั้นเกินไป"
+    },
+    {
+      "vocab": "问",
+      "pronunciation": "wèn (un = อุน)",
+      "meaning": "ถาม",
+      "example": "问问题。",
+      "exampleTranslation": "ถามคำถาม"
+    },
+    {
+      "vocab": "王",
+      "pronunciation": "wáng (uang = อวง)",
+      "meaning": "กษัตริย์, แซ่หวัง",
+      "example": "王先生。",
+      "exampleTranslation": "คุณหวัง"
+    },
+    {
+      "vocab": "云",
+      "pronunciation": "yún (ün = ปากจู๋ + น)",
+      "meaning": "เมฆ",
+      "example": "白云。",
+      "exampleTranslation": "เมฆขาว"
+    },
+    {
+      "vocab": "月",
+      "pronunciation": "yuè (üe = ปากจู๋ + เอ)",
+      "meaning": "เดือน, ดวงจันทร์",
+      "example": "月亮。",
+      "exampleTranslation": "ดวงจันทร์"
+    },
+    {
+      "vocab": "元",
+      "pronunciation": "yuán (üan = ปากจู๋ + อัน)",
+      "meaning": "หยวน (เงิน)",
+      "example": "十元。",
+      "exampleTranslation": "สิบหยวน"
+    },
+    {
+      "vocab": "二",
+      "pronunciation": "èr (er = เออร์ ลิ้นม้วน)",
+      "meaning": "สอง",
+      "example": "两个人。",
+      "exampleTranslation": "สองคน"
+    },
+    {
+      "vocab": "儿",
+      "pronunciation": "ér (-r = เติมท้าย ลิ้นม้วน)",
+      "meaning": "ลูก, คำต่อท้าย",
+      "example": "一点儿。",
+      "exampleTranslation": "นิดหน่อย"
+    }
+  ]
+}

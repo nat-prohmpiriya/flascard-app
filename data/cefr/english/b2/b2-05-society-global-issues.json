@@ -1,0 +1,384 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Society & Global Issues",
+    "description": "B2 level vocabulary for society and global issues",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "globalization",
+      "pronunciation": "โกล-บอล-ไล-เซ-ชั่น",
+      "meaning": "โลกาภิวัตน์",
+      "example": "Globalization connects economies worldwide.",
+      "exampleTranslation": "โลกาภิวัตน์เชื่อมต่อเศรษฐกิจทั่วโลก"
+    },
+    {
+      "vocab": "inequality",
+      "pronunciation": "อิน-อิ-ควอล-ลิ-ตี้",
+      "meaning": "ความไม่เท่าเทียม",
+      "example": "Income inequality is increasing.",
+      "exampleTranslation": "ความไม่เท่าเทียมทางรายได้กำลังเพิ่มขึ้น"
+    },
+    {
+      "vocab": "discrimination",
+      "pronunciation": "ดิส-คริม-มิ-เน-ชั่น",
+      "meaning": "การเลือกปฏิบัติ",
+      "example": "Discrimination based on race is illegal.",
+      "exampleTranslation": "การเลือกปฏิบัติตามเชื้อชาติผิดกฎหมาย"
+    },
+    {
+      "vocab": "prejudice",
+      "pronunciation": "เพรจ-จู-ดิส",
+      "meaning": "อคติ",
+      "example": "Prejudice leads to unfair treatment.",
+      "exampleTranslation": "อคตินำไปสู่การปฏิบัติที่ไม่ยุติธรรม"
+    },
+    {
+      "vocab": "stereotype",
+      "pronunciation": "สเต-รี-โอ-ไทพ์",
+      "meaning": "ภาพเหมารวม",
+      "example": "Don't believe stereotypes about cultures.",
+      "exampleTranslation": "อย่าเชื่อภาพเหมารวมเกี่ยวกับวัฒนธรรม"
+    },
+    {
+      "vocab": "marginalized",
+      "pronunciation": "มาร์-จิน-นะ-ไลซ์ด",
+      "meaning": "ถูกละเลย, ชายขอบ",
+      "example": "Marginalized communities need support.",
+      "exampleTranslation": "ชุมชนที่ถูกละเลยต้องการการสนับสนุน"
+    },
+    {
+      "vocab": "indigenous",
+      "pronunciation": "อิน-ดิจ-จิ-นัส",
+      "meaning": "พื้นเมือง, ชนพื้นเมือง",
+      "example": "Protect indigenous peoples' rights.",
+      "exampleTranslation": "ปกป้องสิทธิ์ของชนพื้นเมือง"
+    },
+    {
+      "vocab": "humanitarian",
+      "pronunciation": "ฮิว-แมน-นิ-แท-เรียน",
+      "meaning": "ด้านมนุษยธรรม",
+      "example": "Humanitarian aid reached the refugees.",
+      "exampleTranslation": "ความช่วยเหลือด้านมนุษยธรรมถึงผู้ลี้ภัย"
+    },
+    {
+      "vocab": "asylum",
+      "pronunciation": "อะ-ไซ-ลัม",
+      "meaning": "การลี้ภัย",
+      "example": "They applied for political asylum.",
+      "exampleTranslation": "พวกเขายื่นขอลี้ภัยทางการเมือง"
+    },
+    {
+      "vocab": "deportation",
+      "pronunciation": "ดี-พอร์-เท-ชั่น",
+      "meaning": "การเนรเทศ",
+      "example": "He faced deportation back home.",
+      "exampleTranslation": "เขาต้องเผชิญกับการถูกเนรเทศกลับบ้าน"
+    },
+    {
+      "vocab": "trafficking",
+      "pronunciation": "แทรฟ-ฟิค-คิง",
+      "meaning": "การค้ามนุษย์/ยาเสพติด",
+      "example": "Human trafficking is a global crime.",
+      "exampleTranslation": "การค้ามนุษย์เป็นอาชญากรรมระดับโลก"
+    },
+    {
+      "vocab": "exploitation",
+      "pronunciation": "เอ็กซ์-พลอย-เท-ชั่น",
+      "meaning": "การเอาเปรียบ, การแสวงหาผลประโยชน์",
+      "example": "Child exploitation must be stopped.",
+      "exampleTranslation": "การเอาเปรียบเด็กต้องยุติ"
+    },
+    {
+      "vocab": "corruption",
+      "pronunciation": "คอ-รัพ-ชั่น",
+      "meaning": "การทุจริต",
+      "example": "Corruption undermines democracy.",
+      "exampleTranslation": "การทุจริตบ่อนทำลายประชาธิปไตย"
+    },
+    {
+      "vocab": "transparency",
+      "pronunciation": "ทราน-สแพ-เรน-ซี",
+      "meaning": "ความโปร่งใส",
+      "example": "We need more government transparency.",
+      "exampleTranslation": "เราต้องการความโปร่งใสของรัฐบาลมากขึ้น"
+    },
+    {
+      "vocab": "accountability",
+      "pronunciation": "แอค-เคาน์-ทะ-บิ-ลิ-ตี้",
+      "meaning": "ความรับผิดชอบ",
+      "example": "Leaders must show accountability.",
+      "exampleTranslation": "ผู้นำต้องแสดงความรับผิดชอบ"
+    },
+    {
+      "vocab": "sovereignty",
+      "pronunciation": "ซอฟ-เวอ-เรน-ตี้",
+      "meaning": "อำนาจอธิปไตย",
+      "example": "National sovereignty must be respected.",
+      "exampleTranslation": "อำนาจอธิปไตยของชาติต้องได้รับการเคารพ"
+    },
+    {
+      "vocab": "sanction",
+      "pronunciation": "แซงค์-ชั่น",
+      "meaning": "มาตรการคว่ำบาตร",
+      "example": "Economic sanctions were imposed.",
+      "exampleTranslation": "มีการบังคับใช้มาตรการคว่ำบาตรทางเศรษฐกิจ"
+    },
+    {
+      "vocab": "diplomacy",
+      "pronunciation": "ดิ-โพล-มะ-ซี",
+      "meaning": "การทูต",
+      "example": "Diplomacy can prevent war.",
+      "exampleTranslation": "การทูตสามารถป้องกันสงคราม"
+    },
+    {
+      "vocab": "bilateral",
+      "pronunciation": "ไบ-แลท-เทอ-รัล",
+      "meaning": "ทวิภาคี (สองฝ่าย)",
+      "example": "They signed a bilateral agreement.",
+      "exampleTranslation": "พวกเขาลงนามข้อตกลงทวิภาคี"
+    },
+    {
+      "vocab": "multilateral",
+      "pronunciation": "มัล-ที-แลท-เทอ-รัล",
+      "meaning": "พหุภาคี (หลายฝ่าย)",
+      "example": "Multilateral cooperation is essential.",
+      "exampleTranslation": "ความร่วมมือพหุภาคีเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "coalition",
+      "pronunciation": "โค-อะ-ลิ-ชั่น",
+      "meaning": "แนวร่วม, พันธมิตร",
+      "example": "A coalition government was formed.",
+      "exampleTranslation": "รัฐบาลผสมได้ถูกจัดตั้งขึ้น"
+    },
+    {
+      "vocab": "regime",
+      "pronunciation": "เร-ชีม",
+      "meaning": "ระบอบการปกครอง",
+      "example": "The regime was overthrown.",
+      "exampleTranslation": "ระบอบการปกครองถูกโค่นล้ม"
+    },
+    {
+      "vocab": "authoritarian",
+      "pronunciation": "ออ-ธอ-ริ-แท-เรียน",
+      "meaning": "เผด็จการ, อำนาจนิยม",
+      "example": "Authoritarian regimes suppress dissent.",
+      "exampleTranslation": "ระบอบเผด็จการปราบปรามผู้เห็นต่าง"
+    },
+    {
+      "vocab": "totalitarian",
+      "pronunciation": "โท-แทล-ลิ-แท-เรียน",
+      "meaning": "เบ็ดเสร็จ, รวบอำนาจ",
+      "example": "Totalitarian states control everything.",
+      "exampleTranslation": "รัฐเบ็ดเสร็จควบคุมทุกอย่าง"
+    },
+    {
+      "vocab": "censorship",
+      "pronunciation": "เซน-เซอะ-ชิพ",
+      "meaning": "การเซ็นเซอร์",
+      "example": "Censorship limits free speech.",
+      "exampleTranslation": "การเซ็นเซอร์จำกัดเสรีภาพในการพูด"
+    },
+    {
+      "vocab": "propaganda",
+      "pronunciation": "พรอพ-พะ-แกน-ดา",
+      "meaning": "การโฆษณาชวนเชื่อ",
+      "example": "Propaganda spreads false information.",
+      "exampleTranslation": "การโฆษณาชวนเชื่อเผยแพร่ข้อมูลเท็จ"
+    },
+    {
+      "vocab": "disinformation",
+      "pronunciation": "ดิส-อิน-ฟอร์-เม-ชั่น",
+      "meaning": "ข้อมูลบิดเบือน",
+      "example": "Disinformation threatens democracy.",
+      "exampleTranslation": "ข้อมูลบิดเบือนคุกคามประชาธิปไตย"
+    },
+    {
+      "vocab": "misinformation",
+      "pronunciation": "มิส-อิน-ฟอร์-เม-ชั่น",
+      "meaning": "ข้อมูลผิดพลาด",
+      "example": "Social media spreads misinformation.",
+      "exampleTranslation": "โซเชียลมีเดียเผยแพร่ข้อมูลผิดพลาด"
+    },
+    {
+      "vocab": "civil rights",
+      "pronunciation": "ซิ-วิล ไรทส์",
+      "meaning": "สิทธิพลเมือง",
+      "example": "Civil rights protect all citizens.",
+      "exampleTranslation": "สิทธิพลเมืองคุ้มครองพลเมืองทุกคน"
+    },
+    {
+      "vocab": "human rights",
+      "pronunciation": "ฮิว-มัน ไรทส์",
+      "meaning": "สิทธิมนุษยชน",
+      "example": "Human rights are universal.",
+      "exampleTranslation": "สิทธิมนุษยชนเป็นสากล"
+    },
+    {
+      "vocab": "activism",
+      "pronunciation": "แอค-ทิ-วิ-ซึม",
+      "meaning": "การเคลื่อนไหวทางสังคม",
+      "example": "Youth activism is growing.",
+      "exampleTranslation": "การเคลื่อนไหวของเยาวชนกำลังเติบโต"
+    },
+    {
+      "vocab": "grassroots",
+      "pronunciation": "กราส-รูทส์",
+      "meaning": "ระดับรากหญ้า",
+      "example": "Grassroots movements create change.",
+      "exampleTranslation": "ขบวนการระดับรากหญ้าสร้างการเปลี่ยนแปลง"
+    },
+    {
+      "vocab": "solidarity",
+      "pronunciation": "ซอล-ลิ-แด-ริ-ตี้",
+      "meaning": "ความเป็นปึกแผ่น, สามัคคี",
+      "example": "We stand in solidarity with them.",
+      "exampleTranslation": "เรายืนหยัดเป็นหนึ่งเดียวกับพวกเขา"
+    },
+    {
+      "vocab": "empowerment",
+      "pronunciation": "เอ็ม-พาว-เวอะ-เมินท์",
+      "meaning": "การเสริมพลัง",
+      "example": "Women's empowerment is essential.",
+      "exampleTranslation": "การเสริมพลังสตรีเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "gender equality",
+      "pronunciation": "เจน-เดอะ อิ-ควอล-ลิ-ตี้",
+      "meaning": "ความเท่าเทียมทางเพศ",
+      "example": "Gender equality benefits everyone.",
+      "exampleTranslation": "ความเท่าเทียมทางเพศเป็นประโยชน์ต่อทุกคน"
+    },
+    {
+      "vocab": "social welfare",
+      "pronunciation": "โซ-เชียล เวล-แฟร์",
+      "meaning": "สวัสดิการสังคม",
+      "example": "Social welfare supports vulnerable people.",
+      "exampleTranslation": "สวัสดิการสังคมสนับสนุนคนที่เปราะบาง"
+    },
+    {
+      "vocab": "healthcare system",
+      "pronunciation": "เฮลธ์-แคร์ ซิส-เท็ม",
+      "meaning": "ระบบสาธารณสุข",
+      "example": "The healthcare system needs reform.",
+      "exampleTranslation": "ระบบสาธารณสุขต้องการการปฏิรูป"
+    },
+    {
+      "vocab": "universal basic income",
+      "pronunciation": "ยู-นิ-เวอร์-ซัล เบ-สิค อิน-คัม",
+      "meaning": "รายได้พื้นฐานถ้วนหน้า",
+      "example": "Universal basic income is debated.",
+      "exampleTranslation": "รายได้พื้นฐานถ้วนหน้าเป็นที่ถกเถียง"
+    },
+    {
+      "vocab": "urbanization",
+      "pronunciation": "เออร์-บัน-ไน-เซ-ชั่น",
+      "meaning": "การขยายตัวของเมือง",
+      "example": "Urbanization creates new challenges.",
+      "exampleTranslation": "การขยายตัวของเมืองสร้างความท้าทายใหม่"
+    },
+    {
+      "vocab": "infrastructure",
+      "pronunciation": "อิน-ฟรา-สตรัค-เชอะ",
+      "meaning": "โครงสร้างพื้นฐาน",
+      "example": "Infrastructure investment is needed.",
+      "exampleTranslation": "การลงทุนโครงสร้างพื้นฐานเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "demographic",
+      "pronunciation": "เด-โม-กราฟ-ฟิค",
+      "meaning": "ประชากรศาสตร์",
+      "example": "Demographic changes affect society.",
+      "exampleTranslation": "การเปลี่ยนแปลงทางประชากรส่งผลต่อสังคม"
+    },
+    {
+      "vocab": "aging population",
+      "pronunciation": "เอจ-จิง พอพ-พิว-เล-ชั่น",
+      "meaning": "ประชากรสูงอายุ",
+      "example": "An aging population strains healthcare.",
+      "exampleTranslation": "ประชากรสูงอายุสร้างภาระต่อระบบสาธารณสุข"
+    },
+    {
+      "vocab": "migration",
+      "pronunciation": "ไม-เกร-ชั่น",
+      "meaning": "การย้ายถิ่น",
+      "example": "Migration patterns are changing.",
+      "exampleTranslation": "รูปแบบการย้ายถิ่นกำลังเปลี่ยนแปลง"
+    },
+    {
+      "vocab": "integration",
+      "pronunciation": "อิน-ทิ-เกร-ชั่น",
+      "meaning": "การบูรณาการ",
+      "example": "Social integration helps immigrants.",
+      "exampleTranslation": "การบูรณาการทางสังคมช่วยผู้อพยพ"
+    },
+    {
+      "vocab": "assimilation",
+      "pronunciation": "อะ-ซิม-มิ-เล-ชั่น",
+      "meaning": "การกลืนกลาย",
+      "example": "Cultural assimilation is controversial.",
+      "exampleTranslation": "การกลืนกลายทางวัฒนธรรมเป็นที่ถกเถียง"
+    },
+    {
+      "vocab": "multiculturalism",
+      "pronunciation": "มัล-ที-คัล-เชอะ-รัล-ลิ-ซึม",
+      "meaning": "พหุวัฒนธรรม",
+      "example": "Multiculturalism enriches societies.",
+      "exampleTranslation": "พหุวัฒนธรรมเสริมสร้างสังคม"
+    },
+    {
+      "vocab": "polarization",
+      "pronunciation": "โพ-ลาร์-ไร-เซ-ชั่น",
+      "meaning": "การแบ่งขั้ว",
+      "example": "Political polarization is increasing.",
+      "exampleTranslation": "การแบ่งขั้วทางการเมืองกำลังเพิ่มขึ้น"
+    },
+    {
+      "vocab": "radicalization",
+      "pronunciation": "แรด-ดิ-คัล-ไล-เซ-ชั่น",
+      "meaning": "การหัวรุนแรง",
+      "example": "Radicalization leads to extremism.",
+      "exampleTranslation": "การหัวรุนแรงนำไปสู่ความสุดโต่ง"
+    },
+    {
+      "vocab": "terrorism",
+      "pronunciation": "เท-รอ-ริ-ซึม",
+      "meaning": "การก่อการร้าย",
+      "example": "Terrorism threatens global security.",
+      "exampleTranslation": "การก่อการร้ายคุกคามความมั่นคงโลก"
+    },
+    {
+      "vocab": "cyber warfare",
+      "pronunciation": "ไซ-เบอะ วอร์-แฟร์",
+      "meaning": "สงครามไซเบอร์",
+      "example": "Cyber warfare targets critical systems.",
+      "exampleTranslation": "สงครามไซเบอร์เล็งเป้าระบบสำคัญ"
+    },
+    {
+      "vocab": "pandemic",
+      "pronunciation": "แพน-เด-มิค",
+      "meaning": "โรคระบาดใหญ่",
+      "example": "The pandemic changed the world.",
+      "exampleTranslation": "โรคระบาดใหญ่เปลี่ยนโลก"
+    },
+    {
+      "vocab": "epidemic",
+      "pronunciation": "เอ-พิ-เด-มิค",
+      "meaning": "โรคระบาด",
+      "example": "An epidemic spread across the region.",
+      "exampleTranslation": "โรคระบาดแพร่กระจายทั่วภูมิภาค"
+    },
+    {
+      "vocab": "public health",
+      "pronunciation": "พับ-ลิค เฮลธ์",
+      "meaning": "สาธารณสุข",
+      "example": "Public health measures save lives.",
+      "exampleTranslation": "มาตรการสาธารณสุขช่วยชีวิต"
+    }
+  ]
+}
