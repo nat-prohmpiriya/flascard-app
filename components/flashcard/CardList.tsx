@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Card, Language, LANG_TO_TTS } from '@/types';
 import { Card as UICard, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -47,6 +48,19 @@ export function CardList({
         <UICard key={card.id} className="group">
           <CardContent className="p-4">
             <div className="flex gap-4">
+              {/* Image Thumbnail */}
+              {card.imageUrl && (
+                <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0">
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.vocab}
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
+                </div>
+              )}
+
               <div className="flex-1 grid md:grid-cols-2 gap-4">
                 {/* Vocab & Pronunciation */}
                 <div>

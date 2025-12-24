@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Card, Language, LANG_TO_TTS } from '@/types';
 import { Button } from '@/components/ui/button';
 import {
@@ -73,6 +74,17 @@ export function CardTable({
             <TableRow key={card.id}>
               <TableCell>
                 <div className="flex items-start gap-2">
+                  {card.imageUrl && (
+                    <div className="relative w-10 h-10 rounded overflow-hidden shrink-0">
+                      <Image
+                        src={card.imageUrl}
+                        alt={card.vocab}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    </div>
+                  )}
                   {isSupported && (
                     <Button
                       variant="ghost"

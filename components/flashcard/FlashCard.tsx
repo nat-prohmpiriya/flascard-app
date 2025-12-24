@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Card, Language, LANG_TO_TTS } from '@/types';
 import { Card as UICard } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -83,6 +84,17 @@ export function FlashCard({
             )}
           </div>
           <div className="flex-1 flex flex-col items-center justify-center">
+            {card.imageUrl && (
+              <div className="relative w-32 h-32 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src={card.imageUrl}
+                  alt={card.vocab}
+                  fill
+                  className="object-cover"
+                  sizes="128px"
+                />
+              </div>
+            )}
             <span className="text-3xl font-bold mb-2">{card.vocab}</span>
             {card.pronunciation && (
               <span className="text-lg text-muted-foreground">{card.pronunciation}</span>
