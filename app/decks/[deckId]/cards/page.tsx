@@ -11,7 +11,9 @@ import { ImportExport } from '@/components/flashcard/ImportExport';
 import { Button } from '@/components/ui/button';
 import { Card, CardFormData, Deck, ImportCard } from '@/types';
 import { useCards } from '@/hooks/useCards';
+import { useAuth } from '@/contexts/AuthContext';
 import { getDeck } from '@/services/deck';
+import { uploadCardImage, deleteCardImage } from '@/services/storage';
 import { toast } from 'sonner';
 import { ArrowLeft, Plus, LayoutGrid, List, Search, Play } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -29,6 +31,7 @@ export default function DeckCardsPage() {
   const router = useRouter();
   const deckId = params.deckId as string;
 
+  const { firebaseUser } = useAuth();
   const { cards, loading, addCard, editCard, removeCard, importCards } = useCards(deckId);
   const [deck, setDeck] = useState<Deck | null>(null);
 
@@ -37,6 +40,7 @@ export default function DeckCardsPage() {
   const [deletingCard, setDeletingCard] = useState<Card | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
 
   useEffect(() => {
     if (deckId) {
@@ -50,19 +54,92 @@ export default function DeckCardsPage() {
     }
   }, [deckId, router]);
 
-  const handleCreateCard = async (data: CardFormData) => {
+  const handleCreateCard = async (data: CardFormData, imageFile?: File | null) => {
+    if (!firebaseUser) return;
+
+    // First create the card without image
     const card = await addCard(data);
-    if (card) {
+    if (!card) return;
+
+    // If there's an image file, upload it and update the card
+    if (imageFile) {
+      setIsUploadingImage(true);
+      try {
+        const { url, storagePath } = await uploadCardImage(
+          firebaseUser.uid,
+          deckId,
+          card.id,
+          imageFile
+        );
+        await editCard(card.id, { imageUrl: url, imageStoragePath: storagePath });
+        toast.success('Card created with image!');
+      } catch (error) {
+        console.error('Failed to upload image:', error);
+        toast.error('Card created but image upload failed');
+      } finally {
+        setIsUploadingImage(false);
+      }
+    } else {
       toast.success('Card created successfully!');
     }
   };
 
-  const handleEditCard = async (data: CardFormData) => {
-    if (!editingCard) return;
-    const success = await editCard(editingCard.id, data);
-    if (success) {
-      toast.success('Card updated successfully!');
-      setEditingCard(null);
+  const handleEditCard = async (data: CardFormData, imageFile?: File | null, removeImage?: boolean) => {
+    if (!editingCard || !firebaseUser) return;
+
+    setIsUploadingImage(true);
+    try {
+      let imageUrl = editingCard.imageUrl;
+      let imageStoragePath = editingCard.imageStoragePath;
+
+      // Handle image removal
+      if (removeImage && editingCard.imageStoragePath) {
+        try {
+          await deleteCardImage(editingCard.imageStoragePath);
+        } catch (error) {
+          console.error('Failed to delete old image:', error);
+        }
+        imageUrl = undefined;
+        imageStoragePath = undefined;
+      }
+
+      // Handle new image upload
+      if (imageFile) {
+        // Delete old image first
+        if (editingCard.imageStoragePath) {
+          try {
+            await deleteCardImage(editingCard.imageStoragePath);
+          } catch (error) {
+            console.error('Failed to delete old image:', error);
+          }
+        }
+        // Upload new image
+        const result = await uploadCardImage(
+          firebaseUser.uid,
+          deckId,
+          editingCard.id,
+          imageFile
+        );
+        imageUrl = result.url;
+        imageStoragePath = result.storagePath;
+      }
+
+      // Update the card
+      const success = await editCard(editingCard.id, {
+        ...data,
+        imageUrl,
+        imageStoragePath,
+      });
+
+      if (success) {
+        toast.success('Card updated successfully!');
+        setEditingCard(null);
+      }
+    } catch (error) {
+      console.error('Failed to update card:', error);
+      toast.error('Failed to update card');
+    } finally {
+      setIsUploadingImage(false);
     }
   };
 
@@ -187,6 +264,7 @@ export default function DeckCardsPage() {
           open={showCardForm}
           onClose={() => setShowCardForm(false)}
           onSubmit={handleCreateCard}
+          isUploadingImage={isUploadingImage}
         />
 
         {/* Edit Card Form */}
@@ -196,6 +274,7 @@ export default function DeckCardsPage() {
             onClose={() => setEditingCard(null)}
             onSubmit={handleEditCard}
             initialData={editingCard}
+            isUploadingImage={isUploadingImage}
           />
         )}
 
