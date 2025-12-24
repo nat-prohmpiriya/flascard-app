@@ -78,6 +78,7 @@ export async function POST(request: Request) {
       name: parsed.deck.name,
       description: parsed.deck.description,
       category: parsed.deck.category,
+      tags: parsed.deck.tags || [],
       sourceLang: (parsed.deck.sourceLang || 'en') as Language,
       targetLang: (parsed.deck.targetLang || 'th') as Language,
       cardCount: 0,
@@ -132,6 +133,77 @@ export async function POST(request: Request) {
     console.error('Import error:', error);
     return NextResponse.json(
       { error: 'Failed to import file', details: String(error) },
+      { status: 500 }
+    );
+  }
+}
+
+// DELETE - Delete all decks and cards for a user
+export async function DELETE(request: Request) {
+  if (!validateApiKey(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const body = await request.json();
+    const { userId } = body;
+
+    if (!userId) {
+      return NextResponse.json(
+        { error: 'Missing required field: userId' },
+        { status: 400 }
+      );
+    }
+
+    const db = getAdminDb();
+
+    // Get all decks for user
+    const decksSnapshot = await db.collection('decks')
+      .where('userId', '==', userId)
+      .get();
+
+    // Get all cards for user
+    const cardsSnapshot = await db.collection('cards')
+      .where('userId', '==', userId)
+      .get();
+
+    // Delete in batches (Firestore batch limit is 500)
+    const batchSize = 400;
+    let deletedDecks = 0;
+    let deletedCards = 0;
+
+    // Delete cards
+    const cardDocs = cardsSnapshot.docs;
+    for (let i = 0; i < cardDocs.length; i += batchSize) {
+      const batch = db.batch();
+      const chunk = cardDocs.slice(i, i + batchSize);
+      chunk.forEach((doc) => batch.delete(doc.ref));
+      await batch.commit();
+      deletedCards += chunk.length;
+    }
+
+    // Delete decks
+    const deckDocs = decksSnapshot.docs;
+    for (let i = 0; i < deckDocs.length; i += batchSize) {
+      const batch = db.batch();
+      const chunk = deckDocs.slice(i, i + batchSize);
+      chunk.forEach((doc) => batch.delete(doc.ref));
+      await batch.commit();
+      deletedDecks += chunk.length;
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: `Deleted ${deletedDecks} decks and ${deletedCards} cards`,
+      deleted: {
+        decks: deletedDecks,
+        cards: deletedCards,
+      },
+    });
+  } catch (error) {
+    console.error('Delete error:', error);
+    return NextResponse.json(
+      { error: 'Failed to delete', details: String(error) },
       { status: 500 }
     );
   }
