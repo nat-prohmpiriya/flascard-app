@@ -16,6 +16,7 @@ import { db } from '@/lib/firebase';
 import { Card, CardFormData, ReviewQuality } from '@/types';
 import { toCard, CardDocument, DEFAULT_CARD_SRS } from '@/models/card';
 import { updateDeckCardCount } from './deck';
+import { deleteCardImage } from './storage';
 
 const COLLECTION = 'cards';
 
@@ -38,6 +39,8 @@ export async function createCard(
     meaning: data.meaning,
     example: data.example,
     exampleTranslation: data.exampleTranslation,
+    imageUrl: data.imageUrl,
+    imageStoragePath: data.imageStoragePath,
     nextReview: now,
     interval: DEFAULT_CARD_SRS.interval,
     easeFactor: DEFAULT_CARD_SRS.easeFactor,
@@ -120,6 +123,19 @@ export async function updateCard(
 }
 
 export async function deleteCard(cardId: string, deckId: string): Promise<void> {
+  // Get card to check for image
+  const card = await getCard(cardId);
+
+  // Delete associated image from storage if exists
+  if (card?.imageStoragePath) {
+    try {
+      await deleteCardImage(card.imageStoragePath);
+    } catch (error) {
+      console.error('Failed to delete card image:', error);
+      // Continue with card deletion even if image deletion fails
+    }
+  }
+
   await deleteDoc(doc(getDb(), COLLECTION, cardId));
   await updateDeckCardCount(deckId, -1);
 }
@@ -187,6 +203,8 @@ export async function bulkCreateCards(
       meaning: card.meaning,
       example: card.example,
       exampleTranslation: card.exampleTranslation,
+      imageUrl: card.imageUrl,
+      imageStoragePath: card.imageStoragePath,
       nextReview: now,
       interval: DEFAULT_CARD_SRS.interval,
       easeFactor: DEFAULT_CARD_SRS.easeFactor,
