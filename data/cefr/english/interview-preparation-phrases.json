@@ -1,0 +1,259 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Interview Preparation Phrases",
+    "description": "Common interview questions, answers, and professional phrases for tech interviews",
+    "category": "Professional English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "interview", "professional", "career", "communication"]
+  },
+  "cards": [
+    {
+      "vocab": "Tell me about yourself",
+      "pronunciation": "เทล มี อะ-เบาท์ ยัวร์-เซลฟ์",
+      "meaning": "เล่าเกี่ยวกับตัวคุณ - คำถามเปิดสัมภาษณ์",
+      "example": "I'm a software engineer with 5 years of experience in backend development.",
+      "exampleTranslation": "ผมเป็น software engineer มีประสบการณ์ 5 ปีด้าน backend"
+    },
+    {
+      "vocab": "Walk me through your resume",
+      "pronunciation": "วอล์ค มี ธรู ยัวร์ เร-ซู-เม่",
+      "meaning": "อธิบาย resume ของคุณ - ให้เล่าประวัติการทำงาน",
+      "example": "I started my career at Company X where I worked on...",
+      "exampleTranslation": "ผมเริ่มอาชีพที่บริษัท X ซึ่งผมทำงานเกี่ยวกับ..."
+    },
+    {
+      "vocab": "What are your strengths?",
+      "pronunciation": "วอท อาร์ ยัวร์ สเตร็งธ์",
+      "meaning": "จุดแข็งของคุณคืออะไร?",
+      "example": "My key strengths are problem-solving and attention to detail.",
+      "exampleTranslation": "จุดแข็งของผมคือการแก้ปัญหาและความใส่ใจรายละเอียด"
+    },
+    {
+      "vocab": "What are your weaknesses?",
+      "pronunciation": "วอท อาร์ ยัวร์ วีค-เนส-เซส",
+      "meaning": "จุดอ่อนของคุณคืออะไร?",
+      "example": "I sometimes focus too much on details, but I'm learning to prioritize.",
+      "exampleTranslation": "บางทีผมโฟกัสรายละเอียดมากเกินไป แต่กำลังเรียนรู้จัดลำดับ"
+    },
+    {
+      "vocab": "Why do you want to work here?",
+      "pronunciation": "วาย ดู ยู ว้อนท์ ทู เวิร์ค เฮียร์",
+      "meaning": "ทำไมอยากทำงานที่นี่?",
+      "example": "I'm impressed by your company's innovative products and engineering culture.",
+      "exampleTranslation": "ผมประทับใจกับผลิตภัณฑ์และวัฒนธรรมวิศวกรรมของบริษัท"
+    },
+    {
+      "vocab": "Why are you leaving your current job?",
+      "pronunciation": "วาย อาร์ ยู ลีฟ-วิง ยัวร์ เคอร์-เรนท์ จ็อบ",
+      "meaning": "ทำไมจะลาออกจากงานปัจจุบัน?",
+      "example": "I'm looking for new challenges and opportunities for growth.",
+      "exampleTranslation": "ผมกำลังมองหาความท้าทายและโอกาสเติบโตใหม่"
+    },
+    {
+      "vocab": "Where do you see yourself in 5 years?",
+      "pronunciation": "แวร์ ดู ยู ซี ยัวร์-เซลฟ์ อิน ไฟว์ เยียร์ส",
+      "meaning": "อีก 5 ปี คุณเห็นตัวเองเป็นอย่างไร?",
+      "example": "I see myself as a senior engineer leading a team.",
+      "exampleTranslation": "ผมเห็นตัวเองเป็น senior engineer นำทีม"
+    },
+    {
+      "vocab": "Describe a challenging project",
+      "pronunciation": "ดิส-ไครบ์ อะ ชา-เลน-จิง โปร-เจ็คท์",
+      "meaning": "เล่าโปรเจคที่ท้าทาย",
+      "example": "I led the migration of our monolith to microservices.",
+      "exampleTranslation": "ผมนำการย้าย monolith ไปเป็น microservices"
+    },
+    {
+      "vocab": "How do you handle conflict?",
+      "pronunciation": "ฮาว ดู ยู แฮน-เดิล คอน-ฟลิคท์",
+      "meaning": "คุณจัดการความขัดแย้งอย่างไร?",
+      "example": "I focus on understanding different perspectives and finding common ground.",
+      "exampleTranslation": "ผมโฟกัสเข้าใจมุมมองต่างๆ และหาจุดร่วม"
+    },
+    {
+      "vocab": "Tell me about a time you failed",
+      "pronunciation": "เทล มี อะ-เบาท์ อะ ไทม์ ยู เฟลด์",
+      "meaning": "เล่าเรื่องที่คุณล้มเหลว",
+      "example": "I once underestimated a project timeline, but I learned to add buffer time.",
+      "exampleTranslation": "ครั้งหนึ่งผมประเมินเวลาโปรเจคต่ำเกินไป แต่ได้เรียนรู้เผื่อเวลา"
+    },
+    {
+      "vocab": "How do you prioritize tasks?",
+      "pronunciation": "ฮาว ดู ยู ไพร-ออ-ริ-ไทซ์ ทาสค์",
+      "meaning": "คุณจัดลำดับความสำคัญงานอย่างไร?",
+      "example": "I use the Eisenhower matrix to categorize tasks by urgency and importance.",
+      "exampleTranslation": "ผมใช้ Eisenhower matrix จัดหมวดหมู่งานตามความเร่งด่วนและสำคัญ"
+    },
+    {
+      "vocab": "What's your expected salary?",
+      "pronunciation": "วอทส์ ยัวร์ เอ็กซ์-เพ็ค-เทด แซ-ลา-รี่",
+      "meaning": "คุณคาดหวังเงินเดือนเท่าไหร่?",
+      "example": "Based on my experience and market research, I'm looking at the range of...",
+      "exampleTranslation": "ตามประสบการณ์และการศึกษาตลาด ผมมองที่ช่วง..."
+    },
+    {
+      "vocab": "Do you have any questions for us?",
+      "pronunciation": "ดู ยู แฮฟ เอ-นี่ เควส-ชันส์ ฟอร์ อัส",
+      "meaning": "คุณมีคำถามอะไรไหม?",
+      "example": "What does a typical day look like for this role?",
+      "exampleTranslation": "วันทำงานปกติของตำแหน่งนี้เป็นอย่างไร?"
+    },
+    {
+      "vocab": "I have experience in...",
+      "pronunciation": "ไอ แฮฟ เอ็กซ์-พี-เรียนซ์ อิน",
+      "meaning": "ฉันมีประสบการณ์ใน...",
+      "example": "I have experience in building scalable backend systems.",
+      "exampleTranslation": "ผมมีประสบการณ์ในการสร้างระบบ backend ที่ scale ได้"
+    },
+    {
+      "vocab": "I'm proficient in...",
+      "pronunciation": "ไอม์ โพร-ฟิ-เชียนท์ อิน",
+      "meaning": "ฉันเชี่ยวชาญใน...",
+      "example": "I'm proficient in Python, JavaScript, and SQL.",
+      "exampleTranslation": "ผมเชี่ยวชาญ Python, JavaScript และ SQL"
+    },
+    {
+      "vocab": "I'm passionate about...",
+      "pronunciation": "ไอม์ แพช-ชัน-เนท อะ-เบาท์",
+      "meaning": "ฉันหลงใหลใน...",
+      "example": "I'm passionate about building products that solve real problems.",
+      "exampleTranslation": "ผมหลงใหลในการสร้างผลิตภัณฑ์ที่แก้ปัญหาจริง"
+    },
+    {
+      "vocab": "I led a team of...",
+      "pronunciation": "ไอ เลด อะ ทีม ออฟ",
+      "meaning": "ฉันนำทีม...",
+      "example": "I led a team of 5 engineers to deliver the project on time.",
+      "exampleTranslation": "ผมนำทีมวิศวกร 5 คนส่งมอบโปรเจคตรงเวลา"
+    },
+    {
+      "vocab": "I contributed to...",
+      "pronunciation": "ไอ คอน-ทริ-บิว-เทด ทู",
+      "meaning": "ฉันมีส่วนร่วมใน...",
+      "example": "I contributed to improving system performance by 40%.",
+      "exampleTranslation": "ผมมีส่วนร่วมปรับปรุงประสิทธิภาพระบบ 40%"
+    },
+    {
+      "vocab": "I'm a quick learner",
+      "pronunciation": "ไอม์ อะ ควิค เลิร์น-เนอร์",
+      "meaning": "ฉันเรียนรู้เร็ว",
+      "example": "I'm a quick learner and can pick up new technologies quickly.",
+      "exampleTranslation": "ผมเรียนรู้เร็วและสามารถเรียนเทคโนโลยีใหม่ได้เร็ว"
+    },
+    {
+      "vocab": "I thrive in...",
+      "pronunciation": "ไอ ธไรฟ์ อิน",
+      "meaning": "ฉันเติบโตได้ดีใน...",
+      "example": "I thrive in fast-paced environments with challenging problems.",
+      "exampleTranslation": "ผมเติบโตได้ดีในสภาพแวดล้อมที่เร็วและมีปัญหาท้าทาย"
+    },
+    {
+      "vocab": "I'm excited about this opportunity",
+      "pronunciation": "ไอม์ เอ็กซ์-ไซ-เทด อะ-เบาท์ ดิส ออพ-พอร์-ทู-นิ-ตี้",
+      "meaning": "ฉันตื่นเต้นกับโอกาสนี้",
+      "example": "I'm excited about this opportunity to work on cutting-edge technology.",
+      "exampleTranslation": "ผมตื่นเต้นกับโอกาสได้ทำงานกับเทคโนโลยีล้ำสมัย"
+    },
+    {
+      "vocab": "Could you elaborate on that?",
+      "pronunciation": "คูด ยู อิ-แล-โบ-เรท ออน แดท",
+      "meaning": "ช่วยอธิบายเพิ่มเติมได้ไหม?",
+      "example": "That's interesting. Could you elaborate on the team structure?",
+      "exampleTranslation": "น่าสนใจครับ ช่วยอธิบายโครงสร้างทีมเพิ่มได้ไหม?"
+    },
+    {
+      "vocab": "That's a great question",
+      "pronunciation": "แดทส์ อะ เกรท เควส-ชัน",
+      "meaning": "นั่นเป็นคำถามที่ดี",
+      "example": "That's a great question. Let me think about it.",
+      "exampleTranslation": "นั่นเป็นคำถามที่ดีครับ ให้ผมคิดสักครู่"
+    },
+    {
+      "vocab": "To give you some context",
+      "pronunciation": "ทู กิฟ ยู ซัม คอน-เท็กซ์",
+      "meaning": "เพื่อให้บริบท",
+      "example": "To give you some context, our team was facing tight deadlines.",
+      "exampleTranslation": "เพื่อให้บริบท ทีมเราเผชิญกับ deadline ที่กระชั้น"
+    },
+    {
+      "vocab": "In my previous role",
+      "pronunciation": "อิน มาย พรี-เวียส โรล",
+      "meaning": "ในตำแหน่งก่อนหน้า",
+      "example": "In my previous role, I was responsible for system architecture.",
+      "exampleTranslation": "ในตำแหน่งก่อนหน้า ผมรับผิดชอบ system architecture"
+    },
+    {
+      "vocab": "I took the initiative to...",
+      "pronunciation": "ไอ ทุค ดิ อิ-นิ-เชีย-ทีฟ ทู",
+      "meaning": "ฉันริเริ่มที่จะ...",
+      "example": "I took the initiative to automate our deployment process.",
+      "exampleTranslation": "ผมริเริ่มทำให้กระบวนการ deploy เป็นอัตโนมัติ"
+    },
+    {
+      "vocab": "The key takeaway was...",
+      "pronunciation": "เดอะ คีย์ เทค-อะ-เวย์ วอส",
+      "meaning": "สิ่งสำคัญที่ได้เรียนรู้คือ...",
+      "example": "The key takeaway was the importance of communication.",
+      "exampleTranslation": "สิ่งสำคัญที่ได้เรียนรู้คือความสำคัญของการสื่อสาร"
+    },
+    {
+      "vocab": "I'm comfortable with...",
+      "pronunciation": "ไอม์ คอม-ฟอร์-ทะ-เบิล วิธ",
+      "meaning": "ฉันคุ้นเคยกับ...",
+      "example": "I'm comfortable with ambiguity and can adapt quickly.",
+      "exampleTranslation": "ผมคุ้นเคยกับความไม่แน่นอนและปรับตัวได้เร็ว"
+    },
+    {
+      "vocab": "I collaborated with...",
+      "pronunciation": "ไอ โค-แล-โบ-เร-เทด วิธ",
+      "meaning": "ฉันร่วมงานกับ...",
+      "example": "I collaborated with cross-functional teams to deliver features.",
+      "exampleTranslation": "ผมร่วมงานกับทีมข้ามสายงานเพื่อส่งมอบฟีเจอร์"
+    },
+    {
+      "vocab": "What's the next step in the process?",
+      "pronunciation": "วอทส์ เดอะ เน็กซ์ สเต็พ อิน เดอะ โปร-เซส",
+      "meaning": "ขั้นตอนถัดไปคืออะไร?",
+      "example": "Thank you for your time. What's the next step in the process?",
+      "exampleTranslation": "ขอบคุณสำหรับเวลาครับ ขั้นตอนถัดไปคืออะไร?"
+    },
+    {
+      "vocab": "I look forward to hearing from you",
+      "pronunciation": "ไอ ลุค ฟอร์-เวิร์ด ทู เฮีย-ริง ฟรอม ยู",
+      "meaning": "รอคอยที่จะได้รับข่าวจากคุณ",
+      "example": "Thank you for the opportunity. I look forward to hearing from you.",
+      "exampleTranslation": "ขอบคุณสำหรับโอกาสครับ รอคอยที่จะได้รับข่าว"
+    },
+    {
+      "vocab": "behavioral interview",
+      "pronunciation": "บี-เฮฟ-เยอ-รอล อิน-เทอร์-วิว",
+      "meaning": "สัมภาษณ์พฤติกรรม - ถามเกี่ยวกับประสบการณ์ในอดีต",
+      "example": "Prepare STAR examples for behavioral interviews.",
+      "exampleTranslation": "เตรียมตัวอย่าง STAR สำหรับ behavioral interviews"
+    },
+    {
+      "vocab": "STAR method",
+      "pronunciation": "สตาร์ เมธ-ธอด",
+      "meaning": "เทคนิค STAR - Situation, Task, Action, Result",
+      "example": "Use the STAR method to structure your answers.",
+      "exampleTranslation": "ใช้ STAR method จัดโครงสร้างคำตอบ"
+    },
+    {
+      "vocab": "culture fit",
+      "pronunciation": "คัล-เจอร์ ฟิท",
+      "meaning": "ความเข้ากันได้กับวัฒนธรรม - เหมาะกับบริษัท",
+      "example": "They also evaluate culture fit during the interview.",
+      "exampleTranslation": "พวกเขาประเมิน culture fit ระหว่างสัมภาษณ์ด้วย"
+    },
+    {
+      "vocab": "follow-up email",
+      "pronunciation": "ฟอล-โลว์-อัพ อี-เมล",
+      "meaning": "อีเมลติดตามผล - ส่งหลังสัมภาษณ์",
+      "example": "Send a follow-up email within 24 hours after the interview.",
+      "exampleTranslation": "ส่ง follow-up email ภายใน 24 ชั่วโมงหลังสัมภาษณ์"
+    }
+  ]
+}

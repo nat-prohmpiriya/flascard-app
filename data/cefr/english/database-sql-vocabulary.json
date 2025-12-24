@@ -1,0 +1,294 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Database & SQL Vocabulary",
+    "description": "Essential database concepts, SQL terminology, and data management vocabulary",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "database", "sql", "programming"]
+  },
+  "cards": [
+    {
+      "vocab": "database",
+      "pronunciation": "เดท-ทะ-เบส",
+      "meaning": "ฐานข้อมูล - ระบบจัดเก็บข้อมูลแบบมีโครงสร้าง",
+      "example": "We store all customer information in a relational database.",
+      "exampleTranslation": "เราเก็บข้อมูลลูกค้าทั้งหมดในฐานข้อมูลเชิงสัมพันธ์"
+    },
+    {
+      "vocab": "table",
+      "pronunciation": "เท-เบิล",
+      "meaning": "ตาราง - โครงสร้างเก็บข้อมูลเป็นแถวและคอลัมน์",
+      "example": "The users table contains all registered accounts.",
+      "exampleTranslation": "ตาราง users เก็บบัญชีที่ลงทะเบียนทั้งหมด"
+    },
+    {
+      "vocab": "column",
+      "pronunciation": "คอล-ลัม",
+      "meaning": "คอลัมน์ - ฟิลด์แนวตั้งในตาราง",
+      "example": "Add a new column for the user's phone number.",
+      "exampleTranslation": "เพิ่มคอลัมน์ใหม่สำหรับเบอร์โทรผู้ใช้"
+    },
+    {
+      "vocab": "row",
+      "pronunciation": "โรว์",
+      "meaning": "แถว - ข้อมูลหนึ่งรายการในตาราง",
+      "example": "Each row represents a single customer record.",
+      "exampleTranslation": "แต่ละแถวแทนข้อมูลลูกค้าหนึ่งราย"
+    },
+    {
+      "vocab": "primary key",
+      "pronunciation": "ไพร-แม-รี่ คีย์",
+      "meaning": "คีย์หลัก - คอลัมน์ที่ระบุแถวได้ไม่ซ้ำกัน",
+      "example": "The id column is the primary key of this table.",
+      "exampleTranslation": "คอลัมน์ id เป็น primary key ของตารางนี้"
+    },
+    {
+      "vocab": "foreign key",
+      "pronunciation": "ฟอ-เรน คีย์",
+      "meaning": "คีย์นอก - คอลัมน์ที่อ้างอิงไปยังตารางอื่น",
+      "example": "The order_id is a foreign key referencing the orders table.",
+      "exampleTranslation": "order_id เป็น foreign key ที่อ้างอิงไปยังตาราง orders"
+    },
+    {
+      "vocab": "index",
+      "pronunciation": "อิน-เด็กซ์",
+      "meaning": "ดัชนี - โครงสร้างช่วยค้นหาข้อมูลเร็วขึ้น",
+      "example": "Creating an index on email improved query performance by 90%.",
+      "exampleTranslation": "การสร้าง index บน email ทำให้ query เร็วขึ้น 90%"
+    },
+    {
+      "vocab": "query",
+      "pronunciation": "ควี-รี่",
+      "meaning": "คำสั่งสอบถาม - คำสั่งดึงหรือจัดการข้อมูล",
+      "example": "This query returns all active users.",
+      "exampleTranslation": "query นี้คืนค่าผู้ใช้ที่ active ทั้งหมด"
+    },
+    {
+      "vocab": "schema",
+      "pronunciation": "สคี-มา",
+      "meaning": "โครงสร้างฐานข้อมูล - การออกแบบตารางและความสัมพันธ์",
+      "example": "We need to update the database schema for the new feature.",
+      "exampleTranslation": "เราต้องอัปเดต schema สำหรับฟีเจอร์ใหม่"
+    },
+    {
+      "vocab": "normalization",
+      "pronunciation": "นอร์-มัล-ไล-เซ-ชัน",
+      "meaning": "การทำให้เป็นปกติ - จัดระเบียบข้อมูลลดความซ้ำซ้อน",
+      "example": "Database normalization helps eliminate data redundancy.",
+      "exampleTranslation": "การ normalize ช่วยกำจัดความซ้ำซ้อนของข้อมูล"
+    },
+    {
+      "vocab": "denormalization",
+      "pronunciation": "ดี-นอร์-มัล-ไล-เซ-ชัน",
+      "meaning": "การยกเลิกปกติ - เพิ่มความซ้ำซ้อนเพื่อประสิทธิภาพ",
+      "example": "We applied denormalization to improve read performance.",
+      "exampleTranslation": "เราใช้ denormalization เพื่อเพิ่มความเร็วในการอ่าน"
+    },
+    {
+      "vocab": "transaction",
+      "pronunciation": "แทรน-แซค-ชัน",
+      "meaning": "ธุรกรรม - กลุ่มคำสั่งที่ต้องสำเร็จหรือล้มเหลวทั้งหมด",
+      "example": "The payment process runs inside a database transaction.",
+      "exampleTranslation": "กระบวนการชำระเงินทำงานใน transaction"
+    },
+    {
+      "vocab": "commit",
+      "pronunciation": "คอม-มิท",
+      "meaning": "ยืนยัน - บันทึกการเปลี่ยนแปลงถาวร",
+      "example": "Always commit your transaction after successful operations.",
+      "exampleTranslation": "ต้อง commit transaction หลังทำงานสำเร็จเสมอ"
+    },
+    {
+      "vocab": "rollback",
+      "pronunciation": "โรล-แบ็ค",
+      "meaning": "ย้อนกลับ - ยกเลิกการเปลี่ยนแปลงทั้งหมด",
+      "example": "If any error occurs, rollback the entire transaction.",
+      "exampleTranslation": "ถ้ามี error ให้ rollback transaction ทั้งหมด"
+    },
+    {
+      "vocab": "ACID",
+      "pronunciation": "เอ-ซิด",
+      "meaning": "คุณสมบัติ 4 อย่างของ transaction (Atomicity, Consistency, Isolation, Durability)",
+      "example": "PostgreSQL guarantees ACID compliance for all transactions.",
+      "exampleTranslation": "PostgreSQL รับประกัน ACID สำหรับทุก transaction"
+    },
+    {
+      "vocab": "join",
+      "pronunciation": "จอยน์",
+      "meaning": "การรวมตาราง - เชื่อมข้อมูลจากหลายตาราง",
+      "example": "Use an inner join to combine orders with customers.",
+      "exampleTranslation": "ใช้ inner join เพื่อรวม orders กับ customers"
+    },
+    {
+      "vocab": "inner join",
+      "pronunciation": "อิน-เนอร์ จอยน์",
+      "meaning": "การรวมแบบใน - คืนเฉพาะแถวที่ตรงกันทั้งสองตาราง",
+      "example": "Inner join returns only matching records from both tables.",
+      "exampleTranslation": "inner join คืนเฉพาะข้อมูลที่ตรงกันจากทั้งสองตาราง"
+    },
+    {
+      "vocab": "left join",
+      "pronunciation": "เลฟท์ จอยน์",
+      "meaning": "การรวมแบบซ้าย - คืนทุกแถวจากตารางซ้าย",
+      "example": "Left join includes all users even without orders.",
+      "exampleTranslation": "left join รวมผู้ใช้ทุกคนแม้ไม่มี orders"
+    },
+    {
+      "vocab": "aggregate function",
+      "pronunciation": "แอก-กรี-เกท ฟังก์-ชัน",
+      "meaning": "ฟังก์ชันรวม - คำนวณจากหลายแถว (COUNT, SUM, AVG)",
+      "example": "Use aggregate functions like COUNT to summarize data.",
+      "exampleTranslation": "ใช้ aggregate functions เช่น COUNT เพื่อสรุปข้อมูล"
+    },
+    {
+      "vocab": "group by",
+      "pronunciation": "กรุ๊ป บาย",
+      "meaning": "จัดกลุ่มตาม - รวมแถวที่มีค่าเหมือนกัน",
+      "example": "Group by category to count products in each category.",
+      "exampleTranslation": "group by category เพื่อนับสินค้าในแต่ละหมวด"
+    },
+    {
+      "vocab": "having",
+      "pronunciation": "แฮฟ-วิง",
+      "meaning": "เงื่อนไขหลังจัดกลุ่ม - กรองผลลัพธ์หลัง GROUP BY",
+      "example": "Use HAVING to filter groups with count greater than 5.",
+      "exampleTranslation": "ใช้ HAVING กรองกลุ่มที่มีจำนวนมากกว่า 5"
+    },
+    {
+      "vocab": "subquery",
+      "pronunciation": "ซับ-ควี-รี่",
+      "meaning": "คำสั่งย่อย - query ที่ซ้อนอยู่ใน query อื่น",
+      "example": "The subquery returns IDs used in the main query.",
+      "exampleTranslation": "subquery คืน IDs ที่ใช้ใน query หลัก"
+    },
+    {
+      "vocab": "stored procedure",
+      "pronunciation": "สโตร์ด โพร-ซี-เจอร์",
+      "meaning": "โพรซีเจอร์ที่เก็บไว้ - ชุดคำสั่ง SQL ที่บันทึกในฐานข้อมูล",
+      "example": "Call the stored procedure to process monthly reports.",
+      "exampleTranslation": "เรียก stored procedure เพื่อประมวลผลรายงานรายเดือน"
+    },
+    {
+      "vocab": "trigger",
+      "pronunciation": "ทริก-เกอร์",
+      "meaning": "ทริกเกอร์ - คำสั่งที่ทำงานอัตโนมัติเมื่อมีเหตุการณ์",
+      "example": "The trigger automatically updates the modified_at timestamp.",
+      "exampleTranslation": "trigger อัปเดต modified_at อัตโนมัติ"
+    },
+    {
+      "vocab": "view",
+      "pronunciation": "วิว",
+      "meaning": "มุมมอง - ตารางเสมือนจาก query",
+      "example": "Create a view to simplify complex join queries.",
+      "exampleTranslation": "สร้าง view เพื่อทำให้ join ซับซ้อนง่ายขึ้น"
+    },
+    {
+      "vocab": "constraint",
+      "pronunciation": "คอน-สเตรนท์",
+      "meaning": "ข้อจำกัด - กฎบังคับความถูกต้องของข้อมูล",
+      "example": "Add a unique constraint to prevent duplicate emails.",
+      "exampleTranslation": "เพิ่ม unique constraint ป้องกัน email ซ้ำ"
+    },
+    {
+      "vocab": "migration",
+      "pronunciation": "ไม-เกร-ชัน",
+      "meaning": "การย้ายข้อมูล - สคริปต์เปลี่ยนแปลงโครงสร้างฐานข้อมูล",
+      "example": "Run the migration to add the new column.",
+      "exampleTranslation": "รัน migration เพื่อเพิ่มคอลัมน์ใหม่"
+    },
+    {
+      "vocab": "seed",
+      "pronunciation": "ซีด",
+      "meaning": "ข้อมูลเริ่มต้น - ใส่ข้อมูลตัวอย่างในฐานข้อมูล",
+      "example": "Seed the database with test data for development.",
+      "exampleTranslation": "seed ฐานข้อมูลด้วยข้อมูลทดสอบสำหรับ development"
+    },
+    {
+      "vocab": "backup",
+      "pronunciation": "แบ็ค-อัพ",
+      "meaning": "สำรองข้อมูล - คัดลอกข้อมูลเพื่อป้องกันการสูญหาย",
+      "example": "Schedule daily backups of the production database.",
+      "exampleTranslation": "ตั้งเวลา backup ฐานข้อมูล production ทุกวัน"
+    },
+    {
+      "vocab": "restore",
+      "pronunciation": "รี-สโตร์",
+      "meaning": "กู้คืน - นำข้อมูลจาก backup กลับมา",
+      "example": "We restored the database from last night's backup.",
+      "exampleTranslation": "เรากู้คืนฐานข้อมูลจาก backup เมื่อคืน"
+    },
+    {
+      "vocab": "replication",
+      "pronunciation": "เรพ-ลิ-เค-ชัน",
+      "meaning": "การจำลอง - คัดลอกข้อมูลไปยังเซิร์ฟเวอร์อื่น",
+      "example": "Database replication ensures high availability.",
+      "exampleTranslation": "การ replicate ฐานข้อมูลรับประกันความพร้อมใช้งานสูง"
+    },
+    {
+      "vocab": "sharding",
+      "pronunciation": "ชาร์ด-ดิง",
+      "meaning": "การแบ่งข้อมูล - กระจายข้อมูลไปหลายเซิร์ฟเวอร์",
+      "example": "We implemented sharding to handle millions of users.",
+      "exampleTranslation": "เราใช้ sharding เพื่อรองรับผู้ใช้หลายล้านคน"
+    },
+    {
+      "vocab": "partition",
+      "pronunciation": "พาร์-ทิ-ชัน",
+      "meaning": "พาร์ติชัน - แบ่งตารางใหญ่เป็นส่วนย่อย",
+      "example": "Partition the logs table by month for better performance.",
+      "exampleTranslation": "แบ่ง partition ตาราง logs ตามเดือนเพื่อประสิทธิภาพ"
+    },
+    {
+      "vocab": "deadlock",
+      "pronunciation": "เดด-ล็อค",
+      "meaning": "การติดตาย - สอง transaction รอกันและกันไม่จบ",
+      "example": "The deadlock was caused by concurrent updates.",
+      "exampleTranslation": "deadlock เกิดจากการอัปเดตพร้อมกัน"
+    },
+    {
+      "vocab": "lock",
+      "pronunciation": "ล็อค",
+      "meaning": "ล็อค - ป้องกันไม่ให้แก้ไขข้อมูลพร้อมกัน",
+      "example": "The row lock prevents other transactions from modifying it.",
+      "exampleTranslation": "row lock ป้องกัน transaction อื่นแก้ไข"
+    },
+    {
+      "vocab": "connection pool",
+      "pronunciation": "คอน-เน็ค-ชัน พูล",
+      "meaning": "กลุ่มการเชื่อมต่อ - จัดการ connections ที่ใช้ซ้ำได้",
+      "example": "Configure the connection pool size based on your workload.",
+      "exampleTranslation": "ตั้งค่าขนาด connection pool ตาม workload"
+    },
+    {
+      "vocab": "cursor",
+      "pronunciation": "เคอร์-เซอร์",
+      "meaning": "เคอร์เซอร์ - ตัวชี้สำหรับอ่านผลลัพธ์ทีละแถว",
+      "example": "Use a cursor to process large result sets efficiently.",
+      "exampleTranslation": "ใช้ cursor ประมวลผลข้อมูลจำนวนมากอย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "data integrity",
+      "pronunciation": "เดท-ทะ อิน-เทก-กริ-ตี้",
+      "meaning": "ความถูกต้องของข้อมูล - ข้อมูลถูกต้องและสอดคล้องกัน",
+      "example": "Foreign keys help maintain data integrity.",
+      "exampleTranslation": "foreign keys ช่วยรักษาความถูกต้องของข้อมูล"
+    },
+    {
+      "vocab": "query optimization",
+      "pronunciation": "ควี-รี่ ออพ-ติ-ไม-เซ-ชัน",
+      "meaning": "การปรับปรุง query - ทำให้ query ทำงานเร็วขึ้น",
+      "example": "Query optimization reduced the execution time from 5s to 50ms.",
+      "exampleTranslation": "การ optimize query ลดเวลาจาก 5 วินาทีเหลือ 50ms"
+    },
+    {
+      "vocab": "execution plan",
+      "pronunciation": "เอ็ก-ซี-คิว-ชัน แพลน",
+      "meaning": "แผนการทำงาน - วิธีที่ database ประมวลผล query",
+      "example": "Analyze the execution plan to find slow operations.",
+      "exampleTranslation": "วิเคราะห์ execution plan เพื่อหาการทำงานที่ช้า"
+    }
+  ]
+}

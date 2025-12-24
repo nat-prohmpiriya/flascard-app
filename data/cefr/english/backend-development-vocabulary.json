@@ -1,0 +1,287 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Backend Development Vocabulary",
+    "description": "Server-side development, APIs, authentication, and infrastructure terminology",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "backend", "api", "programming"]
+  },
+  "cards": [
+    {
+      "vocab": "server",
+      "pronunciation": "เซิร์ฟ-เวอร์",
+      "meaning": "เซิร์ฟเวอร์ - คอมพิวเตอร์ที่ให้บริการ",
+      "example": "The server handles thousands of requests per second.",
+      "exampleTranslation": "เซิร์ฟเวอร์รองรับ request หลายพันครั้งต่อวินาที"
+    },
+    {
+      "vocab": "client",
+      "pronunciation": "ไคล-เอ็นท์",
+      "meaning": "ไคลเอนต์ - โปรแกรมที่ขอใช้บริการจากเซิร์ฟเวอร์",
+      "example": "The client sends a request to the server.",
+      "exampleTranslation": "client ส่ง request ไปยัง server"
+    },
+    {
+      "vocab": "API",
+      "pronunciation": "เอ-พี-ไอ",
+      "meaning": "ส่วนเชื่อมต่อโปรแกรม - ช่องทางให้โปรแกรมสื่อสารกัน",
+      "example": "Our API uses REST with JSON responses.",
+      "exampleTranslation": "API ของเราใช้ REST กับ response แบบ JSON"
+    },
+    {
+      "vocab": "endpoint",
+      "pronunciation": "เอ็นด์-พ้อยท์",
+      "meaning": "จุดปลายทาง - URL ที่รับ request",
+      "example": "Create a new endpoint for user registration.",
+      "exampleTranslation": "สร้าง endpoint ใหม่สำหรับลงทะเบียนผู้ใช้"
+    },
+    {
+      "vocab": "request",
+      "pronunciation": "รี-เควสท์",
+      "meaning": "คำขอ - ข้อมูลที่ส่งไปยังเซิร์ฟเวอร์",
+      "example": "The request includes authentication headers.",
+      "exampleTranslation": "request มี headers สำหรับ authentication"
+    },
+    {
+      "vocab": "response",
+      "pronunciation": "รี-สปอนส์",
+      "meaning": "การตอบกลับ - ข้อมูลที่เซิร์ฟเวอร์ส่งกลับ",
+      "example": "The response contains the user data in JSON format.",
+      "exampleTranslation": "response มีข้อมูลผู้ใช้ในรูปแบบ JSON"
+    },
+    {
+      "vocab": "middleware",
+      "pronunciation": "มิด-เดิล-แวร์",
+      "meaning": "ตัวกลาง - โค้ดที่ทำงานระหว่าง request และ response",
+      "example": "Add authentication middleware to protect the route.",
+      "exampleTranslation": "เพิ่ม middleware ยืนยันตัวตนเพื่อป้องกัน route"
+    },
+    {
+      "vocab": "authentication",
+      "pronunciation": "ออ-เธน-ทิ-เค-ชัน",
+      "meaning": "การยืนยันตัวตน - ตรวจสอบว่าเป็นใคร",
+      "example": "Use JWT for stateless authentication.",
+      "exampleTranslation": "ใช้ JWT สำหรับ authentication แบบ stateless"
+    },
+    {
+      "vocab": "authorization",
+      "pronunciation": "ออ-ธอ-ไร-เซ-ชัน",
+      "meaning": "การอนุญาต - ตรวจสอบว่ามีสิทธิ์ทำอะไร",
+      "example": "Check authorization before allowing access to admin panel.",
+      "exampleTranslation": "ตรวจสอบสิทธิ์ก่อนอนุญาตเข้าหน้า admin"
+    },
+    {
+      "vocab": "token",
+      "pronunciation": "โท-เค็น",
+      "meaning": "โทเค็น - ข้อมูลที่ใช้ยืนยันตัวตน",
+      "example": "Store the access token securely on the client.",
+      "exampleTranslation": "เก็บ access token อย่างปลอดภัยบน client"
+    },
+    {
+      "vocab": "session",
+      "pronunciation": "เซส-ชัน",
+      "meaning": "เซสชัน - ช่วงเวลาที่ผู้ใช้ล็อกอินอยู่",
+      "example": "The session expires after 30 minutes of inactivity.",
+      "exampleTranslation": "session หมดอายุหลังไม่มีการใช้งาน 30 นาที"
+    },
+    {
+      "vocab": "cache",
+      "pronunciation": "แคช",
+      "meaning": "แคช - เก็บข้อมูลชั่วคราวเพื่อเข้าถึงเร็วขึ้น",
+      "example": "Cache the database query results for 5 minutes.",
+      "exampleTranslation": "cache ผลลัพธ์ query เป็นเวลา 5 นาที"
+    },
+    {
+      "vocab": "rate limiting",
+      "pronunciation": "เรท ลิ-มิท-ติง",
+      "meaning": "จำกัดอัตรา - ควบคุมจำนวน request ต่อช่วงเวลา",
+      "example": "Implement rate limiting to prevent API abuse.",
+      "exampleTranslation": "ใช้ rate limiting ป้องกันการใช้ API มากเกินไป"
+    },
+    {
+      "vocab": "load balancer",
+      "pronunciation": "โหลด บา-ลาน-เซอร์",
+      "meaning": "ตัวกระจายโหลด - กระจาย request ไปหลายเซิร์ฟเวอร์",
+      "example": "The load balancer distributes traffic across multiple servers.",
+      "exampleTranslation": "load balancer กระจาย traffic ไปหลายเซิร์ฟเวอร์"
+    },
+    {
+      "vocab": "reverse proxy",
+      "pronunciation": "รี-เวิร์ส พร็อก-ซี่",
+      "meaning": "พร็อกซี่ย้อนกลับ - เซิร์ฟเวอร์ที่รับ request แทน backend",
+      "example": "Nginx acts as a reverse proxy for our Node.js servers.",
+      "exampleTranslation": "Nginx ทำหน้าที่เป็น reverse proxy ให้ Node.js servers"
+    },
+    {
+      "vocab": "microservices",
+      "pronunciation": "ไมโคร-เซอร์-วิส",
+      "meaning": "ไมโครเซอร์วิส - สถาปัตยกรรมแบ่งเป็นบริการย่อยๆ",
+      "example": "We split the monolith into microservices.",
+      "exampleTranslation": "เราแบ่ง monolith ออกเป็น microservices"
+    },
+    {
+      "vocab": "monolith",
+      "pronunciation": "โม-โน-ลิธ",
+      "meaning": "โมโนลิธ - แอปพลิเคชันที่รวมทุกอย่างในที่เดียว",
+      "example": "The monolith became difficult to maintain and scale.",
+      "exampleTranslation": "monolith ดูแลและขยายได้ยากขึ้น"
+    },
+    {
+      "vocab": "REST",
+      "pronunciation": "เรสท์",
+      "meaning": "รูปแบบการออกแบบ API - ใช้ HTTP methods",
+      "example": "Our REST API follows standard HTTP conventions.",
+      "exampleTranslation": "REST API ของเราใช้มาตรฐาน HTTP"
+    },
+    {
+      "vocab": "GraphQL",
+      "pronunciation": "กราฟ-คิว-แอล",
+      "meaning": "ภาษา query สำหรับ API - client เลือกข้อมูลที่ต้องการ",
+      "example": "GraphQL allows clients to request exactly the data they need.",
+      "exampleTranslation": "GraphQL ให้ client ขอเฉพาะข้อมูลที่ต้องการ"
+    },
+    {
+      "vocab": "webhook",
+      "pronunciation": "เว็บ-ฮุค",
+      "meaning": "เว็บฮุค - การแจ้งเตือนเมื่อเกิดเหตุการณ์",
+      "example": "Set up a webhook to receive payment notifications.",
+      "exampleTranslation": "ตั้ง webhook เพื่อรับแจ้งเตือนการชำระเงิน"
+    },
+    {
+      "vocab": "payload",
+      "pronunciation": "เพย์-โหลด",
+      "meaning": "ข้อมูลส่วนหลัก - ข้อมูลที่ส่งใน request/response",
+      "example": "The payload contains the user's profile information.",
+      "exampleTranslation": "payload มีข้อมูลโปรไฟล์ผู้ใช้"
+    },
+    {
+      "vocab": "serialization",
+      "pronunciation": "ซี-รี-อะ-ไล-เซ-ชัน",
+      "meaning": "การแปลงเป็นข้อมูล - แปลง object เป็นรูปแบบที่ส่งได้",
+      "example": "JSON serialization converts objects to text.",
+      "exampleTranslation": "JSON serialization แปลง object เป็น text"
+    },
+    {
+      "vocab": "deserialization",
+      "pronunciation": "ดี-ซี-รี-อะ-ไล-เซ-ชัน",
+      "meaning": "การแปลงกลับเป็น object - แปลงข้อมูลกลับเป็น object",
+      "example": "Deserialization parses the JSON string into an object.",
+      "exampleTranslation": "deserialization แปลง JSON string เป็น object"
+    },
+    {
+      "vocab": "validation",
+      "pronunciation": "วา-ลิ-เด-ชัน",
+      "meaning": "การตรวจสอบ - ตรวจว่าข้อมูลถูกต้อง",
+      "example": "Add input validation to prevent invalid data.",
+      "exampleTranslation": "เพิ่ม validation เพื่อป้องกันข้อมูลไม่ถูกต้อง"
+    },
+    {
+      "vocab": "sanitization",
+      "pronunciation": "แซ-นิ-ไท-เซ-ชัน",
+      "meaning": "การทำความสะอาดข้อมูล - ลบส่วนที่อันตราย",
+      "example": "Sanitize user input to prevent XSS attacks.",
+      "exampleTranslation": "sanitize input เพื่อป้องกันการโจมตี XSS"
+    },
+    {
+      "vocab": "encryption",
+      "pronunciation": "เอ็น-คริป-ชัน",
+      "meaning": "การเข้ารหัส - แปลงข้อมูลให้อ่านไม่ได้",
+      "example": "Encrypt sensitive data before storing in the database.",
+      "exampleTranslation": "เข้ารหัสข้อมูลสำคัญก่อนเก็บในฐานข้อมูล"
+    },
+    {
+      "vocab": "hashing",
+      "pronunciation": "แฮช-ชิง",
+      "meaning": "การแฮช - แปลงข้อมูลเป็นค่าคงที่ย้อนกลับไม่ได้",
+      "example": "Always hash passwords before storing them.",
+      "exampleTranslation": "ต้อง hash รหัสผ่านก่อนเก็บเสมอ"
+    },
+    {
+      "vocab": "queue",
+      "pronunciation": "คิว",
+      "meaning": "คิว - รายการงานที่รอประมวลผล",
+      "example": "Add the email task to the message queue.",
+      "exampleTranslation": "เพิ่มงานส่งอีเมลเข้า message queue"
+    },
+    {
+      "vocab": "worker",
+      "pronunciation": "เวิร์ค-เกอร์",
+      "meaning": "ตัวประมวลผล - โปรแกรมที่ดึงงานจาก queue มาทำ",
+      "example": "Background workers process jobs from the queue.",
+      "exampleTranslation": "background workers ประมวลผลงานจาก queue"
+    },
+    {
+      "vocab": "logging",
+      "pronunciation": "ล็อก-กิง",
+      "meaning": "การบันทึก log - เก็บข้อมูลเหตุการณ์ในระบบ",
+      "example": "Add logging to track API errors.",
+      "exampleTranslation": "เพิ่ม logging เพื่อติดตาม API errors"
+    },
+    {
+      "vocab": "monitoring",
+      "pronunciation": "มอ-นิ-เทอ-ริง",
+      "meaning": "การเฝ้าดู - ติดตามสถานะและประสิทธิภาพระบบ",
+      "example": "Set up monitoring to detect server issues.",
+      "exampleTranslation": "ตั้ง monitoring เพื่อตรวจจับปัญหาเซิร์ฟเวอร์"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี่",
+      "meaning": "ความหน่วง - เวลาที่ใช้ในการตอบสนอง",
+      "example": "The API latency should be under 100ms.",
+      "exampleTranslation": "latency ของ API ควรต่ำกว่า 100ms"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงาน - จำนวน request ที่รองรับได้ต่อวินาที",
+      "example": "The system handles 10,000 requests per second throughput.",
+      "exampleTranslation": "ระบบรองรับ throughput 10,000 requests ต่อวินาที"
+    },
+    {
+      "vocab": "scalability",
+      "pronunciation": "สเกล-ละ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถขยายได้ - รองรับโหลดที่เพิ่มขึ้น",
+      "example": "Design for scalability from the start.",
+      "exampleTranslation": "ออกแบบให้ scale ได้ตั้งแต่แรก"
+    },
+    {
+      "vocab": "horizontal scaling",
+      "pronunciation": "ฮอ-ริ-ซอน-ทอล สเกล-ลิง",
+      "meaning": "การขยายแนวนอน - เพิ่มจำนวนเซิร์ฟเวอร์",
+      "example": "Horizontal scaling adds more servers to handle load.",
+      "exampleTranslation": "horizontal scaling เพิ่มเซิร์ฟเวอร์เพื่อรองรับโหลด"
+    },
+    {
+      "vocab": "vertical scaling",
+      "pronunciation": "เวอร์-ติ-คอล สเกล-ลิง",
+      "meaning": "การขยายแนวตั้ง - เพิ่มทรัพยากรของเซิร์ฟเวอร์",
+      "example": "Vertical scaling upgrades CPU and RAM.",
+      "exampleTranslation": "vertical scaling อัปเกรด CPU และ RAM"
+    },
+    {
+      "vocab": "deployment",
+      "pronunciation": "ดี-พลอย-เมนท์",
+      "meaning": "การ deploy - นำโค้ดขึ้น production",
+      "example": "Automate deployments with CI/CD pipelines.",
+      "exampleTranslation": "ทำให้ deployment อัตโนมัติด้วย CI/CD pipelines"
+    },
+    {
+      "vocab": "rollback",
+      "pronunciation": "โรล-แบ็ค",
+      "meaning": "ย้อนกลับ - กลับไปเวอร์ชันก่อนหน้า",
+      "example": "Rollback to the previous version if bugs are found.",
+      "exampleTranslation": "rollback ไปเวอร์ชันก่อนหน้าถ้าพบบัค"
+    },
+    {
+      "vocab": "environment variable",
+      "pronunciation": "เอ็น-ไว-รอน-เมนท์ แว-รี-อะ-เบิล",
+      "meaning": "ตัวแปรสภาพแวดล้อม - ค่าตั้งที่ต่างกันในแต่ละ environment",
+      "example": "Store API keys in environment variables, not in code.",
+      "exampleTranslation": "เก็บ API keys ใน environment variables ไม่ใช่ในโค้ด"
+    }
+  ]
+}
