@@ -6,7 +6,12 @@
     "description": "CEFR A2 Common Collocations - Words that naturally go together",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "collocation"
+    ]
   },
   "cards": [
     {

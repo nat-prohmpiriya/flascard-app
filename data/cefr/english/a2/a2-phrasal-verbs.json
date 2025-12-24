@@ -6,7 +6,12 @@
     "description": "CEFR A2 Essential Phrasal Verbs for everyday communication",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "phrasal-verb"
+    ]
   },
   "cards": [
     {

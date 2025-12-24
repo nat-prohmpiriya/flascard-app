@@ -6,7 +6,12 @@
     "description": "CEFR A2 Vocabulary - Shopping, Money, Clothes, Sizes",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "vocabulary"
+    ]
   },
   "cards": [
     {

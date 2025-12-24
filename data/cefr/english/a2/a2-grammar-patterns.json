@@ -6,7 +6,12 @@
     "description": "CEFR A2 Essential Grammar Patterns with examples",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "grammar"
+    ]
   },
   "cards": [
     {

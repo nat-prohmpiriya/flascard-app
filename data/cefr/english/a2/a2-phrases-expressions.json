@@ -6,7 +6,12 @@
     "description": "CEFR A2 Common Phrases and Expressions for everyday communication",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "phrase"
+    ]
   },
   "cards": [
     {

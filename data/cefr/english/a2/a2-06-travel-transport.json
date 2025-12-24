@@ -6,7 +6,12 @@
     "description": "CEFR A2 Vocabulary - Travel, Transport, Directions, Places",
     "category": "CEFR A2",
     "sourceLang": "en",
-    "targetLang": "th"
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "vocabulary"
+    ]
   },
   "cards": [
     {
