@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Travel & Transport",
+    "description": "CEFR A2 Vocabulary - Travel, Transport, Directions, Places",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "travel",
+      "pronunciation": "ทราเวิล",
+      "meaning": "เดินทาง",
+      "example": "I love to travel.",
+      "exampleTranslation": "ฉันชอบเดินทาง"
+    },
+    {
+      "vocab": "trip",
+      "pronunciation": "ทริป",
+      "meaning": "การเดินทาง, ทริป",
+      "example": "Have a nice trip!",
+      "exampleTranslation": "ขอให้เดินทางปลอดภัย!"
+    },
+    {
+      "vocab": "vacation",
+      "pronunciation": "เว-เค-ชัน",
+      "meaning": "วันหยุดพักผ่อน",
+      "example": "Where are you going for vacation?",
+      "exampleTranslation": "จะไปพักผ่อนที่ไหน?"
+    },
+    {
+      "vocab": "tourist",
+      "pronunciation": "ทัว-ริสท์",
+      "meaning": "นักท่องเที่ยว",
+      "example": "There are many tourists in Bangkok.",
+      "exampleTranslation": "มีนักท่องเที่ยวมากในกรุงเทพ"
+    },
+    {
+      "vocab": "passport",
+      "pronunciation": "พาส-พอร์ท",
+      "meaning": "หนังสือเดินทาง",
+      "example": "Don't forget your passport.",
+      "exampleTranslation": "อย่าลืมหนังสือเดินทาง"
+    },
+    {
+      "vocab": "visa",
+      "pronunciation": "วี-ซ่า",
+      "meaning": "วีซ่า",
+      "example": "Do I need a visa?",
+      "exampleTranslation": "ฉันต้องมีวีซ่าไหม?"
+    },
+    {
+      "vocab": "luggage",
+      "pronunciation": "ลัก-เกจ",
+      "meaning": "กระเป๋าเดินทาง",
+      "example": "Where can I pick up my luggage?",
+      "exampleTranslation": "รับกระเป๋าเดินทางได้ที่ไหน?"
+    },
+    {
+      "vocab": "suitcase",
+      "pronunciation": "ซุท-เคส",
+      "meaning": "กระเป๋าเดินทาง",
+      "example": "My suitcase is very heavy.",
+      "exampleTranslation": "กระเป๋าเดินทางของฉันหนักมาก"
+    },
+    {
+      "vocab": "backpack",
+      "pronunciation": "แบ็ค-แพ็ค",
+      "meaning": "กระเป๋าเป้",
+      "example": "I travel with just a backpack.",
+      "exampleTranslation": "ฉันเดินทางด้วยกระเป๋าเป้เท่านั้น"
+    },
+    {
+      "vocab": "airport",
+      "pronunciation": "แอร์-พอร์ท",
+      "meaning": "สนามบิน",
+      "example": "The airport is far from the city.",
+      "exampleTranslation": "สนามบินอยู่ไกลจากเมือง"
+    },
+    {
+      "vocab": "plane",
+      "pronunciation": "เพลน",
+      "meaning": "เครื่องบิน",
+      "example": "The plane leaves at 10 AM.",
+      "exampleTranslation": "เครื่องบินออกตอน 10 โมง"
+    },
+    {
+      "vocab": "flight",
+      "pronunciation": "ฟไลท์",
+      "meaning": "เที่ยวบิน",
+      "example": "My flight is delayed.",
+      "exampleTranslation": "เที่ยวบินของฉันล่าช้า"
+    },
+    {
+      "vocab": "boarding pass",
+      "pronunciation": "บอร์-ดิ้ง พาส",
+      "meaning": "บัตรขึ้นเครื่อง",
+      "example": "Here's my boarding pass.",
+      "exampleTranslation": "นี่บัตรขึ้นเครื่องของฉัน"
+    },
+    {
+      "vocab": "gate",
+      "pronunciation": "เกท",
+      "meaning": "ประตูขึ้นเครื่อง",
+      "example": "What gate is my flight?",
+      "exampleTranslation": "เที่ยวบินฉันประตูอะไร?"
+    },
+    {
+      "vocab": "take off",
+      "pronunciation": "เทค ออฟ",
+      "meaning": "บินขึ้น",
+      "example": "The plane will take off soon.",
+      "exampleTranslation": "เครื่องบินจะบินขึ้นเร็วๆ นี้"
+    },
+    {
+      "vocab": "land",
+      "pronunciation": "แลนด์",
+      "meaning": "ลงจอด",
+      "example": "We will land in 30 minutes.",
+      "exampleTranslation": "เราจะลงจอดใน 30 นาที"
+    },
+    {
+      "vocab": "train",
+      "pronunciation": "เทรน",
+      "meaning": "รถไฟ",
+      "example": "I go to work by train.",
+      "exampleTranslation": "ฉันไปทำงานโดยรถไฟ"
+    },
+    {
+      "vocab": "station",
+      "pronunciation": "สเต-ชัน",
+      "meaning": "สถานี",
+      "example": "The train station is nearby.",
+      "exampleTranslation": "สถานีรถไฟอยู่ใกล้ๆ"
+    },
+    {
+      "vocab": "platform",
+      "pronunciation": "แพลท-ฟอร์ม",
+      "meaning": "ชานชาลา",
+      "example": "The train leaves from platform 3.",
+      "exampleTranslation": "รถไฟออกจากชานชาลา 3"
+    },
+    {
+      "vocab": "ticket",
+      "pronunciation": "ทิค-เก็ท",
+      "meaning": "ตั๋ว",
+      "example": "I need to buy a ticket.",
+      "exampleTranslation": "ฉันต้องซื้อตั๋ว"
+    },
+    {
+      "vocab": "single ticket",
+      "pronunciation": "ซิง-เกิ้ล ทิค-เก็ท",
+      "meaning": "ตั๋วเที่ยวเดียว",
+      "example": "A single ticket to London, please.",
+      "exampleTranslation": "ขอตั๋วเที่ยวเดียวไปลอนดอนค่ะ"
+    },
+    {
+      "vocab": "return ticket",
+      "pronunciation": "รี-เทิร์น ทิค-เก็ท",
+      "meaning": "ตั๋วไป-กลับ",
+      "example": "A return ticket is cheaper.",
+      "exampleTranslation": "ตั๋วไป-กลับถูกกว่า"
+    },
+    {
+      "vocab": "bus",
+      "pronunciation": "บัส",
+      "meaning": "รถบัส",
+      "example": "The bus comes every 10 minutes.",
+      "exampleTranslation": "รถบัสมาทุก 10 นาที"
+    },
+    {
+      "vocab": "bus stop",
+      "pronunciation": "บัส สต็อป",
+      "meaning": "ป้ายรถเมล์",
+      "example": "Wait at the bus stop.",
+      "exampleTranslation": "รอที่ป้ายรถเมล์"
+    },
+    {
+      "vocab": "taxi",
+      "pronunciation": "แท็กซี่",
+      "meaning": "แท็กซี่",
+      "example": "Let's take a taxi.",
+      "exampleTranslation": "ไปแท็กซี่กันเถอะ"
+    },
+    {
+      "vocab": "car",
+      "pronunciation": "คาร์",
+      "meaning": "รถยนต์",
+      "example": "I drive to work by car.",
+      "exampleTranslation": "ฉันขับรถไปทำงาน"
+    },
+    {
+      "vocab": "motorbike",
+      "pronunciation": "โม-เทอร์-ไบค์",
+      "meaning": "มอเตอร์ไซค์",
+      "example": "Many people ride motorbikes in Thailand.",
+      "exampleTranslation": "คนไทยหลายคนขี่มอเตอร์ไซค์"
+    },
+    {
+      "vocab": "bicycle",
+      "pronunciation": "ไบ-ซิ-เคิ่ล",
+      "meaning": "จักรยาน",
+      "example": "I ride my bicycle to school.",
+      "exampleTranslation": "ฉันขี่จักรยานไปโรงเรียน"
+    },
+    {
+      "vocab": "boat",
+      "pronunciation": "โบท",
+      "meaning": "เรือ",
+      "example": "We took a boat to the island.",
+      "exampleTranslation": "เรานั่งเรือไปเกาะ"
+    },
+    {
+      "vocab": "ferry",
+      "pronunciation": "เฟอ-รี่",
+      "meaning": "เรือข้ามฟาก",
+      "example": "The ferry leaves every hour.",
+      "exampleTranslation": "เรือข้ามฟากออกทุกชั่วโมง"
+    },
+    {
+      "vocab": "subway",
+      "pronunciation": "ซับ-เวย์",
+      "meaning": "รถไฟใต้ดิน",
+      "example": "Take the subway to the city center.",
+      "exampleTranslation": "นั่งรถไฟใต้ดินไปใจกลางเมือง"
+    },
+    {
+      "vocab": "drive",
+      "pronunciation": "ไดรฟ์",
+      "meaning": "ขับรถ",
+      "example": "Can you drive?",
+      "exampleTranslation": "คุณขับรถเป็นไหม?"
+    },
+    {
+      "vocab": "ride",
+      "pronunciation": "ไรด์",
+      "meaning": "ขี่, นั่ง",
+      "example": "I can ride a bicycle.",
+      "exampleTranslation": "ฉันขี่จักรยานเป็น"
+    },
+    {
+      "vocab": "arrive",
+      "pronunciation": "อะ-ไรฟ์",
+      "meaning": "มาถึง",
+      "example": "What time does the train arrive?",
+      "exampleTranslation": "รถไฟมาถึงกี่โมง?"
+    },
+    {
+      "vocab": "depart",
+      "pronunciation": "ดิ-พาร์ท",
+      "meaning": "ออกเดินทาง",
+      "example": "The bus departs at 8 AM.",
+      "exampleTranslation": "รถบัสออกตอน 8 โมงเช้า"
+    },
+    {
+      "vocab": "delay",
+      "pronunciation": "ดิ-เลย์",
+      "meaning": "ล่าช้า",
+      "example": "The flight is delayed by 2 hours.",
+      "exampleTranslation": "เที่ยวบินล่าช้า 2 ชั่วโมง"
+    },
+    {
+      "vocab": "on time",
+      "pronunciation": "ออน ไทม์",
+      "meaning": "ตรงเวลา",
+      "example": "The train arrived on time.",
+      "exampleTranslation": "รถไฟมาถึงตรงเวลา"
+    },
+    {
+      "vocab": "hotel",
+      "pronunciation": "โฮ-เทล",
+      "meaning": "โรงแรม",
+      "example": "I booked a hotel online.",
+      "exampleTranslation": "ฉันจองโรงแรมออนไลน์"
+    },
+    {
+      "vocab": "reservation",
+      "pronunciation": "เรส-เซอร์-เว-ชัน",
+      "meaning": "การจอง",
+      "example": "I have a reservation for tonight.",
+      "exampleTranslation": "ฉันจองไว้สำหรับคืนนี้"
+    },
+    {
+      "vocab": "check in",
+      "pronunciation": "เช็ค อิน",
+      "meaning": "เช็คอิน",
+      "example": "Check-in is at 2 PM.",
+      "exampleTranslation": "เช็คอินตอนบ่าย 2"
+    },
+    {
+      "vocab": "check out",
+      "pronunciation": "เช็ค เอาท์",
+      "meaning": "เช็คเอาท์",
+      "example": "I need to check out by noon.",
+      "exampleTranslation": "ฉันต้องเช็คเอาท์ก่อนเที่ยง"
+    },
+    {
+      "vocab": "room",
+      "pronunciation": "รูม",
+      "meaning": "ห้อง",
+      "example": "I'd like a single room.",
+      "exampleTranslation": "ขอห้องเดี่ยวค่ะ"
+    },
+    {
+      "vocab": "map",
+      "pronunciation": "แม็พ",
+      "meaning": "แผนที่",
+      "example": "Can I have a map?",
+      "exampleTranslation": "ขอแผนที่ได้ไหม?"
+    },
+    {
+      "vocab": "direction",
+      "pronunciation": "ได-เร็ค-ชัน",
+      "meaning": "ทิศทาง",
+      "example": "Can you give me directions?",
+      "exampleTranslation": "บอกทางได้ไหม?"
+    },
+    {
+      "vocab": "left",
+      "pronunciation": "เลฟท์",
+      "meaning": "ซ้าย",
+      "example": "Turn left at the corner.",
+      "exampleTranslation": "เลี้ยวซ้ายตรงหัวมุม"
+    },
+    {
+      "vocab": "right",
+      "pronunciation": "ไรท์",
+      "meaning": "ขวา",
+      "example": "Turn right at the traffic light.",
+      "exampleTranslation": "เลี้ยวขวาตรงไฟแดง"
+    },
+    {
+      "vocab": "straight",
+      "pronunciation": "สเตรท",
+      "meaning": "ตรงไป",
+      "example": "Go straight for 100 meters.",
+      "exampleTranslation": "ตรงไป 100 เมตร"
+    },
+    {
+      "vocab": "near",
+      "pronunciation": "เนียร์",
+      "meaning": "ใกล้",
+      "example": "Is there a bank near here?",
+      "exampleTranslation": "มีธนาคารใกล้ๆ นี่ไหม?"
+    },
+    {
+      "vocab": "far",
+      "pronunciation": "ฟาร์",
+      "meaning": "ไกล",
+      "example": "Is it far from here?",
+      "exampleTranslation": "ไกลจากที่นี่ไหม?"
+    },
+    {
+      "vocab": "corner",
+      "pronunciation": "คอร์-เนอร์",
+      "meaning": "มุม, หัวมุม",
+      "example": "The shop is on the corner.",
+      "exampleTranslation": "ร้านอยู่ตรงหัวมุม"
+    },
+    {
+      "vocab": "across from",
+      "pronunciation": "อะ-ครอส ฟรอม",
+      "meaning": "ตรงข้าม",
+      "example": "The bank is across from the post office.",
+      "exampleTranslation": "ธนาคารอยู่ตรงข้ามไปรษณีย์"
+    },
+    {
+      "vocab": "traffic",
+      "pronunciation": "แทรฟ-ฟิค",
+      "meaning": "การจราจร",
+      "example": "The traffic is very bad today.",
+      "exampleTranslation": "วันนี้รถติดมาก"
+    },
+    {
+      "vocab": "traffic light",
+      "pronunciation": "แทรฟ-ฟิค ไลท์",
+      "meaning": "ไฟจราจร",
+      "example": "Stop at the traffic light.",
+      "exampleTranslation": "หยุดที่ไฟแดง"
+    },
+    {
+      "vocab": "crosswalk",
+      "pronunciation": "ครอส-วอล์ค",
+      "meaning": "ทางม้าลาย",
+      "example": "Use the crosswalk to cross the street.",
+      "exampleTranslation": "ใช้ทางม้าลายข้ามถนน"
+    },
+    {
+      "vocab": "bridge",
+      "pronunciation": "บริดจ์",
+      "meaning": "สะพาน",
+      "example": "Cross the bridge to get there.",
+      "exampleTranslation": "ข้ามสะพานไปถึงที่นั่น"
+    },
+    {
+      "vocab": "rent",
+      "pronunciation": "เรนท์",
+      "meaning": "เช่า",
+      "example": "I want to rent a car.",
+      "exampleTranslation": "ฉันอยากเช่ารถ"
+    },
+    {
+      "vocab": "parking",
+      "pronunciation": "พาร์ค-คิ่ง",
+      "meaning": "ที่จอดรถ",
+      "example": "Is there parking nearby?",
+      "exampleTranslation": "มีที่จอดรถใกล้ๆ ไหม?"
+    },
+    {
+      "vocab": "gas station",
+      "pronunciation": "แก๊ส สเต-ชัน",
+      "meaning": "ปั๊มน้ำมัน",
+      "example": "I need to stop at a gas station.",
+      "exampleTranslation": "ฉันต้องแวะปั๊มน้ำมัน"
+    },
+    {
+      "vocab": "lost",
+      "pronunciation": "ลอสท์",
+      "meaning": "หลงทาง",
+      "example": "I'm lost. Can you help me?",
+      "exampleTranslation": "ฉันหลงทาง ช่วยได้ไหม?"
+    }
+  ]
+}

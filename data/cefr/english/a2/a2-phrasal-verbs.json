@@ -1,0 +1,552 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Phrasal Verbs",
+    "description": "CEFR A2 Essential Phrasal Verbs for everyday communication",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "wake up",
+      "pronunciation": "เวค อัพ",
+      "meaning": "ตื่นนอน",
+      "example": "I wake up at 6 AM every day.",
+      "exampleTranslation": "ฉันตื่นนอนตอน 6 โมงเช้าทุกวัน"
+    },
+    {
+      "vocab": "get up",
+      "pronunciation": "เก็ท อัพ",
+      "meaning": "ลุกขึ้น (จากเตียง)",
+      "example": "I don't want to get up. It's too cold.",
+      "exampleTranslation": "ฉันไม่อยากลุกขึ้น หนาวเกินไป"
+    },
+    {
+      "vocab": "go out",
+      "pronunciation": "โก เอาท์",
+      "meaning": "ออกไปข้างนอก",
+      "example": "Let's go out for dinner tonight.",
+      "exampleTranslation": "ไปกินข้าวเย็นข้างนอกกันคืนนี้"
+    },
+    {
+      "vocab": "come back",
+      "pronunciation": "คัม แบ็ค",
+      "meaning": "กลับมา",
+      "example": "What time will you come back?",
+      "exampleTranslation": "คุณจะกลับมากี่โมง?"
+    },
+    {
+      "vocab": "go back",
+      "pronunciation": "โก แบ็ค",
+      "meaning": "กลับไป",
+      "example": "I need to go back to the office.",
+      "exampleTranslation": "ฉันต้องกลับไปออฟฟิศ"
+    },
+    {
+      "vocab": "get back",
+      "pronunciation": "เก็ท แบ็ค",
+      "meaning": "กลับมาถึง",
+      "example": "I got back home at midnight.",
+      "exampleTranslation": "ฉันกลับถึงบ้านตอนเที่ยงคืน"
+    },
+    {
+      "vocab": "turn on",
+      "pronunciation": "เทิร์น ออน",
+      "meaning": "เปิด (เครื่องใช้ไฟฟ้า)",
+      "example": "Can you turn on the light?",
+      "exampleTranslation": "เปิดไฟได้ไหม?"
+    },
+    {
+      "vocab": "turn off",
+      "pronunciation": "เทิร์น ออฟ",
+      "meaning": "ปิด (เครื่องใช้ไฟฟ้า)",
+      "example": "Don't forget to turn off the TV.",
+      "exampleTranslation": "อย่าลืมปิดทีวีนะ"
+    },
+    {
+      "vocab": "turn up",
+      "pronunciation": "เทิร์น อัพ",
+      "meaning": "เพิ่ม (เสียง/ความร้อน)",
+      "example": "Can you turn up the volume?",
+      "exampleTranslation": "เพิ่มเสียงได้ไหม?"
+    },
+    {
+      "vocab": "turn down",
+      "pronunciation": "เทิร์น ดาวน์",
+      "meaning": "ลด (เสียง/ความร้อน)",
+      "example": "Please turn down the music.",
+      "exampleTranslation": "ลดเสียงเพลงหน่อย"
+    },
+    {
+      "vocab": "put on",
+      "pronunciation": "พุท ออน",
+      "meaning": "สวม, ใส่ (เสื้อผ้า)",
+      "example": "Put on your jacket. It's cold.",
+      "exampleTranslation": "ใส่แจ็คเก็ตนะ หนาว"
+    },
+    {
+      "vocab": "take off",
+      "pronunciation": "เทค ออฟ",
+      "meaning": "ถอด (เสื้อผ้า)",
+      "example": "Please take off your shoes.",
+      "exampleTranslation": "กรุณาถอดรองเท้า"
+    },
+    {
+      "vocab": "try on",
+      "pronunciation": "ทราย ออน",
+      "meaning": "ลองสวม",
+      "example": "Can I try on this dress?",
+      "exampleTranslation": "ขอลองชุดนี้ได้ไหม?"
+    },
+    {
+      "vocab": "pick up",
+      "pronunciation": "พิค อัพ",
+      "meaning": "หยิบขึ้น, รับ (คน)",
+      "example": "I'll pick you up at 7.",
+      "exampleTranslation": "ฉันจะไปรับคุณตอน 7 โมง"
+    },
+    {
+      "vocab": "put down",
+      "pronunciation": "พุท ดาวน์",
+      "meaning": "วางลง",
+      "example": "Put down your phone and listen.",
+      "exampleTranslation": "วางโทรศัพท์แล้วฟังนะ"
+    },
+    {
+      "vocab": "look for",
+      "pronunciation": "ลุค ฟอร์",
+      "meaning": "หา, มองหา",
+      "example": "I'm looking for my keys.",
+      "exampleTranslation": "ฉันกำลังหากุญแจ"
+    },
+    {
+      "vocab": "look after",
+      "pronunciation": "ลุค อาฟ-เทอร์",
+      "meaning": "ดูแล",
+      "example": "Can you look after my dog?",
+      "exampleTranslation": "ช่วยดูแลหมาให้หน่อยได้ไหม?"
+    },
+    {
+      "vocab": "look at",
+      "pronunciation": "ลุค แอท",
+      "meaning": "มอง, ดู",
+      "example": "Look at this photo!",
+      "exampleTranslation": "ดูรูปนี้สิ!"
+    },
+    {
+      "vocab": "look up",
+      "pronunciation": "ลุค อัพ",
+      "meaning": "ค้นหา (ในหนังสือ/อินเทอร์เน็ต)",
+      "example": "I need to look up this word.",
+      "exampleTranslation": "ฉันต้องค้นหาคำนี้"
+    },
+    {
+      "vocab": "give up",
+      "pronunciation": "กิฟ อัพ",
+      "meaning": "ยอมแพ้, เลิก",
+      "example": "Don't give up! You can do it.",
+      "exampleTranslation": "อย่ายอมแพ้! คุณทำได้"
+    },
+    {
+      "vocab": "give back",
+      "pronunciation": "กิฟ แบ็ค",
+      "meaning": "คืน",
+      "example": "Please give back my book.",
+      "exampleTranslation": "กรุณาคืนหนังสือของฉัน"
+    },
+    {
+      "vocab": "throw away",
+      "pronunciation": "โธรว์ อะ-เวย์",
+      "meaning": "ทิ้ง",
+      "example": "Don't throw away the receipt.",
+      "exampleTranslation": "อย่าทิ้งใบเสร็จนะ"
+    },
+    {
+      "vocab": "fill in",
+      "pronunciation": "ฟิล อิน",
+      "meaning": "กรอก (แบบฟอร์ม)",
+      "example": "Please fill in this form.",
+      "exampleTranslation": "กรุณากรอกแบบฟอร์มนี้"
+    },
+    {
+      "vocab": "fill out",
+      "pronunciation": "ฟิล เอาท์",
+      "meaning": "กรอก (แบบฟอร์ม)",
+      "example": "Fill out the application form.",
+      "exampleTranslation": "กรอกใบสมัคร"
+    },
+    {
+      "vocab": "find out",
+      "pronunciation": "ไฟนด์ เอาท์",
+      "meaning": "ค้นพบ, หาข้อมูล",
+      "example": "I need to find out the truth.",
+      "exampleTranslation": "ฉันต้องหาความจริง"
+    },
+    {
+      "vocab": "work out",
+      "pronunciation": "เวิร์ค เอาท์",
+      "meaning": "ออกกำลังกาย",
+      "example": "I work out three times a week.",
+      "exampleTranslation": "ฉันออกกำลังกายสามครั้งต่อสัปดาห์"
+    },
+    {
+      "vocab": "run out of",
+      "pronunciation": "รัน เอาท์ ออฟ",
+      "meaning": "หมด (ของ)",
+      "example": "We've run out of milk.",
+      "exampleTranslation": "นมหมดแล้ว"
+    },
+    {
+      "vocab": "get on",
+      "pronunciation": "เก็ท ออน",
+      "meaning": "ขึ้น (รถ/เครื่องบิน)",
+      "example": "Get on the bus quickly.",
+      "exampleTranslation": "ขึ้นรถเมล์เร็วเข้า"
+    },
+    {
+      "vocab": "get off",
+      "pronunciation": "เก็ท ออฟ",
+      "meaning": "ลง (รถ/เครื่องบิน)",
+      "example": "We get off at the next stop.",
+      "exampleTranslation": "เราลงป้ายหน้า"
+    },
+    {
+      "vocab": "get in",
+      "pronunciation": "เก็ท อิน",
+      "meaning": "ขึ้น (รถยนต์/แท็กซี่)",
+      "example": "Get in the car.",
+      "exampleTranslation": "ขึ้นรถมา"
+    },
+    {
+      "vocab": "get out",
+      "pronunciation": "เก็ท เอาท์",
+      "meaning": "ลง (รถยนต์), ออกไป",
+      "example": "Get out of my room!",
+      "exampleTranslation": "ออกไปจากห้องฉัน!"
+    },
+    {
+      "vocab": "sit down",
+      "pronunciation": "ซิท ดาวน์",
+      "meaning": "นั่งลง",
+      "example": "Please sit down.",
+      "exampleTranslation": "กรุณานั่งลง"
+    },
+    {
+      "vocab": "stand up",
+      "pronunciation": "สแตนด์ อัพ",
+      "meaning": "ยืนขึ้น",
+      "example": "Stand up when the teacher comes.",
+      "exampleTranslation": "ยืนขึ้นเมื่อครูมา"
+    },
+    {
+      "vocab": "lie down",
+      "pronunciation": "ลาย ดาวน์",
+      "meaning": "นอนลง",
+      "example": "I need to lie down for a while.",
+      "exampleTranslation": "ฉันต้องนอนพักสักครู่"
+    },
+    {
+      "vocab": "calm down",
+      "pronunciation": "คาล์ม ดาวน์",
+      "meaning": "ใจเย็น, สงบลง",
+      "example": "Please calm down and listen.",
+      "exampleTranslation": "กรุณาใจเย็นแล้วฟัง"
+    },
+    {
+      "vocab": "slow down",
+      "pronunciation": "สโลว์ ดาวน์",
+      "meaning": "ช้าลง",
+      "example": "Slow down! You're driving too fast.",
+      "exampleTranslation": "ช้าลงหน่อย! คุณขับเร็วเกินไป"
+    },
+    {
+      "vocab": "speed up",
+      "pronunciation": "สปีด อัพ",
+      "meaning": "เร็วขึ้น",
+      "example": "We need to speed up or we'll be late.",
+      "exampleTranslation": "เราต้องเร่งขึ้นไม่งั้นจะสาย"
+    },
+    {
+      "vocab": "hurry up",
+      "pronunciation": "เฮอร์-รี่ อัพ",
+      "meaning": "รีบเข้า",
+      "example": "Hurry up! The bus is coming.",
+      "exampleTranslation": "รีบเข้า! รถเมล์มาแล้ว"
+    },
+    {
+      "vocab": "grow up",
+      "pronunciation": "โกรว์ อัพ",
+      "meaning": "เติบโต",
+      "example": "I grew up in Bangkok.",
+      "exampleTranslation": "ฉันเติบโตในกรุงเทพ"
+    },
+    {
+      "vocab": "bring up",
+      "pronunciation": "บริง อัพ",
+      "meaning": "เลี้ยงดู",
+      "example": "She was brought up by her grandparents.",
+      "exampleTranslation": "เธอถูกเลี้ยงดูโดยปู่ย่า"
+    },
+    {
+      "vocab": "set up",
+      "pronunciation": "เซ็ท อัพ",
+      "meaning": "ตั้ง, จัดตั้ง",
+      "example": "Can you help me set up the computer?",
+      "exampleTranslation": "ช่วยตั้งค่าคอมพิวเตอร์ได้ไหม?"
+    },
+    {
+      "vocab": "clean up",
+      "pronunciation": "คลีน อัพ",
+      "meaning": "ทำความสะอาด",
+      "example": "Clean up your room.",
+      "exampleTranslation": "ทำความสะอาดห้องของคุณ"
+    },
+    {
+      "vocab": "tidy up",
+      "pronunciation": "ไท-ดี้ อัพ",
+      "meaning": "จัดระเบียบ",
+      "example": "Let's tidy up before mom comes.",
+      "exampleTranslation": "จัดระเบียบก่อนแม่มานะ"
+    },
+    {
+      "vocab": "wash up",
+      "pronunciation": "วอช อัพ",
+      "meaning": "ล้างจาน",
+      "example": "I'll wash up after dinner.",
+      "exampleTranslation": "ฉันจะล้างจานหลังกินข้าว"
+    },
+    {
+      "vocab": "hang up",
+      "pronunciation": "แฮง อัพ",
+      "meaning": "วางสาย, แขวน",
+      "example": "Don't hang up! I need to tell you something.",
+      "exampleTranslation": "อย่าวางสาย! ฉันมีเรื่องจะบอก"
+    },
+    {
+      "vocab": "call back",
+      "pronunciation": "คอลล์ แบ็ค",
+      "meaning": "โทรกลับ",
+      "example": "I'll call you back later.",
+      "exampleTranslation": "ฉันจะโทรกลับทีหลัง"
+    },
+    {
+      "vocab": "hold on",
+      "pronunciation": "โฮลด์ ออน",
+      "meaning": "รอสักครู่",
+      "example": "Hold on, I'm coming.",
+      "exampleTranslation": "รอเดี๋ยว ฉันกำลังมา"
+    },
+    {
+      "vocab": "carry on",
+      "pronunciation": "แคร์-รี่ ออน",
+      "meaning": "ทำต่อ",
+      "example": "Carry on with your work.",
+      "exampleTranslation": "ทำงานต่อไปนะ"
+    },
+    {
+      "vocab": "go on",
+      "pronunciation": "โก ออน",
+      "meaning": "ดำเนินต่อ",
+      "example": "Go on, I'm listening.",
+      "exampleTranslation": "พูดต่อเลย ฉันฟังอยู่"
+    },
+    {
+      "vocab": "come in",
+      "pronunciation": "คัม อิน",
+      "meaning": "เข้ามา",
+      "example": "Come in, please.",
+      "exampleTranslation": "เชิญเข้ามา"
+    },
+    {
+      "vocab": "get along",
+      "pronunciation": "เก็ท อะ-ลอง",
+      "meaning": "เข้ากันได้",
+      "example": "Do you get along with your boss?",
+      "exampleTranslation": "คุณเข้ากับเจ้านายได้ไหม?"
+    },
+    {
+      "vocab": "break down",
+      "pronunciation": "เบรค ดาวน์",
+      "meaning": "พัง, เสีย",
+      "example": "My car broke down on the way.",
+      "exampleTranslation": "รถฉันพังระหว่างทาง"
+    },
+    {
+      "vocab": "break up",
+      "pronunciation": "เบรค อัพ",
+      "meaning": "เลิกกัน",
+      "example": "They broke up last month.",
+      "exampleTranslation": "พวกเขาเลิกกันเดือนที่แล้ว"
+    },
+    {
+      "vocab": "make up",
+      "pronunciation": "เมค อัพ",
+      "meaning": "คืนดี, แต่งหน้า",
+      "example": "They argued but made up quickly.",
+      "exampleTranslation": "พวกเขาทะเลาะกันแต่คืนดีกันเร็ว"
+    },
+    {
+      "vocab": "cheer up",
+      "pronunciation": "เชียร์ อัพ",
+      "meaning": "ให้กำลังใจ",
+      "example": "Cheer up! Everything will be fine.",
+      "exampleTranslation": "สู้ๆ นะ! ทุกอย่างจะดีขึ้น"
+    },
+    {
+      "vocab": "eat out",
+      "pronunciation": "อีท เอาท์",
+      "meaning": "กินข้างนอก",
+      "example": "Let's eat out tonight.",
+      "exampleTranslation": "ไปกินข้างนอกคืนนี้กัน"
+    },
+    {
+      "vocab": "take out",
+      "pronunciation": "เทค เอาท์",
+      "meaning": "พาออกไป, สั่งกลับบ้าน",
+      "example": "I'll take you out for dinner.",
+      "exampleTranslation": "ฉันจะพาคุณไปกินข้าวเย็น"
+    },
+    {
+      "vocab": "check in",
+      "pronunciation": "เช็ค อิน",
+      "meaning": "เช็คอิน",
+      "example": "We need to check in at 2 PM.",
+      "exampleTranslation": "เราต้องเช็คอินตอนบ่าย 2"
+    },
+    {
+      "vocab": "check out",
+      "pronunciation": "เช็ค เอาท์",
+      "meaning": "เช็คเอาท์",
+      "example": "I need to check out by noon.",
+      "exampleTranslation": "ฉันต้องเช็คเอาท์ก่อนเที่ยง"
+    },
+    {
+      "vocab": "drop off",
+      "pronunciation": "ดร็อป ออฟ",
+      "meaning": "ส่ง (คน/ของ)",
+      "example": "I'll drop you off at the station.",
+      "exampleTranslation": "ฉันจะไปส่งคุณที่สถานี"
+    },
+    {
+      "vocab": "show up",
+      "pronunciation": "โชว์ อัพ",
+      "meaning": "มาถึง, ปรากฏตัว",
+      "example": "He didn't show up at the meeting.",
+      "exampleTranslation": "เขาไม่มาประชุม"
+    },
+    {
+      "vocab": "pay back",
+      "pronunciation": "เพย์ แบ็ค",
+      "meaning": "ใช้คืน (เงิน)",
+      "example": "I'll pay you back tomorrow.",
+      "exampleTranslation": "ฉันจะใช้เงินคืนพรุ่งนี้"
+    },
+    {
+      "vocab": "end up",
+      "pronunciation": "เอนด์ อัพ",
+      "meaning": "จบลงด้วย",
+      "example": "We ended up staying home.",
+      "exampleTranslation": "สุดท้ายเราก็อยู่บ้าน"
+    },
+    {
+      "vocab": "figure out",
+      "pronunciation": "ฟิก-เกอร์ เอาท์",
+      "meaning": "คิดออก, หาคำตอบ",
+      "example": "I can't figure out this problem.",
+      "exampleTranslation": "ฉันคิดปัญหานี้ไม่ออก"
+    },
+    {
+      "vocab": "sort out",
+      "pronunciation": "ซอร์ท เอาท์",
+      "meaning": "จัดการ, แก้ปัญหา",
+      "example": "We need to sort out this problem.",
+      "exampleTranslation": "เราต้องจัดการปัญหานี้"
+    },
+    {
+      "vocab": "point out",
+      "pronunciation": "พอยท์ เอาท์",
+      "meaning": "ชี้ให้เห็น",
+      "example": "She pointed out my mistake.",
+      "exampleTranslation": "เธอชี้ให้เห็นความผิดพลาดของฉัน"
+    },
+    {
+      "vocab": "write down",
+      "pronunciation": "ไรท์ ดาวน์",
+      "meaning": "จดบันทึก",
+      "example": "Write down your phone number.",
+      "exampleTranslation": "จดเบอร์โทรศัพท์ของคุณ"
+    },
+    {
+      "vocab": "cut down",
+      "pronunciation": "คัท ดาวน์",
+      "meaning": "ลด, ตัดทอน",
+      "example": "I'm trying to cut down on sugar.",
+      "exampleTranslation": "ฉันกำลังพยายามลดน้ำตาล"
+    },
+    {
+      "vocab": "put off",
+      "pronunciation": "พุท ออฟ",
+      "meaning": "เลื่อน, ผลัดวัน",
+      "example": "Don't put off your homework.",
+      "exampleTranslation": "อย่าผลัดการบ้าน"
+    },
+    {
+      "vocab": "turn around",
+      "pronunciation": "เทิร์น อะ-ราวนด์",
+      "meaning": "หันกลับ",
+      "example": "Turn around and look at me.",
+      "exampleTranslation": "หันกลับมาดูฉัน"
+    },
+    {
+      "vocab": "come up with",
+      "pronunciation": "คัม อัพ วิธ",
+      "meaning": "คิดขึ้นมาได้",
+      "example": "Can you come up with a better idea?",
+      "exampleTranslation": "คุณคิดไอเดียที่ดีกว่านี้ได้ไหม?"
+    },
+    {
+      "vocab": "look forward to",
+      "pronunciation": "ลุค ฟอร์-เวิร์ด ทู",
+      "meaning": "รอคอย, ตั้งตารอ",
+      "example": "I look forward to meeting you.",
+      "exampleTranslation": "ฉันตั้งตารอพบคุณ"
+    },
+    {
+      "vocab": "get rid of",
+      "pronunciation": "เก็ท ริด ออฟ",
+      "meaning": "กำจัด, ทิ้ง",
+      "example": "I need to get rid of these old clothes.",
+      "exampleTranslation": "ฉันต้องทิ้งเสื้อผ้าเก่าพวกนี้"
+    },
+    {
+      "vocab": "keep up with",
+      "pronunciation": "คีพ อัพ วิธ",
+      "meaning": "ตามทัน",
+      "example": "I can't keep up with you.",
+      "exampleTranslation": "ฉันตามคุณไม่ทัน"
+    },
+    {
+      "vocab": "catch up with",
+      "pronunciation": "แคทช์ อัพ วิธ",
+      "meaning": "ตามทัน, พบปะ",
+      "example": "Let's catch up with coffee sometime.",
+      "exampleTranslation": "ไปนั่งดื่มกาแฟคุยกันบ้างนะ"
+    },
+    {
+      "vocab": "put up with",
+      "pronunciation": "พุท อัพ วิธ",
+      "meaning": "ทนรับ, อดทน",
+      "example": "I can't put up with this noise.",
+      "exampleTranslation": "ฉันทนเสียงนี้ไม่ได้"
+    },
+    {
+      "vocab": "run into",
+      "pronunciation": "รัน อิน-ทู",
+      "meaning": "บังเอิญเจอ",
+      "example": "I ran into my old friend yesterday.",
+      "exampleTranslation": "เมื่อวานฉันบังเอิญเจอเพื่อนเก่า"
+    }
+  ]
+}

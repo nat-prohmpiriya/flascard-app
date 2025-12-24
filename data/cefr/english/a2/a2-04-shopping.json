@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Shopping",
+    "description": "CEFR A2 Vocabulary - Shopping, Money, Clothes, Sizes",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "shop",
+      "pronunciation": "ช็อป",
+      "meaning": "ร้านค้า",
+      "example": "There's a shop on the corner.",
+      "exampleTranslation": "มีร้านค้าอยู่ตรงหัวมุม"
+    },
+    {
+      "vocab": "store",
+      "pronunciation": "สโตร์",
+      "meaning": "ร้าน, ห้างสรรพสินค้า",
+      "example": "I work at a department store.",
+      "exampleTranslation": "ฉันทำงานที่ห้างสรรพสินค้า"
+    },
+    {
+      "vocab": "supermarket",
+      "pronunciation": "ซุ-เปอร์-มาร์-เก็ท",
+      "meaning": "ซุปเปอร์มาร์เก็ต",
+      "example": "I buy food at the supermarket.",
+      "exampleTranslation": "ฉันซื้ออาหารที่ซุปเปอร์มาร์เก็ต"
+    },
+    {
+      "vocab": "shopping mall",
+      "pronunciation": "ช็อป-ปิ้ง มอลล์",
+      "meaning": "ห้างสรรพสินค้า",
+      "example": "Let's go to the shopping mall.",
+      "exampleTranslation": "ไปห้างกันเถอะ"
+    },
+    {
+      "vocab": "market",
+      "pronunciation": "มาร์-เก็ท",
+      "meaning": "ตลาด",
+      "example": "I buy vegetables at the market.",
+      "exampleTranslation": "ฉันซื้อผักที่ตลาด"
+    },
+    {
+      "vocab": "buy",
+      "pronunciation": "บาย",
+      "meaning": "ซื้อ",
+      "example": "I want to buy a new phone.",
+      "exampleTranslation": "ฉันอยากซื้อโทรศัพท์ใหม่"
+    },
+    {
+      "vocab": "sell",
+      "pronunciation": "เซลล์",
+      "meaning": "ขาย",
+      "example": "They sell fresh fruits.",
+      "exampleTranslation": "พวกเขาขายผลไม้สด"
+    },
+    {
+      "vocab": "pay",
+      "pronunciation": "เพย์",
+      "meaning": "จ่าย",
+      "example": "How would you like to pay?",
+      "exampleTranslation": "คุณจะจ่ายเงินอย่างไร?"
+    },
+    {
+      "vocab": "price",
+      "pronunciation": "ไพรซ์",
+      "meaning": "ราคา",
+      "example": "What's the price of this shirt?",
+      "exampleTranslation": "เสื้อตัวนี้ราคาเท่าไหร่?"
+    },
+    {
+      "vocab": "cost",
+      "pronunciation": "คอสท์",
+      "meaning": "ราคา, มีราคา",
+      "example": "How much does it cost?",
+      "exampleTranslation": "ราคาเท่าไหร่?"
+    },
+    {
+      "vocab": "cheap",
+      "pronunciation": "ชีพ",
+      "meaning": "ถูก",
+      "example": "This is very cheap.",
+      "exampleTranslation": "อันนี้ถูกมาก"
+    },
+    {
+      "vocab": "expensive",
+      "pronunciation": "เอ็กซ์-เพน-ซิฟ",
+      "meaning": "แพง",
+      "example": "This bag is too expensive.",
+      "exampleTranslation": "กระเป๋านี้แพงเกินไป"
+    },
+    {
+      "vocab": "discount",
+      "pronunciation": "ดิส-เคานท์",
+      "meaning": "ส่วนลด",
+      "example": "Is there a discount?",
+      "exampleTranslation": "มีส่วนลดไหม?"
+    },
+    {
+      "vocab": "sale",
+      "pronunciation": "เซล",
+      "meaning": "ลดราคา",
+      "example": "The shoes are on sale.",
+      "exampleTranslation": "รองเท้ากำลังลดราคา"
+    },
+    {
+      "vocab": "cash",
+      "pronunciation": "แคช",
+      "meaning": "เงินสด",
+      "example": "I'll pay by cash.",
+      "exampleTranslation": "ฉันจะจ่ายเป็นเงินสด"
+    },
+    {
+      "vocab": "credit card",
+      "pronunciation": "เครดิท การ์ด",
+      "meaning": "บัตรเครดิต",
+      "example": "Do you accept credit cards?",
+      "exampleTranslation": "รับบัตรเครดิตไหม?"
+    },
+    {
+      "vocab": "receipt",
+      "pronunciation": "รี-ซีท",
+      "meaning": "ใบเสร็จ",
+      "example": "Can I have the receipt?",
+      "exampleTranslation": "ขอใบเสร็จด้วยค่ะ"
+    },
+    {
+      "vocab": "change",
+      "pronunciation": "เชนจ์",
+      "meaning": "เงินทอน",
+      "example": "Here's your change.",
+      "exampleTranslation": "เงินทอนค่ะ"
+    },
+    {
+      "vocab": "customer",
+      "pronunciation": "คัส-โต-เมอร์",
+      "meaning": "ลูกค้า",
+      "example": "The customer is always right.",
+      "exampleTranslation": "ลูกค้าถูกเสมอ"
+    },
+    {
+      "vocab": "shopping bag",
+      "pronunciation": "ช็อป-ปิ้ง แบ็ก",
+      "meaning": "ถุงช็อปปิ้ง",
+      "example": "Do you need a shopping bag?",
+      "exampleTranslation": "ต้องการถุงไหมคะ?"
+    },
+    {
+      "vocab": "try on",
+      "pronunciation": "ทราย ออน",
+      "meaning": "ลองสวม",
+      "example": "Can I try this on?",
+      "exampleTranslation": "ขอลองได้ไหม?"
+    },
+    {
+      "vocab": "fitting room",
+      "pronunciation": "ฟิท-ติ้ง รูม",
+      "meaning": "ห้องลองเสื้อผ้า",
+      "example": "The fitting room is over there.",
+      "exampleTranslation": "ห้องลองเสื้อผ้าอยู่ตรงโน้น"
+    },
+    {
+      "vocab": "size",
+      "pronunciation": "ไซส์",
+      "meaning": "ขนาด",
+      "example": "What size do you wear?",
+      "exampleTranslation": "คุณใส่ไซส์อะไร?"
+    },
+    {
+      "vocab": "small",
+      "pronunciation": "สมอลล์",
+      "meaning": "เล็ก",
+      "example": "This is too small for me.",
+      "exampleTranslation": "อันนี้เล็กเกินไปสำหรับฉัน"
+    },
+    {
+      "vocab": "medium",
+      "pronunciation": "มี-เดียม",
+      "meaning": "กลาง",
+      "example": "Do you have this in medium?",
+      "exampleTranslation": "มีไซส์กลางไหม?"
+    },
+    {
+      "vocab": "large",
+      "pronunciation": "ลาร์จ",
+      "meaning": "ใหญ่",
+      "example": "I need a larger size.",
+      "exampleTranslation": "ฉันต้องการไซส์ใหญ่กว่านี้"
+    },
+    {
+      "vocab": "shirt",
+      "pronunciation": "เชิร์ท",
+      "meaning": "เสื้อเชิ้ต",
+      "example": "I need a new white shirt.",
+      "exampleTranslation": "ฉันต้องการเสื้อเชิ้ตสีขาวใหม่"
+    },
+    {
+      "vocab": "T-shirt",
+      "pronunciation": "ที-เชิร์ท",
+      "meaning": "เสื้อยืด",
+      "example": "I bought three T-shirts.",
+      "exampleTranslation": "ฉันซื้อเสื้อยืดสามตัว"
+    },
+    {
+      "vocab": "pants",
+      "pronunciation": "แพนท์ส",
+      "meaning": "กางเกงขายาว",
+      "example": "These pants are too long.",
+      "exampleTranslation": "กางเกงตัวนี้ยาวเกินไป"
+    },
+    {
+      "vocab": "jeans",
+      "pronunciation": "จีนส์",
+      "meaning": "กางเกงยีนส์",
+      "example": "I wear jeans every day.",
+      "exampleTranslation": "ฉันใส่ยีนส์ทุกวัน"
+    },
+    {
+      "vocab": "shorts",
+      "pronunciation": "ชอร์ทส์",
+      "meaning": "กางเกงขาสั้น",
+      "example": "It's hot. I'll wear shorts.",
+      "exampleTranslation": "ร้อนจัง ฉันจะใส่กางเกงขาสั้น"
+    },
+    {
+      "vocab": "skirt",
+      "pronunciation": "สเกิร์ท",
+      "meaning": "กระโปรง",
+      "example": "She's wearing a blue skirt.",
+      "exampleTranslation": "เธอใส่กระโปรงสีน้ำเงิน"
+    },
+    {
+      "vocab": "dress",
+      "pronunciation": "เดรส",
+      "meaning": "ชุดกระโปรง",
+      "example": "What a beautiful dress!",
+      "exampleTranslation": "ชุดสวยจัง!"
+    },
+    {
+      "vocab": "jacket",
+      "pronunciation": "แจ็ค-เก็ท",
+      "meaning": "เสื้อแจ็คเก็ต",
+      "example": "Put on your jacket. It's cold.",
+      "exampleTranslation": "ใส่แจ็คเก็ตนะ หนาว"
+    },
+    {
+      "vocab": "coat",
+      "pronunciation": "โคท",
+      "meaning": "เสื้อโค้ท",
+      "example": "I need a warm coat for winter.",
+      "exampleTranslation": "ฉันต้องการเสื้อโค้ทอุ่นๆ สำหรับฤดูหนาว"
+    },
+    {
+      "vocab": "sweater",
+      "pronunciation": "สเวต-เตอร์",
+      "meaning": "เสื้อกันหนาว",
+      "example": "This sweater is very soft.",
+      "exampleTranslation": "เสื้อกันหนาวตัวนี้นุ่มมาก"
+    },
+    {
+      "vocab": "shoes",
+      "pronunciation": "ชูส์",
+      "meaning": "รองเท้า",
+      "example": "I bought new shoes yesterday.",
+      "exampleTranslation": "ฉันซื้อรองเท้าใหม่เมื่อวาน"
+    },
+    {
+      "vocab": "sneakers",
+      "pronunciation": "สนี-เกอร์ส",
+      "meaning": "รองเท้าผ้าใบ",
+      "example": "I wear sneakers to the gym.",
+      "exampleTranslation": "ฉันใส่รองเท้าผ้าใบไปยิม"
+    },
+    {
+      "vocab": "boots",
+      "pronunciation": "บูทส์",
+      "meaning": "รองเท้าบูท",
+      "example": "These boots are waterproof.",
+      "exampleTranslation": "รองเท้าบูทนี้กันน้ำ"
+    },
+    {
+      "vocab": "sandals",
+      "pronunciation": "แซน-เดิลส์",
+      "meaning": "รองเท้าแตะ",
+      "example": "I wear sandals in summer.",
+      "exampleTranslation": "ฉันใส่รองเท้าแตะในหน้าร้อน"
+    },
+    {
+      "vocab": "socks",
+      "pronunciation": "ซ็อคส์",
+      "meaning": "ถุงเท้า",
+      "example": "I need new socks.",
+      "exampleTranslation": "ฉันต้องการถุงเท้าใหม่"
+    },
+    {
+      "vocab": "hat",
+      "pronunciation": "แฮท",
+      "meaning": "หมวก",
+      "example": "Wear a hat. It's sunny.",
+      "exampleTranslation": "ใส่หมวกนะ แดดจัง"
+    },
+    {
+      "vocab": "belt",
+      "pronunciation": "เบลท์",
+      "meaning": "เข็มขัด",
+      "example": "I need a new belt.",
+      "exampleTranslation": "ฉันต้องการเข็มขัดใหม่"
+    },
+    {
+      "vocab": "bag",
+      "pronunciation": "แบ็ก",
+      "meaning": "กระเป๋า",
+      "example": "I like your bag.",
+      "exampleTranslation": "ฉันชอบกระเป๋าของคุณ"
+    },
+    {
+      "vocab": "wallet",
+      "pronunciation": "วอล-เล็ท",
+      "meaning": "กระเป๋าสตางค์",
+      "example": "I left my wallet at home.",
+      "exampleTranslation": "ฉันลืมกระเป๋าสตางค์ไว้ที่บ้าน"
+    },
+    {
+      "vocab": "sunglasses",
+      "pronunciation": "ซัน-กลาส-เซส",
+      "meaning": "แว่นกันแดด",
+      "example": "Don't forget your sunglasses.",
+      "exampleTranslation": "อย่าลืมแว่นกันแดดนะ"
+    },
+    {
+      "vocab": "umbrella",
+      "pronunciation": "อัม-เบรล-ล่า",
+      "meaning": "ร่ม",
+      "example": "Take an umbrella. It might rain.",
+      "exampleTranslation": "เอาร่มไปด้วย ฝนอาจตก"
+    },
+    {
+      "vocab": "color",
+      "pronunciation": "คัล-เลอร์",
+      "meaning": "สี",
+      "example": "What color do you want?",
+      "exampleTranslation": "คุณต้องการสีอะไร?"
+    },
+    {
+      "vocab": "black",
+      "pronunciation": "แบล็ค",
+      "meaning": "สีดำ",
+      "example": "I want this in black.",
+      "exampleTranslation": "ฉันต้องการอันนี้สีดำ"
+    },
+    {
+      "vocab": "white",
+      "pronunciation": "ไวท์",
+      "meaning": "สีขาว",
+      "example": "The white one looks nice.",
+      "exampleTranslation": "สีขาวดูดีนะ"
+    },
+    {
+      "vocab": "red",
+      "pronunciation": "เรด",
+      "meaning": "สีแดง",
+      "example": "She loves red dresses.",
+      "exampleTranslation": "เธอชอบชุดสีแดง"
+    },
+    {
+      "vocab": "blue",
+      "pronunciation": "บลู",
+      "meaning": "สีน้ำเงิน",
+      "example": "Blue is my favorite color.",
+      "exampleTranslation": "สีน้ำเงินเป็นสีโปรดของฉัน"
+    },
+    {
+      "vocab": "green",
+      "pronunciation": "กรีน",
+      "meaning": "สีเขียว",
+      "example": "I bought a green jacket.",
+      "exampleTranslation": "ฉันซื้อแจ็คเก็ตสีเขียว"
+    },
+    {
+      "vocab": "yellow",
+      "pronunciation": "เยล-โลว์",
+      "meaning": "สีเหลือง",
+      "example": "This yellow shirt is too bright.",
+      "exampleTranslation": "เสื้อสีเหลืองนี้สดเกินไป"
+    },
+    {
+      "vocab": "fit",
+      "pronunciation": "ฟิท",
+      "meaning": "พอดี",
+      "example": "Does it fit?",
+      "exampleTranslation": "พอดีไหม?"
+    },
+    {
+      "vocab": "tight",
+      "pronunciation": "ไทท์",
+      "meaning": "คับ",
+      "example": "These pants are too tight.",
+      "exampleTranslation": "กางเกงตัวนี้คับเกินไป"
+    },
+    {
+      "vocab": "loose",
+      "pronunciation": "ลูส",
+      "meaning": "หลวม",
+      "example": "This shirt is too loose.",
+      "exampleTranslation": "เสื้อตัวนี้หลวมเกินไป"
+    },
+    {
+      "vocab": "return",
+      "pronunciation": "รี-เทิร์น",
+      "meaning": "คืน",
+      "example": "Can I return this?",
+      "exampleTranslation": "ขอคืนได้ไหม?"
+    },
+    {
+      "vocab": "exchange",
+      "pronunciation": "เอ็กซ์-เชนจ์",
+      "meaning": "แลกเปลี่ยน",
+      "example": "I'd like to exchange this for a larger size.",
+      "exampleTranslation": "ฉันอยากเปลี่ยนเป็นไซส์ใหญ่กว่านี้"
+    }
+  ]
+}

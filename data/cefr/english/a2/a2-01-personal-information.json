@@ -1,0 +1,433 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Personal Information",
+    "description": "CEFR A2 Vocabulary - Personal Information, Family, Relationships",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "name",
+      "pronunciation": "เนม",
+      "meaning": "ชื่อ",
+      "example": "What's your name?",
+      "exampleTranslation": "คุณชื่ออะไร?"
+    },
+    {
+      "vocab": "surname",
+      "pronunciation": "เซอร์-เนม",
+      "meaning": "นามสกุล",
+      "example": "Please write your surname here.",
+      "exampleTranslation": "กรุณาเขียนนามสกุลของคุณตรงนี้"
+    },
+    {
+      "vocab": "age",
+      "pronunciation": "เอจ",
+      "meaning": "อายุ",
+      "example": "How old are you? What's your age?",
+      "exampleTranslation": "คุณอายุเท่าไหร่?"
+    },
+    {
+      "vocab": "address",
+      "pronunciation": "แอด-เดรส",
+      "meaning": "ที่อยู่",
+      "example": "What's your address?",
+      "exampleTranslation": "ที่อยู่ของคุณคืออะไร?"
+    },
+    {
+      "vocab": "nationality",
+      "pronunciation": "แนช-ชัน-แนล-ลิ-ที",
+      "meaning": "สัญชาติ",
+      "example": "What's your nationality?",
+      "exampleTranslation": "คุณสัญชาติอะไร?"
+    },
+    {
+      "vocab": "occupation",
+      "pronunciation": "ออค-คิว-เพ-ชัน",
+      "meaning": "อาชีพ",
+      "example": "What's your occupation?",
+      "exampleTranslation": "คุณทำอาชีพอะไร?"
+    },
+    {
+      "vocab": "married",
+      "pronunciation": "แมร์-รี่ด",
+      "meaning": "แต่งงานแล้ว",
+      "example": "Are you married or single?",
+      "exampleTranslation": "คุณแต่งงานแล้วหรือโสด?"
+    },
+    {
+      "vocab": "single",
+      "pronunciation": "ซิง-เกิ้ล",
+      "meaning": "โสด",
+      "example": "I'm single.",
+      "exampleTranslation": "ฉันโสด"
+    },
+    {
+      "vocab": "divorced",
+      "pronunciation": "ดิ-วอร์ซด",
+      "meaning": "หย่าร้าง",
+      "example": "My parents are divorced.",
+      "exampleTranslation": "พ่อแม่ของฉันหย่าร้างกัน"
+    },
+    {
+      "vocab": "date of birth",
+      "pronunciation": "เดท ออฟ เบิร์ธ",
+      "meaning": "วันเกิด",
+      "example": "What's your date of birth?",
+      "exampleTranslation": "วันเกิดของคุณคือวันที่เท่าไหร่?"
+    },
+    {
+      "vocab": "place of birth",
+      "pronunciation": "เพลส ออฟ เบิร์ธ",
+      "meaning": "สถานที่เกิด",
+      "example": "My place of birth is Bangkok.",
+      "exampleTranslation": "สถานที่เกิดของฉันคือกรุงเทพ"
+    },
+    {
+      "vocab": "phone number",
+      "pronunciation": "โฟน นัม-เบอร์",
+      "meaning": "เบอร์โทรศัพท์",
+      "example": "Can I have your phone number?",
+      "exampleTranslation": "ขอเบอร์โทรศัพท์ได้ไหม?"
+    },
+    {
+      "vocab": "email",
+      "pronunciation": "อี-เมล",
+      "meaning": "อีเมล",
+      "example": "What's your email address?",
+      "exampleTranslation": "อีเมลของคุณคืออะไร?"
+    },
+    {
+      "vocab": "passport",
+      "pronunciation": "พาส-พอร์ท",
+      "meaning": "หนังสือเดินทาง",
+      "example": "I need to renew my passport.",
+      "exampleTranslation": "ฉันต้องต่ออายุหนังสือเดินทาง"
+    },
+    {
+      "vocab": "ID card",
+      "pronunciation": "ไอ-ดี การ์ด",
+      "meaning": "บัตรประชาชน",
+      "example": "Please show your ID card.",
+      "exampleTranslation": "กรุณาแสดงบัตรประชาชน"
+    },
+    {
+      "vocab": "family",
+      "pronunciation": "แฟม-มิ-ลี่",
+      "meaning": "ครอบครัว",
+      "example": "I have a big family.",
+      "exampleTranslation": "ฉันมีครอบครัวใหญ่"
+    },
+    {
+      "vocab": "parents",
+      "pronunciation": "แพ-เร้นท์ส",
+      "meaning": "พ่อแม่",
+      "example": "My parents live in Chiang Mai.",
+      "exampleTranslation": "พ่อแม่ของฉันอยู่เชียงใหม่"
+    },
+    {
+      "vocab": "father",
+      "pronunciation": "ฟา-เธอร์",
+      "meaning": "พ่อ",
+      "example": "My father is a teacher.",
+      "exampleTranslation": "พ่อของฉันเป็นครู"
+    },
+    {
+      "vocab": "mother",
+      "pronunciation": "มัธ-เธอร์",
+      "meaning": "แม่",
+      "example": "My mother works at a hospital.",
+      "exampleTranslation": "แม่ของฉันทำงานที่โรงพยาบาล"
+    },
+    {
+      "vocab": "husband",
+      "pronunciation": "ฮัส-แบนด์",
+      "meaning": "สามี",
+      "example": "Her husband is a doctor.",
+      "exampleTranslation": "สามีของเธอเป็นหมอ"
+    },
+    {
+      "vocab": "wife",
+      "pronunciation": "ไวฟ์",
+      "meaning": "ภรรยา",
+      "example": "His wife is very kind.",
+      "exampleTranslation": "ภรรยาของเขาใจดีมาก"
+    },
+    {
+      "vocab": "son",
+      "pronunciation": "ซัน",
+      "meaning": "ลูกชาย",
+      "example": "They have two sons.",
+      "exampleTranslation": "พวกเขามีลูกชายสองคน"
+    },
+    {
+      "vocab": "daughter",
+      "pronunciation": "ดอ-เทอร์",
+      "meaning": "ลูกสาว",
+      "example": "My daughter is five years old.",
+      "exampleTranslation": "ลูกสาวของฉันอายุห้าขวบ"
+    },
+    {
+      "vocab": "brother",
+      "pronunciation": "บรา-เธอร์",
+      "meaning": "พี่ชาย/น้องชาย",
+      "example": "I have one brother and one sister.",
+      "exampleTranslation": "ฉันมีพี่ชายหนึ่งคนและพี่สาวหนึ่งคน"
+    },
+    {
+      "vocab": "sister",
+      "pronunciation": "ซิส-เทอร์",
+      "meaning": "พี่สาว/น้องสาว",
+      "example": "My sister lives in London.",
+      "exampleTranslation": "พี่สาวของฉันอยู่ลอนดอน"
+    },
+    {
+      "vocab": "grandfather",
+      "pronunciation": "แกรนด์-ฟา-เธอร์",
+      "meaning": "ปู่/ตา",
+      "example": "My grandfather is 80 years old.",
+      "exampleTranslation": "ปู่ของฉันอายุ 80 ปี"
+    },
+    {
+      "vocab": "grandmother",
+      "pronunciation": "แกรนด์-มัธ-เธอร์",
+      "meaning": "ย่า/ยาย",
+      "example": "My grandmother makes delicious food.",
+      "exampleTranslation": "ยายของฉันทำอาหารอร่อย"
+    },
+    {
+      "vocab": "grandparents",
+      "pronunciation": "แกรนด์-แพ-เร้นท์ส",
+      "meaning": "ปู่ย่าตายาย",
+      "example": "I visit my grandparents every weekend.",
+      "exampleTranslation": "ฉันไปเยี่ยมปู่ย่าทุกสุดสัปดาห์"
+    },
+    {
+      "vocab": "grandchildren",
+      "pronunciation": "แกรนด์-ชิล-เดร้น",
+      "meaning": "หลาน (ลูกของลูก)",
+      "example": "She has five grandchildren.",
+      "exampleTranslation": "เธอมีหลานห้าคน"
+    },
+    {
+      "vocab": "uncle",
+      "pronunciation": "อัง-เคิ่ล",
+      "meaning": "ลุง/อา",
+      "example": "My uncle lives in America.",
+      "exampleTranslation": "ลุงของฉันอยู่อเมริกา"
+    },
+    {
+      "vocab": "aunt",
+      "pronunciation": "อานท์",
+      "meaning": "ป้า/น้า",
+      "example": "My aunt is visiting us next week.",
+      "exampleTranslation": "ป้าของฉันจะมาเยี่ยมสัปดาห์หน้า"
+    },
+    {
+      "vocab": "cousin",
+      "pronunciation": "คัส-ซิ่น",
+      "meaning": "ลูกพี่ลูกน้อง",
+      "example": "I have many cousins.",
+      "exampleTranslation": "ฉันมีลูกพี่ลูกน้องหลายคน"
+    },
+    {
+      "vocab": "nephew",
+      "pronunciation": "เนฟ-ฟิว",
+      "meaning": "หลานชาย (ลูกพี่น้อง)",
+      "example": "My nephew is starting school this year.",
+      "exampleTranslation": "หลานชายของฉันเริ่มเข้าโรงเรียนปีนี้"
+    },
+    {
+      "vocab": "niece",
+      "pronunciation": "นีซ",
+      "meaning": "หลานสาว (ลูกพี่น้อง)",
+      "example": "My niece loves to dance.",
+      "exampleTranslation": "หลานสาวของฉันชอบเต้น"
+    },
+    {
+      "vocab": "relative",
+      "pronunciation": "เรล-ละ-ทิฟ",
+      "meaning": "ญาติ",
+      "example": "All my relatives came to the wedding.",
+      "exampleTranslation": "ญาติทุกคนมางานแต่งงาน"
+    },
+    {
+      "vocab": "friend",
+      "pronunciation": "เฟรนด์",
+      "meaning": "เพื่อน",
+      "example": "She is my best friend.",
+      "exampleTranslation": "เธอเป็นเพื่อนที่ดีที่สุดของฉัน"
+    },
+    {
+      "vocab": "neighbor",
+      "pronunciation": "เน-เบอร์",
+      "meaning": "เพื่อนบ้าน",
+      "example": "My neighbor is very friendly.",
+      "exampleTranslation": "เพื่อนบ้านของฉันเป็นมิตรมาก"
+    },
+    {
+      "vocab": "colleague",
+      "pronunciation": "คอล-ลีก",
+      "meaning": "เพื่อนร่วมงาน",
+      "example": "I had lunch with my colleagues.",
+      "exampleTranslation": "ฉันกินข้าวกลางวันกับเพื่อนร่วมงาน"
+    },
+    {
+      "vocab": "classmate",
+      "pronunciation": "คลาส-เมท",
+      "meaning": "เพื่อนร่วมชั้น",
+      "example": "He was my classmate in high school.",
+      "exampleTranslation": "เขาเป็นเพื่อนร่วมชั้นตอนมัธยม"
+    },
+    {
+      "vocab": "boyfriend",
+      "pronunciation": "บอย-เฟรนด์",
+      "meaning": "แฟนผู้ชาย",
+      "example": "She has a new boyfriend.",
+      "exampleTranslation": "เธอมีแฟนใหม่"
+    },
+    {
+      "vocab": "girlfriend",
+      "pronunciation": "เกิร์ล-เฟรนด์",
+      "meaning": "แฟนผู้หญิง",
+      "example": "He met his girlfriend at university.",
+      "exampleTranslation": "เขาพบแฟนที่มหาวิทยาลัย"
+    },
+    {
+      "vocab": "tall",
+      "pronunciation": "ทอลล์",
+      "meaning": "สูง",
+      "example": "My brother is very tall.",
+      "exampleTranslation": "พี่ชายของฉันสูงมาก"
+    },
+    {
+      "vocab": "short",
+      "pronunciation": "ชอร์ท",
+      "meaning": "เตี้ย",
+      "example": "I'm shorter than my sister.",
+      "exampleTranslation": "ฉันเตี้ยกว่าพี่สาว"
+    },
+    {
+      "vocab": "young",
+      "pronunciation": "ยัง",
+      "meaning": "หนุ่มสาว, อายุน้อย",
+      "example": "She looks very young.",
+      "exampleTranslation": "เธอดูอายุน้อยมาก"
+    },
+    {
+      "vocab": "old",
+      "pronunciation": "โอลด์",
+      "meaning": "แก่, อายุมาก",
+      "example": "My grandmother is old but healthy.",
+      "exampleTranslation": "ยายของฉันแก่แต่แข็งแรง"
+    },
+    {
+      "vocab": "slim",
+      "pronunciation": "สลิม",
+      "meaning": "ผอมเพรียว",
+      "example": "She is slim and beautiful.",
+      "exampleTranslation": "เธอผอมเพรียวและสวย"
+    },
+    {
+      "vocab": "handsome",
+      "pronunciation": "แฮน-ซัม",
+      "meaning": "หล่อ",
+      "example": "Her husband is very handsome.",
+      "exampleTranslation": "สามีของเธอหล่อมาก"
+    },
+    {
+      "vocab": "beautiful",
+      "pronunciation": "บิว-ทิ-ฟูล",
+      "meaning": "สวย",
+      "example": "You look beautiful today.",
+      "exampleTranslation": "วันนี้คุณดูสวยมาก"
+    },
+    {
+      "vocab": "kind",
+      "pronunciation": "ไคนด์",
+      "meaning": "ใจดี",
+      "example": "My mother is very kind.",
+      "exampleTranslation": "แม่ของฉันใจดีมาก"
+    },
+    {
+      "vocab": "friendly",
+      "pronunciation": "เฟรนด์-ลี่",
+      "meaning": "เป็นมิตร",
+      "example": "Thai people are very friendly.",
+      "exampleTranslation": "คนไทยเป็นมิตรมาก"
+    },
+    {
+      "vocab": "funny",
+      "pronunciation": "ฟัน-นี่",
+      "meaning": "ตลก",
+      "example": "My brother is very funny.",
+      "exampleTranslation": "พี่ชายของฉันตลกมาก"
+    },
+    {
+      "vocab": "serious",
+      "pronunciation": "ซี-เรียส",
+      "meaning": "จริงจัง",
+      "example": "My father is always serious.",
+      "exampleTranslation": "พ่อของฉันจริงจังเสมอ"
+    },
+    {
+      "vocab": "quiet",
+      "pronunciation": "ไคว-เอ็ท",
+      "meaning": "เงียบ",
+      "example": "She is quiet but smart.",
+      "exampleTranslation": "เธอเงียบแต่ฉลาด"
+    },
+    {
+      "vocab": "talkative",
+      "pronunciation": "ทอล์ค-คะ-ทิฟ",
+      "meaning": "ช่างพูด",
+      "example": "My sister is very talkative.",
+      "exampleTranslation": "น้องสาวของฉันช่างพูดมาก"
+    },
+    {
+      "vocab": "lazy",
+      "pronunciation": "เล-ซี่",
+      "meaning": "ขี้เกียจ",
+      "example": "Don't be lazy!",
+      "exampleTranslation": "อย่าขี้เกียจ!"
+    },
+    {
+      "vocab": "hardworking",
+      "pronunciation": "ฮาร์ด-เวิร์ค-คิ่ง",
+      "meaning": "ขยัน",
+      "example": "She is very hardworking.",
+      "exampleTranslation": "เธอขยันมาก"
+    },
+    {
+      "vocab": "clever",
+      "pronunciation": "เคลฟ-เวอร์",
+      "meaning": "ฉลาด",
+      "example": "Their children are very clever.",
+      "exampleTranslation": "ลูกๆ ของพวกเขาฉลาดมาก"
+    },
+    {
+      "vocab": "shy",
+      "pronunciation": "ชาย",
+      "meaning": "ขี้อาย",
+      "example": "He is too shy to speak in public.",
+      "exampleTranslation": "เขาขี้อายเกินไปที่จะพูดในที่สาธารณะ"
+    },
+    {
+      "vocab": "polite",
+      "pronunciation": "โพ-ไลท์",
+      "meaning": "สุภาพ",
+      "example": "Please be polite to everyone.",
+      "exampleTranslation": "กรุณาสุภาพกับทุกคน"
+    },
+    {
+      "vocab": "rude",
+      "pronunciation": "รูด",
+      "meaning": "หยาบคาย",
+      "example": "It's rude to interrupt.",
+      "exampleTranslation": "การพูดแทรกเป็นเรื่องหยาบคาย"
+    }
+  ]
+}

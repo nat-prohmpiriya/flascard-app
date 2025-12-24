@@ -1,0 +1,447 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Food & Drink",
+    "description": "CEFR A2 Vocabulary - Food, Drink, Meals, Restaurant",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "food",
+      "pronunciation": "ฟูด",
+      "meaning": "อาหาร",
+      "example": "Thai food is delicious.",
+      "exampleTranslation": "อาหารไทยอร่อย"
+    },
+    {
+      "vocab": "drink",
+      "pronunciation": "ดริ้งค์",
+      "meaning": "เครื่องดื่ม",
+      "example": "What would you like to drink?",
+      "exampleTranslation": "คุณอยากดื่มอะไร?"
+    },
+    {
+      "vocab": "breakfast",
+      "pronunciation": "เบรค-ฟาสท์",
+      "meaning": "อาหารเช้า",
+      "example": "I have eggs for breakfast.",
+      "exampleTranslation": "ฉันกินไข่เป็นอาหารเช้า"
+    },
+    {
+      "vocab": "lunch",
+      "pronunciation": "ลันช์",
+      "meaning": "อาหารกลางวัน",
+      "example": "Let's have lunch together.",
+      "exampleTranslation": "ไปกินข้าวกลางวันด้วยกันนะ"
+    },
+    {
+      "vocab": "dinner",
+      "pronunciation": "ดิน-เนอร์",
+      "meaning": "อาหารเย็น",
+      "example": "What's for dinner tonight?",
+      "exampleTranslation": "คืนนี้กินอะไร?"
+    },
+    {
+      "vocab": "snack",
+      "pronunciation": "สแน็ค",
+      "meaning": "ของว่าง",
+      "example": "I need a snack.",
+      "exampleTranslation": "ฉันอยากกินของว่าง"
+    },
+    {
+      "vocab": "meal",
+      "pronunciation": "มีล",
+      "meaning": "มื้ออาหาร",
+      "example": "Enjoy your meal!",
+      "exampleTranslation": "ทานให้อร่อยนะ!"
+    },
+    {
+      "vocab": "rice",
+      "pronunciation": "ไรซ์",
+      "meaning": "ข้าว",
+      "example": "I eat rice every day.",
+      "exampleTranslation": "ฉันกินข้าวทุกวัน"
+    },
+    {
+      "vocab": "bread",
+      "pronunciation": "เบรด",
+      "meaning": "ขนมปัง",
+      "example": "I have bread for breakfast.",
+      "exampleTranslation": "ฉันกินขนมปังเป็นอาหารเช้า"
+    },
+    {
+      "vocab": "noodles",
+      "pronunciation": "นู-เดิ้ลส์",
+      "meaning": "ก๋วยเตี๋ยว, เส้น",
+      "example": "I love Thai noodles.",
+      "exampleTranslation": "ฉันชอบก๋วยเตี๋ยวไทย"
+    },
+    {
+      "vocab": "pasta",
+      "pronunciation": "พาส-ต้า",
+      "meaning": "พาสต้า",
+      "example": "I can cook pasta.",
+      "exampleTranslation": "ฉันทำพาสต้าได้"
+    },
+    {
+      "vocab": "meat",
+      "pronunciation": "มีท",
+      "meaning": "เนื้อ",
+      "example": "I don't eat meat.",
+      "exampleTranslation": "ฉันไม่กินเนื้อ"
+    },
+    {
+      "vocab": "chicken",
+      "pronunciation": "ชิค-เคิ่น",
+      "meaning": "ไก่",
+      "example": "I'll have the chicken.",
+      "exampleTranslation": "ขอไก่ค่ะ"
+    },
+    {
+      "vocab": "pork",
+      "pronunciation": "พอร์ค",
+      "meaning": "หมู",
+      "example": "This pork is very tender.",
+      "exampleTranslation": "หมูนี้นุ่มมาก"
+    },
+    {
+      "vocab": "beef",
+      "pronunciation": "บีฟ",
+      "meaning": "เนื้อวัว",
+      "example": "Would you like beef or chicken?",
+      "exampleTranslation": "คุณต้องการเนื้อวัวหรือไก่?"
+    },
+    {
+      "vocab": "fish",
+      "pronunciation": "ฟิช",
+      "meaning": "ปลา",
+      "example": "Fish is good for your health.",
+      "exampleTranslation": "ปลาดีต่อสุขภาพ"
+    },
+    {
+      "vocab": "seafood",
+      "pronunciation": "ซี-ฟูด",
+      "meaning": "อาหารทะเล",
+      "example": "I'm allergic to seafood.",
+      "exampleTranslation": "ฉันแพ้อาหารทะเล"
+    },
+    {
+      "vocab": "shrimp",
+      "pronunciation": "ชริมพ์",
+      "meaning": "กุ้ง",
+      "example": "I love fried shrimp.",
+      "exampleTranslation": "ฉันชอบกุ้งทอด"
+    },
+    {
+      "vocab": "egg",
+      "pronunciation": "เอ็ก",
+      "meaning": "ไข่",
+      "example": "How do you like your eggs?",
+      "exampleTranslation": "คุณชอบไข่แบบไหน?"
+    },
+    {
+      "vocab": "vegetable",
+      "pronunciation": "เวจ-เจ-ทะ-เบิ้ล",
+      "meaning": "ผัก",
+      "example": "Eat more vegetables.",
+      "exampleTranslation": "กินผักให้มากขึ้น"
+    },
+    {
+      "vocab": "fruit",
+      "pronunciation": "ฟรุท",
+      "meaning": "ผลไม้",
+      "example": "I eat fruit every morning.",
+      "exampleTranslation": "ฉันกินผลไม้ทุกเช้า"
+    },
+    {
+      "vocab": "apple",
+      "pronunciation": "แอป-เปิ้ล",
+      "meaning": "แอปเปิ้ล",
+      "example": "An apple a day keeps the doctor away.",
+      "exampleTranslation": "กินแอปเปิ้ลวันละลูกช่วยให้สุขภาพดี"
+    },
+    {
+      "vocab": "banana",
+      "pronunciation": "บะ-นา-น่า",
+      "meaning": "กล้วย",
+      "example": "I like bananas in my cereal.",
+      "exampleTranslation": "ฉันชอบใส่กล้วยในซีเรียล"
+    },
+    {
+      "vocab": "orange",
+      "pronunciation": "ออ-เรนจ์",
+      "meaning": "ส้ม",
+      "example": "I drink orange juice every morning.",
+      "exampleTranslation": "ฉันดื่มน้ำส้มทุกเช้า"
+    },
+    {
+      "vocab": "mango",
+      "pronunciation": "แมง-โก้",
+      "meaning": "มะม่วง",
+      "example": "Thai mangoes are the best.",
+      "exampleTranslation": "มะม่วงไทยดีที่สุด"
+    },
+    {
+      "vocab": "tomato",
+      "pronunciation": "โท-เม-โท",
+      "meaning": "มะเขือเทศ",
+      "example": "I need tomatoes for the salad.",
+      "exampleTranslation": "ฉันต้องการมะเขือเทศสำหรับสลัด"
+    },
+    {
+      "vocab": "potato",
+      "pronunciation": "โพ-เท-โท",
+      "meaning": "มันฝรั่ง",
+      "example": "I like baked potatoes.",
+      "exampleTranslation": "ฉันชอบมันฝรั่งอบ"
+    },
+    {
+      "vocab": "onion",
+      "pronunciation": "อัน-เยิน",
+      "meaning": "หอม, หัวหอม",
+      "example": "Cutting onions makes me cry.",
+      "exampleTranslation": "หั่นหัวหอมทำให้ฉันร้องไห้"
+    },
+    {
+      "vocab": "garlic",
+      "pronunciation": "การ์-ลิค",
+      "meaning": "กระเทียม",
+      "example": "I love garlic in my food.",
+      "exampleTranslation": "ฉันชอบใส่กระเทียมในอาหาร"
+    },
+    {
+      "vocab": "salad",
+      "pronunciation": "ซา-ลัด",
+      "meaning": "สลัด",
+      "example": "I'll have a salad, please.",
+      "exampleTranslation": "ขอสลัดค่ะ"
+    },
+    {
+      "vocab": "soup",
+      "pronunciation": "ซุป",
+      "meaning": "ซุป",
+      "example": "This soup is too hot.",
+      "exampleTranslation": "ซุปนี้ร้อนเกินไป"
+    },
+    {
+      "vocab": "sandwich",
+      "pronunciation": "แซนด์-วิช",
+      "meaning": "แซนด์วิช",
+      "example": "I made a sandwich for lunch.",
+      "exampleTranslation": "ฉันทำแซนด์วิชกินกลางวัน"
+    },
+    {
+      "vocab": "pizza",
+      "pronunciation": "พิซ-ซ่า",
+      "meaning": "พิซซ่า",
+      "example": "Let's order pizza tonight.",
+      "exampleTranslation": "สั่งพิซซ่าคืนนี้กันเถอะ"
+    },
+    {
+      "vocab": "burger",
+      "pronunciation": "เบอร์-เกอร์",
+      "meaning": "เบอร์เกอร์",
+      "example": "I want a burger with cheese.",
+      "exampleTranslation": "ขอเบอร์เกอร์ใส่ชีสค่ะ"
+    },
+    {
+      "vocab": "water",
+      "pronunciation": "วอ-เทอร์",
+      "meaning": "น้ำ",
+      "example": "Can I have some water?",
+      "exampleTranslation": "ขอน้ำหน่อยได้ไหม?"
+    },
+    {
+      "vocab": "coffee",
+      "pronunciation": "คอฟ-ฟี่",
+      "meaning": "กาแฟ",
+      "example": "I drink coffee every morning.",
+      "exampleTranslation": "ฉันดื่มกาแฟทุกเช้า"
+    },
+    {
+      "vocab": "tea",
+      "pronunciation": "ที",
+      "meaning": "ชา",
+      "example": "Would you like some tea?",
+      "exampleTranslation": "ดื่มชาไหม?"
+    },
+    {
+      "vocab": "milk",
+      "pronunciation": "มิลค์",
+      "meaning": "นม",
+      "example": "I put milk in my coffee.",
+      "exampleTranslation": "ฉันใส่นมในกาแฟ"
+    },
+    {
+      "vocab": "juice",
+      "pronunciation": "จูซ",
+      "meaning": "น้ำผลไม้",
+      "example": "I'll have orange juice.",
+      "exampleTranslation": "ขอน้ำส้มค่ะ"
+    },
+    {
+      "vocab": "beer",
+      "pronunciation": "เบียร์",
+      "meaning": "เบียร์",
+      "example": "Would you like a beer?",
+      "exampleTranslation": "ดื่มเบียร์ไหม?"
+    },
+    {
+      "vocab": "wine",
+      "pronunciation": "ไวน์",
+      "meaning": "ไวน์",
+      "example": "Red wine goes well with steak.",
+      "exampleTranslation": "ไวน์แดงเข้ากับสเต็ก"
+    },
+    {
+      "vocab": "sugar",
+      "pronunciation": "ชู-การ์",
+      "meaning": "น้ำตาล",
+      "example": "I don't take sugar in my tea.",
+      "exampleTranslation": "ฉันไม่ใส่น้ำตาลในชา"
+    },
+    {
+      "vocab": "salt",
+      "pronunciation": "ซอลท์",
+      "meaning": "เกลือ",
+      "example": "Pass the salt, please.",
+      "exampleTranslation": "ส่งเกลือให้หน่อย"
+    },
+    {
+      "vocab": "pepper",
+      "pronunciation": "เพพ-เพอร์",
+      "meaning": "พริกไทย",
+      "example": "Would you like some pepper?",
+      "exampleTranslation": "ใส่พริกไทยไหม?"
+    },
+    {
+      "vocab": "sauce",
+      "pronunciation": "ซอส",
+      "meaning": "ซอส",
+      "example": "This sauce is very spicy.",
+      "exampleTranslation": "ซอสนี้เผ็ดมาก"
+    },
+    {
+      "vocab": "restaurant",
+      "pronunciation": "เรส-ทัว-รอง",
+      "meaning": "ร้านอาหาร",
+      "example": "Let's go to a restaurant.",
+      "exampleTranslation": "ไปร้านอาหารกันเถอะ"
+    },
+    {
+      "vocab": "menu",
+      "pronunciation": "เม-นู",
+      "meaning": "เมนู",
+      "example": "Can I see the menu?",
+      "exampleTranslation": "ขอดูเมนูหน่อย"
+    },
+    {
+      "vocab": "order",
+      "pronunciation": "ออร์-เดอร์",
+      "meaning": "สั่ง",
+      "example": "Are you ready to order?",
+      "exampleTranslation": "พร้อมสั่งหรือยังคะ?"
+    },
+    {
+      "vocab": "bill",
+      "pronunciation": "บิล",
+      "meaning": "ใบเสร็จ, บิล",
+      "example": "Can I have the bill, please?",
+      "exampleTranslation": "เก็บเงินด้วยค่ะ"
+    },
+    {
+      "vocab": "tip",
+      "pronunciation": "ทิป",
+      "meaning": "ทิป",
+      "example": "Should I leave a tip?",
+      "exampleTranslation": "ควรให้ทิปไหม?"
+    },
+    {
+      "vocab": "waiter",
+      "pronunciation": "เว-เทอร์",
+      "meaning": "พนักงานเสิร์ฟชาย",
+      "example": "The waiter is very friendly.",
+      "exampleTranslation": "พนักงานเสิร์ฟเป็นมิตรมาก"
+    },
+    {
+      "vocab": "waitress",
+      "pronunciation": "เว-ทรีส",
+      "meaning": "พนักงานเสิร์ฟหญิง",
+      "example": "The waitress took our order.",
+      "exampleTranslation": "พนักงานเสิร์ฟรับออร์เดอร์เรา"
+    },
+    {
+      "vocab": "delicious",
+      "pronunciation": "ดิ-ลิ-เชียส",
+      "meaning": "อร่อย",
+      "example": "This food is delicious!",
+      "exampleTranslation": "อาหารนี้อร่อย!"
+    },
+    {
+      "vocab": "tasty",
+      "pronunciation": "เทส-ตี้",
+      "meaning": "อร่อย, มีรสชาติ",
+      "example": "The soup is very tasty.",
+      "exampleTranslation": "ซุปอร่อยมาก"
+    },
+    {
+      "vocab": "spicy",
+      "pronunciation": "สไป-ซี่",
+      "meaning": "เผ็ด",
+      "example": "Thai food can be very spicy.",
+      "exampleTranslation": "อาหารไทยเผ็ดมาก"
+    },
+    {
+      "vocab": "sweet",
+      "pronunciation": "สวีท",
+      "meaning": "หวาน",
+      "example": "This dessert is too sweet.",
+      "exampleTranslation": "ขนมนี้หวานเกินไป"
+    },
+    {
+      "vocab": "sour",
+      "pronunciation": "ซาว-เออร์",
+      "meaning": "เปรี้ยว",
+      "example": "This lemon is very sour.",
+      "exampleTranslation": "มะนาวนี้เปรี้ยวมาก"
+    },
+    {
+      "vocab": "salty",
+      "pronunciation": "ซอล-ตี้",
+      "meaning": "เค็ม",
+      "example": "This soup is too salty.",
+      "exampleTranslation": "ซุปนี้เค็มเกินไป"
+    },
+    {
+      "vocab": "bitter",
+      "pronunciation": "บิท-เทอร์",
+      "meaning": "ขม",
+      "example": "This coffee is bitter.",
+      "exampleTranslation": "กาแฟนี้ขม"
+    },
+    {
+      "vocab": "hungry",
+      "pronunciation": "ฮัง-กรี้",
+      "meaning": "หิว",
+      "example": "I'm very hungry.",
+      "exampleTranslation": "ฉันหิวมาก"
+    },
+    {
+      "vocab": "thirsty",
+      "pronunciation": "เธอร์ส-ตี้",
+      "meaning": "กระหายน้ำ",
+      "example": "I'm thirsty. Can I have water?",
+      "exampleTranslation": "หิวน้ำ ขอน้ำหน่อย"
+    },
+    {
+      "vocab": "full",
+      "pronunciation": "ฟูล",
+      "meaning": "อิ่ม",
+      "example": "I'm full. I can't eat anymore.",
+      "exampleTranslation": "ฉันอิ่มแล้ว กินไม่ไหวแล้ว"
+    }
+  ]
+}
