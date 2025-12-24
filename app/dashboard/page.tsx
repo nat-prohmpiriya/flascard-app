@@ -16,7 +16,7 @@ import { getTodayStats, getDailyProgress } from '@/services/progress';
 import { toast } from 'sonner';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
-import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight } from 'lucide-react';
+import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight, Gamepad2 } from 'lucide-react';
 import Link from 'next/link';
 import { SUPPORTED_LANGUAGES } from '@/models/typingSnippet';
 import {
@@ -188,6 +188,45 @@ export default function DashboardPage() {
                       <p className="text-sm text-muted-foreground">
                         Practice typing
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Language Games */}
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <Gamepad2 className="h-6 w-6" />
+              Language Games
+            </h2>
+            <Button variant="ghost" asChild>
+              <Link href="/games" className="flex items-center gap-1">
+                View All
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {[
+              { id: 'listening', name: 'Listening', icon: '🎧', color: 'bg-blue-500' },
+              { id: 'speed-quiz', name: 'Speed Quiz', icon: '⚡', color: 'bg-yellow-500' },
+              { id: 'dictation', name: 'Dictation', icon: '✍️', color: 'bg-green-500' },
+              { id: 'speak-check', name: 'Speak', icon: '🎤', color: 'bg-red-500' },
+              { id: 'shadowing', name: 'Shadowing', icon: '🔄', color: 'bg-purple-500' },
+            ].map((game) => (
+              <Link key={game.id} href={`/games?game=${game.id}`}>
+                <div className="border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
+                  <div className="flex items-center gap-3">
+                    <span className={`w-10 h-10 ${game.color} rounded flex items-center justify-center text-xl`}>
+                      {game.icon}
+                    </span>
+                    <div>
+                      <p className="font-medium">{game.name}</p>
+                      <p className="text-sm text-muted-foreground">Practice</p>
                     </div>
                   </div>
                 </div>
