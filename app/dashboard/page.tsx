@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useDecks } from '@/hooks/useDecks';
 import { ProtectedRoute } from '@/components/common/ProtectedRoute';
@@ -11,12 +11,13 @@ import { StatsCard } from '@/components/progress/StatsCard';
 import { ProgressChart } from '@/components/progress/ProgressChart';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
 import { Deck, DeckFormData, DailyProgress } from '@/types';
 import { getTodayStats, getDailyProgress } from '@/services/progress';
 import { toast } from 'sonner';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
-import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight, Gamepad2 } from 'lucide-react';
+import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight, Gamepad2, Filter, X } from 'lucide-react';
 import Link from 'next/link';
 import { SUPPORTED_LANGUAGES } from '@/models/typingSnippet';
 import {
@@ -41,6 +42,41 @@ export default function DashboardPage() {
   const [weeklyProgress, setWeeklyProgress] = useState<DailyProgress[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  // Tag color mapping
+  const TAG_COLORS: Record<string, string> = {
+    english: 'bg-blue-100 text-blue-800',
+    A1: 'bg-green-100 text-green-800',
+    A2: 'bg-green-200 text-green-800',
+    B1: 'bg-yellow-100 text-yellow-800',
+    B2: 'bg-yellow-200 text-yellow-800',
+    C1: 'bg-orange-100 text-orange-800',
+    C2: 'bg-red-100 text-red-800',
+    vocabulary: 'bg-purple-100 text-purple-800',
+    'phrasal-verb': 'bg-pink-100 text-pink-800',
+    collocation: 'bg-indigo-100 text-indigo-800',
+    phrase: 'bg-cyan-100 text-cyan-800',
+    grammar: 'bg-teal-100 text-teal-800',
+    programming: 'bg-gray-100 text-gray-800',
+  };
+
+  // Extract all unique tags from decks
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    decks.forEach((deck) => {
+      deck.tags?.forEach((tag) => tags.add(tag));
+    });
+    return Array.from(tags).sort();
+  }, [decks]);
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const clearTags = () => setSelectedTags([]);
 
   useEffect(() => {
     if (firebaseUser) {
@@ -87,10 +123,26 @@ export default function DashboardPage() {
     ? Math.round((todayStats.correctCount / todayStats.cardsStudied) * 100)
     : 0;
 
-  const filteredDecks = decks.filter(deck =>
-    deck.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    deck.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredDecks = useMemo(() => {
+    let filtered = decks;
+
+    // Filter by tags
+    if (selectedTags.length > 0) {
+      filtered = filtered.filter((deck) =>
+        selectedTags.every((tag) => deck.tags?.includes(tag))
+      );
+    }
+
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(deck =>
+        deck.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        deck.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    return filtered;
+  }, [decks, selectedTags, searchQuery]);
 
   return (
     <ProtectedRoute>
@@ -280,6 +332,43 @@ export default function DashboardPage() {
             </div>
           </div>
 
+          {/* Tag Filter */}
+          {allTags.length > 0 && (
+            <div className="mb-4 p-4 border rounded-lg bg-muted/30">
+              <div className="flex items-center gap-2 mb-3">
+                <Filter className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium">Filter by Tags</span>
+                {selectedTags.length > 0 && (
+                  <Button variant="ghost" size="sm" onClick={clearTags} className="h-6 px-2">
+                    <X className="h-3 w-3 mr-1" />
+                    Clear
+                  </Button>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {allTags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant={selectedTags.includes(tag) ? 'default' : 'outline'}
+                    className={`cursor-pointer transition-all ${
+                      selectedTags.includes(tag)
+                        ? ''
+                        : TAG_COLORS[tag] || 'bg-gray-100 text-gray-800'
+                    }`}
+                    onClick={() => toggleTag(tag)}
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              {selectedTags.length > 0 && (
+                <p className="text-sm text-muted-foreground mt-2">
+                  Found: <span className="font-medium">{filteredDecks.length} decks</span>
+                </p>
+              )}
+            </div>
+          )}
+
           {loading ? (
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
@@ -302,11 +391,20 @@ export default function DashboardPage() {
                 <>
                   <h3 className="text-lg font-medium mb-2">No decks found</h3>
                   <p className="text-muted-foreground mb-4">
-                    Try a different search term
+                    Try a different search term or filter
                   </p>
-                  <Button variant="outline" onClick={() => setSearchQuery('')}>
-                    Clear Search
-                  </Button>
+                  <div className="flex gap-2 justify-center">
+                    {searchQuery && (
+                      <Button variant="outline" onClick={() => setSearchQuery('')}>
+                        Clear Search
+                      </Button>
+                    )}
+                    {selectedTags.length > 0 && (
+                      <Button variant="outline" onClick={clearTags}>
+                        Clear Tags
+                      </Button>
+                    )}
+                  </div>
                 </>
               )}
             </div>

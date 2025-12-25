@@ -1017,3 +1017,908 @@ model = lgb.train(
 
 y_pred = model.predict(X_test)
 ```
+
+## Matplotlib Basic Plots
+- difficulty: easy
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(x, y, label='sin(x)', color='blue', linewidth=2)
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_title('Basic Line Plot')
+ax.legend()
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig('plot.png', dpi=300)
+plt.show()
+```
+
+## Matplotlib Subplots
+- difficulty: medium
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+axes[0, 0].plot(x, np.sin(x))
+axes[0, 0].set_title('Sine')
+
+axes[0, 1].plot(x, np.cos(x), color='orange')
+axes[0, 1].set_title('Cosine')
+
+axes[1, 0].bar(['A', 'B', 'C', 'D'], [3, 7, 2, 5])
+axes[1, 0].set_title('Bar Chart')
+
+axes[1, 1].scatter(np.random.randn(50), np.random.randn(50), alpha=0.6)
+axes[1, 1].set_title('Scatter Plot')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Matplotlib Histogram and Distribution
+- difficulty: easy
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.random.randn(1000)
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+axes[0].hist(data, bins=30, edgecolor='black', alpha=0.7)
+axes[0].set_title('Histogram')
+axes[0].set_xlabel('Value')
+axes[0].set_ylabel('Frequency')
+
+axes[1].boxplot([data, data * 2, data + 3], labels=['A', 'B', 'C'])
+axes[1].set_title('Box Plot')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Seaborn Distribution Plots
+- difficulty: easy
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+data = pd.DataFrame({
+    'value': np.random.randn(500),
+    'category': np.random.choice(['A', 'B', 'C'], 500)
+})
+
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+sns.histplot(data=data, x='value', hue='category', ax=axes[0, 0])
+axes[0, 0].set_title('Histogram with Hue')
+
+sns.kdeplot(data=data, x='value', hue='category', ax=axes[0, 1])
+axes[0, 1].set_title('KDE Plot')
+
+sns.boxplot(data=data, x='category', y='value', ax=axes[1, 0])
+axes[1, 0].set_title('Box Plot')
+
+sns.violinplot(data=data, x='category', y='value', ax=axes[1, 1])
+axes[1, 1].set_title('Violin Plot')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Seaborn Categorical Plots
+- difficulty: medium
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+tips = sns.load_dataset('tips')
+
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+sns.barplot(data=tips, x='day', y='total_bill', hue='sex', ax=axes[0, 0])
+axes[0, 0].set_title('Bar Plot')
+
+sns.countplot(data=tips, x='day', hue='sex', ax=axes[0, 1])
+axes[0, 1].set_title('Count Plot')
+
+sns.stripplot(data=tips, x='day', y='total_bill', hue='sex', ax=axes[1, 0], dodge=True)
+axes[1, 0].set_title('Strip Plot')
+
+sns.swarmplot(data=tips, x='day', y='total_bill', hue='sex', ax=axes[1, 1], dodge=True)
+axes[1, 1].set_title('Swarm Plot')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Seaborn Correlation Heatmap
+- difficulty: medium
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(100, 5), columns=['A', 'B', 'C', 'D', 'E'])
+df['B'] = df['A'] * 0.5 + np.random.randn(100) * 0.1
+df['C'] = df['A'] * -0.3 + np.random.randn(100) * 0.2
+
+correlation = df.corr()
+
+plt.figure(figsize=(10, 8))
+sns.heatmap(
+    correlation,
+    annot=True,
+    cmap='coolwarm',
+    center=0,
+    fmt='.2f',
+    square=True,
+    linewidths=0.5
+)
+plt.title('Correlation Heatmap')
+plt.tight_layout()
+plt.show()
+```
+
+## Seaborn Pairplot
+- difficulty: easy
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+iris = sns.load_dataset('iris')
+
+g = sns.pairplot(
+    iris,
+    hue='species',
+    diag_kind='kde',
+    plot_kws={'alpha': 0.6},
+    height=2.5
+)
+g.fig.suptitle('Iris Dataset Pairplot', y=1.02)
+plt.show()
+
+g = sns.pairplot(
+    iris,
+    hue='species',
+    vars=['sepal_length', 'sepal_width', 'petal_length'],
+    kind='reg',
+    diag_kind='hist'
+)
+plt.show()
+```
+
+## Seaborn Regression Plots
+- difficulty: medium
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset('tips')
+
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+sns.regplot(data=tips, x='total_bill', y='tip', ax=axes[0])
+axes[0].set_title('Simple Regression')
+
+sns.lmplot(data=tips, x='total_bill', y='tip', hue='smoker', height=5)
+plt.title('Regression by Group')
+
+sns.residplot(data=tips, x='total_bill', y='tip', ax=axes[2])
+axes[2].set_title('Residual Plot')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Confusion Matrix Visualization
+- difficulty: medium
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import numpy as np
+
+y_true = np.array([0, 0, 1, 1, 2, 2, 0, 1, 2, 0])
+y_pred = np.array([0, 1, 1, 1, 2, 0, 0, 1, 2, 0])
+labels = ['Class A', 'Class B', 'Class C']
+
+cm = confusion_matrix(y_true, y_pred)
+
+fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+
+disp = ConfusionMatrixDisplay(cm, display_labels=labels)
+disp.plot(ax=axes[0], cmap='Blues')
+axes[0].set_title('Confusion Matrix')
+
+cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+sns.heatmap(cm_normalized, annot=True, fmt='.2%', cmap='Blues',
+            xticklabels=labels, yticklabels=labels, ax=axes[1])
+axes[1].set_title('Normalized Confusion Matrix')
+axes[1].set_ylabel('True Label')
+axes[1].set_xlabel('Predicted Label')
+
+plt.tight_layout()
+plt.show()
+```
+
+## ROC Curve Visualization
+- difficulty: medium
+
+```python
+import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc, RocCurveDisplay
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+import numpy as np
+
+X = np.random.randn(1000, 10)
+y = (X[:, 0] + X[:, 1] > 0).astype(int)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+
+model = LogisticRegression()
+model.fit(X_train, y_train)
+y_prob = model.predict_proba(X_test)[:, 1]
+
+fpr, tpr, thresholds = roc_curve(y_test, y_prob)
+roc_auc = auc(fpr, tpr)
+
+plt.figure(figsize=(8, 6))
+plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (AUC = {roc_auc:.2f})')
+plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC)')
+plt.legend(loc='lower right')
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+
+## Learning Curve Visualization
+- difficulty: medium
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.model_selection import learning_curve
+from sklearn.ensemble import RandomForestClassifier
+
+def plot_learning_curve(estimator, X, y, cv=5):
+    train_sizes, train_scores, val_scores = learning_curve(
+        estimator, X, y, cv=cv,
+        train_sizes=np.linspace(0.1, 1.0, 10),
+        scoring='accuracy', n_jobs=-1
+    )
+
+    train_mean = np.mean(train_scores, axis=1)
+    train_std = np.std(train_scores, axis=1)
+    val_mean = np.mean(val_scores, axis=1)
+    val_std = np.std(val_scores, axis=1)
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(train_sizes, train_mean, label='Training score', color='blue')
+    plt.fill_between(train_sizes, train_mean - train_std, train_mean + train_std, alpha=0.1, color='blue')
+    plt.plot(train_sizes, val_mean, label='Validation score', color='orange')
+    plt.fill_between(train_sizes, val_mean - val_std, val_mean + val_std, alpha=0.1, color='orange')
+
+    plt.xlabel('Training Size')
+    plt.ylabel('Score')
+    plt.title('Learning Curve')
+    plt.legend(loc='lower right')
+    plt.grid(True, alpha=0.3)
+    plt.show()
+
+model = RandomForestClassifier(n_estimators=50, random_state=42)
+plot_learning_curve(model, X, y)
+```
+
+## Feature Importance Visualization
+- difficulty: medium
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+feature_names = [f'Feature {i}' for i in range(X_train.shape[1])]
+importances = model.feature_importances_
+indices = np.argsort(importances)[::-1]
+
+plt.figure(figsize=(10, 6))
+plt.title('Feature Importances')
+plt.bar(range(len(importances)), importances[indices], align='center')
+plt.xticks(range(len(importances)), [feature_names[i] for i in indices], rotation=45, ha='right')
+plt.xlabel('Features')
+plt.ylabel('Importance')
+plt.tight_layout()
+plt.show()
+
+importance_df = pd.DataFrame({
+    'feature': feature_names,
+    'importance': importances
+}).sort_values('importance', ascending=False)
+print(importance_df)
+```
+
+## KFold Cross-Validation
+- difficulty: medium
+
+```python
+from sklearn.model_selection import KFold, cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+
+kfold = KFold(n_splits=5, shuffle=True, random_state=42)
+
+scores = cross_val_score(model, X, y, cv=kfold, scoring='accuracy')
+print(f"Accuracy: {scores.mean():.4f} (+/- {scores.std():.4f})")
+print(f"Individual folds: {scores}")
+
+for fold, (train_idx, val_idx) in enumerate(kfold.split(X)):
+    X_train, X_val = X[train_idx], X[val_idx]
+    y_train, y_val = y[train_idx], y[val_idx]
+
+    model.fit(X_train, y_train)
+    score = model.score(X_val, y_val)
+    print(f"Fold {fold + 1}: {score:.4f}")
+```
+
+## StratifiedKFold Cross-Validation
+- difficulty: medium
+
+```python
+from sklearn.model_selection import StratifiedKFold, cross_val_score
+from sklearn.linear_model import LogisticRegression
+import numpy as np
+
+model = LogisticRegression(max_iter=1000)
+
+skfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+scores = cross_val_score(model, X, y, cv=skfold, scoring='accuracy')
+print(f"Accuracy: {scores.mean():.4f} (+/- {scores.std():.4f})")
+
+scoring = ['accuracy', 'precision', 'recall', 'f1']
+for metric in scoring:
+    scores = cross_val_score(model, X, y, cv=skfold, scoring=metric)
+    print(f"{metric}: {scores.mean():.4f} (+/- {scores.std():.4f})")
+```
+
+## Cross-Validation with Multiple Metrics
+- difficulty: medium
+
+```python
+from sklearn.model_selection import cross_validate, StratifiedKFold
+from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
+
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+scoring = {
+    'accuracy': 'accuracy',
+    'precision': 'precision_weighted',
+    'recall': 'recall_weighted',
+    'f1': 'f1_weighted',
+    'roc_auc': 'roc_auc'
+}
+
+results = cross_validate(
+    model, X, y, cv=cv,
+    scoring=scoring,
+    return_train_score=True,
+    n_jobs=-1
+)
+
+for metric in scoring.keys():
+    train_score = results[f'train_{metric}'].mean()
+    test_score = results[f'test_{metric}'].mean()
+    print(f"{metric}: Train={train_score:.4f}, Test={test_score:.4f}")
+
+results_df = pd.DataFrame(results)
+print(results_df.describe())
+```
+
+## Nested Cross-Validation
+- difficulty: hard
+
+```python
+from sklearn.model_selection import cross_val_score, GridSearchCV, StratifiedKFold
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+outer_cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+inner_cv = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
+
+param_grid = {
+    'n_estimators': [50, 100],
+    'max_depth': [5, 10, None],
+    'min_samples_split': [2, 5]
+}
+
+model = RandomForestClassifier(random_state=42)
+
+nested_scores = []
+for train_idx, test_idx in outer_cv.split(X, y):
+    X_train, X_test = X[train_idx], X[test_idx]
+    y_train, y_test = y[train_idx], y[test_idx]
+
+    grid_search = GridSearchCV(model, param_grid, cv=inner_cv, scoring='accuracy', n_jobs=-1)
+    grid_search.fit(X_train, y_train)
+
+    score = grid_search.score(X_test, y_test)
+    nested_scores.append(score)
+    print(f"Best params: {grid_search.best_params_}, Score: {score:.4f}")
+
+print(f"\nNested CV Accuracy: {np.mean(nested_scores):.4f} (+/- {np.std(nested_scores):.4f})")
+```
+
+## Time Series Cross-Validation
+- difficulty: medium
+
+```python
+from sklearn.model_selection import TimeSeriesSplit, cross_val_score
+from sklearn.ensemble import GradientBoostingRegressor
+import numpy as np
+
+X = np.random.randn(1000, 5)
+y = np.random.randn(1000)
+
+tscv = TimeSeriesSplit(n_splits=5)
+
+model = GradientBoostingRegressor(n_estimators=100, random_state=42)
+scores = cross_val_score(model, X, y, cv=tscv, scoring='neg_mean_squared_error')
+rmse_scores = np.sqrt(-scores)
+print(f"RMSE: {rmse_scores.mean():.4f} (+/- {rmse_scores.std():.4f})")
+
+for fold, (train_idx, test_idx) in enumerate(tscv.split(X)):
+    print(f"Fold {fold + 1}: Train size={len(train_idx)}, Test size={len(test_idx)}")
+    print(f"  Train: {train_idx[0]} to {train_idx[-1]}")
+    print(f"  Test: {test_idx[0]} to {test_idx[-1]}")
+```
+
+## Scikit-learn SVM Classifier
+- difficulty: medium
+
+```python
+from sklearn.svm import SVC
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split, GridSearchCV
+import numpy as np
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('svm', SVC(kernel='rbf', probability=True))
+])
+
+param_grid = {
+    'svm__C': [0.1, 1, 10, 100],
+    'svm__gamma': ['scale', 'auto', 0.1, 0.01],
+    'svm__kernel': ['rbf', 'linear', 'poly']
+}
+
+grid_search = GridSearchCV(pipeline, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
+grid_search.fit(X_train, y_train)
+
+print(f"Best params: {grid_search.best_params_}")
+print(f"Best score: {grid_search.best_score_:.4f}")
+print(f"Test score: {grid_search.score(X_test, y_test):.4f}")
+```
+
+## Scikit-learn Decision Tree
+- difficulty: easy
+
+```python
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+model = DecisionTreeClassifier(
+    max_depth=5,
+    min_samples_split=10,
+    min_samples_leaf=5,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+print(f"Train accuracy: {model.score(X_train, y_train):.4f}")
+print(f"Test accuracy: {model.score(X_test, y_test):.4f}")
+
+plt.figure(figsize=(20, 10))
+plot_tree(model, feature_names=[f'F{i}' for i in range(X.shape[1])],
+          class_names=['Class 0', 'Class 1'], filled=True, rounded=True)
+plt.tight_layout()
+plt.show()
+```
+
+## Scikit-learn Gradient Boosting
+- difficulty: medium
+
+```python
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.model_selection import train_test_split
+import numpy as np
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+model = GradientBoostingClassifier(
+    n_estimators=100,
+    learning_rate=0.1,
+    max_depth=3,
+    min_samples_split=5,
+    min_samples_leaf=2,
+    subsample=0.8,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+
+print(f"Train accuracy: {model.score(X_train, y_train):.4f}")
+print(f"Test accuracy: {model.score(X_test, y_test):.4f}")
+
+train_scores = []
+for i, y_pred in enumerate(model.staged_predict(X_train)):
+    train_scores.append((y_pred == y_train).mean())
+
+print(f"Best iteration: {np.argmax(train_scores) + 1}")
+```
+
+## Scikit-learn Voting Classifier
+- difficulty: medium
+
+```python
+from sklearn.ensemble import VotingClassifier, RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.model_selection import cross_val_score
+
+clf1 = LogisticRegression(max_iter=1000)
+clf2 = RandomForestClassifier(n_estimators=100, random_state=42)
+clf3 = GradientBoostingClassifier(n_estimators=100, random_state=42)
+clf4 = SVC(probability=True, random_state=42)
+
+voting_hard = VotingClassifier(
+    estimators=[('lr', clf1), ('rf', clf2), ('gb', clf3), ('svc', clf4)],
+    voting='hard'
+)
+
+voting_soft = VotingClassifier(
+    estimators=[('lr', clf1), ('rf', clf2), ('gb', clf3), ('svc', clf4)],
+    voting='soft'
+)
+
+for clf, name in [(clf1, 'LR'), (clf2, 'RF'), (clf3, 'GB'), (clf4, 'SVC'),
+                   (voting_hard, 'Hard Voting'), (voting_soft, 'Soft Voting')]:
+    scores = cross_val_score(clf, X, y, cv=5, scoring='accuracy')
+    print(f"{name}: {scores.mean():.4f} (+/- {scores.std():.4f})")
+```
+
+## Scikit-learn Stacking Classifier
+- difficulty: hard
+
+```python
+from sklearn.ensemble import StackingClassifier, RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.model_selection import cross_val_score
+
+base_learners = [
+    ('rf', RandomForestClassifier(n_estimators=100, random_state=42)),
+    ('gb', GradientBoostingClassifier(n_estimators=100, random_state=42)),
+    ('svc', SVC(probability=True, random_state=42))
+]
+
+stacking_clf = StackingClassifier(
+    estimators=base_learners,
+    final_estimator=LogisticRegression(max_iter=1000),
+    cv=5,
+    stack_method='predict_proba',
+    n_jobs=-1
+)
+
+scores = cross_val_score(stacking_clf, X, y, cv=5, scoring='accuracy')
+print(f"Stacking Accuracy: {scores.mean():.4f} (+/- {scores.std():.4f})")
+
+stacking_clf.fit(X_train, y_train)
+print(f"Test Accuracy: {stacking_clf.score(X_test, y_test):.4f}")
+```
+
+## Text Preprocessing Basic
+- difficulty: easy
+
+```python
+import re
+import string
+
+def clean_text(text):
+    text = text.lower()
+    text = re.sub(r'http\S+|www\S+|https\S+', '', text)
+    text = re.sub(r'\S+@\S+', '', text)
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    text = re.sub(r'\d+', '', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+def remove_stopwords(text, stopwords):
+    words = text.split()
+    return ' '.join([w for w in words if w not in stopwords])
+
+text = "Check out this AMAZING product at https://example.com! Email: test@email.com #sale"
+cleaned = clean_text(text)
+print(cleaned)
+```
+
+## NLTK Text Processing
+- difficulty: medium
+
+```python
+import nltk
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
+text = "The cats are running quickly through the forests. They were chasing mice."
+
+sentences = sent_tokenize(text)
+tokens = word_tokenize(text.lower())
+print(f"Tokens: {tokens}")
+
+stop_words = set(stopwords.words('english'))
+filtered = [w for w in tokens if w not in stop_words and w.isalpha()]
+print(f"Filtered: {filtered}")
+
+stemmer = PorterStemmer()
+stemmed = [stemmer.stem(w) for w in filtered]
+print(f"Stemmed: {stemmed}")
+
+lemmatizer = WordNetLemmatizer()
+lemmatized = [lemmatizer.lemmatize(w) for w in filtered]
+print(f"Lemmatized: {lemmatized}")
+```
+
+## SpaCy Text Processing
+- difficulty: medium
+
+```python
+import spacy
+
+nlp = spacy.load('en_core_web_sm')
+
+text = "Apple is looking at buying U.K. startup for $1 billion"
+doc = nlp(text)
+
+print("Tokens:")
+for token in doc:
+    print(f"  {token.text}: {token.pos_}, {token.dep_}, {token.lemma_}")
+
+print("\nNamed Entities:")
+for ent in doc.ents:
+    print(f"  {ent.text}: {ent.label_}")
+
+print("\nNoun Chunks:")
+for chunk in doc.noun_chunks:
+    print(f"  {chunk.text}")
+
+tokens = [token.lemma_.lower() for token in doc
+          if not token.is_stop and not token.is_punct and token.is_alpha]
+print(f"\nProcessed tokens: {tokens}")
+```
+
+## TF-IDF Vectorization
+- difficulty: medium
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+import pandas as pd
+
+documents = [
+    "Machine learning is a subset of artificial intelligence",
+    "Deep learning uses neural networks with many layers",
+    "Natural language processing deals with text data",
+    "Computer vision processes image and video data"
+]
+
+tfidf = TfidfVectorizer(
+    max_features=100,
+    stop_words='english',
+    ngram_range=(1, 2),
+    min_df=1,
+    max_df=0.9
+)
+
+tfidf_matrix = tfidf.fit_transform(documents)
+
+feature_names = tfidf.get_feature_names_out()
+df = pd.DataFrame(tfidf_matrix.toarray(), columns=feature_names)
+print(df)
+
+count_vec = CountVectorizer(stop_words='english')
+count_matrix = count_vec.fit_transform(documents)
+print(f"Vocabulary size: {len(count_vec.vocabulary_)}")
+```
+
+## Word Embeddings with Gensim
+- difficulty: medium
+
+```python
+from gensim.models import Word2Vec, KeyedVectors
+import numpy as np
+
+sentences = [
+    ['machine', 'learning', 'is', 'great'],
+    ['deep', 'learning', 'uses', 'neural', 'networks'],
+    ['natural', 'language', 'processing', 'is', 'nlp'],
+    ['computer', 'vision', 'processes', 'images']
+]
+
+model = Word2Vec(
+    sentences,
+    vector_size=100,
+    window=5,
+    min_count=1,
+    workers=4,
+    epochs=100
+)
+
+vector = model.wv['machine']
+print(f"Vector shape: {vector.shape}")
+
+similar = model.wv.most_similar('learning', topn=3)
+print(f"Similar to 'learning': {similar}")
+
+model.save('word2vec.model')
+loaded_model = Word2Vec.load('word2vec.model')
+
+def get_document_vector(doc, model):
+    vectors = [model.wv[word] for word in doc if word in model.wv]
+    return np.mean(vectors, axis=0) if vectors else np.zeros(model.vector_size)
+```
+
+## Text Classification Pipeline
+- difficulty: hard
+
+```python
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+from sklearn.model_selection import cross_val_score, train_test_split
+from sklearn.metrics import classification_report
+
+texts = ["I love this product", "Great quality", "Terrible experience", "Waste of money", "Highly recommended"]
+labels = [1, 1, 0, 0, 1]
+
+X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
+
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(
+        max_features=5000,
+        ngram_range=(1, 2),
+        stop_words='english'
+    )),
+    ('clf', LogisticRegression(max_iter=1000))
+])
+
+pipeline.fit(X_train, y_train)
+y_pred = pipeline.predict(X_test)
+
+print(classification_report(y_test, y_pred))
+
+for clf_name, clf in [('NB', MultinomialNB()), ('LR', LogisticRegression(max_iter=1000)), ('SVM', LinearSVC())]:
+    pipe = Pipeline([('tfidf', TfidfVectorizer()), ('clf', clf)])
+    scores = cross_val_score(pipe, texts, labels, cv=3, scoring='accuracy')
+    print(f"{clf_name}: {scores.mean():.4f}")
+```
+
+## Regex Text Extraction
+- difficulty: medium
+
+```python
+import re
+from typing import List, Dict
+
+def extract_emails(text: str) -> List[str]:
+    pattern = r'[\w\.-]+@[\w\.-]+\.\w+'
+    return re.findall(pattern, text)
+
+def extract_urls(text: str) -> List[str]:
+    pattern = r'https?://(?:www\.)?[\w\.-]+(?:/[\w\.-]*)*'
+    return re.findall(pattern, text)
+
+def extract_phones(text: str) -> List[str]:
+    pattern = r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+    return re.findall(pattern, text)
+
+def extract_dates(text: str) -> List[str]:
+    patterns = [
+        r'\d{4}-\d{2}-\d{2}',
+        r'\d{2}/\d{2}/\d{4}',
+        r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},?\s+\d{4}\b'
+    ]
+    dates = []
+    for pattern in patterns:
+        dates.extend(re.findall(pattern, text))
+    return dates
+
+def extract_numbers(text: str) -> List[float]:
+    pattern = r'-?\d+\.?\d*'
+    return [float(n) for n in re.findall(pattern, text)]
+
+text = "Contact us at info@example.com or call 555-123-4567. Visit https://example.com"
+print(f"Emails: {extract_emails(text)}")
+print(f"Phones: {extract_phones(text)}")
+print(f"URLs: {extract_urls(text)}")
+```
+
+## Sentiment Analysis with TextBlob
+- difficulty: easy
+
+```python
+from textblob import TextBlob
+import pandas as pd
+
+texts = [
+    "I absolutely love this product! It's amazing!",
+    "This is the worst purchase I've ever made.",
+    "The quality is okay, nothing special.",
+    "Fantastic service and great value for money!"
+]
+
+results = []
+for text in texts:
+    blob = TextBlob(text)
+    results.append({
+        'text': text,
+        'polarity': blob.sentiment.polarity,
+        'subjectivity': blob.sentiment.subjectivity,
+        'sentiment': 'positive' if blob.sentiment.polarity > 0 else 'negative' if blob.sentiment.polarity < 0 else 'neutral'
+    })
+
+df = pd.DataFrame(results)
+print(df)
+
+text = "I recieved teh prodcut yesturday"
+blob = TextBlob(text)
+print(f"Corrected: {blob.correct()}")
+```

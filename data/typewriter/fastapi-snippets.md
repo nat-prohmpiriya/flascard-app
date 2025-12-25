@@ -943,3 +943,879 @@ async def readiness():
         return {"status": "ready"}
     return {"status": "not ready", "checks": {"db": db_ok, "redis": redis_ok}}
 ```
+
+## API Key Authentication Header
+- difficulty: medium
+
+```python
+from fastapi import FastAPI, Security, HTTPException, status
+from fastapi.security import APIKeyHeader
+
+app = FastAPI()
+
+API_KEY = "your-secret-api-key"
+api_key_header = APIKeyHeader(name="X-API-Key", auto_error=True)
+
+async def verify_api_key(api_key: str = Security(api_key_header)):
+    if api_key != API_KEY:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid API Key"
+        )
+    return api_key
+
+@app.get("/protected")
+async def protected_route(api_key: str = Security(verify_api_key)):
+    return {"message": "Access granted", "api_key": api_key[:8] + "..."}
+```
+
+## API Key Authentication Query
+- difficulty: medium
+
+```python
+from fastapi import FastAPI, Security, HTTPException, status
+from fastapi.security import APIKeyQuery
+
+app = FastAPI()
+
+API_KEYS = {"key1": "user1", "key2": "user2"}
+api_key_query = APIKeyQuery(name="api_key", auto_error=False)
+
+async def get_api_key(api_key: str = Security(api_key_query)):
+    if api_key is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="API Key required"
+        )
+    if api_key not in API_KEYS:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Invalid API Key"
+        )
+    return API_KEYS[api_key]
+
+@app.get("/data")
+async def get_data(user: str = Security(get_api_key)):
+    return {"message": f"Hello {user}"}
+```
+
+## API Key Multiple Sources
+- difficulty: hard
+
+```python
+from fastapi import FastAPI, Security, HTTPException, status
+from fastapi.security import APIKeyHeader, APIKeyQuery, APIKeyCookie
+from typing import Optional
+
+app = FastAPI()
+
+API_KEYS = {"secret-key-123": "admin", "secret-key-456": "user"}
+
+api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
+api_key_query = APIKeyQuery(name="api_key", auto_error=False)
+api_key_cookie = APIKeyCookie(name="api_key", auto_error=False)
+
+async def get_api_key(
+    header_key: Optional[str] = Security(api_key_header),
+    query_key: Optional[str] = Security(api_key_query),
+    cookie_key: Optional[str] = Security(api_key_cookie),
+):
+    api_key = header_key or query_key or cookie_key
+
+    if not api_key:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="API Key required (header, query, or cookie)"
+        )
+
+    if api_key not in API_KEYS:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Invalid API Key"
+        )
+
+    return {"key": api_key, "user": API_KEYS[api_key]}
+
+@app.get("/secure")
+async def secure_endpoint(auth: dict = Security(get_api_key)):
+    return {"user": auth["user"], "message": "Authenticated"}
+```
+
+## Basic Offset Pagination
+- difficulty: easy
+
+```python
+from fastapi import FastAPI, Query
+from typing import List, Generic, TypeVar
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    id: int
+    name: str
+
+class PaginatedResponse(BaseModel):
+    items: List[Item]
+    total: int
+    page: int
+    page_size: int
+    total_pages: int
+
+@app.get("/items", response_model=PaginatedResponse)
+async def get_items(
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=10, ge=1, le=100)
+):
+    total = 100
+    offset = (page - 1) * page_size
+
+    items = [Item(id=i, name=f"Item {i}") for i in range(offset, min(offset + page_size, total))]
+
+    return PaginatedResponse(
+        items=items,
+        total=total,
+        page=page,
+        page_size=page_size,
+        total_pages=(total + page_size - 1) // page_size
+    )
+```
+
+## Pagination Dependency
+- difficulty: medium
+
+```python
+from fastapi import FastAPI, Depends, Query
+from pydantic import BaseModel
+from typing import Generic, TypeVar, List
+
+app = FastAPI()
+
+T = TypeVar("T")
+
+class PaginationParams:
+    def __init__(
+        self,
+        skip: int = Query(default=0, ge=0, description="Number of items to skip"),
+        limit: int = Query(default=20, ge=1, le=100, description="Number of items to return"),
+    ):
+        self.skip = skip
+        self.limit = limit
+
+class Page(BaseModel, Generic[T]):
+    items: List[T]
+    total: int
+    skip: int
+    limit: int
+    has_more: bool
+
+def paginate(items: List, total: int, params: PaginationParams) -> dict:
+    return {
+        "items": items,
+        "total": total,
+        "skip": params.skip,
+        "limit": params.limit,
+        "has_more": params.skip + params.limit < total
+    }
+
+@app.get("/users")
+async def get_users(pagination: PaginationParams = Depends()):
+    total = 100
+    users = db.query(User).offset(pagination.skip).limit(pagination.limit).all()
+    return paginate(users, total, pagination)
+```
+
+## Cursor-based Pagination
+- difficulty: hard
+
+```python
+from fastapi import FastAPI, Query, HTTPException
+from pydantic import BaseModel
+from typing import List, Optional
+import base64
+import json
+
+app = FastAPI()
+
+class Item(BaseModel):
+    id: str
+    name: str
+    created_at: str
+
+class CursorPage(BaseModel):
+    items: List[Item]
+    next_cursor: Optional[str] = None
+    prev_cursor: Optional[str] = None
+    has_next: bool
+    has_prev: bool
+
+def encode_cursor(data: dict) -> str:
+    return base64.urlsafe_b64encode(json.dumps(data).encode()).decode()
+
+def decode_cursor(cursor: str) -> dict:
+    try:
+        return json.loads(base64.urlsafe_b64decode(cursor.encode()).decode())
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid cursor")
+
+@app.get("/items", response_model=CursorPage)
+async def get_items(
+    cursor: Optional[str] = Query(default=None),
+    limit: int = Query(default=20, ge=1, le=100),
+    direction: str = Query(default="next", regex="^(next|prev)$")
+):
+    if cursor:
+        cursor_data = decode_cursor(cursor)
+        last_id = cursor_data["id"]
+        last_created = cursor_data["created_at"]
+    else:
+        last_id = None
+        last_created = None
+
+    query = db.query(Item).order_by(Item.created_at.desc(), Item.id.desc())
+
+    if last_id and direction == "next":
+        query = query.filter(
+            (Item.created_at < last_created) |
+            ((Item.created_at == last_created) & (Item.id < last_id))
+        )
+
+    items = query.limit(limit + 1).all()
+    has_next = len(items) > limit
+    items = items[:limit]
+
+    next_cursor = None
+    if has_next and items:
+        last = items[-1]
+        next_cursor = encode_cursor({"id": last.id, "created_at": last.created_at})
+
+    return CursorPage(
+        items=items,
+        next_cursor=next_cursor,
+        prev_cursor=cursor,
+        has_next=has_next,
+        has_prev=cursor is not None
+    )
+```
+
+## Pagination with SQLAlchemy
+- difficulty: medium
+
+```python
+from fastapi import FastAPI, Depends, Query
+from sqlalchemy.orm import Session
+from sqlalchemy import func
+from typing import List, Generic, TypeVar
+from pydantic import BaseModel
+
+app = FastAPI()
+
+T = TypeVar("T")
+
+class PageParams(BaseModel):
+    page: int = 1
+    size: int = 20
+
+class PagedResponse(BaseModel, Generic[T]):
+    items: List[T]
+    total: int
+    page: int
+    size: int
+    pages: int
+
+async def get_pagination(
+    page: int = Query(1, ge=1, description="Page number"),
+    size: int = Query(20, ge=1, le=100, description="Page size"),
+) -> PageParams:
+    return PageParams(page=page, size=size)
+
+def paginate_query(
+    db: Session,
+    query,
+    params: PageParams,
+    response_model
+) -> PagedResponse:
+    total = query.count()
+    items = query.offset((params.page - 1) * params.size).limit(params.size).all()
+
+    return PagedResponse(
+        items=[response_model.model_validate(item) for item in items],
+        total=total,
+        page=params.page,
+        size=params.size,
+        pages=(total + params.size - 1) // params.size
+    )
+
+@app.get("/users", response_model=PagedResponse[UserResponse])
+async def get_users(
+    db: Session = Depends(get_db),
+    params: PageParams = Depends(get_pagination),
+    search: str = Query(default=None)
+):
+    query = db.query(User)
+    if search:
+        query = query.filter(User.name.ilike(f"%{search}%"))
+    return paginate_query(db, query, params, UserResponse)
+```
+
+## JSONResponse Custom
+- difficulty: easy
+
+```python
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from typing import Any
+import json
+from datetime import datetime, date
+from decimal import Decimal
+
+app = FastAPI()
+
+class CustomJSONEncoder(json.JSONEncoder):
+    def default(self, obj: Any) -> Any:
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        if isinstance(obj, date):
+            return obj.isoformat()
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return super().default(obj)
+
+class CustomJSONResponse(JSONResponse):
+    def render(self, content: Any) -> bytes:
+        return json.dumps(
+            content,
+            cls=CustomJSONEncoder,
+            ensure_ascii=False,
+            indent=2
+        ).encode("utf-8")
+
+@app.get("/data", response_class=CustomJSONResponse)
+async def get_data():
+    return {
+        "name": "สวัสดี",
+        "created_at": datetime.now(),
+        "price": Decimal("19.99")
+    }
+```
+
+## Response Classes
+- difficulty: medium
+
+```python
+from fastapi import FastAPI
+from fastapi.responses import (
+    JSONResponse, HTMLResponse, PlainTextResponse,
+    RedirectResponse, FileResponse, StreamingResponse
+)
+from pathlib import Path
+
+app = FastAPI()
+
+@app.get("/json")
+async def json_response():
+    return JSONResponse(
+        content={"message": "Hello"},
+        status_code=200,
+        headers={"X-Custom-Header": "value"}
+    )
+
+@app.get("/html", response_class=HTMLResponse)
+async def html_response():
+    return """
+    <html>
+        <head><title>Hello</title></head>
+        <body><h1>Hello World</h1></body>
+    </html>
+    """
+
+@app.get("/text", response_class=PlainTextResponse)
+async def text_response():
+    return "Hello, World!"
+
+@app.get("/redirect")
+async def redirect():
+    return RedirectResponse(url="/new-location", status_code=307)
+
+@app.get("/file")
+async def file_response():
+    return FileResponse(
+        path="./files/report.pdf",
+        filename="report.pdf",
+        media_type="application/pdf"
+    )
+
+@app.get("/download/{filename}")
+async def download_file(filename: str):
+    file_path = Path(f"./uploads/{filename}")
+    if not file_path.exists():
+        return JSONResponse(status_code=404, content={"error": "File not found"})
+    return FileResponse(path=file_path, filename=filename)
+```
+
+## ORJSONResponse for Performance
+- difficulty: easy
+
+```python
+from fastapi import FastAPI
+from fastapi.responses import ORJSONResponse
+from typing import List
+from pydantic import BaseModel
+
+app = FastAPI(default_response_class=ORJSONResponse)
+
+class Item(BaseModel):
+    id: int
+    name: str
+    price: float
+
+@app.get("/items", response_class=ORJSONResponse)
+async def get_items() -> List[Item]:
+    return [
+        Item(id=1, name="Item 1", price=10.5),
+        Item(id=2, name="Item 2", price=20.0),
+    ]
+
+@app.get("/large-data")
+async def get_large_data():
+    data = [{"id": i, "value": f"item_{i}"} for i in range(10000)]
+    return ORJSONResponse(content=data)
+```
+
+## Custom Response with Headers
+- difficulty: medium
+
+```python
+from fastapi import FastAPI, Response
+from fastapi.responses import JSONResponse
+from typing import Any
+
+app = FastAPI()
+
+@app.get("/custom")
+async def custom_response(response: Response):
+    response.headers["X-Custom-Header"] = "custom-value"
+    response.headers["Cache-Control"] = "max-age=3600"
+    response.set_cookie(key="visited", value="true")
+    return {"message": "Hello"}
+
+@app.get("/no-cache")
+async def no_cache():
+    return JSONResponse(
+        content={"data": "sensitive"},
+        headers={
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0"
+        }
+    )
+
+@app.get("/cors-custom")
+async def cors_response():
+    return JSONResponse(
+        content={"message": "CORS enabled"},
+        headers={
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST",
+            "Access-Control-Allow-Headers": "Content-Type"
+        }
+    )
+```
+
+## Pydantic Field Validators
+- difficulty: medium
+
+```python
+from pydantic import BaseModel, field_validator, ValidationError
+from typing import List
+
+class User(BaseModel):
+    name: str
+    email: str
+    age: int
+    tags: List[str] = []
+
+    @field_validator('name')
+    @classmethod
+    def name_must_not_be_empty(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError('Name cannot be empty')
+        return v.strip().title()
+
+    @field_validator('email')
+    @classmethod
+    def email_must_be_valid(cls, v: str) -> str:
+        if '@' not in v:
+            raise ValueError('Invalid email format')
+        return v.lower()
+
+    @field_validator('age')
+    @classmethod
+    def age_must_be_valid(cls, v: int) -> int:
+        if v < 0 or v > 150:
+            raise ValueError('Age must be between 0 and 150')
+        return v
+
+    @field_validator('tags', mode='before')
+    @classmethod
+    def split_tags(cls, v):
+        if isinstance(v, str):
+            return [tag.strip() for tag in v.split(',')]
+        return v
+```
+
+## Pydantic Model Validators
+- difficulty: hard
+
+```python
+from pydantic import BaseModel, model_validator, field_validator
+from typing import Optional
+from datetime import date
+
+class DateRange(BaseModel):
+    start_date: date
+    end_date: date
+
+    @model_validator(mode='after')
+    def validate_date_range(self) -> 'DateRange':
+        if self.end_date < self.start_date:
+            raise ValueError('end_date must be after start_date')
+        return self
+
+class UserRegistration(BaseModel):
+    username: str
+    password: str
+    password_confirm: str
+    email: Optional[str] = None
+    phone: Optional[str] = None
+
+    @model_validator(mode='after')
+    def validate_passwords_match(self) -> 'UserRegistration':
+        if self.password != self.password_confirm:
+            raise ValueError('Passwords do not match')
+        return self
+
+    @model_validator(mode='after')
+    def validate_contact_info(self) -> 'UserRegistration':
+        if not self.email and not self.phone:
+            raise ValueError('Either email or phone must be provided')
+        return self
+
+class OrderItem(BaseModel):
+    product_id: str
+    quantity: int
+    unit_price: float
+    discount: float = 0
+
+    @model_validator(mode='after')
+    def validate_discount(self) -> 'OrderItem':
+        max_discount = self.unit_price * self.quantity
+        if self.discount > max_discount:
+            raise ValueError(f'Discount cannot exceed {max_discount}')
+        return self
+```
+
+## Pydantic Computed Fields
+- difficulty: medium
+
+```python
+from pydantic import BaseModel, computed_field, field_validator
+from typing import List
+from decimal import Decimal
+
+class OrderItem(BaseModel):
+    name: str
+    quantity: int
+    unit_price: Decimal
+
+    @computed_field
+    @property
+    def subtotal(self) -> Decimal:
+        return self.quantity * self.unit_price
+
+class Order(BaseModel):
+    items: List[OrderItem]
+    tax_rate: Decimal = Decimal("0.1")
+    discount: Decimal = Decimal("0")
+
+    @computed_field
+    @property
+    def subtotal(self) -> Decimal:
+        return sum(item.subtotal for item in self.items)
+
+    @computed_field
+    @property
+    def tax(self) -> Decimal:
+        return (self.subtotal - self.discount) * self.tax_rate
+
+    @computed_field
+    @property
+    def total(self) -> Decimal:
+        return self.subtotal - self.discount + self.tax
+
+class User(BaseModel):
+    first_name: str
+    last_name: str
+    birth_year: int
+
+    @computed_field
+    @property
+    def full_name(self) -> str:
+        return f"{self.first_name} {self.last_name}"
+
+    @computed_field
+    @property
+    def age(self) -> int:
+        from datetime import datetime
+        return datetime.now().year - self.birth_year
+```
+
+## Pydantic Model Config
+- difficulty: medium
+
+```python
+from pydantic import BaseModel, ConfigDict, Field
+from datetime import datetime
+from typing import Optional
+
+class UserBase(BaseModel):
+    model_config = ConfigDict(
+        str_strip_whitespace=True,
+        str_min_length=1,
+        from_attributes=True,
+        populate_by_name=True,
+        use_enum_values=True,
+        validate_default=True,
+        extra='forbid',
+    )
+
+class User(UserBase):
+    id: int
+    username: str = Field(..., min_length=3, max_length=50)
+    email: str = Field(..., pattern=r'^[\w\.-]+@[\w\.-]+\.\w+$')
+    full_name: Optional[str] = Field(None, alias='fullName')
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+    model_config = ConfigDict(
+        json_schema_extra={
+            "example": {
+                "id": 1,
+                "username": "johndoe",
+                "email": "john@example.com",
+                "fullName": "John Doe"
+            }
+        }
+    )
+
+class UserFromDB(User):
+    model_config = ConfigDict(from_attributes=True)
+
+user = UserFromDB.model_validate(db_user)
+```
+
+## Pydantic Custom Types
+- difficulty: hard
+
+```python
+from pydantic import BaseModel, GetCoreSchemaHandler
+from pydantic_core import CoreSchema, core_schema
+from typing import Annotated, Any
+import re
+
+class PhoneNumber(str):
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls, source_type: Any, handler: GetCoreSchemaHandler
+    ) -> CoreSchema:
+        return core_schema.no_info_after_validator_function(
+            cls._validate,
+            core_schema.str_schema(),
+        )
+
+    @classmethod
+    def _validate(cls, v: str) -> 'PhoneNumber':
+        phone = re.sub(r'[\s\-\(\)]', '', v)
+        if not re.match(r'^\+?[0-9]{10,15}$', phone):
+            raise ValueError('Invalid phone number format')
+        return cls(phone)
+
+class Slug(str):
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls, source_type: Any, handler: GetCoreSchemaHandler
+    ) -> CoreSchema:
+        return core_schema.no_info_after_validator_function(
+            cls._validate,
+            core_schema.str_schema(),
+        )
+
+    @classmethod
+    def _validate(cls, v: str) -> 'Slug':
+        slug = re.sub(r'[^\w\-]', '', v.lower().replace(' ', '-'))
+        if not slug:
+            raise ValueError('Invalid slug')
+        return cls(slug)
+
+class Contact(BaseModel):
+    name: str
+    phone: PhoneNumber
+
+class Article(BaseModel):
+    title: str
+    slug: Slug
+```
+
+## Pydantic Nested Models
+- difficulty: medium
+
+```python
+from pydantic import BaseModel, Field
+from typing import List, Optional
+from datetime import datetime
+from enum import Enum
+
+class Status(str, Enum):
+    DRAFT = "draft"
+    PUBLISHED = "published"
+    ARCHIVED = "archived"
+
+class Author(BaseModel):
+    id: int
+    name: str
+    email: str
+
+class Tag(BaseModel):
+    id: int
+    name: str
+    slug: str
+
+class Comment(BaseModel):
+    id: int
+    content: str
+    author: Author
+    created_at: datetime
+
+class Post(BaseModel):
+    id: int
+    title: str
+    content: str
+    status: Status = Status.DRAFT
+    author: Author
+    tags: List[Tag] = []
+    comments: List[Comment] = []
+    metadata: Optional[dict] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: Optional[datetime] = None
+
+class PostCreate(BaseModel):
+    title: str = Field(..., min_length=1, max_length=200)
+    content: str = Field(..., min_length=10)
+    author_id: int
+    tag_ids: List[int] = []
+
+class PostUpdate(BaseModel):
+    title: Optional[str] = Field(None, min_length=1, max_length=200)
+    content: Optional[str] = Field(None, min_length=10)
+    status: Optional[Status] = None
+    tag_ids: Optional[List[int]] = None
+```
+
+## Pydantic Serialization
+- difficulty: medium
+
+```python
+from pydantic import BaseModel, Field, field_serializer
+from datetime import datetime
+from decimal import Decimal
+from typing import Optional
+
+class Product(BaseModel):
+    id: int
+    name: str
+    price: Decimal
+    discount_price: Optional[Decimal] = None
+    created_at: datetime
+    secret_key: str = Field(exclude=True)
+
+    @field_serializer('price', 'discount_price')
+    def serialize_decimal(self, v: Optional[Decimal]) -> Optional[str]:
+        if v is None:
+            return None
+        return f"${v:.2f}"
+
+    @field_serializer('created_at')
+    def serialize_datetime(self, v: datetime) -> str:
+        return v.strftime("%Y-%m-%d %H:%M:%S")
+
+class User(BaseModel):
+    id: int
+    email: str
+    password: str = Field(exclude=True)
+    phone: Optional[str] = None
+
+    def model_dump_public(self) -> dict:
+        return self.model_dump(exclude={'password'}, exclude_none=True)
+
+    def model_dump_admin(self) -> dict:
+        data = self.model_dump()
+        data['password'] = '***hidden***'
+        return data
+
+product = Product(
+    id=1, name="Widget", price=Decimal("29.99"),
+    created_at=datetime.now(), secret_key="abc123"
+)
+print(product.model_dump_json())
+```
+
+## Pydantic Generic Models
+- difficulty: hard
+
+```python
+from pydantic import BaseModel
+from typing import TypeVar, Generic, List, Optional
+from datetime import datetime
+
+T = TypeVar('T')
+
+class Response(BaseModel, Generic[T]):
+    success: bool = True
+    data: T
+    message: Optional[str] = None
+    timestamp: datetime = datetime.utcnow()
+
+class PaginatedResponse(BaseModel, Generic[T]):
+    items: List[T]
+    total: int
+    page: int
+    page_size: int
+    has_next: bool
+    has_prev: bool
+
+class User(BaseModel):
+    id: int
+    name: str
+    email: str
+
+class Product(BaseModel):
+    id: int
+    name: str
+    price: float
+
+@app.get("/users/{user_id}", response_model=Response[User])
+async def get_user(user_id: int):
+    user = await fetch_user(user_id)
+    return Response(data=user, message="User found")
+
+@app.get("/products", response_model=PaginatedResponse[Product])
+async def list_products(page: int = 1, size: int = 20):
+    products, total = await fetch_products(page, size)
+    return PaginatedResponse(
+        items=products,
+        total=total,
+        page=page,
+        page_size=size,
+        has_next=page * size < total,
+        has_prev=page > 1
+    )
+```

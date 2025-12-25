@@ -52,6 +52,8 @@ export function StudyCard({
   const [readMeaning, setReadMeaning] = useState(true);
   const [readExample, setReadExample] = useState(true);
   const [readTranslation, setReadTranslation] = useState(true);
+  const [repeatVocab, setRepeatVocab] = useState(1);
+  const [repeatExample, setRepeatExample] = useState(1);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const { speak, stop, isSpeaking, isSupported } = useTTS();
@@ -66,6 +68,8 @@ export function StudyCard({
         if (typeof settings.readExample === 'boolean') setReadExample(settings.readExample);
         if (typeof settings.readTranslation === 'boolean') setReadTranslation(settings.readTranslation);
         if (typeof settings.speed === 'number') setSpeed(settings.speed);
+        if (typeof settings.repeatVocab === 'number') setRepeatVocab(settings.repeatVocab);
+        if (typeof settings.repeatExample === 'number') setRepeatExample(settings.repeatExample);
       } catch (e) {
         // Ignore parse errors
       }
@@ -79,13 +83,39 @@ export function StudyCard({
       readExample,
       readTranslation,
       speed,
+      repeatVocab,
+      repeatExample,
     }));
-  }, [readMeaning, readExample, readTranslation, speed]);
+  }, [readMeaning, readExample, readTranslation, speed, repeatVocab, repeatExample]);
 
   // Helper to speak with language setting
   const speakText = (text: string, lang: Language, onEnd?: () => void) => {
     const plainText = text.replace(/[#*`>\[\]()_~]/g, '').trim();
     speak(plainText, { lang: LANG_TO_TTS[lang], rate: speed, onEnd });
+  };
+
+  // Helper to speak with repeat count
+  const speakWithRepeat = (text: string, lang: Language, count: number, onEnd?: () => void) => {
+    let currentRepeat = 0;
+
+    const speakOnce = () => {
+      currentRepeat++;
+      const isLast = currentRepeat >= count;
+
+      speakText(text, lang, () => {
+        if (isPaused) return;
+        if (isLast) {
+          onEnd?.();
+        } else {
+          // Wait 500ms between repeats
+          timerRef.current = setTimeout(() => {
+            if (!isPaused) speakOnce();
+          }, 500);
+        }
+      });
+    };
+
+    speakOnce();
   };
 
   // Clean up timer on unmount
@@ -99,7 +129,7 @@ export function StudyCard({
   useEffect(() => {
     if (autoMode && !isPaused && card && !isFlipped) {
       setAutoStep('reading-vocab');
-      speakText(card.vocab, sourceLang, () => {
+      speakWithRepeat(card.vocab, sourceLang, repeatVocab, () => {
         if (!isPaused) {
           setAutoStep('waiting-flip');
           timerRef.current = setTimeout(() => {
@@ -135,7 +165,7 @@ export function StudyCard({
   const readExampleThenNext = () => {
     if (readExample && card.example) {
       setAutoStep('reading-example');
-      speakText(card.example, sourceLang, () => {
+      speakWithRepeat(card.example, sourceLang, repeatExample, () => {
         if (!isPaused) readTranslationThenNext();
       });
     } else {
@@ -165,7 +195,7 @@ export function StudyCard({
       if (autoStep === 'idle' && !isFlipped) {
         // Restart reading vocab
         setAutoStep('reading-vocab');
-        speakText(card.vocab, sourceLang, () => {
+        speakWithRepeat(card.vocab, sourceLang, repeatVocab, () => {
           setAutoStep('waiting-flip');
           timerRef.current = setTimeout(() => onFlip(), 1500);
         });
@@ -258,6 +288,39 @@ export function StudyCard({
                         checked={readTranslation}
                         onCheckedChange={setReadTranslation}
                       />
+                    </div>
+                    <hr className="my-2" />
+                    <div className="flex items-center justify-between">
+                      <Label className="text-sm">Repeat Vocab</Label>
+                      <div className="flex items-center gap-1">
+                        {[1, 2, 3].map((n) => (
+                          <Button
+                            key={n}
+                            variant={repeatVocab === n ? 'default' : 'outline'}
+                            size="sm"
+                            className="h-8 w-8 p-0"
+                            onClick={() => setRepeatVocab(n)}
+                          >
+                            {n}x
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Label className="text-sm">Repeat Example</Label>
+                      <div className="flex items-center gap-1">
+                        {[1, 2, 3].map((n) => (
+                          <Button
+                            key={n}
+                            variant={repeatExample === n ? 'default' : 'outline'}
+                            size="sm"
+                            className="h-8 w-8 p-0"
+                            onClick={() => setRepeatExample(n)}
+                          >
+                            {n}x
+                          </Button>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </DialogContent>
