@@ -1,5 +1,5 @@
 import { Timestamp } from 'firebase/firestore';
-import { User, UserSettings } from '@/types';
+import { User, UserSettings, UserRole } from '@/types';
 
 export const DEFAULT_USER_SETTINGS: UserSettings = {
   theme: 'system',
@@ -14,6 +14,8 @@ export interface UserDocument {
   email: string | null;
   displayName: string | null;
   photoURL: string | null;
+  role: UserRole;
+  isBanned?: boolean;
   createdAt: Timestamp;
   settings: UserSettings;
 }

@@ -71,6 +71,7 @@ async function createUserDocument(user: FirebaseUser): Promise<void> {
     email: user.email,
     displayName: user.displayName,
     photoURL: user.photoURL,
+    role: 'user',
     createdAt: Timestamp.now(),
     settings: DEFAULT_USER_SETTINGS,
   };

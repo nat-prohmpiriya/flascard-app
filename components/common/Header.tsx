@@ -14,12 +14,13 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen, Keyboard, Target, Trophy, BarChart3 } from 'lucide-react';
+import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen, Keyboard, Target, Trophy, BarChart3, Shield } from 'lucide-react';
 
 export function Header() {
   const router = useRouter();
-  const { firebaseUser, loading } = useAuth();
+  const { firebaseUser, user, loading } = useAuth();
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const isAdmin = user?.role === 'admin';
 
   const handleSignOut = async () => {
     await signOut();
@@ -140,6 +141,17 @@ export function Header() {
                         Settings
                       </Link>
                     </DropdownMenuItem>
+                    {isAdmin && (
+                      <>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                          <Link href="/admin">
+                            <Shield className="mr-2 h-4 w-4" />
+                            Admin Dashboard
+                          </Link>
+                        </DropdownMenuItem>
+                      </>
+                    )}
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={handleSignOut}>
                       <LogOut className="mr-2 h-4 w-4" />

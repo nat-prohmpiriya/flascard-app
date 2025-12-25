@@ -1,9 +1,12 @@
 // User types
+export type UserRole = 'user' | 'admin';
+
 export interface User {
   uid: string;
   email: string | null;
   displayName: string | null;
   photoURL: string | null;
+  role: UserRole;
   createdAt: Date;
   settings: UserSettings;
 }
