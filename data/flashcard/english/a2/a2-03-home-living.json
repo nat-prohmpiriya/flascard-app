@@ -1,0 +1,403 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Home & Living",
+    "description": "CEFR A2 Vocabulary - Home, Rooms, Furniture, Household Items",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "vocabulary"
+    ]
+  },
+  "cards": [
+    {
+      "vocab": "house",
+      "pronunciation": "เฮาส์",
+      "meaning": "บ้าน",
+      "example": "We live in a small house.",
+      "exampleTranslation": "เราอยู่บ้านหลังเล็ก"
+    },
+    {
+      "vocab": "apartment",
+      "pronunciation": "อะ-พาร์ท-เมนท์",
+      "meaning": "อพาร์ทเมนต์",
+      "example": "I rent an apartment in the city.",
+      "exampleTranslation": "ฉันเช่าอพาร์ทเมนต์ในเมือง"
+    },
+    {
+      "vocab": "flat",
+      "pronunciation": "แฟลท",
+      "meaning": "แฟลต, ห้องชุด",
+      "example": "She lives in a flat on the fifth floor.",
+      "exampleTranslation": "เธออยู่แฟลตชั้น 5"
+    },
+    {
+      "vocab": "room",
+      "pronunciation": "รูม",
+      "meaning": "ห้อง",
+      "example": "This room is very bright.",
+      "exampleTranslation": "ห้องนี้สว่างมาก"
+    },
+    {
+      "vocab": "living room",
+      "pronunciation": "ลิฟ-วิ่ง รูม",
+      "meaning": "ห้องนั่งเล่น",
+      "example": "We watch TV in the living room.",
+      "exampleTranslation": "เราดูทีวีในห้องนั่งเล่น"
+    },
+    {
+      "vocab": "bedroom",
+      "pronunciation": "เบด-รูม",
+      "meaning": "ห้องนอน",
+      "example": "My bedroom has a big window.",
+      "exampleTranslation": "ห้องนอนของฉันมีหน้าต่างใหญ่"
+    },
+    {
+      "vocab": "bathroom",
+      "pronunciation": "บาธ-รูม",
+      "meaning": "ห้องน้ำ",
+      "example": "The bathroom is upstairs.",
+      "exampleTranslation": "ห้องน้ำอยู่ชั้นบน"
+    },
+    {
+      "vocab": "kitchen",
+      "pronunciation": "คิท-เชิน",
+      "meaning": "ห้องครัว",
+      "example": "I cook in the kitchen.",
+      "exampleTranslation": "ฉันทำอาหารในห้องครัว"
+    },
+    {
+      "vocab": "dining room",
+      "pronunciation": "ได-นิ่ง รูม",
+      "meaning": "ห้องอาหาร",
+      "example": "We eat together in the dining room.",
+      "exampleTranslation": "เรากินข้าวด้วยกันในห้องอาหาร"
+    },
+    {
+      "vocab": "balcony",
+      "pronunciation": "แบล-โค-นี่",
+      "meaning": "ระเบียง",
+      "example": "I have plants on my balcony.",
+      "exampleTranslation": "ฉันมีต้นไม้บนระเบียง"
+    },
+    {
+      "vocab": "garden",
+      "pronunciation": "การ์-เดิน",
+      "meaning": "สวน",
+      "example": "We have a small garden behind the house.",
+      "exampleTranslation": "เรามีสวนเล็กๆ หลังบ้าน"
+    },
+    {
+      "vocab": "garage",
+      "pronunciation": "กา-ราจ",
+      "meaning": "โรงรถ",
+      "example": "I park my car in the garage.",
+      "exampleTranslation": "ฉันจอดรถในโรงรถ"
+    },
+    {
+      "vocab": "floor",
+      "pronunciation": "ฟลอร์",
+      "meaning": "พื้น, ชั้น",
+      "example": "I live on the third floor.",
+      "exampleTranslation": "ฉันอยู่ชั้นสาม"
+    },
+    {
+      "vocab": "stairs",
+      "pronunciation": "สแตร์ส",
+      "meaning": "บันได",
+      "example": "Be careful on the stairs.",
+      "exampleTranslation": "ระวังตรงบันไดนะ"
+    },
+    {
+      "vocab": "elevator",
+      "pronunciation": "เอล-ลิ-เว-เทอร์",
+      "meaning": "ลิฟต์",
+      "example": "Take the elevator to the 10th floor.",
+      "exampleTranslation": "ขึ้นลิฟต์ไปชั้น 10"
+    },
+    {
+      "vocab": "door",
+      "pronunciation": "ดอร์",
+      "meaning": "ประตู",
+      "example": "Please close the door.",
+      "exampleTranslation": "กรุณาปิดประตู"
+    },
+    {
+      "vocab": "window",
+      "pronunciation": "วิน-โดว์",
+      "meaning": "หน้าต่าง",
+      "example": "Open the window, please.",
+      "exampleTranslation": "เปิดหน้าต่างหน่อยค่ะ"
+    },
+    {
+      "vocab": "wall",
+      "pronunciation": "วอลล์",
+      "meaning": "กำแพง, ผนัง",
+      "example": "There's a picture on the wall.",
+      "exampleTranslation": "มีรูปภาพบนผนัง"
+    },
+    {
+      "vocab": "ceiling",
+      "pronunciation": "ซี-ลิ่ง",
+      "meaning": "เพดาน",
+      "example": "The ceiling is very high.",
+      "exampleTranslation": "เพดานสูงมาก"
+    },
+    {
+      "vocab": "roof",
+      "pronunciation": "รูฟ",
+      "meaning": "หลังคา",
+      "example": "The roof needs to be repaired.",
+      "exampleTranslation": "หลังคาต้องซ่อม"
+    },
+    {
+      "vocab": "bed",
+      "pronunciation": "เบด",
+      "meaning": "เตียง",
+      "example": "I bought a new bed.",
+      "exampleTranslation": "ฉันซื้อเตียงใหม่"
+    },
+    {
+      "vocab": "sofa",
+      "pronunciation": "โซ-ฟา",
+      "meaning": "โซฟา",
+      "example": "Sit on the sofa.",
+      "exampleTranslation": "นั่งบนโซฟา"
+    },
+    {
+      "vocab": "chair",
+      "pronunciation": "แชร์",
+      "meaning": "เก้าอี้",
+      "example": "Please have a chair.",
+      "exampleTranslation": "เชิญนั่งค่ะ"
+    },
+    {
+      "vocab": "table",
+      "pronunciation": "เท-เบิ้ล",
+      "meaning": "โต๊ะ",
+      "example": "Put the books on the table.",
+      "exampleTranslation": "วางหนังสือบนโต๊ะ"
+    },
+    {
+      "vocab": "desk",
+      "pronunciation": "เดสค์",
+      "meaning": "โต๊ะทำงาน",
+      "example": "I work at my desk.",
+      "exampleTranslation": "ฉันทำงานที่โต๊ะ"
+    },
+    {
+      "vocab": "wardrobe",
+      "pronunciation": "วอร์-โดรบ",
+      "meaning": "ตู้เสื้อผ้า",
+      "example": "My clothes are in the wardrobe.",
+      "exampleTranslation": "เสื้อผ้าของฉันอยู่ในตู้"
+    },
+    {
+      "vocab": "cupboard",
+      "pronunciation": "คัพ-เบิร์ด",
+      "meaning": "ตู้เก็บของ",
+      "example": "The plates are in the cupboard.",
+      "exampleTranslation": "จานอยู่ในตู้"
+    },
+    {
+      "vocab": "shelf",
+      "pronunciation": "เชลฟ์",
+      "meaning": "ชั้นวางของ",
+      "example": "Put the books on the shelf.",
+      "exampleTranslation": "วางหนังสือบนชั้น"
+    },
+    {
+      "vocab": "lamp",
+      "pronunciation": "แลมพ์",
+      "meaning": "โคมไฟ",
+      "example": "Turn on the lamp.",
+      "exampleTranslation": "เปิดโคมไฟ"
+    },
+    {
+      "vocab": "mirror",
+      "pronunciation": "เมียร์-เรอร์",
+      "meaning": "กระจก",
+      "example": "There's a mirror in the bathroom.",
+      "exampleTranslation": "มีกระจกในห้องน้ำ"
+    },
+    {
+      "vocab": "curtain",
+      "pronunciation": "เคอร์-เทิน",
+      "meaning": "ผ้าม่าน",
+      "example": "Close the curtains.",
+      "exampleTranslation": "ปิดผ้าม่าน"
+    },
+    {
+      "vocab": "carpet",
+      "pronunciation": "คาร์-เพ็ท",
+      "meaning": "พรม",
+      "example": "There's a carpet in the living room.",
+      "exampleTranslation": "มีพรมในห้องนั่งเล่น"
+    },
+    {
+      "vocab": "pillow",
+      "pronunciation": "พิล-โลว์",
+      "meaning": "หมอน",
+      "example": "I need two pillows to sleep.",
+      "exampleTranslation": "ฉันต้องการหมอนสองใบในการนอน"
+    },
+    {
+      "vocab": "blanket",
+      "pronunciation": "แบลง-เก็ท",
+      "meaning": "ผ้าห่ม",
+      "example": "It's cold. I need a blanket.",
+      "exampleTranslation": "หนาวจัง ขอผ้าห่มหน่อย"
+    },
+    {
+      "vocab": "fridge",
+      "pronunciation": "ฟริดจ์",
+      "meaning": "ตู้เย็น",
+      "example": "Put the milk in the fridge.",
+      "exampleTranslation": "เอานมใส่ตู้เย็น"
+    },
+    {
+      "vocab": "oven",
+      "pronunciation": "โอ-เวิน",
+      "meaning": "เตาอบ",
+      "example": "I bake cookies in the oven.",
+      "exampleTranslation": "ฉันอบคุกกี้ในเตาอบ"
+    },
+    {
+      "vocab": "microwave",
+      "pronunciation": "ไมค์-โคร-เวฟ",
+      "meaning": "ไมโครเวฟ",
+      "example": "Heat the food in the microwave.",
+      "exampleTranslation": "อุ่นอาหารในไมโครเวฟ"
+    },
+    {
+      "vocab": "washing machine",
+      "pronunciation": "วอช-ชิ่ง มะ-ชีน",
+      "meaning": "เครื่องซักผ้า",
+      "example": "The washing machine is broken.",
+      "exampleTranslation": "เครื่องซักผ้าพัง"
+    },
+    {
+      "vocab": "air conditioner",
+      "pronunciation": "แอร์ คอน-ดิ-ชัน-เนอร์",
+      "meaning": "เครื่องปรับอากาศ",
+      "example": "Turn on the air conditioner.",
+      "exampleTranslation": "เปิดแอร์หน่อย"
+    },
+    {
+      "vocab": "fan",
+      "pronunciation": "แฟน",
+      "meaning": "พัดลม",
+      "example": "The fan is not working.",
+      "exampleTranslation": "พัดลมไม่ทำงาน"
+    },
+    {
+      "vocab": "heater",
+      "pronunciation": "ฮี-เทอร์",
+      "meaning": "เครื่องทำความร้อน",
+      "example": "Turn on the heater. It's cold.",
+      "exampleTranslation": "เปิดเครื่องทำความร้อน หนาวจัง"
+    },
+    {
+      "vocab": "key",
+      "pronunciation": "คีย์",
+      "meaning": "กุญแจ",
+      "example": "Where are my keys?",
+      "exampleTranslation": "กุญแจฉันอยู่ไหน?"
+    },
+    {
+      "vocab": "lock",
+      "pronunciation": "ล็อค",
+      "meaning": "ล็อค, กลอน",
+      "example": "Don't forget to lock the door.",
+      "exampleTranslation": "อย่าลืมล็อคประตู"
+    },
+    {
+      "vocab": "rent",
+      "pronunciation": "เรนท์",
+      "meaning": "ค่าเช่า, เช่า",
+      "example": "How much is the rent?",
+      "exampleTranslation": "ค่าเช่าเท่าไหร่?"
+    },
+    {
+      "vocab": "move",
+      "pronunciation": "มูฟ",
+      "meaning": "ย้าย",
+      "example": "We're moving to a new house.",
+      "exampleTranslation": "เราจะย้ายไปบ้านใหม่"
+    },
+    {
+      "vocab": "upstairs",
+      "pronunciation": "อัพ-สแตร์ส",
+      "meaning": "ชั้นบน",
+      "example": "My bedroom is upstairs.",
+      "exampleTranslation": "ห้องนอนของฉันอยู่ชั้นบน"
+    },
+    {
+      "vocab": "downstairs",
+      "pronunciation": "ดาวน์-สแตร์ส",
+      "meaning": "ชั้นล่าง",
+      "example": "The kitchen is downstairs.",
+      "exampleTranslation": "ห้องครัวอยู่ชั้นล่าง"
+    },
+    {
+      "vocab": "next to",
+      "pronunciation": "เน็กซ์ ทู",
+      "meaning": "ข้างๆ",
+      "example": "The sofa is next to the window.",
+      "exampleTranslation": "โซฟาอยู่ข้างหน้าต่าง"
+    },
+    {
+      "vocab": "in front of",
+      "pronunciation": "อิน ฟรอนท์ ออฟ",
+      "meaning": "ข้างหน้า",
+      "example": "There's a garden in front of the house.",
+      "exampleTranslation": "มีสวนอยู่หน้าบ้าน"
+    },
+    {
+      "vocab": "behind",
+      "pronunciation": "บิ-ไฮนด์",
+      "meaning": "ข้างหลัง",
+      "example": "The garage is behind the house.",
+      "exampleTranslation": "โรงรถอยู่หลังบ้าน"
+    },
+    {
+      "vocab": "between",
+      "pronunciation": "บิ-ทวีน",
+      "meaning": "ระหว่าง",
+      "example": "The table is between two chairs.",
+      "exampleTranslation": "โต๊ะอยู่ระหว่างเก้าอี้สองตัว"
+    },
+    {
+      "vocab": "comfortable",
+      "pronunciation": "คัม-เฟิร์ท-เทอ-เบิ้ล",
+      "meaning": "สะดวกสบาย",
+      "example": "This sofa is very comfortable.",
+      "exampleTranslation": "โซฟาตัวนี้นั่งสบายมาก"
+    },
+    {
+      "vocab": "modern",
+      "pronunciation": "โม-เดิร์น",
+      "meaning": "ทันสมัย",
+      "example": "They have a modern kitchen.",
+      "exampleTranslation": "พวกเขามีห้องครัวทันสมัย"
+    },
+    {
+      "vocab": "spacious",
+      "pronunciation": "สเป-เชียส",
+      "meaning": "กว้างขวาง",
+      "example": "The living room is spacious.",
+      "exampleTranslation": "ห้องนั่งเล่นกว้างขวาง"
+    },
+    {
+      "vocab": "cozy",
+      "pronunciation": "โค-ซี่",
+      "meaning": "อบอุ่น, น่าอยู่",
+      "example": "It's a small but cozy apartment.",
+      "exampleTranslation": "เป็นอพาร์ทเมนต์เล็กแต่น่าอยู่"
+    }
+  ]
+}

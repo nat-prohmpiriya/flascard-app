@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Media & Journalism",
+    "description": "C1 level vocabulary for media, journalism, and communication",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "media", "journalism"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "journalism",
+      "pronunciation": "เจอร์-นัล-ลิ-ซึม",
+      "meaning": "การสื่อสารมวลชน",
+      "example": "Investigative journalism exposes corruption.",
+      "exampleTranslation": "การสื่อสารมวลชนเชิงสืบสวนเปิดโปงการทุจริต"
+    },
+    {
+      "vocab": "editorial",
+      "pronunciation": "เอ็ด-ดิ-โท-เรียล",
+      "meaning": "บทบรรณาธิการ",
+      "example": "The editorial criticized government policy.",
+      "exampleTranslation": "บทบรรณาธิการวิจารณ์นโยบายรัฐบาล"
+    },
+    {
+      "vocab": "op-ed",
+      "pronunciation": "ออป-เอ็ด",
+      "meaning": "บทความความคิดเห็น",
+      "example": "She wrote an op-ed on climate change.",
+      "exampleTranslation": "เธอเขียนบทความความคิดเห็นเรื่องการเปลี่ยนแปลงสภาพอากาศ"
+    },
+    {
+      "vocab": "byline",
+      "pronunciation": "ไบ-ไลน์",
+      "meaning": "ชื่อผู้เขียน",
+      "example": "His byline appears in major publications.",
+      "exampleTranslation": "ชื่อของเขาปรากฏในสิ่งพิมพ์หลัก"
+    },
+    {
+      "vocab": "headline",
+      "pronunciation": "เฮด-ไลน์",
+      "meaning": "พาดหัว",
+      "example": "The headline grabbed attention.",
+      "exampleTranslation": "พาดหัวดึงดูดความสนใจ"
+    },
+    {
+      "vocab": "breaking news",
+      "pronunciation": "เบรค-คิง นิวส์",
+      "meaning": "ข่าวด่วน",
+      "example": "Breaking news interrupted the program.",
+      "exampleTranslation": "ข่าวด่วนขัดจังหวะรายการ"
+    },
+    {
+      "vocab": "scoop",
+      "pronunciation": "สคูป",
+      "meaning": "ข่าวพิเศษ, ข่าวเด็ด",
+      "example": "The reporter got an exclusive scoop.",
+      "exampleTranslation": "นักข่าวได้ข่าวเด็ดพิเศษ"
+    },
+    {
+      "vocab": "source",
+      "pronunciation": "ซอร์ส",
+      "meaning": "แหล่งข่าว",
+      "example": "Protect your sources.",
+      "exampleTranslation": "ปกป้องแหล่งข่าวของคุณ"
+    },
+    {
+      "vocab": "anonymous source",
+      "pronunciation": "อะ-นอน-นิ-มัส ซอร์ส",
+      "meaning": "แหล่งข่าวนิรนาม",
+      "example": "The story relied on anonymous sources.",
+      "exampleTranslation": "เรื่องนี้อาศัยแหล่งข่าวนิรนาม"
+    },
+    {
+      "vocab": "whistleblower",
+      "pronunciation": "วิส-เซิล-โบล-เออะ",
+      "meaning": "ผู้แจ้งเบาะแส",
+      "example": "The whistleblower revealed wrongdoing.",
+      "exampleTranslation": "ผู้แจ้งเบาะแสเปิดเผยการกระทำผิด"
+    },
+    {
+      "vocab": "leak",
+      "pronunciation": "ลีค",
+      "meaning": "การรั่วไหลของข้อมูล",
+      "example": "The leak exposed government secrets.",
+      "exampleTranslation": "การรั่วไหลเปิดเผยความลับของรัฐบาล"
+    },
+    {
+      "vocab": "off the record",
+      "pronunciation": "ออฟ เดอะ เร-คอร์ด",
+      "meaning": "นอกบันทึก, ไม่เปิดเผย",
+      "example": "The information was given off the record.",
+      "exampleTranslation": "ข้อมูลถูกให้โดยไม่ให้เปิดเผย"
+    },
+    {
+      "vocab": "on background",
+      "pronunciation": "ออน แบค-กราวนด์",
+      "meaning": "ให้ข้อมูลโดยไม่ระบุชื่อ",
+      "example": "Officials spoke on background.",
+      "exampleTranslation": "เจ้าหน้าที่พูดโดยไม่ระบุชื่อ"
+    },
+    {
+      "vocab": "fact-checking",
+      "pronunciation": "แฟ็คท์-เช็ค-คิง",
+      "meaning": "การตรวจสอบข้อเท็จจริง",
+      "example": "Fact-checking is crucial for accuracy.",
+      "exampleTranslation": "การตรวจสอบข้อเท็จจริงสำคัญต่อความถูกต้อง"
+    },
+    {
+      "vocab": "misinformation",
+      "pronunciation": "มิส-อิน-ฟอร์-เม-ชั่น",
+      "meaning": "ข้อมูลผิดพลาด",
+      "example": "Combat misinformation online.",
+      "exampleTranslation": "ต่อสู้กับข้อมูลผิดพลาดออนไลน์"
+    },
+    {
+      "vocab": "disinformation",
+      "pronunciation": "ดิส-อิน-ฟอร์-เม-ชั่น",
+      "meaning": "ข้อมูลบิดเบือนโดยเจตนา",
+      "example": "Disinformation campaigns spread lies.",
+      "exampleTranslation": "แคมเปญข้อมูลบิดเบือนเผยแพร่ความเท็จ"
+    },
+    {
+      "vocab": "propaganda",
+      "pronunciation": "พรอพ-พะ-แกน-ดา",
+      "meaning": "การโฆษณาชวนเชื่อ",
+      "example": "Recognize propaganda techniques.",
+      "exampleTranslation": "รู้จักเทคนิคการโฆษณาชวนเชื่อ"
+    },
+    {
+      "vocab": "fake news",
+      "pronunciation": "เฟค นิวส์",
+      "meaning": "ข่าวปลอม",
+      "example": "Identify and avoid fake news.",
+      "exampleTranslation": "ระบุและหลีกเลี่ยงข่าวปลอม"
+    },
+    {
+      "vocab": "deepfake",
+      "pronunciation": "ดีพ-เฟค",
+      "meaning": "สื่อปลอมที่สร้างจาก AI",
+      "example": "Deepfakes can manipulate public opinion.",
+      "exampleTranslation": "ดีพเฟคสามารถบงการความคิดเห็นสาธารณะ"
+    },
+    {
+      "vocab": "media literacy",
+      "pronunciation": "มี-เดีย ลิ-เทอ-ระ-ซี",
+      "meaning": "การรู้เท่าทันสื่อ",
+      "example": "Media literacy should be taught in schools.",
+      "exampleTranslation": "การรู้เท่าทันสื่อควรสอนในโรงเรียน"
+    },
+    {
+      "vocab": "press freedom",
+      "pronunciation": "เพรส ฟรี-ดอม",
+      "meaning": "เสรีภาพสื่อ",
+      "example": "Press freedom is under threat.",
+      "exampleTranslation": "เสรีภาพสื่อกำลังถูกคุกคาม"
+    },
+    {
+      "vocab": "censorship",
+      "pronunciation": "เซน-เซอะ-ชิพ",
+      "meaning": "การเซ็นเซอร์",
+      "example": "Internet censorship restricts access.",
+      "exampleTranslation": "การเซ็นเซอร์อินเทอร์เน็ตจำกัดการเข้าถึง"
+    },
+    {
+      "vocab": "self-censorship",
+      "pronunciation": "เซลฟ์-เซน-เซอะ-ชิพ",
+      "meaning": "การเซ็นเซอร์ตัวเอง",
+      "example": "Fear leads to self-censorship.",
+      "exampleTranslation": "ความกลัวนำไปสู่การเซ็นเซอร์ตัวเอง"
+    },
+    {
+      "vocab": "defamation",
+      "pronunciation": "เดฟ-ฟะ-เม-ชั่น",
+      "meaning": "การหมิ่นประมาท",
+      "example": "Sue for defamation of character.",
+      "exampleTranslation": "ฟ้องร้องข้อหาหมิ่นประมาท"
+    },
+    {
+      "vocab": "libel",
+      "pronunciation": "ไล-เบิล",
+      "meaning": "การหมิ่นประมาทลายลักษณ์อักษร",
+      "example": "The newspaper was sued for libel.",
+      "exampleTranslation": "หนังสือพิมพ์ถูกฟ้องข้อหาหมิ่นประมาทลายลักษณ์อักษร"
+    },
+    {
+      "vocab": "slander",
+      "pronunciation": "สแลน-เดอะ",
+      "meaning": "การหมิ่นประมาทด้วยวาจา",
+      "example": "His statements constituted slander.",
+      "exampleTranslation": "คำพูดของเขาเป็นการหมิ่นประมาทด้วยวาจา"
+    },
+    {
+      "vocab": "objectivity",
+      "pronunciation": "อ็อบ-เจค-ทิ-วิ-ตี้",
+      "meaning": "ความเป็นกลาง",
+      "example": "Journalism strives for objectivity.",
+      "exampleTranslation": "การสื่อสารมวลชนพยายามให้มีความเป็นกลาง"
+    },
+    {
+      "vocab": "bias",
+      "pronunciation": "ไบ-แอส",
+      "meaning": "อคติ, ความลำเอียง",
+      "example": "Be aware of media bias.",
+      "exampleTranslation": "ตระหนักถึงอคติของสื่อ"
+    },
+    {
+      "vocab": "spin",
+      "pronunciation": "สปิน",
+      "meaning": "การบิดเบือนข่าว",
+      "example": "Political spin distorts the truth.",
+      "exampleTranslation": "การบิดเบือนข่าวทางการเมืองบิดเบือนความจริง"
+    },
+    {
+      "vocab": "framing",
+      "pronunciation": "เฟรม-มิง",
+      "meaning": "การนำเสนอมุมมอง",
+      "example": "Media framing influences perception.",
+      "exampleTranslation": "การนำเสนอมุมมองของสื่อมีอิทธิพลต่อการรับรู้"
+    },
+    {
+      "vocab": "narrative",
+      "pronunciation": "นา-เร-ทีฟ",
+      "meaning": "เรื่องเล่า, วาทกรรม",
+      "example": "Control the narrative.",
+      "exampleTranslation": "ควบคุมเรื่องเล่า"
+    },
+    {
+      "vocab": "soundbite",
+      "pronunciation": "ซาวด์-ไบท์",
+      "meaning": "คำพูดสั้นๆ ที่จับใจ",
+      "example": "Politicians speak in soundbites.",
+      "exampleTranslation": "นักการเมืองพูดเป็นคำพูดสั้นๆ ที่จับใจ"
+    },
+    {
+      "vocab": "viral",
+      "pronunciation": "ไว-รัล",
+      "meaning": "แพร่กระจายอย่างรวดเร็ว",
+      "example": "The video went viral.",
+      "exampleTranslation": "วิดีโอแพร่กระจายอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "trending",
+      "pronunciation": "เทรน-ดิง",
+      "meaning": "กำลังเป็นที่นิยม",
+      "example": "The topic is trending on social media.",
+      "exampleTranslation": "หัวข้อกำลังเป็นที่นิยมบนโซเชียลมีเดีย"
+    },
+    {
+      "vocab": "clickbait",
+      "pronunciation": "คลิก-เบท",
+      "meaning": "หัวข้อหลอกคลิก",
+      "example": "Avoid clickbait headlines.",
+      "exampleTranslation": "หลีกเลี่ยงพาดหัวหลอกคลิก"
+    },
+    {
+      "vocab": "algorithm",
+      "pronunciation": "อัล-โก-ริ-ธึม",
+      "meaning": "อัลกอริทึม",
+      "example": "Social media algorithms control what you see.",
+      "exampleTranslation": "อัลกอริทึมของโซเชียลมีเดียควบคุมสิ่งที่คุณเห็น"
+    },
+    {
+      "vocab": "echo chamber",
+      "pronunciation": "เอ-โค เชม-เบอะ",
+      "meaning": "ห้องสะท้อนเสียง (เห็นแต่มุมมองเดียว)",
+      "example": "Social media creates echo chambers.",
+      "exampleTranslation": "โซเชียลมีเดียสร้างห้องสะท้อนเสียง"
+    },
+    {
+      "vocab": "filter bubble",
+      "pronunciation": "ฟิล-เทอะ บับ-เบิล",
+      "meaning": "ฟองสบู่ข้อมูล",
+      "example": "Break out of your filter bubble.",
+      "exampleTranslation": "หลุดออกจากฟองสบู่ข้อมูลของคุณ"
+    },
+    {
+      "vocab": "engagement",
+      "pronunciation": "เอ็น-เกจ-เมินท์",
+      "meaning": "การมีส่วนร่วม",
+      "example": "Maximize audience engagement.",
+      "exampleTranslation": "เพิ่มการมีส่วนร่วมของผู้ชมให้สูงสุด"
+    },
+    {
+      "vocab": "reach",
+      "pronunciation": "รีช",
+      "meaning": "การเข้าถึง",
+      "example": "Expand your content's reach.",
+      "exampleTranslation": "ขยายการเข้าถึงของเนื้อหาของคุณ"
+    },
+    {
+      "vocab": "influencer",
+      "pronunciation": "อิน-ฟลู-เอ็น-เซอะ",
+      "meaning": "ผู้มีอิทธิพลทางความคิด",
+      "example": "Influencers shape consumer behavior.",
+      "exampleTranslation": "ผู้มีอิทธิพลกำหนดพฤติกรรมผู้บริโภค"
+    },
+    {
+      "vocab": "monetization",
+      "pronunciation": "มอน-เน-ไท-เซ-ชั่น",
+      "meaning": "การสร้างรายได้",
+      "example": "Content monetization funds creators.",
+      "exampleTranslation": "การสร้างรายได้จากเนื้อหาให้ทุนผู้สร้าง"
+    },
+    {
+      "vocab": "paywall",
+      "pronunciation": "เพย์-วอลล์",
+      "meaning": "กำแพงเก็บเงิน",
+      "example": "The article is behind a paywall.",
+      "exampleTranslation": "บทความอยู่หลังกำแพงเก็บเงิน"
+    },
+    {
+      "vocab": "subscription model",
+      "pronunciation": "ซับ-สคริพ-ชั่น มอ-เดล",
+      "meaning": "โมเดลสมาชิก",
+      "example": "News outlets adopt subscription models.",
+      "exampleTranslation": "สำนักข่าวนำโมเดลสมาชิกมาใช้"
+    },
+    {
+      "vocab": "broadcast",
+      "pronunciation": "บรอด-คาสท์",
+      "meaning": "การแพร่ภาพกระจายเสียง",
+      "example": "The broadcast reached millions.",
+      "exampleTranslation": "การแพร่ภาพเข้าถึงผู้คนหลายล้าน"
+    },
+    {
+      "vocab": "podcast",
+      "pronunciation": "พอด-คาสท์",
+      "meaning": "พอดแคสต์",
+      "example": "Podcasts have grown in popularity.",
+      "exampleTranslation": "พอดแคสต์ได้รับความนิยมเพิ่มขึ้น"
+    },
+    {
+      "vocab": "streaming",
+      "pronunciation": "สตรีม-มิง",
+      "meaning": "การสตรีม",
+      "example": "Streaming services dominate entertainment.",
+      "exampleTranslation": "บริการสตรีมครองวงการบันเทิง"
+    },
+    {
+      "vocab": "public relations",
+      "pronunciation": "พับ-ลิค รี-เล-ชั่นส์",
+      "meaning": "การประชาสัมพันธ์",
+      "example": "Hire a public relations firm.",
+      "exampleTranslation": "จ้างบริษัทประชาสัมพันธ์"
+    },
+    {
+      "vocab": "press release",
+      "pronunciation": "เพรส รี-ลีส",
+      "meaning": "ข่าวแจก",
+      "example": "Issue a press release.",
+      "exampleTranslation": "ออกข่าวแจก"
+    },
+    {
+      "vocab": "press conference",
+      "pronunciation": "เพรส คอน-เฟอ-เรนซ์",
+      "meaning": "แถลงข่าว",
+      "example": "The CEO held a press conference.",
+      "exampleTranslation": "ซีอีโอจัดแถลงข่าว"
+    },
+    {
+      "vocab": "media coverage",
+      "pronunciation": "มี-เดีย คัฟ-เวอ-เรจ",
+      "meaning": "การรายงานข่าว",
+      "example": "The event received extensive media coverage.",
+      "exampleTranslation": "งานได้รับการรายงานข่าวอย่างกว้างขวาง"
+    },
+    {
+      "vocab": "correspondent",
+      "pronunciation": "คอ-เรส-พอน-เดินท์",
+      "meaning": "ผู้สื่อข่าว",
+      "example": "The foreign correspondent reported from the war zone.",
+      "exampleTranslation": "ผู้สื่อข่าวต่างประเทศรายงานจากพื้นที่สงคราม"
+    },
+    {
+      "vocab": "pundit",
+      "pronunciation": "พัน-ดิท",
+      "meaning": "ผู้เชี่ยวชาญ, นักวิจารณ์",
+      "example": "Political pundits debated the issue.",
+      "exampleTranslation": "นักวิจารณ์การเมืองถกเถียงประเด็นนี้"
+    },
+    {
+      "vocab": "sensationalism",
+      "pronunciation": "เซ็น-เซ-ชั่น-นัล-ลิ-ซึม",
+      "meaning": "การเสนอข่าวเร้าอารมณ์",
+      "example": "Avoid sensationalism in reporting.",
+      "exampleTranslation": "หลีกเลี่ยงการเสนอข่าวเร้าอารมณ์ในการรายงาน"
+    }
+  ]
+}

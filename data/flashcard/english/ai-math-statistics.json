@@ -1,0 +1,238 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Math & Statistics for ML",
+    "description": "Mathematical concepts, loss functions, optimizers, and statistics for machine learning",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "math", "statistics", "machine-learning"]
+  },
+  "cards": [
+    {
+      "vocab": "gradient",
+      "pronunciation": "เกร-เดียนท์",
+      "meaning": "ความชัน - ทิศทางที่ loss เพิ่มเร็วที่สุด",
+      "example": "The gradient points toward the steepest increase.",
+      "exampleTranslation": "Gradient ชี้ไปทางที่เพิ่มชันที่สุด"
+    },
+    {
+      "vocab": "gradient descent",
+      "pronunciation": "เกร-เดียนท์ ดี-เซนท์",
+      "meaning": "การลดแบบ gradient - ปรับ weights ตามทิศตรงข้าม gradient",
+      "example": "Gradient descent minimizes the loss function.",
+      "exampleTranslation": "Gradient descent ลด loss function ให้น้อยที่สุด"
+    },
+    {
+      "vocab": "stochastic gradient descent (SGD)",
+      "pronunciation": "สโต-แคส-ติค เกร-เดียนท์ ดี-เซนท์",
+      "meaning": "การลดแบบสุ่ม - ใช้ mini-batch แทน dataset ทั้งหมด",
+      "example": "SGD updates weights using random mini-batches.",
+      "exampleTranslation": "SGD อัพเดท weights โดยใช้ mini-batch สุ่ม"
+    },
+    {
+      "vocab": "learning rate",
+      "pronunciation": "เลิร์น-นิง เรท",
+      "meaning": "อัตราการเรียนรู้ - ขนาดก้าวในการปรับ weights",
+      "example": "A high learning rate can cause overshooting.",
+      "exampleTranslation": "learning rate สูงอาจทำให้ข้ามจุดต่ำสุด"
+    },
+    {
+      "vocab": "loss function",
+      "pronunciation": "ลอส ฟังก์-ชัน",
+      "meaning": "ฟังก์ชันความสูญเสีย - วัดว่าโมเดลทำผิดแค่ไหน",
+      "example": "The loss function measures prediction error.",
+      "exampleTranslation": "Loss function วัดความผิดพลาดของการทำนาย"
+    },
+    {
+      "vocab": "cross-entropy loss",
+      "pronunciation": "ครอส-เอน-โทร-พี ลอส",
+      "meaning": "loss แบบ cross-entropy - ใช้กับงาน classification",
+      "example": "Cross-entropy loss is used for classification tasks.",
+      "exampleTranslation": "Cross-entropy loss ใช้สำหรับงาน classification"
+    },
+    {
+      "vocab": "mean squared error (MSE)",
+      "pronunciation": "มีน สแควร์ เอ-เรอะ",
+      "meaning": "ค่าเฉลี่ยความคลาดเคลื่อนกำลังสอง - ใช้กับ regression",
+      "example": "MSE penalizes large errors heavily.",
+      "exampleTranslation": "MSE ลงโทษ error ใหญ่อย่างหนัก"
+    },
+    {
+      "vocab": "optimizer",
+      "pronunciation": "อ็อพ-ทิ-ไม-เซอร์",
+      "meaning": "ตัวเพิ่มประสิทธิภาพ - อัลกอริทึมปรับ weights",
+      "example": "Adam is a popular optimizer.",
+      "exampleTranslation": "Adam เป็น optimizer ที่นิยม"
+    },
+    {
+      "vocab": "Adam optimizer",
+      "pronunciation": "อะ-ดัม อ็อพ-ทิ-ไม-เซอร์",
+      "meaning": "Adam - optimizer ที่รวม momentum และ adaptive learning rate",
+      "example": "Adam adapts learning rates for each parameter.",
+      "exampleTranslation": "Adam ปรับ learning rate สำหรับแต่ละ parameter"
+    },
+    {
+      "vocab": "momentum",
+      "pronunciation": "โม-เมน-ตัม",
+      "meaning": "โมเมนตัม - เพิ่มความเร็วโดยอาศัย gradient ที่ผ่านมา",
+      "example": "Momentum helps escape local minima.",
+      "exampleTranslation": "Momentum ช่วยหลุดจาก local minima"
+    },
+    {
+      "vocab": "backpropagation",
+      "pronunciation": "แบ็ค-โพร-พา-เก-ชัน",
+      "meaning": "การแพร่ย้อนกลับ - คำนวณ gradient จาก output ไป input",
+      "example": "Backpropagation computes gradients layer by layer.",
+      "exampleTranslation": "Backpropagation คำนวณ gradient ทีละ layer"
+    },
+    {
+      "vocab": "vanishing gradient",
+      "pronunciation": "แวน-นิช-ชิง เกร-เดียนท์",
+      "meaning": "gradient หายไป - gradient เล็กลงจนเกือบศูนย์",
+      "example": "Vanishing gradients make deep networks hard to train.",
+      "exampleTranslation": "Vanishing gradient ทำให้ฝึก network ลึกยาก"
+    },
+    {
+      "vocab": "exploding gradient",
+      "pronunciation": "เอ็กซ์-โพล-ดิง เกร-เดียนท์",
+      "meaning": "gradient ระเบิด - gradient ใหญ่จนไม่สามารถควบคุม",
+      "example": "Gradient clipping prevents exploding gradients.",
+      "exampleTranslation": "Gradient clipping ป้องกัน exploding gradient"
+    },
+    {
+      "vocab": "regularization",
+      "pronunciation": "เร-กู-ลา-ไร-เซ-ชัน",
+      "meaning": "การปรับให้ปกติ - ป้องกัน overfitting",
+      "example": "L2 regularization adds a penalty term to the loss.",
+      "exampleTranslation": "L2 regularization เพิ่มค่าปรับใน loss"
+    },
+    {
+      "vocab": "L1 regularization",
+      "pronunciation": "แอล-วัน เร-กู-ลา-ไร-เซ-ชัน",
+      "meaning": "การปรับแบบ L1 - บังคับให้บาง weights เป็นศูนย์",
+      "example": "L1 regularization promotes sparsity.",
+      "exampleTranslation": "L1 regularization ส่งเสริมความเบาบาง"
+    },
+    {
+      "vocab": "L2 regularization",
+      "pronunciation": "แอล-ทู เร-กู-ลา-ไร-เซ-ชัน",
+      "meaning": "การปรับแบบ L2 - ลดขนาด weights ให้เล็กลง",
+      "example": "L2 regularization is also called weight decay.",
+      "exampleTranslation": "L2 regularization เรียกอีกชื่อว่า weight decay"
+    },
+    {
+      "vocab": "dropout",
+      "pronunciation": "ดรอป-เอาท์",
+      "meaning": "การทิ้ง - ปิดบาง neurons แบบสุ่มตอนฝึก",
+      "example": "Dropout randomly disables neurons during training.",
+      "exampleTranslation": "Dropout ปิด neurons แบบสุ่มตอนฝึก"
+    },
+    {
+      "vocab": "batch normalization",
+      "pronunciation": "แบ็ทช์ นอร์-มา-ไล-เซ-ชัน",
+      "meaning": "การปรับมาตรฐาน batch - normalize activations ในแต่ละ batch",
+      "example": "Batch normalization speeds up training.",
+      "exampleTranslation": "Batch normalization เร่งการฝึก"
+    },
+    {
+      "vocab": "activation function",
+      "pronunciation": "แอค-ทิ-เว-ชัน ฟังก์-ชัน",
+      "meaning": "ฟังก์ชันกระตุ้น - เพิ่ม non-linearity",
+      "example": "ReLU is the most common activation function.",
+      "exampleTranslation": "ReLU เป็น activation function ที่ใช้มากที่สุด"
+    },
+    {
+      "vocab": "ReLU",
+      "pronunciation": "เร-ลู",
+      "meaning": "Rectified Linear Unit - max(0, x)",
+      "example": "ReLU outputs zero for negative inputs.",
+      "exampleTranslation": "ReLU ให้ output เป็นศูนย์สำหรับ input ติดลบ"
+    },
+    {
+      "vocab": "sigmoid",
+      "pronunciation": "ซิก-มอยด์",
+      "meaning": "ฟังก์ชัน S - บีบ output ให้อยู่ระหว่าง 0 ถึง 1",
+      "example": "Sigmoid is used for binary classification.",
+      "exampleTranslation": "Sigmoid ใช้สำหรับ binary classification"
+    },
+    {
+      "vocab": "softmax",
+      "pronunciation": "ซอฟท์-แม็กซ์",
+      "meaning": "แปลงเป็นความน่าจะเป็น - รวมกันได้ 1",
+      "example": "Softmax converts logits to probabilities.",
+      "exampleTranslation": "Softmax แปลง logits เป็นความน่าจะเป็น"
+    },
+    {
+      "vocab": "overfitting",
+      "pronunciation": "โอ-เวอร์-ฟิต-ติง",
+      "meaning": "การเรียนมากเกินไป - จำ training data แต่ทำ test ไม่ดี",
+      "example": "Overfitting occurs when the model memorizes training data.",
+      "exampleTranslation": "Overfitting เกิดเมื่อโมเดลจำ training data"
+    },
+    {
+      "vocab": "underfitting",
+      "pronunciation": "อัน-เดอร์-ฟิต-ติง",
+      "meaning": "การเรียนน้อยเกินไป - จับ pattern ไม่ได้",
+      "example": "Underfitting means the model is too simple.",
+      "exampleTranslation": "Underfitting หมายความว่าโมเดลง่ายเกินไป"
+    },
+    {
+      "vocab": "bias-variance tradeoff",
+      "pronunciation": "ไบ-แอส แว-ริ-แอนซ์ เทรด-ออฟ",
+      "meaning": "การแลกเปลี่ยน bias-variance - สมดุลระหว่างความซับซ้อน",
+      "example": "Balance bias and variance for optimal performance.",
+      "exampleTranslation": "สมดุล bias และ variance เพื่อประสิทธิภาพที่ดี"
+    },
+    {
+      "vocab": "epoch",
+      "pronunciation": "อี-พ็อค",
+      "meaning": "รอบ - การฝึกผ่าน dataset ทั้งหมด 1 ครั้ง",
+      "example": "Train the model for 100 epochs.",
+      "exampleTranslation": "ฝึกโมเดล 100 epochs"
+    },
+    {
+      "vocab": "batch size",
+      "pronunciation": "แบ็ทช์ ไซส์",
+      "meaning": "ขนาด batch - จำนวนตัวอย่างต่อการอัพเดท weights",
+      "example": "Larger batch sizes require more memory.",
+      "exampleTranslation": "batch size ใหญ่ต้องการ memory มากขึ้น"
+    },
+    {
+      "vocab": "hyperparameter",
+      "pronunciation": "ไฮ-เปอร์-พา-รา-มิ-เตอร์",
+      "meaning": "พารามิเตอร์ควบคุม - ค่าที่ตั้งก่อนฝึก (learning rate, batch size)",
+      "example": "Tune hyperparameters for better results.",
+      "exampleTranslation": "ปรับ hyperparameters เพื่อผลลัพธ์ที่ดีขึ้น"
+    },
+    {
+      "vocab": "weight initialization",
+      "pronunciation": "เวท อิ-นิ-เชีย-ไล-เซ-ชัน",
+      "meaning": "การตั้งค่า weights เริ่มต้น - สำคัญต่อการ converge",
+      "example": "Xavier initialization works well for deep networks.",
+      "exampleTranslation": "Xavier initialization ทำงานดีสำหรับ network ลึก"
+    },
+    {
+      "vocab": "convergence",
+      "pronunciation": "คอน-เวอร์-เจนซ์",
+      "meaning": "การลู่เข้า - loss ลดลงจนเสถียร",
+      "example": "The model converged after 50 epochs.",
+      "exampleTranslation": "โมเดล converge หลังจาก 50 epochs"
+    },
+    {
+      "vocab": "local minimum",
+      "pronunciation": "โล-คอล มิ-นิ-มัม",
+      "meaning": "จุดต่ำสุดเฉพาะที่ - ต่ำสุดในบริเวณแต่ไม่ใช่ทั้งหมด",
+      "example": "Optimizers can get stuck in local minima.",
+      "exampleTranslation": "Optimizer อาจติดอยู่ใน local minima"
+    },
+    {
+      "vocab": "global minimum",
+      "pronunciation": "โกลบอล มิ-นิ-มัม",
+      "meaning": "จุดต่ำสุดโดยรวม - ค่า loss ต่ำที่สุดที่เป็นไปได้",
+      "example": "Finding the global minimum is often intractable.",
+      "exampleTranslation": "การหา global minimum มักทำไม่ได้จริง"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "MLOps & Model Deployment",
+    "description": "Machine learning operations, model deployment, and production ML terminology",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "mlops", "deployment", "ai"]
+  },
+  "cards": [
+    {
+      "vocab": "MLOps",
+      "pronunciation": "เอ็ม-แอล-อ็อปส์",
+      "meaning": "การดำเนินการ ML - DevOps สำหรับ machine learning",
+      "example": "MLOps streamlines the ML lifecycle from training to deployment.",
+      "exampleTranslation": "MLOps ทำให้วงจร ML ราบรื่นตั้งแต่ training ถึง deployment"
+    },
+    {
+      "vocab": "model deployment",
+      "pronunciation": "โม-เดล ดี-พลอย-เมนท์",
+      "meaning": "การนำโมเดลไปใช้งานจริง",
+      "example": "Deploy the model as a REST API.",
+      "exampleTranslation": "Deploy โมเดลเป็น REST API"
+    },
+    {
+      "vocab": "model serving",
+      "pronunciation": "โม-เดล เซิร์ฟ-วิง",
+      "meaning": "การให้บริการโมเดล - รันโมเดลตอบ request",
+      "example": "Use TensorFlow Serving for model serving.",
+      "exampleTranslation": "ใช้ TensorFlow Serving สำหรับ model serving"
+    },
+    {
+      "vocab": "inference endpoint",
+      "pronunciation": "อิน-เฟอ-เรนซ์ เอ็นด์-พอยท์",
+      "meaning": "จุดเชื่อมต่อ inference - URL สำหรับเรียกใช้โมเดล",
+      "example": "Send requests to the inference endpoint.",
+      "exampleTranslation": "ส่ง request ไปยัง inference endpoint"
+    },
+    {
+      "vocab": "batch inference",
+      "pronunciation": "แบ็ทช์ อิน-เฟอ-เรนซ์",
+      "meaning": "การ inference แบบกลุ่ม - ประมวลผลหลายรายการพร้อมกัน",
+      "example": "Use batch inference for large datasets.",
+      "exampleTranslation": "ใช้ batch inference สำหรับ dataset ขนาดใหญ่"
+    },
+    {
+      "vocab": "real-time inference",
+      "pronunciation": "เรียล-ไทม์ อิน-เฟอ-เรนซ์",
+      "meaning": "การ inference แบบทันที - ตอบสนองทันที",
+      "example": "Real-time inference requires low latency.",
+      "exampleTranslation": "Real-time inference ต้องการ latency ต่ำ"
+    },
+    {
+      "vocab": "model registry",
+      "pronunciation": "โม-เดล เรจ-จิส-ทรี",
+      "meaning": "ทะเบียนโมเดล - ที่เก็บและจัดการ version โมเดล",
+      "example": "Register models in MLflow Model Registry.",
+      "exampleTranslation": "ลงทะเบียนโมเดลใน MLflow Model Registry"
+    },
+    {
+      "vocab": "model versioning",
+      "pronunciation": "โม-เดล เวอร์-ชัน-นิง",
+      "meaning": "การจัดการเวอร์ชันโมเดล - ติดตามการเปลี่ยนแปลง",
+      "example": "Model versioning helps track experiments.",
+      "exampleTranslation": "Model versioning ช่วยติดตาม experiment"
+    },
+    {
+      "vocab": "experiment tracking",
+      "pronunciation": "เอ็กซ์-เพ-ริ-เมนท์ แทร็ค-คิง",
+      "meaning": "การติดตาม experiment - บันทึก hyperparameters และ metrics",
+      "example": "Use MLflow for experiment tracking.",
+      "exampleTranslation": "ใช้ MLflow สำหรับ experiment tracking"
+    },
+    {
+      "vocab": "ML pipeline",
+      "pronunciation": "เอ็ม-แอล ไปป์-ไลน์",
+      "meaning": "ท่อส่ง ML - ขั้นตอนอัตโนมัติจาก data ถึง deployment",
+      "example": "The ML pipeline automates training and deployment.",
+      "exampleTranslation": "ML pipeline ทำ training และ deployment อัตโนมัติ"
+    },
+    {
+      "vocab": "feature store",
+      "pronunciation": "ฟี-เจอร์ สโตร์",
+      "meaning": "คลัง feature - ที่เก็บ feature ที่ใช้ซ้ำได้",
+      "example": "Feature stores enable feature reuse across teams.",
+      "exampleTranslation": "Feature store ทำให้ใช้ feature ซ้ำข้ามทีมได้"
+    },
+    {
+      "vocab": "data pipeline",
+      "pronunciation": "เดท-ทะ ไปป์-ไลน์",
+      "meaning": "ท่อส่งข้อมูล - ETL สำหรับ ML",
+      "example": "Data pipelines prepare data for training.",
+      "exampleTranslation": "Data pipeline เตรียมข้อมูลสำหรับ training"
+    },
+    {
+      "vocab": "model monitoring",
+      "pronunciation": "โม-เดล มอ-นิ-เทอ-ริง",
+      "meaning": "การเฝ้าดูโมเดล - ติดตาม performance ใน production",
+      "example": "Set up alerts for model monitoring.",
+      "exampleTranslation": "ตั้ง alert สำหรับ model monitoring"
+    },
+    {
+      "vocab": "data drift",
+      "pronunciation": "เดท-ทะ ดริฟท์",
+      "meaning": "การเลื่อนของข้อมูล - input เปลี่ยนไปจากตอนฝึก",
+      "example": "Data drift can degrade model performance.",
+      "exampleTranslation": "Data drift ทำให้ประสิทธิภาพโมเดลลดลงได้"
+    },
+    {
+      "vocab": "concept drift",
+      "pronunciation": "คอน-เซ็พท์ ดริฟท์",
+      "meaning": "การเลื่อนของ concept - ความสัมพันธ์ระหว่าง input กับ output เปลี่ยน",
+      "example": "Concept drift requires model retraining.",
+      "exampleTranslation": "Concept drift ต้องฝึกโมเดลใหม่"
+    },
+    {
+      "vocab": "model retraining",
+      "pronunciation": "โม-เดล รี-เทรน-นิง",
+      "meaning": "การฝึกโมเดลใหม่ - อัพเดทด้วยข้อมูลใหม่",
+      "example": "Schedule periodic model retraining.",
+      "exampleTranslation": "ตั้งเวลา model retraining เป็นระยะ"
+    },
+    {
+      "vocab": "A/B testing",
+      "pronunciation": "เอ-บี เทส-ติง",
+      "meaning": "การทดสอบ A/B - เปรียบเทียบสองโมเดล",
+      "example": "A/B testing compares model versions in production.",
+      "exampleTranslation": "A/B testing เปรียบเทียบ version โมเดลใน production"
+    },
+    {
+      "vocab": "canary deployment",
+      "pronunciation": "คา-นา-รี่ ดี-พลอย-เมนท์",
+      "meaning": "การ deploy แบบ canary - ปล่อยให้ user บางส่วนก่อน",
+      "example": "Canary deployment reduces risk of bad releases.",
+      "exampleTranslation": "Canary deployment ลดความเสี่ยงจากการ release ที่ไม่ดี"
+    },
+    {
+      "vocab": "blue-green deployment",
+      "pronunciation": "บลู-กรีน ดี-พลอย-เมนท์",
+      "meaning": "การ deploy แบบ blue-green - สลับระหว่างสอง environment",
+      "example": "Blue-green deployment enables instant rollback.",
+      "exampleTranslation": "Blue-green deployment ทำให้ rollback ได้ทันที"
+    },
+    {
+      "vocab": "containerization",
+      "pronunciation": "คอน-เทน-เนอ-ไร-เซ-ชัน",
+      "meaning": "การบรรจุ container - แพ็คโมเดลใน Docker",
+      "example": "Containerize your model for consistent deployment.",
+      "exampleTranslation": "บรรจุโมเดลใน container เพื่อ deploy อย่างสม่ำเสมอ"
+    },
+    {
+      "vocab": "model optimization",
+      "pronunciation": "โม-เดล อ็อพ-ทิ-ไม-เซ-ชัน",
+      "meaning": "การเพิ่มประสิทธิภาพโมเดล - ทำให้เล็กลงหรือเร็วขึ้น",
+      "example": "Model optimization improves inference speed.",
+      "exampleTranslation": "Model optimization ปรับปรุงความเร็ว inference"
+    },
+    {
+      "vocab": "quantization",
+      "pronunciation": "ควอน-ทิ-เซ-ชัน",
+      "meaning": "การลดขนาด bit - เช่น float32 เป็น int8",
+      "example": "Quantization reduces model size by 4x.",
+      "exampleTranslation": "Quantization ลดขนาดโมเดล 4 เท่า"
+    },
+    {
+      "vocab": "pruning",
+      "pronunciation": "พรู-นิง",
+      "meaning": "การตัดแต่ง - ลบ weights ที่ไม่สำคัญ",
+      "example": "Pruning removes unnecessary connections.",
+      "exampleTranslation": "Pruning ลบ connection ที่ไม่จำเป็น"
+    },
+    {
+      "vocab": "knowledge distillation",
+      "pronunciation": "โนว์-เลจ ดิส-ทิ-เล-ชัน",
+      "meaning": "การกลั่นความรู้ - ถ่ายทอดจากโมเดลใหญ่ไปเล็ก",
+      "example": "Distill a large model into a smaller student model.",
+      "exampleTranslation": "กลั่นโมเดลใหญ่เป็นโมเดลนักเรียนที่เล็กกว่า"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี่",
+      "meaning": "เวลาหน่วง - เวลาตอบสนองของโมเดล",
+      "example": "Keep inference latency under 100ms.",
+      "exampleTranslation": "รักษา inference latency ให้ต่ำกว่า 100ms"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงาน - จำนวน request ต่อวินาที",
+      "example": "Increase throughput by batching requests.",
+      "exampleTranslation": "เพิ่ม throughput โดยการ batch request"
+    },
+    {
+      "vocab": "GPU utilization",
+      "pronunciation": "จี-พี-ยู ยู-ทิ-ไล-เซ-ชัน",
+      "meaning": "การใช้งาน GPU - เปอร์เซ็นต์ที่ใช้ GPU",
+      "example": "Optimize batch size for better GPU utilization.",
+      "exampleTranslation": "ปรับ batch size เพื่อใช้ GPU ได้ดีขึ้น"
+    }
+  ]
+}

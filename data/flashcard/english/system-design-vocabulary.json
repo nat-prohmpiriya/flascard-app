@@ -1,0 +1,510 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "System Design Vocabulary",
+    "description": "Essential vocabulary for system design and architecture",
+    "category": "Technical English",
+    "tags": ["english", "programming", "system design", "architecture"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "scalability",
+      "pronunciation": "สเกล-ละ-บิล-ลิ-ที่",
+      "meaning": "ความสามารถในการขยายรองรับโหลดที่เพิ่มขึ้น",
+      "example": "Design for scalability from the start.",
+      "exampleTranslation": "ออกแบบให้ scale ได้ตั้งแต่แรก"
+    },
+    {
+      "vocab": "horizontal scaling",
+      "pronunciation": "ฮอ-ริ-ซอน-ทัล-สเกล-ลิง",
+      "meaning": "ขยายโดยเพิ่มจำนวนเครื่อง",
+      "example": "Horizontal scaling adds more servers.",
+      "exampleTranslation": "Horizontal scaling เพิ่มจำนวน server"
+    },
+    {
+      "vocab": "vertical scaling",
+      "pronunciation": "เวอร์-ทิ-คัล-สเกล-ลิง",
+      "meaning": "ขยายโดยเพิ่มพลังเครื่องเดิม",
+      "example": "Vertical scaling upgrades server hardware.",
+      "exampleTranslation": "Vertical scaling อัพเกรด hardware ของ server"
+    },
+    {
+      "vocab": "load balancer",
+      "pronunciation": "โหลด-บา-แลน-เซอะ",
+      "meaning": "ตัวกระจาย traffic ไปยังหลาย server",
+      "example": "The load balancer distributes requests evenly.",
+      "exampleTranslation": "Load balancer กระจาย request อย่างเท่าเทียม"
+    },
+    {
+      "vocab": "reverse proxy",
+      "pronunciation": "รี-เวิร์ส-พร็อก-ซี่",
+      "meaning": "ตัวกลางรับ request แทน server จริง",
+      "example": "Nginx acts as a reverse proxy.",
+      "exampleTranslation": "Nginx ทำหน้าที่เป็น reverse proxy"
+    },
+    {
+      "vocab": "CDN",
+      "pronunciation": "ซี-ดี-เอ็น",
+      "meaning": "Content Delivery Network - เครือข่ายกระจายเนื้อหา",
+      "example": "Use a CDN to serve static assets globally.",
+      "exampleTranslation": "ใช้ CDN เพื่อส่ง static asset ทั่วโลก"
+    },
+    {
+      "vocab": "caching",
+      "pronunciation": "แคช-ชิง",
+      "meaning": "การเก็บข้อมูลชั่วคราวเพื่อเร็วขึ้น",
+      "example": "Caching reduces database load.",
+      "exampleTranslation": "Caching ลดโหลดของ database"
+    },
+    {
+      "vocab": "cache invalidation",
+      "pronunciation": "แคช-อิน-แว-ลิ-เด-ชั่น",
+      "meaning": "การลบ/อัพเดท cache ที่หมดอายุ",
+      "example": "Cache invalidation is one of the hardest problems.",
+      "exampleTranslation": "Cache invalidation เป็นปัญหายากที่สุดอย่างหนึ่ง"
+    },
+    {
+      "vocab": "cache hit",
+      "pronunciation": "แคช-ฮิท",
+      "meaning": "เจอข้อมูลใน cache",
+      "example": "A cache hit returns data instantly.",
+      "exampleTranslation": "Cache hit คืนข้อมูลทันที"
+    },
+    {
+      "vocab": "cache miss",
+      "pronunciation": "แคช-มิส",
+      "meaning": "ไม่เจอข้อมูลใน cache",
+      "example": "A cache miss requires a database query.",
+      "exampleTranslation": "Cache miss ต้อง query database"
+    },
+    {
+      "vocab": "database replication",
+      "pronunciation": "ดา-ต้า-เบส-เรพ-ลิ-เค-ชั่น",
+      "meaning": "การทำสำเนา database หลายตัว",
+      "example": "Replication provides redundancy and read scaling.",
+      "exampleTranslation": "Replication ให้ redundancy และ scale การอ่าน"
+    },
+    {
+      "vocab": "master-slave",
+      "pronunciation": "มาส-เทอะ-สเลฟ",
+      "meaning": "รูปแบบ 1 ตัวหลัก หลายตัวสำรอง",
+      "example": "Master handles writes, slaves handle reads.",
+      "exampleTranslation": "Master จัดการ write, slave จัดการ read"
+    },
+    {
+      "vocab": "primary-replica",
+      "pronunciation": "ไพร-มา-รี่-เรพ-ลิ-ก้า",
+      "meaning": "รูปแบบตัวหลัก-ตัวสำเนา (คำใหม่แทน master-slave)",
+      "example": "Primary-replica is the modern terminology.",
+      "exampleTranslation": "Primary-replica เป็นคำศัพท์สมัยใหม่"
+    },
+    {
+      "vocab": "sharding",
+      "pronunciation": "ชาร์ด-ดิง",
+      "meaning": "แบ่งข้อมูลไปหลาย database",
+      "example": "Sharding splits data across multiple databases.",
+      "exampleTranslation": "Sharding แบ่งข้อมูลไปหลาย database"
+    },
+    {
+      "vocab": "shard key",
+      "pronunciation": "ชาร์ด-คีย์",
+      "meaning": "key ที่ใช้ตัดสินว่าข้อมูลไป shard ไหน",
+      "example": "Choose a good shard key for even distribution.",
+      "exampleTranslation": "เลือก shard key ที่ดีเพื่อกระจายข้อมูลสม่ำเสมอ"
+    },
+    {
+      "vocab": "partitioning",
+      "pronunciation": "พาร์-ทิ-ชั่น-นิง",
+      "meaning": "การแบ่งข้อมูลเป็นส่วนๆ",
+      "example": "Partitioning improves query performance.",
+      "exampleTranslation": "Partitioning ปรับปรุงประสิทธิภาพ query"
+    },
+    {
+      "vocab": "CAP theorem",
+      "pronunciation": "แคป-เธียว-เร็ม",
+      "meaning": "ทฤษฎี: เลือกได้แค่ 2 จาก 3 (Consistency, Availability, Partition tolerance)",
+      "example": "CAP theorem states you can only have two of three.",
+      "exampleTranslation": "CAP theorem บอกว่าเลือกได้แค่ 2 จาก 3"
+    },
+    {
+      "vocab": "consistency",
+      "pronunciation": "คอน-ซิส-เทน-ซี่",
+      "meaning": "ทุก node เห็นข้อมูลเหมือนกัน",
+      "example": "Strong consistency ensures all reads return the latest write.",
+      "exampleTranslation": "Strong consistency ทำให้ทุกการอ่านได้ข้อมูลล่าสุด"
+    },
+    {
+      "vocab": "availability",
+      "pronunciation": "อะ-เว-ลา-บิล-ลิ-ที่",
+      "meaning": "ระบบพร้อมใช้งานเสมอ",
+      "example": "High availability means the system is always up.",
+      "exampleTranslation": "High availability หมายถึงระบบพร้อมใช้เสมอ"
+    },
+    {
+      "vocab": "partition tolerance",
+      "pronunciation": "พาร์-ทิ-ชั่น-โท-เลอ-เรนซ์",
+      "meaning": "ทนต่อการขาดการเชื่อมต่อระหว่าง node",
+      "example": "Partition tolerance handles network failures.",
+      "exampleTranslation": "Partition tolerance รับมือกับ network ล้มเหลว"
+    },
+    {
+      "vocab": "eventual consistency",
+      "pronunciation": "อี-เวน-ชวล-คอน-ซิส-เทน-ซี่",
+      "meaning": "ข้อมูลจะตรงกันในที่สุด (ไม่ใช่ทันที)",
+      "example": "NoSQL databases often use eventual consistency.",
+      "exampleTranslation": "NoSQL database มักใช้ eventual consistency"
+    },
+    {
+      "vocab": "strong consistency",
+      "pronunciation": "สตรอง-คอน-ซิส-เทน-ซี่",
+      "meaning": "ข้อมูลตรงกันทันที",
+      "example": "Banking systems require strong consistency.",
+      "exampleTranslation": "ระบบธนาคารต้องการ strong consistency"
+    },
+    {
+      "vocab": "ACID",
+      "pronunciation": "เอ-ซิด",
+      "meaning": "Atomicity, Consistency, Isolation, Durability",
+      "example": "Relational databases guarantee ACID properties.",
+      "exampleTranslation": "Relational database รับประกัน ACID"
+    },
+    {
+      "vocab": "BASE",
+      "pronunciation": "เบส",
+      "meaning": "Basically Available, Soft state, Eventual consistency",
+      "example": "NoSQL databases follow BASE principles.",
+      "exampleTranslation": "NoSQL database ตามหลัก BASE"
+    },
+    {
+      "vocab": "redundancy",
+      "pronunciation": "รี-ดัน-ดัน-ซี่",
+      "meaning": "การมีสำรองเผื่อระบบล้มเหลว",
+      "example": "Redundancy prevents single points of failure.",
+      "exampleTranslation": "Redundancy ป้องกัน single point of failure"
+    },
+    {
+      "vocab": "failover",
+      "pronunciation": "เฟล-โอ-เวอะ",
+      "meaning": "การสลับไปใช้ระบบสำรองอัตโนมัติ",
+      "example": "Automatic failover switches to backup servers.",
+      "exampleTranslation": "Automatic failover สลับไป server สำรอง"
+    },
+    {
+      "vocab": "single point of failure",
+      "pronunciation": "ซิง-เกิล-พอยท์-ออฟ-เฟล-เยอะ",
+      "meaning": "จุดเดียวที่พังแล้วทั้งระบบพัง",
+      "example": "Eliminate single points of failure in your design.",
+      "exampleTranslation": "กำจัด single point of failure ในการออกแบบ"
+    },
+    {
+      "vocab": "high availability",
+      "pronunciation": "ไฮ-อะ-เว-ลา-บิล-ลิ-ที่",
+      "meaning": "ระบบมี uptime สูงมาก (99.9%+)",
+      "example": "Aim for 99.99% high availability.",
+      "exampleTranslation": "ตั้งเป้า high availability 99.99%"
+    },
+    {
+      "vocab": "uptime",
+      "pronunciation": "อัพ-ไทม์",
+      "meaning": "เวลาที่ระบบทำงานปกติ",
+      "example": "The SLA guarantees 99.9% uptime.",
+      "exampleTranslation": "SLA รับประกัน uptime 99.9%"
+    },
+    {
+      "vocab": "downtime",
+      "pronunciation": "ดาวน์-ไทม์",
+      "meaning": "เวลาที่ระบบไม่ทำงาน",
+      "example": "Minimize downtime during deployments.",
+      "exampleTranslation": "ลด downtime ระหว่าง deploy"
+    },
+    {
+      "vocab": "SLA",
+      "pronunciation": "เอส-แอล-เอ",
+      "meaning": "Service Level Agreement - ข้อตกลงระดับบริการ",
+      "example": "The SLA specifies response time guarantees.",
+      "exampleTranslation": "SLA ระบุการรับประกันเวลาตอบสนอง"
+    },
+    {
+      "vocab": "SLO",
+      "pronunciation": "เอส-แอล-โอ",
+      "meaning": "Service Level Objective - เป้าหมายระดับบริการ",
+      "example": "Our SLO is 99.9% availability.",
+      "exampleTranslation": "SLO ของเราคือ availability 99.9%"
+    },
+    {
+      "vocab": "SLI",
+      "pronunciation": "เอส-แอล-ไอ",
+      "meaning": "Service Level Indicator - ตัวชี้วัดระดับบริการ",
+      "example": "Latency is a common SLI.",
+      "exampleTranslation": "Latency เป็น SLI ที่พบบ่อย"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงานที่ประมวลผลได้ต่อเวลา",
+      "example": "Measure throughput in requests per second.",
+      "exampleTranslation": "วัด throughput เป็น request ต่อวินาที"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี่",
+      "meaning": "เวลาตอบสนอง",
+      "example": "P99 latency should be under 100ms.",
+      "exampleTranslation": "P99 latency ควรต่ำกว่า 100ms"
+    },
+    {
+      "vocab": "P99",
+      "pronunciation": "พี-ไนน์-ตี้-ไนน์",
+      "meaning": "99th percentile - ค่าที่ 99% ของ request ทำได้",
+      "example": "Track P99 latency, not just average.",
+      "exampleTranslation": "ติดตาม P99 latency ไม่ใช่แค่ค่าเฉลี่ย"
+    },
+    {
+      "vocab": "message queue",
+      "pronunciation": "เมส-เสจ-คิว",
+      "meaning": "คิวสำหรับส่งข้อความระหว่าง service",
+      "example": "Use a message queue for async processing.",
+      "exampleTranslation": "ใช้ message queue สำหรับ async processing"
+    },
+    {
+      "vocab": "pub/sub",
+      "pronunciation": "พับ-ซับ",
+      "meaning": "Publish/Subscribe - รูปแบบส่ง/รับข้อความ",
+      "example": "Pub/sub decouples publishers from subscribers.",
+      "exampleTranslation": "Pub/sub แยก publisher จาก subscriber"
+    },
+    {
+      "vocab": "event-driven",
+      "pronunciation": "อี-เวนท์-ดริฟ-เวน",
+      "meaning": "สถาปัตยกรรมที่ขับเคลื่อนด้วย event",
+      "example": "Event-driven architecture improves scalability.",
+      "exampleTranslation": "Event-driven architecture ปรับปรุง scalability"
+    },
+    {
+      "vocab": "microservices",
+      "pronunciation": "ไม-โคร-เซอร์-วิส",
+      "meaning": "สถาปัตยกรรมแบบ service เล็กๆ หลายตัว",
+      "example": "Microservices allow independent deployments.",
+      "exampleTranslation": "Microservices ให้ deploy แยกกันได้"
+    },
+    {
+      "vocab": "monolith",
+      "pronunciation": "มอ-โน-ลิธ",
+      "meaning": "แอปพลิเคชันก้อนเดียว",
+      "example": "Start with a monolith, then split if needed.",
+      "exampleTranslation": "เริ่มด้วย monolith แล้วค่อยแยกถ้าจำเป็น"
+    },
+    {
+      "vocab": "service mesh",
+      "pronunciation": "เซอร์-วิส-เมช",
+      "meaning": "layer จัดการ communication ระหว่าง service",
+      "example": "Istio is a popular service mesh.",
+      "exampleTranslation": "Istio เป็น service mesh ที่นิยม"
+    },
+    {
+      "vocab": "API gateway",
+      "pronunciation": "เอ-พี-ไอ-เกท-เวย์",
+      "meaning": "จุดเข้าเดียวสำหรับทุก API",
+      "example": "The API gateway handles authentication.",
+      "exampleTranslation": "API gateway จัดการ authentication"
+    },
+    {
+      "vocab": "rate limiting",
+      "pronunciation": "เรท-ลิ-มิท-ติง",
+      "meaning": "จำกัดจำนวน request ต่อเวลา",
+      "example": "Rate limiting prevents API abuse.",
+      "exampleTranslation": "Rate limiting ป้องกันการใช้ API เกินขนาด"
+    },
+    {
+      "vocab": "throttling",
+      "pronunciation": "ธร็อท-ทลิง",
+      "meaning": "ชะลอ request เมื่อโหลดสูง",
+      "example": "Throttling slows down requests during peak load.",
+      "exampleTranslation": "Throttling ชะลอ request ช่วงโหลดสูง"
+    },
+    {
+      "vocab": "backpressure",
+      "pronunciation": "แบ็ค-เพรส-เชอะ",
+      "meaning": "กลไกบอก producer ให้ช้าลงเมื่อ consumer ตามไม่ทัน",
+      "example": "Backpressure prevents system overload.",
+      "exampleTranslation": "Backpressure ป้องกันระบบโหลดเกิน"
+    },
+    {
+      "vocab": "circuit breaker",
+      "pronunciation": "เซอร์-คิท-เบรค-เกอะ",
+      "meaning": "หยุดเรียก service ที่ล้มเหลวชั่วคราว",
+      "example": "Circuit breaker prevents cascading failures.",
+      "exampleTranslation": "Circuit breaker ป้องกันความล้มเหลวลามไป"
+    },
+    {
+      "vocab": "bulkhead",
+      "pronunciation": "บัลค์-เฮด",
+      "meaning": "แยกส่วนเพื่อจำกัดความเสียหาย",
+      "example": "Bulkhead pattern isolates failures.",
+      "exampleTranslation": "Bulkhead pattern แยกส่วนที่ล้มเหลว"
+    },
+    {
+      "vocab": "graceful degradation",
+      "pronunciation": "เกรซ-ฟูล-เด-กรา-เด-ชั่น",
+      "meaning": "ลดความสามารถแต่ยังทำงานได้",
+      "example": "Graceful degradation keeps core features working.",
+      "exampleTranslation": "Graceful degradation ให้ feature หลักยังทำงาน"
+    },
+    {
+      "vocab": "idempotent",
+      "pronunciation": "ไอ-เด็ม-โพ-เทนท์",
+      "meaning": "ทำซ้ำกี่ครั้งก็ได้ผลเหมือนกัน",
+      "example": "Make APIs idempotent for safe retries.",
+      "exampleTranslation": "ทำ API ให้ idempotent เพื่อ retry ได้ปลอดภัย"
+    },
+    {
+      "vocab": "deduplication",
+      "pronunciation": "ดี-ดู-พลิ-เค-ชั่น",
+      "meaning": "การลบข้อมูลซ้ำ",
+      "example": "Deduplication prevents duplicate messages.",
+      "exampleTranslation": "Deduplication ป้องกัน message ซ้ำ"
+    },
+    {
+      "vocab": "heartbeat",
+      "pronunciation": "ฮาร์ท-บีท",
+      "meaning": "สัญญาณบอกว่า service ยังทำงานอยู่",
+      "example": "Send heartbeats to detect failed nodes.",
+      "exampleTranslation": "ส่ง heartbeat เพื่อตรวจจับ node ที่ล้มเหลว"
+    },
+    {
+      "vocab": "health check",
+      "pronunciation": "เฮลธ์-เช็ค",
+      "meaning": "การตรวจสอบว่า service ทำงานปกติ",
+      "example": "Load balancers use health checks.",
+      "exampleTranslation": "Load balancer ใช้ health check"
+    },
+    {
+      "vocab": "leader election",
+      "pronunciation": "ลี-เดอะ-อิ-เล็ค-ชั่น",
+      "meaning": "การเลือกตัวหลักจากหลาย node",
+      "example": "Leader election chooses a primary node.",
+      "exampleTranslation": "Leader election เลือก node หลัก"
+    },
+    {
+      "vocab": "consensus",
+      "pronunciation": "คอน-เซน-ซัส",
+      "meaning": "การตกลงร่วมกันของหลาย node",
+      "example": "Raft and Paxos are consensus algorithms.",
+      "exampleTranslation": "Raft และ Paxos เป็น consensus algorithm"
+    },
+    {
+      "vocab": "distributed lock",
+      "pronunciation": "ดิส-ทริ-บิว-เท็ด-ล็อค",
+      "meaning": "lock ที่ใช้ข้าม server หลายตัว",
+      "example": "Use distributed locks to prevent race conditions.",
+      "exampleTranslation": "ใช้ distributed lock ป้องกัน race condition"
+    },
+    {
+      "vocab": "two-phase commit",
+      "pronunciation": "ทู-เฟส-คอม-มิท",
+      "meaning": "โปรโตคอล commit ข้าม database",
+      "example": "Two-phase commit ensures atomic distributed transactions.",
+      "exampleTranslation": "Two-phase commit รับประกัน atomic transaction ข้าม database"
+    },
+    {
+      "vocab": "saga pattern",
+      "pronunciation": "ซา-ก้า-แพท-เทิร์น",
+      "meaning": "จัดการ transaction ข้าม service",
+      "example": "Saga pattern handles distributed transactions.",
+      "exampleTranslation": "Saga pattern จัดการ distributed transaction"
+    },
+    {
+      "vocab": "data lake",
+      "pronunciation": "ดา-ต้า-เลค",
+      "meaning": "ที่เก็บข้อมูลดิบขนาดใหญ่",
+      "example": "Store raw data in a data lake for analytics.",
+      "exampleTranslation": "เก็บข้อมูลดิบใน data lake สำหรับ analytics"
+    },
+    {
+      "vocab": "data warehouse",
+      "pronunciation": "ดา-ต้า-แวร์-เฮาส์",
+      "meaning": "ที่เก็บข้อมูลที่จัดโครงสร้างแล้วสำหรับ analytics",
+      "example": "Query the data warehouse for business reports.",
+      "exampleTranslation": "Query data warehouse สำหรับรายงานธุรกิจ"
+    },
+    {
+      "vocab": "ETL",
+      "pronunciation": "อี-ที-แอล",
+      "meaning": "Extract, Transform, Load - กระบวนการย้ายข้อมูล",
+      "example": "ETL pipelines move data to the warehouse.",
+      "exampleTranslation": "ETL pipeline ย้ายข้อมูลไป warehouse"
+    },
+    {
+      "vocab": "hot data",
+      "pronunciation": "ฮอท-ดา-ต้า",
+      "meaning": "ข้อมูลที่ถูกเข้าถึงบ่อย",
+      "example": "Keep hot data in fast storage.",
+      "exampleTranslation": "เก็บ hot data ใน storage ที่เร็ว"
+    },
+    {
+      "vocab": "cold data",
+      "pronunciation": "โคลด์-ดา-ต้า",
+      "meaning": "ข้อมูลที่ไม่ค่อยถูกเข้าถึง",
+      "example": "Archive cold data to cheaper storage.",
+      "exampleTranslation": "Archive cold data ไป storage ที่ถูกกว่า"
+    },
+    {
+      "vocab": "write-ahead log",
+      "pronunciation": "ไรท์-อะ-เฮด-ล็อก",
+      "meaning": "บันทึกการเปลี่ยนแปลงก่อนเขียนจริง",
+      "example": "WAL ensures durability in databases.",
+      "exampleTranslation": "WAL รับประกัน durability ใน database"
+    },
+    {
+      "vocab": "blob storage",
+      "pronunciation": "บล็อบ-สตอ-เรจ",
+      "meaning": "ที่เก็บไฟล์ขนาดใหญ่ (รูป, วิดีโอ)",
+      "example": "Store images in blob storage.",
+      "exampleTranslation": "เก็บรูปใน blob storage"
+    },
+    {
+      "vocab": "object storage",
+      "pronunciation": "อ็อบ-เจ็คท์-สตอ-เรจ",
+      "meaning": "ที่เก็บข้อมูลแบบ object (เช่น S3)",
+      "example": "S3 is an object storage service.",
+      "exampleTranslation": "S3 เป็น object storage service"
+    },
+    {
+      "vocab": "distributed system",
+      "pronunciation": "ดิส-ทริ-บิว-เท็ด-ซิส-เท็ม",
+      "meaning": "ระบบที่ทำงานข้ามหลายเครื่อง",
+      "example": "Distributed systems are complex but scalable.",
+      "exampleTranslation": "Distributed system ซับซ้อนแต่ scale ได้"
+    },
+    {
+      "vocab": "stateless",
+      "pronunciation": "สเตท-เลส",
+      "meaning": "ไม่เก็บ state ระหว่าง request",
+      "example": "Stateless services are easier to scale.",
+      "exampleTranslation": "Stateless service scale ง่ายกว่า"
+    },
+    {
+      "vocab": "stateful",
+      "pronunciation": "สเตท-ฟูล",
+      "meaning": "เก็บ state ระหว่าง request",
+      "example": "Databases are stateful services.",
+      "exampleTranslation": "Database เป็น stateful service"
+    },
+    {
+      "vocab": "sticky session",
+      "pronunciation": "สติ๊ก-กี้-เซส-ชั่น",
+      "meaning": "ผูก user กับ server เดิมเสมอ",
+      "example": "Sticky sessions route users to the same server.",
+      "exampleTranslation": "Sticky session ส่ง user ไป server เดิมเสมอ"
+    },
+    {
+      "vocab": "connection pooling",
+      "pronunciation": "คอน-เน็ค-ชั่น-พูล-ลิง",
+      "meaning": "ใช้ connection ซ้ำแทนสร้างใหม่",
+      "example": "Connection pooling reduces database overhead.",
+      "exampleTranslation": "Connection pooling ลด overhead ของ database"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Advanced Grammar Patterns",
+    "description": "C1 level advanced grammar patterns and structures",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "grammar"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "Were it not for...",
+      "pronunciation": "แวร์ อิท น็อท ฟอร์",
+      "meaning": "ถ้าไม่มี... (สมมติผิดความจริง)",
+      "example": "Were it not for your help, we would have failed.",
+      "exampleTranslation": "ถ้าไม่มีความช่วยเหลือของคุณ เราคงล้มเหลว"
+    },
+    {
+      "vocab": "Had I known...",
+      "pronunciation": "แฮด ไอ โนน",
+      "meaning": "ถ้าฉันรู้... (Past Unreal Conditional)",
+      "example": "Had I known earlier, I would have acted differently.",
+      "exampleTranslation": "ถ้าฉันรู้เร็วกว่านี้ ฉันคงทำต่างออกไป"
+    },
+    {
+      "vocab": "Should you need...",
+      "pronunciation": "ชูด ยู นีด",
+      "meaning": "หากคุณต้องการ... (Formal Conditional)",
+      "example": "Should you need any assistance, please contact us.",
+      "exampleTranslation": "หากคุณต้องการความช่วยเหลือ กรุณาติดต่อเรา"
+    },
+    {
+      "vocab": "Not until... did...",
+      "pronunciation": "น็อท อัน-ทิล ... ดิด",
+      "meaning": "จนกระทั่ง...จึง... (Inversion)",
+      "example": "Not until he spoke did I realize the truth.",
+      "exampleTranslation": "จนกระทั่งเขาพูด ฉันจึงตระหนักความจริง"
+    },
+    {
+      "vocab": "Only when... did...",
+      "pronunciation": "โอน-ลี เวน ... ดิด",
+      "meaning": "เมื่อ...เท่านั้นจึง... (Inversion)",
+      "example": "Only when I arrived did I understand the situation.",
+      "exampleTranslation": "เมื่อฉันมาถึงเท่านั้นจึงเข้าใจสถานการณ์"
+    },
+    {
+      "vocab": "Rarely do/does...",
+      "pronunciation": "แรร์-ลี ดู/ดัส",
+      "meaning": "ไม่ค่อย... (Inversion for emphasis)",
+      "example": "Rarely does such an opportunity arise.",
+      "exampleTranslation": "โอกาสเช่นนี้ไม่ค่อยเกิดขึ้น"
+    },
+    {
+      "vocab": "Seldom have I...",
+      "pronunciation": "เซล-ดัม แฮฟ ไอ",
+      "meaning": "ไม่ค่อย... (Inversion)",
+      "example": "Seldom have I seen such dedication.",
+      "exampleTranslation": "ไม่ค่อยเห็นความทุ่มเทเช่นนี้"
+    },
+    {
+      "vocab": "Never before have...",
+      "pronunciation": "เนฟ-เวอะ บิ-ฟอร์ แฮฟ",
+      "meaning": "ไม่เคยมีมาก่อน... (Inversion)",
+      "example": "Never before have we faced such a challenge.",
+      "exampleTranslation": "ไม่เคยมีมาก่อนที่เราจะเผชิญความท้าทายเช่นนี้"
+    },
+    {
+      "vocab": "No sooner... than...",
+      "pronunciation": "โน ซู-เนอะ ... แธน",
+      "meaning": "พอ...ก็... (ทันทีที่)",
+      "example": "No sooner had he arrived than the meeting started.",
+      "exampleTranslation": "พอเขามาถึง การประชุมก็เริ่ม"
+    },
+    {
+      "vocab": "Hardly... when...",
+      "pronunciation": "ฮาร์ด-ลี ... เวน",
+      "meaning": "แทบจะไม่ทัน...ก็... (ทันทีที่)",
+      "example": "Hardly had I sat down when the phone rang.",
+      "exampleTranslation": "ฉันแทบจะไม่ทันนั่ง โทรศัพท์ก็ดัง"
+    },
+    {
+      "vocab": "Little did I know...",
+      "pronunciation": "ลิท-เทิล ดิด ไอ โนว์",
+      "meaning": "ฉันไม่รู้เลยว่า...",
+      "example": "Little did I know that it would change my life.",
+      "exampleTranslation": "ฉันไม่รู้เลยว่ามันจะเปลี่ยนชีวิตฉัน"
+    },
+    {
+      "vocab": "So... that...",
+      "pronunciation": "โซ ... แธท",
+      "meaning": "...มากจน...",
+      "example": "So complex was the problem that no one could solve it.",
+      "exampleTranslation": "ปัญหาซับซ้อนมากจนไม่มีใครแก้ได้"
+    },
+    {
+      "vocab": "Such... that...",
+      "pronunciation": "ซัช ... แธท",
+      "meaning": "...มากจน...",
+      "example": "Such was the demand that we ran out of stock.",
+      "exampleTranslation": "ความต้องการมากจนเราหมดสต๊อก"
+    },
+    {
+      "vocab": "Not only... but also...",
+      "pronunciation": "น็อท โอน-ลี ... บัท ออล-โซ",
+      "meaning": "ไม่เพียงแต่...แต่ยัง...",
+      "example": "Not only did she win, but she also broke the record.",
+      "exampleTranslation": "ไม่เพียงแต่เธอชนะ แต่เธอยังทำลายสถิติ"
+    },
+    {
+      "vocab": "It is/was... that... (Cleft sentence)",
+      "pronunciation": "อิท อิส/วอส ... แธท",
+      "meaning": "...ที่... (เน้นคำ)",
+      "example": "It was the CEO who made the final decision.",
+      "exampleTranslation": "ซีอีโอที่ตัดสินใจขั้นสุดท้าย"
+    },
+    {
+      "vocab": "What... is/was... (Pseudo-cleft)",
+      "pronunciation": "ว็อท ... อิส/วอส",
+      "meaning": "สิ่งที่...คือ... (เน้นคำ)",
+      "example": "What we need is more time.",
+      "exampleTranslation": "สิ่งที่เราต้องการคือเวลามากขึ้น"
+    },
+    {
+      "vocab": "The reason why... is that...",
+      "pronunciation": "เดอะ รี-ซัน ไว ... อิส แธท",
+      "meaning": "เหตุผลที่...คือ...",
+      "example": "The reason why I'm late is that my car broke down.",
+      "exampleTranslation": "เหตุผลที่ฉันมาสายคือรถเสีย"
+    },
+    {
+      "vocab": "The more... the more...",
+      "pronunciation": "เดอะ มอร์ ... เดอะ มอร์",
+      "meaning": "ยิ่ง...ยิ่ง...",
+      "example": "The more you practice, the better you get.",
+      "exampleTranslation": "ยิ่งฝึกมาก ยิ่งเก่งขึ้น"
+    },
+    {
+      "vocab": "However + adjective/adverb",
+      "pronunciation": "ฮาว-เอฟ-เวอะ",
+      "meaning": "ไม่ว่าจะ...แค่ไหน",
+      "example": "However hard he tried, he couldn't succeed.",
+      "exampleTranslation": "ไม่ว่าเขาจะพยายามแค่ไหน เขาก็ไม่สำเร็จ"
+    },
+    {
+      "vocab": "Whatever + noun",
+      "pronunciation": "ว็อท-เอฟ-เวอะ",
+      "meaning": "ไม่ว่า...อะไร",
+      "example": "Whatever decision you make, I'll support you.",
+      "exampleTranslation": "ไม่ว่าคุณจะตัดสินใจอะไร ฉันจะสนับสนุน"
+    },
+    {
+      "vocab": "Whichever + noun",
+      "pronunciation": "วิช-เอฟ-เวอะ",
+      "meaning": "ไม่ว่า...อันไหน",
+      "example": "Whichever option you choose will be fine.",
+      "exampleTranslation": "ไม่ว่าคุณจะเลือกตัวเลือกไหนก็ได้"
+    },
+    {
+      "vocab": "Subjunctive: I suggest (that) he be...",
+      "pronunciation": "ซับ-จังค์-ทีฟ",
+      "meaning": "โครงสร้างแนะนำ/เรียกร้อง",
+      "example": "I suggest that he be given another chance.",
+      "exampleTranslation": "ผมแนะนำว่าเขาควรได้รับโอกาสอีกครั้ง"
+    },
+    {
+      "vocab": "It is essential that + bare infinitive",
+      "pronunciation": "อิท อิส เอส-เซน-เชียล แธท",
+      "meaning": "จำเป็นที่...",
+      "example": "It is essential that everyone attend the meeting.",
+      "exampleTranslation": "จำเป็นที่ทุกคนต้องเข้าร่วมประชุม"
+    },
+    {
+      "vocab": "Lest + should + bare infinitive",
+      "pronunciation": "เลสท์",
+      "meaning": "เกรงว่า...",
+      "example": "He spoke softly lest he wake the baby.",
+      "exampleTranslation": "เขาพูดเบาๆ เกรงว่าจะปลุกเด็ก"
+    },
+    {
+      "vocab": "As though / As if + past subjunctive",
+      "pronunciation": "แอส โธ / แอส อิฟ",
+      "meaning": "ราวกับว่า... (สมมติผิดความจริง)",
+      "example": "She acts as though she owned the company.",
+      "exampleTranslation": "เธอทำราวกับว่าเธอเป็นเจ้าของบริษัท"
+    },
+    {
+      "vocab": "If only + past perfect",
+      "pronunciation": "อิฟ โอน-ลี",
+      "meaning": "ถ้าเพียงแต่... (เสียดายอดีต)",
+      "example": "If only I had listened to your advice.",
+      "exampleTranslation": "ถ้าเพียงแต่ฉันฟังคำแนะนำของคุณ"
+    },
+    {
+      "vocab": "I wish + past subjunctive",
+      "pronunciation": "ไอ วิช",
+      "meaning": "ฉันอยากให้... (ปัจจุบันผิดความจริง)",
+      "example": "I wish I knew the answer.",
+      "exampleTranslation": "ฉันอยากให้ฉันรู้คำตอบ"
+    },
+    {
+      "vocab": "It's (high) time + past simple",
+      "pronunciation": "อิทส์ (ไฮ) ไทม์",
+      "meaning": "ถึงเวลาแล้วที่...",
+      "example": "It's high time we made a decision.",
+      "exampleTranslation": "ถึงเวลาแล้วที่เราต้องตัดสินใจ"
+    },
+    {
+      "vocab": "Would rather + bare infinitive / past",
+      "pronunciation": "วูด รา-เธอะ",
+      "meaning": "อยากจะ... (มากกว่า)",
+      "example": "I'd rather you didn't mention it.",
+      "exampleTranslation": "ผมอยากให้คุณไม่พูดถึงมัน"
+    },
+    {
+      "vocab": "Would sooner... than...",
+      "pronunciation": "วูด ซู-เนอะ ... แธน",
+      "meaning": "ยอม...มากกว่า...",
+      "example": "I would sooner resign than compromise my values.",
+      "exampleTranslation": "ผมยอมลาออกมากกว่าประนีประนอมคุณค่าของตัวเอง"
+    },
+    {
+      "vocab": "But for + noun",
+      "pronunciation": "บัท ฟอร์",
+      "meaning": "ถ้าไม่มี...",
+      "example": "But for your support, we couldn't have succeeded.",
+      "exampleTranslation": "ถ้าไม่มีการสนับสนุนของคุณ เราไม่มีทางสำเร็จ"
+    },
+    {
+      "vocab": "Otherwise + would have",
+      "pronunciation": "อัธ-เธอะ-ไวส์",
+      "meaning": "มิฉะนั้น...คง...",
+      "example": "He reminded me; otherwise, I would have forgotten.",
+      "exampleTranslation": "เขาเตือนผม มิฉะนั้นผมคงลืม"
+    },
+    {
+      "vocab": "Provided/Providing (that)",
+      "pronunciation": "โพร-ไว-เด็ด/โพร-ไว-ดิง",
+      "meaning": "หากว่า, โดยมีเงื่อนไขว่า",
+      "example": "Provided that you agree, we can proceed.",
+      "exampleTranslation": "หากว่าคุณเห็นด้วย เราสามารถดำเนินการได้"
+    },
+    {
+      "vocab": "On condition that",
+      "pronunciation": "ออน คอน-ดิ-ชั่น แธท",
+      "meaning": "โดยมีเงื่อนไขว่า",
+      "example": "I'll help on condition that you help me later.",
+      "exampleTranslation": "ฉันจะช่วยโดยมีเงื่อนไขว่าคุณช่วยฉันทีหลัง"
+    },
+    {
+      "vocab": "Supposing / Suppose (that)",
+      "pronunciation": "ซัพ-โพ-ซิง / ซัพ-โพส",
+      "meaning": "สมมติว่า",
+      "example": "Supposing it rains, what will we do?",
+      "exampleTranslation": "สมมติว่าฝนตก เราจะทำอย่างไร?"
+    },
+    {
+      "vocab": "Even if / Even though",
+      "pronunciation": "อีฟ-เวิน อิฟ / อีฟ-เวิน โธ",
+      "meaning": "แม้ว่า / ถึงแม้ว่า",
+      "example": "Even if it rains, the event will proceed.",
+      "exampleTranslation": "แม้ว่าฝนจะตก งานก็จะดำเนินต่อไป"
+    },
+    {
+      "vocab": "Much as / However much",
+      "pronunciation": "มัช แอส / ฮาว-เอฟ-เวอะ มัช",
+      "meaning": "แม้ว่า...มาก",
+      "example": "Much as I appreciate your help, I must decline.",
+      "exampleTranslation": "แม้ว่าฉันซาบซึ้งในความช่วยเหลือของคุณมาก แต่ฉันต้องปฏิเสธ"
+    },
+    {
+      "vocab": "Be it... or...",
+      "pronunciation": "บี อิท ... ออร์",
+      "meaning": "ไม่ว่าจะ...หรือ...",
+      "example": "Be it right or wrong, I'll stand by my decision.",
+      "exampleTranslation": "ไม่ว่าจะถูกหรือผิด ฉันจะยืนหยัดกับการตัดสินใจ"
+    },
+    {
+      "vocab": "Come what may",
+      "pronunciation": "คัม ว็อท เมย์",
+      "meaning": "ไม่ว่าจะเกิดอะไรขึ้น",
+      "example": "Come what may, I will not give up.",
+      "exampleTranslation": "ไม่ว่าจะเกิดอะไรขึ้น ฉันจะไม่ยอมแพ้"
+    },
+    {
+      "vocab": "Try as I might",
+      "pronunciation": "ทราย แอส ไอ ไมท์",
+      "meaning": "แม้จะพยายามแค่ไหน",
+      "example": "Try as I might, I couldn't convince him.",
+      "exampleTranslation": "แม้จะพยายามแค่ไหน ฉันก็โน้มน้าวเขาไม่ได้"
+    },
+    {
+      "vocab": "Needless to say",
+      "pronunciation": "นีด-เลส ทู เซย์",
+      "meaning": "ไม่ต้องพูดก็รู้",
+      "example": "Needless to say, we were disappointed.",
+      "exampleTranslation": "ไม่ต้องพูดก็รู้ว่าเราผิดหวัง"
+    },
+    {
+      "vocab": "Suffice it to say",
+      "pronunciation": "ซัฟ-ฟิซ อิท ทู เซย์",
+      "meaning": "พอจะพูดได้ว่า",
+      "example": "Suffice it to say, the meeting did not go well.",
+      "exampleTranslation": "พอจะพูดได้ว่าการประชุมไม่ราบรื่น"
+    },
+    {
+      "vocab": "That being said / That said",
+      "pronunciation": "แธท บี-อิง เซด / แธท เซด",
+      "meaning": "กล่าวคือ, แม้เป็นเช่นนั้น",
+      "example": "I like the idea. That said, there are challenges.",
+      "exampleTranslation": "ผมชอบแนวคิดนี้ แม้เป็นเช่นนั้นก็มีความท้าทาย"
+    },
+    {
+      "vocab": "In light of",
+      "pronunciation": "อิน ไลท์ ออฟ",
+      "meaning": "เมื่อพิจารณาจาก",
+      "example": "In light of recent events, we must reconsider.",
+      "exampleTranslation": "เมื่อพิจารณาจากเหตุการณ์ล่าสุด เราต้องพิจารณาใหม่"
+    },
+    {
+      "vocab": "With a view to + gerund",
+      "pronunciation": "วิธ อะ วิว ทู",
+      "meaning": "โดยมีจุดมุ่งหมายเพื่อ",
+      "example": "With a view to improving efficiency, we restructured.",
+      "exampleTranslation": "โดยมีจุดมุ่งหมายเพื่อปรับปรุงประสิทธิภาพ เราปรับโครงสร้าง"
+    },
+    {
+      "vocab": "For the sake of",
+      "pronunciation": "ฟอร์ เดอะ เซค ออฟ",
+      "meaning": "เพื่อประโยชน์ของ",
+      "example": "For the sake of clarity, let me explain again.",
+      "exampleTranslation": "เพื่อความชัดเจน ขอผมอธิบายอีกครั้ง"
+    },
+    {
+      "vocab": "To all intents and purposes",
+      "pronunciation": "ทู ออล อิน-เทนท์ส แอนด์ เพอร์-โพ-เซส",
+      "meaning": "โดยพื้นฐานแล้ว, แทบจะ",
+      "example": "The project is, to all intents and purposes, complete.",
+      "exampleTranslation": "โครงการโดยพื้นฐานแล้วเสร็จสมบูรณ์"
+    },
+    {
+      "vocab": "By virtue of",
+      "pronunciation": "บาย เวอร์-ชู ออฟ",
+      "meaning": "เนื่องจาก, โดยอาศัย",
+      "example": "By virtue of his experience, he was promoted.",
+      "exampleTranslation": "เนื่องจากประสบการณ์ของเขา เขาได้รับการเลื่อนตำแหน่ง"
+    },
+    {
+      "vocab": "Inasmuch as",
+      "pronunciation": "อิน-แอส-มัช แอส",
+      "meaning": "เนื่องจากว่า, ตราบเท่าที่",
+      "example": "Inasmuch as the law permits, we will proceed.",
+      "exampleTranslation": "ตราบเท่าที่กฎหมายอนุญาต เราจะดำเนินการ"
+    }
+  ]
+}

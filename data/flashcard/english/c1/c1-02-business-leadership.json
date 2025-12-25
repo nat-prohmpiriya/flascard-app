@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Business & Leadership",
+    "description": "C1 level vocabulary for business, management, and leadership",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "business"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "stakeholder",
+      "pronunciation": "สเทค-โฮล-เดอะ",
+      "meaning": "ผู้มีส่วนได้ส่วนเสีย",
+      "example": "We need to consider all stakeholders' interests.",
+      "exampleTranslation": "เราต้องพิจารณาผลประโยชน์ของผู้มีส่วนได้ส่วนเสียทุกฝ่าย"
+    },
+    {
+      "vocab": "leverage",
+      "pronunciation": "เลฟ-เวอ-เรจ",
+      "meaning": "ใช้ประโยชน์, อำนาจต่อรอง",
+      "example": "We can leverage our existing network.",
+      "exampleTranslation": "เราสามารถใช้ประโยชน์จากเครือข่ายที่มีอยู่"
+    },
+    {
+      "vocab": "synergy",
+      "pronunciation": "ซิน-เนอะ-จี",
+      "meaning": "การทำงานร่วมกันที่เสริมพลัง",
+      "example": "The merger will create synergies across departments.",
+      "exampleTranslation": "การควบรวมจะสร้างการทำงานร่วมกันที่เสริมพลังข้ามแผนก"
+    },
+    {
+      "vocab": "scalability",
+      "pronunciation": "สเกล-ละ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถในการขยายตัว",
+      "example": "Scalability is crucial for startup growth.",
+      "exampleTranslation": "ความสามารถในการขยายตัวสำคัญต่อการเติบโตของสตาร์ทอัพ"
+    },
+    {
+      "vocab": "pivot",
+      "pronunciation": "พิฟ-วอท",
+      "meaning": "ปรับเปลี่ยนทิศทางธุรกิจ",
+      "example": "The company decided to pivot to B2B services.",
+      "exampleTranslation": "บริษัทตัดสินใจปรับเปลี่ยนไปสู่บริการ B2B"
+    },
+    {
+      "vocab": "disrupt",
+      "pronunciation": "ดิส-รัพท์",
+      "meaning": "เปลี่ยนแปลงอย่างพลิกโฉม",
+      "example": "AI is disrupting traditional industries.",
+      "exampleTranslation": "AI กำลังเปลี่ยนแปลงอุตสาหกรรมดั้งเดิมอย่างพลิกโฉม"
+    },
+    {
+      "vocab": "streamline",
+      "pronunciation": "สตรีม-ไลน์",
+      "meaning": "ทำให้มีประสิทธิภาพขึ้น, ปรับปรุง",
+      "example": "We need to streamline our processes.",
+      "exampleTranslation": "เราต้องทำให้กระบวนการของเรามีประสิทธิภาพขึ้น"
+    },
+    {
+      "vocab": "benchmark",
+      "pronunciation": "เบนช์-มาร์ค",
+      "meaning": "มาตรฐานเปรียบเทียบ",
+      "example": "Use industry benchmarks to measure performance.",
+      "exampleTranslation": "ใช้มาตรฐานอุตสาหกรรมเพื่อวัดผลการดำเนินงาน"
+    },
+    {
+      "vocab": "due diligence",
+      "pronunciation": "ดิว ดิล-ลิ-เจนซ์",
+      "meaning": "การตรวจสอบอย่างรอบคอบ",
+      "example": "Conduct due diligence before the acquisition.",
+      "exampleTranslation": "ดำเนินการตรวจสอบอย่างรอบคอบก่อนการเข้าซื้อกิจการ"
+    },
+    {
+      "vocab": "bottom line",
+      "pronunciation": "บอท-ท่อม ไลน์",
+      "meaning": "ผลกำไรสุทธิ, สิ่งสำคัญที่สุด",
+      "example": "The bottom line is we need to increase revenue.",
+      "exampleTranslation": "สิ่งสำคัญที่สุดคือเราต้องเพิ่มรายได้"
+    },
+    {
+      "vocab": "ballpark figure",
+      "pronunciation": "บอล-พาร์ค ฟิก-เกอะ",
+      "meaning": "ตัวเลขคร่าวๆ, ประมาณการ",
+      "example": "Give me a ballpark figure for the project cost.",
+      "exampleTranslation": "ให้ตัวเลขคร่าวๆ ของค่าใช้จ่ายโครงการหน่อย"
+    },
+    {
+      "vocab": "overhead",
+      "pronunciation": "โอ-เวอะ-เฮด",
+      "meaning": "ค่าใช้จ่ายดำเนินงาน",
+      "example": "We need to reduce overhead costs.",
+      "exampleTranslation": "เราต้องลดค่าใช้จ่ายดำเนินงาน"
+    },
+    {
+      "vocab": "break even",
+      "pronunciation": "เบรค อีฟ-เวิน",
+      "meaning": "คุ้มทุน, จุดคุ้มทุน",
+      "example": "We expect to break even within two years.",
+      "exampleTranslation": "เราคาดว่าจะคุ้มทุนภายในสองปี"
+    },
+    {
+      "vocab": "margin",
+      "pronunciation": "มาร์-จิน",
+      "meaning": "อัตรากำไร, ส่วนต่าง",
+      "example": "Our profit margin has improved significantly.",
+      "exampleTranslation": "อัตรากำไรของเราดีขึ้นอย่างมาก"
+    },
+    {
+      "vocab": "turnover",
+      "pronunciation": "เทิร์น-โอ-เวอะ",
+      "meaning": "ยอดขาย, อัตราการลาออก",
+      "example": "High staff turnover is affecting productivity.",
+      "exampleTranslation": "อัตราการลาออกสูงส่งผลต่อประสิทธิภาพการทำงาน"
+    },
+    {
+      "vocab": "acquisition",
+      "pronunciation": "แอค-ควิ-ซิ-ชั่น",
+      "meaning": "การเข้าซื้อกิจการ",
+      "example": "The acquisition was valued at $5 billion.",
+      "exampleTranslation": "การเข้าซื้อกิจการมีมูลค่า 5 พันล้านดอลลาร์"
+    },
+    {
+      "vocab": "merger",
+      "pronunciation": "เมอร์-เจอะ",
+      "meaning": "การควบรวมกิจการ",
+      "example": "The merger created the largest company in the industry.",
+      "exampleTranslation": "การควบรวมสร้างบริษัทที่ใหญ่ที่สุดในอุตสาหกรรม"
+    },
+    {
+      "vocab": "divestiture",
+      "pronunciation": "ได-เวส-ทิ-เจอะ",
+      "meaning": "การขายกิจการ, การถอนการลงทุน",
+      "example": "The divestiture of non-core assets is planned.",
+      "exampleTranslation": "การขายสินทรัพย์ที่ไม่ใช่ธุรกิจหลักได้รับการวางแผนไว้"
+    },
+    {
+      "vocab": "liquidity",
+      "pronunciation": "ลิ-ควิ-ดิ-ตี้",
+      "meaning": "สภาพคล่อง",
+      "example": "The company has strong liquidity.",
+      "exampleTranslation": "บริษัทมีสภาพคล่องที่แข็งแกร่ง"
+    },
+    {
+      "vocab": "equity",
+      "pronunciation": "เอ็ค-ควิ-ตี้",
+      "meaning": "ส่วนของเจ้าของ, หุ้น",
+      "example": "Private equity investors are interested.",
+      "exampleTranslation": "นักลงทุนไพรเวทอิควิตี้สนใจ"
+    },
+    {
+      "vocab": "valuation",
+      "pronunciation": "แวล-ลิว-เอ-ชั่น",
+      "meaning": "การประเมินมูลค่า",
+      "example": "The startup's valuation reached $1 billion.",
+      "exampleTranslation": "การประเมินมูลค่าของสตาร์ทอัพถึง 1 พันล้านดอลลาร์"
+    },
+    {
+      "vocab": "diversification",
+      "pronunciation": "ได-เวอร์-ซิ-ฟิ-เค-ชั่น",
+      "meaning": "การกระจายความเสี่ยง",
+      "example": "Diversification reduces portfolio risk.",
+      "exampleTranslation": "การกระจายความเสี่ยงลดความเสี่ยงของพอร์ตโฟลิโอ"
+    },
+    {
+      "vocab": "consolidation",
+      "pronunciation": "คอน-ซอล-ลิ-เด-ชั่น",
+      "meaning": "การรวมตัว, การรวบรวม",
+      "example": "Industry consolidation is accelerating.",
+      "exampleTranslation": "การรวมตัวในอุตสาหกรรมกำลังเร่งตัวขึ้น"
+    },
+    {
+      "vocab": "restructuring",
+      "pronunciation": "รี-สตรัค-เจอ-ริง",
+      "meaning": "การปรับโครงสร้าง",
+      "example": "The company announced major restructuring.",
+      "exampleTranslation": "บริษัทประกาศการปรับโครงสร้างครั้งใหญ่"
+    },
+    {
+      "vocab": "downsizing",
+      "pronunciation": "ดาวน์-ไซ-ซิง",
+      "meaning": "การลดขนาด, การปลดพนักงาน",
+      "example": "Downsizing affected 500 employees.",
+      "exampleTranslation": "การลดขนาดส่งผลกระทบต่อพนักงาน 500 คน"
+    },
+    {
+      "vocab": "outsourcing",
+      "pronunciation": "เอาท์-ซอร์-ซิง",
+      "meaning": "การว่าจ้างภายนอก",
+      "example": "Outsourcing IT services reduced costs.",
+      "exampleTranslation": "การว่าจ้างบริการไอทีภายนอกลดต้นทุน"
+    },
+    {
+      "vocab": "micromanage",
+      "pronunciation": "ไมโคร-แมน-เนจ",
+      "meaning": "ควบคุมรายละเอียดมากเกินไป",
+      "example": "Avoid micromanaging your team.",
+      "exampleTranslation": "หลีกเลี่ยงการควบคุมรายละเอียดมากเกินไปกับทีมของคุณ"
+    },
+    {
+      "vocab": "empower",
+      "pronunciation": "เอ็ม-พาว-เออะ",
+      "meaning": "ให้อำนาจ, เสริมพลัง",
+      "example": "Empower your employees to make decisions.",
+      "exampleTranslation": "ให้อำนาจพนักงานของคุณในการตัดสินใจ"
+    },
+    {
+      "vocab": "delegate",
+      "pronunciation": "เดล-ลิ-เกท",
+      "meaning": "มอบหมาย",
+      "example": "Learn to delegate tasks effectively.",
+      "exampleTranslation": "เรียนรู้ที่จะมอบหมายงานอย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "accountability",
+      "pronunciation": "อะ-เคาน์-ทะ-บิ-ลิ-ตี้",
+      "meaning": "ความรับผิดชอบ",
+      "example": "We need more accountability in our organization.",
+      "exampleTranslation": "เราต้องการความรับผิดชอบมากขึ้นในองค์กร"
+    },
+    {
+      "vocab": "transparency",
+      "pronunciation": "แทรนส์-แพ-เรน-ซี",
+      "meaning": "ความโปร่งใส",
+      "example": "Transparency builds trust with customers.",
+      "exampleTranslation": "ความโปร่งใสสร้างความไว้วางใจกับลูกค้า"
+    },
+    {
+      "vocab": "integrity",
+      "pronunciation": "อิน-เท็ก-กริ-ตี้",
+      "meaning": "ความซื่อสัตย์, ความสมบูรณ์",
+      "example": "Business integrity is non-negotiable.",
+      "exampleTranslation": "ความซื่อสัตย์ทางธุรกิจเป็นสิ่งที่ต้องมี"
+    },
+    {
+      "vocab": "resilience",
+      "pronunciation": "รี-ซิล-เลียนซ์",
+      "meaning": "ความยืดหยุ่น, การฟื้นตัว",
+      "example": "Organizational resilience is tested during crises.",
+      "exampleTranslation": "ความยืดหยุ่นขององค์กรถูกทดสอบในช่วงวิกฤต"
+    },
+    {
+      "vocab": "agility",
+      "pronunciation": "อะ-จิ-ลิ-ตี้",
+      "meaning": "ความคล่องตัว",
+      "example": "Business agility is essential in today's market.",
+      "exampleTranslation": "ความคล่องตัวทางธุรกิจจำเป็นในตลาดปัจจุบัน"
+    },
+    {
+      "vocab": "strategic",
+      "pronunciation": "สตระ-ที-จิค",
+      "meaning": "เชิงกลยุทธ์",
+      "example": "This is a strategic decision.",
+      "exampleTranslation": "นี่คือการตัดสินใจเชิงกลยุทธ์"
+    },
+    {
+      "vocab": "operational",
+      "pronunciation": "ออป-เปอ-เร-ชั่น-นัล",
+      "meaning": "เชิงปฏิบัติการ",
+      "example": "Focus on operational excellence.",
+      "exampleTranslation": "มุ่งเน้นความเป็นเลิศเชิงปฏิบัติการ"
+    },
+    {
+      "vocab": "entrepreneurial",
+      "pronunciation": "ออน-เทร-พรี-เนอ-เรียล",
+      "meaning": "เกี่ยวกับผู้ประกอบการ",
+      "example": "Foster an entrepreneurial mindset.",
+      "exampleTranslation": "ส่งเสริมกรอบความคิดแบบผู้ประกอบการ"
+    },
+    {
+      "vocab": "visionary",
+      "pronunciation": "วิช-ชั่น-นะ-รี",
+      "meaning": "มีวิสัยทัศน์",
+      "example": "We need visionary leadership.",
+      "exampleTranslation": "เราต้องการผู้นำที่มีวิสัยทัศน์"
+    },
+    {
+      "vocab": "sustainable",
+      "pronunciation": "ซัส-เทน-นะ-เบิล",
+      "meaning": "ยั่งยืน",
+      "example": "Build a sustainable business model.",
+      "exampleTranslation": "สร้างโมเดลธุรกิจที่ยั่งยืน"
+    },
+    {
+      "vocab": "incentivize",
+      "pronunciation": "อิน-เซ็น-ทิ-ไวซ์",
+      "meaning": "จูงใจ, ให้แรงจูงใจ",
+      "example": "How can we incentivize innovation?",
+      "exampleTranslation": "เราจะจูงใจให้เกิดนวัตกรรมได้อย่างไร?"
+    },
+    {
+      "vocab": "monetize",
+      "pronunciation": "มอน-นิ-ไทซ์",
+      "meaning": "สร้างรายได้, แปลงเป็นเงิน",
+      "example": "How do you plan to monetize your app?",
+      "exampleTranslation": "คุณวางแผนจะสร้างรายได้จากแอปอย่างไร?"
+    },
+    {
+      "vocab": "optimize",
+      "pronunciation": "ออป-ทิ-ไมซ์",
+      "meaning": "ปรับให้เหมาะสมที่สุด",
+      "example": "Optimize your supply chain.",
+      "exampleTranslation": "ปรับห่วงโซ่อุปทานของคุณให้เหมาะสมที่สุด"
+    },
+    {
+      "vocab": "capitalize",
+      "pronunciation": "แคป-พิ-ทัล-ไลซ์",
+      "meaning": "ใช้ประโยชน์, ลงทุน",
+      "example": "Capitalize on market opportunities.",
+      "exampleTranslation": "ใช้ประโยชน์จากโอกาสในตลาด"
+    },
+    {
+      "vocab": "spearhead",
+      "pronunciation": "สเปียร์-เฮด",
+      "meaning": "นำ, เป็นหัวหอก",
+      "example": "She spearheaded the digital transformation.",
+      "exampleTranslation": "เธอเป็นหัวหอกในการเปลี่ยนแปลงทางดิจิทัล"
+    },
+    {
+      "vocab": "expedite",
+      "pronunciation": "เอ็กซ์-พิ-ไดท์",
+      "meaning": "เร่ง, ทำให้เร็วขึ้น",
+      "example": "We need to expedite the approval process.",
+      "exampleTranslation": "เราต้องเร่งกระบวนการอนุมัติ"
+    },
+    {
+      "vocab": "liaise",
+      "pronunciation": "ลี-เอซ",
+      "meaning": "ประสานงาน, ติดต่อ",
+      "example": "I'll liaise with the marketing team.",
+      "exampleTranslation": "ผมจะประสานงานกับทีมการตลาด"
+    },
+    {
+      "vocab": "circumvent",
+      "pronunciation": "เซอร์-คัม-เวนท์",
+      "meaning": "หลีกเลี่ยง, หลบ",
+      "example": "We found a way to circumvent the regulations.",
+      "exampleTranslation": "เราพบวิธีหลีกเลี่ยงกฎระเบียบ"
+    },
+    {
+      "vocab": "contingency",
+      "pronunciation": "คอน-ทิน-เจน-ซี",
+      "meaning": "เหตุไม่คาดฝัน, แผนสำรอง",
+      "example": "We have a contingency plan in place.",
+      "exampleTranslation": "เรามีแผนสำรองพร้อมอยู่"
+    },
+    {
+      "vocab": "feasibility",
+      "pronunciation": "ฟี-ซิ-บิ-ลิ-ตี้",
+      "meaning": "ความเป็นไปได้",
+      "example": "Conduct a feasibility study first.",
+      "exampleTranslation": "ทำการศึกษาความเป็นไปได้ก่อน"
+    },
+    {
+      "vocab": "procurement",
+      "pronunciation": "โพร-เคียว-เมินท์",
+      "meaning": "การจัดซื้อจัดจ้าง",
+      "example": "Improve procurement processes.",
+      "exampleTranslation": "ปรับปรุงกระบวนการจัดซื้อจัดจ้าง"
+    },
+    {
+      "vocab": "compliance",
+      "pronunciation": "คอม-ไพล-แอนซ์",
+      "meaning": "การปฏิบัติตามกฎ",
+      "example": "Ensure regulatory compliance.",
+      "exampleTranslation": "ให้แน่ใจว่าปฏิบัติตามกฎระเบียบ"
+    },
+    {
+      "vocab": "liability",
+      "pronunciation": "ไล-อะ-บิ-ลิ-ตี้",
+      "meaning": "หนี้สิน, ความรับผิด",
+      "example": "Limit our legal liability.",
+      "exampleTranslation": "จำกัดความรับผิดทางกฎหมายของเรา"
+    },
+    {
+      "vocab": "proprietary",
+      "pronunciation": "โพร-ไพร-อิ-ทะ-รี",
+      "meaning": "เป็นกรรมสิทธิ์, ลิขสิทธิ์",
+      "example": "This is proprietary technology.",
+      "exampleTranslation": "นี่คือเทคโนโลยีที่เป็นกรรมสิทธิ์"
+    },
+    {
+      "vocab": "subsidiary",
+      "pronunciation": "ซับ-ซิ-ดิ-เอ-รี",
+      "meaning": "บริษัทลูก, บริษัทในเครือ",
+      "example": "They opened a subsidiary in Singapore.",
+      "exampleTranslation": "พวกเขาเปิดบริษัทลูกในสิงคโปร์"
+    },
+    {
+      "vocab": "consortium",
+      "pronunciation": "คอน-ซอร์-เชียม",
+      "meaning": "กลุ่มบริษัทร่วมทุน",
+      "example": "A consortium of banks funded the project.",
+      "exampleTranslation": "กลุ่มธนาคารร่วมทุนให้เงินทุนโครงการ"
+    },
+    {
+      "vocab": "conglomerate",
+      "pronunciation": "คอน-กลอม-เมอ-เรท",
+      "meaning": "กลุ่มบริษัทขนาดใหญ่",
+      "example": "The conglomerate owns diverse businesses.",
+      "exampleTranslation": "กลุ่มบริษัทขนาดใหญ่เป็นเจ้าของธุรกิจหลากหลาย"
+    },
+    {
+      "vocab": "fiduciary",
+      "pronunciation": "ฟิ-ดู-ชิ-เอ-รี",
+      "meaning": "ผู้ดูแลผลประโยชน์, เกี่ยวกับความไว้วางใจ",
+      "example": "Directors have fiduciary duties to shareholders.",
+      "exampleTranslation": "กรรมการมีหน้าที่ดูแลผลประโยชน์ต่อผู้ถือหุ้น"
+    },
+    {
+      "vocab": "bureaucracy",
+      "pronunciation": "บิว-รอค-ระ-ซี",
+      "meaning": "ระบบราชการ, ความล่าช้าทางราชการ",
+      "example": "Bureaucracy slows down decision-making.",
+      "exampleTranslation": "ระบบราชการทำให้การตัดสินใจล่าช้า"
+    },
+    {
+      "vocab": "red tape",
+      "pronunciation": "เรด เทป",
+      "meaning": "ขั้นตอนราชการที่ยุ่งยาก",
+      "example": "Cut through the red tape.",
+      "exampleTranslation": "ตัดขั้นตอนราชการที่ยุ่งยาก"
+    }
+  ]
+}

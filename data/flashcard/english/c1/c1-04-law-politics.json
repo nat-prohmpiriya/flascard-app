@@ -1,0 +1,412 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Law & Politics",
+    "description": "C1 level vocabulary for legal and political topics",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "law", "politics"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "jurisdiction",
+      "pronunciation": "จู-ริส-ดิค-ชั่น",
+      "meaning": "เขตอำนาจศาล",
+      "example": "This case falls outside our jurisdiction.",
+      "exampleTranslation": "คดีนี้อยู่นอกเขตอำนาจศาลของเรา"
+    },
+    {
+      "vocab": "litigation",
+      "pronunciation": "ลิท-ทิ-เก-ชั่น",
+      "meaning": "การดำเนินคดี, การฟ้องร้อง",
+      "example": "The litigation lasted for years.",
+      "exampleTranslation": "การดำเนินคดียืดเยื้อหลายปี"
+    },
+    {
+      "vocab": "statute",
+      "pronunciation": "สแต-ทิวท์",
+      "meaning": "กฎหมายลายลักษณ์อักษร, พระราชบัญญัติ",
+      "example": "The statute was enacted in 2020.",
+      "exampleTranslation": "พระราชบัญญัตินี้ประกาศใช้ในปี 2020"
+    },
+    {
+      "vocab": "precedent",
+      "pronunciation": "เพรซ-ซิ-เดินท์",
+      "meaning": "แบบอย่าง, คำพิพากษาก่อนหน้า",
+      "example": "This sets a dangerous precedent.",
+      "exampleTranslation": "นี่เป็นการสร้างแบบอย่างที่อันตราย"
+    },
+    {
+      "vocab": "verdict",
+      "pronunciation": "เวอร์-ดิคท์",
+      "meaning": "คำตัดสิน",
+      "example": "The jury delivered a guilty verdict.",
+      "exampleTranslation": "คณะลูกขุนตัดสินว่ามีความผิด"
+    },
+    {
+      "vocab": "acquittal",
+      "pronunciation": "อะ-ควิท-ทัล",
+      "meaning": "การพิพากษายกฟ้อง, การตัดสินให้พ้นผิด",
+      "example": "The acquittal was unexpected.",
+      "exampleTranslation": "การตัดสินให้พ้นผิดเป็นเรื่องไม่คาดคิด"
+    },
+    {
+      "vocab": "indictment",
+      "pronunciation": "อิน-ไดท์-เมินท์",
+      "meaning": "คำฟ้อง, ข้อกล่าวหา",
+      "example": "The indictment includes multiple charges.",
+      "exampleTranslation": "คำฟ้องรวมข้อกล่าวหาหลายข้อ"
+    },
+    {
+      "vocab": "plaintiff",
+      "pronunciation": "เพลน-ทิฟ",
+      "meaning": "โจทก์",
+      "example": "The plaintiff filed a lawsuit.",
+      "exampleTranslation": "โจทก์ยื่นฟ้องคดี"
+    },
+    {
+      "vocab": "defendant",
+      "pronunciation": "ดิ-เฟน-ดันท์",
+      "meaning": "จำเลย",
+      "example": "The defendant pleaded not guilty.",
+      "exampleTranslation": "จำเลยให้การปฏิเสธ"
+    },
+    {
+      "vocab": "injunction",
+      "pronunciation": "อิน-จังค์-ชั่น",
+      "meaning": "คำสั่งศาลห้าม",
+      "example": "The court issued an injunction.",
+      "exampleTranslation": "ศาลออกคำสั่งห้าม"
+    },
+    {
+      "vocab": "subpoena",
+      "pronunciation": "ซับ-พี-นา",
+      "meaning": "หมายเรียก",
+      "example": "He was served a subpoena.",
+      "exampleTranslation": "เขาได้รับหมายเรียก"
+    },
+    {
+      "vocab": "affidavit",
+      "pronunciation": "แอฟ-ฟิ-เด-วิท",
+      "meaning": "คำให้การที่เป็นลายลักษณ์อักษร",
+      "example": "Submit an affidavit to the court.",
+      "exampleTranslation": "ยื่นคำให้การเป็นลายลักษณ์อักษรต่อศาล"
+    },
+    {
+      "vocab": "perjury",
+      "pronunciation": "เพอร์-เจอ-รี",
+      "meaning": "การเบิกความเท็จ",
+      "example": "Perjury is a serious offense.",
+      "exampleTranslation": "การเบิกความเท็จเป็นความผิดร้ายแรง"
+    },
+    {
+      "vocab": "arbitration",
+      "pronunciation": "อาร์-บิ-เทร-ชั่น",
+      "meaning": "การอนุญาโตตุลาการ",
+      "example": "The dispute was settled through arbitration.",
+      "exampleTranslation": "ข้อพิพาทยุติผ่านการอนุญาโตตุลาการ"
+    },
+    {
+      "vocab": "mediation",
+      "pronunciation": "มี-ดิ-เอ-ชั่น",
+      "meaning": "การไกล่เกลี่ย",
+      "example": "They agreed to mediation.",
+      "exampleTranslation": "พวกเขาตกลงที่จะไกล่เกลี่ย"
+    },
+    {
+      "vocab": "due process",
+      "pronunciation": "ดิว โพร-เซส",
+      "meaning": "กระบวนการยุติธรรม",
+      "example": "Everyone has the right to due process.",
+      "exampleTranslation": "ทุกคนมีสิทธิ์ได้รับกระบวนการยุติธรรม"
+    },
+    {
+      "vocab": "habeas corpus",
+      "pronunciation": "เฮ-บี-อัส คอร์-พัส",
+      "meaning": "หมายเรียกตัวผู้ต้องหา",
+      "example": "File for habeas corpus.",
+      "exampleTranslation": "ยื่นขอหมายเรียกตัวผู้ต้องหา"
+    },
+    {
+      "vocab": "extradition",
+      "pronunciation": "เอ็กซ์-ทรา-ดิ-ชั่น",
+      "meaning": "การส่งผู้ร้ายข้ามแดน",
+      "example": "The extradition treaty was signed.",
+      "exampleTranslation": "สนธิสัญญาส่งผู้ร้ายข้ามแดนได้รับการลงนาม"
+    },
+    {
+      "vocab": "sovereignty",
+      "pronunciation": "ซอฟ-เวอ-เรน-ตี้",
+      "meaning": "อำนาจอธิปไตย",
+      "example": "Respect national sovereignty.",
+      "exampleTranslation": "เคารพอำนาจอธิปไตยของชาติ"
+    },
+    {
+      "vocab": "legislature",
+      "pronunciation": "เลจ-จิส-เล-เจอะ",
+      "meaning": "สภานิติบัญญัติ",
+      "example": "The legislature passed the bill.",
+      "exampleTranslation": "สภานิติบัญญัติผ่านร่างกฎหมาย"
+    },
+    {
+      "vocab": "judiciary",
+      "pronunciation": "จู-ดิช-ชี-เอ-รี",
+      "meaning": "ฝ่ายตุลาการ",
+      "example": "An independent judiciary is essential.",
+      "exampleTranslation": "ฝ่ายตุลาการที่เป็นอิสระเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "executive branch",
+      "pronunciation": "เอ็ก-เซค-คิว-ทิฟ บรานช์",
+      "meaning": "ฝ่ายบริหาร",
+      "example": "The executive branch implements laws.",
+      "exampleTranslation": "ฝ่ายบริหารบังคับใช้กฎหมาย"
+    },
+    {
+      "vocab": "bipartisan",
+      "pronunciation": "ไบ-พาร์-ทิ-ซัน",
+      "meaning": "สองพรรคร่วมกัน",
+      "example": "A bipartisan agreement was reached.",
+      "exampleTranslation": "บรรลุข้อตกลงสองพรรคร่วมกัน"
+    },
+    {
+      "vocab": "filibuster",
+      "pronunciation": "ฟิล-ลิ-บัส-เทอะ",
+      "meaning": "การอภิปรายยืดเยื้อเพื่อถ่วงเวลา",
+      "example": "The senator launched a filibuster.",
+      "exampleTranslation": "วุฒิสมาชิกเริ่มอภิปรายยืดเยื้อ"
+    },
+    {
+      "vocab": "referendum",
+      "pronunciation": "เร-เฟอ-เรน-ดัม",
+      "meaning": "การลงประชามติ",
+      "example": "The referendum will decide the issue.",
+      "exampleTranslation": "การลงประชามติจะตัดสินประเด็นนี้"
+    },
+    {
+      "vocab": "constituency",
+      "pronunciation": "คอน-สติ-ทิว-เอน-ซี",
+      "meaning": "เขตเลือกตั้ง, ผู้มีสิทธิ์เลือกตั้ง",
+      "example": "He represents his constituency well.",
+      "exampleTranslation": "เขาเป็นตัวแทนเขตเลือกตั้งได้ดี"
+    },
+    {
+      "vocab": "incumbent",
+      "pronunciation": "อิน-คัม-เบินท์",
+      "meaning": "ผู้ดำรงตำแหน่งปัจจุบัน",
+      "example": "The incumbent won re-election.",
+      "exampleTranslation": "ผู้ดำรงตำแหน่งปัจจุบันชนะการเลือกตั้งซ้ำ"
+    },
+    {
+      "vocab": "lobbying",
+      "pronunciation": "ลอบ-บี้-อิง",
+      "meaning": "การล็อบบี้, การวิ่งเต้น",
+      "example": "Corporate lobbying influences policy.",
+      "exampleTranslation": "การล็อบบี้ของบริษัทมีอิทธิพลต่อนโยบาย"
+    },
+    {
+      "vocab": "ratify",
+      "pronunciation": "แรท-ทิ-ฟาย",
+      "meaning": "ให้สัตยาบัน, อนุมัติ",
+      "example": "Parliament must ratify the treaty.",
+      "exampleTranslation": "รัฐสภาต้องให้สัตยาบันสนธิสัญญา"
+    },
+    {
+      "vocab": "veto",
+      "pronunciation": "วี-โท",
+      "meaning": "ยับยั้ง, คัดค้าน",
+      "example": "The president vetoed the bill.",
+      "exampleTranslation": "ประธานาธิบดียับยั้งร่างกฎหมาย"
+    },
+    {
+      "vocab": "sanction",
+      "pronunciation": "แซงค์-ชั่น",
+      "meaning": "การคว่ำบาตร, อนุมัติ",
+      "example": "Economic sanctions were imposed.",
+      "exampleTranslation": "มาตรการคว่ำบาตรทางเศรษฐกิจถูกบังคับใช้"
+    },
+    {
+      "vocab": "diplomacy",
+      "pronunciation": "ดิ-โพล-มะ-ซี",
+      "meaning": "การทูต",
+      "example": "Diplomacy is preferred over conflict.",
+      "exampleTranslation": "การทูตเป็นที่นิยมมากกว่าความขัดแย้ง"
+    },
+    {
+      "vocab": "bilateral",
+      "pronunciation": "ไบ-แลท-เทอ-รัล",
+      "meaning": "ทวิภาคี, สองฝ่าย",
+      "example": "Sign a bilateral agreement.",
+      "exampleTranslation": "ลงนามข้อตกลงทวิภาคี"
+    },
+    {
+      "vocab": "multilateral",
+      "pronunciation": "มัล-ทิ-แลท-เทอ-รัล",
+      "meaning": "พหุภาคี, หลายฝ่าย",
+      "example": "Multilateral cooperation is needed.",
+      "exampleTranslation": "ต้องการความร่วมมือพหุภาคี"
+    },
+    {
+      "vocab": "unilateral",
+      "pronunciation": "ยู-นิ-แลท-เทอ-รัล",
+      "meaning": "ฝ่ายเดียว",
+      "example": "They took unilateral action.",
+      "exampleTranslation": "พวกเขาดำเนินการฝ่ายเดียว"
+    },
+    {
+      "vocab": "geopolitics",
+      "pronunciation": "จี-โอ-โพ-ลิ-ทิคส์",
+      "meaning": "ภูมิรัฐศาสตร์",
+      "example": "Geopolitics shapes international relations.",
+      "exampleTranslation": "ภูมิรัฐศาสตร์กำหนดความสัมพันธ์ระหว่างประเทศ"
+    },
+    {
+      "vocab": "hegemony",
+      "pronunciation": "ฮิ-เจม-โม-นี",
+      "meaning": "อำนาจครอบงำ",
+      "example": "They seek regional hegemony.",
+      "exampleTranslation": "พวกเขาแสวงหาอำนาจครอบงำในภูมิภาค"
+    },
+    {
+      "vocab": "imperialism",
+      "pronunciation": "อิม-เพีย-รี-อะ-ลิ-ซึม",
+      "meaning": "จักรวรรดินิยม",
+      "example": "Imperialism had lasting effects.",
+      "exampleTranslation": "จักรวรรดินิยมมีผลกระทบยาวนาน"
+    },
+    {
+      "vocab": "nationalism",
+      "pronunciation": "แนช-ชั่น-นัล-ลิ-ซึม",
+      "meaning": "ชาตินิยม",
+      "example": "Nationalism is on the rise.",
+      "exampleTranslation": "ชาตินิยมกำลังเพิ่มขึ้น"
+    },
+    {
+      "vocab": "populism",
+      "pronunciation": "พอพ-พิว-ลิ-ซึม",
+      "meaning": "ประชานิยม",
+      "example": "Populism appeals to ordinary citizens.",
+      "exampleTranslation": "ประชานิยมดึงดูดใจประชาชนทั่วไป"
+    },
+    {
+      "vocab": "authoritarianism",
+      "pronunciation": "ออ-ธอ-ริ-แท-เรียน-นิ-ซึม",
+      "meaning": "อำนาจนิยม",
+      "example": "Authoritarianism suppresses dissent.",
+      "exampleTranslation": "อำนาจนิยมปราบปรามผู้เห็นต่าง"
+    },
+    {
+      "vocab": "totalitarianism",
+      "pronunciation": "โท-แทล-ลิ-แท-เรียน-นิ-ซึม",
+      "meaning": "เผด็จการเบ็ดเสร็จ",
+      "example": "Totalitarianism controls all aspects of life.",
+      "exampleTranslation": "เผด็จการเบ็ดเสร็จควบคุมทุกด้านของชีวิต"
+    },
+    {
+      "vocab": "oligarchy",
+      "pronunciation": "โอ-ลิ-การ์-คี",
+      "meaning": "คณาธิปไตย, การปกครองโดยคนกลุ่มน้อย",
+      "example": "The country became an oligarchy.",
+      "exampleTranslation": "ประเทศกลายเป็นคณาธิปไตย"
+    },
+    {
+      "vocab": "plutocracy",
+      "pronunciation": "พลู-ทอค-ระ-ซี",
+      "meaning": "ธนาธิปไตย, การปกครองโดยคนรวย",
+      "example": "Critics call it a plutocracy.",
+      "exampleTranslation": "ผู้วิจารณ์เรียกมันว่าธนาธิปไตย"
+    },
+    {
+      "vocab": "secession",
+      "pronunciation": "ซิ-เซช-ชั่น",
+      "meaning": "การแยกตัว, การแบ่งแยก",
+      "example": "They threatened secession.",
+      "exampleTranslation": "พวกเขาขู่จะแยกตัว"
+    },
+    {
+      "vocab": "autonomy",
+      "pronunciation": "ออ-ทอน-โน-มี",
+      "meaning": "เอกราช, การปกครองตนเอง",
+      "example": "The region demands more autonomy.",
+      "exampleTranslation": "ภูมิภาคเรียกร้องเอกราชมากขึ้น"
+    },
+    {
+      "vocab": "amnesty",
+      "pronunciation": "แอม-เนส-ตี้",
+      "meaning": "การนิรโทษกรรม",
+      "example": "The government granted amnesty.",
+      "exampleTranslation": "รัฐบาลให้นิรโทษกรรม"
+    },
+    {
+      "vocab": "asylum",
+      "pronunciation": "อะ-ไซ-ลัม",
+      "meaning": "ที่ลี้ภัย, การลี้ภัย",
+      "example": "He applied for political asylum.",
+      "exampleTranslation": "เขายื่นขอลี้ภัยทางการเมือง"
+    },
+    {
+      "vocab": "deportation",
+      "pronunciation": "ดี-พอร์-เท-ชั่น",
+      "meaning": "การเนรเทศ",
+      "example": "He faced deportation.",
+      "exampleTranslation": "เขาเผชิญกับการเนรเทศ"
+    },
+    {
+      "vocab": "emancipation",
+      "pronunciation": "อิ-แมน-ซิ-เพ-ชั่น",
+      "meaning": "การปลดปล่อย, การให้เสรีภาพ",
+      "example": "The emancipation of slaves.",
+      "exampleTranslation": "การปลดปล่อยทาส"
+    },
+    {
+      "vocab": "suffrage",
+      "pronunciation": "ซัฟ-ฟริจ",
+      "meaning": "สิทธิในการเลือกตั้ง",
+      "example": "Universal suffrage was achieved.",
+      "exampleTranslation": "บรรลุสิทธิเลือกตั้งทั่วไป"
+    },
+    {
+      "vocab": "gerrymandering",
+      "pronunciation": "เจอร์-รี่-แมน-เดอ-ริง",
+      "meaning": "การแบ่งเขตเลือกตั้งอย่างไม่เป็นธรรม",
+      "example": "Gerrymandering distorts elections.",
+      "exampleTranslation": "การแบ่งเขตเลือกตั้งอย่างไม่เป็นธรรมบิดเบือนการเลือกตั้ง"
+    },
+    {
+      "vocab": "disenfranchise",
+      "pronunciation": "ดิส-เอ็น-แฟรน-ไชส์",
+      "meaning": "ริบสิทธิ์, เพิกถอนสิทธิ์เลือกตั้ง",
+      "example": "These laws disenfranchise voters.",
+      "exampleTranslation": "กฎหมายเหล่านี้ริบสิทธิ์ผู้มีสิทธิ์เลือกตั้ง"
+    },
+    {
+      "vocab": "transparency",
+      "pronunciation": "แทรนส์-แพ-เรน-ซี",
+      "meaning": "ความโปร่งใส",
+      "example": "Demand transparency in government.",
+      "exampleTranslation": "เรียกร้องความโปร่งใสในรัฐบาล"
+    },
+    {
+      "vocab": "accountability",
+      "pronunciation": "อะ-เคาน์-ทะ-บิ-ลิ-ตี้",
+      "meaning": "ความรับผิดชอบ",
+      "example": "Hold officials accountable.",
+      "exampleTranslation": "ทำให้เจ้าหน้าที่ต้องรับผิดชอบ"
+    },
+    {
+      "vocab": "corruption",
+      "pronunciation": "คอ-รัพ-ชั่น",
+      "meaning": "การทุจริต, การคอร์รัปชัน",
+      "example": "Combat corruption at all levels.",
+      "exampleTranslation": "ต่อสู้กับการทุจริตทุกระดับ"
+    },
+    {
+      "vocab": "nepotism",
+      "pronunciation": "เนพ-โพ-ทิ-ซึม",
+      "meaning": "การเลือกที่รักมักที่ชัง, ระบบอุปถัมภ์",
+      "example": "Nepotism undermines meritocracy.",
+      "exampleTranslation": "ระบบอุปถัมภ์บ่อนทำลายระบบคุณธรรม"
+    }
+  ]
+}

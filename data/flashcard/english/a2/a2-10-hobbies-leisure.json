@@ -1,0 +1,417 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Hobbies & Leisure",
+    "description": "CEFR A2 Vocabulary - Hobbies, Sports, Entertainment, Free Time",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "vocabulary"
+    ]
+  },
+  "cards": [
+    {
+      "vocab": "hobby",
+      "pronunciation": "ฮ็อบ-บี้",
+      "meaning": "งานอดิเรก",
+      "example": "What's your hobby?",
+      "exampleTranslation": "งานอดิเรกของคุณคืออะไร?"
+    },
+    {
+      "vocab": "free time",
+      "pronunciation": "ฟรี ไทม์",
+      "meaning": "เวลาว่าง",
+      "example": "What do you do in your free time?",
+      "exampleTranslation": "เวลาว่างคุณทำอะไร?"
+    },
+    {
+      "vocab": "weekend",
+      "pronunciation": "วีค-เอนด์",
+      "meaning": "สุดสัปดาห์",
+      "example": "What are you doing this weekend?",
+      "exampleTranslation": "สุดสัปดาห์นี้จะทำอะไร?"
+    },
+    {
+      "vocab": "sport",
+      "pronunciation": "สปอร์ท",
+      "meaning": "กีฬา",
+      "example": "What sports do you play?",
+      "exampleTranslation": "คุณเล่นกีฬาอะไร?"
+    },
+    {
+      "vocab": "football",
+      "pronunciation": "ฟุท-บอล",
+      "meaning": "ฟุตบอล",
+      "example": "I play football every weekend.",
+      "exampleTranslation": "ฉันเล่นฟุตบอลทุกสุดสัปดาห์"
+    },
+    {
+      "vocab": "basketball",
+      "pronunciation": "บาส-เก็ท-บอล",
+      "meaning": "บาสเกตบอล",
+      "example": "Do you like basketball?",
+      "exampleTranslation": "คุณชอบบาสเกตบอลไหม?"
+    },
+    {
+      "vocab": "tennis",
+      "pronunciation": "เทน-นิส",
+      "meaning": "เทนนิส",
+      "example": "Let's play tennis.",
+      "exampleTranslation": "ไปเล่นเทนนิสกัน"
+    },
+    {
+      "vocab": "badminton",
+      "pronunciation": "แบด-มิน-ตัน",
+      "meaning": "แบดมินตัน",
+      "example": "Badminton is popular in Thailand.",
+      "exampleTranslation": "แบดมินตันเป็นที่นิยมในไทย"
+    },
+    {
+      "vocab": "swimming",
+      "pronunciation": "สวิม-มิ่ง",
+      "meaning": "ว่ายน้ำ",
+      "example": "I go swimming every week.",
+      "exampleTranslation": "ฉันไปว่ายน้ำทุกสัปดาห์"
+    },
+    {
+      "vocab": "running",
+      "pronunciation": "รัน-นิ่ง",
+      "meaning": "วิ่ง",
+      "example": "Running is good exercise.",
+      "exampleTranslation": "การวิ่งเป็นการออกกำลังกายที่ดี"
+    },
+    {
+      "vocab": "cycling",
+      "pronunciation": "ไซ-คลิ่ง",
+      "meaning": "ปั่นจักรยาน",
+      "example": "I enjoy cycling in the park.",
+      "exampleTranslation": "ฉันชอบปั่นจักรยานในสวน"
+    },
+    {
+      "vocab": "yoga",
+      "pronunciation": "โย-กะ",
+      "meaning": "โยคะ",
+      "example": "I do yoga every morning.",
+      "exampleTranslation": "ฉันเล่นโยคะทุกเช้า"
+    },
+    {
+      "vocab": "gym",
+      "pronunciation": "ยิม",
+      "meaning": "ยิม, ฟิตเนส",
+      "example": "I go to the gym three times a week.",
+      "exampleTranslation": "ฉันไปยิมสามครั้งต่อสัปดาห์"
+    },
+    {
+      "vocab": "team",
+      "pronunciation": "ทีม",
+      "meaning": "ทีม",
+      "example": "I'm on the football team.",
+      "exampleTranslation": "ฉันอยู่ทีมฟุตบอล"
+    },
+    {
+      "vocab": "match",
+      "pronunciation": "แมทช์",
+      "meaning": "การแข่งขัน",
+      "example": "Are you watching the match tonight?",
+      "exampleTranslation": "คืนนี้ดูแมตช์ไหม?"
+    },
+    {
+      "vocab": "win",
+      "pronunciation": "วิน",
+      "meaning": "ชนะ",
+      "example": "Our team won the match.",
+      "exampleTranslation": "ทีมเราชนะ"
+    },
+    {
+      "vocab": "lose",
+      "pronunciation": "ลูส",
+      "meaning": "แพ้",
+      "example": "We lost the game.",
+      "exampleTranslation": "เราแพ้เกม"
+    },
+    {
+      "vocab": "score",
+      "pronunciation": "สกอร์",
+      "meaning": "คะแนน",
+      "example": "What's the score?",
+      "exampleTranslation": "คะแนนเท่าไหร่?"
+    },
+    {
+      "vocab": "read",
+      "pronunciation": "รีด",
+      "meaning": "อ่าน",
+      "example": "I like to read books.",
+      "exampleTranslation": "ฉันชอบอ่านหนังสือ"
+    },
+    {
+      "vocab": "book",
+      "pronunciation": "บุค",
+      "meaning": "หนังสือ",
+      "example": "I'm reading a good book.",
+      "exampleTranslation": "ฉันกำลังอ่านหนังสือดีๆ"
+    },
+    {
+      "vocab": "magazine",
+      "pronunciation": "แม็ก-กะ-ซีน",
+      "meaning": "นิตยสาร",
+      "example": "I read fashion magazines.",
+      "exampleTranslation": "ฉันอ่านนิตยสารแฟชัน"
+    },
+    {
+      "vocab": "movie",
+      "pronunciation": "มู-วี่",
+      "meaning": "ภาพยนตร์",
+      "example": "Let's watch a movie.",
+      "exampleTranslation": "ไปดูหนังกัน"
+    },
+    {
+      "vocab": "cinema",
+      "pronunciation": "ซิ-เน-ม่า",
+      "meaning": "โรงภาพยนตร์",
+      "example": "I go to the cinema every week.",
+      "exampleTranslation": "ฉันไปโรงหนังทุกสัปดาห์"
+    },
+    {
+      "vocab": "music",
+      "pronunciation": "มิว-สิค",
+      "meaning": "ดนตรี",
+      "example": "I love listening to music.",
+      "exampleTranslation": "ฉันชอบฟังเพลง"
+    },
+    {
+      "vocab": "song",
+      "pronunciation": "ซอง",
+      "meaning": "เพลง",
+      "example": "What's your favorite song?",
+      "exampleTranslation": "เพลงโปรดของคุณคือเพลงอะไร?"
+    },
+    {
+      "vocab": "concert",
+      "pronunciation": "คอน-เสิร์ท",
+      "meaning": "คอนเสิร์ต",
+      "example": "I went to a concert last night.",
+      "exampleTranslation": "เมื่อคืนฉันไปคอนเสิร์ต"
+    },
+    {
+      "vocab": "sing",
+      "pronunciation": "ซิง",
+      "meaning": "ร้องเพลง",
+      "example": "I like to sing karaoke.",
+      "exampleTranslation": "ฉันชอบร้องคาราโอเกะ"
+    },
+    {
+      "vocab": "dance",
+      "pronunciation": "แดนซ์",
+      "meaning": "เต้น",
+      "example": "Can you dance?",
+      "exampleTranslation": "คุณเต้นเป็นไหม?"
+    },
+    {
+      "vocab": "play",
+      "pronunciation": "เพลย์",
+      "meaning": "เล่น",
+      "example": "I play guitar.",
+      "exampleTranslation": "ฉันเล่นกีตาร์"
+    },
+    {
+      "vocab": "guitar",
+      "pronunciation": "กิ-ตาร์",
+      "meaning": "กีตาร์",
+      "example": "I'm learning to play guitar.",
+      "exampleTranslation": "ฉันกำลังเรียนเล่นกีตาร์"
+    },
+    {
+      "vocab": "piano",
+      "pronunciation": "เปีย-โน",
+      "meaning": "เปียโน",
+      "example": "She plays piano beautifully.",
+      "exampleTranslation": "เธอเล่นเปียโนได้สวยงาม"
+    },
+    {
+      "vocab": "draw",
+      "pronunciation": "ดรอว์",
+      "meaning": "วาดรูป",
+      "example": "I like to draw pictures.",
+      "exampleTranslation": "ฉันชอบวาดรูป"
+    },
+    {
+      "vocab": "paint",
+      "pronunciation": "เพนท์",
+      "meaning": "วาดสี, ระบายสี",
+      "example": "I paint in my free time.",
+      "exampleTranslation": "ฉันวาดรูประบายสีเวลาว่าง"
+    },
+    {
+      "vocab": "photo",
+      "pronunciation": "โฟ-โต้",
+      "meaning": "รูปถ่าย",
+      "example": "Can I take a photo?",
+      "exampleTranslation": "ขอถ่ายรูปได้ไหม?"
+    },
+    {
+      "vocab": "photography",
+      "pronunciation": "โฟ-โต-กรา-ฟี",
+      "meaning": "การถ่ายภาพ",
+      "example": "Photography is my hobby.",
+      "exampleTranslation": "การถ่ายภาพเป็นงานอดิเรกของฉัน"
+    },
+    {
+      "vocab": "cooking",
+      "pronunciation": "คุ้ค-กิ้ง",
+      "meaning": "ทำอาหาร",
+      "example": "I enjoy cooking.",
+      "exampleTranslation": "ฉันชอบทำอาหาร"
+    },
+    {
+      "vocab": "gardening",
+      "pronunciation": "การ์-เด็น-นิ่ง",
+      "meaning": "ทำสวน",
+      "example": "Gardening is relaxing.",
+      "exampleTranslation": "การทำสวนทำให้ผ่อนคลาย"
+    },
+    {
+      "vocab": "shopping",
+      "pronunciation": "ช็อป-ปิ้ง",
+      "meaning": "ช็อปปิ้ง",
+      "example": "I love shopping.",
+      "exampleTranslation": "ฉันชอบช็อปปิ้ง"
+    },
+    {
+      "vocab": "travel",
+      "pronunciation": "ทรา-เวิล",
+      "meaning": "เดินทาง",
+      "example": "I love to travel.",
+      "exampleTranslation": "ฉันชอบเดินทาง"
+    },
+    {
+      "vocab": "camping",
+      "pronunciation": "แคม-ปิ้ง",
+      "meaning": "ตั้งแคมป์",
+      "example": "We went camping last weekend.",
+      "exampleTranslation": "สุดสัปดาห์ที่แล้วเราไปตั้งแคมป์"
+    },
+    {
+      "vocab": "fishing",
+      "pronunciation": "ฟิช-ชิ่ง",
+      "meaning": "ตกปลา",
+      "example": "My dad likes fishing.",
+      "exampleTranslation": "พ่อของฉันชอบตกปลา"
+    },
+    {
+      "vocab": "hiking",
+      "pronunciation": "ไฮ-คิ่ง",
+      "meaning": "เดินป่า",
+      "example": "We went hiking in the mountains.",
+      "exampleTranslation": "เราไปเดินป่าบนภูเขา"
+    },
+    {
+      "vocab": "video game",
+      "pronunciation": "วิ-ดี-โอ เกม",
+      "meaning": "วิดีโอเกม",
+      "example": "I play video games at night.",
+      "exampleTranslation": "ฉันเล่นวิดีโอเกมตอนกลางคืน"
+    },
+    {
+      "vocab": "internet",
+      "pronunciation": "อิน-เทอร์-เน็ต",
+      "meaning": "อินเทอร์เน็ต",
+      "example": "I spend too much time on the internet.",
+      "exampleTranslation": "ฉันใช้เวลาอินเทอร์เน็ตมากเกินไป"
+    },
+    {
+      "vocab": "social media",
+      "pronunciation": "โซ-เชียล มี-เดีย",
+      "meaning": "โซเชียลมีเดีย",
+      "example": "Are you on social media?",
+      "exampleTranslation": "คุณเล่นโซเชียลมีเดียไหม?"
+    },
+    {
+      "vocab": "party",
+      "pronunciation": "พาร์-ตี้",
+      "meaning": "งานปาร์ตี้",
+      "example": "Are you coming to the party?",
+      "exampleTranslation": "มางานปาร์ตี้ไหม?"
+    },
+    {
+      "vocab": "picnic",
+      "pronunciation": "พิค-นิค",
+      "meaning": "ปิกนิก",
+      "example": "Let's have a picnic in the park.",
+      "exampleTranslation": "ไปปิกนิกในสวนกัน"
+    },
+    {
+      "vocab": "beach",
+      "pronunciation": "บีช",
+      "meaning": "ชายหาด",
+      "example": "I love going to the beach.",
+      "exampleTranslation": "ฉันชอบไปชายหาด"
+    },
+    {
+      "vocab": "park",
+      "pronunciation": "พาร์ค",
+      "meaning": "สวนสาธารณะ",
+      "example": "I walk in the park every day.",
+      "exampleTranslation": "ฉันเดินในสวนสาธารณะทุกวัน"
+    },
+    {
+      "vocab": "museum",
+      "pronunciation": "มิว-เซียม",
+      "meaning": "พิพิธภัณฑ์",
+      "example": "I visited the museum yesterday.",
+      "exampleTranslation": "เมื่อวานฉันไปพิพิธภัณฑ์"
+    },
+    {
+      "vocab": "zoo",
+      "pronunciation": "ซู",
+      "meaning": "สวนสัตว์",
+      "example": "The kids love the zoo.",
+      "exampleTranslation": "เด็กๆ ชอบสวนสัตว์"
+    },
+    {
+      "vocab": "boring",
+      "pronunciation": "บอ-ริ่ง",
+      "meaning": "น่าเบื่อ",
+      "example": "This movie is boring.",
+      "exampleTranslation": "หนังเรื่องนี้น่าเบื่อ"
+    },
+    {
+      "vocab": "fun",
+      "pronunciation": "ฟัน",
+      "meaning": "สนุก",
+      "example": "It was so much fun!",
+      "exampleTranslation": "สนุกมาก!"
+    },
+    {
+      "vocab": "exciting",
+      "pronunciation": "เอ็กซ์-ไซ-ติ้ง",
+      "meaning": "น่าตื่นเต้น",
+      "example": "The game was exciting.",
+      "exampleTranslation": "เกมนี้น่าตื่นเต้น"
+    },
+    {
+      "vocab": "interesting",
+      "pronunciation": "อิน-เทอ-เรส-ติ้ง",
+      "meaning": "น่าสนใจ",
+      "example": "That's very interesting.",
+      "exampleTranslation": "น่าสนใจมาก"
+    },
+    {
+      "vocab": "relaxing",
+      "pronunciation": "รี-แลก-ซิ่ง",
+      "meaning": "ผ่อนคลาย",
+      "example": "Reading is relaxing.",
+      "exampleTranslation": "การอ่านหนังสือทำให้ผ่อนคลาย"
+    },
+    {
+      "vocab": "enjoy",
+      "pronunciation": "เอ็น-จอย",
+      "meaning": "สนุก, ชอบ",
+      "example": "I enjoy spending time with friends.",
+      "exampleTranslation": "ฉันชอบใช้เวลากับเพื่อน"
+    }
+  ]
+}

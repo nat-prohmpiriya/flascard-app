@@ -1,0 +1,510 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "Cloud & DevOps Vocabulary",
+    "description": "Essential cloud computing and DevOps terminology for developers",
+    "category": "Technology",
+    "tags": ["english", "programming", "cloud", "devops", "infrastructure"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "cloud computing",
+      "pronunciation": "คลาวด์ คอม-พิว-ติ้ง",
+      "meaning": "การประมวลผลแบบคลาวด์, ใช้ทรัพยากรคอมพิวเตอร์ผ่านอินเทอร์เน็ต",
+      "example": "Cloud computing allows us to scale resources on demand.",
+      "exampleTranslation": "การประมวลผลแบบคลาวด์ช่วยให้เราขยายทรัพยากรได้ตามต้องการ"
+    },
+    {
+      "vocab": "IaaS (Infrastructure as a Service)",
+      "pronunciation": "ไอ-แอส",
+      "meaning": "บริการโครงสร้างพื้นฐาน, เช่าเซิร์ฟเวอร์ สตอเรจ เครือข่าย",
+      "example": "AWS EC2 is an example of IaaS where you manage the virtual machines.",
+      "exampleTranslation": "AWS EC2 เป็นตัวอย่างของ IaaS ที่คุณจัดการ virtual machines เอง"
+    },
+    {
+      "vocab": "PaaS (Platform as a Service)",
+      "pronunciation": "พาส",
+      "meaning": "บริการแพลตฟอร์ม, ให้สภาพแวดล้อมสำหรับพัฒนาและรันแอป",
+      "example": "Heroku is a PaaS that handles infrastructure so developers can focus on code.",
+      "exampleTranslation": "Heroku เป็น PaaS ที่จัดการโครงสร้างพื้นฐานให้นักพัฒนาโฟกัสที่โค้ด"
+    },
+    {
+      "vocab": "SaaS (Software as a Service)",
+      "pronunciation": "ซาส",
+      "meaning": "บริการซอฟต์แวร์, ใช้แอปพลิเคชันผ่านอินเทอร์เน็ต",
+      "example": "Gmail and Slack are examples of SaaS applications.",
+      "exampleTranslation": "Gmail และ Slack เป็นตัวอย่างของแอปพลิเคชัน SaaS"
+    },
+    {
+      "vocab": "serverless",
+      "pronunciation": "เซิร์ฟ-เวอร์-เลส",
+      "meaning": "ไม่ต้องจัดการเซิร์ฟเวอร์, รันโค้ดโดยผู้ให้บริการจัดการโครงสร้างพื้นฐานให้",
+      "example": "Serverless functions scale automatically based on traffic.",
+      "exampleTranslation": "ฟังก์ชัน serverless ขยายอัตโนมัติตามปริมาณทราฟฟิก"
+    },
+    {
+      "vocab": "container",
+      "pronunciation": "คอน-เท-เนอร์",
+      "meaning": "คอนเทนเนอร์, หน่วยที่รวมโค้ดและ dependencies ทั้งหมดไว้ด้วยกัน",
+      "example": "Containers ensure the application runs the same in development and production.",
+      "exampleTranslation": "คอนเทนเนอร์ทำให้แอปพลิเคชันทำงานเหมือนกันใน development และ production"
+    },
+    {
+      "vocab": "Docker",
+      "pronunciation": "ด็อก-เกอร์",
+      "meaning": "แพลตฟอร์มสำหรับสร้างและรันคอนเทนเนอร์",
+      "example": "Build a Docker image to package your application with all dependencies.",
+      "exampleTranslation": "สร้าง Docker image เพื่อแพ็กเกจแอปพลิเคชันพร้อม dependencies ทั้งหมด"
+    },
+    {
+      "vocab": "Dockerfile",
+      "pronunciation": "ด็อก-เกอร์-ไฟล์",
+      "meaning": "ไฟล์คำสั่งสำหรับสร้าง Docker image",
+      "example": "The Dockerfile defines the base image and installation steps.",
+      "exampleTranslation": "Dockerfile กำหนด base image และขั้นตอนการติดตั้ง"
+    },
+    {
+      "vocab": "Docker image",
+      "pronunciation": "ด็อก-เกอร์ อิ-มิจ",
+      "meaning": "ไฟล์เทมเพลตสำหรับสร้างคอนเทนเนอร์",
+      "example": "Push your Docker image to a registry so others can pull it.",
+      "exampleTranslation": "พุช Docker image ไปที่ registry เพื่อให้คนอื่นดึงไปใช้ได้"
+    },
+    {
+      "vocab": "container registry",
+      "pronunciation": "คอน-เท-เนอร์ เร-จิส-ทรี",
+      "meaning": "ที่เก็บ Docker images, เช่น Docker Hub, ECR",
+      "example": "Store your private images in a container registry like AWS ECR.",
+      "exampleTranslation": "เก็บ images ส่วนตัวใน container registry เช่น AWS ECR"
+    },
+    {
+      "vocab": "Kubernetes (K8s)",
+      "pronunciation": "คู-เบอร์-เน-ทิส",
+      "meaning": "ระบบจัดการคอนเทนเนอร์แบบอัตโนมัติ",
+      "example": "Kubernetes orchestrates containers across multiple nodes.",
+      "exampleTranslation": "Kubernetes จัดการคอนเทนเนอร์ข้ามหลาย nodes"
+    },
+    {
+      "vocab": "pod",
+      "pronunciation": "พ็อด",
+      "meaning": "หน่วยที่เล็กที่สุดใน Kubernetes, มีคอนเทนเนอร์หนึ่งตัวหรือมากกว่า",
+      "example": "Each pod gets its own IP address in the cluster.",
+      "exampleTranslation": "แต่ละ pod จะได้รับ IP address ของตัวเองในคลัสเตอร์"
+    },
+    {
+      "vocab": "cluster",
+      "pronunciation": "คลัส-เตอร์",
+      "meaning": "กลุ่มเซิร์ฟเวอร์ที่ทำงานร่วมกันเป็นระบบเดียว",
+      "example": "Deploy your application to the production cluster.",
+      "exampleTranslation": "ติดตั้งแอปพลิเคชันของคุณไปยัง production cluster"
+    },
+    {
+      "vocab": "node",
+      "pronunciation": "โนด",
+      "meaning": "เครื่องเซิร์ฟเวอร์หนึ่งเครื่องในคลัสเตอร์",
+      "example": "The cluster has three worker nodes for running containers.",
+      "exampleTranslation": "คลัสเตอร์มี worker nodes สามตัวสำหรับรันคอนเทนเนอร์"
+    },
+    {
+      "vocab": "deployment",
+      "pronunciation": "ดี-พลอย-เมนท์",
+      "meaning": "การติดตั้งแอปพลิเคชัน, resource ใน K8s สำหรับจัดการ pods",
+      "example": "Update the deployment to roll out the new version.",
+      "exampleTranslation": "อัปเดต deployment เพื่อปล่อยเวอร์ชันใหม่"
+    },
+    {
+      "vocab": "service (K8s)",
+      "pronunciation": "เซอร์-วิส",
+      "meaning": "resource สำหรับเปิดให้เข้าถึง pods ผ่าน network",
+      "example": "Create a service to expose your pods to external traffic.",
+      "exampleTranslation": "สร้าง service เพื่อเปิดให้ pods รับทราฟฟิกจากภายนอก"
+    },
+    {
+      "vocab": "ingress",
+      "pronunciation": "อิน-เกรส",
+      "meaning": "resource สำหรับจัดการ HTTP traffic เข้าสู่คลัสเตอร์",
+      "example": "Configure ingress rules to route traffic to different services.",
+      "exampleTranslation": "ตั้งค่ากฎ ingress เพื่อส่งทราฟฟิกไปยังบริการต่างๆ"
+    },
+    {
+      "vocab": "namespace",
+      "pronunciation": "เนม-สเปซ",
+      "meaning": "การแบ่งแยกทรัพยากรใน Kubernetes cluster",
+      "example": "Use separate namespaces for development and production environments.",
+      "exampleTranslation": "ใช้ namespaces แยกสำหรับสภาพแวดล้อม development และ production"
+    },
+    {
+      "vocab": "helm",
+      "pronunciation": "เฮล์ม",
+      "meaning": "package manager สำหรับ Kubernetes",
+      "example": "Install the application using a Helm chart.",
+      "exampleTranslation": "ติดตั้งแอปพลิเคชันโดยใช้ Helm chart"
+    },
+    {
+      "vocab": "CI/CD",
+      "pronunciation": "ซี-ไอ ซี-ดี",
+      "meaning": "Continuous Integration/Continuous Deployment, กระบวนการอัตโนมัติสำหรับ build และ deploy",
+      "example": "Our CI/CD pipeline runs tests and deploys automatically on every commit.",
+      "exampleTranslation": "pipeline CI/CD ของเรารันเทสต์และ deploy อัตโนมัติทุกครั้งที่ commit"
+    },
+    {
+      "vocab": "pipeline",
+      "pronunciation": "ไปป์-ไลน์",
+      "meaning": "ลำดับขั้นตอนอัตโนมัติสำหรับ build, test, deploy",
+      "example": "The pipeline includes build, test, and deploy stages.",
+      "exampleTranslation": "pipeline ประกอบด้วยขั้นตอน build, test, และ deploy"
+    },
+    {
+      "vocab": "build",
+      "pronunciation": "บิวด์",
+      "meaning": "การคอมไพล์และแพ็กเกจโค้ดให้พร้อมใช้งาน",
+      "example": "The build failed because of a missing dependency.",
+      "exampleTranslation": "การ build ล้มเหลวเพราะ dependency หายไป"
+    },
+    {
+      "vocab": "artifact",
+      "pronunciation": "อาร์-ทิ-แฟกต์",
+      "meaning": "ผลลัพธ์จากการ build เช่น binary, JAR file, Docker image",
+      "example": "Store build artifacts in a secure repository.",
+      "exampleTranslation": "เก็บ build artifacts ใน repository ที่ปลอดภัย"
+    },
+    {
+      "vocab": "deploy",
+      "pronunciation": "ดี-พลอย",
+      "meaning": "การนำแอปพลิเคชันไปติดตั้งบนเซิร์ฟเวอร์",
+      "example": "We deploy to production every Friday afternoon.",
+      "exampleTranslation": "เรา deploy ไป production ทุกบ่ายวันศุกร์"
+    },
+    {
+      "vocab": "rollback",
+      "pronunciation": "โรล-แบค",
+      "meaning": "การย้อนกลับไปเวอร์ชันก่อนหน้า",
+      "example": "We had to rollback due to a critical bug in the new release.",
+      "exampleTranslation": "เราต้อง rollback เนื่องจากบั๊กร้ายแรงในรุ่นใหม่"
+    },
+    {
+      "vocab": "blue-green deployment",
+      "pronunciation": "บลู-กรีน ดี-พลอย-เมนท์",
+      "meaning": "กลยุทธ์ deploy โดยมีสองสภาพแวดล้อมแล้วสลับทราฟฟิก",
+      "example": "Blue-green deployment allows instant rollback by switching traffic.",
+      "exampleTranslation": "Blue-green deployment ช่วยให้ rollback ทันทีโดยการสลับทราฟฟิก"
+    },
+    {
+      "vocab": "canary deployment",
+      "pronunciation": "คา-นา-รี ดี-พลอย-เมนท์",
+      "meaning": "กลยุทธ์ deploy โดยส่งทราฟฟิกบางส่วนไปเวอร์ชันใหม่ก่อน",
+      "example": "Start with a canary deployment to test the new version with 5% of traffic.",
+      "exampleTranslation": "เริ่มด้วย canary deployment เพื่อทดสอบเวอร์ชันใหม่กับทราฟฟิก 5%"
+    },
+    {
+      "vocab": "rolling update",
+      "pronunciation": "โรล-ลิ่ง อัพ-เดท",
+      "meaning": "การอัปเดตทีละส่วนแบบค่อยเป็นค่อยไป",
+      "example": "Rolling updates replace old pods gradually without downtime.",
+      "exampleTranslation": "Rolling updates แทนที่ pods เก่าทีละตัวโดยไม่มี downtime"
+    },
+    {
+      "vocab": "Infrastructure as Code (IaC)",
+      "pronunciation": "ไอ-เอ-ซี",
+      "meaning": "การจัดการโครงสร้างพื้นฐานด้วยโค้ด",
+      "example": "IaC tools like Terraform let you version control your infrastructure.",
+      "exampleTranslation": "เครื่องมือ IaC เช่น Terraform ให้คุณ version control โครงสร้างพื้นฐาน"
+    },
+    {
+      "vocab": "Terraform",
+      "pronunciation": "เท-รา-ฟอร์ม",
+      "meaning": "เครื่องมือ IaC สำหรับสร้างและจัดการโครงสร้างพื้นฐานบนคลาวด์",
+      "example": "Use Terraform to provision AWS resources declaratively.",
+      "exampleTranslation": "ใช้ Terraform สร้างทรัพยากร AWS แบบ declarative"
+    },
+    {
+      "vocab": "Ansible",
+      "pronunciation": "แอน-ซิ-เบิล",
+      "meaning": "เครื่องมือ automation สำหรับ configuration management",
+      "example": "Ansible playbooks automate server configuration.",
+      "exampleTranslation": "Ansible playbooks อัตโนมัติการตั้งค่าเซิร์ฟเวอร์"
+    },
+    {
+      "vocab": "provisioning",
+      "pronunciation": "โพร-วิ-ชัน-นิ่ง",
+      "meaning": "การจัดเตรียมทรัพยากร, สร้างและตั้งค่าโครงสร้างพื้นฐาน",
+      "example": "Automated provisioning creates servers with a single command.",
+      "exampleTranslation": "การจัดเตรียมอัตโนมัติสร้างเซิร์ฟเวอร์ด้วยคำสั่งเดียว"
+    },
+    {
+      "vocab": "configuration management",
+      "pronunciation": "คอน-ฟิก-กู-เร-ชัน แมเนจ-เมนท์",
+      "meaning": "การจัดการการตั้งค่า, ดูแลให้เซิร์ฟเวอร์มีการตั้งค่าที่ถูกต้อง",
+      "example": "Configuration management ensures all servers have consistent settings.",
+      "exampleTranslation": "การจัดการการตั้งค่าทำให้เซิร์ฟเวอร์ทุกตัวมีการตั้งค่าที่สอดคล้องกัน"
+    },
+    {
+      "vocab": "environment",
+      "pronunciation": "เอน-ไวรอน-เมนท์",
+      "meaning": "สภาพแวดล้อม, เช่น development, staging, production",
+      "example": "Test in the staging environment before deploying to production.",
+      "exampleTranslation": "ทดสอบใน staging environment ก่อน deploy ไป production"
+    },
+    {
+      "vocab": "staging",
+      "pronunciation": "สเตจ-จิ้ง",
+      "meaning": "สภาพแวดล้อมทดสอบที่เหมือน production",
+      "example": "The staging environment mirrors production for final testing.",
+      "exampleTranslation": "staging environment จำลอง production สำหรับการทดสอบขั้นสุดท้าย"
+    },
+    {
+      "vocab": "production",
+      "pronunciation": "โปร-ดัก-ชัน",
+      "meaning": "สภาพแวดล้อมที่ผู้ใช้จริงใช้งาน",
+      "example": "Never test new features directly in production.",
+      "exampleTranslation": "อย่าทดสอบฟีเจอร์ใหม่ใน production โดยตรง"
+    },
+    {
+      "vocab": "monitoring",
+      "pronunciation": "มอ-นิ-เตอ-ริ่ง",
+      "meaning": "การเฝ้าดู, ติดตามสถานะและประสิทธิภาพของระบบ",
+      "example": "Set up monitoring to detect issues before users report them.",
+      "exampleTranslation": "ตั้งค่าการ monitoring เพื่อตรวจจับปัญหาก่อนที่ผู้ใช้จะแจ้ง"
+    },
+    {
+      "vocab": "alerting",
+      "pronunciation": "อะ-เลิร์ท-ติ้ง",
+      "meaning": "การแจ้งเตือน, ส่งการแจ้งเตือนเมื่อเกิดปัญหา",
+      "example": "Configure alerting to notify on-call engineers when errors spike.",
+      "exampleTranslation": "ตั้งค่าการแจ้งเตือนเพื่อแจ้งวิศวกรเวรเมื่อ errors พุ่งสูง"
+    },
+    {
+      "vocab": "logging",
+      "pronunciation": "ล็อก-กิ้ง",
+      "meaning": "การบันทึก log, เก็บข้อมูลกิจกรรมของระบบ",
+      "example": "Centralized logging makes it easier to debug issues.",
+      "exampleTranslation": "การ logging แบบรวมศูนย์ทำให้ debug ปัญหาได้ง่ายขึ้น"
+    },
+    {
+      "vocab": "metrics",
+      "pronunciation": "เมท-ทริกส์",
+      "meaning": "ตัวชี้วัด, ข้อมูลตัวเลขเกี่ยวกับประสิทธิภาพระบบ",
+      "example": "Track metrics like CPU usage, memory, and response time.",
+      "exampleTranslation": "ติดตาม metrics เช่น การใช้ CPU, memory, และ response time"
+    },
+    {
+      "vocab": "dashboard",
+      "pronunciation": "แดช-บอร์ด",
+      "meaning": "หน้าจอแสดงข้อมูลสรุปและตัวชี้วัด",
+      "example": "The Grafana dashboard shows real-time system health.",
+      "exampleTranslation": "dashboard ของ Grafana แสดงสุขภาพระบบแบบ real-time"
+    },
+    {
+      "vocab": "Prometheus",
+      "pronunciation": "โปร-มี-ธี-อัส",
+      "meaning": "ระบบเก็บและ query metrics ยอดนิยมสำหรับ monitoring",
+      "example": "Prometheus scrapes metrics from application endpoints.",
+      "exampleTranslation": "Prometheus ดึง metrics จาก endpoints ของแอปพลิเคชัน"
+    },
+    {
+      "vocab": "Grafana",
+      "pronunciation": "กรา-ฟา-น่า",
+      "meaning": "เครื่องมือสร้าง dashboard และ visualize metrics",
+      "example": "Create Grafana dashboards to visualize Prometheus metrics.",
+      "exampleTranslation": "สร้าง Grafana dashboards เพื่อ visualize metrics จาก Prometheus"
+    },
+    {
+      "vocab": "ELK Stack",
+      "pronunciation": "อี-แอล-เค สแต็ก",
+      "meaning": "ชุดเครื่องมือ Elasticsearch, Logstash, Kibana สำหรับจัดการ logs",
+      "example": "We use the ELK Stack for centralized log management.",
+      "exampleTranslation": "เราใช้ ELK Stack สำหรับการจัดการ logs แบบรวมศูนย์"
+    },
+    {
+      "vocab": "observability",
+      "pronunciation": "ออบ-เซอร์-วา-บิ-ลิ-ที",
+      "meaning": "ความสามารถในการเข้าใจสถานะภายในระบบจากภายนอก",
+      "example": "Good observability requires logs, metrics, and traces.",
+      "exampleTranslation": "observability ที่ดีต้องมี logs, metrics, และ traces"
+    },
+    {
+      "vocab": "tracing",
+      "pronunciation": "เทรส-ซิ่ง",
+      "meaning": "การติดตามคำขอผ่านระบบ distributed",
+      "example": "Distributed tracing helps identify bottlenecks across microservices.",
+      "exampleTranslation": "distributed tracing ช่วยระบุคอขวดข้าม microservices"
+    },
+    {
+      "vocab": "auto-scaling",
+      "pronunciation": "ออ-โต้ สเก-ลิ่ง",
+      "meaning": "การขยายหรือลดทรัพยากรอัตโนมัติตามโหลด",
+      "example": "Auto-scaling adds more servers during traffic spikes.",
+      "exampleTranslation": "auto-scaling เพิ่มเซิร์ฟเวอร์เมื่อทราฟฟิกพุ่งสูง"
+    },
+    {
+      "vocab": "instance",
+      "pronunciation": "อิน-สแตนซ์",
+      "meaning": "เครื่องเซิร์ฟเวอร์เสมือนหนึ่งตัว, เช่น EC2 instance",
+      "example": "Spin up a new instance to handle the increased load.",
+      "exampleTranslation": "เปิด instance ใหม่เพื่อรับโหลดที่เพิ่มขึ้น"
+    },
+    {
+      "vocab": "EC2",
+      "pronunciation": "อี-ซี-ทู",
+      "meaning": "บริการ virtual server ของ AWS",
+      "example": "Deploy your application on EC2 instances in multiple availability zones.",
+      "exampleTranslation": "deploy แอปพลิเคชันบน EC2 instances ในหลาย availability zones"
+    },
+    {
+      "vocab": "S3",
+      "pronunciation": "เอส-ทรี",
+      "meaning": "บริการ object storage ของ AWS",
+      "example": "Store static files and backups in S3 buckets.",
+      "exampleTranslation": "เก็บไฟล์ static และ backups ใน S3 buckets"
+    },
+    {
+      "vocab": "Lambda",
+      "pronunciation": "แลมบ์-ด้า",
+      "meaning": "บริการ serverless functions ของ AWS",
+      "example": "Use Lambda functions for event-driven processing.",
+      "exampleTranslation": "ใช้ Lambda functions สำหรับการประมวลผลแบบ event-driven"
+    },
+    {
+      "vocab": "availability zone",
+      "pronunciation": "อะ-เว-ลา-บิ-ลิ-ที โซน",
+      "meaning": "ศูนย์ข้อมูลที่แยกกันภายใน region เดียวกัน",
+      "example": "Deploy across multiple availability zones for high availability.",
+      "exampleTranslation": "deploy ข้ามหลาย availability zones เพื่อความพร้อมใช้งานสูง"
+    },
+    {
+      "vocab": "region",
+      "pronunciation": "รี-เจียน",
+      "meaning": "พื้นที่ภูมิศาสตร์ที่มีศูนย์ข้อมูลของคลาวด์",
+      "example": "Choose a region close to your users for lower latency.",
+      "exampleTranslation": "เลือก region ใกล้ผู้ใช้เพื่อ latency ที่ต่ำลง"
+    },
+    {
+      "vocab": "VPC (Virtual Private Cloud)",
+      "pronunciation": "วี-พี-ซี",
+      "meaning": "เครือข่ายส่วนตัวเสมือนบนคลาวด์",
+      "example": "Create a VPC to isolate your resources from the public internet.",
+      "exampleTranslation": "สร้าง VPC เพื่อแยกทรัพยากรจากอินเทอร์เน็ตสาธารณะ"
+    },
+    {
+      "vocab": "subnet",
+      "pronunciation": "ซับ-เน็ต",
+      "meaning": "ส่วนย่อยของเครือข่ายใน VPC",
+      "example": "Place your database in a private subnet without internet access.",
+      "exampleTranslation": "วางฐานข้อมูลใน private subnet ที่ไม่มีการเข้าถึงอินเทอร์เน็ต"
+    },
+    {
+      "vocab": "security group",
+      "pronunciation": "ซิ-คิว-ริ-ที กรุ๊ป",
+      "meaning": "กฎไฟร์วอลล์ระดับ instance ใน AWS",
+      "example": "Configure security groups to allow only necessary inbound traffic.",
+      "exampleTranslation": "ตั้งค่า security groups เพื่ออนุญาตเฉพาะทราฟฟิกขาเข้าที่จำเป็น"
+    },
+    {
+      "vocab": "IAM (Identity and Access Management)",
+      "pronunciation": "ไอ-เอ-เอ็ม",
+      "meaning": "ระบบจัดการตัวตนและสิทธิ์บนคลาวด์",
+      "example": "Create IAM roles with least privilege permissions.",
+      "exampleTranslation": "สร้าง IAM roles ด้วยสิทธิ์ที่น้อยที่สุดที่จำเป็น"
+    },
+    {
+      "vocab": "uptime",
+      "pronunciation": "อัพ-ไทม์",
+      "meaning": "เวลาที่ระบบทำงานได้ปกติ",
+      "example": "We achieved 99.99% uptime last year.",
+      "exampleTranslation": "เราบรรลุ uptime 99.99% ปีที่แล้ว"
+    },
+    {
+      "vocab": "downtime",
+      "pronunciation": "ดาวน์-ไทม์",
+      "meaning": "เวลาที่ระบบใช้งานไม่ได้",
+      "example": "Schedule maintenance during off-peak hours to minimize downtime.",
+      "exampleTranslation": "กำหนดการบำรุงรักษาในช่วงที่ใช้งานน้อยเพื่อลด downtime"
+    },
+    {
+      "vocab": "on-call",
+      "pronunciation": "ออน-คอล",
+      "meaning": "เวรเตรียมพร้อมตอบสนองเหตุฉุกเฉิน",
+      "example": "The on-call engineer was paged when the server went down.",
+      "exampleTranslation": "วิศวกรเวรถูกเรียกเมื่อเซิร์ฟเวอร์ล่ม"
+    },
+    {
+      "vocab": "incident",
+      "pronunciation": "อิน-ซิ-เดนท์",
+      "meaning": "เหตุการณ์ที่ส่งผลต่อบริการ",
+      "example": "The incident was resolved within 30 minutes.",
+      "exampleTranslation": "เหตุการณ์ได้รับการแก้ไขภายใน 30 นาที"
+    },
+    {
+      "vocab": "postmortem",
+      "pronunciation": "โพสท์-มอร์-เท็ม",
+      "meaning": "การวิเคราะห์หลังเกิดเหตุการณ์เพื่อป้องกันการเกิดซ้ำ",
+      "example": "Write a postmortem to document what went wrong and how to prevent it.",
+      "exampleTranslation": "เขียน postmortem เพื่อบันทึกว่าอะไรผิดพลาดและจะป้องกันอย่างไร"
+    },
+    {
+      "vocab": "runbook",
+      "pronunciation": "รัน-บุ๊ก",
+      "meaning": "คู่มือขั้นตอนสำหรับจัดการเหตุการณ์หรืองานประจำ",
+      "example": "Follow the runbook to restart the failed service.",
+      "exampleTranslation": "ทำตาม runbook เพื่อ restart บริการที่ล้มเหลว"
+    },
+    {
+      "vocab": "SRE (Site Reliability Engineering)",
+      "pronunciation": "เอส-อาร์-อี",
+      "meaning": "วิศวกรรมความน่าเชื่อถือของไซต์, ผสมผสาน dev และ ops",
+      "example": "Our SRE team ensures the platform maintains high availability.",
+      "exampleTranslation": "ทีม SRE ของเราดูแลให้แพลตฟอร์มมีความพร้อมใช้งานสูง"
+    },
+    {
+      "vocab": "toil",
+      "pronunciation": "ทอยล์",
+      "meaning": "งานซ้ำๆ ที่ไม่สร้างคุณค่าถาวร, ควรทำให้อัตโนมัติ",
+      "example": "Automate repetitive toil to free up time for meaningful work.",
+      "exampleTranslation": "ทำให้งาน toil ซ้ำๆ เป็นอัตโนมัติเพื่อเวลาสำหรับงานที่มีความหมาย"
+    },
+    {
+      "vocab": "error budget",
+      "pronunciation": "เอ-รอร์ บัด-เจ็ท",
+      "meaning": "ปริมาณ downtime หรือ errors ที่ยอมรับได้ใน SRE",
+      "example": "We exceeded our error budget, so we're pausing new releases.",
+      "exampleTranslation": "เราใช้ error budget เกินแล้ว จึงหยุดการปล่อยเวอร์ชันใหม่"
+    },
+    {
+      "vocab": "chaos engineering",
+      "pronunciation": "เคออส เอ็น-จิ-เนีย-ริ่ง",
+      "meaning": "การทดสอบความทนทานโดยจงใจทำให้ระบบล้มเหลว",
+      "example": "Chaos engineering experiments revealed weaknesses in our failover process.",
+      "exampleTranslation": "การทดลอง chaos engineering เผยจุดอ่อนในกระบวนการ failover"
+    },
+    {
+      "vocab": "immutable infrastructure",
+      "pronunciation": "อิม-มิว-ทา-เบิล อิน-ฟรา-สตรัค-เจอร์",
+      "meaning": "โครงสร้างพื้นฐานที่ไม่แก้ไข แต่แทนที่ด้วยใหม่",
+      "example": "With immutable infrastructure, we replace servers instead of patching them.",
+      "exampleTranslation": "ด้วย immutable infrastructure เราแทนที่เซิร์ฟเวอร์แทนที่จะ patch"
+    },
+    {
+      "vocab": "GitOps",
+      "pronunciation": "กิท-ออปส์",
+      "meaning": "การจัดการโครงสร้างพื้นฐานผ่าน Git",
+      "example": "GitOps uses pull requests to manage infrastructure changes.",
+      "exampleTranslation": "GitOps ใช้ pull requests จัดการการเปลี่ยนแปลงโครงสร้างพื้นฐาน"
+    },
+    {
+      "vocab": "secret",
+      "pronunciation": "ซีเครท",
+      "meaning": "ข้อมูลลับ เช่น API keys, passwords",
+      "example": "Never commit secrets to your Git repository.",
+      "exampleTranslation": "อย่า commit secrets ไปยัง Git repository"
+    },
+    {
+      "vocab": "vault",
+      "pronunciation": "วอลท์",
+      "meaning": "ระบบจัดการ secrets อย่างปลอดภัย",
+      "example": "Use HashiCorp Vault to manage application secrets.",
+      "exampleTranslation": "ใช้ HashiCorp Vault จัดการ secrets ของแอปพลิเคชัน"
+    }
+  ]
+}

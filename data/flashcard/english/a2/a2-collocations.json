@@ -1,0 +1,620 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Collocations",
+    "description": "CEFR A2 Common Collocations - Words that naturally go together",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "collocation"
+    ]
+  },
+  "cards": [
+    {
+      "vocab": "make a mistake",
+      "pronunciation": "เมค อะ มิส-เทค",
+      "meaning": "ทำผิดพลาด",
+      "example": "Everyone makes mistakes sometimes.",
+      "exampleTranslation": "ทุกคนทำผิดพลาดบางครั้ง"
+    },
+    {
+      "vocab": "make a decision",
+      "pronunciation": "เมค อะ ดิ-ซิ-ชัน",
+      "meaning": "ตัดสินใจ",
+      "example": "I need to make a decision soon.",
+      "exampleTranslation": "ฉันต้องตัดสินใจเร็วๆ นี้"
+    },
+    {
+      "vocab": "make a phone call",
+      "pronunciation": "เมค อะ โฟน คอลล์",
+      "meaning": "โทรศัพท์",
+      "example": "I need to make a phone call.",
+      "exampleTranslation": "ฉันต้องโทรศัพท์"
+    },
+    {
+      "vocab": "make money",
+      "pronunciation": "เมค มัน-นี่",
+      "meaning": "หาเงิน",
+      "example": "He makes a lot of money.",
+      "exampleTranslation": "เขาหาเงินได้เยอะ"
+    },
+    {
+      "vocab": "make friends",
+      "pronunciation": "เมค เฟรนด์ส",
+      "meaning": "หาเพื่อน",
+      "example": "It's easy to make friends here.",
+      "exampleTranslation": "ที่นี่หาเพื่อนง่าย"
+    },
+    {
+      "vocab": "make noise",
+      "pronunciation": "เมค นอยซ์",
+      "meaning": "ทำเสียงดัง",
+      "example": "Please don't make noise.",
+      "exampleTranslation": "กรุณาอย่าทำเสียงดัง"
+    },
+    {
+      "vocab": "make progress",
+      "pronunciation": "เมค โปร-เกรส",
+      "meaning": "มีความก้าวหน้า",
+      "example": "You're making good progress.",
+      "exampleTranslation": "คุณมีความก้าวหน้าดี"
+    },
+    {
+      "vocab": "make a reservation",
+      "pronunciation": "เมค อะ เรส-เซอร์-เว-ชัน",
+      "meaning": "จอง",
+      "example": "I'd like to make a reservation for two.",
+      "exampleTranslation": "ฉันอยากจองโต๊ะสำหรับสองคน"
+    },
+    {
+      "vocab": "make breakfast",
+      "pronunciation": "เมค เบรค-ฟาสท์",
+      "meaning": "ทำอาหารเช้า",
+      "example": "I make breakfast every morning.",
+      "exampleTranslation": "ฉันทำอาหารเช้าทุกเช้า"
+    },
+    {
+      "vocab": "make the bed",
+      "pronunciation": "เมค เดอะ เบด",
+      "meaning": "เก็บที่นอน",
+      "example": "Don't forget to make the bed.",
+      "exampleTranslation": "อย่าลืมเก็บที่นอน"
+    },
+    {
+      "vocab": "make an effort",
+      "pronunciation": "เมค แอน เอฟ-ฟอร์ท",
+      "meaning": "พยายาม",
+      "example": "Please make an effort to be on time.",
+      "exampleTranslation": "กรุณาพยายามมาตรงเวลา"
+    },
+    {
+      "vocab": "make a difference",
+      "pronunciation": "เมค อะ ดิฟ-เฟอ-เรนซ์",
+      "meaning": "สร้างความแตกต่าง",
+      "example": "Your help makes a difference.",
+      "exampleTranslation": "ความช่วยเหลือของคุณสร้างความแตกต่าง"
+    },
+    {
+      "vocab": "do homework",
+      "pronunciation": "ดู โฮม-เวิร์ค",
+      "meaning": "ทำการบ้าน",
+      "example": "I have to do my homework.",
+      "exampleTranslation": "ฉันต้องทำการบ้าน"
+    },
+    {
+      "vocab": "do the dishes",
+      "pronunciation": "ดู เดอะ ดิช-เชส",
+      "meaning": "ล้างจาน",
+      "example": "Can you do the dishes tonight?",
+      "exampleTranslation": "คืนนี้ล้างจานได้ไหม?"
+    },
+    {
+      "vocab": "do the laundry",
+      "pronunciation": "ดู เดอะ ลอน-ดรี้",
+      "meaning": "ซักผ้า",
+      "example": "I do the laundry on Sundays.",
+      "exampleTranslation": "ฉันซักผ้าวันอาทิตย์"
+    },
+    {
+      "vocab": "do the shopping",
+      "pronunciation": "ดู เดอะ ช็อป-ปิ้ง",
+      "meaning": "ซื้อของ",
+      "example": "I need to do the shopping.",
+      "exampleTranslation": "ฉันต้องไปซื้อของ"
+    },
+    {
+      "vocab": "do exercise",
+      "pronunciation": "ดู เอ็กซ์-เซอร์-ไซส์",
+      "meaning": "ออกกำลังกาย",
+      "example": "I do exercise every morning.",
+      "exampleTranslation": "ฉันออกกำลังกายทุกเช้า"
+    },
+    {
+      "vocab": "do your best",
+      "pronunciation": "ดู ยัวร์ เบสท์",
+      "meaning": "ทำให้ดีที่สุด",
+      "example": "Just do your best.",
+      "exampleTranslation": "แค่ทำให้ดีที่สุด"
+    },
+    {
+      "vocab": "do a favor",
+      "pronunciation": "ดู อะ เฟ-เวอร์",
+      "meaning": "ช่วยเหลือ",
+      "example": "Can you do me a favor?",
+      "exampleTranslation": "ช่วยฉันหน่อยได้ไหม?"
+    },
+    {
+      "vocab": "do business",
+      "pronunciation": "ดู บิส-เนส",
+      "meaning": "ทำธุรกิจ",
+      "example": "We do business with many countries.",
+      "exampleTranslation": "เราทำธุรกิจกับหลายประเทศ"
+    },
+    {
+      "vocab": "do well",
+      "pronunciation": "ดู เวลล์",
+      "meaning": "ทำได้ดี",
+      "example": "She's doing well at school.",
+      "exampleTranslation": "เธอเรียนได้ดีที่โรงเรียน"
+    },
+    {
+      "vocab": "take a photo",
+      "pronunciation": "เทค อะ โฟ-โต้",
+      "meaning": "ถ่ายรูป",
+      "example": "Can you take a photo of us?",
+      "exampleTranslation": "ถ่ายรูปเราให้หน่อยได้ไหม?"
+    },
+    {
+      "vocab": "take a break",
+      "pronunciation": "เทค อะ เบรค",
+      "meaning": "พักหน่อย",
+      "example": "Let's take a break.",
+      "exampleTranslation": "พักกันหน่อยเถอะ"
+    },
+    {
+      "vocab": "take a shower",
+      "pronunciation": "เทค อะ ชาว-เวอร์",
+      "meaning": "อาบน้ำ",
+      "example": "I take a shower every morning.",
+      "exampleTranslation": "ฉันอาบน้ำทุกเช้า"
+    },
+    {
+      "vocab": "take a bath",
+      "pronunciation": "เทค อะ บาธ",
+      "meaning": "อาบน้ำ (แช่อ่าง)",
+      "example": "I like to take a bath before bed.",
+      "exampleTranslation": "ฉันชอบอาบน้ำก่อนนอน"
+    },
+    {
+      "vocab": "take a nap",
+      "pronunciation": "เทค อะ แนพ",
+      "meaning": "งีบหลับ",
+      "example": "I need to take a nap.",
+      "exampleTranslation": "ฉันต้องงีบหลับ"
+    },
+    {
+      "vocab": "take a walk",
+      "pronunciation": "เทค อะ วอล์ค",
+      "meaning": "เดินเล่น",
+      "example": "Let's take a walk in the park.",
+      "exampleTranslation": "ไปเดินเล่นในสวนกัน"
+    },
+    {
+      "vocab": "take a taxi",
+      "pronunciation": "เทค อะ แท็กซี่",
+      "meaning": "นั่งแท็กซี่",
+      "example": "I'll take a taxi to the airport.",
+      "exampleTranslation": "ฉันจะนั่งแท็กซี่ไปสนามบิน"
+    },
+    {
+      "vocab": "take a bus",
+      "pronunciation": "เทค อะ บัส",
+      "meaning": "นั่งรถเมล์",
+      "example": "I take a bus to work.",
+      "exampleTranslation": "ฉันนั่งรถเมล์ไปทำงาน"
+    },
+    {
+      "vocab": "take a seat",
+      "pronunciation": "เทค อะ ซีท",
+      "meaning": "นั่ง",
+      "example": "Please take a seat.",
+      "exampleTranslation": "เชิญนั่งครับ"
+    },
+    {
+      "vocab": "take notes",
+      "pronunciation": "เทค โน้ทส์",
+      "meaning": "จดบันทึก",
+      "example": "You should take notes in class.",
+      "exampleTranslation": "คุณควรจดบันทึกในชั้นเรียน"
+    },
+    {
+      "vocab": "take medicine",
+      "pronunciation": "เทค เม-ดิ-ซิน",
+      "meaning": "กินยา",
+      "example": "Take this medicine twice a day.",
+      "exampleTranslation": "กินยานี้วันละสองครั้ง"
+    },
+    {
+      "vocab": "take care of",
+      "pronunciation": "เทค แคร์ ออฟ",
+      "meaning": "ดูแล",
+      "example": "I take care of my grandmother.",
+      "exampleTranslation": "ฉันดูแลยาย"
+    },
+    {
+      "vocab": "take time",
+      "pronunciation": "เทค ไทม์",
+      "meaning": "ใช้เวลา",
+      "example": "Learning a language takes time.",
+      "exampleTranslation": "การเรียนภาษาใช้เวลา"
+    },
+    {
+      "vocab": "have breakfast",
+      "pronunciation": "แฮฟ เบรค-ฟาสท์",
+      "meaning": "กินอาหารเช้า",
+      "example": "I have breakfast at 7 AM.",
+      "exampleTranslation": "ฉันกินอาหารเช้าตอน 7 โมง"
+    },
+    {
+      "vocab": "have lunch",
+      "pronunciation": "แฮฟ ลันช์",
+      "meaning": "กินอาหารกลางวัน",
+      "example": "Let's have lunch together.",
+      "exampleTranslation": "ไปกินข้าวกลางวันด้วยกัน"
+    },
+    {
+      "vocab": "have dinner",
+      "pronunciation": "แฮฟ ดิน-เนอร์",
+      "meaning": "กินอาหารเย็น",
+      "example": "We have dinner at 7 PM.",
+      "exampleTranslation": "เรากินข้าวเย็นตอน 1 ทุ่ม"
+    },
+    {
+      "vocab": "have a drink",
+      "pronunciation": "แฮฟ อะ ดริ้งค์",
+      "meaning": "ดื่ม",
+      "example": "Would you like to have a drink?",
+      "exampleTranslation": "อยากดื่มอะไรไหม?"
+    },
+    {
+      "vocab": "have a good time",
+      "pronunciation": "แฮฟ อะ กู๊ด ไทม์",
+      "meaning": "สนุก",
+      "example": "Did you have a good time?",
+      "exampleTranslation": "สนุกไหม?"
+    },
+    {
+      "vocab": "have a rest",
+      "pronunciation": "แฮฟ อะ เรสท์",
+      "meaning": "พักผ่อน",
+      "example": "You need to have a rest.",
+      "exampleTranslation": "คุณต้องพักผ่อน"
+    },
+    {
+      "vocab": "have a problem",
+      "pronunciation": "แฮฟ อะ พรอบ-เบลม",
+      "meaning": "มีปัญหา",
+      "example": "I have a problem with my computer.",
+      "exampleTranslation": "ฉันมีปัญหากับคอมพิวเตอร์"
+    },
+    {
+      "vocab": "have a headache",
+      "pronunciation": "แฮฟ อะ เฮด-เอค",
+      "meaning": "ปวดหัว",
+      "example": "I have a terrible headache.",
+      "exampleTranslation": "ฉันปวดหัวมาก"
+    },
+    {
+      "vocab": "have a cold",
+      "pronunciation": "แฮฟ อะ โคลด์",
+      "meaning": "เป็นหวัด",
+      "example": "I have a cold.",
+      "exampleTranslation": "ฉันเป็นหวัด"
+    },
+    {
+      "vocab": "have fun",
+      "pronunciation": "แฮฟ ฟัน",
+      "meaning": "สนุก",
+      "example": "Have fun at the party!",
+      "exampleTranslation": "สนุกกับปาร์ตี้นะ!"
+    },
+    {
+      "vocab": "have an idea",
+      "pronunciation": "แฮฟ แอน ไอ-เดีย",
+      "meaning": "มีความคิด",
+      "example": "I have an idea!",
+      "exampleTranslation": "ฉันมีไอเดีย!"
+    },
+    {
+      "vocab": "get a job",
+      "pronunciation": "เก็ท อะ จ็อบ",
+      "meaning": "ได้งาน",
+      "example": "I finally got a job.",
+      "exampleTranslation": "ในที่สุดฉันก็ได้งาน"
+    },
+    {
+      "vocab": "get married",
+      "pronunciation": "เก็ท แมร์-รี่ด",
+      "meaning": "แต่งงาน",
+      "example": "They got married last year.",
+      "exampleTranslation": "พวกเขาแต่งงานกันปีที่แล้ว"
+    },
+    {
+      "vocab": "get ready",
+      "pronunciation": "เก็ท เรด-ดี้",
+      "meaning": "เตรียมตัว",
+      "example": "Get ready! We're leaving soon.",
+      "exampleTranslation": "เตรียมตัว! เราจะไปเร็วๆ นี้"
+    },
+    {
+      "vocab": "get lost",
+      "pronunciation": "เก็ท ลอสท์",
+      "meaning": "หลงทาง",
+      "example": "I got lost in the city.",
+      "exampleTranslation": "ฉันหลงทางในเมือง"
+    },
+    {
+      "vocab": "get angry",
+      "pronunciation": "เก็ท แอง-กรี้",
+      "meaning": "โกรธ",
+      "example": "Don't get angry.",
+      "exampleTranslation": "อย่าโกรธ"
+    },
+    {
+      "vocab": "get tired",
+      "pronunciation": "เก็ท ไทร์ด",
+      "meaning": "เหนื่อย",
+      "example": "I'm getting tired.",
+      "exampleTranslation": "ฉันเริ่มเหนื่อยแล้ว"
+    },
+    {
+      "vocab": "get better",
+      "pronunciation": "เก็ท เบ็ท-เทอร์",
+      "meaning": "ดีขึ้น",
+      "example": "I hope you get better soon.",
+      "exampleTranslation": "หวังว่าคุณจะดีขึ้นเร็วๆ"
+    },
+    {
+      "vocab": "get worse",
+      "pronunciation": "เก็ท เวิร์ส",
+      "meaning": "แย่ลง",
+      "example": "The weather is getting worse.",
+      "exampleTranslation": "อากาศแย่ลง"
+    },
+    {
+      "vocab": "pay attention",
+      "pronunciation": "เพย์ อะ-เทน-ชัน",
+      "meaning": "ตั้งใจฟัง",
+      "example": "Please pay attention.",
+      "exampleTranslation": "กรุณาตั้งใจฟัง"
+    },
+    {
+      "vocab": "catch a cold",
+      "pronunciation": "แคทช์ อะ โคลด์",
+      "meaning": "เป็นหวัด",
+      "example": "I caught a cold.",
+      "exampleTranslation": "ฉันเป็นหวัด"
+    },
+    {
+      "vocab": "save money",
+      "pronunciation": "เซฟ มัน-นี่",
+      "meaning": "เก็บเงิน",
+      "example": "I'm trying to save money.",
+      "exampleTranslation": "ฉันกำลังพยายามเก็บเงิน"
+    },
+    {
+      "vocab": "spend money",
+      "pronunciation": "สเปนด์ มัน-นี่",
+      "meaning": "ใช้จ่ายเงิน",
+      "example": "Don't spend too much money.",
+      "exampleTranslation": "อย่าใช้เงินมากเกินไป"
+    },
+    {
+      "vocab": "spend time",
+      "pronunciation": "สเปนด์ ไทม์",
+      "meaning": "ใช้เวลา",
+      "example": "I like to spend time with my family.",
+      "exampleTranslation": "ฉันชอบใช้เวลากับครอบครัว"
+    },
+    {
+      "vocab": "waste time",
+      "pronunciation": "เวสท์ ไทม์",
+      "meaning": "เสียเวลา",
+      "example": "Don't waste time on games.",
+      "exampleTranslation": "อย่าเสียเวลากับเกม"
+    },
+    {
+      "vocab": "tell the truth",
+      "pronunciation": "เทลล์ เดอะ ทรูธ",
+      "meaning": "พูดความจริง",
+      "example": "Always tell the truth.",
+      "exampleTranslation": "พูดความจริงเสมอ"
+    },
+    {
+      "vocab": "tell a lie",
+      "pronunciation": "เทลล์ อะ ลาย",
+      "meaning": "โกหก",
+      "example": "Never tell a lie.",
+      "exampleTranslation": "อย่าโกหก"
+    },
+    {
+      "vocab": "keep a secret",
+      "pronunciation": "คีพ อะ ซี-เคร็ท",
+      "meaning": "เก็บความลับ",
+      "example": "Can you keep a secret?",
+      "exampleTranslation": "เก็บความลับได้ไหม?"
+    },
+    {
+      "vocab": "keep quiet",
+      "pronunciation": "คีพ ไคว-เอ็ท",
+      "meaning": "เงียบ",
+      "example": "Please keep quiet.",
+      "exampleTranslation": "กรุณาเงียบ"
+    },
+    {
+      "vocab": "heavy rain",
+      "pronunciation": "เฮฟ-วี่ เรน",
+      "meaning": "ฝนตกหนัก",
+      "example": "There was heavy rain last night.",
+      "exampleTranslation": "เมื่อคืนฝนตกหนัก"
+    },
+    {
+      "vocab": "strong wind",
+      "pronunciation": "สตรอง วินด์",
+      "meaning": "ลมแรง",
+      "example": "There's a strong wind today.",
+      "exampleTranslation": "วันนี้ลมแรง"
+    },
+    {
+      "vocab": "heavy traffic",
+      "pronunciation": "เฮฟ-วี่ แทรฟ-ฟิค",
+      "meaning": "รถติดมาก",
+      "example": "There's heavy traffic in the morning.",
+      "exampleTranslation": "ตอนเช้ารถติดมาก"
+    },
+    {
+      "vocab": "fast food",
+      "pronunciation": "ฟาสท์ ฟูด",
+      "meaning": "อาหารฟาสต์ฟู้ด",
+      "example": "I try not to eat fast food.",
+      "exampleTranslation": "ฉันพยายามไม่กินฟาสต์ฟู้ด"
+    },
+    {
+      "vocab": "public transport",
+      "pronunciation": "พับ-ลิค แทรนส์-พอร์ท",
+      "meaning": "ขนส่งสาธารณะ",
+      "example": "I use public transport.",
+      "exampleTranslation": "ฉันใช้ขนส่งสาธารณะ"
+    },
+    {
+      "vocab": "close friend",
+      "pronunciation": "โคลส เฟรนด์",
+      "meaning": "เพื่อนสนิท",
+      "example": "She's my close friend.",
+      "exampleTranslation": "เธอเป็นเพื่อนสนิทของฉัน"
+    },
+    {
+      "vocab": "best friend",
+      "pronunciation": "เบสท์ เฟรนด์",
+      "meaning": "เพื่อนที่ดีที่สุด",
+      "example": "He's my best friend.",
+      "exampleTranslation": "เขาเป็นเพื่อนที่ดีที่สุดของฉัน"
+    },
+    {
+      "vocab": "old friend",
+      "pronunciation": "โอลด์ เฟรนด์",
+      "meaning": "เพื่อนเก่า",
+      "example": "I met an old friend yesterday.",
+      "exampleTranslation": "เมื่อวานฉันเจอเพื่อนเก่า"
+    },
+    {
+      "vocab": "good idea",
+      "pronunciation": "กู๊ด ไอ-เดีย",
+      "meaning": "ความคิดดี",
+      "example": "That's a good idea!",
+      "exampleTranslation": "นั่นเป็นความคิดที่ดี!"
+    },
+    {
+      "vocab": "bad news",
+      "pronunciation": "แบด นิวส์",
+      "meaning": "ข่าวร้าย",
+      "example": "I have bad news.",
+      "exampleTranslation": "ฉันมีข่าวร้าย"
+    },
+    {
+      "vocab": "good news",
+      "pronunciation": "กู๊ด นิวส์",
+      "meaning": "ข่าวดี",
+      "example": "I have good news for you.",
+      "exampleTranslation": "ฉันมีข่าวดีให้คุณ"
+    },
+    {
+      "vocab": "long time",
+      "pronunciation": "ลอง ไทม์",
+      "meaning": "เวลานาน",
+      "example": "It's been a long time.",
+      "exampleTranslation": "นานแล้ว"
+    },
+    {
+      "vocab": "short time",
+      "pronunciation": "ชอร์ท ไทม์",
+      "meaning": "เวลาสั้นๆ",
+      "example": "I'll be back in a short time.",
+      "exampleTranslation": "ฉันจะกลับมาในเวลาสั้นๆ"
+    },
+    {
+      "vocab": "hard work",
+      "pronunciation": "ฮาร์ด เวิร์ค",
+      "meaning": "การทำงานหนัก",
+      "example": "Success takes hard work.",
+      "exampleTranslation": "ความสำเร็จต้องใช้การทำงานหนัก"
+    },
+    {
+      "vocab": "big mistake",
+      "pronunciation": "บิ๊ก มิส-เทค",
+      "meaning": "ความผิดพลาดใหญ่",
+      "example": "That was a big mistake.",
+      "exampleTranslation": "นั่นเป็นความผิดพลาดใหญ่"
+    },
+    {
+      "vocab": "main reason",
+      "pronunciation": "เมน รี-ซั่น",
+      "meaning": "เหตุผลหลัก",
+      "example": "What's the main reason?",
+      "exampleTranslation": "เหตุผลหลักคืออะไร?"
+    },
+    {
+      "vocab": "daily life",
+      "pronunciation": "เด-ลี่ ไลฟ์",
+      "meaning": "ชีวิตประจำวัน",
+      "example": "English is useful in daily life.",
+      "exampleTranslation": "ภาษาอังกฤษมีประโยชน์ในชีวิตประจำวัน"
+    },
+    {
+      "vocab": "free time",
+      "pronunciation": "ฟรี ไทม์",
+      "meaning": "เวลาว่าง",
+      "example": "What do you do in your free time?",
+      "exampleTranslation": "คุณทำอะไรในเวลาว่าง?"
+    },
+    {
+      "vocab": "foreign language",
+      "pronunciation": "ฟอ-เรน แลง-กวิจ",
+      "meaning": "ภาษาต่างประเทศ",
+      "example": "I want to learn a foreign language.",
+      "exampleTranslation": "ฉันอยากเรียนภาษาต่างประเทศ"
+    },
+    {
+      "vocab": "native speaker",
+      "pronunciation": "เน-ทิฟ สปี-เกอร์",
+      "meaning": "เจ้าของภาษา",
+      "example": "She's a native speaker of English.",
+      "exampleTranslation": "เธอเป็นเจ้าของภาษาอังกฤษ"
+    },
+    {
+      "vocab": "social media",
+      "pronunciation": "โซ-เชียล มี-เดีย",
+      "meaning": "โซเชียลมีเดีย",
+      "example": "I spend too much time on social media.",
+      "exampleTranslation": "ฉันใช้เวลากับโซเชียลมีเดียมากเกินไป"
+    },
+    {
+      "vocab": "rush hour",
+      "pronunciation": "รัช อาว-เออร์",
+      "meaning": "ชั่วโมงเร่งด่วน",
+      "example": "Avoid driving during rush hour.",
+      "exampleTranslation": "หลีกเลี่ยงการขับรถช่วงชั่วโมงเร่งด่วน"
+    },
+    {
+      "vocab": "round trip",
+      "pronunciation": "ราวนด์ ทริป",
+      "meaning": "เที่ยวไป-กลับ",
+      "example": "I need a round trip ticket.",
+      "exampleTranslation": "ฉันต้องการตั๋วไป-กลับ"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "HSK1 - Pronouns & Numbers",
+    "description": "HSK1 Level - Personal pronouns, demonstratives, and numbers 1-10",
+    "category": "HSK1",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "hsk1", "pronouns", "numbers", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "我",
+      "pronunciation": "wǒ",
+      "meaning": "ฉัน, ผม",
+      "example": "我是学生。",
+      "exampleTranslation": "ฉันเป็นนักเรียน"
+    },
+    {
+      "vocab": "你",
+      "pronunciation": "nǐ",
+      "meaning": "คุณ, เธอ",
+      "example": "你好！",
+      "exampleTranslation": "สวัสดี!"
+    },
+    {
+      "vocab": "他",
+      "pronunciation": "tā",
+      "meaning": "เขา (ผู้ชาย)",
+      "example": "他是我朋友。",
+      "exampleTranslation": "เขาเป็นเพื่อนฉัน"
+    },
+    {
+      "vocab": "她",
+      "pronunciation": "tā",
+      "meaning": "เธอ (ผู้หญิง)",
+      "example": "她很漂亮。",
+      "exampleTranslation": "เธอสวยมาก"
+    },
+    {
+      "vocab": "我们",
+      "pronunciation": "wǒmen",
+      "meaning": "พวกเรา",
+      "example": "我们是朋友。",
+      "exampleTranslation": "พวกเราเป็นเพื่อนกัน"
+    },
+    {
+      "vocab": "你们",
+      "pronunciation": "nǐmen",
+      "meaning": "พวกคุณ",
+      "example": "你们好！",
+      "exampleTranslation": "พวกคุณสบายดี!"
+    },
+    {
+      "vocab": "他们",
+      "pronunciation": "tāmen",
+      "meaning": "พวกเขา",
+      "example": "他们是中国人。",
+      "exampleTranslation": "พวกเขาเป็นคนจีน"
+    },
+    {
+      "vocab": "这",
+      "pronunciation": "zhè",
+      "meaning": "นี่, นี้",
+      "example": "这是什么？",
+      "exampleTranslation": "นี่คืออะไร?"
+    },
+    {
+      "vocab": "那",
+      "pronunciation": "nà",
+      "meaning": "นั่น, นั้น",
+      "example": "那是我的书。",
+      "exampleTranslation": "นั่นคือหนังสือของฉัน"
+    },
+    {
+      "vocab": "哪",
+      "pronunciation": "nǎ",
+      "meaning": "ไหน (คำถาม)",
+      "example": "你是哪国人？",
+      "exampleTranslation": "คุณเป็นคนชาติไหน?"
+    },
+    {
+      "vocab": "一",
+      "pronunciation": "yī",
+      "meaning": "หนึ่ง",
+      "example": "一个人。",
+      "exampleTranslation": "คนหนึ่งคน"
+    },
+    {
+      "vocab": "二",
+      "pronunciation": "èr",
+      "meaning": "สอง",
+      "example": "二月。",
+      "exampleTranslation": "เดือนกุมภาพันธ์"
+    },
+    {
+      "vocab": "两",
+      "pronunciation": "liǎng",
+      "meaning": "สอง (ใช้กับลักษณนาม)",
+      "example": "两个人。",
+      "exampleTranslation": "สองคน"
+    },
+    {
+      "vocab": "三",
+      "pronunciation": "sān",
+      "meaning": "สาม",
+      "example": "三本书。",
+      "exampleTranslation": "หนังสือสามเล่ม"
+    },
+    {
+      "vocab": "四",
+      "pronunciation": "sì",
+      "meaning": "สี่",
+      "example": "四个苹果。",
+      "exampleTranslation": "แอปเปิลสี่ลูก"
+    },
+    {
+      "vocab": "五",
+      "pronunciation": "wǔ",
+      "meaning": "ห้า",
+      "example": "五块钱。",
+      "exampleTranslation": "ห้าหยวน"
+    },
+    {
+      "vocab": "六",
+      "pronunciation": "liù",
+      "meaning": "หก",
+      "example": "六点钟。",
+      "exampleTranslation": "หกโมง"
+    },
+    {
+      "vocab": "七",
+      "pronunciation": "qī",
+      "meaning": "เจ็ด",
+      "example": "七天。",
+      "exampleTranslation": "เจ็ดวัน"
+    },
+    {
+      "vocab": "八",
+      "pronunciation": "bā",
+      "meaning": "แปด",
+      "example": "八个人。",
+      "exampleTranslation": "แปดคน"
+    },
+    {
+      "vocab": "九",
+      "pronunciation": "jiǔ",
+      "meaning": "เก้า",
+      "example": "九月。",
+      "exampleTranslation": "เดือนกันยายน"
+    },
+    {
+      "vocab": "十",
+      "pronunciation": "shí",
+      "meaning": "สิบ",
+      "example": "十块钱。",
+      "exampleTranslation": "สิบหยวน"
+    },
+    {
+      "vocab": "零",
+      "pronunciation": "líng",
+      "meaning": "ศูนย์",
+      "example": "零度。",
+      "exampleTranslation": "ศูนย์องศา"
+    },
+    {
+      "vocab": "个",
+      "pronunciation": "gè",
+      "meaning": "ลักษณนามทั่วไป",
+      "example": "一个人。",
+      "exampleTranslation": "คนหนึ่งคน"
+    },
+    {
+      "vocab": "些",
+      "pronunciation": "xiē",
+      "meaning": "บาง, หลาย (จำนวนไม่ระบุ)",
+      "example": "一些水。",
+      "exampleTranslation": "น้ำบางส่วน"
+    }
+  ]
+}

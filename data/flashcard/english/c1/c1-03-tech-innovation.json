@@ -1,0 +1,412 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Technology & Innovation",
+    "description": "C1 level vocabulary for advanced technology and innovation topics",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "technology"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "paradigm shift",
+      "pronunciation": "พา-รา-ไดม์ ชิฟท์",
+      "meaning": "การเปลี่ยนกระบวนทัศน์",
+      "example": "AI represents a paradigm shift in computing.",
+      "exampleTranslation": "AI เป็นการเปลี่ยนกระบวนทัศน์ในการประมวลผล"
+    },
+    {
+      "vocab": "cutting-edge",
+      "pronunciation": "คัท-ทิง เอ็จ",
+      "meaning": "ล้ำสมัยที่สุด, ทันสมัยที่สุด",
+      "example": "We use cutting-edge technology.",
+      "exampleTranslation": "เราใช้เทคโนโลยีที่ล้ำสมัยที่สุด"
+    },
+    {
+      "vocab": "disruptive technology",
+      "pronunciation": "ดิส-รัพ-ทีฟ เทค-นอล-โล-จี",
+      "meaning": "เทคโนโลยีที่เปลี่ยนแปลงอย่างพลิกโฉม",
+      "example": "Blockchain is a disruptive technology.",
+      "exampleTranslation": "บล็อกเชนเป็นเทคโนโลยีที่เปลี่ยนแปลงอย่างพลิกโฉม"
+    },
+    {
+      "vocab": "exponential growth",
+      "pronunciation": "เอ็กซ์-โพ-เนน-เชียล โกรธ",
+      "meaning": "การเติบโตแบบทวีคูณ",
+      "example": "Data is growing at an exponential rate.",
+      "exampleTranslation": "ข้อมูลกำลังเติบโตในอัตราแบบทวีคูณ"
+    },
+    {
+      "vocab": "scalable",
+      "pronunciation": "สเกล-ละ-เบิล",
+      "meaning": "ขยายขนาดได้",
+      "example": "Build a scalable architecture.",
+      "exampleTranslation": "สร้างสถาปัตยกรรมที่ขยายขนาดได้"
+    },
+    {
+      "vocab": "interoperability",
+      "pronunciation": "อิน-เทอะ-ออป-เปอ-ระ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถในการทำงานร่วมกัน",
+      "example": "Interoperability between systems is crucial.",
+      "exampleTranslation": "ความสามารถในการทำงานร่วมกันระหว่างระบบมีความสำคัญ"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี",
+      "meaning": "ความหน่วง, เวลาหน่วง",
+      "example": "Reduce network latency for better performance.",
+      "exampleTranslation": "ลดความหน่วงของเครือข่ายเพื่อประสิทธิภาพที่ดีขึ้น"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงานต่อหน่วยเวลา",
+      "example": "Increase system throughput.",
+      "exampleTranslation": "เพิ่มปริมาณงานของระบบ"
+    },
+    {
+      "vocab": "bandwidth",
+      "pronunciation": "แบนด์-วิดธ์",
+      "meaning": "แบนด์วิดธ์, ความจุของช่องสัญญาณ",
+      "example": "Higher bandwidth enables faster downloads.",
+      "exampleTranslation": "แบนด์วิดธ์ที่สูงขึ้นทำให้ดาวน์โหลดได้เร็วขึ้น"
+    },
+    {
+      "vocab": "redundancy",
+      "pronunciation": "รี-ดัน-ดัน-ซี",
+      "meaning": "ความซ้ำซ้อน (เพื่อความปลอดภัย)",
+      "example": "Build redundancy into your system.",
+      "exampleTranslation": "สร้างความซ้ำซ้อนเข้าไปในระบบของคุณ"
+    },
+    {
+      "vocab": "fault tolerance",
+      "pronunciation": "ฟอลท์ ทอล-เลอ-เรนซ์",
+      "meaning": "ความทนทานต่อข้อผิดพลาด",
+      "example": "Design for fault tolerance.",
+      "exampleTranslation": "ออกแบบให้ทนทานต่อข้อผิดพลาด"
+    },
+    {
+      "vocab": "deprecate",
+      "pronunciation": "เดพ-รี-เคท",
+      "meaning": "ประกาศว่าล้าสมัย (ซอฟต์แวร์)",
+      "example": "This API has been deprecated.",
+      "exampleTranslation": "API นี้ถูกประกาศว่าล้าสมัยแล้ว"
+    },
+    {
+      "vocab": "legacy system",
+      "pronunciation": "เลก-กะ-ซี ซิส-เท็ม",
+      "meaning": "ระบบเก่า, ระบบเดิม",
+      "example": "Migrating from legacy systems is challenging.",
+      "exampleTranslation": "การย้ายจากระบบเก่าเป็นสิ่งที่ท้าทาย"
+    },
+    {
+      "vocab": "backward compatible",
+      "pronunciation": "แบค-เวิร์ด คอม-แพท-ทิ-เบิล",
+      "meaning": "ใช้งานร่วมกับรุ่นก่อนได้",
+      "example": "The update is backward compatible.",
+      "exampleTranslation": "การอัปเดตใช้งานร่วมกับรุ่นก่อนได้"
+    },
+    {
+      "vocab": "abstraction",
+      "pronunciation": "แอบ-สแทรค-ชั่น",
+      "meaning": "นามธรรม, การซ่อนรายละเอียด",
+      "example": "Use abstraction to simplify complexity.",
+      "exampleTranslation": "ใช้การซ่อนรายละเอียดเพื่อลดความซับซ้อน"
+    },
+    {
+      "vocab": "encapsulation",
+      "pronunciation": "เอ็น-แคป-ซู-เล-ชั่น",
+      "meaning": "การห่อหุ้ม (ข้อมูล)",
+      "example": "Encapsulation protects data integrity.",
+      "exampleTranslation": "การห่อหุ้มปกป้องความสมบูรณ์ของข้อมูล"
+    },
+    {
+      "vocab": "modular",
+      "pronunciation": "มอด-ดิว-ลาร์",
+      "meaning": "แบบโมดูล, แยกส่วน",
+      "example": "Build modular components.",
+      "exampleTranslation": "สร้างส่วนประกอบแบบโมดูล"
+    },
+    {
+      "vocab": "decoupled",
+      "pronunciation": "ดี-คัพ-เพิล",
+      "meaning": "แยกส่วน, ไม่พึ่งพากัน",
+      "example": "Keep your services decoupled.",
+      "exampleTranslation": "ทำให้บริการของคุณแยกส่วนกัน"
+    },
+    {
+      "vocab": "deterministic",
+      "pronunciation": "ดิ-เทอร์-มิ-นิส-ทิค",
+      "meaning": "กำหนดได้แน่นอน",
+      "example": "The algorithm should be deterministic.",
+      "exampleTranslation": "อัลกอริทึมควรกำหนดผลลัพธ์ได้แน่นอน"
+    },
+    {
+      "vocab": "idempotent",
+      "pronunciation": "ไอ-เด็ม-โพ-เทนท์",
+      "meaning": "ทำซ้ำได้โดยไม่เปลี่ยนผล",
+      "example": "Make your API calls idempotent.",
+      "exampleTranslation": "ทำให้การเรียก API ของคุณทำซ้ำได้โดยไม่เปลี่ยนผล"
+    },
+    {
+      "vocab": "asynchronous",
+      "pronunciation": "เอ-ซิน-โคร-นัส",
+      "meaning": "ไม่ประสานเวลา, อะซิงโครนัส",
+      "example": "Use asynchronous processing for heavy tasks.",
+      "exampleTranslation": "ใช้การประมวลผลแบบอะซิงโครนัสสำหรับงานหนัก"
+    },
+    {
+      "vocab": "concurrent",
+      "pronunciation": "คอน-เคอ-เรินท์",
+      "meaning": "พร้อมกัน, ทำงานพร้อมกัน",
+      "example": "Handle concurrent requests efficiently.",
+      "exampleTranslation": "จัดการคำขอที่ทำพร้อมกันอย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "immutable",
+      "pronunciation": "อิม-มิว-ทะ-เบิล",
+      "meaning": "ไม่สามารถเปลี่ยนแปลงได้",
+      "example": "Use immutable data structures.",
+      "exampleTranslation": "ใช้โครงสร้างข้อมูลที่ไม่สามารถเปลี่ยนแปลงได้"
+    },
+    {
+      "vocab": "volatile",
+      "pronunciation": "วอล-ละ-ไทล์",
+      "meaning": "เปลี่ยนแปลงง่าย, ไม่คงที่",
+      "example": "Volatile data needs careful handling.",
+      "exampleTranslation": "ข้อมูลที่เปลี่ยนแปลงง่ายต้องจัดการอย่างระมัดระวัง"
+    },
+    {
+      "vocab": "bottleneck",
+      "pronunciation": "บอท-เทิล-เน็ค",
+      "meaning": "คอขวด, จุดติดขัด",
+      "example": "Identify performance bottlenecks.",
+      "exampleTranslation": "ระบุจุดติดขัดของประสิทธิภาพ"
+    },
+    {
+      "vocab": "benchmark",
+      "pronunciation": "เบนช์-มาร์ค",
+      "meaning": "ทดสอบประสิทธิภาพ",
+      "example": "Benchmark your code before deployment.",
+      "exampleTranslation": "ทดสอบประสิทธิภาพโค้ดของคุณก่อนปรับใช้"
+    },
+    {
+      "vocab": "refactor",
+      "pronunciation": "รี-แฟค-เทอะ",
+      "meaning": "ปรับปรุงโค้ดโดยไม่เปลี่ยนพฤติกรรม",
+      "example": "Refactor this code for better readability.",
+      "exampleTranslation": "ปรับปรุงโค้ดนี้เพื่อให้อ่านง่ายขึ้น"
+    },
+    {
+      "vocab": "iterate",
+      "pronunciation": "อิท-เทอ-เรท",
+      "meaning": "ทำซ้ำ, วนซ้ำ",
+      "example": "Iterate quickly based on feedback.",
+      "exampleTranslation": "ทำซ้ำอย่างรวดเร็วตามความคิดเห็น"
+    },
+    {
+      "vocab": "deploy",
+      "pronunciation": "ดิ-พลอย",
+      "meaning": "ปรับใช้, นำไปใช้งาน",
+      "example": "Deploy the update to production.",
+      "exampleTranslation": "ปรับใช้การอัปเดตไปยังโปรดักชัน"
+    },
+    {
+      "vocab": "provision",
+      "pronunciation": "โพร-วิ-ชั่น",
+      "meaning": "จัดเตรียม (ทรัพยากร)",
+      "example": "Provision new servers automatically.",
+      "exampleTranslation": "จัดเตรียมเซิร์ฟเวอร์ใหม่โดยอัตโนมัติ"
+    },
+    {
+      "vocab": "orchestrate",
+      "pronunciation": "ออร์-เคส-เทรท",
+      "meaning": "ประสานงาน, จัดการ",
+      "example": "Orchestrate containerized applications.",
+      "exampleTranslation": "ประสานงานแอปพลิเคชันที่บรรจุในคอนเทนเนอร์"
+    },
+    {
+      "vocab": "containerization",
+      "pronunciation": "คอน-เทน-เนอ-ไร-เซ-ชั่น",
+      "meaning": "การบรรจุในคอนเทนเนอร์",
+      "example": "Containerization simplifies deployment.",
+      "exampleTranslation": "การบรรจุในคอนเทนเนอร์ทำให้การปรับใช้ง่ายขึ้น"
+    },
+    {
+      "vocab": "microservices",
+      "pronunciation": "ไมโคร-เซอร์-วิส-เซส",
+      "meaning": "ไมโครเซอร์วิส, บริการย่อย",
+      "example": "Migrate to a microservices architecture.",
+      "exampleTranslation": "ย้ายไปสู่สถาปัตยกรรมไมโครเซอร์วิส"
+    },
+    {
+      "vocab": "serverless",
+      "pronunciation": "เซิร์ฟ-เวอะ-เลส",
+      "meaning": "ไร้เซิร์ฟเวอร์",
+      "example": "Serverless computing reduces operational costs.",
+      "exampleTranslation": "การประมวลผลแบบไร้เซิร์ฟเวอร์ลดต้นทุนการดำเนินงาน"
+    },
+    {
+      "vocab": "edge computing",
+      "pronunciation": "เอ็จ คอม-พิว-ทิง",
+      "meaning": "การประมวลผลที่ขอบเครือข่าย",
+      "example": "Edge computing reduces latency.",
+      "exampleTranslation": "การประมวลผลที่ขอบเครือข่ายลดความหน่วง"
+    },
+    {
+      "vocab": "machine learning",
+      "pronunciation": "มะ-ชีน เลิร์น-นิง",
+      "meaning": "การเรียนรู้ของเครื่อง",
+      "example": "Apply machine learning to predict trends.",
+      "exampleTranslation": "นำการเรียนรู้ของเครื่องมาทำนายแนวโน้ม"
+    },
+    {
+      "vocab": "neural network",
+      "pronunciation": "นิว-รัล เน็ท-เวิร์ค",
+      "meaning": "โครงข่ายประสาทเทียม",
+      "example": "Train a neural network for image recognition.",
+      "exampleTranslation": "ฝึกโครงข่ายประสาทเทียมสำหรับการรู้จำภาพ"
+    },
+    {
+      "vocab": "algorithm",
+      "pronunciation": "อัล-โก-ริ-ธึม",
+      "meaning": "อัลกอริทึม, ขั้นตอนวิธี",
+      "example": "Optimize the algorithm for efficiency.",
+      "exampleTranslation": "ปรับอัลกอริทึมให้มีประสิทธิภาพ"
+    },
+    {
+      "vocab": "heuristic",
+      "pronunciation": "ฮิว-ริส-ทิค",
+      "meaning": "วิธีการแบบฮิวริสติก, แบบลองผิดลองถูก",
+      "example": "Use heuristic methods for complex problems.",
+      "exampleTranslation": "ใช้วิธีฮิวริสติกสำหรับปัญหาที่ซับซ้อน"
+    },
+    {
+      "vocab": "cryptography",
+      "pronunciation": "คริพ-ทอก-กรา-ฟี",
+      "meaning": "การเข้ารหัสลับ",
+      "example": "Strong cryptography protects sensitive data.",
+      "exampleTranslation": "การเข้ารหัสลับที่แข็งแกร่งปกป้องข้อมูลที่ละเอียดอ่อน"
+    },
+    {
+      "vocab": "encryption",
+      "pronunciation": "เอ็น-คริป-ชั่น",
+      "meaning": "การเข้ารหัส",
+      "example": "End-to-end encryption ensures privacy.",
+      "exampleTranslation": "การเข้ารหัสแบบ end-to-end รับประกันความเป็นส่วนตัว"
+    },
+    {
+      "vocab": "authentication",
+      "pronunciation": "ออ-เธน-ทิ-เค-ชั่น",
+      "meaning": "การพิสูจน์ตัวตน",
+      "example": "Implement multi-factor authentication.",
+      "exampleTranslation": "นำการพิสูจน์ตัวตนหลายปัจจัยมาใช้"
+    },
+    {
+      "vocab": "authorization",
+      "pronunciation": "ออ-โธ-ไร-เซ-ชั่น",
+      "meaning": "การอนุญาต, การให้สิทธิ์",
+      "example": "Check authorization before accessing resources.",
+      "exampleTranslation": "ตรวจสอบการอนุญาตก่อนเข้าถึงทรัพยากร"
+    },
+    {
+      "vocab": "vulnerability",
+      "pronunciation": "วัล-เนอ-ระ-บิ-ลิ-ตี้",
+      "meaning": "ช่องโหว่, จุดอ่อน",
+      "example": "Patch security vulnerabilities immediately.",
+      "exampleTranslation": "แก้ไขช่องโหว่ด้านความปลอดภัยทันที"
+    },
+    {
+      "vocab": "penetration testing",
+      "pronunciation": "เพ็น-นิ-เทร-ชั่น เทส-ทิง",
+      "meaning": "การทดสอบเจาะระบบ",
+      "example": "Conduct regular penetration testing.",
+      "exampleTranslation": "ดำเนินการทดสอบเจาะระบบเป็นประจำ"
+    },
+    {
+      "vocab": "zero-day exploit",
+      "pronunciation": "ซีโร่-เดย์ เอ็กซ์-พลอยท์",
+      "meaning": "การโจมตีช่องโหว่ที่ยังไม่มีการแก้ไข",
+      "example": "Zero-day exploits are the most dangerous.",
+      "exampleTranslation": "การโจมตีช่องโหว่ zero-day อันตรายที่สุด"
+    },
+    {
+      "vocab": "data breach",
+      "pronunciation": "เด-ต้า บรีช",
+      "meaning": "การรั่วไหลของข้อมูล",
+      "example": "The data breach affected millions of users.",
+      "exampleTranslation": "การรั่วไหลของข้อมูลส่งผลกระทบต่อผู้ใช้หลายล้านคน"
+    },
+    {
+      "vocab": "compliance",
+      "pronunciation": "คอม-ไพล-แอนซ์",
+      "meaning": "การปฏิบัติตามมาตรฐาน",
+      "example": "Ensure GDPR compliance.",
+      "exampleTranslation": "ให้แน่ใจว่าปฏิบัติตาม GDPR"
+    },
+    {
+      "vocab": "proprietary",
+      "pronunciation": "โพร-ไพร-อิ-ทะ-รี",
+      "meaning": "เฉพาะ, เป็นกรรมสิทธิ์",
+      "example": "They use proprietary software.",
+      "exampleTranslation": "พวกเขาใช้ซอฟต์แวร์ที่เป็นกรรมสิทธิ์"
+    },
+    {
+      "vocab": "open source",
+      "pronunciation": "โอ-เพ่น ซอร์ส",
+      "meaning": "โอเพนซอร์ส, ซอร์สโค้ดเปิด",
+      "example": "Contribute to open source projects.",
+      "exampleTranslation": "มีส่วนร่วมในโครงการโอเพนซอร์ส"
+    },
+    {
+      "vocab": "agile methodology",
+      "pronunciation": "แอ-ไจล์ เมธ-ธอด-ดอล-โล-จี",
+      "meaning": "วิธีการแบบอไจล์",
+      "example": "We follow agile methodology.",
+      "exampleTranslation": "เราทำตามวิธีการแบบอไจล์"
+    },
+    {
+      "vocab": "sprint",
+      "pronunciation": "สปรินท์",
+      "meaning": "รอบการทำงานสั้น (ในอไจล์)",
+      "example": "Complete the feature in this sprint.",
+      "exampleTranslation": "ทำฟีเจอร์ให้เสร็จในสปรินท์นี้"
+    },
+    {
+      "vocab": "retrospective",
+      "pronunciation": "เร-โทร-สเป็ค-ทิฟ",
+      "meaning": "การทบทวนย้อนหลัง",
+      "example": "Hold a retrospective after each sprint.",
+      "exampleTranslation": "จัดการทบทวนย้อนหลังหลังจากแต่ละสปรินท์"
+    },
+    {
+      "vocab": "technical debt",
+      "pronunciation": "เท็ค-นิ-คัล เด็ท",
+      "meaning": "หนี้ทางเทคนิค",
+      "example": "Address technical debt regularly.",
+      "exampleTranslation": "จัดการหนี้ทางเทคนิคอย่างสม่ำเสมอ"
+    },
+    {
+      "vocab": "proof of concept",
+      "pronunciation": "พรูฟ ออฟ คอน-เซ็พท์",
+      "meaning": "การพิสูจน์แนวคิด",
+      "example": "Build a proof of concept first.",
+      "exampleTranslation": "สร้างการพิสูจน์แนวคิดก่อน"
+    },
+    {
+      "vocab": "minimum viable product",
+      "pronunciation": "มิน-นิ-มัม ไว-อะ-เบิล โพรดักท์",
+      "meaning": "ผลิตภัณฑ์ที่ใช้งานได้ขั้นต่ำ (MVP)",
+      "example": "Launch with a minimum viable product.",
+      "exampleTranslation": "เปิดตัวด้วยผลิตภัณฑ์ที่ใช้งานได้ขั้นต่ำ"
+    },
+    {
+      "vocab": "iteration",
+      "pronunciation": "อิท-เทอ-เร-ชั่น",
+      "meaning": "รอบการทำซ้ำ",
+      "example": "Improve through multiple iterations.",
+      "exampleTranslation": "ปรับปรุงผ่านการทำซ้ำหลายรอบ"
+    }
+  ]
+}

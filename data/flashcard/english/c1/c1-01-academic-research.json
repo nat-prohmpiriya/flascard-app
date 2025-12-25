@@ -1,0 +1,419 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Academic & Research",
+    "description": "C1 level vocabulary for advanced academic writing and research",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "academic"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "elucidate",
+      "pronunciation": "อิ-ลู-ซิ-เดท",
+      "meaning": "อธิบายให้ชัดเจน, ทำให้กระจ่าง",
+      "example": "The professor elucidated the complex theory with simple examples.",
+      "exampleTranslation": "ศาสตราจารย์อธิบายทฤษฎีซับซ้อนให้ชัดเจนด้วยตัวอย่างง่ายๆ"
+    },
+    {
+      "vocab": "corroborate",
+      "pronunciation": "คอ-รอบ-โบ-เรท",
+      "meaning": "ยืนยัน, สนับสนุน (หลักฐาน)",
+      "example": "Multiple studies corroborate these findings.",
+      "exampleTranslation": "การศึกษาหลายชิ้นยืนยันผลการค้นพบเหล่านี้"
+    },
+    {
+      "vocab": "extrapolate",
+      "pronunciation": "เอ็กซ์-แทรป-โพ-เลท",
+      "meaning": "คาดการณ์จากข้อมูลที่มี, ขยายความ",
+      "example": "We can extrapolate future trends from current data.",
+      "exampleTranslation": "เราสามารถคาดการณ์แนวโน้มอนาคตจากข้อมูลปัจจุบัน"
+    },
+    {
+      "vocab": "paradigm",
+      "pronunciation": "พา-รา-ไดม์",
+      "meaning": "กระบวนทัศน์, แบบแผนความคิด",
+      "example": "This discovery represents a paradigm shift in physics.",
+      "exampleTranslation": "การค้นพบนี้แสดงถึงการเปลี่ยนกระบวนทัศน์ในฟิสิกส์"
+    },
+    {
+      "vocab": "epistemology",
+      "pronunciation": "อิ-พิส-ทิ-มอล-โล-จี",
+      "meaning": "ญาณวิทยา, ทฤษฎีความรู้",
+      "example": "Epistemology examines the nature of knowledge itself.",
+      "exampleTranslation": "ญาณวิทยาศึกษาธรรมชาติของความรู้"
+    },
+    {
+      "vocab": "ontology",
+      "pronunciation": "ออน-ทอล-โล-จี",
+      "meaning": "ภววิทยา, ทฤษฎีความเป็นจริง",
+      "example": "The ontology of the research must be clearly defined.",
+      "exampleTranslation": "ภววิทยาของการวิจัยต้องถูกนิยามอย่างชัดเจน"
+    },
+    {
+      "vocab": "phenomenology",
+      "pronunciation": "ฟี-นอม-มิ-นอล-โล-จี",
+      "meaning": "ปรากฏการณ์วิทยา",
+      "example": "A phenomenological approach focuses on lived experience.",
+      "exampleTranslation": "แนวทางปรากฏการณ์วิทยาเน้นประสบการณ์ที่ดำรงอยู่"
+    },
+    {
+      "vocab": "hermeneutics",
+      "pronunciation": "เฮอร์-เมอ-นิว-ทิกส์",
+      "meaning": "อรรถปริวรรตศาสตร์, การตีความ",
+      "example": "Hermeneutics is essential for textual analysis.",
+      "exampleTranslation": "อรรถปริวรรตศาสตร์จำเป็นสำหรับการวิเคราะห์ตัวบท"
+    },
+    {
+      "vocab": "axiom",
+      "pronunciation": "แอ็ก-ซี-อัม",
+      "meaning": "สัจพจน์, หลักการพื้นฐาน",
+      "example": "This axiom forms the foundation of the theory.",
+      "exampleTranslation": "สัจพจน์นี้เป็นรากฐานของทฤษฎี"
+    },
+    {
+      "vocab": "postulate",
+      "pronunciation": "พอส-ทิว-เลท",
+      "meaning": "สมมติฐาน, ตั้งสมมติฐาน",
+      "example": "Einstein postulated that the speed of light is constant.",
+      "exampleTranslation": "ไอน์สไตน์ตั้งสมมติฐานว่าความเร็วแสงคงที่"
+    },
+    {
+      "vocab": "conjecture",
+      "pronunciation": "คอน-เจค-เจอะ",
+      "meaning": "ข้อสันนิษฐาน, คาดเดา",
+      "example": "This remains a conjecture until proven.",
+      "exampleTranslation": "นี่ยังคงเป็นข้อสันนิษฐานจนกว่าจะพิสูจน์ได้"
+    },
+    {
+      "vocab": "delineate",
+      "pronunciation": "ดิ-ลิน-นี-เอท",
+      "meaning": "อธิบายอย่างละเอียด, กำหนดขอบเขต",
+      "example": "The paper delineates the boundaries of the study.",
+      "exampleTranslation": "บทความนี้อธิบายขอบเขตของการศึกษาอย่างละเอียด"
+    },
+    {
+      "vocab": "substantiate",
+      "pronunciation": "ซับ-สแตน-ชิ-เอท",
+      "meaning": "พิสูจน์, ยืนยันด้วยหลักฐาน",
+      "example": "Can you substantiate your claims with evidence?",
+      "exampleTranslation": "คุณสามารถยืนยันข้อกล่าวอ้างของคุณด้วยหลักฐานได้ไหม?"
+    },
+    {
+      "vocab": "disambiguate",
+      "pronunciation": "ดิส-แอม-บิก-กิว-เอท",
+      "meaning": "ทำให้ชัดเจน, ขจัดความกำกวม",
+      "example": "We need to disambiguate these terms.",
+      "exampleTranslation": "เราต้องทำให้คำเหล่านี้ชัดเจน"
+    },
+    {
+      "vocab": "operationalize",
+      "pronunciation": "ออป-เปอ-เร-ชั่น-นัล-ไลซ์",
+      "meaning": "นิยามเชิงปฏิบัติการ",
+      "example": "How do you operationalize happiness in your study?",
+      "exampleTranslation": "คุณนิยามความสุขเชิงปฏิบัติการในการศึกษาของคุณอย่างไร?"
+    },
+    {
+      "vocab": "longitudinal",
+      "pronunciation": "ลอง-จิ-ทิว-ดิ-นัล",
+      "meaning": "ตามยาว, ระยะยาว (การศึกษา)",
+      "example": "A longitudinal study tracks participants over time.",
+      "exampleTranslation": "การศึกษาระยะยาวติดตามผู้เข้าร่วมตลอดเวลา"
+    },
+    {
+      "vocab": "cross-sectional",
+      "pronunciation": "ครอส-เซค-ชั่น-นัล",
+      "meaning": "ภาคตัดขวาง (การศึกษา ณ จุดเวลาหนึ่ง)",
+      "example": "Cross-sectional studies provide a snapshot of data.",
+      "exampleTranslation": "การศึกษาภาคตัดขวางให้ภาพรวมข้อมูล ณ จุดเวลาหนึ่ง"
+    },
+    {
+      "vocab": "meta-analysis",
+      "pronunciation": "เม-ต้า อะ-นา-ลิ-ซิส",
+      "meaning": "การวิเคราะห์อภิมาน",
+      "example": "The meta-analysis combined data from 50 studies.",
+      "exampleTranslation": "การวิเคราะห์อภิมานรวมข้อมูลจาก 50 การศึกษา"
+    },
+    {
+      "vocab": "triangulation",
+      "pronunciation": "ไทร-แอง-กิว-เล-ชั่น",
+      "meaning": "การตรวจสอบสามเส้า",
+      "example": "Triangulation improves the validity of qualitative research.",
+      "exampleTranslation": "การตรวจสอบสามเส้าเพิ่มความเที่ยงตรงของการวิจัยเชิงคุณภาพ"
+    },
+    {
+      "vocab": "saturation",
+      "pronunciation": "แซท-ทิว-เร-ชั่น",
+      "meaning": "ความอิ่มตัว (ข้อมูล)",
+      "example": "Data collection continued until saturation was reached.",
+      "exampleTranslation": "การเก็บข้อมูลดำเนินต่อไปจนกว่าจะถึงความอิ่มตัว"
+    },
+    {
+      "vocab": "confounding variable",
+      "pronunciation": "คอน-ฟาวน์-ดิง แว-รี-เอะ-เบิล",
+      "meaning": "ตัวแปรกวน",
+      "example": "Age is a potential confounding variable in this study.",
+      "exampleTranslation": "อายุเป็นตัวแปรกวนที่เป็นไปได้ในการศึกษานี้"
+    },
+    {
+      "vocab": "spurious",
+      "pronunciation": "สเปียว-รี-อัส",
+      "meaning": "เทียม, ไม่แท้จริง",
+      "example": "The correlation may be spurious.",
+      "exampleTranslation": "ความสัมพันธ์อาจเป็นเพียงความสัมพันธ์เทียม"
+    },
+    {
+      "vocab": "replicability",
+      "pronunciation": "เรพ-ลิ-คะ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถในการทำซ้ำ",
+      "example": "Replicability is crucial for scientific validity.",
+      "exampleTranslation": "ความสามารถในการทำซ้ำสำคัญต่อความเที่ยงตรงทางวิทยาศาสตร์"
+    },
+    {
+      "vocab": "generalizability",
+      "pronunciation": "เจน-เนอ-รัล-ไลซ์-อะ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถในการอ้างอิงทั่วไป",
+      "example": "The generalizability of these findings is limited.",
+      "exampleTranslation": "ความสามารถในการอ้างอิงทั่วไปของผลการค้นพบนี้มีจำกัด"
+    },
+    {
+      "vocab": "parsimony",
+      "pronunciation": "พาร์-ซิ-โม-นี",
+      "meaning": "ความกระชับ, หลักประหยัด",
+      "example": "The principle of parsimony favors simpler explanations.",
+      "exampleTranslation": "หลักประหยัดสนับสนุนคำอธิบายที่เรียบง่ายกว่า"
+    },
+    {
+      "vocab": "heuristic",
+      "pronunciation": "ฮิว-ริส-ทิค",
+      "meaning": "วิธีการแบบสำนึก, ฮิวริสติก",
+      "example": "This provides a useful heuristic for decision-making.",
+      "exampleTranslation": "นี่ให้วิธีการแบบสำนึกที่มีประโยชน์สำหรับการตัดสินใจ"
+    },
+    {
+      "vocab": "taxonomy",
+      "pronunciation": "แท็ก-ซอน-โน-มี",
+      "meaning": "อนุกรมวิธาน, การจำแนกประเภท",
+      "example": "Bloom's taxonomy classifies educational objectives.",
+      "exampleTranslation": "อนุกรมวิธานของบลูมจำแนกวัตถุประสงค์ทางการศึกษา"
+    },
+    {
+      "vocab": "discourse",
+      "pronunciation": "ดิส-คอร์ส",
+      "meaning": "วาทกรรม, การสนทนาเชิงวิชาการ",
+      "example": "Academic discourse follows specific conventions.",
+      "exampleTranslation": "วาทกรรมวิชาการเป็นไปตามธรรมเนียมเฉพาะ"
+    },
+    {
+      "vocab": "juxtapose",
+      "pronunciation": "จัก-สตะ-โพส",
+      "meaning": "วางเคียงกัน, เปรียบเทียบ",
+      "example": "The author juxtaposes traditional and modern approaches.",
+      "exampleTranslation": "ผู้เขียนวางเคียงแนวทางดั้งเดิมและสมัยใหม่เข้าด้วยกัน"
+    },
+    {
+      "vocab": "dichotomy",
+      "pronunciation": "ได-คอท-โท-มี",
+      "meaning": "การแบ่งเป็นสองส่วน, ทวิภาวะ",
+      "example": "The dichotomy between theory and practice is false.",
+      "exampleTranslation": "ทวิภาวะระหว่างทฤษฎีและปฏิบัติเป็นเรื่องเท็จ"
+    },
+    {
+      "vocab": "paradox",
+      "pronunciation": "พา-รา-ด็อกซ์",
+      "meaning": "ความขัดแย้งในตัว, ปฏิทรรศน์",
+      "example": "This paradox challenges conventional wisdom.",
+      "exampleTranslation": "ปฏิทรรศน์นี้ท้าทายภูมิปัญญาทั่วไป"
+    },
+    {
+      "vocab": "anomaly",
+      "pronunciation": "อะ-นอม-มะ-ลี",
+      "meaning": "สิ่งผิดปกติ, ความผิดปกติ",
+      "example": "The data contains several anomalies.",
+      "exampleTranslation": "ข้อมูลมีความผิดปกติหลายประการ"
+    },
+    {
+      "vocab": "nuance",
+      "pronunciation": "นิว-อานซ์",
+      "meaning": "ความละเอียดอ่อน, ความแตกต่างเล็กน้อย",
+      "example": "The nuances of meaning are often lost in translation.",
+      "exampleTranslation": "ความละเอียดอ่อนของความหมายมักสูญหายในการแปล"
+    },
+    {
+      "vocab": "salient",
+      "pronunciation": "เซ-ลี-เอินท์",
+      "meaning": "เด่นชัด, สำคัญ",
+      "example": "The salient features of the theory are discussed.",
+      "exampleTranslation": "คุณลักษณะเด่นชัดของทฤษฎีถูกอภิปราย"
+    },
+    {
+      "vocab": "pertinent",
+      "pronunciation": "เพอร์-ทิ-เนินท์",
+      "meaning": "เกี่ยวข้อง, ตรงประเด็น",
+      "example": "Only include pertinent information.",
+      "exampleTranslation": "ใส่เฉพาะข้อมูลที่เกี่ยวข้องเท่านั้น"
+    },
+    {
+      "vocab": "cogent",
+      "pronunciation": "โค-เจนท์",
+      "meaning": "น่าเชื่อถือ, มีเหตุผลหนักแน่น",
+      "example": "She presented a cogent argument.",
+      "exampleTranslation": "เธอนำเสนอข้อโต้แย้งที่น่าเชื่อถือ"
+    },
+    {
+      "vocab": "lucid",
+      "pronunciation": "ลู-ซิด",
+      "meaning": "ชัดเจน, เข้าใจง่าย",
+      "example": "The explanation was remarkably lucid.",
+      "exampleTranslation": "คำอธิบายชัดเจนอย่างน่าทึ่ง"
+    },
+    {
+      "vocab": "succinct",
+      "pronunciation": "ซัค-ซิงท์",
+      "meaning": "กระชับ, รัดกุม",
+      "example": "Keep your abstract succinct.",
+      "exampleTranslation": "ทำให้บทคัดย่อของคุณกระชับ"
+    },
+    {
+      "vocab": "verbose",
+      "pronunciation": "เวอร์-โบส",
+      "meaning": "ใช้คำฟุ่มเฟือย, เยิ่นเย้อ",
+      "example": "Avoid verbose writing in academic papers.",
+      "exampleTranslation": "หลีกเลี่ยงการเขียนที่ฟุ่มเฟือยในบทความวิชาการ"
+    },
+    {
+      "vocab": "refute",
+      "pronunciation": "รี-ฟิวท์",
+      "meaning": "หักล้าง, พิสูจน์ว่าผิด",
+      "example": "The evidence refutes the original hypothesis.",
+      "exampleTranslation": "หลักฐานหักล้างสมมติฐานเดิม"
+    },
+    {
+      "vocab": "rebut",
+      "pronunciation": "รี-บัท",
+      "meaning": "โต้แย้ง, คัดค้าน",
+      "example": "He rebutted the criticism effectively.",
+      "exampleTranslation": "เขาโต้แย้งคำวิจารณ์ได้อย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "contend",
+      "pronunciation": "คอน-เทนด์",
+      "meaning": "ยืนยัน, โต้แย้ง",
+      "example": "Some scholars contend that this view is outdated.",
+      "exampleTranslation": "นักวิชาการบางคนยืนยันว่ามุมมองนี้ล้าสมัย"
+    },
+    {
+      "vocab": "posit",
+      "pronunciation": "พอ-ซิท",
+      "meaning": "ตั้งสมมติฐาน, เสนอ",
+      "example": "The theory posits a direct relationship.",
+      "exampleTranslation": "ทฤษฎีเสนอความสัมพันธ์โดยตรง"
+    },
+    {
+      "vocab": "proponent",
+      "pronunciation": "โพร-โพ-เนินท์",
+      "meaning": "ผู้สนับสนุน",
+      "example": "Proponents of this theory argue that...",
+      "exampleTranslation": "ผู้สนับสนุนทฤษฎีนี้โต้แย้งว่า..."
+    },
+    {
+      "vocab": "advocate",
+      "pronunciation": "แอด-โว-เคท",
+      "meaning": "สนับสนุน, ผู้สนับสนุน",
+      "example": "Many researchers advocate for open access.",
+      "exampleTranslation": "นักวิจัยหลายคนสนับสนุนการเข้าถึงแบบเปิด"
+    },
+    {
+      "vocab": "detractor",
+      "pronunciation": "ดิ-แทร็ค-เทอะ",
+      "meaning": "ผู้วิจารณ์, ผู้คัดค้าน",
+      "example": "Detractors point to several flaws in the methodology.",
+      "exampleTranslation": "ผู้วิจารณ์ชี้ให้เห็นข้อบกพร่องหลายประการในวิธีวิทยา"
+    },
+    {
+      "vocab": "seminal",
+      "pronunciation": "เซม-มิ-นัล",
+      "meaning": "บุกเบิก, มีอิทธิพล",
+      "example": "This is a seminal work in the field.",
+      "exampleTranslation": "นี่คือผลงานบุกเบิกในสาขานี้"
+    },
+    {
+      "vocab": "canonical",
+      "pronunciation": "คะ-นอน-นิ-คัล",
+      "meaning": "ที่เป็นมาตรฐาน, ที่ได้รับการยอมรับ",
+      "example": "This is considered a canonical text.",
+      "exampleTranslation": "นี่ถือว่าเป็นตำราที่เป็นมาตรฐาน"
+    },
+    {
+      "vocab": "nascent",
+      "pronunciation": "เน-เซินท์",
+      "meaning": "เพิ่งเริ่มต้น, กำลังเกิด",
+      "example": "This is still a nascent field of research.",
+      "exampleTranslation": "นี่ยังคงเป็นสาขาวิจัยที่เพิ่งเริ่มต้น"
+    },
+    {
+      "vocab": "proliferate",
+      "pronunciation": "โพร-ลิฟ-เฟอ-เรท",
+      "meaning": "แพร่กระจาย, เพิ่มขึ้นอย่างรวดเร็ว",
+      "example": "Studies on this topic have proliferated.",
+      "exampleTranslation": "การศึกษาในหัวข้อนี้แพร่กระจายอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "synthesize",
+      "pronunciation": "ซิน-ธิ-ไซซ์",
+      "meaning": "สังเคราะห์, รวมเข้าด้วยกัน",
+      "example": "The review synthesizes current knowledge.",
+      "exampleTranslation": "บทวิจารณ์สังเคราะห์ความรู้ปัจจุบัน"
+    },
+    {
+      "vocab": "scrutinize",
+      "pronunciation": "สครู-ทิ-ไนซ์",
+      "meaning": "ตรวจสอบอย่างละเอียด",
+      "example": "The methodology was scrutinized by experts.",
+      "exampleTranslation": "วิธีวิทยาถูกตรวจสอบอย่างละเอียดโดยผู้เชี่ยวชาญ"
+    },
+    {
+      "vocab": "underscore",
+      "pronunciation": "อัน-เดอะ-สกอร์",
+      "meaning": "เน้นย้ำ, ขีดเส้นใต้",
+      "example": "These findings underscore the importance of early intervention.",
+      "exampleTranslation": "ผลการค้นพบเหล่านี้เน้นย้ำความสำคัญของการแทรกแซงตั้งแต่เนิ่นๆ"
+    },
+    {
+      "vocab": "ameliorate",
+      "pronunciation": "อะ-มีล-ยอ-เรท",
+      "meaning": "ทำให้ดีขึ้น, บรรเทา",
+      "example": "The intervention aims to ameliorate symptoms.",
+      "exampleTranslation": "การแทรกแซงมุ่งหมายที่จะบรรเทาอาการ"
+    },
+    {
+      "vocab": "exacerbate",
+      "pronunciation": "เอ็กซ์-แซส-เซอะ-เบท",
+      "meaning": "ทำให้แย่ลง, ทำให้รุนแรงขึ้น",
+      "example": "Stress can exacerbate existing conditions.",
+      "exampleTranslation": "ความเครียดสามารถทำให้อาการที่มีอยู่แย่ลง"
+    },
+    {
+      "vocab": "mitigate",
+      "pronunciation": "มิท-ทิ-เกท",
+      "meaning": "บรรเทา, ลดความรุนแรง",
+      "example": "Measures to mitigate the risks were implemented.",
+      "exampleTranslation": "มาตรการเพื่อบรรเทาความเสี่ยงถูกนำมาใช้"
+    },
+    {
+      "vocab": "obviate",
+      "pronunciation": "อ็อบ-วิ-เอท",
+      "meaning": "ขจัด, หลีกเลี่ยง",
+      "example": "This approach obviates the need for surgery.",
+      "exampleTranslation": "แนวทางนี้ขจัดความจำเป็นในการผ่าตัด"
+    },
+    {
+      "vocab": "preclude",
+      "pronunciation": "พรี-คลูด",
+      "meaning": "ป้องกัน, ทำให้เป็นไปไม่ได้",
+      "example": "The design precludes certain types of bias.",
+      "exampleTranslation": "การออกแบบป้องกันอคติบางประเภท"
+    }
+  ]
+}

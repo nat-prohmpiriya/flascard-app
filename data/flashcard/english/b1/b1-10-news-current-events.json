@@ -1,0 +1,419 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 News & Current Events",
+    "description": "B1 level vocabulary for news and current events topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "news",
+      "pronunciation": "นิวส์",
+      "meaning": "ข่าว",
+      "example": "Have you seen the news today?",
+      "exampleTranslation": "คุณดูข่าววันนี้หรือยัง?"
+    },
+    {
+      "vocab": "headline",
+      "pronunciation": "เฮด-ไลน์",
+      "meaning": "พาดหัวข่าว",
+      "example": "The headline shocked everyone.",
+      "exampleTranslation": "พาดหัวข่าวทำให้ทุกคนตกใจ"
+    },
+    {
+      "vocab": "article",
+      "pronunciation": "อาร์-ทิ-เคิล",
+      "meaning": "บทความ",
+      "example": "I read an interesting article.",
+      "exampleTranslation": "ฉันอ่านบทความที่น่าสนใจ"
+    },
+    {
+      "vocab": "report",
+      "pronunciation": "รี-พอร์ท",
+      "meaning": "รายงาน",
+      "example": "The report was on TV last night.",
+      "exampleTranslation": "รายงานออกอากาศทางทีวีเมื่อคืน"
+    },
+    {
+      "vocab": "journalist",
+      "pronunciation": "เจอร์-นะ-ลิสท์",
+      "meaning": "นักข่าว",
+      "example": "The journalist interviewed the minister.",
+      "exampleTranslation": "นักข่าวสัมภาษณ์รัฐมนตรี"
+    },
+    {
+      "vocab": "reporter",
+      "pronunciation": "รี-พอร์-เทอะ",
+      "meaning": "ผู้สื่อข่าว",
+      "example": "The reporter is at the scene.",
+      "exampleTranslation": "ผู้สื่อข่าวอยู่ที่เกิดเหตุ"
+    },
+    {
+      "vocab": "editor",
+      "pronunciation": "เอ-ดิ-เทอะ",
+      "meaning": "บรรณาธิการ",
+      "example": "The editor approved the story.",
+      "exampleTranslation": "บรรณาธิการอนุมัติเรื่องนี้"
+    },
+    {
+      "vocab": "press",
+      "pronunciation": "เพรส",
+      "meaning": "สื่อมวลชน",
+      "example": "The press was at the conference.",
+      "exampleTranslation": "สื่อมวลชนอยู่ที่การประชุม"
+    },
+    {
+      "vocab": "media",
+      "pronunciation": "มี-เดีย",
+      "meaning": "สื่อ",
+      "example": "The media covered the event.",
+      "exampleTranslation": "สื่อรายงานเหตุการณ์"
+    },
+    {
+      "vocab": "broadcast",
+      "pronunciation": "บรอด-คาสท์",
+      "meaning": "ออกอากาศ, การออกอากาศ",
+      "example": "The broadcast starts at 8 PM.",
+      "exampleTranslation": "การออกอากาศเริ่มเวลา 2 ทุ่ม"
+    },
+    {
+      "vocab": "live",
+      "pronunciation": "ไลฟ์",
+      "meaning": "สด (ถ่ายทอดสด)",
+      "example": "The event was broadcast live.",
+      "exampleTranslation": "งานถ่ายทอดสด"
+    },
+    {
+      "vocab": "breaking news",
+      "pronunciation": "เบรค-กิง นิวส์",
+      "meaning": "ข่าวด่วน",
+      "example": "We have breaking news.",
+      "exampleTranslation": "เรามีข่าวด่วน"
+    },
+    {
+      "vocab": "update",
+      "pronunciation": "อัพ-เดท",
+      "meaning": "ข้อมูลล่าสุด, อัปเดต",
+      "example": "Here's an update on the story.",
+      "exampleTranslation": "นี่คือข้อมูลล่าสุดเกี่ยวกับเรื่องนี้"
+    },
+    {
+      "vocab": "source",
+      "pronunciation": "ซอร์ส",
+      "meaning": "แหล่งข่าว",
+      "example": "The source is anonymous.",
+      "exampleTranslation": "แหล่งข่าวไม่เปิดเผยตัว"
+    },
+    {
+      "vocab": "information",
+      "pronunciation": "อิน-ฟอร์-เม-ชั่น",
+      "meaning": "ข้อมูล",
+      "example": "I need more information.",
+      "exampleTranslation": "ฉันต้องการข้อมูลเพิ่มเติม"
+    },
+    {
+      "vocab": "fact",
+      "pronunciation": "แฟ็คท์",
+      "meaning": "ข้อเท็จจริง",
+      "example": "These are the facts.",
+      "exampleTranslation": "เหล่านี้คือข้อเท็จจริง"
+    },
+    {
+      "vocab": "opinion",
+      "pronunciation": "โอ-พิน-เยิน",
+      "meaning": "ความคิดเห็น",
+      "example": "Everyone has an opinion.",
+      "exampleTranslation": "ทุกคนมีความคิดเห็น"
+    },
+    {
+      "vocab": "fake news",
+      "pronunciation": "เฟค นิวส์",
+      "meaning": "ข่าวปลอม",
+      "example": "Be careful of fake news.",
+      "exampleTranslation": "ระวังข่าวปลอม"
+    },
+    {
+      "vocab": "rumor",
+      "pronunciation": "รู-เมอะ",
+      "meaning": "ข่าวลือ",
+      "example": "It's just a rumor.",
+      "exampleTranslation": "มันเป็นแค่ข่าวลือ"
+    },
+    {
+      "vocab": "crisis",
+      "pronunciation": "ไคร-ซิส",
+      "meaning": "วิกฤต",
+      "example": "The country faces a crisis.",
+      "exampleTranslation": "ประเทศเผชิญกับวิกฤต"
+    },
+    {
+      "vocab": "emergency",
+      "pronunciation": "อิ-เมอร์-เจน-ซี",
+      "meaning": "เหตุฉุกเฉิน",
+      "example": "Dial 911 in an emergency.",
+      "exampleTranslation": "โทร 911 ในกรณีฉุกเฉิน"
+    },
+    {
+      "vocab": "disaster",
+      "pronunciation": "ดิ-ซาส-เทอะ",
+      "meaning": "ภัยพิบัติ",
+      "example": "The disaster killed many people.",
+      "exampleTranslation": "ภัยพิบัติทำให้คนเสียชีวิตมาก"
+    },
+    {
+      "vocab": "accident",
+      "pronunciation": "แอค-ซิ-เดินท์",
+      "meaning": "อุบัติเหตุ",
+      "example": "There was a car accident.",
+      "exampleTranslation": "มีอุบัติเหตุรถยนต์"
+    },
+    {
+      "vocab": "victim",
+      "pronunciation": "วิค-ทิม",
+      "meaning": "เหยื่อ, ผู้เคราะห์ร้าย",
+      "example": "Help the victims of the flood.",
+      "exampleTranslation": "ช่วยเหลือเหยื่อจากน้ำท่วม"
+    },
+    {
+      "vocab": "survivor",
+      "pronunciation": "เซอร์-ไว-เวอะ",
+      "meaning": "ผู้รอดชีวิต",
+      "example": "The survivors were rescued.",
+      "exampleTranslation": "ผู้รอดชีวิตได้รับการช่วยเหลือ"
+    },
+    {
+      "vocab": "rescue",
+      "pronunciation": "เรส-คิว",
+      "meaning": "กู้ภัย, ช่วยชีวิต",
+      "example": "The rescue team arrived quickly.",
+      "exampleTranslation": "ทีมกู้ภัยมาถึงอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "investigation",
+      "pronunciation": "อิน-เวส-ทิ-เก-ชั่น",
+      "meaning": "การสอบสวน",
+      "example": "The investigation is ongoing.",
+      "exampleTranslation": "การสอบสวนกำลังดำเนินอยู่"
+    },
+    {
+      "vocab": "evidence",
+      "pronunciation": "เอฟ-วิ-เดินซ์",
+      "meaning": "หลักฐาน",
+      "example": "The police found new evidence.",
+      "exampleTranslation": "ตำรวจพบหลักฐานใหม่"
+    },
+    {
+      "vocab": "witness",
+      "pronunciation": "วิท-เนส",
+      "meaning": "พยาน, ประจักษ์พยาน",
+      "example": "The witness told the police.",
+      "exampleTranslation": "พยานบอกกับตำรวจ"
+    },
+    {
+      "vocab": "suspect",
+      "pronunciation": "ซัส-เพ็คท์",
+      "meaning": "ผู้ต้องสงสัย",
+      "example": "The suspect was arrested.",
+      "exampleTranslation": "ผู้ต้องสงสัยถูกจับกุม"
+    },
+    {
+      "vocab": "arrest",
+      "pronunciation": "อะ-เรสท์",
+      "meaning": "จับกุม",
+      "example": "The police arrested the thief.",
+      "exampleTranslation": "ตำรวจจับกุมขโมย"
+    },
+    {
+      "vocab": "trial",
+      "pronunciation": "ไทร-อัล",
+      "meaning": "การพิจารณาคดี",
+      "example": "The trial begins next week.",
+      "exampleTranslation": "การพิจารณาคดีเริ่มสัปดาห์หน้า"
+    },
+    {
+      "vocab": "court",
+      "pronunciation": "คอร์ท",
+      "meaning": "ศาล",
+      "example": "He appeared in court today.",
+      "exampleTranslation": "เขาปรากฏตัวที่ศาลวันนี้"
+    },
+    {
+      "vocab": "judge",
+      "pronunciation": "จัดจ์",
+      "meaning": "ผู้พิพากษา",
+      "example": "The judge made the decision.",
+      "exampleTranslation": "ผู้พิพากษาตัดสินใจ"
+    },
+    {
+      "vocab": "sentence",
+      "pronunciation": "เซน-เทนซ์",
+      "meaning": "คำตัดสิน, พิพากษา",
+      "example": "He received a five-year sentence.",
+      "exampleTranslation": "เขาได้รับโทษจำคุกห้าปี"
+    },
+    {
+      "vocab": "election",
+      "pronunciation": "อิ-เล็ค-ชั่น",
+      "meaning": "การเลือกตั้ง",
+      "example": "The election will be in November.",
+      "exampleTranslation": "การเลือกตั้งจะมีในเดือนพฤศจิกายน"
+    },
+    {
+      "vocab": "campaign",
+      "pronunciation": "แคม-เพน",
+      "meaning": "การรณรงค์, แคมเปญ",
+      "example": "The campaign was successful.",
+      "exampleTranslation": "การรณรงค์ประสบความสำเร็จ"
+    },
+    {
+      "vocab": "candidate",
+      "pronunciation": "แคน-ดิ-เดท",
+      "meaning": "ผู้สมัคร",
+      "example": "Who are the candidates?",
+      "exampleTranslation": "ผู้สมัครคือใครบ้าง?"
+    },
+    {
+      "vocab": "vote",
+      "pronunciation": "โวท",
+      "meaning": "ลงคะแนน, โหวต",
+      "example": "Did you vote in the election?",
+      "exampleTranslation": "คุณไปลงคะแนนในการเลือกตั้งไหม?"
+    },
+    {
+      "vocab": "poll",
+      "pronunciation": "โพล",
+      "meaning": "โพล, การสำรวจความคิดเห็น",
+      "example": "The polls show he's winning.",
+      "exampleTranslation": "โพลแสดงว่าเขาชนะ"
+    },
+    {
+      "vocab": "protest",
+      "pronunciation": "โพร-เทสท์",
+      "meaning": "การประท้วง",
+      "example": "There was a protest downtown.",
+      "exampleTranslation": "มีการประท้วงในตัวเมือง"
+    },
+    {
+      "vocab": "demonstration",
+      "pronunciation": "เดม-มอน-สเตร-ชั่น",
+      "meaning": "การเดินขบวน, การชุมนุม",
+      "example": "The demonstration was peaceful.",
+      "exampleTranslation": "การชุมนุมเป็นไปอย่างสงบ"
+    },
+    {
+      "vocab": "strike",
+      "pronunciation": "สไตรค์",
+      "meaning": "การนัดหยุดงาน",
+      "example": "Workers went on strike.",
+      "exampleTranslation": "คนงานนัดหยุดงาน"
+    },
+    {
+      "vocab": "conflict",
+      "pronunciation": "คอน-ฟลิคท์",
+      "meaning": "ความขัดแย้ง",
+      "example": "The conflict has lasted years.",
+      "exampleTranslation": "ความขัดแย้งกินเวลาหลายปี"
+    },
+    {
+      "vocab": "war",
+      "pronunciation": "วอร์",
+      "meaning": "สงคราม",
+      "example": "The war ended last year.",
+      "exampleTranslation": "สงครามสิ้นสุดเมื่อปีที่แล้ว"
+    },
+    {
+      "vocab": "peace",
+      "pronunciation": "พีซ",
+      "meaning": "สันติภาพ",
+      "example": "They signed a peace agreement.",
+      "exampleTranslation": "พวกเขาลงนามข้อตกลงสันติภาพ"
+    },
+    {
+      "vocab": "treaty",
+      "pronunciation": "ทรี-ตี้",
+      "meaning": "สนธิสัญญา",
+      "example": "The two countries signed a treaty.",
+      "exampleTranslation": "สองประเทศลงนามสนธิสัญญา"
+    },
+    {
+      "vocab": "summit",
+      "pronunciation": "ซัม-มิท",
+      "meaning": "การประชุมสุดยอด",
+      "example": "Leaders met at the summit.",
+      "exampleTranslation": "ผู้นำพบกันที่การประชุมสุดยอด"
+    },
+    {
+      "vocab": "diplomacy",
+      "pronunciation": "ดิ-โพล-มา-ซี",
+      "meaning": "การทูต",
+      "example": "Diplomacy can solve problems.",
+      "exampleTranslation": "การทูตสามารถแก้ปัญหาได้"
+    },
+    {
+      "vocab": "ambassador",
+      "pronunciation": "แอม-แบส-ซะ-เดอะ",
+      "meaning": "เอกอัครราชทูต",
+      "example": "The ambassador gave a speech.",
+      "exampleTranslation": "เอกอัครราชทูตกล่าวสุนทรพจน์"
+    },
+    {
+      "vocab": "statement",
+      "pronunciation": "สเตท-เมินท์",
+      "meaning": "แถลงการณ์",
+      "example": "The government released a statement.",
+      "exampleTranslation": "รัฐบาลออกแถลงการณ์"
+    },
+    {
+      "vocab": "announcement",
+      "pronunciation": "อะ-นาวซ์-เมินท์",
+      "meaning": "การประกาศ",
+      "example": "The announcement surprised everyone.",
+      "exampleTranslation": "การประกาศทำให้ทุกคนประหลาดใจ"
+    },
+    {
+      "vocab": "policy",
+      "pronunciation": "พอล-ลิ-ซี",
+      "meaning": "นโยบาย",
+      "example": "The new policy will start soon.",
+      "exampleTranslation": "นโยบายใหม่จะเริ่มเร็วๆ นี้"
+    },
+    {
+      "vocab": "reform",
+      "pronunciation": "รี-ฟอร์ม",
+      "meaning": "การปฏิรูป",
+      "example": "The country needs reform.",
+      "exampleTranslation": "ประเทศต้องการการปฏิรูป"
+    },
+    {
+      "vocab": "economy",
+      "pronunciation": "อิ-คอน-โน-มี",
+      "meaning": "เศรษฐกิจ",
+      "example": "The economy is improving.",
+      "exampleTranslation": "เศรษฐกิจกำลังดีขึ้น"
+    },
+    {
+      "vocab": "unemployment",
+      "pronunciation": "อัน-เอ็ม-พลอย-เมินท์",
+      "meaning": "การว่างงาน",
+      "example": "Unemployment is a big problem.",
+      "exampleTranslation": "การว่างงานเป็นปัญหาใหญ่"
+    },
+    {
+      "vocab": "impact",
+      "pronunciation": "อิม-แพ็คท์",
+      "meaning": "ผลกระทบ",
+      "example": "The impact was significant.",
+      "exampleTranslation": "ผลกระทบมีนัยสำคัญ"
+    },
+    {
+      "vocab": "trend",
+      "pronunciation": "เทรนด์",
+      "meaning": "แนวโน้ม, เทรนด์",
+      "example": "This is the latest trend.",
+      "exampleTranslation": "นี่คือเทรนด์ล่าสุด"
+    }
+  ]
+}

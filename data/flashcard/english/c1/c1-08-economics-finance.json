@@ -1,0 +1,398 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Economics & Finance",
+    "description": "C1 level vocabulary for advanced economics and finance topics",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "economics", "finance"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "macroeconomics",
+      "pronunciation": "แมค-โคร-อี-โค-นอม-มิคส์",
+      "meaning": "เศรษฐศาสตร์มหภาค",
+      "example": "Macroeconomics studies the economy as a whole.",
+      "exampleTranslation": "เศรษฐศาสตร์มหภาคศึกษาเศรษฐกิจโดยรวม"
+    },
+    {
+      "vocab": "microeconomics",
+      "pronunciation": "ไมโคร-อี-โค-นอม-มิคส์",
+      "meaning": "เศรษฐศาสตร์จุลภาค",
+      "example": "Microeconomics focuses on individual markets.",
+      "exampleTranslation": "เศรษฐศาสตร์จุลภาคมุ่งเน้นตลาดเฉพาะ"
+    },
+    {
+      "vocab": "fiscal policy",
+      "pronunciation": "ฟิส-คัล พอล-ลิ-ซี",
+      "meaning": "นโยบายการคลัง",
+      "example": "Fiscal policy involves government spending and taxation.",
+      "exampleTranslation": "นโยบายการคลังเกี่ยวข้องกับการใช้จ่ายและการเก็บภาษีของรัฐบาล"
+    },
+    {
+      "vocab": "monetary policy",
+      "pronunciation": "มอน-เน-ทะ-รี พอล-ลิ-ซี",
+      "meaning": "นโยบายการเงิน",
+      "example": "The central bank controls monetary policy.",
+      "exampleTranslation": "ธนาคารกลางควบคุมนโยบายการเงิน"
+    },
+    {
+      "vocab": "quantitative easing",
+      "pronunciation": "ควอน-ทิ-เท-ทีฟ อี-ซิง",
+      "meaning": "มาตรการผ่อนคลายเชิงปริมาณ",
+      "example": "Quantitative easing increased money supply.",
+      "exampleTranslation": "มาตรการผ่อนคลายเชิงปริมาณเพิ่มปริมาณเงิน"
+    },
+    {
+      "vocab": "inflation",
+      "pronunciation": "อิน-เฟล-ชั่น",
+      "meaning": "เงินเฟ้อ",
+      "example": "Inflation erodes purchasing power.",
+      "exampleTranslation": "เงินเฟ้อกัดกร่อนอำนาจซื้อ"
+    },
+    {
+      "vocab": "deflation",
+      "pronunciation": "ดิ-เฟล-ชั่น",
+      "meaning": "เงินฝืด",
+      "example": "Deflation can signal economic problems.",
+      "exampleTranslation": "เงินฝืดอาจเป็นสัญญาณปัญหาเศรษฐกิจ"
+    },
+    {
+      "vocab": "stagflation",
+      "pronunciation": "สแตก-เฟล-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจชะงักงันพร้อมเงินเฟ้อ",
+      "example": "Stagflation combines stagnation with inflation.",
+      "exampleTranslation": "ภาวะสแตกเฟลชันรวมความชะงักงันกับเงินเฟ้อ"
+    },
+    {
+      "vocab": "recession",
+      "pronunciation": "รี-เซช-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจถดถอย",
+      "example": "The recession lasted two years.",
+      "exampleTranslation": "ภาวะเศรษฐกิจถดถอยยาวนานสองปี"
+    },
+    {
+      "vocab": "depression",
+      "pronunciation": "ดิ-เพรช-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจตกต่ำ",
+      "example": "The Great Depression affected the world.",
+      "exampleTranslation": "ภาวะเศรษฐกิจตกต่ำครั้งใหญ่ส่งผลกระทบต่อโลก"
+    },
+    {
+      "vocab": "GDP (Gross Domestic Product)",
+      "pronunciation": "จี-ดี-พี",
+      "meaning": "ผลิตภัณฑ์มวลรวมในประเทศ",
+      "example": "GDP growth indicates economic health.",
+      "exampleTranslation": "การเติบโตของ GDP บ่งบอกสุขภาพเศรษฐกิจ"
+    },
+    {
+      "vocab": "GNP (Gross National Product)",
+      "pronunciation": "จี-เอ็น-พี",
+      "meaning": "ผลิตภัณฑ์มวลรวมประชาชาติ",
+      "example": "GNP includes income from abroad.",
+      "exampleTranslation": "GNP รวมรายได้จากต่างประเทศ"
+    },
+    {
+      "vocab": "per capita",
+      "pronunciation": "เพอร์ แคป-พิ-ตา",
+      "meaning": "ต่อหัว, ต่อคน",
+      "example": "Per capita income has risen.",
+      "exampleTranslation": "รายได้ต่อหัวเพิ่มขึ้น"
+    },
+    {
+      "vocab": "trade deficit",
+      "pronunciation": "เทรด เดฟ-ฟิ-ซิท",
+      "meaning": "การขาดดุลการค้า",
+      "example": "The trade deficit widened this year.",
+      "exampleTranslation": "การขาดดุลการค้าขยายตัวในปีนี้"
+    },
+    {
+      "vocab": "trade surplus",
+      "pronunciation": "เทรด เซอร์-พลัส",
+      "meaning": "การเกินดุลการค้า",
+      "example": "China maintains a trade surplus.",
+      "exampleTranslation": "จีนรักษาการเกินดุลการค้า"
+    },
+    {
+      "vocab": "balance of payments",
+      "pronunciation": "แบล-แลนซ์ ออฟ เพย์-เมนท์ส",
+      "meaning": "ดุลการชำระเงิน",
+      "example": "The balance of payments shows all transactions.",
+      "exampleTranslation": "ดุลการชำระเงินแสดงธุรกรรมทั้งหมด"
+    },
+    {
+      "vocab": "currency devaluation",
+      "pronunciation": "เคอร์-เรน-ซี ดี-แวล-ลิว-เอ-ชั่น",
+      "meaning": "การลดค่าเงิน",
+      "example": "Currency devaluation boosts exports.",
+      "exampleTranslation": "การลดค่าเงินส่งเสริมการส่งออก"
+    },
+    {
+      "vocab": "exchange rate",
+      "pronunciation": "เอ็กซ์-เชนจ์ เรท",
+      "meaning": "อัตราแลกเปลี่ยน",
+      "example": "Exchange rate fluctuations affect trade.",
+      "exampleTranslation": "ความผันผวนของอัตราแลกเปลี่ยนส่งผลต่อการค้า"
+    },
+    {
+      "vocab": "arbitrage",
+      "pronunciation": "อาร์-บิ-ทราจ",
+      "meaning": "การเก็งกำไรจากส่วนต่างราคา",
+      "example": "Arbitrage exploits price differences.",
+      "exampleTranslation": "การอาร์บิทราจใช้ประโยชน์จากความแตกต่างของราคา"
+    },
+    {
+      "vocab": "hedging",
+      "pronunciation": "เฮ็ด-จิง",
+      "meaning": "การป้องกันความเสี่ยง",
+      "example": "Hedging protects against currency risk.",
+      "exampleTranslation": "การป้องกันความเสี่ยงคุ้มครองจากความเสี่ยงด้านสกุลเงิน"
+    },
+    {
+      "vocab": "derivative",
+      "pronunciation": "ดิ-ริฟ-วะ-ทีฟ",
+      "meaning": "ตราสารอนุพันธ์",
+      "example": "Derivatives include futures and options.",
+      "exampleTranslation": "ตราสารอนุพันธ์รวมสัญญาซื้อขายล่วงหน้าและออปชัน"
+    },
+    {
+      "vocab": "futures contract",
+      "pronunciation": "ฟิว-เจอร์ส คอน-แทร็คท์",
+      "meaning": "สัญญาซื้อขายล่วงหน้า",
+      "example": "Oil futures contracts are widely traded.",
+      "exampleTranslation": "สัญญาซื้อขายน้ำมันล่วงหน้าซื้อขายกันอย่างกว้างขวาง"
+    },
+    {
+      "vocab": "option",
+      "pronunciation": "ออป-ชั่น",
+      "meaning": "สิทธิซื้อขาย",
+      "example": "A call option gives the right to buy.",
+      "exampleTranslation": "สิทธิซื้อให้สิทธิในการซื้อ"
+    },
+    {
+      "vocab": "portfolio",
+      "pronunciation": "พอร์ท-โฟ-ลิ-โอ",
+      "meaning": "พอร์ตการลงทุน",
+      "example": "Diversify your investment portfolio.",
+      "exampleTranslation": "กระจายพอร์ตการลงทุนของคุณ"
+    },
+    {
+      "vocab": "asset allocation",
+      "pronunciation": "แอส-เซ็ท แอล-โล-เค-ชั่น",
+      "meaning": "การจัดสรรสินทรัพย์",
+      "example": "Asset allocation determines risk level.",
+      "exampleTranslation": "การจัดสรรสินทรัพย์กำหนดระดับความเสี่ยง"
+    },
+    {
+      "vocab": "yield",
+      "pronunciation": "ยีลด์",
+      "meaning": "ผลตอบแทน",
+      "example": "Bond yields have fallen.",
+      "exampleTranslation": "ผลตอบแทนพันธบัตรลดลง"
+    },
+    {
+      "vocab": "dividend",
+      "pronunciation": "ดิฟ-วิ-เดนด์",
+      "meaning": "เงินปันผล",
+      "example": "The company declared a dividend.",
+      "exampleTranslation": "บริษัทประกาศจ่ายเงินปันผล"
+    },
+    {
+      "vocab": "capital gains",
+      "pronunciation": "แคป-พิ-ทัล เกนส์",
+      "meaning": "กำไรจากการขายทรัพย์สิน",
+      "example": "Capital gains are taxed differently.",
+      "exampleTranslation": "กำไรจากการขายทรัพย์สินถูกเก็บภาษีต่างกัน"
+    },
+    {
+      "vocab": "liquidity",
+      "pronunciation": "ลิ-ควิ-ดิ-ตี้",
+      "meaning": "สภาพคล่อง",
+      "example": "Market liquidity has improved.",
+      "exampleTranslation": "สภาพคล่องของตลาดดีขึ้น"
+    },
+    {
+      "vocab": "solvency",
+      "pronunciation": "ซอล-เวน-ซี",
+      "meaning": "ความสามารถในการชำระหนี้",
+      "example": "The bank's solvency is questionable.",
+      "exampleTranslation": "ความสามารถในการชำระหนี้ของธนาคารเป็นที่สงสัย"
+    },
+    {
+      "vocab": "leverage",
+      "pronunciation": "เลฟ-เวอ-เรจ",
+      "meaning": "การใช้เงินกู้ลงทุน",
+      "example": "High leverage increases risk.",
+      "exampleTranslation": "การใช้เงินกู้ลงทุนสูงเพิ่มความเสี่ยง"
+    },
+    {
+      "vocab": "collateral",
+      "pronunciation": "คอล-แลท-เทอ-รัล",
+      "meaning": "หลักประกัน",
+      "example": "The loan requires collateral.",
+      "exampleTranslation": "เงินกู้ต้องมีหลักประกัน"
+    },
+    {
+      "vocab": "amortization",
+      "pronunciation": "แอม-มอร์-ไท-เซ-ชั่น",
+      "meaning": "การตัดจำหน่าย, การผ่อนชำระ",
+      "example": "The amortization schedule shows payments.",
+      "exampleTranslation": "ตารางการผ่อนชำระแสดงการชำระเงิน"
+    },
+    {
+      "vocab": "default",
+      "pronunciation": "ดิ-ฟอลท์",
+      "meaning": "การผิดนัดชำระหนี้",
+      "example": "The country defaulted on its debt.",
+      "exampleTranslation": "ประเทศผิดนัดชำระหนี้"
+    },
+    {
+      "vocab": "credit rating",
+      "pronunciation": "เครด-ดิท เร-ทิง",
+      "meaning": "อันดับความน่าเชื่อถือ",
+      "example": "Their credit rating was downgraded.",
+      "exampleTranslation": "อันดับความน่าเชื่อถือของพวกเขาถูกลดลง"
+    },
+    {
+      "vocab": "subprime",
+      "pronunciation": "ซับ-ไพรม์",
+      "meaning": "ต่ำกว่ามาตรฐาน (สินเชื่อ)",
+      "example": "The subprime crisis caused a recession.",
+      "exampleTranslation": "วิกฤตสินเชื่อซับไพรม์ทำให้เกิดภาวะถดถอย"
+    },
+    {
+      "vocab": "bailout",
+      "pronunciation": "เบล-เอาท์",
+      "meaning": "การอุ้มกิจการ, การช่วยเหลือทางการเงิน",
+      "example": "The government provided a bailout.",
+      "exampleTranslation": "รัฐบาลให้การช่วยเหลือทางการเงิน"
+    },
+    {
+      "vocab": "austerity",
+      "pronunciation": "ออส-เทอ-ริ-ตี้",
+      "meaning": "มาตรการรัดเข็มขัด",
+      "example": "Austerity measures reduced spending.",
+      "exampleTranslation": "มาตรการรัดเข็มขัดลดการใช้จ่าย"
+    },
+    {
+      "vocab": "stimulus",
+      "pronunciation": "สติม-มิว-ลัส",
+      "meaning": "มาตรการกระตุ้นเศรษฐกิจ",
+      "example": "Economic stimulus boosted recovery.",
+      "exampleTranslation": "มาตรการกระตุ้นเศรษฐกิจเสริมการฟื้นตัว"
+    },
+    {
+      "vocab": "supply and demand",
+      "pronunciation": "ซัพ-พลาย แอนด์ ดิ-มานด์",
+      "meaning": "อุปสงค์และอุปทาน",
+      "example": "Supply and demand determine prices.",
+      "exampleTranslation": "อุปสงค์และอุปทานกำหนดราคา"
+    },
+    {
+      "vocab": "elasticity",
+      "pronunciation": "อิ-แลส-ทิ-ซิ-ตี้",
+      "meaning": "ความยืดหยุ่น (ทางเศรษฐศาสตร์)",
+      "example": "Price elasticity affects demand.",
+      "exampleTranslation": "ความยืดหยุ่นของราคาส่งผลต่ออุปสงค์"
+    },
+    {
+      "vocab": "monopoly",
+      "pronunciation": "โม-นอพ-โพ-ลี",
+      "meaning": "การผูกขาด",
+      "example": "Monopolies reduce competition.",
+      "exampleTranslation": "การผูกขาดลดการแข่งขัน"
+    },
+    {
+      "vocab": "oligopoly",
+      "pronunciation": "โอ-ลิ-กอพ-โพ-ลี",
+      "meaning": "ตลาดผู้ขายน้อยราย",
+      "example": "The tech industry is an oligopoly.",
+      "exampleTranslation": "อุตสาหกรรมเทคโนโลยีเป็นตลาดผู้ขายน้อยราย"
+    },
+    {
+      "vocab": "cartel",
+      "pronunciation": "คาร์-เทล",
+      "meaning": "กลุ่มผูกขาด",
+      "example": "OPEC functions as an oil cartel.",
+      "exampleTranslation": "โอเปกทำหน้าที่เป็นกลุ่มผูกขาดน้ำมัน"
+    },
+    {
+      "vocab": "externality",
+      "pronunciation": "เอ็กซ์-เทอร์-นัล-ลิ-ตี้",
+      "meaning": "ผลกระทบภายนอก",
+      "example": "Pollution is a negative externality.",
+      "exampleTranslation": "มลพิษเป็นผลกระทบภายนอกเชิงลบ"
+    },
+    {
+      "vocab": "moral hazard",
+      "pronunciation": "มอ-รัล แฮซ-ซาร์ด",
+      "meaning": "ความเสี่ยงทางจริยธรรม",
+      "example": "Bailouts can create moral hazard.",
+      "exampleTranslation": "การอุ้มกิจการอาจสร้างความเสี่ยงทางจริยธรรม"
+    },
+    {
+      "vocab": "adverse selection",
+      "pronunciation": "แอด-เวิร์ส ซิ-เล็ค-ชั่น",
+      "meaning": "การคัดเลือกที่ไม่พึงประสงค์",
+      "example": "Insurance faces adverse selection problems.",
+      "exampleTranslation": "ประกันภัยเผชิญปัญหาการคัดเลือกที่ไม่พึงประสงค์"
+    },
+    {
+      "vocab": "opportunity cost",
+      "pronunciation": "ออป-ปอร์-ทิว-นิ-ตี้ คอสท์",
+      "meaning": "ต้นทุนค่าเสียโอกาส",
+      "example": "Consider the opportunity cost of your decision.",
+      "exampleTranslation": "พิจารณาต้นทุนค่าเสียโอกาสของการตัดสินใจของคุณ"
+    },
+    {
+      "vocab": "diminishing returns",
+      "pronunciation": "ดิ-มิน-นิช-ชิง รี-เทิร์นส์",
+      "meaning": "ผลตอบแทนลดลง",
+      "example": "Law of diminishing returns applies.",
+      "exampleTranslation": "กฎผลตอบแทนลดลงนำมาใช้"
+    },
+    {
+      "vocab": "economies of scale",
+      "pronunciation": "อิ-คอน-โน-มีส ออฟ สเกล",
+      "meaning": "การประหยัดต่อขนาด",
+      "example": "Economies of scale reduce costs.",
+      "exampleTranslation": "การประหยัดต่อขนาดลดต้นทุน"
+    },
+    {
+      "vocab": "comparative advantage",
+      "pronunciation": "คอม-แพ-ระ-ทีฟ แอด-วาน-เทจ",
+      "meaning": "ความได้เปรียบเชิงเปรียบเทียบ",
+      "example": "Trade is based on comparative advantage.",
+      "exampleTranslation": "การค้าตั้งอยู่บนความได้เปรียบเชิงเปรียบเทียบ"
+    },
+    {
+      "vocab": "protectionism",
+      "pronunciation": "โพร-เท็ค-ชั่น-นิ-ซึม",
+      "meaning": "นโยบายกีดกันทางการค้า",
+      "example": "Protectionism harms global trade.",
+      "exampleTranslation": "นโยบายกีดกันทางการค้าทำร้ายการค้าโลก"
+    },
+    {
+      "vocab": "tariff",
+      "pronunciation": "แท-ริฟ",
+      "meaning": "ภาษีศุลกากร",
+      "example": "New tariffs were imposed on imports.",
+      "exampleTranslation": "ภาษีศุลกากรใหม่ถูกเรียกเก็บจากสินค้านำเข้า"
+    },
+    {
+      "vocab": "subsidy",
+      "pronunciation": "ซับ-ซิ-ดี",
+      "meaning": "เงินอุดหนุน",
+      "example": "Agricultural subsidies support farmers.",
+      "exampleTranslation": "เงินอุดหนุนภาคเกษตรสนับสนุนเกษตรกร"
+    },
+    {
+      "vocab": "sovereign wealth fund",
+      "pronunciation": "ซอฟ-เวอ-เรน เวลธ์ ฟันด์",
+      "meaning": "กองทุนความมั่งคั่งแห่งชาติ",
+      "example": "Norway has a large sovereign wealth fund.",
+      "exampleTranslation": "นอร์เวย์มีกองทุนความมั่งคั่งแห่งชาติขนาดใหญ่"
+    }
+  ]
+}

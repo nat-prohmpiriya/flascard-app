@@ -1,0 +1,224 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Generative AI & LLM",
+    "description": "Large language models, prompt engineering, and generative AI terminology",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "generative-ai", "llm", "prompt-engineering"]
+  },
+  "cards": [
+    {
+      "vocab": "large language model (LLM)",
+      "pronunciation": "ลาร์จ แลง-กวิจ โม-เดล",
+      "meaning": "โมเดลภาษาขนาดใหญ่ - มีพารามิเตอร์หลายพันล้าน",
+      "example": "GPT-4 is a large language model with 1.7 trillion parameters.",
+      "exampleTranslation": "GPT-4 เป็น LLM ที่มี 1.7 ล้านล้านพารามิเตอร์"
+    },
+    {
+      "vocab": "generative AI",
+      "pronunciation": "เจน-เนอ-เร-ทีฟ เอ-ไอ",
+      "meaning": "AI สร้างสรรค์ - สร้างเนื้อหาใหม่ (ข้อความ, ภาพ, เสียง)",
+      "example": "Generative AI creates new content from prompts.",
+      "exampleTranslation": "Generative AI สร้างเนื้อหาใหม่จาก prompt"
+    },
+    {
+      "vocab": "prompt",
+      "pronunciation": "พร็อมท์",
+      "meaning": "คำสั่ง/บริบท - ข้อความที่ส่งให้ LLM",
+      "example": "Write a clear prompt for better results.",
+      "exampleTranslation": "เขียน prompt ที่ชัดเจนเพื่อผลลัพธ์ที่ดีกว่า"
+    },
+    {
+      "vocab": "prompt engineering",
+      "pronunciation": "พร็อมท์ เอ็น-จิ-เนียร์-ริง",
+      "meaning": "วิศวกรรม prompt - ออกแบบ prompt ให้ได้ผลลัพธ์ที่ต้องการ",
+      "example": "Prompt engineering is key to using LLMs effectively.",
+      "exampleTranslation": "Prompt engineering สำคัญต่อการใช้ LLM อย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "system prompt",
+      "pronunciation": "ซิส-เทม พร็อมท์",
+      "meaning": "prompt ระบบ - กำหนดบทบาทและพฤติกรรมของ AI",
+      "example": "The system prompt sets the AI's persona.",
+      "exampleTranslation": "System prompt กำหนดบุคลิกของ AI"
+    },
+    {
+      "vocab": "context window",
+      "pronunciation": "คอน-เท็กซ์ วิน-โดว์",
+      "meaning": "หน้าต่างบริบท - จำนวน token ที่โมเดลจำได้",
+      "example": "Claude has a 200K token context window.",
+      "exampleTranslation": "Claude มี context window 200K tokens"
+    },
+    {
+      "vocab": "temperature",
+      "pronunciation": "เทม-เพอ-เร-เจอร์",
+      "meaning": "อุณหภูมิ - ควบคุมความสุ่มของ output (0=แน่นอน, 1=สร้างสรรค์)",
+      "example": "Use low temperature for factual responses.",
+      "exampleTranslation": "ใช้ temperature ต่ำสำหรับคำตอบเชิงข้อเท็จจริง"
+    },
+    {
+      "vocab": "top-p (nucleus sampling)",
+      "pronunciation": "ท็อป-พี",
+      "meaning": "การสุ่มแบบ nucleus - เลือกจาก token ที่รวมกันถึง p%",
+      "example": "Top-p of 0.9 considers tokens within 90% probability.",
+      "exampleTranslation": "Top-p 0.9 พิจารณา token ที่อยู่ใน 90% ของความน่าจะเป็น"
+    },
+    {
+      "vocab": "top-k",
+      "pronunciation": "ท็อป-เค",
+      "meaning": "การสุ่มแบบ top-k - เลือกจาก k token ที่มีโอกาสสูงสุด",
+      "example": "Top-k of 50 considers only the top 50 tokens.",
+      "exampleTranslation": "Top-k 50 พิจารณาเฉพาะ 50 token บนสุด"
+    },
+    {
+      "vocab": "hallucination",
+      "pronunciation": "ฮาล-ลู-ซิ-เน-ชัน",
+      "meaning": "ภาพหลอน - AI สร้างข้อมูลเท็จที่ดูน่าเชื่อ",
+      "example": "LLMs can hallucinate fake facts confidently.",
+      "exampleTranslation": "LLM สามารถ hallucinate ข้อเท็จจริงปลอมอย่างมั่นใจ"
+    },
+    {
+      "vocab": "grounding",
+      "pronunciation": "กราวน์-ดิง",
+      "meaning": "การยึดโยง - ให้ AI อ้างอิงข้อมูลจริง",
+      "example": "Grounding reduces hallucinations with real data.",
+      "exampleTranslation": "Grounding ลด hallucination ด้วยข้อมูลจริง"
+    },
+    {
+      "vocab": "retrieval-augmented generation (RAG)",
+      "pronunciation": "รี-ทรี-วอล ออก-เมน-เท็ด เจน-เนอ-เร-ชัน",
+      "meaning": "การสร้างเสริมด้วยการค้นหา - ดึงข้อมูลมาประกอบคำตอบ",
+      "example": "RAG combines search with LLM generation.",
+      "exampleTranslation": "RAG รวมการค้นหากับการสร้างของ LLM"
+    },
+    {
+      "vocab": "vector database",
+      "pronunciation": "เว็ค-เตอร์ เดท-ทะ-เบส",
+      "meaning": "ฐานข้อมูล vector - เก็บ embedding สำหรับค้นหา",
+      "example": "Store embeddings in a vector database for RAG.",
+      "exampleTranslation": "เก็บ embedding ใน vector database สำหรับ RAG"
+    },
+    {
+      "vocab": "semantic search",
+      "pronunciation": "เซ-แมน-ติค เซิร์ช",
+      "meaning": "การค้นหาเชิงความหมาย - หาจากความหมายไม่ใช่คำ",
+      "example": "Semantic search finds relevant documents by meaning.",
+      "exampleTranslation": "Semantic search หาเอกสารที่เกี่ยวข้องจากความหมาย"
+    },
+    {
+      "vocab": "few-shot learning",
+      "pronunciation": "ฟิว-ช็อท เลิร์น-นิง",
+      "meaning": "การเรียนรู้แบบตัวอย่างน้อย - ให้ตัวอย่างใน prompt",
+      "example": "Few-shot learning uses examples in the prompt.",
+      "exampleTranslation": "Few-shot learning ใช้ตัวอย่างใน prompt"
+    },
+    {
+      "vocab": "zero-shot learning",
+      "pronunciation": "ซี-โร่-ช็อท เลิร์น-นิง",
+      "meaning": "การเรียนรู้แบบไม่มีตัวอย่าง - ทำงานโดยไม่ต้องมีตัวอย่าง",
+      "example": "Zero-shot learning performs tasks without examples.",
+      "exampleTranslation": "Zero-shot learning ทำงานโดยไม่ต้องมีตัวอย่าง"
+    },
+    {
+      "vocab": "chain-of-thought",
+      "pronunciation": "เชน-ออฟ-ธ็อท",
+      "meaning": "สายความคิด - ให้ AI แสดงขั้นตอนการคิด",
+      "example": "Chain-of-thought prompting improves reasoning.",
+      "exampleTranslation": "Chain-of-thought prompting ปรับปรุงการใช้เหตุผล"
+    },
+    {
+      "vocab": "instruction tuning",
+      "pronunciation": "อิน-สตรัค-ชัน ทู-นิง",
+      "meaning": "การปรับจูนตามคำสั่ง - ฝึกให้ทำตามคำสั่ง",
+      "example": "Instruction tuning makes models follow commands better.",
+      "exampleTranslation": "Instruction tuning ทำให้โมเดลทำตามคำสั่งได้ดีขึ้น"
+    },
+    {
+      "vocab": "RLHF",
+      "pronunciation": "อาร์-แอล-เอช-เอฟ",
+      "meaning": "Reinforcement Learning from Human Feedback - เรียนจาก feedback มนุษย์",
+      "example": "RLHF aligns models with human preferences.",
+      "exampleTranslation": "RLHF ปรับโมเดลให้ตรงกับความต้องการของมนุษย์"
+    },
+    {
+      "vocab": "alignment",
+      "pronunciation": "อะ-ไลน์-เมนท์",
+      "meaning": "การจัดวาง - ทำให้ AI ทำตามเจตนาของมนุษย์",
+      "example": "AI alignment ensures models are helpful and safe.",
+      "exampleTranslation": "AI alignment ทำให้โมเดลมีประโยชน์และปลอดภัย"
+    },
+    {
+      "vocab": "guardrails",
+      "pronunciation": "การ์ด-เรลส์",
+      "meaning": "ราวกั้น - กฎป้องกัน output ที่ไม่เหมาะสม",
+      "example": "Add guardrails to prevent harmful outputs.",
+      "exampleTranslation": "เพิ่ม guardrails เพื่อป้องกัน output ที่เป็นอันตราย"
+    },
+    {
+      "vocab": "token limit",
+      "pronunciation": "โท-เค็น ลิ-มิท",
+      "meaning": "ขีดจำกัด token - จำนวน token สูงสุดต่อ request",
+      "example": "Truncate long inputs to stay within the token limit.",
+      "exampleTranslation": "ตัดข้อความยาวให้อยู่ใน token limit"
+    },
+    {
+      "vocab": "streaming",
+      "pronunciation": "สตรีม-มิง",
+      "meaning": "การสตรีม - ส่ง output ทีละ token",
+      "example": "Enable streaming for faster perceived response.",
+      "exampleTranslation": "เปิด streaming เพื่อให้รู้สึกว่าตอบเร็วขึ้น"
+    },
+    {
+      "vocab": "function calling",
+      "pronunciation": "ฟังก์-ชัน คอล-ลิง",
+      "meaning": "การเรียกฟังก์ชัน - ให้ LLM เรียกใช้ tools",
+      "example": "Function calling lets LLMs use external tools.",
+      "exampleTranslation": "Function calling ให้ LLM ใช้ tools ภายนอก"
+    },
+    {
+      "vocab": "agent",
+      "pronunciation": "เอ-เจนท์",
+      "meaning": "ตัวแทน - AI ที่วางแผนและทำงานหลายขั้นตอน",
+      "example": "AI agents can break tasks into steps.",
+      "exampleTranslation": "AI agent แบ่งงานเป็นขั้นตอนได้"
+    },
+    {
+      "vocab": "multimodal",
+      "pronunciation": "มัล-ติ-โม-ดอล",
+      "meaning": "หลายโหมด - รับ/สร้าง ทั้งข้อความ ภาพ เสียง",
+      "example": "GPT-4V is a multimodal model handling text and images.",
+      "exampleTranslation": "GPT-4V เป็นโมเดล multimodal รับทั้งข้อความและภาพ"
+    },
+    {
+      "vocab": "text-to-image",
+      "pronunciation": "เท็กซ์-ทู-อิ-เมจ",
+      "meaning": "ข้อความเป็นภาพ - สร้างภาพจากคำอธิบาย",
+      "example": "DALL-E is a text-to-image model.",
+      "exampleTranslation": "DALL-E เป็นโมเดล text-to-image"
+    },
+    {
+      "vocab": "text-to-speech (TTS)",
+      "pronunciation": "เท็กซ์-ทู-สปีช",
+      "meaning": "ข้อความเป็นเสียง - อ่านออกเสียง",
+      "example": "TTS converts written text to spoken audio.",
+      "exampleTranslation": "TTS แปลงข้อความเขียนเป็นเสียงพูด"
+    },
+    {
+      "vocab": "speech-to-text (STT)",
+      "pronunciation": "สปีช-ทู-เท็กซ์",
+      "meaning": "เสียงเป็นข้อความ - ถอดเสียงเป็นตัวอักษร",
+      "example": "Whisper is an accurate speech-to-text model.",
+      "exampleTranslation": "Whisper เป็นโมเดล speech-to-text ที่แม่นยำ"
+    },
+    {
+      "vocab": "foundation model",
+      "pronunciation": "เฟาน์-เด-ชัน โม-เดล",
+      "meaning": "โมเดลฐานราก - โมเดลใหญ่ที่ปรับใช้งานได้หลายอย่าง",
+      "example": "Foundation models can be adapted for many tasks.",
+      "exampleTranslation": "Foundation model ปรับใช้งานได้หลายอย่าง"
+    }
+  ]
+}

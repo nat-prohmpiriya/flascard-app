@@ -1,0 +1,203 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Computer Vision",
+    "description": "Image processing, object detection, and computer vision terminology",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "computer-vision", "image-processing", "ai"]
+  },
+  "cards": [
+    {
+      "vocab": "computer vision",
+      "pronunciation": "คอม-พิว-เตอร์ วิ-ชัน",
+      "meaning": "การมองเห็นด้วยคอมพิวเตอร์ - ให้เครื่องเข้าใจภาพ",
+      "example": "Computer vision enables machines to interpret images.",
+      "exampleTranslation": "Computer vision ทำให้เครื่องตีความภาพได้"
+    },
+    {
+      "vocab": "image classification",
+      "pronunciation": "อิ-เมจ คลาส-ซิ-ฟิ-เค-ชัน",
+      "meaning": "การจำแนกภาพ - บอกว่าภาพเป็นอะไร",
+      "example": "Image classification identifies the main subject in a photo.",
+      "exampleTranslation": "Image classification ระบุวัตถุหลักในรูป"
+    },
+    {
+      "vocab": "object detection",
+      "pronunciation": "ออบ-เจ็กท์ ดี-เท็ค-ชัน",
+      "meaning": "การตรวจจับวัตถุ - หาตำแหน่งและชนิดของวัตถุ",
+      "example": "Object detection finds and labels objects in images.",
+      "exampleTranslation": "Object detection หาและ label วัตถุในภาพ"
+    },
+    {
+      "vocab": "bounding box",
+      "pronunciation": "เบาน์-ดิง บ็อกซ์",
+      "meaning": "กรอบล้อมรอบ - สี่เหลี่ยมครอบวัตถุ",
+      "example": "Draw bounding boxes around detected objects.",
+      "exampleTranslation": "วาด bounding box รอบวัตถุที่ตรวจพบ"
+    },
+    {
+      "vocab": "semantic segmentation",
+      "pronunciation": "เซ-แมน-ติค เซ็ก-เมน-เท-ชัน",
+      "meaning": "การแบ่งส่วนเชิงความหมาย - ระบายสีแต่ละ pixel ตาม class",
+      "example": "Semantic segmentation labels every pixel in an image.",
+      "exampleTranslation": "Semantic segmentation label ทุก pixel ในภาพ"
+    },
+    {
+      "vocab": "instance segmentation",
+      "pronunciation": "อิน-สแตนซ์ เซ็ก-เมน-เท-ชัน",
+      "meaning": "การแบ่งส่วนระดับ instance - แยกแต่ละวัตถุออกจากกัน",
+      "example": "Instance segmentation distinguishes individual objects.",
+      "exampleTranslation": "Instance segmentation แยกแยะวัตถุแต่ละชิ้น"
+    },
+    {
+      "vocab": "convolution",
+      "pronunciation": "คอน-โว-ลู-ชัน",
+      "meaning": "การม้วนรวม - ใช้ filter เลื่อนไปบนภาพ",
+      "example": "Convolution extracts features from images.",
+      "exampleTranslation": "Convolution ดึง feature จากภาพ"
+    },
+    {
+      "vocab": "filter",
+      "pronunciation": "ฟิล-เตอร์",
+      "meaning": "ตัวกรอง - เมทริกซ์ที่ใช้ในการ convolve",
+      "example": "Each filter detects a specific pattern.",
+      "exampleTranslation": "แต่ละ filter ตรวจจับ pattern เฉพาะ"
+    },
+    {
+      "vocab": "kernel",
+      "pronunciation": "เคอร์-เนล",
+      "meaning": "แกนกลาง - อีกชื่อของ filter",
+      "example": "A 3x3 kernel is commonly used in CNNs.",
+      "exampleTranslation": "kernel 3x3 ใช้กันทั่วไปใน CNN"
+    },
+    {
+      "vocab": "stride",
+      "pronunciation": "สไตรด์",
+      "meaning": "ระยะก้าว - ขยับ filter ทีละกี่ pixel",
+      "example": "Stride of 2 reduces the output size by half.",
+      "exampleTranslation": "stride 2 ลดขนาด output ลงครึ่งหนึ่ง"
+    },
+    {
+      "vocab": "padding",
+      "pronunciation": "แพ็ด-ดิง",
+      "meaning": "การเสริมขอบ - เพิ่ม pixel รอบภาพ",
+      "example": "Padding preserves the spatial dimensions.",
+      "exampleTranslation": "Padding รักษาขนาดเชิงพื้นที่"
+    },
+    {
+      "vocab": "pooling",
+      "pronunciation": "พูล-ลิง",
+      "meaning": "การรวม - ลดขนาดภาพโดยเอาค่าเด่น",
+      "example": "Max pooling keeps the maximum value in each region.",
+      "exampleTranslation": "Max pooling เก็บค่าสูงสุดในแต่ละบริเวณ"
+    },
+    {
+      "vocab": "max pooling",
+      "pronunciation": "แม็กซ์ พูล-ลิง",
+      "meaning": "การรวมค่าสูงสุด - เลือก pixel ที่มีค่าสูงสุด",
+      "example": "Max pooling reduces dimensions while keeping key features.",
+      "exampleTranslation": "Max pooling ลดมิติโดยเก็บ feature สำคัญ"
+    },
+    {
+      "vocab": "average pooling",
+      "pronunciation": "แอฟ-เวอ-เรจ พูล-ลิง",
+      "meaning": "การรวมค่าเฉลี่ย - หาค่าเฉลี่ยของ pixel",
+      "example": "Average pooling smooths the feature maps.",
+      "exampleTranslation": "Average pooling ทำให้ feature map เรียบ"
+    },
+    {
+      "vocab": "feature map",
+      "pronunciation": "ฟี-เจอร์ แมพ",
+      "meaning": "แผนที่คุณลักษณะ - output จาก convolution layer",
+      "example": "Each filter produces a feature map.",
+      "exampleTranslation": "แต่ละ filter สร้าง feature map"
+    },
+    {
+      "vocab": "receptive field",
+      "pronunciation": "รี-เซ็พ-ทีฟ ฟิลด์",
+      "meaning": "ขอบเขตการรับรู้ - บริเวณ input ที่มีผลต่อ output",
+      "example": "Deeper layers have larger receptive fields.",
+      "exampleTranslation": "layer ที่ลึกกว่ามี receptive field ใหญ่กว่า"
+    },
+    {
+      "vocab": "anchor box",
+      "pronunciation": "แอง-เคอร์ บ็อกซ์",
+      "meaning": "กรอบอ้างอิง - กรอบตั้งต้นสำหรับ object detection",
+      "example": "YOLO uses anchor boxes to predict objects.",
+      "exampleTranslation": "YOLO ใช้ anchor box เพื่อทำนายวัตถุ"
+    },
+    {
+      "vocab": "intersection over union (IoU)",
+      "pronunciation": "อิน-เตอร์-เซ็ค-ชัน โอ-เวอร์ ยู-เนียน",
+      "meaning": "การทับซ้อนเทียบการรวม - วัดความแม่นยำ bounding box",
+      "example": "IoU above 0.5 is typically considered a match.",
+      "exampleTranslation": "IoU เกิน 0.5 มักถือว่าตรงกัน"
+    },
+    {
+      "vocab": "non-maximum suppression (NMS)",
+      "pronunciation": "นอน-แม็ก-ซิ-มัม ซัพ-เพรส-ชัน",
+      "meaning": "การกำจัดกรอบซ้ำ - เลือก bounding box ที่ดีที่สุด",
+      "example": "NMS removes duplicate detections.",
+      "exampleTranslation": "NMS ลบการตรวจจับซ้ำ"
+    },
+    {
+      "vocab": "data augmentation",
+      "pronunciation": "เดท-ทะ ออก-เมน-เท-ชัน",
+      "meaning": "การเพิ่มข้อมูล - สร้างภาพใหม่จากการแปลง",
+      "example": "Data augmentation includes flipping and rotation.",
+      "exampleTranslation": "Data augmentation รวมถึงการพลิกและหมุน"
+    },
+    {
+      "vocab": "image preprocessing",
+      "pronunciation": "อิ-เมจ พรี-โปร-เซส-ซิง",
+      "meaning": "การเตรียมภาพ - resize, normalize ก่อนใส่โมเดล",
+      "example": "Normalize pixel values to 0-1 during preprocessing.",
+      "exampleTranslation": "Normalize ค่า pixel เป็น 0-1 ตอน preprocessing"
+    },
+    {
+      "vocab": "RGB",
+      "pronunciation": "อาร์-จี-บี",
+      "meaning": "แดง-เขียว-น้ำเงิน - ระบบสีมาตรฐาน",
+      "example": "RGB images have 3 color channels.",
+      "exampleTranslation": "ภาพ RGB มี 3 channels สี"
+    },
+    {
+      "vocab": "grayscale",
+      "pronunciation": "เกรย์-สเกล",
+      "meaning": "โทนเทา - ภาพขาวดำมี 1 channel",
+      "example": "Convert to grayscale for simpler processing.",
+      "exampleTranslation": "แปลงเป็น grayscale เพื่อประมวลผลง่ายขึ้น"
+    },
+    {
+      "vocab": "ResNet",
+      "pronunciation": "เรส-เน็ท",
+      "meaning": "Residual Network - โมเดล CNN ที่ใช้ skip connection",
+      "example": "ResNet-50 has 50 layers with residual connections.",
+      "exampleTranslation": "ResNet-50 มี 50 layer พร้อม residual connection"
+    },
+    {
+      "vocab": "YOLO",
+      "pronunciation": "โย-โล",
+      "meaning": "You Only Look Once - object detection แบบ real-time",
+      "example": "YOLO detects objects in a single forward pass.",
+      "exampleTranslation": "YOLO ตรวจจับวัตถุใน forward pass เดียว"
+    },
+    {
+      "vocab": "face recognition",
+      "pronunciation": "เฟส เร-ค็อก-นิ-ชัน",
+      "meaning": "การจดจำใบหน้า - ระบุตัวตนจากใบหน้า",
+      "example": "Face recognition unlocks phones securely.",
+      "exampleTranslation": "Face recognition ปลดล็อคโทรศัพท์อย่างปลอดภัย"
+    },
+    {
+      "vocab": "optical character recognition (OCR)",
+      "pronunciation": "ออพ-ติ-คอล คา-แร็ค-เตอร์ เร-ค็อก-นิ-ชัน",
+      "meaning": "การอ่านตัวอักษร - แปลงภาพเป็นข้อความ",
+      "example": "OCR extracts text from scanned documents.",
+      "exampleTranslation": "OCR ดึงข้อความจากเอกสารที่สแกน"
+    }
+  ]
+}

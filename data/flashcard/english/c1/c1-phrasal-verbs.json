@@ -1,0 +1,384 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Phrasal Verbs",
+    "description": "C1 level advanced phrasal verbs for professional and academic contexts",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "phrasal verbs"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "touch on",
+      "pronunciation": "ทัช ออน",
+      "meaning": "กล่าวถึงอย่างสั้นๆ",
+      "example": "Let me touch on this topic briefly.",
+      "exampleTranslation": "ขอกล่าวถึงหัวข้อนี้อย่างสั้นๆ"
+    },
+    {
+      "vocab": "delve into",
+      "pronunciation": "เดลฟ์ อิน-ทู",
+      "meaning": "ศึกษาลึก, เจาะลึก",
+      "example": "We'll delve into the details later.",
+      "exampleTranslation": "เราจะเจาะลึกรายละเอียดทีหลัง"
+    },
+    {
+      "vocab": "hinge on",
+      "pronunciation": "ฮินจ์ ออน",
+      "meaning": "ขึ้นอยู่กับ",
+      "example": "Success hinges on preparation.",
+      "exampleTranslation": "ความสำเร็จขึ้นอยู่กับการเตรียมตัว"
+    },
+    {
+      "vocab": "stem from",
+      "pronunciation": "สเต็ม ฟรอม",
+      "meaning": "เกิดจาก, มาจาก",
+      "example": "The problem stems from poor communication.",
+      "exampleTranslation": "ปัญหาเกิดจากการสื่อสารที่ไม่ดี"
+    },
+    {
+      "vocab": "account for",
+      "pronunciation": "อะ-เคาท์ ฟอร์",
+      "meaning": "อธิบาย, คิดเป็น",
+      "example": "How do you account for the discrepancy?",
+      "exampleTranslation": "คุณอธิบายความคลาดเคลื่อนนี้อย่างไร?"
+    },
+    {
+      "vocab": "factor in",
+      "pronunciation": "แฟค-เทอะ อิน",
+      "meaning": "คำนึงถึง, รวมเข้าไป",
+      "example": "Factor in the additional costs.",
+      "exampleTranslation": "คำนึงถึงค่าใช้จ่ายเพิ่มเติม"
+    },
+    {
+      "vocab": "phase out",
+      "pronunciation": "เฟส เอาท์",
+      "meaning": "ค่อยๆ ยกเลิก",
+      "example": "The company will phase out legacy systems.",
+      "exampleTranslation": "บริษัทจะค่อยๆ ยกเลิกระบบเก่า"
+    },
+    {
+      "vocab": "roll out",
+      "pronunciation": "โรลล์ เอาท์",
+      "meaning": "เปิดตัว, เริ่มใช้",
+      "example": "We'll roll out the new feature next month.",
+      "exampleTranslation": "เราจะเปิดตัวฟีเจอร์ใหม่เดือนหน้า"
+    },
+    {
+      "vocab": "scale up",
+      "pronunciation": "สเกล อัพ",
+      "meaning": "ขยายขนาด",
+      "example": "Scale up production to meet demand.",
+      "exampleTranslation": "ขยายการผลิตเพื่อตอบสนองความต้องการ"
+    },
+    {
+      "vocab": "ramp up",
+      "pronunciation": "แรมพ์ อัพ",
+      "meaning": "เร่งเพิ่ม",
+      "example": "Ramp up your efforts before the deadline.",
+      "exampleTranslation": "เร่งความพยายามก่อนถึงกำหนด"
+    },
+    {
+      "vocab": "wind down",
+      "pronunciation": "ไวนด์ ดาวน์",
+      "meaning": "ค่อยๆ ลดลง, ยุติ",
+      "example": "The project is winding down.",
+      "exampleTranslation": "โครงการกำลังจะยุติ"
+    },
+    {
+      "vocab": "pan out",
+      "pronunciation": "แพน เอาท์",
+      "meaning": "เป็นผล, สำเร็จ",
+      "example": "Let's see how things pan out.",
+      "exampleTranslation": "มาดูกันว่าสิ่งต่างๆ จะเป็นอย่างไร"
+    },
+    {
+      "vocab": "fall through",
+      "pronunciation": "ฟอลล์ ธรู",
+      "meaning": "ล้มเหลว, ไม่สำเร็จ",
+      "example": "The deal fell through.",
+      "exampleTranslation": "ข้อตกลงล้มเหลว"
+    },
+    {
+      "vocab": "follow through",
+      "pronunciation": "ฟอล-โลว์ ธรู",
+      "meaning": "ทำให้สำเร็จ, ติดตามผล",
+      "example": "Make sure to follow through on your commitments.",
+      "exampleTranslation": "ให้แน่ใจว่าทำตามคำมั่นสัญญา"
+    },
+    {
+      "vocab": "carry out",
+      "pronunciation": "แค-รี่ เอาท์",
+      "meaning": "ดำเนินการ, ปฏิบัติ",
+      "example": "Carry out the plan as discussed.",
+      "exampleTranslation": "ดำเนินการตามแผนที่หารือ"
+    },
+    {
+      "vocab": "draw up",
+      "pronunciation": "ดรอว์ อัพ",
+      "meaning": "ร่าง, จัดทำ",
+      "example": "Draw up a contract.",
+      "exampleTranslation": "ร่างสัญญา"
+    },
+    {
+      "vocab": "iron out",
+      "pronunciation": "ไอ-รอน เอาท์",
+      "meaning": "แก้ปัญหา, ขจัด",
+      "example": "Let's iron out the details.",
+      "exampleTranslation": "มาขจัดปัญหาเรื่องรายละเอียดกัน"
+    },
+    {
+      "vocab": "hash out",
+      "pronunciation": "แฮช เอาท์",
+      "meaning": "หารือจนได้ข้อสรุป",
+      "example": "We need to hash out the terms.",
+      "exampleTranslation": "เราต้องหารือเงื่อนไขจนได้ข้อสรุป"
+    },
+    {
+      "vocab": "thrash out",
+      "pronunciation": "แธรช เอาท์",
+      "meaning": "ถกเถียงจนได้ข้อสรุป",
+      "example": "Thrash out the differences.",
+      "exampleTranslation": "ถกเถียงความแตกต่างจนได้ข้อสรุป"
+    },
+    {
+      "vocab": "flesh out",
+      "pronunciation": "เฟลช เอาท์",
+      "meaning": "เพิ่มรายละเอียด",
+      "example": "Flesh out your proposal.",
+      "exampleTranslation": "เพิ่มรายละเอียดในข้อเสนอของคุณ"
+    },
+    {
+      "vocab": "spell out",
+      "pronunciation": "สเปลล์ เอาท์",
+      "meaning": "อธิบายอย่างชัดเจน",
+      "example": "Spell out the expectations clearly.",
+      "exampleTranslation": "อธิบายความคาดหวังอย่างชัดเจน"
+    },
+    {
+      "vocab": "boil down to",
+      "pronunciation": "บอยล์ ดาวน์ ทู",
+      "meaning": "สรุปได้ว่า",
+      "example": "It boils down to cost vs. quality.",
+      "exampleTranslation": "สรุปได้ว่าเป็นเรื่องต้นทุนกับคุณภาพ"
+    },
+    {
+      "vocab": "narrow down",
+      "pronunciation": "แน-โรว์ ดาวน์",
+      "meaning": "จำกัดให้แคบลง",
+      "example": "Narrow down your options.",
+      "exampleTranslation": "จำกัดตัวเลือกให้แคบลง"
+    },
+    {
+      "vocab": "zero in on",
+      "pronunciation": "ซี-โร อิน ออน",
+      "meaning": "มุ่งเน้นเฉพาะ",
+      "example": "Zero in on the key issues.",
+      "exampleTranslation": "มุ่งเน้นประเด็นสำคัญ"
+    },
+    {
+      "vocab": "home in on",
+      "pronunciation": "โฮม อิน ออน",
+      "meaning": "เข้าใกล้เป้าหมาย",
+      "example": "We're homing in on a solution.",
+      "exampleTranslation": "เรากำลังเข้าใกล้ทางออก"
+    },
+    {
+      "vocab": "weigh in",
+      "pronunciation": "เวย์ อิน",
+      "meaning": "แสดงความคิดเห็น",
+      "example": "Would you like to weigh in on this?",
+      "exampleTranslation": "คุณอยากแสดงความคิดเห็นเรื่องนี้ไหม?"
+    },
+    {
+      "vocab": "opt out",
+      "pronunciation": "ออพท์ เอาท์",
+      "meaning": "เลือกไม่เข้าร่วม",
+      "example": "You can opt out of the program.",
+      "exampleTranslation": "คุณสามารถเลือกไม่เข้าร่วมโปรแกรม"
+    },
+    {
+      "vocab": "buy into",
+      "pronunciation": "บาย อิน-ทู",
+      "meaning": "เชื่อ, ยอมรับ",
+      "example": "Not everyone buys into this idea.",
+      "exampleTranslation": "ไม่ใช่ทุกคนยอมรับความคิดนี้"
+    },
+    {
+      "vocab": "sign off on",
+      "pronunciation": "ไซน์ ออฟ ออน",
+      "meaning": "อนุมัติ",
+      "example": "The manager needs to sign off on this.",
+      "exampleTranslation": "ผู้จัดการต้องอนุมัติเรื่องนี้"
+    },
+    {
+      "vocab": "back out of",
+      "pronunciation": "แบค เอาท์ ออฟ",
+      "meaning": "ถอนตัว, ไม่ทำตามสัญญา",
+      "example": "They backed out of the deal.",
+      "exampleTranslation": "พวกเขาถอนตัวจากข้อตกลง"
+    },
+    {
+      "vocab": "cave in",
+      "pronunciation": "เคฟ อิน",
+      "meaning": "ยอมจำนน",
+      "example": "Don't cave in to pressure.",
+      "exampleTranslation": "อย่ายอมจำนนต่อแรงกดดัน"
+    },
+    {
+      "vocab": "double down on",
+      "pronunciation": "ดับ-เบิล ดาวน์ ออน",
+      "meaning": "เพิ่มความมุ่งมั่น",
+      "example": "We're doubling down on innovation.",
+      "exampleTranslation": "เราเพิ่มความมุ่งมั่นในนวัตกรรม"
+    },
+    {
+      "vocab": "brush up on",
+      "pronunciation": "บรัช อัพ ออน",
+      "meaning": "ทบทวน, ฟื้นความรู้",
+      "example": "Brush up on your presentation skills.",
+      "exampleTranslation": "ทบทวนทักษะการนำเสนอของคุณ"
+    },
+    {
+      "vocab": "catch up on",
+      "pronunciation": "แค็ทช์ อัพ ออน",
+      "meaning": "ทำให้ทัน, ติดตามความเคลื่อนไหว",
+      "example": "I need to catch up on emails.",
+      "exampleTranslation": "ฉันต้องตามอีเมลให้ทัน"
+    },
+    {
+      "vocab": "keep up with",
+      "pronunciation": "คีพ อัพ วิธ",
+      "meaning": "ตามทัน",
+      "example": "It's hard to keep up with technology.",
+      "exampleTranslation": "มันยากที่จะตามเทคโนโลยีให้ทัน"
+    },
+    {
+      "vocab": "come up with",
+      "pronunciation": "คัม อัพ วิธ",
+      "meaning": "คิดขึ้นมาได้",
+      "example": "We need to come up with a solution.",
+      "exampleTranslation": "เราต้องคิดวิธีแก้ปัญหาขึ้นมา"
+    },
+    {
+      "vocab": "live up to",
+      "pronunciation": "ลิฟ อัพ ทู",
+      "meaning": "ทำได้ตามที่คาดหวัง",
+      "example": "The product lived up to expectations.",
+      "exampleTranslation": "ผลิตภัณฑ์ทำได้ตามที่คาดหวัง"
+    },
+    {
+      "vocab": "measure up to",
+      "pronunciation": "เมช-เชอะ อัพ ทู",
+      "meaning": "เทียบเท่ากับ",
+      "example": "Does this measure up to industry standards?",
+      "exampleTranslation": "สิ่งนี้เทียบเท่ามาตรฐานอุตสาหกรรมไหม?"
+    },
+    {
+      "vocab": "crack down on",
+      "pronunciation": "แครค ดาวน์ ออน",
+      "meaning": "ปราบปราม, เข้มงวด",
+      "example": "The government is cracking down on corruption.",
+      "exampleTranslation": "รัฐบาลกำลังปราบปรามการทุจริต"
+    },
+    {
+      "vocab": "clamp down on",
+      "pronunciation": "แคลมพ์ ดาวน์ ออน",
+      "meaning": "ควบคุมอย่างเข้มงวด",
+      "example": "They're clamping down on expenses.",
+      "exampleTranslation": "พวกเขากำลังควบคุมค่าใช้จ่ายอย่างเข้มงวด"
+    },
+    {
+      "vocab": "shy away from",
+      "pronunciation": "ชาย อะ-เวย์ ฟรอม",
+      "meaning": "หลีกเลี่ยง, ไม่กล้าทำ",
+      "example": "Don't shy away from difficult conversations.",
+      "exampleTranslation": "อย่าหลีกเลี่ยงการสนทนาที่ยาก"
+    },
+    {
+      "vocab": "fend off",
+      "pronunciation": "เฟนด์ ออฟ",
+      "meaning": "ป้องกัน, ต้านทาน",
+      "example": "Fend off the competition.",
+      "exampleTranslation": "ป้องกันคู่แข่ง"
+    },
+    {
+      "vocab": "ward off",
+      "pronunciation": "วอร์ด ออฟ",
+      "meaning": "ป้องกัน, ขับไล่",
+      "example": "Ward off potential threats.",
+      "exampleTranslation": "ป้องกันภัยคุกคามที่อาจเกิดขึ้น"
+    },
+    {
+      "vocab": "stave off",
+      "pronunciation": "สเตฟ ออฟ",
+      "meaning": "ยับยั้ง, ชะลอ",
+      "example": "Stave off bankruptcy.",
+      "exampleTranslation": "ยับยั้งการล้มละลาย"
+    },
+    {
+      "vocab": "ride out",
+      "pronunciation": "ไรด์ เอาท์",
+      "meaning": "ผ่านพ้นไปได้",
+      "example": "We'll ride out the crisis.",
+      "exampleTranslation": "เราจะผ่านพ้นวิกฤตไปได้"
+    },
+    {
+      "vocab": "play down",
+      "pronunciation": "เพลย์ ดาวน์",
+      "meaning": "ลดความสำคัญ",
+      "example": "They tried to play down the incident.",
+      "exampleTranslation": "พวกเขาพยายามลดความสำคัญของเหตุการณ์"
+    },
+    {
+      "vocab": "play up",
+      "pronunciation": "เพลย์ อัพ",
+      "meaning": "เน้น, โฆษณา",
+      "example": "Play up your strengths.",
+      "exampleTranslation": "เน้นจุดแข็งของคุณ"
+    },
+    {
+      "vocab": "gloss over",
+      "pronunciation": "กลอส โอ-เวอะ",
+      "meaning": "พูดผ่านๆ, ไม่ให้ความสำคัญ",
+      "example": "Don't gloss over the problems.",
+      "exampleTranslation": "อย่าพูดผ่านๆ เรื่องปัญหา"
+    },
+    {
+      "vocab": "paper over",
+      "pronunciation": "เพ-เพอะ โอ-เวอะ",
+      "meaning": "ปิดบัง, แก้ไขชั่วคราว",
+      "example": "They're just papering over the cracks.",
+      "exampleTranslation": "พวกเขาแค่ปิดบังปัญหา"
+    },
+    {
+      "vocab": "shore up",
+      "pronunciation": "ชอร์ อัพ",
+      "meaning": "เสริม, สนับสนุน",
+      "example": "Shore up the company's finances.",
+      "exampleTranslation": "เสริมการเงินของบริษัท"
+    },
+    {
+      "vocab": "prop up",
+      "pronunciation": "พรอพ อัพ",
+      "meaning": "ค้ำจุน, สนับสนุน",
+      "example": "The government propped up the industry.",
+      "exampleTranslation": "รัฐบาลค้ำจุนอุตสาหกรรม"
+    },
+    {
+      "vocab": "dovetail with",
+      "pronunciation": "ดัฟ-เทล วิธ",
+      "meaning": "สอดคล้องกัน",
+      "example": "This dovetails with our strategy.",
+      "exampleTranslation": "สิ่งนี้สอดคล้องกับกลยุทธ์ของเรา"
+    },
+    {
+      "vocab": "tie in with",
+      "pronunciation": "ไท อิน วิธ",
+      "meaning": "เชื่อมโยงกับ",
+      "example": "How does this tie in with our goals?",
+      "exampleTranslation": "สิ่งนี้เชื่อมโยงกับเป้าหมายของเราอย่างไร?"
+    }
+  ]
+}

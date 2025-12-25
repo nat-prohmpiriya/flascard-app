@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Environment & Sustainability",
+    "description": "B2 level vocabulary for environment and sustainability topics",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "sustainability",
+      "pronunciation": "ซัส-เทน-นะ-บิ-ลิ-ตี้",
+      "meaning": "ความยั่งยืน",
+      "example": "Sustainability is key to our future.",
+      "exampleTranslation": "ความยั่งยืนเป็นกุญแจสู่อนาคตของเรา"
+    },
+    {
+      "vocab": "biodiversity",
+      "pronunciation": "ไบ-โอ-ได-เวอร์-ซิ-ตี้",
+      "meaning": "ความหลากหลายทางชีวภาพ",
+      "example": "Biodiversity is essential for ecosystems.",
+      "exampleTranslation": "ความหลากหลายทางชีวภาพจำเป็นต่อระบบนิเวศ"
+    },
+    {
+      "vocab": "carbon footprint",
+      "pronunciation": "คาร์-บอน ฟุท-พริ้นท์",
+      "meaning": "รอยเท้าคาร์บอน",
+      "example": "Reduce your carbon footprint.",
+      "exampleTranslation": "ลดรอยเท้าคาร์บอนของคุณ"
+    },
+    {
+      "vocab": "carbon neutral",
+      "pronunciation": "คาร์-บอน นิว-ทรัล",
+      "meaning": "คาร์บอนเป็นกลาง",
+      "example": "The company aims to be carbon neutral.",
+      "exampleTranslation": "บริษัทตั้งเป้าเป็นกลางทางคาร์บอน"
+    },
+    {
+      "vocab": "net zero",
+      "pronunciation": "เน็ท ซีโร่",
+      "meaning": "ปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์",
+      "example": "Many countries pledge net zero by 2050.",
+      "exampleTranslation": "หลายประเทศให้คำมั่นว่าจะปล่อยก๊าซสุทธิเป็นศูนย์ภายในปี 2050"
+    },
+    {
+      "vocab": "emissions",
+      "pronunciation": "อิ-มิช-ชั่นส์",
+      "meaning": "การปล่อยก๊าซ/มลพิษ",
+      "example": "We must cut greenhouse gas emissions.",
+      "exampleTranslation": "เราต้องลดการปล่อยก๊าซเรือนกระจก"
+    },
+    {
+      "vocab": "fossil fuel",
+      "pronunciation": "ฟอส-ซิล ฟิว-เอิล",
+      "meaning": "เชื้อเพลิงฟอสซิล",
+      "example": "Fossil fuels contribute to climate change.",
+      "exampleTranslation": "เชื้อเพลิงฟอสซิลมีส่วนทำให้เกิดการเปลี่ยนแปลงสภาพภูมิอากาศ"
+    },
+    {
+      "vocab": "renewable",
+      "pronunciation": "รี-นิว-เอะ-เบิล",
+      "meaning": "หมุนเวียน, ทดแทนได้",
+      "example": "Invest in renewable energy sources.",
+      "exampleTranslation": "ลงทุนในแหล่งพลังงานหมุนเวียน"
+    },
+    {
+      "vocab": "solar panel",
+      "pronunciation": "โซ-ลาร์ แพน-เนิล",
+      "meaning": "แผงโซลาร์เซลล์",
+      "example": "Solar panels generate clean electricity.",
+      "exampleTranslation": "แผงโซลาร์เซลล์ผลิตไฟฟ้าสะอาด"
+    },
+    {
+      "vocab": "wind turbine",
+      "pronunciation": "วินด์ เทอร์-ไบน์",
+      "meaning": "กังหันลม",
+      "example": "Wind turbines harness wind energy.",
+      "exampleTranslation": "กังหันลมใช้ประโยชน์จากพลังงานลม"
+    },
+    {
+      "vocab": "hydroelectric",
+      "pronunciation": "ไฮ-โดร-อิ-เล็ค-ทริค",
+      "meaning": "พลังงานน้ำ",
+      "example": "Hydroelectric dams produce power.",
+      "exampleTranslation": "เขื่อนพลังงานน้ำผลิตพลังงาน"
+    },
+    {
+      "vocab": "geothermal",
+      "pronunciation": "จี-โอ-เธอร์-มอล",
+      "meaning": "ความร้อนใต้พิภพ",
+      "example": "Geothermal energy comes from the Earth.",
+      "exampleTranslation": "พลังงานความร้อนใต้พิภพมาจากโลก"
+    },
+    {
+      "vocab": "deforestation",
+      "pronunciation": "ดี-ฟอ-เรส-เท-ชั่น",
+      "meaning": "การทำลายป่า",
+      "example": "Deforestation accelerates climate change.",
+      "exampleTranslation": "การทำลายป่าเร่งการเปลี่ยนแปลงสภาพภูมิอากาศ"
+    },
+    {
+      "vocab": "reforestation",
+      "pronunciation": "รี-ฟอ-เรส-เท-ชั่น",
+      "meaning": "การปลูกป่าทดแทน",
+      "example": "Reforestation helps absorb CO2.",
+      "exampleTranslation": "การปลูกป่าทดแทนช่วยดูดซับ CO2"
+    },
+    {
+      "vocab": "desertification",
+      "pronunciation": "ดิ-เซอร์-ติ-ฟิ-เค-ชั่น",
+      "meaning": "การกลายเป็นทะเลทราย",
+      "example": "Desertification threatens farmland.",
+      "exampleTranslation": "การกลายเป็นทะเลทรายคุกคามพื้นที่เกษตร"
+    },
+    {
+      "vocab": "erosion",
+      "pronunciation": "อิ-โร-ชั่น",
+      "meaning": "การกัดเซาะ",
+      "example": "Soil erosion is a major problem.",
+      "exampleTranslation": "การกัดเซาะดินเป็นปัญหาใหญ่"
+    },
+    {
+      "vocab": "contamination",
+      "pronunciation": "คอน-แทม-มิ-เน-ชั่น",
+      "meaning": "การปนเปื้อน",
+      "example": "Water contamination affects health.",
+      "exampleTranslation": "การปนเปื้อนในน้ำส่งผลต่อสุขภาพ"
+    },
+    {
+      "vocab": "toxic",
+      "pronunciation": "ทอก-ซิค",
+      "meaning": "มีพิษ, เป็นพิษ",
+      "example": "Toxic waste must be disposed properly.",
+      "exampleTranslation": "ของเสียที่เป็นพิษต้องกำจัดอย่างถูกวิธี"
+    },
+    {
+      "vocab": "hazardous",
+      "pronunciation": "แฮซ-ซาร์-ดัส",
+      "meaning": "อันตราย, เป็นอันตราย",
+      "example": "Hazardous materials require special handling.",
+      "exampleTranslation": "วัสดุอันตรายต้องการการจัดการพิเศษ"
+    },
+    {
+      "vocab": "biodegradable",
+      "pronunciation": "ไบ-โอ-ดิ-เกร-ดะ-เบิล",
+      "meaning": "ย่อยสลายได้ทางชีวภาพ",
+      "example": "Use biodegradable packaging.",
+      "exampleTranslation": "ใช้บรรจุภัณฑ์ที่ย่อยสลายได้ทางชีวภาพ"
+    },
+    {
+      "vocab": "compost",
+      "pronunciation": "คอม-โพสท์",
+      "meaning": "ปุ๋ยหมัก, ทำปุ๋ยหมัก",
+      "example": "Compost your food waste.",
+      "exampleTranslation": "ทำปุ๋ยหมักจากเศษอาหารของคุณ"
+    },
+    {
+      "vocab": "landfill",
+      "pronunciation": "แลนด์-ฟิล",
+      "meaning": "หลุมฝังกลบ",
+      "example": "Landfills are filling up quickly.",
+      "exampleTranslation": "หลุมฝังกลบเต็มอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "recycle",
+      "pronunciation": "รี-ไซ-เคิล",
+      "meaning": "รีไซเคิล",
+      "example": "Recycle plastic, paper, and glass.",
+      "exampleTranslation": "รีไซเคิลพลาสติก กระดาษ และแก้ว"
+    },
+    {
+      "vocab": "upcycle",
+      "pronunciation": "อัพ-ไซ-เคิล",
+      "meaning": "อัปไซเคิล (แปลงเป็นของใหม่ที่มีคุณค่ากว่า)",
+      "example": "Upcycle old furniture into new pieces.",
+      "exampleTranslation": "อัปไซเคิลเฟอร์นิเจอร์เก่าเป็นชิ้นใหม่"
+    },
+    {
+      "vocab": "circular economy",
+      "pronunciation": "เซอร์-คิว-ลาร์ อิ-คอน-โน-มี",
+      "meaning": "เศรษฐกิจหมุนเวียน",
+      "example": "A circular economy minimizes waste.",
+      "exampleTranslation": "เศรษฐกิจหมุนเวียนลดขยะให้น้อยที่สุด"
+    },
+    {
+      "vocab": "single-use",
+      "pronunciation": "ซิง-เกิล ยูส",
+      "meaning": "ใช้ครั้งเดียว",
+      "example": "Avoid single-use plastics.",
+      "exampleTranslation": "หลีกเลี่ยงพลาสติกใช้ครั้งเดียว"
+    },
+    {
+      "vocab": "disposable",
+      "pronunciation": "ดิส-โพ-ซะ-เบิล",
+      "meaning": "ใช้แล้วทิ้ง",
+      "example": "Disposable items create more waste.",
+      "exampleTranslation": "สิ่งของใช้แล้วทิ้งสร้างขยะมากขึ้น"
+    },
+    {
+      "vocab": "reusable",
+      "pronunciation": "รี-ยู-ซะ-เบิล",
+      "meaning": "ใช้ซ้ำได้",
+      "example": "Bring reusable bags shopping.",
+      "exampleTranslation": "นำถุงที่ใช้ซ้ำได้ไปซื้อของ"
+    },
+    {
+      "vocab": "eco-friendly",
+      "pronunciation": "อี-โค-เฟรนด์-ลี",
+      "meaning": "เป็นมิตรกับสิ่งแวดล้อม",
+      "example": "Choose eco-friendly products.",
+      "exampleTranslation": "เลือกผลิตภัณฑ์ที่เป็นมิตรกับสิ่งแวดล้อม"
+    },
+    {
+      "vocab": "conservation",
+      "pronunciation": "คอน-เซอะ-เว-ชั่น",
+      "meaning": "การอนุรักษ์",
+      "example": "Wildlife conservation is crucial.",
+      "exampleTranslation": "การอนุรักษ์สัตว์ป่ามีความสำคัญ"
+    },
+    {
+      "vocab": "preservation",
+      "pronunciation": "เพรส-เซอะ-เว-ชั่น",
+      "meaning": "การรักษา, การสงวน",
+      "example": "Forest preservation prevents extinction.",
+      "exampleTranslation": "การรักษาป่าป้องกันการสูญพันธุ์"
+    },
+    {
+      "vocab": "extinction",
+      "pronunciation": "เอ็กซ์-ทิงค์-ชั่น",
+      "meaning": "การสูญพันธุ์",
+      "example": "Many species face extinction.",
+      "exampleTranslation": "หลายสายพันธุ์เผชิญกับการสูญพันธุ์"
+    },
+    {
+      "vocab": "poaching",
+      "pronunciation": "โพช-ชิง",
+      "meaning": "การลักลอบล่าสัตว์",
+      "example": "Poaching threatens elephants.",
+      "exampleTranslation": "การลักลอบล่าสัตว์คุกคามช้าง"
+    },
+    {
+      "vocab": "overfishing",
+      "pronunciation": "โอ-เวอะ-ฟิช-ชิง",
+      "meaning": "การจับปลาเกินขนาด",
+      "example": "Overfishing depletes ocean life.",
+      "exampleTranslation": "การจับปลาเกินขนาดทำให้สิ่งมีชีวิตในทะเลหมดไป"
+    },
+    {
+      "vocab": "marine",
+      "pronunciation": "มะ-รีน",
+      "meaning": "ทางทะเล",
+      "example": "Marine ecosystems are under threat.",
+      "exampleTranslation": "ระบบนิเวศทางทะเลถูกคุกคาม"
+    },
+    {
+      "vocab": "coral reef",
+      "pronunciation": "คอ-รัล รีฟ",
+      "meaning": "แนวปะการัง",
+      "example": "Coral reefs are dying from warming.",
+      "exampleTranslation": "แนวปะการังกำลังตายจากภาวะโลกร้อน"
+    },
+    {
+      "vocab": "acidification",
+      "pronunciation": "อะ-ซิด-ดิ-ฟิ-เค-ชั่น",
+      "meaning": "ความเป็นกรด",
+      "example": "Ocean acidification harms sea life.",
+      "exampleTranslation": "ความเป็นกรดในมหาสมุทรทำลายสิ่งมีชีวิตในทะเล"
+    },
+    {
+      "vocab": "ozone layer",
+      "pronunciation": "โอ-โซน เล-เยอะ",
+      "meaning": "ชั้นโอโซน",
+      "example": "The ozone layer protects us from UV rays.",
+      "exampleTranslation": "ชั้นโอโซนปกป้องเราจากรังสียูวี"
+    },
+    {
+      "vocab": "greenhouse gas",
+      "pronunciation": "กรีน-เฮาส์ แก๊ส",
+      "meaning": "ก๊าซเรือนกระจก",
+      "example": "Greenhouse gases trap heat.",
+      "exampleTranslation": "ก๊าซเรือนกระจกกักเก็บความร้อน"
+    },
+    {
+      "vocab": "methane",
+      "pronunciation": "มี-เธน",
+      "meaning": "มีเทน",
+      "example": "Methane is a potent greenhouse gas.",
+      "exampleTranslation": "มีเทนเป็นก๊าซเรือนกระจกที่รุนแรง"
+    },
+    {
+      "vocab": "ecological",
+      "pronunciation": "อี-โค-ลอจ-จิ-คัล",
+      "meaning": "เกี่ยวกับนิเวศวิทยา",
+      "example": "We face an ecological crisis.",
+      "exampleTranslation": "เราเผชิญกับวิกฤตทางนิเวศวิทยา"
+    },
+    {
+      "vocab": "environmental",
+      "pronunciation": "เอ็น-ไว-รอน-เมน-ทัล",
+      "meaning": "เกี่ยวกับสิ่งแวดล้อม",
+      "example": "Environmental policies must be stronger.",
+      "exampleTranslation": "นโยบายด้านสิ่งแวดล้อมต้องเข้มงวดมากขึ้น"
+    },
+    {
+      "vocab": "activist",
+      "pronunciation": "แอค-ทิ-วิสท์",
+      "meaning": "นักเคลื่อนไหว",
+      "example": "Environmental activists demand action.",
+      "exampleTranslation": "นักเคลื่อนไหวด้านสิ่งแวดล้อมเรียกร้องให้ลงมือทำ"
+    },
+    {
+      "vocab": "initiative",
+      "pronunciation": "อิ-นิช-ชิ-เอะ-ทิฟ",
+      "meaning": "โครงการริเริ่ม",
+      "example": "The green initiative reduced emissions.",
+      "exampleTranslation": "โครงการริเริ่มสีเขียวลดการปล่อยมลพิษ"
+    },
+    {
+      "vocab": "sustainable development",
+      "pronunciation": "ซัส-เทน-นะ-เบิล ดิ-เวล-ลอพ-เมินท์",
+      "meaning": "การพัฒนาที่ยั่งยืน",
+      "example": "Sustainable development balances growth and environment.",
+      "exampleTranslation": "การพัฒนาที่ยั่งยืนสร้างสมดุลระหว่างการเติบโตและสิ่งแวดล้อม"
+    },
+    {
+      "vocab": "carbon offset",
+      "pronunciation": "คาร์-บอน ออฟ-เซ็ท",
+      "meaning": "การชดเชยคาร์บอน",
+      "example": "Buy carbon offsets when you fly.",
+      "exampleTranslation": "ซื้อการชดเชยคาร์บอนเมื่อคุณบิน"
+    },
+    {
+      "vocab": "green energy",
+      "pronunciation": "กรีน เอ็น-เนอะ-จี",
+      "meaning": "พลังงานสีเขียว",
+      "example": "Green energy reduces pollution.",
+      "exampleTranslation": "พลังงานสีเขียวลดมลพิษ"
+    },
+    {
+      "vocab": "electric vehicle",
+      "pronunciation": "อิ-เล็ค-ทริค วี-อิ-เคิล",
+      "meaning": "รถยนต์ไฟฟ้า",
+      "example": "Electric vehicles produce zero emissions.",
+      "exampleTranslation": "รถยนต์ไฟฟ้าปล่อยมลพิษเป็นศูนย์"
+    },
+    {
+      "vocab": "habitat loss",
+      "pronunciation": "แฮบ-บิ-แทท ลอส",
+      "meaning": "การสูญเสียถิ่นที่อยู่",
+      "example": "Habitat loss threatens wildlife.",
+      "exampleTranslation": "การสูญเสียถิ่นที่อยู่คุกคามสัตว์ป่า"
+    },
+    {
+      "vocab": "invasive species",
+      "pronunciation": "อิน-เว-ซิฟ สปี-ชีส",
+      "meaning": "สายพันธุ์รุกราน",
+      "example": "Invasive species disrupt ecosystems.",
+      "exampleTranslation": "สายพันธุ์รุกรานรบกวนระบบนิเวศ"
+    },
+    {
+      "vocab": "pollutant",
+      "pronunciation": "พอล-ลู-ทันท์",
+      "meaning": "สารมลพิษ",
+      "example": "Pollutants contaminate water sources.",
+      "exampleTranslation": "สารมลพิษปนเปื้อนแหล่งน้ำ"
+    },
+    {
+      "vocab": "climate crisis",
+      "pronunciation": "ไคล-เมท ไคร-ซิส",
+      "meaning": "วิกฤตสภาพภูมิอากาศ",
+      "example": "The climate crisis demands urgent action.",
+      "exampleTranslation": "วิกฤตสภาพภูมิอากาศต้องการการดำเนินการเร่งด่วน"
+    },
+    {
+      "vocab": "mitigation",
+      "pronunciation": "มิท-ทิ-เก-ชั่น",
+      "meaning": "การบรรเทา, การลดผลกระทบ",
+      "example": "Climate mitigation strategies are essential.",
+      "exampleTranslation": "กลยุทธ์บรรเทาการเปลี่ยนแปลงสภาพภูมิอากาศเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "adaptation",
+      "pronunciation": "แอด-ดัพ-เท-ชั่น",
+      "meaning": "การปรับตัว",
+      "example": "Climate adaptation helps communities cope.",
+      "exampleTranslation": "การปรับตัวต่อสภาพภูมิอากาศช่วยให้ชุมชนรับมือได้"
+    }
+  ]
+}

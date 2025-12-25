@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Arts & Literature",
+    "description": "C1 level vocabulary for arts, literature, and cultural discussions",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "arts", "literature"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "avant-garde",
+      "pronunciation": "อา-วอง-การ์ด",
+      "meaning": "แนวหน้า, ล้ำสมัย",
+      "example": "The avant-garde movement challenged conventions.",
+      "exampleTranslation": "ขบวนการแนวหน้าท้าทายธรรมเนียมปฏิบัติ"
+    },
+    {
+      "vocab": "aesthetic",
+      "pronunciation": "เอส-เธท-ทิค",
+      "meaning": "สุนทรียศาสตร์, ความงาม",
+      "example": "The aesthetic appeal of the design is remarkable.",
+      "exampleTranslation": "ความดึงดูดทางสุนทรียศาสตร์ของการออกแบบน่าทึ่ง"
+    },
+    {
+      "vocab": "semiotics",
+      "pronunciation": "เซ-มี-ออท-ทิคส์",
+      "meaning": "สัญศาสตร์",
+      "example": "Semiotics studies signs and symbols.",
+      "exampleTranslation": "สัญศาสตร์ศึกษาสัญลักษณ์และเครื่องหมาย"
+    },
+    {
+      "vocab": "allegory",
+      "pronunciation": "แอล-ลิ-โก-รี",
+      "meaning": "เรื่องเปรียบเทียบ, อุปมานิทัศน์",
+      "example": "The novel is an allegory for political corruption.",
+      "exampleTranslation": "นวนิยายเป็นเรื่องเปรียบเทียบการทุจริตทางการเมือง"
+    },
+    {
+      "vocab": "metaphor",
+      "pronunciation": "เม-ทะ-ฟอร์",
+      "meaning": "อุปมา",
+      "example": "Life is a journey is a common metaphor.",
+      "exampleTranslation": "ชีวิตคือการเดินทางเป็นอุปมาทั่วไป"
+    },
+    {
+      "vocab": "irony",
+      "pronunciation": "ไอ-โร-นี",
+      "meaning": "การพูดประชด, การเสียดสี",
+      "example": "The irony of the situation was not lost on her.",
+      "exampleTranslation": "เธอตระหนักถึงความประชดของสถานการณ์"
+    },
+    {
+      "vocab": "satire",
+      "pronunciation": "แซท-ไทร์",
+      "meaning": "การเสียดสี",
+      "example": "The play is a satire of modern society.",
+      "exampleTranslation": "ละครเป็นการเสียดสีสังคมสมัยใหม่"
+    },
+    {
+      "vocab": "parody",
+      "pronunciation": "พา-โร-ดี",
+      "meaning": "การล้อเลียน",
+      "example": "The film is a parody of action movies.",
+      "exampleTranslation": "หนังเป็นการล้อเลียนหนังแอ็คชั่น"
+    },
+    {
+      "vocab": "pastiche",
+      "pronunciation": "พาส-ทีช",
+      "meaning": "งานประกอบจากหลายแบบ, การลอกเลียนแบบ",
+      "example": "The album is a pastiche of 80s pop music.",
+      "exampleTranslation": "อัลบั้มเป็นการผสมผสานเพลงป๊อปยุค 80"
+    },
+    {
+      "vocab": "motif",
+      "pronunciation": "โม-ทีฟ",
+      "meaning": "แนวคิดหลัก, ลวดลาย",
+      "example": "Water is a recurring motif in the novel.",
+      "exampleTranslation": "น้ำเป็นแนวคิดหลักที่ปรากฏซ้ำในนวนิยาย"
+    },
+    {
+      "vocab": "leitmotif",
+      "pronunciation": "ไลท์-โม-ทีฟ",
+      "meaning": "แนวคิดหลักที่ปรากฏซ้ำ (ดนตรี)",
+      "example": "The composer uses a leitmotif for the villain.",
+      "exampleTranslation": "นักแต่งเพลงใช้แนวคิดหลักที่ปรากฏซ้ำสำหรับตัวร้าย"
+    },
+    {
+      "vocab": "protagonist",
+      "pronunciation": "โพร-แทก-โก-นิสท์",
+      "meaning": "ตัวละครหลัก",
+      "example": "The protagonist struggles with identity.",
+      "exampleTranslation": "ตัวละครหลักต่อสู้กับอัตลักษณ์"
+    },
+    {
+      "vocab": "antagonist",
+      "pronunciation": "แอน-แทก-โก-นิสท์",
+      "meaning": "ตัวร้าย, ฝ่ายตรงข้าม",
+      "example": "The antagonist has complex motivations.",
+      "exampleTranslation": "ตัวร้ายมีแรงจูงใจที่ซับซ้อน"
+    },
+    {
+      "vocab": "archetype",
+      "pronunciation": "อาร์-คิ-ไทป์",
+      "meaning": "ต้นแบบ, แม่แบบ",
+      "example": "The hero is a classic archetype.",
+      "exampleTranslation": "วีรบุรุษเป็นต้นแบบคลาสสิก"
+    },
+    {
+      "vocab": "narrative",
+      "pronunciation": "นา-เร-ทีฟ",
+      "meaning": "การเล่าเรื่อง, เรื่องเล่า",
+      "example": "The narrative structure is non-linear.",
+      "exampleTranslation": "โครงสร้างการเล่าเรื่องไม่เป็นเส้นตรง"
+    },
+    {
+      "vocab": "prose",
+      "pronunciation": "โพรซ",
+      "meaning": "ร้อยแก้ว",
+      "example": "Her prose is elegant and precise.",
+      "exampleTranslation": "ร้อยแก้วของเธอสง่างามและแม่นยำ"
+    },
+    {
+      "vocab": "verse",
+      "pronunciation": "เวิร์ส",
+      "meaning": "ร้อยกรอง, บทกวี",
+      "example": "Shakespeare wrote in blank verse.",
+      "exampleTranslation": "เชกสเปียร์เขียนในรูปแบบร้อยกรองเปล่า"
+    },
+    {
+      "vocab": "sonnet",
+      "pronunciation": "ซอน-เน็ท",
+      "meaning": "กวีนิพนธ์สิบสี่บรรทัด",
+      "example": "Shakespeare's sonnets are famous worldwide.",
+      "exampleTranslation": "กวีนิพนธ์สิบสี่บรรทัดของเชกสเปียร์มีชื่อเสียงทั่วโลก"
+    },
+    {
+      "vocab": "stanza",
+      "pronunciation": "สแตน-ซา",
+      "meaning": "บท (ของกลอน)",
+      "example": "The poem has five stanzas.",
+      "exampleTranslation": "บทกวีมีห้าบท"
+    },
+    {
+      "vocab": "meter",
+      "pronunciation": "มี-เทอะ",
+      "meaning": "จังหวะ, ฉันทลักษณ์",
+      "example": "The poem uses iambic meter.",
+      "exampleTranslation": "บทกวีใช้จังหวะไอแอมบิค"
+    },
+    {
+      "vocab": "alliteration",
+      "pronunciation": "อัล-ลิ-เทอ-เร-ชั่น",
+      "meaning": "สัมผัสอักษร",
+      "example": "She sells seashells is an example of alliteration.",
+      "exampleTranslation": "She sells seashells เป็นตัวอย่างของสัมผัสอักษร"
+    },
+    {
+      "vocab": "onomatopoeia",
+      "pronunciation": "ออน-โน-แมท-โท-พี-อา",
+      "meaning": "คำเลียนเสียง",
+      "example": "Buzz and splash are examples of onomatopoeia.",
+      "exampleTranslation": "Buzz และ splash เป็นตัวอย่างของคำเลียนเสียง"
+    },
+    {
+      "vocab": "euphemism",
+      "pronunciation": "ยู-เฟอ-มิ-ซึม",
+      "meaning": "คำสุภาพ, การพูดอ้อมค้อม",
+      "example": "Passed away is a euphemism for died.",
+      "exampleTranslation": "จากไปแล้วเป็นคำสุภาพของตาย"
+    },
+    {
+      "vocab": "hyperbole",
+      "pronunciation": "ไฮ-เพอร์-โบ-ลี",
+      "meaning": "การพูดเกินจริง, อติพจน์",
+      "example": "I'm so hungry I could eat a horse is hyperbole.",
+      "exampleTranslation": "ฉันหิวมากจนกินม้าได้เป็นการพูดเกินจริง"
+    },
+    {
+      "vocab": "oxymoron",
+      "pronunciation": "ออกซี-โม-รอน",
+      "meaning": "คำที่ขัดแย้งกัน",
+      "example": "Deafening silence is an oxymoron.",
+      "exampleTranslation": "ความเงียบที่หนวกหูเป็นคำที่ขัดแย้งกัน"
+    },
+    {
+      "vocab": "catharsis",
+      "pronunciation": "คะ-ธาร์-ซิส",
+      "meaning": "การระบายอารมณ์",
+      "example": "Tragedy provides emotional catharsis.",
+      "exampleTranslation": "โศกนาฏกรรมให้การระบายอารมณ์"
+    },
+    {
+      "vocab": "denouement",
+      "pronunciation": "เด-นู-มองท์",
+      "meaning": "ตอนจบ, การคลี่คลาย",
+      "example": "The denouement reveals the truth.",
+      "exampleTranslation": "ตอนจบเปิดเผยความจริง"
+    },
+    {
+      "vocab": "climax",
+      "pronunciation": "ไคล-แม็กซ์",
+      "meaning": "จุดสุดยอด, จุดพีค",
+      "example": "The story reaches its climax in chapter 10.",
+      "exampleTranslation": "เรื่องถึงจุดสุดยอดในบทที่ 10"
+    },
+    {
+      "vocab": "exposition",
+      "pronunciation": "เอ็กซ์-โพ-ซิ-ชั่น",
+      "meaning": "การเปิดเรื่อง, การอธิบายเบื้องต้น",
+      "example": "The exposition introduces the main characters.",
+      "exampleTranslation": "การเปิดเรื่องแนะนำตัวละครหลัก"
+    },
+    {
+      "vocab": "foreshadowing",
+      "pronunciation": "ฟอร์-แชด-โด-อิง",
+      "meaning": "การบอกเป็นนัย",
+      "example": "The dark clouds foreshadow tragedy.",
+      "exampleTranslation": "เมฆมืดบอกเป็นนัยถึงโศกนาฏกรรม"
+    },
+    {
+      "vocab": "juxtaposition",
+      "pronunciation": "จัก-สตะ-โพ-ซิ-ชั่น",
+      "meaning": "การวางเคียงกัน",
+      "example": "The juxtaposition of light and dark creates tension.",
+      "exampleTranslation": "การวางแสงและความมืดเคียงกันสร้างความตึงเครียด"
+    },
+    {
+      "vocab": "Renaissance",
+      "pronunciation": "เรน-เนส-ซองซ์",
+      "meaning": "ยุคฟื้นฟูศิลปวิทยา",
+      "example": "Renaissance art transformed Europe.",
+      "exampleTranslation": "ศิลปะยุคฟื้นฟูเปลี่ยนแปลงยุโรป"
+    },
+    {
+      "vocab": "Baroque",
+      "pronunciation": "บะ-โรค",
+      "meaning": "ศิลปะบาโรค",
+      "example": "Baroque architecture is ornate and dramatic.",
+      "exampleTranslation": "สถาปัตยกรรมบาโรควิจิตรและน่าทึ่ง"
+    },
+    {
+      "vocab": "Romanticism",
+      "pronunciation": "โร-แมน-ทิ-ซิ-ซึม",
+      "meaning": "จินตนิยม, โรแมนติซิสม์",
+      "example": "Romanticism emphasized emotion and nature.",
+      "exampleTranslation": "จินตนิยมเน้นอารมณ์และธรรมชาติ"
+    },
+    {
+      "vocab": "Impressionism",
+      "pronunciation": "อิม-เพรช-ชั่น-นิ-ซึม",
+      "meaning": "ลัทธิอิมเพรสชันนิสม์",
+      "example": "Monet was a pioneer of Impressionism.",
+      "exampleTranslation": "โมเนต์เป็นผู้บุกเบิกลัทธิอิมเพรสชันนิสม์"
+    },
+    {
+      "vocab": "Surrealism",
+      "pronunciation": "เซอร์-รี-อัล-ลิ-ซึม",
+      "meaning": "ลัทธิเหนือจริง",
+      "example": "Dalí's work exemplifies Surrealism.",
+      "exampleTranslation": "ผลงานของดาลีเป็นตัวอย่างของลัทธิเหนือจริง"
+    },
+    {
+      "vocab": "Expressionism",
+      "pronunciation": "เอ็กซ์-เพรช-ชั่น-นิ-ซึม",
+      "meaning": "ลัทธิเอ็กซ์เพรสชั่นนิสม์",
+      "example": "Expressionism distorts reality for emotional effect.",
+      "exampleTranslation": "ลัทธิเอ็กซ์เพรสชั่นนิสม์บิดเบือนความจริงเพื่อผลทางอารมณ์"
+    },
+    {
+      "vocab": "Cubism",
+      "pronunciation": "คิว-บิ-ซึม",
+      "meaning": "ลัทธิคิวบิสม์",
+      "example": "Picasso co-founded Cubism.",
+      "exampleTranslation": "ปิกัสโซร่วมก่อตั้งลัทธิคิวบิสม์"
+    },
+    {
+      "vocab": "Minimalism",
+      "pronunciation": "มิน-นิ-มัล-ลิ-ซึม",
+      "meaning": "ลัทธิเรียบง่าย",
+      "example": "Minimalism strips art to its essentials.",
+      "exampleTranslation": "ลัทธิเรียบง่ายลดศิลปะเหลือแค่สิ่งจำเป็น"
+    },
+    {
+      "vocab": "Postmodernism",
+      "pronunciation": "โพสท์-มอด-เดอร์-นิ-ซึม",
+      "meaning": "หลังสมัยใหม่",
+      "example": "Postmodernism questions grand narratives.",
+      "exampleTranslation": "หลังสมัยใหม่ตั้งคำถามต่อเรื่องเล่าใหญ่"
+    },
+    {
+      "vocab": "chiaroscuro",
+      "pronunciation": "คี-อา-โร-สคู-โร",
+      "meaning": "เทคนิคแสงเงา",
+      "example": "Caravaggio mastered chiaroscuro.",
+      "exampleTranslation": "คาราวัจโจเชี่ยวชาญเทคนิคแสงเงา"
+    },
+    {
+      "vocab": "trompe-l'oeil",
+      "pronunciation": "ทร็อมป์-เลย",
+      "meaning": "ภาพลวงตา",
+      "example": "The mural uses trompe-l'oeil technique.",
+      "exampleTranslation": "จิตรกรรมฝาผนังใช้เทคนิคภาพลวงตา"
+    },
+    {
+      "vocab": "sfumato",
+      "pronunciation": "สฟู-มา-โต",
+      "meaning": "เทคนิคการไล่สี",
+      "example": "Leonardo used sfumato in the Mona Lisa.",
+      "exampleTranslation": "เลโอนาร์โดใช้เทคนิคการไล่สีในภาพโมนาลิซา"
+    },
+    {
+      "vocab": "pathos",
+      "pronunciation": "เพ-ธอส",
+      "meaning": "อารมณ์สะเทือนใจ",
+      "example": "The film evokes deep pathos.",
+      "exampleTranslation": "ภาพยนตร์กระตุ้นอารมณ์สะเทือนใจอย่างลึก"
+    },
+    {
+      "vocab": "ethos",
+      "pronunciation": "อี-ธอส",
+      "meaning": "ลักษณะเฉพาะ, จรรยาบรรณ",
+      "example": "The company's ethos values innovation.",
+      "exampleTranslation": "ลักษณะเฉพาะของบริษัทให้คุณค่านวัตกรรม"
+    },
+    {
+      "vocab": "logos",
+      "pronunciation": "โล-กอส",
+      "meaning": "เหตุผล, ตรรกะ",
+      "example": "The argument relies on logos.",
+      "exampleTranslation": "ข้อโต้แย้งพึ่งพาเหตุผล"
+    },
+    {
+      "vocab": "genre",
+      "pronunciation": "ฌอน-เรอ",
+      "meaning": "ประเภท, แนว",
+      "example": "Science fiction is a popular genre.",
+      "exampleTranslation": "นิยายวิทยาศาสตร์เป็นแนวที่ได้รับความนิยม"
+    },
+    {
+      "vocab": "canon",
+      "pronunciation": "แคน-นอน",
+      "meaning": "วรรณกรรมมาตรฐาน",
+      "example": "Shakespeare is part of the literary canon.",
+      "exampleTranslation": "เชกสเปียร์เป็นส่วนหนึ่งของวรรณกรรมมาตรฐาน"
+    },
+    {
+      "vocab": "oeuvre",
+      "pronunciation": "เออ-วเรอ",
+      "meaning": "ผลงานทั้งหมดของศิลปิน",
+      "example": "Hitchcock's oeuvre includes many masterpieces.",
+      "exampleTranslation": "ผลงานทั้งหมดของฮิตช์ค็อกรวมผลงานชิ้นเอกหลายชิ้น"
+    },
+    {
+      "vocab": "magnum opus",
+      "pronunciation": "แมก-นัม โอ-พัส",
+      "meaning": "ผลงานชิ้นเอก",
+      "example": "This novel is considered her magnum opus.",
+      "exampleTranslation": "นวนิยายนี้ถือว่าเป็นผลงานชิ้นเอกของเธอ"
+    },
+    {
+      "vocab": "repertoire",
+      "pronunciation": "เร-เพอร์-ทัว",
+      "meaning": "ผลงานที่สะสม",
+      "example": "The orchestra has a vast repertoire.",
+      "exampleTranslation": "วงออร์เคสตรามีผลงานที่สะสมมากมาย"
+    },
+    {
+      "vocab": "virtuoso",
+      "pronunciation": "เวอร์-ทู-โอ-โซ",
+      "meaning": "ผู้เชี่ยวชาญ, นักดนตรีชั้นครู",
+      "example": "She is a violin virtuoso.",
+      "exampleTranslation": "เธอเป็นนักไวโอลินชั้นครู"
+    },
+    {
+      "vocab": "curator",
+      "pronunciation": "คิว-เร-เทอะ",
+      "meaning": "ผู้ดูแลพิพิธภัณฑ์",
+      "example": "The curator organized the exhibition.",
+      "exampleTranslation": "ผู้ดูแลจัดงานนิทรรศการ"
+    },
+    {
+      "vocab": "provenance",
+      "pronunciation": "พรอฟ-เวอ-แนนซ์",
+      "meaning": "ที่มา, ประวัติความเป็นมา",
+      "example": "Verify the provenance of the artwork.",
+      "exampleTranslation": "ยืนยันที่มาของผลงานศิลปะ"
+    }
+  ]
+}

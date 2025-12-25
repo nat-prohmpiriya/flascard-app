@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Technology & Media",
+    "description": "B1 level vocabulary for technology and media topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "device",
+      "pronunciation": "ดิ-ไวซ์",
+      "meaning": "อุปกรณ์",
+      "example": "This device can connect to the internet.",
+      "exampleTranslation": "อุปกรณ์นี้สามารถเชื่อมต่ออินเทอร์เน็ตได้"
+    },
+    {
+      "vocab": "software",
+      "pronunciation": "ซอฟท์-แวร์",
+      "meaning": "ซอฟต์แวร์, โปรแกรม",
+      "example": "You need to update the software.",
+      "exampleTranslation": "คุณต้องอัปเดตซอฟต์แวร์"
+    },
+    {
+      "vocab": "hardware",
+      "pronunciation": "ฮาร์ด-แวร์",
+      "meaning": "ฮาร์ดแวร์, อุปกรณ์",
+      "example": "The hardware needs to be replaced.",
+      "exampleTranslation": "ฮาร์ดแวร์ต้องเปลี่ยน"
+    },
+    {
+      "vocab": "download",
+      "pronunciation": "ดาวน์-โหลด",
+      "meaning": "ดาวน์โหลด",
+      "example": "I need to download the app first.",
+      "exampleTranslation": "ฉันต้องดาวน์โหลดแอปก่อน"
+    },
+    {
+      "vocab": "upload",
+      "pronunciation": "อัพ-โหลด",
+      "meaning": "อัปโหลด",
+      "example": "Please upload your photo here.",
+      "exampleTranslation": "กรุณาอัปโหลดรูปภาพของคุณที่นี่"
+    },
+    {
+      "vocab": "install",
+      "pronunciation": "อิน-สทอล",
+      "meaning": "ติดตั้ง",
+      "example": "I need to install this program.",
+      "exampleTranslation": "ฉันต้องติดตั้งโปรแกรมนี้"
+    },
+    {
+      "vocab": "update",
+      "pronunciation": "อัพ-เดท",
+      "meaning": "อัปเดต, ปรับปรุง",
+      "example": "Don't forget to update your phone.",
+      "exampleTranslation": "อย่าลืมอัปเดตโทรศัพท์ของคุณ"
+    },
+    {
+      "vocab": "password",
+      "pronunciation": "พาส-เวิร์ด",
+      "meaning": "รหัสผ่าน",
+      "example": "Please enter your password.",
+      "exampleTranslation": "กรุณาใส่รหัสผ่านของคุณ"
+    },
+    {
+      "vocab": "username",
+      "pronunciation": "ยู-เซอะ-เนม",
+      "meaning": "ชื่อผู้ใช้",
+      "example": "Choose a unique username.",
+      "exampleTranslation": "เลือกชื่อผู้ใช้ที่ไม่ซ้ำกัน"
+    },
+    {
+      "vocab": "account",
+      "pronunciation": "แอค-เคาท์",
+      "meaning": "บัญชี (ผู้ใช้)",
+      "example": "You need to create an account.",
+      "exampleTranslation": "คุณต้องสร้างบัญชีผู้ใช้"
+    },
+    {
+      "vocab": "log in",
+      "pronunciation": "ล็อก-อิน",
+      "meaning": "เข้าสู่ระบบ",
+      "example": "Please log in to continue.",
+      "exampleTranslation": "กรุณาเข้าสู่ระบบเพื่อดำเนินการต่อ"
+    },
+    {
+      "vocab": "log out",
+      "pronunciation": "ล็อก-เอาท์",
+      "meaning": "ออกจากระบบ",
+      "example": "Don't forget to log out.",
+      "exampleTranslation": "อย่าลืมออกจากระบบ"
+    },
+    {
+      "vocab": "connection",
+      "pronunciation": "คอน-เน็ค-ชั่น",
+      "meaning": "การเชื่อมต่อ",
+      "example": "The internet connection is slow.",
+      "exampleTranslation": "การเชื่อมต่ออินเทอร์เน็ตช้า"
+    },
+    {
+      "vocab": "wireless",
+      "pronunciation": "ไวร์-เลส",
+      "meaning": "ไร้สาย",
+      "example": "This device has wireless connection.",
+      "exampleTranslation": "อุปกรณ์นี้มีการเชื่อมต่อไร้สาย"
+    },
+    {
+      "vocab": "network",
+      "pronunciation": "เน็ท-เวิร์ค",
+      "meaning": "เครือข่าย",
+      "example": "The network is down right now.",
+      "exampleTranslation": "เครือข่ายขัดข้องอยู่ตอนนี้"
+    },
+    {
+      "vocab": "storage",
+      "pronunciation": "สทอ-เรจ",
+      "meaning": "พื้นที่เก็บข้อมูล",
+      "example": "I need more storage space.",
+      "exampleTranslation": "ฉันต้องการพื้นที่เก็บข้อมูลเพิ่ม"
+    },
+    {
+      "vocab": "data",
+      "pronunciation": "ดา-ต้า",
+      "meaning": "ข้อมูล",
+      "example": "All data is stored in the cloud.",
+      "exampleTranslation": "ข้อมูลทั้งหมดถูกเก็บไว้บนคลาวด์"
+    },
+    {
+      "vocab": "backup",
+      "pronunciation": "แบ็ค-อัพ",
+      "meaning": "สำรองข้อมูล",
+      "example": "Always backup your important files.",
+      "exampleTranslation": "สำรองไฟล์สำคัญของคุณเสมอ"
+    },
+    {
+      "vocab": "delete",
+      "pronunciation": "ดิ-ลีท",
+      "meaning": "ลบ",
+      "example": "Delete the old files to save space.",
+      "exampleTranslation": "ลบไฟล์เก่าเพื่อประหยัดพื้นที่"
+    },
+    {
+      "vocab": "file",
+      "pronunciation": "ไฟล์",
+      "meaning": "ไฟล์, แฟ้มข้อมูล",
+      "example": "Please attach the file to your email.",
+      "exampleTranslation": "กรุณาแนบไฟล์ในอีเมลของคุณ"
+    },
+    {
+      "vocab": "folder",
+      "pronunciation": "โฟล-เดอะ",
+      "meaning": "โฟลเดอร์",
+      "example": "Put all documents in this folder.",
+      "exampleTranslation": "ใส่เอกสารทั้งหมดในโฟลเดอร์นี้"
+    },
+    {
+      "vocab": "screen",
+      "pronunciation": "สกรีน",
+      "meaning": "หน้าจอ",
+      "example": "The screen is too bright.",
+      "exampleTranslation": "หน้าจอสว่างเกินไป"
+    },
+    {
+      "vocab": "keyboard",
+      "pronunciation": "คีย์-บอร์ด",
+      "meaning": "แป้นพิมพ์",
+      "example": "I need a new keyboard.",
+      "exampleTranslation": "ฉันต้องการแป้นพิมพ์ใหม่"
+    },
+    {
+      "vocab": "mouse",
+      "pronunciation": "เมาส์",
+      "meaning": "เมาส์",
+      "example": "Click the right mouse button.",
+      "exampleTranslation": "คลิกปุ่มขวาของเมาส์"
+    },
+    {
+      "vocab": "printer",
+      "pronunciation": "พริน-เทอะ",
+      "meaning": "เครื่องพิมพ์",
+      "example": "The printer is out of paper.",
+      "exampleTranslation": "เครื่องพิมพ์กระดาษหมด"
+    },
+    {
+      "vocab": "charge",
+      "pronunciation": "ชาร์จ",
+      "meaning": "ชาร์จ (แบตเตอรี่)",
+      "example": "I need to charge my phone.",
+      "exampleTranslation": "ฉันต้องชาร์จโทรศัพท์"
+    },
+    {
+      "vocab": "battery",
+      "pronunciation": "แบท-เทอ-รี่",
+      "meaning": "แบตเตอรี่",
+      "example": "The battery is almost dead.",
+      "exampleTranslation": "แบตเตอรี่เกือบหมดแล้ว"
+    },
+    {
+      "vocab": "broadcast",
+      "pronunciation": "บรอด-คาสท์",
+      "meaning": "ออกอากาศ",
+      "example": "The show will be broadcast live.",
+      "exampleTranslation": "รายการจะออกอากาศสด"
+    },
+    {
+      "vocab": "channel",
+      "pronunciation": "แชน-เนิล",
+      "meaning": "ช่อง (ทีวี)",
+      "example": "What channel is the news on?",
+      "exampleTranslation": "ข่าวอยู่ช่องไหน?"
+    },
+    {
+      "vocab": "stream",
+      "pronunciation": "สตรีม",
+      "meaning": "สตรีม, ถ่ายทอดสด",
+      "example": "You can stream the movie online.",
+      "exampleTranslation": "คุณสามารถสตรีมหนังออนไลน์ได้"
+    },
+    {
+      "vocab": "subscribe",
+      "pronunciation": "ซับ-สไครบ์",
+      "meaning": "สมัครสมาชิก, ติดตาม",
+      "example": "Subscribe to our channel for updates.",
+      "exampleTranslation": "สมัครสมาชิกช่องของเราเพื่อรับข่าวสาร"
+    },
+    {
+      "vocab": "content",
+      "pronunciation": "คอน-เท็นท์",
+      "meaning": "เนื้อหา",
+      "example": "The website has interesting content.",
+      "exampleTranslation": "เว็บไซต์มีเนื้อหาที่น่าสนใจ"
+    },
+    {
+      "vocab": "media",
+      "pronunciation": "มี-เดีย",
+      "meaning": "สื่อ",
+      "example": "Social media is very popular.",
+      "exampleTranslation": "โซเชียลมีเดียเป็นที่นิยมมาก"
+    },
+    {
+      "vocab": "post",
+      "pronunciation": "โพสท์",
+      "meaning": "โพสต์, ลงข้อความ",
+      "example": "She posts photos every day.",
+      "exampleTranslation": "เธอโพสต์รูปทุกวัน"
+    },
+    {
+      "vocab": "share",
+      "pronunciation": "แชร์",
+      "meaning": "แชร์, แบ่งปัน",
+      "example": "Please share this article.",
+      "exampleTranslation": "กรุณาแชร์บทความนี้"
+    },
+    {
+      "vocab": "comment",
+      "pronunciation": "คอม-เมนท์",
+      "meaning": "คอมเมนต์, ความคิดเห็น",
+      "example": "Leave a comment below.",
+      "exampleTranslation": "แสดงความคิดเห็นด้านล่าง"
+    },
+    {
+      "vocab": "like",
+      "pronunciation": "ไลค์",
+      "meaning": "กดไลค์, ถูกใจ",
+      "example": "This post has many likes.",
+      "exampleTranslation": "โพสต์นี้มีคนกดไลค์มาก"
+    },
+    {
+      "vocab": "follow",
+      "pronunciation": "ฟอล-โลว์",
+      "meaning": "ติดตาม",
+      "example": "Follow us on social media.",
+      "exampleTranslation": "ติดตามเราบนโซเชียลมีเดีย"
+    },
+    {
+      "vocab": "online",
+      "pronunciation": "ออน-ไลน์",
+      "meaning": "ออนไลน์",
+      "example": "You can buy it online.",
+      "exampleTranslation": "คุณสามารถซื้อออนไลน์ได้"
+    },
+    {
+      "vocab": "offline",
+      "pronunciation": "ออฟ-ไลน์",
+      "meaning": "ออฟไลน์",
+      "example": "This app works offline too.",
+      "exampleTranslation": "แอปนี้ใช้งานแบบออฟไลน์ได้ด้วย"
+    },
+    {
+      "vocab": "search",
+      "pronunciation": "เซิร์ช",
+      "meaning": "ค้นหา",
+      "example": "Search for information online.",
+      "exampleTranslation": "ค้นหาข้อมูลออนไลน์"
+    },
+    {
+      "vocab": "website",
+      "pronunciation": "เว็บ-ไซท์",
+      "meaning": "เว็บไซต์",
+      "example": "Visit our website for more info.",
+      "exampleTranslation": "เยี่ยมชมเว็บไซต์ของเราสำหรับข้อมูลเพิ่มเติม"
+    },
+    {
+      "vocab": "link",
+      "pronunciation": "ลิงค์",
+      "meaning": "ลิงก์",
+      "example": "Click on this link.",
+      "exampleTranslation": "คลิกที่ลิงก์นี้"
+    },
+    {
+      "vocab": "click",
+      "pronunciation": "คลิก",
+      "meaning": "คลิก",
+      "example": "Click here to continue.",
+      "exampleTranslation": "คลิกที่นี่เพื่อดำเนินการต่อ"
+    },
+    {
+      "vocab": "browse",
+      "pronunciation": "บราวซ์",
+      "meaning": "ท่องเว็บ, เรียกดู",
+      "example": "I like to browse the internet.",
+      "exampleTranslation": "ฉันชอบท่องอินเทอร์เน็ต"
+    },
+    {
+      "vocab": "virus",
+      "pronunciation": "ไว-รัส",
+      "meaning": "ไวรัส (คอมพิวเตอร์)",
+      "example": "My computer has a virus.",
+      "exampleTranslation": "คอมพิวเตอร์ของฉันติดไวรัส"
+    },
+    {
+      "vocab": "security",
+      "pronunciation": "ซิ-คิว-ริ-ตี้",
+      "meaning": "ความปลอดภัย",
+      "example": "Online security is very important.",
+      "exampleTranslation": "ความปลอดภัยออนไลน์สำคัญมาก"
+    },
+    {
+      "vocab": "privacy",
+      "pronunciation": "ไพร-วะ-ซี",
+      "meaning": "ความเป็นส่วนตัว",
+      "example": "Protect your online privacy.",
+      "exampleTranslation": "ปกป้องความเป็นส่วนตัวออนไลน์ของคุณ"
+    },
+    {
+      "vocab": "setting",
+      "pronunciation": "เซ็ท-ทิง",
+      "meaning": "การตั้งค่า",
+      "example": "Check your privacy settings.",
+      "exampleTranslation": "ตรวจสอบการตั้งค่าความเป็นส่วนตัวของคุณ"
+    },
+    {
+      "vocab": "notification",
+      "pronunciation": "โน-ติ-ฟิ-เค-ชั่น",
+      "meaning": "การแจ้งเตือน",
+      "example": "Turn off notifications at night.",
+      "exampleTranslation": "ปิดการแจ้งเตือนตอนกลางคืน"
+    },
+    {
+      "vocab": "message",
+      "pronunciation": "เมส-เสจ",
+      "meaning": "ข้อความ",
+      "example": "I sent you a message.",
+      "exampleTranslation": "ฉันส่งข้อความให้คุณแล้ว"
+    },
+    {
+      "vocab": "email",
+      "pronunciation": "อี-เมล",
+      "meaning": "อีเมล",
+      "example": "Please check your email.",
+      "exampleTranslation": "กรุณาตรวจสอบอีเมลของคุณ"
+    },
+    {
+      "vocab": "attach",
+      "pronunciation": "แอท-แท็ช",
+      "meaning": "แนบ",
+      "example": "I'll attach the file to my email.",
+      "exampleTranslation": "ฉันจะแนบไฟล์ในอีเมล"
+    },
+    {
+      "vocab": "forward",
+      "pronunciation": "ฟอร์-เวิร์ด",
+      "meaning": "ส่งต่อ",
+      "example": "Please forward this email to your team.",
+      "exampleTranslation": "กรุณาส่งต่ออีเมลนี้ให้ทีมของคุณ"
+    },
+    {
+      "vocab": "reply",
+      "pronunciation": "รี-พลาย",
+      "meaning": "ตอบกลับ",
+      "example": "I'll reply to your email soon.",
+      "exampleTranslation": "ฉันจะตอบกลับอีเมลของคุณเร็วๆ นี้"
+    },
+    {
+      "vocab": "digital",
+      "pronunciation": "ดิ-จิ-ทอล",
+      "meaning": "ดิจิทัล",
+      "example": "We live in a digital age.",
+      "exampleTranslation": "เราอยู่ในยุคดิจิทัล"
+    },
+    {
+      "vocab": "technology",
+      "pronunciation": "เท็ค-นอล-โล-จี",
+      "meaning": "เทคโนโลยี",
+      "example": "Technology changes very fast.",
+      "exampleTranslation": "เทคโนโลยีเปลี่ยนแปลงเร็วมาก"
+    },
+    {
+      "vocab": "application",
+      "pronunciation": "แอพ-พลิ-เค-ชั่น",
+      "meaning": "แอปพลิเคชัน",
+      "example": "This application is very useful.",
+      "exampleTranslation": "แอปพลิเคชันนี้มีประโยชน์มาก"
+    },
+    {
+      "vocab": "artificial intelligence",
+      "pronunciation": "อาร์-ติ-ฟิ-เชียล อิน-เท็ล-ลิ-เจนซ์",
+      "meaning": "ปัญญาประดิษฐ์",
+      "example": "Artificial intelligence is the future.",
+      "exampleTranslation": "ปัญญาประดิษฐ์คืออนาคต"
+    }
+  ]
+}

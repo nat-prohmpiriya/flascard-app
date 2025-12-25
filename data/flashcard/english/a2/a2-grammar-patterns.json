@@ -1,0 +1,599 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Grammar Patterns",
+    "description": "CEFR A2 Essential Grammar Patterns with examples",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "grammar"
+    ]
+  },
+  "cards": [
+    {
+      "vocab": "Subject + verb(s/es)",
+      "pronunciation": "Present Simple",
+      "meaning": "ใช้พูดถึงความจริง/กิจวัตร",
+      "example": "She works in a bank. / I usually wake up at 7.",
+      "exampleTranslation": "เธอทำงานที่ธนาคาร / ปกติฉันตื่น 7 โมง"
+    },
+    {
+      "vocab": "Subject + don't/doesn't + verb",
+      "pronunciation": "Present Simple Negative",
+      "meaning": "ปฏิเสธ Present Simple",
+      "example": "I don't like coffee. / He doesn't eat meat.",
+      "exampleTranslation": "ฉันไม่ชอบกาแฟ / เขาไม่กินเนื้อ"
+    },
+    {
+      "vocab": "Do/Does + subject + verb?",
+      "pronunciation": "Present Simple Question",
+      "meaning": "คำถาม Present Simple",
+      "example": "Do you speak English? / Does she live here?",
+      "exampleTranslation": "คุณพูดภาษาอังกฤษไหม? / เธออยู่ที่นี่ไหม?"
+    },
+    {
+      "vocab": "Subject + am/is/are + verb-ing",
+      "pronunciation": "Present Continuous",
+      "meaning": "ใช้พูดถึงสิ่งที่กำลังทำอยู่ตอนนี้",
+      "example": "I am reading a book. / They are watching TV.",
+      "exampleTranslation": "ฉันกำลังอ่านหนังสือ / พวกเขากำลังดูทีวี"
+    },
+    {
+      "vocab": "Subject + am/is/are + not + verb-ing",
+      "pronunciation": "Present Continuous Negative",
+      "meaning": "ปฏิเสธ Present Continuous",
+      "example": "She isn't working today. / We aren't going out.",
+      "exampleTranslation": "วันนี้เธอไม่ได้ทำงาน / เราไม่ได้ออกไปข้างนอก"
+    },
+    {
+      "vocab": "Am/Is/Are + subject + verb-ing?",
+      "pronunciation": "Present Continuous Question",
+      "meaning": "คำถาม Present Continuous",
+      "example": "Are you coming? / Is he sleeping?",
+      "exampleTranslation": "คุณจะมาไหม? / เขานอนอยู่หรือเปล่า?"
+    },
+    {
+      "vocab": "Subject + verb-ed / V2",
+      "pronunciation": "Past Simple",
+      "meaning": "ใช้พูดถึงอดีต",
+      "example": "I worked yesterday. / She went to Japan last year.",
+      "exampleTranslation": "เมื่อวานฉันทำงาน / ปีที่แล้วเธอไปญี่ปุ่น"
+    },
+    {
+      "vocab": "Subject + didn't + verb",
+      "pronunciation": "Past Simple Negative",
+      "meaning": "ปฏิเสธ Past Simple",
+      "example": "I didn't see him. / She didn't come to the party.",
+      "exampleTranslation": "ฉันไม่เห็นเขา / เธอไม่มางานปาร์ตี้"
+    },
+    {
+      "vocab": "Did + subject + verb?",
+      "pronunciation": "Past Simple Question",
+      "meaning": "คำถาม Past Simple",
+      "example": "Did you eat breakfast? / Did she call you?",
+      "exampleTranslation": "คุณกินข้าวเช้าหรือยัง? / เธอโทรมาไหม?"
+    },
+    {
+      "vocab": "Subject + was/were + verb-ing",
+      "pronunciation": "Past Continuous",
+      "meaning": "ใช้พูดถึงสิ่งที่กำลังทำอยู่ในอดีต",
+      "example": "I was sleeping when you called.",
+      "exampleTranslation": "ฉันกำลังนอนอยู่ตอนที่คุณโทรมา"
+    },
+    {
+      "vocab": "Subject + will + verb",
+      "pronunciation": "Future Simple (will)",
+      "meaning": "ใช้พูดถึงอนาคต/การตัดสินใจทันที",
+      "example": "I will help you. / It will rain tomorrow.",
+      "exampleTranslation": "ฉันจะช่วยคุณ / พรุ่งนี้ฝนจะตก"
+    },
+    {
+      "vocab": "Subject + won't + verb",
+      "pronunciation": "Future Simple Negative",
+      "meaning": "ปฏิเสธ will",
+      "example": "I won't be late. / He won't come.",
+      "exampleTranslation": "ฉันจะไม่สาย / เขาจะไม่มา"
+    },
+    {
+      "vocab": "Will + subject + verb?",
+      "pronunciation": "Future Simple Question",
+      "meaning": "คำถาม will",
+      "example": "Will you marry me? / Will it rain?",
+      "exampleTranslation": "คุณจะแต่งงานกับฉันไหม? / ฝนจะตกไหม?"
+    },
+    {
+      "vocab": "Subject + am/is/are + going to + verb",
+      "pronunciation": "Future (going to)",
+      "meaning": "ใช้พูดถึงแผนที่วางไว้",
+      "example": "I'm going to travel next month.",
+      "exampleTranslation": "เดือนหน้าฉันจะไปเที่ยว"
+    },
+    {
+      "vocab": "Subject + am/is/are + not + going to + verb",
+      "pronunciation": "Going to Negative",
+      "meaning": "ปฏิเสธ going to",
+      "example": "I'm not going to buy it.",
+      "exampleTranslation": "ฉันจะไม่ซื้อมัน"
+    },
+    {
+      "vocab": "Subject + can + verb",
+      "pronunciation": "Can (ability)",
+      "meaning": "ความสามารถ",
+      "example": "I can swim. / She can speak three languages.",
+      "exampleTranslation": "ฉันว่ายน้ำเป็น / เธอพูดได้สามภาษา"
+    },
+    {
+      "vocab": "Subject + can't + verb",
+      "pronunciation": "Can't (inability)",
+      "meaning": "ไม่สามารถ",
+      "example": "I can't drive. / He can't come today.",
+      "exampleTranslation": "ฉันขับรถไม่เป็น / วันนี้เขามาไม่ได้"
+    },
+    {
+      "vocab": "Can + subject + verb?",
+      "pronunciation": "Can (request/permission)",
+      "meaning": "ขออนุญาต/ขอร้อง",
+      "example": "Can I use your phone? / Can you help me?",
+      "exampleTranslation": "ขอใช้โทรศัพท์ได้ไหม? / ช่วยได้ไหม?"
+    },
+    {
+      "vocab": "Could + subject + verb?",
+      "pronunciation": "Could (polite request)",
+      "meaning": "ขอร้องอย่างสุภาพ",
+      "example": "Could you please speak slowly?",
+      "exampleTranslation": "ช่วยพูดช้าๆ ได้ไหมคะ?"
+    },
+    {
+      "vocab": "Subject + could + verb",
+      "pronunciation": "Could (past ability)",
+      "meaning": "ความสามารถในอดีต",
+      "example": "I could run fast when I was young.",
+      "exampleTranslation": "ตอนเด็กฉันวิ่งเร็วได้"
+    },
+    {
+      "vocab": "Subject + must + verb",
+      "pronunciation": "Must (obligation)",
+      "meaning": "ต้อง (จำเป็น)",
+      "example": "You must wear a seatbelt.",
+      "exampleTranslation": "คุณต้องคาดเข็มขัดนิรภัย"
+    },
+    {
+      "vocab": "Subject + mustn't + verb",
+      "pronunciation": "Mustn't (prohibition)",
+      "meaning": "ห้าม",
+      "example": "You mustn't smoke here.",
+      "exampleTranslation": "ห้ามสูบบุหรี่ที่นี่"
+    },
+    {
+      "vocab": "Subject + have to + verb",
+      "pronunciation": "Have to (necessity)",
+      "meaning": "ต้อง (จำเป็น)",
+      "example": "I have to go now. / She has to work tomorrow.",
+      "exampleTranslation": "ฉันต้องไปแล้ว / พรุ่งนี้เธอต้องทำงาน"
+    },
+    {
+      "vocab": "Subject + don't/doesn't + have to + verb",
+      "pronunciation": "Don't have to",
+      "meaning": "ไม่จำเป็นต้อง",
+      "example": "You don't have to come if you're busy.",
+      "exampleTranslation": "ถ้ายุ่งก็ไม่จำเป็นต้องมา"
+    },
+    {
+      "vocab": "Subject + should + verb",
+      "pronunciation": "Should (advice)",
+      "meaning": "ควรจะ",
+      "example": "You should see a doctor. / You should rest.",
+      "exampleTranslation": "คุณควรไปหาหมอ / คุณควรพักผ่อน"
+    },
+    {
+      "vocab": "Subject + shouldn't + verb",
+      "pronunciation": "Shouldn't (advice)",
+      "meaning": "ไม่ควร",
+      "example": "You shouldn't eat too much. / You shouldn't worry.",
+      "exampleTranslation": "คุณไม่ควรกินมากเกินไป / คุณไม่ควรกังวล"
+    },
+    {
+      "vocab": "Would you like + noun/to verb?",
+      "pronunciation": "Would like (offer)",
+      "meaning": "เสนอ/ถามความต้องการ",
+      "example": "Would you like some coffee? / Would you like to come?",
+      "exampleTranslation": "ต้องการกาแฟไหม? / อยากมาไหม?"
+    },
+    {
+      "vocab": "I'd like + noun/to verb",
+      "pronunciation": "Would like (want)",
+      "meaning": "อยากจะ (สุภาพ)",
+      "example": "I'd like a coffee. / I'd like to book a room.",
+      "exampleTranslation": "ขอกาแฟค่ะ / อยากจองห้องค่ะ"
+    },
+    {
+      "vocab": "Subject + may/might + verb",
+      "pronunciation": "May/Might (possibility)",
+      "meaning": "อาจจะ",
+      "example": "It may rain later. / She might be late.",
+      "exampleTranslation": "เดี๋ยวอาจจะมีฝน / เธออาจจะมาสาย"
+    },
+    {
+      "vocab": "Adjective + -er + than",
+      "pronunciation": "Comparative (short adj)",
+      "meaning": "เปรียบเทียบขั้นกว่า (คำสั้น)",
+      "example": "She is taller than me. / This is cheaper than that.",
+      "exampleTranslation": "เธอสูงกว่าฉัน / อันนี้ถูกกว่าอันนั้น"
+    },
+    {
+      "vocab": "more + adjective + than",
+      "pronunciation": "Comparative (long adj)",
+      "meaning": "เปรียบเทียบขั้นกว่า (คำยาว)",
+      "example": "This book is more interesting than that one.",
+      "exampleTranslation": "หนังสือเล่มนี้น่าสนใจกว่าเล่มนั้น"
+    },
+    {
+      "vocab": "the + adjective + -est",
+      "pronunciation": "Superlative (short adj)",
+      "meaning": "เปรียบเทียบขั้นสูงสุด (คำสั้น)",
+      "example": "She is the tallest in the class.",
+      "exampleTranslation": "เธอสูงที่สุดในชั้น"
+    },
+    {
+      "vocab": "the most + adjective",
+      "pronunciation": "Superlative (long adj)",
+      "meaning": "เปรียบเทียบขั้นสูงสุด (คำยาว)",
+      "example": "This is the most expensive restaurant.",
+      "exampleTranslation": "นี่คือร้านอาหารที่แพงที่สุด"
+    },
+    {
+      "vocab": "good - better - the best",
+      "pronunciation": "Irregular Comparative",
+      "meaning": "ดี - ดีกว่า - ดีที่สุด",
+      "example": "This is better than that. / This is the best!",
+      "exampleTranslation": "อันนี้ดีกว่าอันนั้น / อันนี้ดีที่สุด!"
+    },
+    {
+      "vocab": "bad - worse - the worst",
+      "pronunciation": "Irregular Comparative",
+      "meaning": "แย่ - แย่กว่า - แย่ที่สุด",
+      "example": "Today is worse than yesterday.",
+      "exampleTranslation": "วันนี้แย่กว่าเมื่อวาน"
+    },
+    {
+      "vocab": "as + adjective + as",
+      "pronunciation": "As...as (equality)",
+      "meaning": "เท่ากับ",
+      "example": "She is as tall as her mother.",
+      "exampleTranslation": "เธอสูงเท่าแม่"
+    },
+    {
+      "vocab": "not as + adjective + as",
+      "pronunciation": "Not as...as",
+      "meaning": "ไม่...เท่า",
+      "example": "This isn't as expensive as that one.",
+      "exampleTranslation": "อันนี้ไม่แพงเท่าอันนั้น"
+    },
+    {
+      "vocab": "There is + singular noun",
+      "pronunciation": "There is (singular)",
+      "meaning": "มี (เอกพจน์)",
+      "example": "There is a book on the table.",
+      "exampleTranslation": "มีหนังสืออยู่บนโต๊ะ"
+    },
+    {
+      "vocab": "There are + plural noun",
+      "pronunciation": "There are (plural)",
+      "meaning": "มี (พหูพจน์)",
+      "example": "There are three people in the room.",
+      "exampleTranslation": "มีคนสามคนในห้อง"
+    },
+    {
+      "vocab": "Is there...? / Are there...?",
+      "pronunciation": "There is/are Question",
+      "meaning": "มี...ไหม?",
+      "example": "Is there a bank near here? / Are there any questions?",
+      "exampleTranslation": "มีธนาคารใกล้ๆ ไหม? / มีคำถามไหม?"
+    },
+    {
+      "vocab": "How much + uncountable noun",
+      "pronunciation": "How much (uncountable)",
+      "meaning": "มาก/เท่าไหร่ (นับไม่ได้)",
+      "example": "How much water do you need?",
+      "exampleTranslation": "คุณต้องการน้ำเท่าไหร่?"
+    },
+    {
+      "vocab": "How many + countable noun",
+      "pronunciation": "How many (countable)",
+      "meaning": "กี่ (นับได้)",
+      "example": "How many people are coming?",
+      "exampleTranslation": "จะมากี่คน?"
+    },
+    {
+      "vocab": "some (positive) / any (negative/question)",
+      "pronunciation": "Some/Any",
+      "meaning": "บ้าง",
+      "example": "I have some money. / Do you have any questions?",
+      "exampleTranslation": "ฉันมีเงินบ้าง / คุณมีคำถามไหม?"
+    },
+    {
+      "vocab": "a lot of / lots of + noun",
+      "pronunciation": "A lot of",
+      "meaning": "มาก",
+      "example": "I have a lot of work. / There are lots of people.",
+      "exampleTranslation": "ฉันมีงานเยอะ / มีคนเยอะ"
+    },
+    {
+      "vocab": "a few + countable noun",
+      "pronunciation": "A few",
+      "meaning": "สองสามอย่าง (บวก)",
+      "example": "I have a few friends here.",
+      "exampleTranslation": "ฉันมีเพื่อนที่นี่สองสามคน"
+    },
+    {
+      "vocab": "few + countable noun",
+      "pronunciation": "Few",
+      "meaning": "แทบไม่มี (ลบ)",
+      "example": "Few people came to the meeting.",
+      "exampleTranslation": "แทบไม่มีคนมาประชุม"
+    },
+    {
+      "vocab": "a little + uncountable noun",
+      "pronunciation": "A little",
+      "meaning": "นิดหน่อย (บวก)",
+      "example": "I speak a little Thai.",
+      "exampleTranslation": "ฉันพูดไทยได้นิดหน่อย"
+    },
+    {
+      "vocab": "little + uncountable noun",
+      "pronunciation": "Little",
+      "meaning": "แทบไม่มี (ลบ)",
+      "example": "There is little time left.",
+      "exampleTranslation": "เหลือเวลาน้อยมาก"
+    },
+    {
+      "vocab": "too + adjective",
+      "pronunciation": "Too (excessive)",
+      "meaning": "...เกินไป",
+      "example": "It's too hot. / This is too expensive.",
+      "exampleTranslation": "ร้อนเกินไป / แพงเกินไป"
+    },
+    {
+      "vocab": "adjective + enough",
+      "pronunciation": "Enough (adjective)",
+      "meaning": "...พอ",
+      "example": "Are you warm enough? / It's not big enough.",
+      "exampleTranslation": "อุ่นพอไหม? / ไม่ใหญ่พอ"
+    },
+    {
+      "vocab": "enough + noun",
+      "pronunciation": "Enough (noun)",
+      "meaning": "...พอ",
+      "example": "I don't have enough money.",
+      "exampleTranslation": "ฉันมีเงินไม่พอ"
+    },
+    {
+      "vocab": "What + be + subject + like?",
+      "pronunciation": "What...like? (description)",
+      "meaning": "...เป็นอย่างไร?",
+      "example": "What is your new job like?",
+      "exampleTranslation": "งานใหม่เป็นอย่างไร?"
+    },
+    {
+      "vocab": "What time...?",
+      "pronunciation": "What time (question)",
+      "meaning": "กี่โมง?",
+      "example": "What time does the train leave?",
+      "exampleTranslation": "รถไฟออกกี่โมง?"
+    },
+    {
+      "vocab": "How long...?",
+      "pronunciation": "How long (duration)",
+      "meaning": "นานเท่าไหร่?",
+      "example": "How long does it take to get there?",
+      "exampleTranslation": "ไปที่นั่นใช้เวลานานเท่าไหร่?"
+    },
+    {
+      "vocab": "How often...?",
+      "pronunciation": "How often (frequency)",
+      "meaning": "บ่อยแค่ไหน?",
+      "example": "How often do you exercise?",
+      "exampleTranslation": "คุณออกกำลังกายบ่อยแค่ไหน?"
+    },
+    {
+      "vocab": "How far...?",
+      "pronunciation": "How far (distance)",
+      "meaning": "ไกลเท่าไหร่?",
+      "example": "How far is it from here?",
+      "exampleTranslation": "ไกลจากที่นี่เท่าไหร่?"
+    },
+    {
+      "vocab": "Why...? - Because...",
+      "pronunciation": "Why/Because",
+      "meaning": "ทำไม? - เพราะว่า...",
+      "example": "Why are you late? - Because the traffic was bad.",
+      "exampleTranslation": "ทำไมมาสาย? - เพราะรถติด"
+    },
+    {
+      "vocab": "If + present, will + verb",
+      "pronunciation": "First Conditional",
+      "meaning": "ถ้า...จะ... (เป็นไปได้)",
+      "example": "If it rains, I will stay home.",
+      "exampleTranslation": "ถ้าฝนตก ฉันจะอยู่บ้าน"
+    },
+    {
+      "vocab": "If + present, present",
+      "pronunciation": "Zero Conditional",
+      "meaning": "ถ้า...ก็... (ความจริง)",
+      "example": "If you heat water, it boils.",
+      "exampleTranslation": "ถ้าทำให้น้ำร้อน น้ำก็เดือด"
+    },
+    {
+      "vocab": "When + present, will + verb",
+      "pronunciation": "When (future)",
+      "meaning": "เมื่อ...จะ...",
+      "example": "When I get home, I will call you.",
+      "exampleTranslation": "เมื่อถึงบ้าน ฉันจะโทรหาคุณ"
+    },
+    {
+      "vocab": "before / after + verb-ing",
+      "pronunciation": "Before/After + gerund",
+      "meaning": "ก่อน/หลัง...",
+      "example": "Wash your hands before eating.",
+      "exampleTranslation": "ล้างมือก่อนกิน"
+    },
+    {
+      "vocab": "while + verb-ing",
+      "pronunciation": "While + gerund",
+      "meaning": "ขณะที่...",
+      "example": "Don't use your phone while driving.",
+      "exampleTranslation": "อย่าใช้โทรศัพท์ขณะขับรถ"
+    },
+    {
+      "vocab": "Subject + verb + to + verb",
+      "pronunciation": "Verb + to infinitive",
+      "meaning": "กริยา + to + กริยา",
+      "example": "I want to learn English. / I need to go.",
+      "exampleTranslation": "ฉันอยากเรียนภาษาอังกฤษ / ฉันต้องไป"
+    },
+    {
+      "vocab": "Subject + verb + verb-ing",
+      "pronunciation": "Verb + gerund",
+      "meaning": "กริยา + กริยา-ing",
+      "example": "I enjoy reading. / I finished working.",
+      "exampleTranslation": "ฉันสนุกกับการอ่าน / ฉันทำงานเสร็จแล้ว"
+    },
+    {
+      "vocab": "like/love/hate + verb-ing",
+      "pronunciation": "Like/Love/Hate + gerund",
+      "meaning": "ชอบ/รัก/เกลียด + การ...",
+      "example": "I like swimming. / I hate waiting.",
+      "exampleTranslation": "ฉันชอบว่ายน้ำ / ฉันเกลียดการรอ"
+    },
+    {
+      "vocab": "be good at + verb-ing",
+      "pronunciation": "Be good at",
+      "meaning": "เก่งใน...",
+      "example": "She is good at cooking.",
+      "exampleTranslation": "เธอเก่งทำอาหาร"
+    },
+    {
+      "vocab": "be interested in + verb-ing",
+      "pronunciation": "Be interested in",
+      "meaning": "สนใจใน...",
+      "example": "I'm interested in learning Japanese.",
+      "exampleTranslation": "ฉันสนใจเรียนภาษาญี่ปุ่น"
+    },
+    {
+      "vocab": "look forward to + verb-ing",
+      "pronunciation": "Look forward to",
+      "meaning": "ตั้งตารอ...",
+      "example": "I look forward to meeting you.",
+      "exampleTranslation": "ฉันตั้งตารอพบคุณ"
+    },
+    {
+      "vocab": "used to + verb",
+      "pronunciation": "Used to (past habit)",
+      "meaning": "เคย... (อดีต)",
+      "example": "I used to live in London.",
+      "exampleTranslation": "ฉันเคยอยู่ลอนดอน"
+    },
+    {
+      "vocab": "Subject + be + adjective",
+      "pronunciation": "Be + adjective",
+      "meaning": "เป็น/อยู่ + คำคุณศัพท์",
+      "example": "She is happy. / I am tired.",
+      "exampleTranslation": "เธอมีความสุข / ฉันเหนื่อย"
+    },
+    {
+      "vocab": "get + adjective",
+      "pronunciation": "Get + adjective (change)",
+      "meaning": "กลายเป็น...",
+      "example": "It's getting cold. / I'm getting hungry.",
+      "exampleTranslation": "เริ่มหนาว / ฉันเริ่มหิว"
+    },
+    {
+      "vocab": "make + someone + adjective",
+      "pronunciation": "Make someone + adj",
+      "meaning": "ทำให้ใครบางคน...",
+      "example": "This song makes me happy.",
+      "exampleTranslation": "เพลงนี้ทำให้ฉันมีความสุข"
+    },
+    {
+      "vocab": "let + someone + verb",
+      "pronunciation": "Let someone + verb",
+      "meaning": "ปล่อยให้ใครทำ...",
+      "example": "Let me help you. / Let him go.",
+      "exampleTranslation": "ให้ฉันช่วย / ปล่อยเขาไป"
+    },
+    {
+      "vocab": "Subject + be + past participle",
+      "pronunciation": "Passive Voice (simple)",
+      "meaning": "ถูก... / ได้รับการ...",
+      "example": "The book was written by her. / English is spoken here.",
+      "exampleTranslation": "หนังสือถูกเขียนโดยเธอ / ที่นี่พูดภาษาอังกฤษ"
+    },
+    {
+      "vocab": "something/anything/nothing",
+      "pronunciation": "Indefinite pronouns (thing)",
+      "meaning": "บางสิ่ง/อะไร/ไม่มีอะไร",
+      "example": "I need something to eat. / There's nothing here.",
+      "exampleTranslation": "ฉันต้องการอะไรกิน / ไม่มีอะไรที่นี่"
+    },
+    {
+      "vocab": "someone/anyone/no one",
+      "pronunciation": "Indefinite pronouns (person)",
+      "meaning": "ใครบางคน/ใคร/ไม่มีใคร",
+      "example": "Someone is at the door. / No one knows.",
+      "exampleTranslation": "มีคนอยู่ที่ประตู / ไม่มีใครรู้"
+    },
+    {
+      "vocab": "somewhere/anywhere/nowhere",
+      "pronunciation": "Indefinite pronouns (place)",
+      "meaning": "ที่ไหนสักแห่ง/ที่ไหน/ไม่มีที่ไหน",
+      "example": "Let's go somewhere nice.",
+      "exampleTranslation": "ไปที่ไหนดีๆ กันเถอะ"
+    },
+    {
+      "vocab": "both...and...",
+      "pronunciation": "Both...and",
+      "meaning": "ทั้ง...และ...",
+      "example": "I speak both English and Thai.",
+      "exampleTranslation": "ฉันพูดได้ทั้งภาษาอังกฤษและไทย"
+    },
+    {
+      "vocab": "either...or...",
+      "pronunciation": "Either...or",
+      "meaning": "อย่างใดอย่างหนึ่ง",
+      "example": "You can have either tea or coffee.",
+      "exampleTranslation": "คุณสามารถเลือกชาหรือกาแฟอย่างใดอย่างหนึ่ง"
+    },
+    {
+      "vocab": "neither...nor...",
+      "pronunciation": "Neither...nor",
+      "meaning": "ไม่...และก็ไม่...",
+      "example": "I like neither coffee nor tea.",
+      "exampleTranslation": "ฉันไม่ชอบทั้งกาแฟและชา"
+    },
+    {
+      "vocab": "although / even though + clause",
+      "pronunciation": "Although/Even though",
+      "meaning": "แม้ว่า...",
+      "example": "Although it was raining, we went out.",
+      "exampleTranslation": "แม้ว่าฝนจะตก เราก็ออกไป"
+    },
+    {
+      "vocab": "so + adjective + that",
+      "pronunciation": "So...that",
+      "meaning": "...มากจน...",
+      "example": "I was so tired that I fell asleep.",
+      "exampleTranslation": "ฉันเหนื่อยมากจนหลับไป"
+    },
+    {
+      "vocab": "such + noun + that",
+      "pronunciation": "Such...that",
+      "meaning": "...มากจน...",
+      "example": "It was such a good movie that I watched it twice.",
+      "exampleTranslation": "หนังดีมากจนฉันดูสองรอบ"
+    }
+  ]
+}

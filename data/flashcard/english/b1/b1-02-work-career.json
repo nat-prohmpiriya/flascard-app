@@ -1,0 +1,426 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Work & Career",
+    "description": "B1 level vocabulary for work and career topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "employer",
+      "pronunciation": "เอ็ม-พลอย-เออะ",
+      "meaning": "นายจ้าง",
+      "example": "My employer offers good health benefits.",
+      "exampleTranslation": "นายจ้างของฉันให้สวัสดิการสุขภาพที่ดี"
+    },
+    {
+      "vocab": "employee",
+      "pronunciation": "เอ็ม-พลอย-อี",
+      "meaning": "ลูกจ้าง, พนักงาน",
+      "example": "The company has over 500 employees.",
+      "exampleTranslation": "บริษัทมีพนักงานมากกว่า 500 คน"
+    },
+    {
+      "vocab": "colleague",
+      "pronunciation": "คอล-ลีก",
+      "meaning": "เพื่อนร่วมงาน",
+      "example": "I had lunch with my colleagues today.",
+      "exampleTranslation": "วันนี้ฉันทานข้าวกลางวันกับเพื่อนร่วมงาน"
+    },
+    {
+      "vocab": "supervisor",
+      "pronunciation": "ซู-เพอะ-ไว-เซอะ",
+      "meaning": "หัวหน้างาน, ผู้ควบคุม",
+      "example": "Report the problem to your supervisor.",
+      "exampleTranslation": "รายงานปัญหาไปยังหัวหน้างานของคุณ"
+    },
+    {
+      "vocab": "department",
+      "pronunciation": "ดิ-พาร์ท-เมินท์",
+      "meaning": "แผนก, ฝ่าย",
+      "example": "She works in the marketing department.",
+      "exampleTranslation": "เธอทำงานในแผนกการตลาด"
+    },
+    {
+      "vocab": "salary",
+      "pronunciation": "แซล-ละ-รี",
+      "meaning": "เงินเดือน",
+      "example": "They offered me a good salary.",
+      "exampleTranslation": "พวกเขาเสนอเงินเดือนที่ดีให้ฉัน"
+    },
+    {
+      "vocab": "wage",
+      "pronunciation": "เวจ",
+      "meaning": "ค่าจ้าง (รายชั่วโมง/วัน)",
+      "example": "The minimum wage has increased.",
+      "exampleTranslation": "ค่าจ้างขั้นต่ำเพิ่มขึ้นแล้ว"
+    },
+    {
+      "vocab": "promotion",
+      "pronunciation": "โพร-โม-ชั่น",
+      "meaning": "การเลื่อนตำแหน่ง",
+      "example": "He got a promotion last month.",
+      "exampleTranslation": "เขาได้เลื่อนตำแหน่งเมื่อเดือนที่แล้ว"
+    },
+    {
+      "vocab": "resign",
+      "pronunciation": "รี-ไซน์",
+      "meaning": "ลาออก",
+      "example": "She decided to resign from her job.",
+      "exampleTranslation": "เธอตัดสินใจลาออกจากงาน"
+    },
+    {
+      "vocab": "retire",
+      "pronunciation": "รี-ไทร์",
+      "meaning": "เกษียณ",
+      "example": "My father will retire next year.",
+      "exampleTranslation": "พ่อของฉันจะเกษียณปีหน้า"
+    },
+    {
+      "vocab": "unemployed",
+      "pronunciation": "อัน-เอ็ม-พลอยด์",
+      "meaning": "ว่างงาน, ตกงาน",
+      "example": "He has been unemployed for three months.",
+      "exampleTranslation": "เขาว่างงานมาสามเดือนแล้ว"
+    },
+    {
+      "vocab": "apply",
+      "pronunciation": "แอพ-พลาย",
+      "meaning": "สมัคร",
+      "example": "I want to apply for this position.",
+      "exampleTranslation": "ฉันต้องการสมัครตำแหน่งนี้"
+    },
+    {
+      "vocab": "application",
+      "pronunciation": "แอพ-พลิ-เค-ชั่น",
+      "meaning": "ใบสมัคร, การสมัคร",
+      "example": "Please submit your application by Friday.",
+      "exampleTranslation": "กรุณาส่งใบสมัครภายในวันศุกร์"
+    },
+    {
+      "vocab": "interview",
+      "pronunciation": "อิน-เทอะ-วิว",
+      "meaning": "สัมภาษณ์",
+      "example": "I have a job interview tomorrow.",
+      "exampleTranslation": "พรุ่งนี้ฉันมีสัมภาษณ์งาน"
+    },
+    {
+      "vocab": "candidate",
+      "pronunciation": "แคน-ดิ-เดท",
+      "meaning": "ผู้สมัคร",
+      "example": "There are five candidates for the position.",
+      "exampleTranslation": "มีผู้สมัครห้าคนสำหรับตำแหน่งนี้"
+    },
+    {
+      "vocab": "hire",
+      "pronunciation": "ไฮร์",
+      "meaning": "จ้างงาน",
+      "example": "We decided to hire two new staff.",
+      "exampleTranslation": "เราตัดสินใจจ้างพนักงานใหม่สองคน"
+    },
+    {
+      "vocab": "fire",
+      "pronunciation": "ไฟร์",
+      "meaning": "ไล่ออก",
+      "example": "He was fired for being late too often.",
+      "exampleTranslation": "เขาถูกไล่ออกเพราะมาสายบ่อยเกินไป"
+    },
+    {
+      "vocab": "contract",
+      "pronunciation": "คอน-แทร็คท์",
+      "meaning": "สัญญาจ้าง",
+      "example": "I signed a two-year contract.",
+      "exampleTranslation": "ฉันเซ็นสัญญาสองปี"
+    },
+    {
+      "vocab": "deadline",
+      "pronunciation": "เด็ด-ไลน์",
+      "meaning": "กำหนดส่ง, เส้นตาย",
+      "example": "The deadline is next Monday.",
+      "exampleTranslation": "กำหนดส่งคือวันจันทร์หน้า"
+    },
+    {
+      "vocab": "schedule",
+      "pronunciation": "สเค็ด-จูล",
+      "meaning": "ตารางเวลา, กำหนดการ",
+      "example": "I have a busy schedule this week.",
+      "exampleTranslation": "สัปดาห์นี้ฉันมีตารางงานยุ่งมาก"
+    },
+    {
+      "vocab": "shift",
+      "pronunciation": "ชิฟท์",
+      "meaning": "กะ (ทำงาน)",
+      "example": "I work the night shift.",
+      "exampleTranslation": "ฉันทำงานกะกลางคืน"
+    },
+    {
+      "vocab": "overtime",
+      "pronunciation": "โอ-เวอะ-ไทม์",
+      "meaning": "ล่วงเวลา, โอที",
+      "example": "I worked overtime yesterday.",
+      "exampleTranslation": "เมื่อวานฉันทำงานล่วงเวลา"
+    },
+    {
+      "vocab": "benefit",
+      "pronunciation": "เบ็น-นิ-ฟิท",
+      "meaning": "สวัสดิการ, ผลประโยชน์",
+      "example": "The job offers great benefits.",
+      "exampleTranslation": "งานนี้มีสวัสดิการที่ดีมาก"
+    },
+    {
+      "vocab": "insurance",
+      "pronunciation": "อิน-ชัว-เรินซ์",
+      "meaning": "ประกัน",
+      "example": "The company provides health insurance.",
+      "exampleTranslation": "บริษัทให้ประกันสุขภาพ"
+    },
+    {
+      "vocab": "pension",
+      "pronunciation": "เพ็น-ชั่น",
+      "meaning": "เงินบำนาญ",
+      "example": "He receives a good pension.",
+      "exampleTranslation": "เขาได้รับเงินบำนาญที่ดี"
+    },
+    {
+      "vocab": "qualification",
+      "pronunciation": "ควอ-ลิ-ฟิ-เค-ชั่น",
+      "meaning": "คุณสมบัติ, วุฒิการศึกษา",
+      "example": "What qualifications do you have?",
+      "exampleTranslation": "คุณมีคุณสมบัติอะไรบ้าง?"
+    },
+    {
+      "vocab": "experience",
+      "pronunciation": "เอ็กซ์-เพีย-เรียนซ์",
+      "meaning": "ประสบการณ์",
+      "example": "Do you have any work experience?",
+      "exampleTranslation": "คุณมีประสบการณ์ทำงานไหม?"
+    },
+    {
+      "vocab": "skill",
+      "pronunciation": "สกิล",
+      "meaning": "ทักษะ",
+      "example": "Communication skills are important.",
+      "exampleTranslation": "ทักษะการสื่อสารมีความสำคัญ"
+    },
+    {
+      "vocab": "responsible",
+      "pronunciation": "ริ-สพอน-สิ-เบิ้ล",
+      "meaning": "รับผิดชอบ",
+      "example": "She is responsible for the project.",
+      "exampleTranslation": "เธอรับผิดชอบโปรเจกต์นี้"
+    },
+    {
+      "vocab": "responsibility",
+      "pronunciation": "ริ-สพอน-สิ-บิ-ลิ-ตี้",
+      "meaning": "ความรับผิดชอบ",
+      "example": "It's a job with a lot of responsibility.",
+      "exampleTranslation": "เป็นงานที่มีความรับผิดชอบมาก"
+    },
+    {
+      "vocab": "duty",
+      "pronunciation": "ดิว-ตี้",
+      "meaning": "หน้าที่",
+      "example": "What are your main duties?",
+      "exampleTranslation": "หน้าที่หลักของคุณคืออะไร?"
+    },
+    {
+      "vocab": "task",
+      "pronunciation": "ทาสค์",
+      "meaning": "งาน, ภารกิจ",
+      "example": "I finished all my tasks for today.",
+      "exampleTranslation": "ฉันทำงานทั้งหมดสำหรับวันนี้เสร็จแล้ว"
+    },
+    {
+      "vocab": "project",
+      "pronunciation": "พรอ-เจ็คท์",
+      "meaning": "โปรเจกต์, โครงการ",
+      "example": "We're working on a new project.",
+      "exampleTranslation": "เรากำลังทำโปรเจกต์ใหม่"
+    },
+    {
+      "vocab": "meeting",
+      "pronunciation": "มี-ทิง",
+      "meaning": "การประชุม",
+      "example": "I have a meeting at 3 PM.",
+      "exampleTranslation": "ฉันมีประชุมตอนบ่ายสามโมง"
+    },
+    {
+      "vocab": "conference",
+      "pronunciation": "คอน-เฟอ-เรินซ์",
+      "meaning": "การประชุมใหญ่",
+      "example": "I'm attending a business conference.",
+      "exampleTranslation": "ฉันกำลังเข้าร่วมการประชุมธุรกิจ"
+    },
+    {
+      "vocab": "presentation",
+      "pronunciation": "เพรส-เซ็น-เท-ชั่น",
+      "meaning": "การนำเสนอ",
+      "example": "I have to give a presentation tomorrow.",
+      "exampleTranslation": "พรุ่งนี้ฉันต้องนำเสนองาน"
+    },
+    {
+      "vocab": "report",
+      "pronunciation": "รี-พอร์ท",
+      "meaning": "รายงาน",
+      "example": "I need to finish this report today.",
+      "exampleTranslation": "ฉันต้องทำรายงานนี้ให้เสร็จวันนี้"
+    },
+    {
+      "vocab": "performance",
+      "pronunciation": "เพอะ-ฟอร์-มานซ์",
+      "meaning": "ผลงาน, การปฏิบัติงาน",
+      "example": "Your performance has been excellent.",
+      "exampleTranslation": "ผลงานของคุณยอดเยี่ยมมาก"
+    },
+    {
+      "vocab": "evaluate",
+      "pronunciation": "อิ-แวล-ยู-เอท",
+      "meaning": "ประเมิน",
+      "example": "We will evaluate your work next month.",
+      "exampleTranslation": "เราจะประเมินงานของคุณเดือนหน้า"
+    },
+    {
+      "vocab": "achieve",
+      "pronunciation": "อะ-ชีฟ",
+      "meaning": "บรรลุ, ประสบความสำเร็จ",
+      "example": "She achieved all her goals.",
+      "exampleTranslation": "เธอบรรลุเป้าหมายทั้งหมด"
+    },
+    {
+      "vocab": "achievement",
+      "pronunciation": "อะ-ชีฟ-เมินท์",
+      "meaning": "ความสำเร็จ, ผลงาน",
+      "example": "It was a great achievement.",
+      "exampleTranslation": "มันเป็นความสำเร็จที่ยิ่งใหญ่"
+    },
+    {
+      "vocab": "professional",
+      "pronunciation": "โพร-เฟ็ช-ชะ-นัล",
+      "meaning": "มืออาชีพ, เป็นมืออาชีพ",
+      "example": "He is very professional at work.",
+      "exampleTranslation": "เขาทำงานเป็นมืออาชีพมาก"
+    },
+    {
+      "vocab": "career",
+      "pronunciation": "คะ-เรีย",
+      "meaning": "อาชีพ, เส้นทางอาชีพ",
+      "example": "I want to build a career in IT.",
+      "exampleTranslation": "ฉันต้องการสร้างอาชีพในด้านไอที"
+    },
+    {
+      "vocab": "opportunity",
+      "pronunciation": "ออพ-เพอะ-ทู-นิ-ตี้",
+      "meaning": "โอกาส",
+      "example": "This is a great career opportunity.",
+      "exampleTranslation": "นี่เป็นโอกาสที่ดีสำหรับอาชีพ"
+    },
+    {
+      "vocab": "challenge",
+      "pronunciation": "ชาล-เลินจ์",
+      "meaning": "ความท้าทาย",
+      "example": "I enjoy new challenges at work.",
+      "exampleTranslation": "ฉันชอบความท้าทายใหม่ๆ ในการทำงาน"
+    },
+    {
+      "vocab": "stress",
+      "pronunciation": "สเตร็ส",
+      "meaning": "ความเครียด",
+      "example": "Work stress can affect your health.",
+      "exampleTranslation": "ความเครียดจากงานส่งผลต่อสุขภาพได้"
+    },
+    {
+      "vocab": "efficient",
+      "pronunciation": "อิ-ฟิ-เชินท์",
+      "meaning": "มีประสิทธิภาพ",
+      "example": "She is a very efficient worker.",
+      "exampleTranslation": "เธอเป็นพนักงานที่มีประสิทธิภาพมาก"
+    },
+    {
+      "vocab": "organize",
+      "pronunciation": "ออร์-กะ-ไนซ์",
+      "meaning": "จัดระเบียบ, จัดการ",
+      "example": "I need to organize my files.",
+      "exampleTranslation": "ฉันต้องจัดระเบียบไฟล์ของฉัน"
+    },
+    {
+      "vocab": "manage",
+      "pronunciation": "แมน-นิจ",
+      "meaning": "จัดการ, บริหาร",
+      "example": "She manages a team of ten people.",
+      "exampleTranslation": "เธอบริหารทีมสิบคน"
+    },
+    {
+      "vocab": "management",
+      "pronunciation": "แมน-นิจ-เมินท์",
+      "meaning": "การบริหาร, ฝ่ายบริหาร",
+      "example": "The management made a decision.",
+      "exampleTranslation": "ฝ่ายบริหารตัดสินใจแล้ว"
+    },
+    {
+      "vocab": "cooperate",
+      "pronunciation": "โค-ออพ-เพอ-เรท",
+      "meaning": "ร่วมมือ",
+      "example": "We need to cooperate to succeed.",
+      "exampleTranslation": "เราต้องร่วมมือกันเพื่อความสำเร็จ"
+    },
+    {
+      "vocab": "teamwork",
+      "pronunciation": "ทีม-เวิร์ค",
+      "meaning": "การทำงานเป็นทีม",
+      "example": "Good teamwork is essential.",
+      "exampleTranslation": "การทำงานเป็นทีมที่ดีเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "negotiate",
+      "pronunciation": "นิ-โก-ชิ-เอท",
+      "meaning": "เจรจาต่อรอง",
+      "example": "I want to negotiate my salary.",
+      "exampleTranslation": "ฉันต้องการเจรจาเรื่องเงินเดือน"
+    },
+    {
+      "vocab": "client",
+      "pronunciation": "ไคล-เอินท์",
+      "meaning": "ลูกค้า (บริการ)",
+      "example": "I have a meeting with a client.",
+      "exampleTranslation": "ฉันมีนัดประชุมกับลูกค้า"
+    },
+    {
+      "vocab": "customer",
+      "pronunciation": "คัส-เทอะ-เมอะ",
+      "meaning": "ลูกค้า (ซื้อสินค้า)",
+      "example": "The customer is always right.",
+      "exampleTranslation": "ลูกค้าถูกเสมอ"
+    },
+    {
+      "vocab": "industry",
+      "pronunciation": "อิน-ดัส-ทรี",
+      "meaning": "อุตสาหกรรม",
+      "example": "She works in the fashion industry.",
+      "exampleTranslation": "เธอทำงานในอุตสาหกรรมแฟชั่น"
+    },
+    {
+      "vocab": "competition",
+      "pronunciation": "คอม-เพ-ทิ-ชั่น",
+      "meaning": "การแข่งขัน",
+      "example": "There is a lot of competition in this market.",
+      "exampleTranslation": "มีการแข่งขันมากในตลาดนี้"
+    },
+    {
+      "vocab": "profit",
+      "pronunciation": "พรอ-ฟิท",
+      "meaning": "กำไร",
+      "example": "The company made a good profit.",
+      "exampleTranslation": "บริษัททำกำไรได้ดี"
+    },
+    {
+      "vocab": "loss",
+      "pronunciation": "ลอส",
+      "meaning": "ขาดทุน, การสูญเสีย",
+      "example": "The company reported a loss this year.",
+      "exampleTranslation": "บริษัทรายงานการขาดทุนปีนี้"
+    }
+  ]
+}

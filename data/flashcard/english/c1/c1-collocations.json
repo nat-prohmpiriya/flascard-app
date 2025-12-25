@@ -1,0 +1,370 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Collocations",
+    "description": "C1 level advanced collocations for professional and academic use",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "collocations"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "bear responsibility",
+      "pronunciation": "แบร์ รี-สพอน-ซิ-บิ-ลิ-ตี้",
+      "meaning": "รับผิดชอบ",
+      "example": "We bear responsibility for the outcome.",
+      "exampleTranslation": "เรารับผิดชอบต่อผลลัพธ์"
+    },
+    {
+      "vocab": "pose a threat",
+      "pronunciation": "โพส อะ เธร็ท",
+      "meaning": "เป็นภัยคุกคาม",
+      "example": "Climate change poses a threat to humanity.",
+      "exampleTranslation": "การเปลี่ยนแปลงสภาพอากาศเป็นภัยคุกคามต่อมนุษยชาติ"
+    },
+    {
+      "vocab": "reach a consensus",
+      "pronunciation": "รีช อะ คอน-เซน-ซัส",
+      "meaning": "บรรลุฉันทามติ",
+      "example": "The team reached a consensus.",
+      "exampleTranslation": "ทีมบรรลุฉันทามติ"
+    },
+    {
+      "vocab": "draw a conclusion",
+      "pronunciation": "ดรอว์ อะ คอน-คลู-ชั่น",
+      "meaning": "สรุปผล",
+      "example": "It's too early to draw conclusions.",
+      "exampleTranslation": "ยังเร็วเกินไปที่จะสรุปผล"
+    },
+    {
+      "vocab": "raise concerns",
+      "pronunciation": "เรส คอน-เซิร์นส์",
+      "meaning": "แสดงความกังวล",
+      "example": "Stakeholders raised concerns about the plan.",
+      "exampleTranslation": "ผู้มีส่วนได้ส่วนเสียแสดงความกังวลเกี่ยวกับแผน"
+    },
+    {
+      "vocab": "address an issue",
+      "pronunciation": "แอด-เดรส แอน อิช-ชู",
+      "meaning": "จัดการปัญหา",
+      "example": "We must address this issue immediately.",
+      "exampleTranslation": "เราต้องจัดการปัญหานี้ทันที"
+    },
+    {
+      "vocab": "meet a deadline",
+      "pronunciation": "มีท อะ เด็ด-ไลน์",
+      "meaning": "ทำให้ทันกำหนด",
+      "example": "We struggled to meet the deadline.",
+      "exampleTranslation": "เราดิ้นรนเพื่อทำให้ทันกำหนด"
+    },
+    {
+      "vocab": "exceed expectations",
+      "pronunciation": "เอ็กซ์-ซีด เอ็กซ์-เพ็ค-เท-ชั่นส์",
+      "meaning": "เกินความคาดหวัง",
+      "example": "The results exceeded expectations.",
+      "exampleTranslation": "ผลลัพธ์เกินความคาดหวัง"
+    },
+    {
+      "vocab": "gain momentum",
+      "pronunciation": "เกน โม-เมน-ทัม",
+      "meaning": "ได้รับแรงขับเคลื่อน",
+      "example": "The movement is gaining momentum.",
+      "exampleTranslation": "ขบวนการกำลังได้รับแรงขับเคลื่อน"
+    },
+    {
+      "vocab": "exert influence",
+      "pronunciation": "เอ็กซ์-เซิร์ท อิน-ฟลู-เอินซ์",
+      "meaning": "ใช้อิทธิพล",
+      "example": "They exert significant influence on policy.",
+      "exampleTranslation": "พวกเขาใช้อิทธิพลอย่างมากต่อนโยบาย"
+    },
+    {
+      "vocab": "wield power",
+      "pronunciation": "วีลด์ พาว-เออะ",
+      "meaning": "ใช้อำนาจ",
+      "example": "They wield considerable power.",
+      "exampleTranslation": "พวกเขาใช้อำนาจอย่างมาก"
+    },
+    {
+      "vocab": "forge a partnership",
+      "pronunciation": "ฟอร์จ อะ พาร์ท-เนอะ-ชิพ",
+      "meaning": "สร้างความเป็นหุ้นส่วน",
+      "example": "We forged a partnership with the university.",
+      "exampleTranslation": "เราสร้างความเป็นหุ้นส่วนกับมหาวิทยาลัย"
+    },
+    {
+      "vocab": "foster innovation",
+      "pronunciation": "ฟอส-เทอะ อิน-โน-เว-ชั่น",
+      "meaning": "ส่งเสริมนวัตกรรม",
+      "example": "Create an environment that fosters innovation.",
+      "exampleTranslation": "สร้างสภาพแวดล้อมที่ส่งเสริมนวัตกรรม"
+    },
+    {
+      "vocab": "cultivate relationships",
+      "pronunciation": "คัล-ทิ-เวท รี-เล-ชั่น-ชิพส์",
+      "meaning": "ปลูกฝังความสัมพันธ์",
+      "example": "Cultivate relationships with key clients.",
+      "exampleTranslation": "ปลูกฝังความสัมพันธ์กับลูกค้าสำคัญ"
+    },
+    {
+      "vocab": "navigate challenges",
+      "pronunciation": "นา-วิ-เกท ชัล-เลนจ์-เจส",
+      "meaning": "รับมือกับความท้าทาย",
+      "example": "Successfully navigate complex challenges.",
+      "exampleTranslation": "รับมือกับความท้าทายที่ซับซ้อนได้สำเร็จ"
+    },
+    {
+      "vocab": "tackle a problem",
+      "pronunciation": "แท็ค-เคิล อะ พรอบ-เล็ม",
+      "meaning": "จัดการปัญหา",
+      "example": "We need to tackle this problem head-on.",
+      "exampleTranslation": "เราต้องจัดการปัญหานี้โดยตรง"
+    },
+    {
+      "vocab": "implement a strategy",
+      "pronunciation": "อิม-พลี-เมนท์ อะ สตรา-ทิ-จี",
+      "meaning": "นำกลยุทธ์ไปปฏิบัติ",
+      "example": "Implement the strategy across all departments.",
+      "exampleTranslation": "นำกลยุทธ์ไปปฏิบัติทุกแผนก"
+    },
+    {
+      "vocab": "execute a plan",
+      "pronunciation": "เอ็กซ์-ซิ-คิวท์ อะ แพลน",
+      "meaning": "ดำเนินการตามแผน",
+      "example": "Execute the plan flawlessly.",
+      "exampleTranslation": "ดำเนินการตามแผนอย่างไร้ที่ติ"
+    },
+    {
+      "vocab": "drive growth",
+      "pronunciation": "ไดรฟ์ โกรธ",
+      "meaning": "ขับเคลื่อนการเติบโต",
+      "example": "Innovation drives sustainable growth.",
+      "exampleTranslation": "นวัตกรรมขับเคลื่อนการเติบโตอย่างยั่งยืน"
+    },
+    {
+      "vocab": "fuel speculation",
+      "pronunciation": "ฟิวเอล สเพ็ค-คิว-เล-ชั่น",
+      "meaning": "จุดชนวนการคาดเดา",
+      "example": "The announcement fueled speculation.",
+      "exampleTranslation": "การประกาศจุดชนวนการคาดเดา"
+    },
+    {
+      "vocab": "spark debate",
+      "pronunciation": "สปาร์ค ดิ-เบท",
+      "meaning": "จุดประกายการถกเถียง",
+      "example": "The proposal sparked intense debate.",
+      "exampleTranslation": "ข้อเสนอจุดประกายการถกเถียงอย่างรุนแรง"
+    },
+    {
+      "vocab": "trigger a response",
+      "pronunciation": "ทริก-เกอะ อะ รี-สพอนส์",
+      "meaning": "กระตุ้นการตอบสนอง",
+      "example": "The incident triggered an immediate response.",
+      "exampleTranslation": "เหตุการณ์กระตุ้นการตอบสนองทันที"
+    },
+    {
+      "vocab": "yield results",
+      "pronunciation": "ยีลด์ รี-ซัลท์ส",
+      "meaning": "ให้ผลลัพธ์",
+      "example": "The strategy yielded positive results.",
+      "exampleTranslation": "กลยุทธ์ให้ผลลัพธ์เชิงบวก"
+    },
+    {
+      "vocab": "deliver value",
+      "pronunciation": "ดิ-ลิ-เวอะ แวล-ลิว",
+      "meaning": "ส่งมอบคุณค่า",
+      "example": "We aim to deliver value to customers.",
+      "exampleTranslation": "เรามุ่งหมายที่จะส่งมอบคุณค่าให้ลูกค้า"
+    },
+    {
+      "vocab": "uphold standards",
+      "pronunciation": "อัพ-โฮลด์ สแตน-ดาร์ดส์",
+      "meaning": "รักษามาตรฐาน",
+      "example": "Uphold the highest ethical standards.",
+      "exampleTranslation": "รักษามาตรฐานจริยธรรมสูงสุด"
+    },
+    {
+      "vocab": "maintain integrity",
+      "pronunciation": "เมน-เทน อิน-เท็ก-กริ-ตี้",
+      "meaning": "รักษาความซื่อสัตย์",
+      "example": "Maintain integrity in all dealings.",
+      "exampleTranslation": "รักษาความซื่อสัตย์ในทุกการติดต่อ"
+    },
+    {
+      "vocab": "demonstrate commitment",
+      "pronunciation": "เด-มอน-สเทรท คอม-มิท-เมินท์",
+      "meaning": "แสดงความมุ่งมั่น",
+      "example": "Demonstrate commitment to the project.",
+      "exampleTranslation": "แสดงความมุ่งมั่นต่อโครงการ"
+    },
+    {
+      "vocab": "exercise caution",
+      "pronunciation": "เอ็กซ์-เซอะ-ไซส์ คอ-ชั่น",
+      "meaning": "ใช้ความระมัดระวัง",
+      "example": "Exercise caution when making decisions.",
+      "exampleTranslation": "ใช้ความระมัดระวังเมื่อตัดสินใจ"
+    },
+    {
+      "vocab": "exercise restraint",
+      "pronunciation": "เอ็กซ์-เซอะ-ไซส์ รี-สเทรนท์",
+      "meaning": "ยับยั้งชั่งใจ",
+      "example": "Exercise restraint in negotiations.",
+      "exampleTranslation": "ยับยั้งชั่งใจในการเจรจา"
+    },
+    {
+      "vocab": "allocate resources",
+      "pronunciation": "แอล-โล-เคท รี-ซอร์-เซส",
+      "meaning": "จัดสรรทรัพยากร",
+      "example": "Allocate resources efficiently.",
+      "exampleTranslation": "จัดสรรทรัพยากรอย่างมีประสิทธิภาพ"
+    },
+    {
+      "vocab": "deploy assets",
+      "pronunciation": "ดิ-พลอย แอส-เซ็ทส์",
+      "meaning": "ใช้งานทรัพย์สิน",
+      "example": "Deploy assets strategically.",
+      "exampleTranslation": "ใช้งานทรัพย์สินอย่างมีกลยุทธ์"
+    },
+    {
+      "vocab": "mitigate risk",
+      "pronunciation": "มิท-ทิ-เกท ริสค์",
+      "meaning": "ลดความเสี่ยง",
+      "example": "Take steps to mitigate risk.",
+      "exampleTranslation": "ดำเนินการเพื่อลดความเสี่ยง"
+    },
+    {
+      "vocab": "offset costs",
+      "pronunciation": "ออฟ-เซ็ท คอสท์ส",
+      "meaning": "ชดเชยค่าใช้จ่าย",
+      "example": "Revenue gains offset the costs.",
+      "exampleTranslation": "รายได้ที่เพิ่มขึ้นชดเชยค่าใช้จ่าย"
+    },
+    {
+      "vocab": "streamline operations",
+      "pronunciation": "สตรีม-ไลน์ ออป-เปอ-เร-ชั่นส์",
+      "meaning": "ปรับปรุงการดำเนินงาน",
+      "example": "Streamline operations for efficiency.",
+      "exampleTranslation": "ปรับปรุงการดำเนินงานเพื่อประสิทธิภาพ"
+    },
+    {
+      "vocab": "optimize performance",
+      "pronunciation": "ออป-ทิ-ไมซ์ เพอร์-ฟอร์-แมนซ์",
+      "meaning": "เพิ่มประสิทธิภาพ",
+      "example": "Optimize performance through automation.",
+      "exampleTranslation": "เพิ่มประสิทธิภาพผ่านระบบอัตโนมัติ"
+    },
+    {
+      "vocab": "leverage expertise",
+      "pronunciation": "เลฟ-เวอ-เรจ เอ็กซ์-เพอร์-ทีซ",
+      "meaning": "ใช้ประโยชน์จากความเชี่ยวชาญ",
+      "example": "Leverage our team's expertise.",
+      "exampleTranslation": "ใช้ประโยชน์จากความเชี่ยวชาญของทีม"
+    },
+    {
+      "vocab": "harness potential",
+      "pronunciation": "ฮาร์-เนส โพ-เทน-เชียล",
+      "meaning": "ใช้ศักยภาพ",
+      "example": "Harness the potential of new technology.",
+      "exampleTranslation": "ใช้ศักยภาพของเทคโนโลยีใหม่"
+    },
+    {
+      "vocab": "seize an opportunity",
+      "pronunciation": "ซีซ แอน ออป-ปอร์-ทิว-นิ-ตี้",
+      "meaning": "ฉวยโอกาส",
+      "example": "Seize the opportunity before it's gone.",
+      "exampleTranslation": "ฉวยโอกาสก่อนที่มันจะหายไป"
+    },
+    {
+      "vocab": "grasp the implications",
+      "pronunciation": "กราสพ์ ดิ อิม-พลิ-เค-ชั่นส์",
+      "meaning": "เข้าใจนัยสำคัญ",
+      "example": "Grasp the full implications of this decision.",
+      "exampleTranslation": "เข้าใจนัยสำคัญทั้งหมดของการตัดสินใจนี้"
+    },
+    {
+      "vocab": "cast doubt",
+      "pronunciation": "คาสท์ เดาท์",
+      "meaning": "ทำให้สงสัย",
+      "example": "New evidence cast doubt on the theory.",
+      "exampleTranslation": "หลักฐานใหม่ทำให้สงสัยทฤษฎี"
+    },
+    {
+      "vocab": "shed light on",
+      "pronunciation": "เช็ด ไลท์ ออน",
+      "meaning": "ให้ความกระจ่าง",
+      "example": "The study sheds light on the issue.",
+      "exampleTranslation": "การศึกษาให้ความกระจ่างเรื่องนี้"
+    },
+    {
+      "vocab": "hold accountable",
+      "pronunciation": "โฮลด์ อะ-เคาน์-ทะ-เบิล",
+      "meaning": "ให้รับผิดชอบ",
+      "example": "Hold leaders accountable for their actions.",
+      "exampleTranslation": "ให้ผู้นำรับผิดชอบต่อการกระทำของตน"
+    },
+    {
+      "vocab": "bridge the gap",
+      "pronunciation": "บริดจ์ เดอะ แก็พ",
+      "meaning": "ลดช่องว่าง",
+      "example": "Bridge the gap between theory and practice.",
+      "exampleTranslation": "ลดช่องว่างระหว่างทฤษฎีและปฏิบัติ"
+    },
+    {
+      "vocab": "close the deal",
+      "pronunciation": "โคลส เดอะ ดีล",
+      "meaning": "ปิดการขาย, ปิดดีล",
+      "example": "We managed to close the deal.",
+      "exampleTranslation": "เราสามารถปิดดีลได้"
+    },
+    {
+      "vocab": "strike a balance",
+      "pronunciation": "สไตรค์ อะ แบล-แลนซ์",
+      "meaning": "สร้างสมดุล",
+      "example": "Strike a balance between work and life.",
+      "exampleTranslation": "สร้างสมดุลระหว่างงานและชีวิต"
+    },
+    {
+      "vocab": "face scrutiny",
+      "pronunciation": "เฟส สครู-ทิ-นี",
+      "meaning": "ถูกตรวจสอบอย่างละเอียด",
+      "example": "The policy is facing scrutiny.",
+      "exampleTranslation": "นโยบายกำลังถูกตรวจสอบอย่างละเอียด"
+    },
+    {
+      "vocab": "undergo transformation",
+      "pronunciation": "อัน-เดอะ-โก ทรานส์-ฟอร์-เม-ชั่น",
+      "meaning": "ผ่านการเปลี่ยนแปลง",
+      "example": "The industry is undergoing transformation.",
+      "exampleTranslation": "อุตสาหกรรมกำลังผ่านการเปลี่ยนแปลง"
+    },
+    {
+      "vocab": "weather a storm",
+      "pronunciation": "เว-เธอะ อะ สตอร์ม",
+      "meaning": "ผ่านพ้นวิกฤต",
+      "example": "The company weathered the financial storm.",
+      "exampleTranslation": "บริษัทผ่านพ้นวิกฤตการเงิน"
+    },
+    {
+      "vocab": "stand the test of time",
+      "pronunciation": "สแตนด์ เดอะ เท็สท์ ออฟ ไทม์",
+      "meaning": "ยืนยาว, ทนทานต่อกาลเวลา",
+      "example": "Their work stands the test of time.",
+      "exampleTranslation": "ผลงานของพวกเขาทนทานต่อกาลเวลา"
+    },
+    {
+      "vocab": "command respect",
+      "pronunciation": "คอม-มานด์ รี-สเป็คท์",
+      "meaning": "ได้รับความเคารพ",
+      "example": "She commands respect from colleagues.",
+      "exampleTranslation": "เธอได้รับความเคารพจากเพื่อนร่วมงาน"
+    },
+    {
+      "vocab": "lend credibility",
+      "pronunciation": "เลนด์ เคร-ดิ-บิ-ลิ-ตี้",
+      "meaning": "เพิ่มความน่าเชื่อถือ",
+      "example": "Expert endorsement lends credibility.",
+      "exampleTranslation": "การรับรองจากผู้เชี่ยวชาญเพิ่มความน่าเชื่อถือ"
+    }
+  ]
+}

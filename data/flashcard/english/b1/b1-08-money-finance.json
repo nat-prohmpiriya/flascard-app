@@ -1,0 +1,419 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B1 Money & Finance",
+    "description": "B1 level vocabulary for money and finance topics",
+    "category": "CEFR B1",
+    "tags": ["english", "B1", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "finance",
+      "pronunciation": "ไฟ-แนนซ์",
+      "meaning": "การเงิน",
+      "example": "I need to learn about finance.",
+      "exampleTranslation": "ฉันต้องเรียนรู้เรื่องการเงิน"
+    },
+    {
+      "vocab": "financial",
+      "pronunciation": "ไฟ-แนน-เชียล",
+      "meaning": "เกี่ยวกับการเงิน",
+      "example": "She gives financial advice.",
+      "exampleTranslation": "เธอให้คำปรึกษาทางการเงิน"
+    },
+    {
+      "vocab": "economy",
+      "pronunciation": "อิ-คอน-โน-มี",
+      "meaning": "เศรษฐกิจ",
+      "example": "The economy is growing.",
+      "exampleTranslation": "เศรษฐกิจกำลังเติบโต"
+    },
+    {
+      "vocab": "economic",
+      "pronunciation": "อี-คอน-นอ-มิค",
+      "meaning": "เกี่ยวกับเศรษฐกิจ",
+      "example": "Economic growth is important.",
+      "exampleTranslation": "การเติบโตทางเศรษฐกิจมีความสำคัญ"
+    },
+    {
+      "vocab": "income",
+      "pronunciation": "อิน-คัม",
+      "meaning": "รายได้",
+      "example": "My income increased this year.",
+      "exampleTranslation": "รายได้ของฉันเพิ่มขึ้นปีนี้"
+    },
+    {
+      "vocab": "expense",
+      "pronunciation": "เอ็กซ์-เพนซ์",
+      "meaning": "ค่าใช้จ่าย",
+      "example": "Track all your expenses.",
+      "exampleTranslation": "ติดตามค่าใช้จ่ายทั้งหมดของคุณ"
+    },
+    {
+      "vocab": "budget",
+      "pronunciation": "บัด-เจ็ท",
+      "meaning": "งบประมาณ",
+      "example": "I need to set a budget.",
+      "exampleTranslation": "ฉันต้องกำหนดงบประมาณ"
+    },
+    {
+      "vocab": "save",
+      "pronunciation": "เซฟ",
+      "meaning": "ออม, ประหยัด",
+      "example": "I'm trying to save money.",
+      "exampleTranslation": "ฉันพยายามออมเงิน"
+    },
+    {
+      "vocab": "savings",
+      "pronunciation": "เซ-วิงส์",
+      "meaning": "เงินออม",
+      "example": "I have some savings in the bank.",
+      "exampleTranslation": "ฉันมีเงินออมอยู่ในธนาคาร"
+    },
+    {
+      "vocab": "spend",
+      "pronunciation": "สเปนด์",
+      "meaning": "ใช้จ่าย",
+      "example": "Don't spend too much money.",
+      "exampleTranslation": "อย่าใช้เงินมากเกินไป"
+    },
+    {
+      "vocab": "afford",
+      "pronunciation": "แอฟ-ฟอร์ด",
+      "meaning": "มีเงินพอจ่าย, สามารถซื้อได้",
+      "example": "I can't afford a new car.",
+      "exampleTranslation": "ฉันซื้อรถใหม่ไม่ไหว"
+    },
+    {
+      "vocab": "invest",
+      "pronunciation": "อิน-เวสท์",
+      "meaning": "ลงทุน",
+      "example": "I want to invest in stocks.",
+      "exampleTranslation": "ฉันต้องการลงทุนในหุ้น"
+    },
+    {
+      "vocab": "investment",
+      "pronunciation": "อิน-เวสท์-เมินท์",
+      "meaning": "การลงทุน",
+      "example": "Real estate is a good investment.",
+      "exampleTranslation": "อสังหาริมทรัพย์เป็นการลงทุนที่ดี"
+    },
+    {
+      "vocab": "investor",
+      "pronunciation": "อิน-เวส-เทอะ",
+      "meaning": "นักลงทุน",
+      "example": "The investors are happy.",
+      "exampleTranslation": "นักลงทุนมีความสุข"
+    },
+    {
+      "vocab": "stock",
+      "pronunciation": "สต็อค",
+      "meaning": "หุ้น",
+      "example": "Stock prices went up today.",
+      "exampleTranslation": "ราคาหุ้นขึ้นวันนี้"
+    },
+    {
+      "vocab": "share",
+      "pronunciation": "แชร์",
+      "meaning": "หุ้น (ส่วนแบ่ง)",
+      "example": "I bought shares in the company.",
+      "exampleTranslation": "ฉันซื้อหุ้นในบริษัท"
+    },
+    {
+      "vocab": "bank account",
+      "pronunciation": "แบงค์ แอค-เคาท์",
+      "meaning": "บัญชีธนาคาร",
+      "example": "I opened a bank account.",
+      "exampleTranslation": "ฉันเปิดบัญชีธนาคาร"
+    },
+    {
+      "vocab": "deposit",
+      "pronunciation": "ดิ-พอ-ซิท",
+      "meaning": "ฝาก (เงิน), เงินมัดจำ",
+      "example": "I deposited money into my account.",
+      "exampleTranslation": "ฉันฝากเงินเข้าบัญชี"
+    },
+    {
+      "vocab": "withdraw",
+      "pronunciation": "วิธ-ดรอว์",
+      "meaning": "ถอน (เงิน)",
+      "example": "I need to withdraw some cash.",
+      "exampleTranslation": "ฉันต้องถอนเงินสดบ้าง"
+    },
+    {
+      "vocab": "transfer",
+      "pronunciation": "ทรานส์-เฟอร์",
+      "meaning": "โอน (เงิน)",
+      "example": "I'll transfer the money to you.",
+      "exampleTranslation": "ฉันจะโอนเงินให้คุณ"
+    },
+    {
+      "vocab": "balance",
+      "pronunciation": "แบล-เลินซ์",
+      "meaning": "ยอดคงเหลือ",
+      "example": "What's your account balance?",
+      "exampleTranslation": "ยอดคงเหลือในบัญชีของคุณเท่าไหร่?"
+    },
+    {
+      "vocab": "credit card",
+      "pronunciation": "เคร-ดิท คาร์ด",
+      "meaning": "บัตรเครดิต",
+      "example": "Can I pay by credit card?",
+      "exampleTranslation": "ฉันจ่ายบัตรเครดิตได้ไหม?"
+    },
+    {
+      "vocab": "debit card",
+      "pronunciation": "เด-บิท คาร์ด",
+      "meaning": "บัตรเดบิต",
+      "example": "I prefer using a debit card.",
+      "exampleTranslation": "ฉันชอบใช้บัตรเดบิตมากกว่า"
+    },
+    {
+      "vocab": "loan",
+      "pronunciation": "โลน",
+      "meaning": "เงินกู้",
+      "example": "I took out a loan for my car.",
+      "exampleTranslation": "ฉันกู้เงินสำหรับรถของฉัน"
+    },
+    {
+      "vocab": "mortgage",
+      "pronunciation": "มอร์-เกจ",
+      "meaning": "สินเชื่อบ้าน",
+      "example": "We got a mortgage for our house.",
+      "exampleTranslation": "เราได้สินเชื่อบ้านสำหรับบ้านของเรา"
+    },
+    {
+      "vocab": "debt",
+      "pronunciation": "เด็ท",
+      "meaning": "หนี้",
+      "example": "I'm trying to pay off my debt.",
+      "exampleTranslation": "ฉันพยายามชำระหนี้"
+    },
+    {
+      "vocab": "owe",
+      "pronunciation": "โอว",
+      "meaning": "เป็นหนี้",
+      "example": "I owe him 500 baht.",
+      "exampleTranslation": "ฉันเป็นหนี้เขา 500 บาท"
+    },
+    {
+      "vocab": "interest",
+      "pronunciation": "อิน-เทอ-เรสท์",
+      "meaning": "ดอกเบี้ย",
+      "example": "The interest rate is 5%.",
+      "exampleTranslation": "อัตราดอกเบี้ยคือ 5%"
+    },
+    {
+      "vocab": "tax",
+      "pronunciation": "แท็กซ์",
+      "meaning": "ภาษี",
+      "example": "I have to pay income tax.",
+      "exampleTranslation": "ฉันต้องจ่ายภาษีเงินได้"
+    },
+    {
+      "vocab": "receipt",
+      "pronunciation": "รี-ซีท",
+      "meaning": "ใบเสร็จ",
+      "example": "Can I have a receipt, please?",
+      "exampleTranslation": "ขอใบเสร็จด้วยได้ไหม?"
+    },
+    {
+      "vocab": "invoice",
+      "pronunciation": "อิน-วอยซ์",
+      "meaning": "ใบแจ้งหนี้, ใบกำกับสินค้า",
+      "example": "I'll send you an invoice.",
+      "exampleTranslation": "ฉันจะส่งใบแจ้งหนี้ให้คุณ"
+    },
+    {
+      "vocab": "bill",
+      "pronunciation": "บิล",
+      "meaning": "ใบเรียกเก็บเงิน, บิล",
+      "example": "I need to pay the electricity bill.",
+      "exampleTranslation": "ฉันต้องจ่ายบิลค่าไฟ"
+    },
+    {
+      "vocab": "fee",
+      "pronunciation": "ฟี",
+      "meaning": "ค่าธรรมเนียม",
+      "example": "There's a small service fee.",
+      "exampleTranslation": "มีค่าธรรมเนียมบริการเล็กน้อย"
+    },
+    {
+      "vocab": "tip",
+      "pronunciation": "ทิป",
+      "meaning": "ทิป, เงินรางวัล",
+      "example": "I left a tip for the waiter.",
+      "exampleTranslation": "ฉันให้ทิปพนักงานเสิร์ฟ"
+    },
+    {
+      "vocab": "discount",
+      "pronunciation": "ดิส-เคาท์",
+      "meaning": "ส่วนลด",
+      "example": "Is there a student discount?",
+      "exampleTranslation": "มีส่วนลดนักศึกษาไหม?"
+    },
+    {
+      "vocab": "bargain",
+      "pronunciation": "บาร์-กิน",
+      "meaning": "ต่อรองราคา, ของถูก",
+      "example": "You got a good bargain!",
+      "exampleTranslation": "คุณได้ของถูกมาก!"
+    },
+    {
+      "vocab": "price",
+      "pronunciation": "ไพรซ์",
+      "meaning": "ราคา",
+      "example": "What's the price of this?",
+      "exampleTranslation": "ราคาของสิ่งนี้เท่าไหร่?"
+    },
+    {
+      "vocab": "cost",
+      "pronunciation": "คอสท์",
+      "meaning": "ราคา, ค่าใช้จ่าย",
+      "example": "How much does it cost?",
+      "exampleTranslation": "มันราคาเท่าไหร่?"
+    },
+    {
+      "vocab": "value",
+      "pronunciation": "แวล-ยู",
+      "meaning": "มูลค่า, คุณค่า",
+      "example": "This has good value for money.",
+      "exampleTranslation": "นี่คุ้มค่าเงิน"
+    },
+    {
+      "vocab": "worth",
+      "pronunciation": "เวิร์ธ",
+      "meaning": "มูลค่า, มีค่า",
+      "example": "How much is it worth?",
+      "exampleTranslation": "มันมีมูลค่าเท่าไหร่?"
+    },
+    {
+      "vocab": "profit",
+      "pronunciation": "พรอ-ฟิท",
+      "meaning": "กำไร",
+      "example": "The company made a profit.",
+      "exampleTranslation": "บริษัททำกำไรได้"
+    },
+    {
+      "vocab": "loss",
+      "pronunciation": "ลอส",
+      "meaning": "ขาดทุน",
+      "example": "We made a loss this quarter.",
+      "exampleTranslation": "เราขาดทุนไตรมาสนี้"
+    },
+    {
+      "vocab": "wealthy",
+      "pronunciation": "เวล-ธี",
+      "meaning": "ร่ำรวย, มั่งคั่ง",
+      "example": "He became wealthy from his business.",
+      "exampleTranslation": "เขาร่ำรวยจากธุรกิจของเขา"
+    },
+    {
+      "vocab": "poverty",
+      "pronunciation": "พอฟ-เวอะ-ตี้",
+      "meaning": "ความยากจน",
+      "example": "Many people live in poverty.",
+      "exampleTranslation": "คนจำนวนมากอยู่ในความยากจน"
+    },
+    {
+      "vocab": "currency",
+      "pronunciation": "เคอร์-เรน-ซี",
+      "meaning": "สกุลเงิน",
+      "example": "The local currency is baht.",
+      "exampleTranslation": "สกุลเงินท้องถิ่นคือบาท"
+    },
+    {
+      "vocab": "exchange",
+      "pronunciation": "เอ็กซ์-เชนจ์",
+      "meaning": "แลกเปลี่ยน",
+      "example": "Where can I exchange money?",
+      "exampleTranslation": "ฉันแลกเงินได้ที่ไหน?"
+    },
+    {
+      "vocab": "cash",
+      "pronunciation": "แคช",
+      "meaning": "เงินสด",
+      "example": "I prefer to pay in cash.",
+      "exampleTranslation": "ฉันชอบจ่ายเป็นเงินสด"
+    },
+    {
+      "vocab": "coin",
+      "pronunciation": "คอยน์",
+      "meaning": "เหรียญ",
+      "example": "I have some coins in my pocket.",
+      "exampleTranslation": "ฉันมีเหรียญอยู่ในกระเป๋า"
+    },
+    {
+      "vocab": "note",
+      "pronunciation": "โน้ท",
+      "meaning": "ธนบัตร",
+      "example": "I only have large notes.",
+      "exampleTranslation": "ฉันมีแต่ธนบัตรใบใหญ่"
+    },
+    {
+      "vocab": "ATM",
+      "pronunciation": "เอ-ที-เอ็ม",
+      "meaning": "ตู้เอทีเอ็ม",
+      "example": "Is there an ATM nearby?",
+      "exampleTranslation": "มีตู้เอทีเอ็มใกล้ๆ ไหม?"
+    },
+    {
+      "vocab": "purchase",
+      "pronunciation": "เพอร์-ชิส",
+      "meaning": "ซื้อ, การซื้อ",
+      "example": "I made a big purchase today.",
+      "exampleTranslation": "วันนี้ฉันซื้อของชิ้นใหญ่"
+    },
+    {
+      "vocab": "refund",
+      "pronunciation": "รี-ฟันด์",
+      "meaning": "คืนเงิน",
+      "example": "Can I get a refund?",
+      "exampleTranslation": "ฉันขอคืนเงินได้ไหม?"
+    },
+    {
+      "vocab": "insurance",
+      "pronunciation": "อิน-ชัว-เรินซ์",
+      "meaning": "ประกัน",
+      "example": "I need to buy travel insurance.",
+      "exampleTranslation": "ฉันต้องซื้อประกันการเดินทาง"
+    },
+    {
+      "vocab": "pension",
+      "pronunciation": "เพ็น-ชั่น",
+      "meaning": "เงินบำนาญ",
+      "example": "I'm saving for my pension.",
+      "exampleTranslation": "ฉันกำลังออมเงินสำหรับบำนาญ"
+    },
+    {
+      "vocab": "inflation",
+      "pronunciation": "อิน-เฟล-ชั่น",
+      "meaning": "เงินเฟ้อ",
+      "example": "Inflation is rising every year.",
+      "exampleTranslation": "เงินเฟ้อเพิ่มขึ้นทุกปี"
+    },
+    {
+      "vocab": "recession",
+      "pronunciation": "รี-เซ็ช-ชั่น",
+      "meaning": "ภาวะเศรษฐกิจถดถอย",
+      "example": "The country is in a recession.",
+      "exampleTranslation": "ประเทศอยู่ในภาวะเศรษฐกิจถดถอย"
+    },
+    {
+      "vocab": "bankruptcy",
+      "pronunciation": "แบงค์-รัพ-ซี",
+      "meaning": "การล้มละลาย",
+      "example": "The company filed for bankruptcy.",
+      "exampleTranslation": "บริษัทยื่นฟ้องล้มละลาย"
+    },
+    {
+      "vocab": "financial crisis",
+      "pronunciation": "ไฟ-แนน-เชียล ไคร-ซิส",
+      "meaning": "วิกฤตการเงิน",
+      "example": "The financial crisis affected everyone.",
+      "exampleTranslation": "วิกฤตการเงินส่งผลกระทบต่อทุกคน"
+    }
+  ]
+}

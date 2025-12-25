@@ -1,0 +1,363 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Idioms & Expressions",
+    "description": "C1 level idioms and expressions for professional and social contexts",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "idioms", "expressions"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "a double-edged sword",
+      "pronunciation": "อะ ดับ-เบิล-เอ็จด์ ซอร์ด",
+      "meaning": "ดาบสองคม",
+      "example": "Social media is a double-edged sword.",
+      "exampleTranslation": "โซเชียลมีเดียเป็นดาบสองคม"
+    },
+    {
+      "vocab": "a watershed moment",
+      "pronunciation": "อะ วอ-เทอะ-เช็ด โม-เมินท์",
+      "meaning": "จุดเปลี่ยนสำคัญ",
+      "example": "This was a watershed moment in history.",
+      "exampleTranslation": "นี่คือจุดเปลี่ยนสำคัญในประวัติศาสตร์"
+    },
+    {
+      "vocab": "the tip of the iceberg",
+      "pronunciation": "เดอะ ทิพ ออฟ ดิ ไอซ์-เบิร์ก",
+      "meaning": "เป็นแค่ส่วนเล็กน้อย",
+      "example": "What we've seen is just the tip of the iceberg.",
+      "exampleTranslation": "สิ่งที่เราเห็นเป็นแค่ส่วนเล็กน้อย"
+    },
+    {
+      "vocab": "a slippery slope",
+      "pronunciation": "อะ สลิพ-เพอ-รี สโลป",
+      "meaning": "ทางลาดลื่น, นำไปสู่สิ่งเลวร้าย",
+      "example": "This policy is a slippery slope.",
+      "exampleTranslation": "นโยบายนี้เป็นทางลาดลื่น"
+    },
+    {
+      "vocab": "a paradigm shift",
+      "pronunciation": "อะ พา-รา-ไดม์ ชิฟท์",
+      "meaning": "การเปลี่ยนกระบวนทัศน์",
+      "example": "AI represents a paradigm shift.",
+      "exampleTranslation": "AI เป็นการเปลี่ยนกระบวนทัศน์"
+    },
+    {
+      "vocab": "a level playing field",
+      "pronunciation": "อะ เลเวล เพลย์-อิง ฟีลด์",
+      "meaning": "การแข่งขันที่เท่าเทียม",
+      "example": "We need a level playing field for all businesses.",
+      "exampleTranslation": "เราต้องการการแข่งขันที่เท่าเทียมสำหรับทุกธุรกิจ"
+    },
+    {
+      "vocab": "the elephant in the room",
+      "pronunciation": "ดิ เอล-ลิ-ฟันท์ อิน เดอะ รูม",
+      "meaning": "ปัญหาที่ทุกคนรู้แต่ไม่มีใครพูดถึง",
+      "example": "Let's address the elephant in the room.",
+      "exampleTranslation": "มาพูดถึงปัญหาที่ทุกคนรู้กันเถอะ"
+    },
+    {
+      "vocab": "thinking outside the box",
+      "pronunciation": "ธิง-คิง เอาท์-ไซด์ เดอะ บ็อกซ์",
+      "meaning": "คิดนอกกรอบ",
+      "example": "We need to think outside the box.",
+      "exampleTranslation": "เราต้องคิดนอกกรอบ"
+    },
+    {
+      "vocab": "moving the goalposts",
+      "pronunciation": "มูฟ-วิง เดอะ โกล-โพสท์ส",
+      "meaning": "เปลี่ยนกฎกลางคัน",
+      "example": "They keep moving the goalposts.",
+      "exampleTranslation": "พวกเขาเปลี่ยนกฎกลางคันเรื่อยๆ"
+    },
+    {
+      "vocab": "a ballpark figure",
+      "pronunciation": "อะ บอล-พาร์ค ฟิก-เกอะ",
+      "meaning": "ตัวเลขคร่าวๆ",
+      "example": "Give me a ballpark figure.",
+      "exampleTranslation": "ให้ตัวเลขคร่าวๆ หน่อย"
+    },
+    {
+      "vocab": "back to square one",
+      "pronunciation": "แบค ทู สแควร์ วัน",
+      "meaning": "กลับไปเริ่มต้นใหม่",
+      "example": "The project is back to square one.",
+      "exampleTranslation": "โครงการกลับไปเริ่มต้นใหม่"
+    },
+    {
+      "vocab": "at the end of the day",
+      "pronunciation": "แอท ดิ เอ็นด์ ออฟ เดอะ เดย์",
+      "meaning": "ท้ายที่สุด, โดยสรุป",
+      "example": "At the end of the day, results matter.",
+      "exampleTranslation": "ท้ายที่สุด ผลลัพธ์คือสิ่งสำคัญ"
+    },
+    {
+      "vocab": "cutting corners",
+      "pronunciation": "คัท-ทิง คอร์-เนอะส์",
+      "meaning": "ลดขั้นตอน, ทำแบบลวกๆ",
+      "example": "Don't cut corners on quality.",
+      "exampleTranslation": "อย่าลดขั้นตอนเรื่องคุณภาพ"
+    },
+    {
+      "vocab": "a catch-22 situation",
+      "pronunciation": "อะ แค็ทช์-ทเวน-ตี้-ทู ซิท-ทิว-เอ-ชั่น",
+      "meaning": "สถานการณ์กลืนไม่เข้าคายไม่ออก",
+      "example": "It's a catch-22 situation.",
+      "exampleTranslation": "มันเป็นสถานการณ์กลืนไม่เข้าคายไม่ออก"
+    },
+    {
+      "vocab": "read between the lines",
+      "pronunciation": "รีด บิ-ทวีน เดอะ ไลน์ส",
+      "meaning": "อ่านใจ, เข้าใจความหมายแฝง",
+      "example": "You need to read between the lines.",
+      "exampleTranslation": "คุณต้องเข้าใจความหมายแฝง"
+    },
+    {
+      "vocab": "leave no stone unturned",
+      "pronunciation": "ลีฟ โน สโตน อัน-เทิร์นด์",
+      "meaning": "ค้นหาทุกซอกทุกมุม",
+      "example": "We'll leave no stone unturned.",
+      "exampleTranslation": "เราจะค้นหาทุกซอกทุกมุม"
+    },
+    {
+      "vocab": "burn the midnight oil",
+      "pronunciation": "เบิร์น เดอะ มิด-ไนท์ ออยล์",
+      "meaning": "ทำงานดึกดื่น",
+      "example": "I've been burning the midnight oil to finish.",
+      "exampleTranslation": "ฉันทำงานดึกดื่นเพื่อทำให้เสร็จ"
+    },
+    {
+      "vocab": "bite the bullet",
+      "pronunciation": "ไบท์ เดอะ บุล-เล็ท",
+      "meaning": "ทนทำสิ่งที่ไม่อยากทำ",
+      "example": "We have to bite the bullet and make cuts.",
+      "exampleTranslation": "เราต้องทนทำในสิ่งที่ไม่อยากทำและลดค่าใช้จ่าย"
+    },
+    {
+      "vocab": "have a lot on one's plate",
+      "pronunciation": "แฮฟ อะ ลอท ออน วันส์ เพลท",
+      "meaning": "มีงานเยอะ",
+      "example": "I have a lot on my plate right now.",
+      "exampleTranslation": "ตอนนี้ฉันมีงานเยอะมาก"
+    },
+    {
+      "vocab": "be in the same boat",
+      "pronunciation": "บี อิน เดอะ เซม โบท",
+      "meaning": "อยู่ในสถานการณ์เดียวกัน",
+      "example": "We're all in the same boat.",
+      "exampleTranslation": "เราทุกคนอยู่ในสถานการณ์เดียวกัน"
+    },
+    {
+      "vocab": "the ball is in your court",
+      "pronunciation": "เดอะ บอล อิส อิน ยัวร์ คอร์ท",
+      "meaning": "ถึงคราวคุณตัดสินใจ",
+      "example": "I've made my offer. The ball is in your court.",
+      "exampleTranslation": "ผมเสนอไปแล้ว ถึงคราวคุณตัดสินใจ"
+    },
+    {
+      "vocab": "on the same page",
+      "pronunciation": "ออน เดอะ เซม เพจ",
+      "meaning": "เข้าใจตรงกัน",
+      "example": "Make sure everyone is on the same page.",
+      "exampleTranslation": "ให้แน่ใจว่าทุกคนเข้าใจตรงกัน"
+    },
+    {
+      "vocab": "go the extra mile",
+      "pronunciation": "โก ดิ เอ็กซ์-ทรา ไมล์",
+      "meaning": "ทำมากกว่าที่คาดหวัง",
+      "example": "She always goes the extra mile.",
+      "exampleTranslation": "เธอทำมากกว่าที่คาดหวังเสมอ"
+    },
+    {
+      "vocab": "get the ball rolling",
+      "pronunciation": "เก็ท เดอะ บอล โรล-ลิง",
+      "meaning": "เริ่มต้น",
+      "example": "Let's get the ball rolling.",
+      "exampleTranslation": "มาเริ่มต้นกันเถอะ"
+    },
+    {
+      "vocab": "in a nutshell",
+      "pronunciation": "อิน อะ นัท-เชลล์",
+      "meaning": "สรุปสั้นๆ",
+      "example": "In a nutshell, we need more resources.",
+      "exampleTranslation": "สรุปสั้นๆ คือเราต้องการทรัพยากรมากขึ้น"
+    },
+    {
+      "vocab": "hit the nail on the head",
+      "pronunciation": "ฮิท เดอะ เนล ออน เดอะ เฮด",
+      "meaning": "พูดได้ตรงประเด็น",
+      "example": "You hit the nail on the head.",
+      "exampleTranslation": "คุณพูดได้ตรงประเด็น"
+    },
+    {
+      "vocab": "a blessing in disguise",
+      "pronunciation": "อะ เบลส-ซิง อิน ดิส-ไกส์",
+      "meaning": "สิ่งเลวร้ายที่กลายเป็นดี, โชคร้ายกลายเป็นดี",
+      "example": "Losing that job was a blessing in disguise.",
+      "exampleTranslation": "การตกงานนั้นกลับกลายเป็นเรื่องดี"
+    },
+    {
+      "vocab": "under the radar",
+      "pronunciation": "อัน-เดอะ เดอะ เร-ดาร์",
+      "meaning": "ไม่ถูกสังเกต",
+      "example": "The issue flew under the radar.",
+      "exampleTranslation": "ปัญหาไม่ถูกสังเกตเห็น"
+    },
+    {
+      "vocab": "a game changer",
+      "pronunciation": "อะ เกม เชน-เจอะ",
+      "meaning": "สิ่งที่เปลี่ยนเกม",
+      "example": "This technology is a game changer.",
+      "exampleTranslation": "เทคโนโลยีนี้เป็นสิ่งที่เปลี่ยนเกม"
+    },
+    {
+      "vocab": "the bottom line",
+      "pronunciation": "เดอะ บอท-ท่อม ไลน์",
+      "meaning": "สิ่งสำคัญที่สุด, ผลกำไรสุทธิ",
+      "example": "The bottom line is we need to act now.",
+      "exampleTranslation": "สิ่งสำคัญที่สุดคือเราต้องลงมือทำตอนนี้"
+    },
+    {
+      "vocab": "a win-win situation",
+      "pronunciation": "อะ วิน-วิน ซิท-ทิว-เอ-ชั่น",
+      "meaning": "สถานการณ์ที่ทุกฝ่ายได้ประโยชน์",
+      "example": "This deal is a win-win situation.",
+      "exampleTranslation": "ข้อตกลงนี้ทุกฝ่ายได้ประโยชน์"
+    },
+    {
+      "vocab": "food for thought",
+      "pronunciation": "ฟูด ฟอร์ ธอท",
+      "meaning": "สิ่งที่ควรคิด",
+      "example": "That's food for thought.",
+      "exampleTranslation": "นั่นเป็นสิ่งที่ควรคิด"
+    },
+    {
+      "vocab": "get to the bottom of",
+      "pronunciation": "เก็ท ทู เดอะ บอท-ท่อม ออฟ",
+      "meaning": "สืบหาความจริง",
+      "example": "We'll get to the bottom of this.",
+      "exampleTranslation": "เราจะสืบหาความจริงเรื่องนี้"
+    },
+    {
+      "vocab": "keep someone in the loop",
+      "pronunciation": "คีพ ซัม-วัน อิน เดอะ ลูพ",
+      "meaning": "แจ้งให้ทราบ",
+      "example": "Please keep me in the loop.",
+      "exampleTranslation": "กรุณาแจ้งให้ผมทราบด้วย"
+    },
+    {
+      "vocab": "touch base",
+      "pronunciation": "ทัช เบส",
+      "meaning": "ติดต่อสื่อสาร",
+      "example": "Let's touch base next week.",
+      "exampleTranslation": "มาติดต่อกันสัปดาห์หน้า"
+    },
+    {
+      "vocab": "drop the ball",
+      "pronunciation": "ดรอพ เดอะ บอล",
+      "meaning": "ทำพลาด, ทำผิดพลาด",
+      "example": "Sorry, I dropped the ball on this one.",
+      "exampleTranslation": "ขอโทษ ผมทำพลาดเรื่องนี้"
+    },
+    {
+      "vocab": "on thin ice",
+      "pronunciation": "ออน ธิน ไอซ์",
+      "meaning": "อยู่ในสถานการณ์อันตราย",
+      "example": "He's on thin ice with management.",
+      "exampleTranslation": "เขาอยู่ในสถานการณ์อันตรายกับผู้บริหาร"
+    },
+    {
+      "vocab": "a tall order",
+      "pronunciation": "อะ ทอลล์ ออร์-เดอะ",
+      "meaning": "สิ่งที่ทำได้ยาก",
+      "example": "That's a tall order.",
+      "exampleTranslation": "นั่นเป็นสิ่งที่ทำได้ยาก"
+    },
+    {
+      "vocab": "in the pipeline",
+      "pronunciation": "อิน เดอะ ไพพ์-ไลน์",
+      "meaning": "กำลังดำเนินการ",
+      "example": "Several projects are in the pipeline.",
+      "exampleTranslation": "หลายโครงการกำลังดำเนินการ"
+    },
+    {
+      "vocab": "up in the air",
+      "pronunciation": "อัพ อิน ดิ แอร์",
+      "meaning": "ยังไม่แน่นอน",
+      "example": "Plans are still up in the air.",
+      "exampleTranslation": "แผนยังไม่แน่นอน"
+    },
+    {
+      "vocab": "call it a day",
+      "pronunciation": "คอล อิท อะ เดย์",
+      "meaning": "เลิกงานวันนี้",
+      "example": "Let's call it a day.",
+      "exampleTranslation": "เลิกงานวันนี้กันเถอะ"
+    },
+    {
+      "vocab": "run out of steam",
+      "pronunciation": "รัน เอาท์ ออฟ สตีม",
+      "meaning": "หมดแรง, หมดพลัง",
+      "example": "The project ran out of steam.",
+      "exampleTranslation": "โครงการหมดพลัง"
+    },
+    {
+      "vocab": "throw in the towel",
+      "pronunciation": "โธรว์ อิน เดอะ ทาว-เอล",
+      "meaning": "ยอมแพ้",
+      "example": "Don't throw in the towel yet.",
+      "exampleTranslation": "อย่ายอมแพ้ตอนนี้"
+    },
+    {
+      "vocab": "pull the plug",
+      "pronunciation": "พูล เดอะ พลัก",
+      "meaning": "ยกเลิก, หยุด",
+      "example": "They pulled the plug on the project.",
+      "exampleTranslation": "พวกเขายกเลิกโครงการ"
+    },
+    {
+      "vocab": "take it with a grain of salt",
+      "pronunciation": "เทค อิท วิธ อะ เกรน ออฟ ซอลท์",
+      "meaning": "ไม่เชื่อทั้งหมด",
+      "example": "Take his advice with a grain of salt.",
+      "exampleTranslation": "อย่าเชื่อคำแนะนำของเขาทั้งหมด"
+    },
+    {
+      "vocab": "put all your eggs in one basket",
+      "pronunciation": "พุท ออล ยัวร์ เอ็กส์ อิน วัน บาส-เค็ท",
+      "meaning": "เอาหมดหน้าตักกับสิ่งเดียว",
+      "example": "Don't put all your eggs in one basket.",
+      "exampleTranslation": "อย่าเอาหมดหน้าตักกับสิ่งเดียว"
+    },
+    {
+      "vocab": "barking up the wrong tree",
+      "pronunciation": "บาร์ค-คิง อัพ เดอะ รอง ทรี",
+      "meaning": "เข้าใจผิด, หาผิดที่",
+      "example": "You're barking up the wrong tree.",
+      "exampleTranslation": "คุณเข้าใจผิดแล้ว"
+    },
+    {
+      "vocab": "the writing is on the wall",
+      "pronunciation": "เดอะ ไรท์-ทิง อิส ออน เดอะ วอลล์",
+      "meaning": "สัญญาณบอกเหตุชัดเจน",
+      "example": "The writing is on the wall for this company.",
+      "exampleTranslation": "สัญญาณบอกเหตุชัดเจนสำหรับบริษัทนี้"
+    },
+    {
+      "vocab": "between a rock and a hard place",
+      "pronunciation": "บิ-ทวีน อะ ร็อค แอนด์ อะ ฮาร์ด เพลส",
+      "meaning": "กลืนไม่เข้าคายไม่ออก",
+      "example": "I'm between a rock and a hard place.",
+      "exampleTranslation": "ฉันอยู่ในสถานการณ์กลืนไม่เข้าคายไม่ออก"
+    },
+    {
+      "vocab": "add fuel to the fire",
+      "pronunciation": "แอด ฟิวเอล ทู เดอะ ไฟร์",
+      "meaning": "ยิ่งเติมน้ำมันเข้ากองไฟ",
+      "example": "His comments added fuel to the fire.",
+      "exampleTranslation": "ความเห็นของเขายิ่งเติมน้ำมันเข้ากองไฟ"
+    }
+  ]
+}

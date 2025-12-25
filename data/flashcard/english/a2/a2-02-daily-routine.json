@@ -1,0 +1,403 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "A2 Daily Routine",
+    "description": "CEFR A2 Vocabulary - Daily Routine, Time, Activities",
+    "category": "CEFR A2",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": [
+      "english",
+      "A2",
+      "vocabulary"
+    ]
+  },
+  "cards": [
+    {
+      "vocab": "wake up",
+      "pronunciation": "เวค อัพ",
+      "meaning": "ตื่นนอน",
+      "example": "I wake up at 6 o'clock.",
+      "exampleTranslation": "ฉันตื่นนอนตอน 6 โมง"
+    },
+    {
+      "vocab": "get up",
+      "pronunciation": "เก็ท อัพ",
+      "meaning": "ลุกขึ้น",
+      "example": "I get up early every day.",
+      "exampleTranslation": "ฉันลุกขึ้นแต่เช้าทุกวัน"
+    },
+    {
+      "vocab": "take a shower",
+      "pronunciation": "เทค อะ ชาว-เวอร์",
+      "meaning": "อาบน้ำ",
+      "example": "I take a shower before breakfast.",
+      "exampleTranslation": "ฉันอาบน้ำก่อนกินข้าวเช้า"
+    },
+    {
+      "vocab": "brush teeth",
+      "pronunciation": "บรัช ทีธ",
+      "meaning": "แปรงฟัน",
+      "example": "You should brush your teeth twice a day.",
+      "exampleTranslation": "คุณควรแปรงฟันวันละสองครั้ง"
+    },
+    {
+      "vocab": "get dressed",
+      "pronunciation": "เก็ท เดรสท์",
+      "meaning": "แต่งตัว",
+      "example": "I get dressed quickly in the morning.",
+      "exampleTranslation": "ฉันแต่งตัวอย่างรวดเร็วตอนเช้า"
+    },
+    {
+      "vocab": "have breakfast",
+      "pronunciation": "แฮฟ เบรค-ฟาสท์",
+      "meaning": "กินข้าวเช้า",
+      "example": "I always have breakfast at home.",
+      "exampleTranslation": "ฉันกินข้าวเช้าที่บ้านเสมอ"
+    },
+    {
+      "vocab": "go to work",
+      "pronunciation": "โก ทู เวิร์ค",
+      "meaning": "ไปทำงาน",
+      "example": "I go to work by train.",
+      "exampleTranslation": "ฉันไปทำงานโดยรถไฟ"
+    },
+    {
+      "vocab": "leave home",
+      "pronunciation": "ลีฟ โฮม",
+      "meaning": "ออกจากบ้าน",
+      "example": "I leave home at 7:30.",
+      "exampleTranslation": "ฉันออกจากบ้านตอน 7:30"
+    },
+    {
+      "vocab": "arrive",
+      "pronunciation": "อะ-ไรฟ์",
+      "meaning": "มาถึง",
+      "example": "I arrive at the office at 9.",
+      "exampleTranslation": "ฉันถึงออฟฟิศตอน 9 โมง"
+    },
+    {
+      "vocab": "start work",
+      "pronunciation": "สตาร์ท เวิร์ค",
+      "meaning": "เริ่มงาน",
+      "example": "I start work at 9 o'clock.",
+      "exampleTranslation": "ฉันเริ่มงานตอน 9 โมง"
+    },
+    {
+      "vocab": "have lunch",
+      "pronunciation": "แฮฟ ลันช์",
+      "meaning": "กินข้าวกลางวัน",
+      "example": "I have lunch at noon.",
+      "exampleTranslation": "ฉันกินข้าวกลางวันตอนเที่ยง"
+    },
+    {
+      "vocab": "finish work",
+      "pronunciation": "ฟิน-นิช เวิร์ค",
+      "meaning": "เลิกงาน",
+      "example": "I finish work at 6 PM.",
+      "exampleTranslation": "ฉันเลิกงานตอน 6 โมงเย็น"
+    },
+    {
+      "vocab": "go home",
+      "pronunciation": "โก โฮม",
+      "meaning": "กลับบ้าน",
+      "example": "I go home after work.",
+      "exampleTranslation": "ฉันกลับบ้านหลังเลิกงาน"
+    },
+    {
+      "vocab": "have dinner",
+      "pronunciation": "แฮฟ ดิน-เนอร์",
+      "meaning": "กินข้าวเย็น",
+      "example": "We have dinner together every night.",
+      "exampleTranslation": "เรากินข้าวเย็นด้วยกันทุกคืน"
+    },
+    {
+      "vocab": "watch TV",
+      "pronunciation": "วอทช์ ทีวี",
+      "meaning": "ดูทีวี",
+      "example": "I watch TV after dinner.",
+      "exampleTranslation": "ฉันดูทีวีหลังกินข้าวเย็น"
+    },
+    {
+      "vocab": "go to bed",
+      "pronunciation": "โก ทู เบด",
+      "meaning": "เข้านอน",
+      "example": "I go to bed at 11 PM.",
+      "exampleTranslation": "ฉันเข้านอนตอน 5 ทุ่ม"
+    },
+    {
+      "vocab": "fall asleep",
+      "pronunciation": "ฟอลล์ อะ-สลีพ",
+      "meaning": "หลับไป",
+      "example": "I fall asleep quickly.",
+      "exampleTranslation": "ฉันหลับไปอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "sleep",
+      "pronunciation": "สลีพ",
+      "meaning": "นอนหลับ",
+      "example": "I sleep for 8 hours every night.",
+      "exampleTranslation": "ฉันนอนหลับ 8 ชั่วโมงทุกคืน"
+    },
+    {
+      "vocab": "morning",
+      "pronunciation": "มอร์-นิ่ง",
+      "meaning": "ตอนเช้า",
+      "example": "I exercise in the morning.",
+      "exampleTranslation": "ฉันออกกำลังกายตอนเช้า"
+    },
+    {
+      "vocab": "afternoon",
+      "pronunciation": "อาฟ-เทอร์-นูน",
+      "meaning": "ตอนบ่าย",
+      "example": "I have a meeting this afternoon.",
+      "exampleTranslation": "ฉันมีประชุมบ่ายนี้"
+    },
+    {
+      "vocab": "evening",
+      "pronunciation": "อีฟ-นิ่ง",
+      "meaning": "ตอนเย็น",
+      "example": "I relax in the evening.",
+      "exampleTranslation": "ฉันพักผ่อนตอนเย็น"
+    },
+    {
+      "vocab": "night",
+      "pronunciation": "ไนท์",
+      "meaning": "ตอนกลางคืน",
+      "example": "I study at night.",
+      "exampleTranslation": "ฉันเรียนตอนกลางคืน"
+    },
+    {
+      "vocab": "midnight",
+      "pronunciation": "มิด-ไนท์",
+      "meaning": "เที่ยงคืน",
+      "example": "I sometimes work until midnight.",
+      "exampleTranslation": "บางครั้งฉันทำงานถึงเที่ยงคืน"
+    },
+    {
+      "vocab": "noon",
+      "pronunciation": "นูน",
+      "meaning": "เที่ยงวัน",
+      "example": "Let's meet at noon.",
+      "exampleTranslation": "เจอกันตอนเที่ยงนะ"
+    },
+    {
+      "vocab": "early",
+      "pronunciation": "เออร์-ลี่",
+      "meaning": "เช้า, แต่เช้า",
+      "example": "I wake up early.",
+      "exampleTranslation": "ฉันตื่นแต่เช้า"
+    },
+    {
+      "vocab": "late",
+      "pronunciation": "เลท",
+      "meaning": "สาย, ดึก",
+      "example": "I'm sorry I'm late.",
+      "exampleTranslation": "ขอโทษที่มาสาย"
+    },
+    {
+      "vocab": "on time",
+      "pronunciation": "ออน ไทม์",
+      "meaning": "ตรงเวลา",
+      "example": "The train arrived on time.",
+      "exampleTranslation": "รถไฟมาถึงตรงเวลา"
+    },
+    {
+      "vocab": "usually",
+      "pronunciation": "ยู-ชวล-ลี่",
+      "meaning": "โดยปกติ",
+      "example": "I usually have coffee in the morning.",
+      "exampleTranslation": "ปกติฉันดื่มกาแฟตอนเช้า"
+    },
+    {
+      "vocab": "always",
+      "pronunciation": "ออล-เวย์ส",
+      "meaning": "เสมอ",
+      "example": "I always brush my teeth before bed.",
+      "exampleTranslation": "ฉันแปรงฟันก่อนนอนเสมอ"
+    },
+    {
+      "vocab": "sometimes",
+      "pronunciation": "ซัม-ไทม์ส",
+      "meaning": "บางครั้ง",
+      "example": "I sometimes skip breakfast.",
+      "exampleTranslation": "บางครั้งฉันไม่กินข้าวเช้า"
+    },
+    {
+      "vocab": "never",
+      "pronunciation": "เนฟ-เวอร์",
+      "meaning": "ไม่เคย",
+      "example": "I never drink coffee at night.",
+      "exampleTranslation": "ฉันไม่เคยดื่มกาแฟตอนกลางคืน"
+    },
+    {
+      "vocab": "often",
+      "pronunciation": "ออฟ-เทิน",
+      "meaning": "บ่อยๆ",
+      "example": "I often go to the gym.",
+      "exampleTranslation": "ฉันไปยิมบ่อยๆ"
+    },
+    {
+      "vocab": "rarely",
+      "pronunciation": "แรร์-ลี่",
+      "meaning": "นานๆ ครั้ง",
+      "example": "I rarely eat fast food.",
+      "exampleTranslation": "ฉันนานๆ ครั้งถึงกินฟาสต์ฟู้ด"
+    },
+    {
+      "vocab": "every day",
+      "pronunciation": "เอฟ-วรี่ เดย์",
+      "meaning": "ทุกวัน",
+      "example": "I exercise every day.",
+      "exampleTranslation": "ฉันออกกำลังกายทุกวัน"
+    },
+    {
+      "vocab": "once a week",
+      "pronunciation": "วันซ์ อะ วีค",
+      "meaning": "สัปดาห์ละครั้ง",
+      "example": "I clean my room once a week.",
+      "exampleTranslation": "ฉันทำความสะอาดห้องสัปดาห์ละครั้ง"
+    },
+    {
+      "vocab": "twice a day",
+      "pronunciation": "ทไวซ์ อะ เดย์",
+      "meaning": "วันละสองครั้ง",
+      "example": "Take this medicine twice a day.",
+      "exampleTranslation": "กินยานี้วันละสองครั้ง"
+    },
+    {
+      "vocab": "cook",
+      "pronunciation": "คุค",
+      "meaning": "ทำอาหาร",
+      "example": "I cook dinner every evening.",
+      "exampleTranslation": "ฉันทำอาหารเย็นทุกเย็น"
+    },
+    {
+      "vocab": "clean",
+      "pronunciation": "คลีน",
+      "meaning": "ทำความสะอาด",
+      "example": "I clean my apartment on weekends.",
+      "exampleTranslation": "ฉันทำความสะอาดอพาร์ทเมนต์ในวันหยุด"
+    },
+    {
+      "vocab": "wash",
+      "pronunciation": "วอช",
+      "meaning": "ซัก, ล้าง",
+      "example": "I wash the dishes after dinner.",
+      "exampleTranslation": "ฉันล้างจานหลังกินข้าวเย็น"
+    },
+    {
+      "vocab": "do laundry",
+      "pronunciation": "ดู ลอน-ดรี้",
+      "meaning": "ซักผ้า",
+      "example": "I do laundry every Sunday.",
+      "exampleTranslation": "ฉันซักผ้าทุกวันอาทิตย์"
+    },
+    {
+      "vocab": "iron",
+      "pronunciation": "ไอ-อ้อน",
+      "meaning": "รีดผ้า",
+      "example": "I need to iron my shirt.",
+      "exampleTranslation": "ฉันต้องรีดเสื้อ"
+    },
+    {
+      "vocab": "tidy up",
+      "pronunciation": "ไท-ดี้ อัพ",
+      "meaning": "จัดระเบียบ",
+      "example": "Please tidy up your room.",
+      "exampleTranslation": "กรุณาจัดระเบียบห้องของคุณ"
+    },
+    {
+      "vocab": "make the bed",
+      "pronunciation": "เมค เดอะ เบด",
+      "meaning": "เก็บที่นอน",
+      "example": "I make the bed every morning.",
+      "exampleTranslation": "ฉันเก็บที่นอนทุกเช้า"
+    },
+    {
+      "vocab": "take out the trash",
+      "pronunciation": "เทค เอาท์ เดอะ แทรช",
+      "meaning": "เอาขยะไปทิ้ง",
+      "example": "Can you take out the trash?",
+      "exampleTranslation": "เอาขยะไปทิ้งได้ไหม?"
+    },
+    {
+      "vocab": "feed",
+      "pronunciation": "ฟีด",
+      "meaning": "ให้อาหาร",
+      "example": "I feed my cat twice a day.",
+      "exampleTranslation": "ฉันให้อาหารแมววันละสองครั้ง"
+    },
+    {
+      "vocab": "water the plants",
+      "pronunciation": "วอ-เทอร์ เดอะ แพลนท์ส",
+      "meaning": "รดน้ำต้นไม้",
+      "example": "Don't forget to water the plants.",
+      "exampleTranslation": "อย่าลืมรดน้ำต้นไม้"
+    },
+    {
+      "vocab": "check",
+      "pronunciation": "เช็ค",
+      "meaning": "ตรวจสอบ",
+      "example": "I check my email every morning.",
+      "exampleTranslation": "ฉันเช็คอีเมลทุกเช้า"
+    },
+    {
+      "vocab": "rest",
+      "pronunciation": "เรสท์",
+      "meaning": "พักผ่อน",
+      "example": "I need to rest after work.",
+      "exampleTranslation": "ฉันต้องพักผ่อนหลังเลิกงาน"
+    },
+    {
+      "vocab": "relax",
+      "pronunciation": "รี-แลกซ์",
+      "meaning": "ผ่อนคลาย",
+      "example": "I like to relax on weekends.",
+      "exampleTranslation": "ฉันชอบผ่อนคลายในวันหยุด"
+    },
+    {
+      "vocab": "spend time",
+      "pronunciation": "สเปนด์ ไทม์",
+      "meaning": "ใช้เวลา",
+      "example": "I spend time with my family.",
+      "exampleTranslation": "ฉันใช้เวลากับครอบครัว"
+    },
+    {
+      "vocab": "busy",
+      "pronunciation": "บิ-ซี่",
+      "meaning": "ยุ่ง",
+      "example": "I'm very busy today.",
+      "exampleTranslation": "วันนี้ฉันยุ่งมาก"
+    },
+    {
+      "vocab": "free",
+      "pronunciation": "ฟรี",
+      "meaning": "ว่าง",
+      "example": "Are you free tomorrow?",
+      "exampleTranslation": "พรุ่งนี้คุณว่างไหม?"
+    },
+    {
+      "vocab": "hurry",
+      "pronunciation": "เฮอร์-รี่",
+      "meaning": "รีบ",
+      "example": "Hurry up! We're late.",
+      "exampleTranslation": "รีบหน่อย! เราสายแล้ว"
+    },
+    {
+      "vocab": "routine",
+      "pronunciation": "รู-ทีน",
+      "meaning": "กิจวัตร",
+      "example": "What's your daily routine?",
+      "exampleTranslation": "กิจวัตรประจำวันของคุณคืออะไร?"
+    },
+    {
+      "vocab": "schedule",
+      "pronunciation": "สเค-ดูล",
+      "meaning": "ตารางเวลา",
+      "example": "My schedule is very tight.",
+      "exampleTranslation": "ตารางเวลาของฉันแน่นมาก"
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Philosophy & Ethics",
+    "description": "C1 level vocabulary for philosophical and ethical discussions",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "philosophy", "ethics"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "existentialism",
+      "pronunciation": "เอ็ก-ซิส-เทน-เชียล-ลิ-ซึม",
+      "meaning": "อัตถิภาวนิยม",
+      "example": "Existentialism emphasizes individual freedom.",
+      "exampleTranslation": "อัตถิภาวนิยมเน้นเสรีภาพส่วนบุคคล"
+    },
+    {
+      "vocab": "nihilism",
+      "pronunciation": "ไน-ฮิ-ลิ-ซึม",
+      "meaning": "สุญนิยม, การปฏิเสธคุณค่าทั้งหมด",
+      "example": "Nihilism rejects all moral principles.",
+      "exampleTranslation": "สุญนิยมปฏิเสธหลักศีลธรรมทั้งหมด"
+    },
+    {
+      "vocab": "utilitarianism",
+      "pronunciation": "ยู-ทิล-ลิ-แท-เรียน-นิ-ซึม",
+      "meaning": "ประโยชน์นิยม",
+      "example": "Utilitarianism seeks the greatest good for the greatest number.",
+      "exampleTranslation": "ประโยชน์นิยมแสวงหาความดีสูงสุดสำหรับคนจำนวนมากที่สุด"
+    },
+    {
+      "vocab": "deontology",
+      "pronunciation": "ดี-ออน-ทอล-โล-จี",
+      "meaning": "จริยศาสตร์หน้าที่",
+      "example": "Deontology focuses on duty and rules.",
+      "exampleTranslation": "จริยศาสตร์หน้าที่เน้นหน้าที่และกฎเกณฑ์"
+    },
+    {
+      "vocab": "virtue ethics",
+      "pronunciation": "เวอร์-ชู เอธ-ทิคส์",
+      "meaning": "จริยศาสตร์คุณธรรม",
+      "example": "Virtue ethics emphasizes character development.",
+      "exampleTranslation": "จริยศาสตร์คุณธรรมเน้นการพัฒนาอุปนิสัย"
+    },
+    {
+      "vocab": "relativism",
+      "pronunciation": "เร-ละ-ทิ-วิ-ซึม",
+      "meaning": "สัมพัทธนิยม",
+      "example": "Moral relativism denies universal ethics.",
+      "exampleTranslation": "สัมพัทธนิยมทางศีลธรรมปฏิเสธจริยธรรมสากล"
+    },
+    {
+      "vocab": "absolutism",
+      "pronunciation": "แอบ-โซ-ลู-ทิ-ซึม",
+      "meaning": "สัมบูรณนิยม",
+      "example": "Moral absolutism holds that some acts are always wrong.",
+      "exampleTranslation": "สัมบูรณนิยมทางศีลธรรมถือว่าบางการกระทำผิดเสมอ"
+    },
+    {
+      "vocab": "determinism",
+      "pronunciation": "ดิ-เทอร์-มิ-นิ-ซึม",
+      "meaning": "นิยตินิยม, กำหนดนิยม",
+      "example": "Determinism questions free will.",
+      "exampleTranslation": "นิยตินิยมตั้งคำถามต่อเจตจำนงเสรี"
+    },
+    {
+      "vocab": "free will",
+      "pronunciation": "ฟรี วิล",
+      "meaning": "เจตจำนงเสรี",
+      "example": "Do we truly have free will?",
+      "exampleTranslation": "เรามีเจตจำนงเสรีอย่างแท้จริงหรือไม่?"
+    },
+    {
+      "vocab": "consciousness",
+      "pronunciation": "คอน-เชียส-เนส",
+      "meaning": "จิตสำนึก, การรับรู้",
+      "example": "The nature of consciousness remains mysterious.",
+      "exampleTranslation": "ธรรมชาติของจิตสำนึกยังคงเป็นปริศนา"
+    },
+    {
+      "vocab": "sentience",
+      "pronunciation": "เซน-เชียนซ์",
+      "meaning": "ความรู้สึกนึกคิด",
+      "example": "Animal sentience is now recognized.",
+      "exampleTranslation": "ความรู้สึกนึกคิดของสัตว์ได้รับการยอมรับแล้ว"
+    },
+    {
+      "vocab": "autonomy",
+      "pronunciation": "ออ-ทอน-โน-มี",
+      "meaning": "ความเป็นอิสระ, การปกครองตนเอง",
+      "example": "Respect patient autonomy.",
+      "exampleTranslation": "เคารพความเป็นอิสระของผู้ป่วย"
+    },
+    {
+      "vocab": "altruism",
+      "pronunciation": "แอล-ทรู-อิ-ซึม",
+      "meaning": "การเห็นแก่ผู้อื่น",
+      "example": "True altruism expects nothing in return.",
+      "exampleTranslation": "การเห็นแก่ผู้อื่นที่แท้จริงไม่คาดหวังสิ่งตอบแทน"
+    },
+    {
+      "vocab": "egoism",
+      "pronunciation": "อี-โก-อิ-ซึม",
+      "meaning": "การเห็นแก่ตัว, อัตตานิยม",
+      "example": "Ethical egoism prioritizes self-interest.",
+      "exampleTranslation": "อัตตานิยมทางจริยธรรมให้ความสำคัญกับผลประโยชน์ส่วนตัว"
+    },
+    {
+      "vocab": "hedonism",
+      "pronunciation": "ฮี-โด-นิ-ซึม",
+      "meaning": "สุขนิยม",
+      "example": "Hedonism pursues pleasure as the highest good.",
+      "exampleTranslation": "สุขนิยมแสวงหาความสุขเป็นความดีสูงสุด"
+    },
+    {
+      "vocab": "stoicism",
+      "pronunciation": "สโต-อิ-ซึม",
+      "meaning": "สโตอิก, ความอดทนต่อทุกข์",
+      "example": "Stoicism teaches emotional resilience.",
+      "exampleTranslation": "ปรัชญาสโตอิกสอนความยืดหยุ่นทางอารมณ์"
+    },
+    {
+      "vocab": "pragmatism",
+      "pronunciation": "แพร็ก-มะ-ทิ-ซึม",
+      "meaning": "ปฏิบัตินิยม",
+      "example": "Pragmatism values practical outcomes.",
+      "exampleTranslation": "ปฏิบัตินิยมให้คุณค่ากับผลลัพธ์ที่ใช้ได้จริง"
+    },
+    {
+      "vocab": "empiricism",
+      "pronunciation": "เอ็ม-พิ-ริ-ซิ-ซึม",
+      "meaning": "ประสบการณ์นิยม",
+      "example": "Empiricism bases knowledge on experience.",
+      "exampleTranslation": "ประสบการณ์นิยมวางความรู้บนประสบการณ์"
+    },
+    {
+      "vocab": "rationalism",
+      "pronunciation": "แรช-ชั่น-นัล-ลิ-ซึม",
+      "meaning": "เหตุผลนิยม",
+      "example": "Rationalism trusts reason over experience.",
+      "exampleTranslation": "เหตุผลนิยมเชื่อมั่นในเหตุผลมากกว่าประสบการณ์"
+    },
+    {
+      "vocab": "skepticism",
+      "pronunciation": "สเค็พ-ทิ-ซิ-ซึม",
+      "meaning": "ความสงสัยนิยม",
+      "example": "Healthy skepticism is valuable.",
+      "exampleTranslation": "ความสงสัยที่เหมาะสมมีคุณค่า"
+    },
+    {
+      "vocab": "dogmatism",
+      "pronunciation": "ดอก-มะ-ทิ-ซึม",
+      "meaning": "การยึดมั่นในความเชื่อโดยไม่มีหลักฐาน",
+      "example": "Avoid dogmatism in discussions.",
+      "exampleTranslation": "หลีกเลี่ยงการยึดมั่นในความเชื่อโดยไม่มีหลักฐานในการอภิปราย"
+    },
+    {
+      "vocab": "dialectic",
+      "pronunciation": "ได-อะ-เล็ค-ทิค",
+      "meaning": "วิภาษวิธี",
+      "example": "Hegel's dialectic method is influential.",
+      "exampleTranslation": "วิภาษวิธีของเฮเกลมีอิทธิพล"
+    },
+    {
+      "vocab": "syllogism",
+      "pronunciation": "ซิล-โล-จิ-ซึม",
+      "meaning": "ตรรกบท, การอ้างเหตุผลแบบนิรนัย",
+      "example": "A classic syllogism: All men are mortal.",
+      "exampleTranslation": "ตรรกบทคลาสสิก: มนุษย์ทุกคนต้องตาย"
+    },
+    {
+      "vocab": "fallacy",
+      "pronunciation": "แฟล-ละ-ซี",
+      "meaning": "ความเข้าใจผิด, เหตุผลวิบัติ",
+      "example": "This argument contains a logical fallacy.",
+      "exampleTranslation": "ข้อโต้แย้งนี้มีเหตุผลวิบัติ"
+    },
+    {
+      "vocab": "tautology",
+      "pronunciation": "ทอ-ทอล-โล-จี",
+      "meaning": "การซ้ำความ, ซ้ำซาก",
+      "example": "That's just a tautology.",
+      "exampleTranslation": "นั่นเป็นเพียงการซ้ำความ"
+    },
+    {
+      "vocab": "paradox",
+      "pronunciation": "พา-รา-ด็อกซ์",
+      "meaning": "ปฏิทรรศน์, ความขัดแย้งในตัว",
+      "example": "Zeno's paradox challenges our understanding of motion.",
+      "exampleTranslation": "ปฏิทรรศน์ของซีโนท้าทายความเข้าใจของเราเกี่ยวกับการเคลื่อนที่"
+    },
+    {
+      "vocab": "metaphysics",
+      "pronunciation": "เม-ทะ-ฟิ-ซิคส์",
+      "meaning": "อภิปรัชญา",
+      "example": "Metaphysics explores the nature of reality.",
+      "exampleTranslation": "อภิปรัชญาสำรวจธรรมชาติของความเป็นจริง"
+    },
+    {
+      "vocab": "transcendence",
+      "pronunciation": "แทรน-เซน-เดินซ์",
+      "meaning": "การอยู่เหนือ, ความเหนือโลก",
+      "example": "The concept of transcendence in religion.",
+      "exampleTranslation": "แนวคิดเรื่องความเหนือโลกในศาสนา"
+    },
+    {
+      "vocab": "immanence",
+      "pronunciation": "อิม-มะ-เนินซ์",
+      "meaning": "การอยู่ภายใน, ความแนบสนิท",
+      "example": "Immanence vs. transcendence in theology.",
+      "exampleTranslation": "ความแนบสนิทเทียบกับความเหนือโลกในเทววิทยา"
+    },
+    {
+      "vocab": "dualism",
+      "pronunciation": "ดิว-อะ-ลิ-ซึม",
+      "meaning": "ทวินิยม",
+      "example": "Mind-body dualism is debated.",
+      "exampleTranslation": "ทวินิยมจิต-กายยังเป็นที่ถกเถียง"
+    },
+    {
+      "vocab": "monism",
+      "pronunciation": "โม-นิ-ซึม",
+      "meaning": "เอกนิยม",
+      "example": "Monism holds that reality is one substance.",
+      "exampleTranslation": "เอกนิยมถือว่าความเป็นจริงคือสสารเดียว"
+    },
+    {
+      "vocab": "solipsism",
+      "pronunciation": "ซอ-ลิพ-ซิ-ซึม",
+      "meaning": "ตัวตนนิยม",
+      "example": "Solipsism claims only one's mind is certain.",
+      "exampleTranslation": "ตัวตนนิยมอ้างว่าจิตของตนเท่านั้นที่แน่นอน"
+    },
+    {
+      "vocab": "phenomenology",
+      "pronunciation": "ฟี-นอม-มิ-นอล-โล-จี",
+      "meaning": "ปรากฏการณ์วิทยา",
+      "example": "Phenomenology studies conscious experience.",
+      "exampleTranslation": "ปรากฏการณ์วิทยาศึกษาประสบการณ์ทางจิตสำนึก"
+    },
+    {
+      "vocab": "categorical imperative",
+      "pronunciation": "แคท-ทิ-กอ-ริ-คัล อิม-เพ-ระ-ทีฟ",
+      "meaning": "คำสั่งเด็ดขาด (ของคานท์)",
+      "example": "Kant's categorical imperative guides moral action.",
+      "exampleTranslation": "คำสั่งเด็ดขาดของคานท์ชี้นำการกระทำทางศีลธรรม"
+    },
+    {
+      "vocab": "social contract",
+      "pronunciation": "โซ-เชียล คอน-แทร็คท์",
+      "meaning": "สัญญาประชาคม",
+      "example": "The social contract theory explains government.",
+      "exampleTranslation": "ทฤษฎีสัญญาประชาคมอธิบายรัฐบาล"
+    },
+    {
+      "vocab": "veil of ignorance",
+      "pronunciation": "เวล ออฟ อิก-โน-เรินซ์",
+      "meaning": "ม่านแห่งความไม่รู้ (ของรอลส์)",
+      "example": "Rawls' veil of ignorance promotes fairness.",
+      "exampleTranslation": "ม่านแห่งความไม่รู้ของรอลส์ส่งเสริมความเป็นธรรม"
+    },
+    {
+      "vocab": "moral dilemma",
+      "pronunciation": "มอ-รัล ได-เล็ม-มา",
+      "meaning": "ภาวะกลืนไม่เข้าคายไม่ออกทางศีลธรรม",
+      "example": "The trolley problem is a famous moral dilemma.",
+      "exampleTranslation": "ปัญหารถรางเป็นภาวะกลืนไม่เข้าคายไม่ออกทางศีลธรรมที่มีชื่อเสียง"
+    },
+    {
+      "vocab": "cognitive dissonance",
+      "pronunciation": "คอก-นิ-ทีฟ ดิส-โซ-แนนซ์",
+      "meaning": "ความไม่ลงรอยกันทางความคิด",
+      "example": "Cognitive dissonance causes psychological discomfort.",
+      "exampleTranslation": "ความไม่ลงรอยกันทางความคิดทำให้เกิดความไม่สบายใจทางจิตวิทยา"
+    },
+    {
+      "vocab": "intrinsic value",
+      "pronunciation": "อิน-ทริน-ซิค แวล-ลิว",
+      "meaning": "คุณค่าในตัวเอง",
+      "example": "Nature has intrinsic value.",
+      "exampleTranslation": "ธรรมชาติมีคุณค่าในตัวเอง"
+    },
+    {
+      "vocab": "instrumental value",
+      "pronunciation": "อิน-สทรู-เมน-ทัล แวล-ลิว",
+      "meaning": "คุณค่าเป็นเครื่องมือ",
+      "example": "Money has instrumental value.",
+      "exampleTranslation": "เงินมีคุณค่าเป็นเครื่องมือ"
+    },
+    {
+      "vocab": "consequentialism",
+      "pronunciation": "คอน-ซิ-ควน-เชียล-ลิ-ซึม",
+      "meaning": "ผลลัพธ์นิยม",
+      "example": "Consequentialism judges actions by outcomes.",
+      "exampleTranslation": "ผลลัพธ์นิยมตัดสินการกระทำด้วยผลลัพธ์"
+    },
+    {
+      "vocab": "moral agency",
+      "pronunciation": "มอ-รัล เอ-เจน-ซี",
+      "meaning": "ตัวแทนทางศีลธรรม",
+      "example": "AI raises questions about moral agency.",
+      "exampleTranslation": "AI ตั้งคำถามเกี่ยวกับตัวแทนทางศีลธรรม"
+    },
+    {
+      "vocab": "bioethics",
+      "pronunciation": "ไบ-โอ-เอธ-ทิคส์",
+      "meaning": "จริยธรรมชีวภาพ",
+      "example": "Bioethics addresses medical dilemmas.",
+      "exampleTranslation": "จริยธรรมชีวภาพกล่าวถึงภาวะกลืนไม่เข้าคายไม่ออกทางการแพทย์"
+    },
+    {
+      "vocab": "euthanasia",
+      "pronunciation": "ยู-ธะ-เน-เซีย",
+      "meaning": "การุณยฆาต",
+      "example": "Euthanasia is legally debated worldwide.",
+      "exampleTranslation": "การุณยฆาตเป็นที่ถกเถียงทางกฎหมายทั่วโลก"
+    },
+    {
+      "vocab": "informed consent",
+      "pronunciation": "อิน-ฟอร์มด คอน-เซ็นท์",
+      "meaning": "ความยินยอมที่มีข้อมูลครบถ้วน",
+      "example": "Informed consent is ethically required.",
+      "exampleTranslation": "ความยินยอมที่มีข้อมูลครบถ้วนเป็นสิ่งจำเป็นทางจริยธรรม"
+    },
+    {
+      "vocab": "posthumanism",
+      "pronunciation": "โพสท์-ฮิว-มะ-นิ-ซึม",
+      "meaning": "หลังมนุษยนิยม",
+      "example": "Posthumanism explores human-technology merger.",
+      "exampleTranslation": "หลังมนุษยนิยมสำรวจการรวมกันของมนุษย์กับเทคโนโลยี"
+    },
+    {
+      "vocab": "anthropocentrism",
+      "pronunciation": "แอน-โธร-โพ-เซ็น-ทริ-ซึม",
+      "meaning": "มนุษย์เป็นศูนย์กลาง",
+      "example": "Anthropocentrism is criticized by environmentalists.",
+      "exampleTranslation": "แนวคิดมนุษย์เป็นศูนย์กลางถูกวิจารณ์โดยนักสิ่งแวดล้อม"
+    },
+    {
+      "vocab": "ecocentrism",
+      "pronunciation": "อี-โค-เซ็น-ทริ-ซึม",
+      "meaning": "ระบบนิเวศเป็นศูนย์กลาง",
+      "example": "Ecocentrism values all life forms equally.",
+      "exampleTranslation": "แนวคิดระบบนิเวศเป็นศูนย์กลางให้คุณค่าสิ่งมีชีวิตทุกรูปแบบเท่าเทียมกัน"
+    },
+    {
+      "vocab": "epistemic",
+      "pronunciation": "เอพ-พิส-เท-มิค",
+      "meaning": "เกี่ยวกับความรู้, ญาณวิทยา",
+      "example": "Address epistemic uncertainty.",
+      "exampleTranslation": "จัดการกับความไม่แน่นอนทางญาณวิทยา"
+    },
+    {
+      "vocab": "ontological",
+      "pronunciation": "ออน-โท-ลอ-จิ-คัล",
+      "meaning": "เกี่ยวกับภววิทยา",
+      "example": "Consider the ontological implications.",
+      "exampleTranslation": "พิจารณานัยทางภววิทยา"
+    },
+    {
+      "vocab": "teleological",
+      "pronunciation": "เท-ลี-โอ-ลอ-จิ-คัล",
+      "meaning": "เกี่ยวกับเป้าหมายหรือจุดมุ่งหมาย",
+      "example": "A teleological argument for God's existence.",
+      "exampleTranslation": "ข้อโต้แย้งเชิงเป้าหมายสำหรับการดำรงอยู่ของพระเจ้า"
+    },
+    {
+      "vocab": "deductive",
+      "pronunciation": "ดิ-ดัค-ทีฟ",
+      "meaning": "แบบนิรนัย",
+      "example": "Use deductive reasoning.",
+      "exampleTranslation": "ใช้การให้เหตุผลแบบนิรนัย"
+    },
+    {
+      "vocab": "inductive",
+      "pronunciation": "อิน-ดัค-ทีฟ",
+      "meaning": "แบบอุปนัย",
+      "example": "Inductive reasoning generalizes from examples.",
+      "exampleTranslation": "การให้เหตุผลแบบอุปนัยสรุปจากตัวอย่าง"
+    },
+    {
+      "vocab": "abductive",
+      "pronunciation": "แอบ-ดัค-ทีฟ",
+      "meaning": "แบบสันนิษฐาน",
+      "example": "Abductive reasoning seeks the best explanation.",
+      "exampleTranslation": "การให้เหตุผลแบบสันนิษฐานแสวงหาคำอธิบายที่ดีที่สุด"
+    },
+    {
+      "vocab": "axiology",
+      "pronunciation": "แอค-ซี-ออล-โล-จี",
+      "meaning": "คุณวิทยา, ปรัชญาว่าด้วยคุณค่า",
+      "example": "Axiology studies values and value judgments.",
+      "exampleTranslation": "คุณวิทยาศึกษาคุณค่าและการตัดสินคุณค่า"
+    }
+  ]
+}

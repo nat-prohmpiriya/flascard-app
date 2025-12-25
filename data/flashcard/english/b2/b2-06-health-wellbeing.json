@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Health & Well-being",
+    "description": "B2 level vocabulary for health and well-being topics",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "well-being",
+      "pronunciation": "เวล-บี-อิง",
+      "meaning": "ความเป็นอยู่ที่ดี",
+      "example": "Focus on your mental well-being.",
+      "exampleTranslation": "ให้ความสำคัญกับความเป็นอยู่ที่ดีทางจิตใจ"
+    },
+    {
+      "vocab": "holistic",
+      "pronunciation": "โฮ-ลิส-ทิค",
+      "meaning": "แบบองค์รวม",
+      "example": "Take a holistic approach to health.",
+      "exampleTranslation": "ใช้แนวทางแบบองค์รวมในเรื่องสุขภาพ"
+    },
+    {
+      "vocab": "preventive",
+      "pronunciation": "พรี-เวน-ทิฟ",
+      "meaning": "เชิงป้องกัน",
+      "example": "Preventive care reduces illness.",
+      "exampleTranslation": "การดูแลเชิงป้องกันลดการเจ็บป่วย"
+    },
+    {
+      "vocab": "chronic",
+      "pronunciation": "ครอน-นิค",
+      "meaning": "เรื้อรัง",
+      "example": "He has chronic back pain.",
+      "exampleTranslation": "เขามีอาการปวดหลังเรื้อรัง"
+    },
+    {
+      "vocab": "acute",
+      "pronunciation": "อะ-คิวท์",
+      "meaning": "เฉียบพลัน, รุนแรง",
+      "example": "She had acute appendicitis.",
+      "exampleTranslation": "เธอเป็นไส้ติ่งอักเสบเฉียบพลัน"
+    },
+    {
+      "vocab": "diagnosis",
+      "pronunciation": "ได-แอก-โน-ซิส",
+      "meaning": "การวินิจฉัย",
+      "example": "The diagnosis was confirmed.",
+      "exampleTranslation": "การวินิจฉัยได้รับการยืนยัน"
+    },
+    {
+      "vocab": "prognosis",
+      "pronunciation": "พรอก-โน-ซิส",
+      "meaning": "การพยากรณ์โรค",
+      "example": "The prognosis is positive.",
+      "exampleTranslation": "การพยากรณ์โรคเป็นไปในทางที่ดี"
+    },
+    {
+      "vocab": "symptom",
+      "pronunciation": "ซิม-ทอม",
+      "meaning": "อาการ",
+      "example": "What are your symptoms?",
+      "exampleTranslation": "คุณมีอาการอะไรบ้าง?"
+    },
+    {
+      "vocab": "syndrome",
+      "pronunciation": "ซิน-โดรม",
+      "meaning": "กลุ่มอาการ",
+      "example": "Chronic fatigue syndrome affects many.",
+      "exampleTranslation": "กลุ่มอาการอ่อนเพลียเรื้อรังส่งผลกระทบต่อหลายคน"
+    },
+    {
+      "vocab": "disorder",
+      "pronunciation": "ดิส-ออร์-เดอะ",
+      "meaning": "ความผิดปกติ",
+      "example": "Eating disorders require treatment.",
+      "exampleTranslation": "ความผิดปกติในการกินต้องการการรักษา"
+    },
+    {
+      "vocab": "therapy",
+      "pronunciation": "เธ-รา-พี",
+      "meaning": "การบำบัด",
+      "example": "Physical therapy helped her recover.",
+      "exampleTranslation": "กายภาพบำบัดช่วยให้เธอฟื้นตัว"
+    },
+    {
+      "vocab": "rehabilitation",
+      "pronunciation": "รี-ฮะ-บิ-ลิ-เท-ชั่น",
+      "meaning": "การฟื้นฟูสมรรถภาพ",
+      "example": "He's in rehabilitation after surgery.",
+      "exampleTranslation": "เขาอยู่ระหว่างการฟื้นฟูสมรรถภาพหลังผ่าตัด"
+    },
+    {
+      "vocab": "dosage",
+      "pronunciation": "โด-เสจ",
+      "meaning": "ขนาดยา",
+      "example": "Follow the correct dosage.",
+      "exampleTranslation": "ปฏิบัติตามขนาดยาที่ถูกต้อง"
+    },
+    {
+      "vocab": "side effect",
+      "pronunciation": "ไซด์ อิ-เฟ็คท์",
+      "meaning": "ผลข้างเคียง",
+      "example": "This medication has few side effects.",
+      "exampleTranslation": "ยานี้มีผลข้างเคียงน้อย"
+    },
+    {
+      "vocab": "immune",
+      "pronunciation": "อิม-มิวน",
+      "meaning": "ภูมิคุ้มกัน",
+      "example": "Strengthen your immune system.",
+      "exampleTranslation": "เสริมสร้างระบบภูมิคุ้มกันของคุณ"
+    },
+    {
+      "vocab": "inflammation",
+      "pronunciation": "อิน-ฟลา-เม-ชั่น",
+      "meaning": "การอักเสบ",
+      "example": "Inflammation causes swelling and pain.",
+      "exampleTranslation": "การอักเสบทำให้เกิดอาการบวมและเจ็บปวด"
+    },
+    {
+      "vocab": "metabolism",
+      "pronunciation": "เม-แทบ-โบ-ลิ-ซึม",
+      "meaning": "การเผาผลาญ",
+      "example": "Exercise boosts your metabolism.",
+      "exampleTranslation": "การออกกำลังกายกระตุ้นการเผาผลาญ"
+    },
+    {
+      "vocab": "cardiovascular",
+      "pronunciation": "คาร์-ดิ-โอ-แวส-คิว-ลาร์",
+      "meaning": "ระบบหัวใจและหลอดเลือด",
+      "example": "Cardiovascular exercise is important.",
+      "exampleTranslation": "การออกกำลังกายแบบคาร์ดิโอมีความสำคัญ"
+    },
+    {
+      "vocab": "respiratory",
+      "pronunciation": "เรส-พิ-รา-ทอ-รี",
+      "meaning": "ระบบทางเดินหายใจ",
+      "example": "Smoking damages respiratory health.",
+      "exampleTranslation": "การสูบบุหรี่ทำลายสุขภาพระบบทางเดินหายใจ"
+    },
+    {
+      "vocab": "neurological",
+      "pronunciation": "นิว-โร-ลอจ-จิ-คัล",
+      "meaning": "เกี่ยวกับระบบประสาท",
+      "example": "Neurological disorders affect the brain.",
+      "exampleTranslation": "ความผิดปกติทางระบบประสาทส่งผลต่อสมอง"
+    },
+    {
+      "vocab": "psychiatric",
+      "pronunciation": "ไซ-คี-แอท-ทริค",
+      "meaning": "จิตเวช",
+      "example": "She received psychiatric treatment.",
+      "exampleTranslation": "เธอได้รับการรักษาทางจิตเวช"
+    },
+    {
+      "vocab": "clinical",
+      "pronunciation": "คลิน-นิ-คัล",
+      "meaning": "ทางคลินิก",
+      "example": "Clinical trials test new drugs.",
+      "exampleTranslation": "การทดลองทางคลินิกทดสอบยาใหม่"
+    },
+    {
+      "vocab": "pharmaceutical",
+      "pronunciation": "ฟาร์-มา-ซู-ติ-คัล",
+      "meaning": "ยา, เภสัชกรรม",
+      "example": "Pharmaceutical companies develop vaccines.",
+      "exampleTranslation": "บริษัทยาพัฒนาวัคซีน"
+    },
+    {
+      "vocab": "alternative medicine",
+      "pronunciation": "ออล-เทอะ-นะ-ทิฟ เมด-ดิ-ซิน",
+      "meaning": "การแพทย์ทางเลือก",
+      "example": "Alternative medicine includes acupuncture.",
+      "exampleTranslation": "การแพทย์ทางเลือกรวมถึงการฝังเข็ม"
+    },
+    {
+      "vocab": "acupuncture",
+      "pronunciation": "แอค-คิว-พังค์-เชอะ",
+      "meaning": "การฝังเข็ม",
+      "example": "Acupuncture relieves pain.",
+      "exampleTranslation": "การฝังเข็มบรรเทาความเจ็บปวด"
+    },
+    {
+      "vocab": "mindfulness",
+      "pronunciation": "มายด์-ฟูล-เนส",
+      "meaning": "การมีสติ",
+      "example": "Practice mindfulness daily.",
+      "exampleTranslation": "ฝึกการมีสติทุกวัน"
+    },
+    {
+      "vocab": "meditation",
+      "pronunciation": "เมด-ดิ-เท-ชั่น",
+      "meaning": "การทำสมาธิ",
+      "example": "Meditation reduces stress.",
+      "exampleTranslation": "การทำสมาธิลดความเครียด"
+    },
+    {
+      "vocab": "counseling",
+      "pronunciation": "เคาน์-เซล-ลิง",
+      "meaning": "การให้คำปรึกษา",
+      "example": "She received counseling for anxiety.",
+      "exampleTranslation": "เธอได้รับการให้คำปรึกษาสำหรับความวิตกกังวล"
+    },
+    {
+      "vocab": "psychotherapy",
+      "pronunciation": "ไซ-โค-เธ-รา-พี",
+      "meaning": "จิตบำบัด",
+      "example": "Psychotherapy helps mental health.",
+      "exampleTranslation": "จิตบำบัดช่วยสุขภาพจิต"
+    },
+    {
+      "vocab": "cognitive",
+      "pronunciation": "ค็อก-นิ-ทิฟ",
+      "meaning": "ทางปัญญา, ความคิด",
+      "example": "Cognitive therapy changes thinking patterns.",
+      "exampleTranslation": "การบำบัดทางปัญญาเปลี่ยนรูปแบบความคิด"
+    },
+    {
+      "vocab": "behavioral",
+      "pronunciation": "บิ-เฮฟ-เวีย-รัล",
+      "meaning": "เกี่ยวกับพฤติกรรม",
+      "example": "Behavioral changes improve health.",
+      "exampleTranslation": "การเปลี่ยนแปลงพฤติกรรมปรับปรุงสุขภาพ"
+    },
+    {
+      "vocab": "sedentary",
+      "pronunciation": "เซด-เดน-ทะ-รี",
+      "meaning": "ไม่ค่อยเคลื่อนไหว, นั่งมาก",
+      "example": "Sedentary lifestyles harm health.",
+      "exampleTranslation": "วิถีชีวิตที่ไม่ค่อยเคลื่อนไหวทำลายสุขภาพ"
+    },
+    {
+      "vocab": "obesity",
+      "pronunciation": "โอ-บี-ซิ-ตี้",
+      "meaning": "โรคอ้วน",
+      "example": "Obesity increases health risks.",
+      "exampleTranslation": "โรคอ้วนเพิ่มความเสี่ยงด้านสุขภาพ"
+    },
+    {
+      "vocab": "diabetes",
+      "pronunciation": "ได-อะ-บี-ทีส",
+      "meaning": "โรคเบาหวาน",
+      "example": "Diabetes requires lifestyle changes.",
+      "exampleTranslation": "โรคเบาหวานต้องการการเปลี่ยนแปลงวิถีชีวิต"
+    },
+    {
+      "vocab": "hypertension",
+      "pronunciation": "ไฮ-เพอะ-เท็น-ชั่น",
+      "meaning": "ความดันโลหิตสูง",
+      "example": "Hypertension is a silent killer.",
+      "exampleTranslation": "ความดันโลหิตสูงเป็นฆาตกรเงียบ"
+    },
+    {
+      "vocab": "cholesterol",
+      "pronunciation": "โค-เลส-เตอ-รอล",
+      "meaning": "คอเลสเตอรอล",
+      "example": "High cholesterol clogs arteries.",
+      "exampleTranslation": "คอเลสเตอรอลสูงอุดตันหลอดเลือดแดง"
+    },
+    {
+      "vocab": "supplement",
+      "pronunciation": "ซัพ-พลิ-เมินท์",
+      "meaning": "อาหารเสริม",
+      "example": "Take vitamin supplements if needed.",
+      "exampleTranslation": "กินอาหารเสริมวิตามินถ้าจำเป็น"
+    },
+    {
+      "vocab": "organic",
+      "pronunciation": "ออร์-แกน-นิค",
+      "meaning": "อินทรีย์, ออร์แกนิค",
+      "example": "Choose organic produce when possible.",
+      "exampleTranslation": "เลือกผลิตภัณฑ์ออร์แกนิคเมื่อทำได้"
+    },
+    {
+      "vocab": "detox",
+      "pronunciation": "ดี-ท็อกซ์",
+      "meaning": "ล้างพิษ",
+      "example": "A detox diet cleanses the body.",
+      "exampleTranslation": "อาหารล้างพิษทำความสะอาดร่างกาย"
+    },
+    {
+      "vocab": "hydration",
+      "pronunciation": "ไฮ-เดร-ชั่น",
+      "meaning": "การให้น้ำ",
+      "example": "Proper hydration is essential.",
+      "exampleTranslation": "การให้น้ำอย่างเหมาะสมเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "resilience",
+      "pronunciation": "รี-ซิล-เลียนซ์",
+      "meaning": "ความยืดหยุ่น",
+      "example": "Build emotional resilience.",
+      "exampleTranslation": "สร้างความยืดหยุ่นทางอารมณ์"
+    },
+    {
+      "vocab": "self-care",
+      "pronunciation": "เซลฟ์-แคร์",
+      "meaning": "การดูแลตัวเอง",
+      "example": "Self-care is not selfish.",
+      "exampleTranslation": "การดูแลตัวเองไม่ใช่ความเห็นแก่ตัว"
+    },
+    {
+      "vocab": "burnout",
+      "pronunciation": "เบิร์น-เอาท์",
+      "meaning": "ภาวะหมดไฟ",
+      "example": "Burnout affects mental health.",
+      "exampleTranslation": "ภาวะหมดไฟส่งผลต่อสุขภาพจิต"
+    },
+    {
+      "vocab": "trauma",
+      "pronunciation": "ทรอ-มา",
+      "meaning": "บาดแผลทางจิตใจ",
+      "example": "Trauma can cause lasting effects.",
+      "exampleTranslation": "บาดแผลทางจิตใจสามารถก่อผลกระทบที่ยาวนาน"
+    },
+    {
+      "vocab": "PTSD",
+      "pronunciation": "พี-ที-เอส-ดี",
+      "meaning": "ภาวะความเครียดหลังเหตุการณ์ร้ายแรง",
+      "example": "Veterans may suffer from PTSD.",
+      "exampleTranslation": "ทหารผ่านศึกอาจประสบ PTSD"
+    },
+    {
+      "vocab": "substance abuse",
+      "pronunciation": "ซับ-สแตนซ์ อะ-บิวส์",
+      "meaning": "การใช้สารเสพติด",
+      "example": "Substance abuse requires professional help.",
+      "exampleTranslation": "การใช้สารเสพติดต้องการความช่วยเหลือจากผู้เชี่ยวชาญ"
+    },
+    {
+      "vocab": "withdrawal",
+      "pronunciation": "วิธ-ดรอ-วัล",
+      "meaning": "อาการถอน (ยา/สารเสพติด)",
+      "example": "Withdrawal symptoms can be severe.",
+      "exampleTranslation": "อาการถอนยาอาจรุนแรง"
+    },
+    {
+      "vocab": "screening",
+      "pronunciation": "สครีน-นิง",
+      "meaning": "การคัดกรอง",
+      "example": "Regular screening detects diseases early.",
+      "exampleTranslation": "การคัดกรองสม่ำเสมอตรวจพบโรคในระยะแรก"
+    },
+    {
+      "vocab": "transplant",
+      "pronunciation": "ทรานส์-พลานท์",
+      "meaning": "การปลูกถ่ายอวัยวะ",
+      "example": "He needs a kidney transplant.",
+      "exampleTranslation": "เขาต้องการการปลูกถ่ายไต"
+    },
+    {
+      "vocab": "remission",
+      "pronunciation": "รี-มิช-ชั่น",
+      "meaning": "การทุเลา (โรค)",
+      "example": "The cancer is in remission.",
+      "exampleTranslation": "มะเร็งอยู่ในระยะทุเลา"
+    },
+    {
+      "vocab": "palliative",
+      "pronunciation": "แพล-ลิ-เอ-ทิฟ",
+      "meaning": "บรรเทาอาการ",
+      "example": "Palliative care improves quality of life.",
+      "exampleTranslation": "การดูแลแบบบรรเทาอาการปรับปรุงคุณภาพชีวิต"
+    },
+    {
+      "vocab": "life expectancy",
+      "pronunciation": "ไลฟ์ เอ็กซ์-เพ็ค-แทน-ซี",
+      "meaning": "อายุขัยเฉลี่ย",
+      "example": "Life expectancy has increased.",
+      "exampleTranslation": "อายุขัยเฉลี่ยเพิ่มขึ้น"
+    },
+    {
+      "vocab": "longevity",
+      "pronunciation": "ลอน-เจฟ-วิ-ตี้",
+      "meaning": "อายุยืน",
+      "example": "Diet affects longevity.",
+      "exampleTranslation": "อาหารส่งผลต่อการมีอายุยืน"
+    },
+    {
+      "vocab": "fertility",
+      "pronunciation": "เฟอร์-ทิล-ลิ-ตี้",
+      "meaning": "ความสามารถในการเจริญพันธุ์",
+      "example": "Fertility treatments help couples conceive.",
+      "exampleTranslation": "การรักษาภาวะมีบุตรยากช่วยให้คู่สามีภรรยาตั้งครรภ์"
+    }
+  ]
+}

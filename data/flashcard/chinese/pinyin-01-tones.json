@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Pinyin Tones",
+    "description": "4 tones + neutral tone - foundation of Chinese pronunciation",
+    "category": "Pinyin Basics",
+    "sourceLang": "zh",
+    "targetLang": "th",
+    "tags": ["chinese", "pinyin", "tones", "beginner"]
+  },
+  "cards": [
+    {
+      "vocab": "妈",
+      "pronunciation": "mā (เสียง 1 สูงยาว)",
+      "meaning": "แม่",
+      "example": "妈妈很好。",
+      "exampleTranslation": "แม่สบายดี"
+    },
+    {
+      "vocab": "麻",
+      "pronunciation": "má (เสียง 2 ขึ้นสูง)",
+      "meaning": "ป่าน, ชา",
+      "example": "这是麻绳。",
+      "exampleTranslation": "นี่คือเชือกป่าน"
+    },
+    {
+      "vocab": "马",
+      "pronunciation": "mǎ (เสียง 3 ต่ำแล้วขึ้น)",
+      "meaning": "ม้า",
+      "example": "我有一匹马。",
+      "exampleTranslation": "ฉันมีม้าหนึ่งตัว"
+    },
+    {
+      "vocab": "骂",
+      "pronunciation": "mà (เสียง 4 ตกลงแรง)",
+      "meaning": "ด่า",
+      "example": "不要骂人。",
+      "exampleTranslation": "อย่าด่าคน"
+    },
+    {
+      "vocab": "吗",
+      "pronunciation": "ma (เสียงเบา ไม่มี tone)",
+      "meaning": "ไหม (คำถาม)",
+      "example": "你好吗？",
+      "exampleTranslation": "คุณสบายดีไหม?"
+    },
+    {
+      "vocab": "八",
+      "pronunciation": "bā (เสียง 1 สูงยาว)",
+      "meaning": "แปด",
+      "example": "我有八本书。",
+      "exampleTranslation": "ฉันมีหนังสือ 8 เล่ม"
+    },
+    {
+      "vocab": "拔",
+      "pronunciation": "bá (เสียง 2 ขึ้นสูง)",
+      "meaning": "ถอน, ดึง",
+      "example": "拔牙很痛。",
+      "exampleTranslation": "ถอนฟันเจ็บมาก"
+    },
+    {
+      "vocab": "把",
+      "pronunciation": "bǎ (เสียง 3 ต่ำแล้วขึ้น)",
+      "meaning": "จับ, ลักษณนาม",
+      "example": "把门关上。",
+      "exampleTranslation": "ปิดประตู"
+    },
+    {
+      "vocab": "爸",
+      "pronunciation": "bà (เสียง 4 ตกลงแรง)",
+      "meaning": "พ่อ",
+      "example": "爸爸在家。",
+      "exampleTranslation": "พ่ออยู่บ้าน"
+    },
+    {
+      "vocab": "吧",
+      "pronunciation": "ba (เสียงเบา ไม่มี tone)",
+      "meaning": "นะ, สิ (คำลงท้าย)",
+      "example": "走吧！",
+      "exampleTranslation": "ไปกันเถอะ!"
+    },
+    {
+      "vocab": "衣",
+      "pronunciation": "yī (เสียง 1 สูงยาว)",
+      "meaning": "เสื้อผ้า",
+      "example": "这件衣服很漂亮。",
+      "exampleTranslation": "เสื้อผ้าตัวนี้สวยมาก"
+    },
+    {
+      "vocab": "姨",
+      "pronunciation": "yí (เสียง 2 ขึ้นสูง)",
+      "meaning": "ป้า (ฝั่งแม่)",
+      "example": "阿姨好！",
+      "exampleTranslation": "สวัสดีป้า!"
+    },
+    {
+      "vocab": "椅",
+      "pronunciation": "yǐ (เสียง 3 ต่ำแล้วขึ้น)",
+      "meaning": "เก้าอี้",
+      "example": "请坐在椅子上。",
+      "exampleTranslation": "กรุณานั่งบนเก้าอี้"
+    },
+    {
+      "vocab": "意",
+      "pronunciation": "yì (เสียง 4 ตกลงแรง)",
+      "meaning": "ความหมาย, ความตั้งใจ",
+      "example": "你什么意思？",
+      "exampleTranslation": "คุณหมายความว่าอะไร?"
+    },
+    {
+      "vocab": "一",
+      "pronunciation": "yī/yí/yì (เสียงเปลี่ยนตามคำหลัง)",
+      "meaning": "หนึ่ง",
+      "example": "一个人，一本书。",
+      "exampleTranslation": "คนหนึ่งคน, หนังสือหนึ่งเล่ม"
+    },
+    {
+      "vocab": "不",
+      "pronunciation": "bù/bú (เสียง 4 เปลี่ยนเป็น 2 ก่อนเสียง 4)",
+      "meaning": "ไม่",
+      "example": "不好，不是。",
+      "exampleTranslation": "ไม่ดี, ไม่ใช่"
+    },
+    {
+      "vocab": "书",
+      "pronunciation": "shū (เสียง 1 สูงยาว)",
+      "meaning": "หนังสือ",
+      "example": "我喜欢看书。",
+      "exampleTranslation": "ฉันชอบอ่านหนังสือ"
+    },
+    {
+      "vocab": "熟",
+      "pronunciation": "shú (เสียง 2 ขึ้นสูง)",
+      "meaning": "สุก, คุ้นเคย",
+      "example": "饭熟了。",
+      "exampleTranslation": "ข้าวสุกแล้ว"
+    },
+    {
+      "vocab": "数",
+      "pronunciation": "shǔ (เสียง 3 ต่ำแล้วขึ้น)",
+      "meaning": "นับ",
+      "example": "数一数有多少。",
+      "exampleTranslation": "นับดูว่ามีเท่าไหร่"
+    },
+    {
+      "vocab": "树",
+      "pronunciation": "shù (เสียง 4 ตกลงแรง)",
+      "meaning": "ต้นไม้",
+      "example": "这棵树很高。",
+      "exampleTranslation": "ต้นไม้นี้สูงมาก"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "version": "2.0",
+  "exportedAt": "2025-01-01T00:00:00.000Z",
+  "deck": {
+    "name": "Deep Learning Architectures",
+    "description": "Neural network architectures, layers, and deep learning concepts",
+    "category": "Technical English",
+    "sourceLang": "en",
+    "targetLang": "th",
+    "tags": ["english", "technical", "deep-learning", "neural-networks", "ai"]
+  },
+  "cards": [
+    {
+      "vocab": "convolutional neural network (CNN)",
+      "pronunciation": "คอน-โว-ลู-ชัน-นอล นิว-รอล เน็ท-เวิร์ค",
+      "meaning": "โครงข่ายประสาทแบบคอนโวลูชัน - เก่งเรื่องรูปภาพ",
+      "example": "CNNs are widely used for image classification tasks.",
+      "exampleTranslation": "CNN ใช้กันแพร่หลายสำหรับงานจำแนกรูปภาพ"
+    },
+    {
+      "vocab": "recurrent neural network (RNN)",
+      "pronunciation": "รี-เคอ-เรนท์ นิว-รอล เน็ท-เวิร์ค",
+      "meaning": "โครงข่ายประสาทแบบวนซ้ำ - เก่งเรื่องข้อมูลลำดับ",
+      "example": "RNNs process sequential data like text and time series.",
+      "exampleTranslation": "RNN ประมวลผลข้อมูลลำดับเช่นข้อความและ time series"
+    },
+    {
+      "vocab": "long short-term memory (LSTM)",
+      "pronunciation": "ลอง ชอร์ท-เทิร์ม เมม-โม-รี่",
+      "meaning": "หน่วยความจำระยะยาว-สั้น - RNN ที่จำได้นานขึ้น",
+      "example": "LSTMs solve the vanishing gradient problem in RNNs.",
+      "exampleTranslation": "LSTM แก้ปัญหา vanishing gradient ใน RNN"
+    },
+    {
+      "vocab": "gated recurrent unit (GRU)",
+      "pronunciation": "เกท-เท็ด รี-เคอ-เรนท์ ยูนิท",
+      "meaning": "หน่วยวนซ้ำแบบมีประตู - LSTM แบบง่ายกว่า",
+      "example": "GRUs are simpler than LSTMs but perform similarly.",
+      "exampleTranslation": "GRU ง่ายกว่า LSTM แต่ประสิทธิภาพใกล้เคียง"
+    },
+    {
+      "vocab": "transformer",
+      "pronunciation": "ทรานส์-ฟอร์-เมอร์",
+      "meaning": "สถาปัตยกรรมที่ใช้ attention แทน RNN",
+      "example": "Transformers revolutionized NLP with self-attention.",
+      "exampleTranslation": "Transformer ปฏิวัติ NLP ด้วย self-attention"
+    },
+    {
+      "vocab": "attention mechanism",
+      "pronunciation": "แอท-เทน-ชัน เม-คา-นิ-ซึม",
+      "meaning": "กลไกความสนใจ - โฟกัสส่วนสำคัญของ input",
+      "example": "Attention helps the model focus on relevant parts.",
+      "exampleTranslation": "Attention ช่วยให้โมเดลโฟกัสส่วนที่เกี่ยวข้อง"
+    },
+    {
+      "vocab": "self-attention",
+      "pronunciation": "เซลฟ์-แอท-เทน-ชัน",
+      "meaning": "การสนใจตัวเอง - เปรียบเทียบแต่ละส่วนของ input กัน",
+      "example": "Self-attention computes relationships between all positions.",
+      "exampleTranslation": "Self-attention คำนวณความสัมพันธ์ระหว่างทุกตำแหน่ง"
+    },
+    {
+      "vocab": "multi-head attention",
+      "pronunciation": "มัล-ติ-เฮด แอท-เทน-ชัน",
+      "meaning": "attention หลายหัว - ดูหลายมุมมองพร้อมกัน",
+      "example": "Multi-head attention captures different aspects of relationships.",
+      "exampleTranslation": "Multi-head attention จับแง่มุมต่างๆ ของความสัมพันธ์"
+    },
+    {
+      "vocab": "encoder",
+      "pronunciation": "เอ็น-โค-เดอร์",
+      "meaning": "ตัวเข้ารหัส - แปลง input เป็น representation",
+      "example": "The encoder processes the input sequence.",
+      "exampleTranslation": "Encoder ประมวลผลลำดับ input"
+    },
+    {
+      "vocab": "decoder",
+      "pronunciation": "ดี-โค-เดอร์",
+      "meaning": "ตัวถอดรหัส - แปลง representation เป็น output",
+      "example": "The decoder generates the output sequence.",
+      "exampleTranslation": "Decoder สร้างลำดับ output"
+    },
+    {
+      "vocab": "generative adversarial network (GAN)",
+      "pronunciation": "เจน-เนอ-เร-ทีฟ แอด-เวอร์-ซา-เรียล เน็ท-เวิร์ค",
+      "meaning": "เครือข่ายสร้างแบบแข่งขัน - generator vs discriminator",
+      "example": "GANs can generate realistic images from noise.",
+      "exampleTranslation": "GAN สร้างภาพเหมือนจริงจาก noise ได้"
+    },
+    {
+      "vocab": "generator",
+      "pronunciation": "เจน-เนอ-เร-เตอร์",
+      "meaning": "ตัวสร้าง - สร้างข้อมูลปลอมใน GAN",
+      "example": "The generator tries to create convincing fake data.",
+      "exampleTranslation": "Generator พยายามสร้างข้อมูลปลอมที่น่าเชื่อ"
+    },
+    {
+      "vocab": "discriminator",
+      "pronunciation": "ดิส-คริ-มิ-เน-เตอร์",
+      "meaning": "ตัวแยกแยะ - แยกของจริงกับปลอมใน GAN",
+      "example": "The discriminator learns to distinguish real from fake.",
+      "exampleTranslation": "Discriminator เรียนรู้แยกของจริงกับปลอม"
+    },
+    {
+      "vocab": "autoencoder",
+      "pronunciation": "ออ-โต-เอ็น-โค-เดอร์",
+      "meaning": "ตัวเข้ารหัสอัตโนมัติ - บีบอัดแล้วคลายข้อมูล",
+      "example": "Autoencoders learn compressed representations.",
+      "exampleTranslation": "Autoencoder เรียนรู้ representation ที่บีบอัด"
+    },
+    {
+      "vocab": "variational autoencoder (VAE)",
+      "pronunciation": "แว-ริ-เอ-ชัน-นอล ออ-โต-เอ็น-โค-เดอร์",
+      "meaning": "autoencoder แบบความน่าจะเป็น - สร้างข้อมูลใหม่ได้",
+      "example": "VAEs can generate new samples from learned distribution.",
+      "exampleTranslation": "VAE สร้างตัวอย่างใหม่จาก distribution ที่เรียนได้"
+    },
+    {
+      "vocab": "diffusion model",
+      "pronunciation": "ดิฟ-ฟิว-ชัน โม-เดล",
+      "meaning": "โมเดลแพร่กระจาย - เพิ่ม noise แล้วลบออก",
+      "example": "Diffusion models power image generators like DALL-E.",
+      "exampleTranslation": "Diffusion model ขับเคลื่อน image generator เช่น DALL-E"
+    },
+    {
+      "vocab": "residual connection",
+      "pronunciation": "เร-ซิ-ดู-อัล คอน-เน็ค-ชัน",
+      "meaning": "การเชื่อมต่อเหลือ - ข้าม layer เพื่อช่วย gradient",
+      "example": "Residual connections help train very deep networks.",
+      "exampleTranslation": "Residual connection ช่วยฝึก network ที่ลึกมาก"
+    },
+    {
+      "vocab": "skip connection",
+      "pronunciation": "สคิป คอน-เน็ค-ชัน",
+      "meaning": "การเชื่อมต่อข้าม - เหมือน residual connection",
+      "example": "Skip connections preserve information across layers.",
+      "exampleTranslation": "Skip connection รักษาข้อมูลข้าม layer"
+    },
+    {
+      "vocab": "bottleneck layer",
+      "pronunciation": "บ็อท-เทิล-เน็ค เลเยอร์",
+      "meaning": "ชั้นคอขวด - ลดมิติแล้วขยาย",
+      "example": "Bottleneck layers reduce computational cost.",
+      "exampleTranslation": "Bottleneck layer ลดค่าใช้จ่ายการคำนวณ"
+    },
+    {
+      "vocab": "feedforward network",
+      "pronunciation": "ฟีด-ฟอร์-เวิร์ด เน็ท-เวิร์ค",
+      "meaning": "เครือข่ายส่งต่อ - ข้อมูลไหลทิศทางเดียว",
+      "example": "Feedforward networks have no cycles or loops.",
+      "exampleTranslation": "Feedforward network ไม่มีวงรอบ"
+    },
+    {
+      "vocab": "fully connected layer",
+      "pronunciation": "ฟุล-ลี่ คอน-เน็ค-เท็ด เลเยอร์",
+      "meaning": "ชั้นเชื่อมต่อเต็ม - ทุก node เชื่อมกันหมด",
+      "example": "The final layers are usually fully connected.",
+      "exampleTranslation": "ชั้นสุดท้ายมักเป็น fully connected"
+    },
+    {
+      "vocab": "dense layer",
+      "pronunciation": "เดนซ์ เลเยอร์",
+      "meaning": "ชั้นหนาแน่น - อีกชื่อของ fully connected",
+      "example": "Add a dense layer with 128 units.",
+      "exampleTranslation": "เพิ่ม dense layer ที่มี 128 units"
+    },
+    {
+      "vocab": "embedding layer",
+      "pronunciation": "เอ็ม-เบ็ด-ดิง เลเยอร์",
+      "meaning": "ชั้นฝัง - แปลงคำเป็น vector",
+      "example": "The embedding layer converts words to vectors.",
+      "exampleTranslation": "Embedding layer แปลงคำเป็น vector"
+    },
+    {
+      "vocab": "positional encoding",
+      "pronunciation": "โพ-ซิ-ชัน-นอล เอ็น-โค-ดิง",
+      "meaning": "การเข้ารหัสตำแหน่ง - บอกลำดับใน Transformer",
+      "example": "Positional encoding adds position information to embeddings.",
+      "exampleTranslation": "Positional encoding เพิ่มข้อมูลตำแหน่งให้ embedding"
+    },
+    {
+      "vocab": "layer normalization",
+      "pronunciation": "เลเยอร์ นอร์-มา-ไล-เซ-ชัน",
+      "meaning": "การปรับมาตรฐานชั้น - normalize ภายใน layer",
+      "example": "Layer normalization stabilizes training in transformers.",
+      "exampleTranslation": "Layer normalization ทำให้การฝึก transformer เสถียร"
+    }
+  ]
+}

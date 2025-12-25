@@ -1,0 +1,398 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "B2 Technology & Innovation",
+    "description": "B2 level vocabulary for technology and innovation topics",
+    "category": "CEFR B2",
+    "tags": ["english", "B2", "vocabulary"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "algorithm",
+      "pronunciation": "แอล-กอ-ริ-ธึม",
+      "meaning": "อัลกอริทึม, ขั้นตอนวิธี",
+      "example": "The algorithm improves search results.",
+      "exampleTranslation": "อัลกอริทึมปรับปรุงผลการค้นหา"
+    },
+    {
+      "vocab": "automation",
+      "pronunciation": "ออ-โท-เม-ชั่น",
+      "meaning": "ระบบอัตโนมัติ",
+      "example": "Automation has transformed manufacturing.",
+      "exampleTranslation": "ระบบอัตโนมัติเปลี่ยนแปลงการผลิต"
+    },
+    {
+      "vocab": "blockchain",
+      "pronunciation": "บล็อค-เชน",
+      "meaning": "บล็อกเชน",
+      "example": "Blockchain ensures secure transactions.",
+      "exampleTranslation": "บล็อกเชนรับประกันธุรกรรมที่ปลอดภัย"
+    },
+    {
+      "vocab": "cryptocurrency",
+      "pronunciation": "คริป-โท-เคอร์-เรน-ซี",
+      "meaning": "สกุลเงินดิจิทัล",
+      "example": "Bitcoin is a popular cryptocurrency.",
+      "exampleTranslation": "บิตคอยน์เป็นสกุลเงินดิจิทัลยอดนิยม"
+    },
+    {
+      "vocab": "machine learning",
+      "pronunciation": "แมชีน เลิร์น-นิง",
+      "meaning": "การเรียนรู้ของเครื่อง",
+      "example": "Machine learning powers many applications.",
+      "exampleTranslation": "การเรียนรู้ของเครื่องขับเคลื่อนแอปพลิเคชันหลายตัว"
+    },
+    {
+      "vocab": "deep learning",
+      "pronunciation": "ดีพ เลิร์น-นิง",
+      "meaning": "การเรียนรู้เชิงลึก",
+      "example": "Deep learning mimics neural networks.",
+      "exampleTranslation": "การเรียนรู้เชิงลึกเลียนแบบโครงข่ายประสาท"
+    },
+    {
+      "vocab": "neural network",
+      "pronunciation": "นิว-รัล เน็ท-เวิร์ค",
+      "meaning": "โครงข่ายประสาทเทียม",
+      "example": "Neural networks process complex data.",
+      "exampleTranslation": "โครงข่ายประสาทประมวลผลข้อมูลที่ซับซ้อน"
+    },
+    {
+      "vocab": "virtual reality",
+      "pronunciation": "เวอร์-ชวล รี-แอล-ลิ-ตี้",
+      "meaning": "ความเป็นจริงเสมือน",
+      "example": "Virtual reality is used in gaming.",
+      "exampleTranslation": "ความเป็นจริงเสมือนใช้ในการเล่นเกม"
+    },
+    {
+      "vocab": "augmented reality",
+      "pronunciation": "ออก-เมน-ทิด รี-แอล-ลิ-ตี้",
+      "meaning": "ความเป็นจริงเสริม",
+      "example": "Augmented reality enhances real-world views.",
+      "exampleTranslation": "ความเป็นจริงเสริมเพิ่มมุมมองโลกจริง"
+    },
+    {
+      "vocab": "Internet of Things",
+      "pronunciation": "อิน-เทอะ-เน็ท ออฟ ธิงส์",
+      "meaning": "อินเทอร์เน็ตของสรรพสิ่ง",
+      "example": "IoT connects everyday devices.",
+      "exampleTranslation": "IoT เชื่อมต่ออุปกรณ์ในชีวิตประจำวัน"
+    },
+    {
+      "vocab": "cloud computing",
+      "pronunciation": "คลาวด์ คอม-พิว-ทิง",
+      "meaning": "การประมวลผลแบบคลาวด์",
+      "example": "Cloud computing reduces IT costs.",
+      "exampleTranslation": "การประมวลผลแบบคลาวด์ลดต้นทุนไอที"
+    },
+    {
+      "vocab": "cybersecurity",
+      "pronunciation": "ไซ-เบอะ-ซิ-คิว-ริ-ตี้",
+      "meaning": "ความปลอดภัยไซเบอร์",
+      "example": "Cybersecurity protects against hackers.",
+      "exampleTranslation": "ความปลอดภัยไซเบอร์ป้องกันแฮกเกอร์"
+    },
+    {
+      "vocab": "encryption",
+      "pronunciation": "เอ็น-คริป-ชั่น",
+      "meaning": "การเข้ารหัส",
+      "example": "Encryption keeps data secure.",
+      "exampleTranslation": "การเข้ารหัสทำให้ข้อมูลปลอดภัย"
+    },
+    {
+      "vocab": "malware",
+      "pronunciation": "แมล-แวร์",
+      "meaning": "โปรแกรมอันตราย",
+      "example": "Malware can steal personal information.",
+      "exampleTranslation": "โปรแกรมอันตรายสามารถขโมยข้อมูลส่วนตัว"
+    },
+    {
+      "vocab": "phishing",
+      "pronunciation": "ฟิช-ชิง",
+      "meaning": "การหลอกลวงออนไลน์",
+      "example": "Be careful of phishing emails.",
+      "exampleTranslation": "ระวังอีเมลหลอกลวง"
+    },
+    {
+      "vocab": "hacker",
+      "pronunciation": "แฮค-เคอะ",
+      "meaning": "แฮกเกอร์",
+      "example": "Hackers breached the security system.",
+      "exampleTranslation": "แฮกเกอร์เจาะระบบความปลอดภัย"
+    },
+    {
+      "vocab": "bandwidth",
+      "pronunciation": "แบนด์-วิดธ์",
+      "meaning": "แบนด์วิดท์, ความจุการส่งข้อมูล",
+      "example": "Higher bandwidth means faster internet.",
+      "exampleTranslation": "แบนด์วิดท์ที่สูงขึ้นหมายถึงอินเทอร์เน็ตเร็วขึ้น"
+    },
+    {
+      "vocab": "server",
+      "pronunciation": "เซิร์ฟ-เวอะ",
+      "meaning": "เซิร์ฟเวอร์",
+      "example": "The server crashed last night.",
+      "exampleTranslation": "เซิร์ฟเวอร์ล่มเมื่อคืน"
+    },
+    {
+      "vocab": "database",
+      "pronunciation": "เด-ต้า-เบส",
+      "meaning": "ฐานข้อมูล",
+      "example": "All records are in the database.",
+      "exampleTranslation": "ข้อมูลทั้งหมดอยู่ในฐานข้อมูล"
+    },
+    {
+      "vocab": "interface",
+      "pronunciation": "อิน-เทอะ-เฟซ",
+      "meaning": "ส่วนต่อประสาน, อินเทอร์เฟซ",
+      "example": "The user interface is very intuitive.",
+      "exampleTranslation": "ส่วนต่อประสานผู้ใช้ใช้งานง่ายมาก"
+    },
+    {
+      "vocab": "compatible",
+      "pronunciation": "คอม-แพท-ทิ-เบิล",
+      "meaning": "เข้ากันได้",
+      "example": "Is this software compatible with Mac?",
+      "exampleTranslation": "ซอฟต์แวร์นี้เข้ากันได้กับ Mac ไหม?"
+    },
+    {
+      "vocab": "integrate",
+      "pronunciation": "อิน-ทิ-เกรท",
+      "meaning": "รวมเข้าด้วยกัน, บูรณาการ",
+      "example": "We need to integrate these systems.",
+      "exampleTranslation": "เราต้องรวมระบบเหล่านี้เข้าด้วยกัน"
+    },
+    {
+      "vocab": "scalability",
+      "pronunciation": "สเคล-ละ-บิ-ลิ-ตี้",
+      "meaning": "ความสามารถในการขยาย",
+      "example": "Scalability is crucial for growth.",
+      "exampleTranslation": "ความสามารถในการขยายสำคัญต่อการเติบโต"
+    },
+    {
+      "vocab": "prototype",
+      "pronunciation": "โพร-โท-ไทพ์",
+      "meaning": "ต้นแบบ",
+      "example": "We built a working prototype.",
+      "exampleTranslation": "เราสร้างต้นแบบที่ใช้งานได้"
+    },
+    {
+      "vocab": "innovation",
+      "pronunciation": "อิน-โน-เว-ชั่น",
+      "meaning": "นวัตกรรม",
+      "example": "Innovation drives business success.",
+      "exampleTranslation": "นวัตกรรมขับเคลื่อนความสำเร็จทางธุรกิจ"
+    },
+    {
+      "vocab": "disruptive",
+      "pronunciation": "ดิส-รัพ-ทิฟ",
+      "meaning": "พลิกโฉม, ก่อกวน",
+      "example": "This is a disruptive technology.",
+      "exampleTranslation": "นี่คือเทคโนโลยีที่พลิกโฉม"
+    },
+    {
+      "vocab": "cutting-edge",
+      "pronunciation": "คัท-ทิง เอจ",
+      "meaning": "ล้ำสมัย, ทันสมัยที่สุด",
+      "example": "They use cutting-edge technology.",
+      "exampleTranslation": "พวกเขาใช้เทคโนโลยีล้ำสมัย"
+    },
+    {
+      "vocab": "obsolete",
+      "pronunciation": "ออบ-โซ-ลีท",
+      "meaning": "ล้าสมัย, เลิกใช้แล้ว",
+      "example": "This technology is becoming obsolete.",
+      "exampleTranslation": "เทคโนโลยีนี้กำลังล้าสมัย"
+    },
+    {
+      "vocab": "upgrade",
+      "pronunciation": "อัพ-เกรด",
+      "meaning": "อัปเกรด, ยกระดับ",
+      "example": "You should upgrade your software.",
+      "exampleTranslation": "คุณควรอัปเกรดซอฟต์แวร์ของคุณ"
+    },
+    {
+      "vocab": "debug",
+      "pronunciation": "ดี-บัก",
+      "meaning": "แก้ไขข้อผิดพลาด",
+      "example": "We need to debug the code.",
+      "exampleTranslation": "เราต้องแก้ไขข้อผิดพลาดในโค้ด"
+    },
+    {
+      "vocab": "deploy",
+      "pronunciation": "ดิ-พลอย",
+      "meaning": "ปรับใช้, นำไปใช้",
+      "example": "We will deploy the update tonight.",
+      "exampleTranslation": "เราจะปรับใช้การอัปเดตคืนนี้"
+    },
+    {
+      "vocab": "optimize",
+      "pronunciation": "ออพ-ทิ-ไมซ์",
+      "meaning": "ปรับให้เหมาะสม",
+      "example": "We need to optimize performance.",
+      "exampleTranslation": "เราต้องปรับประสิทธิภาพให้เหมาะสม"
+    },
+    {
+      "vocab": "latency",
+      "pronunciation": "เล-เทน-ซี",
+      "meaning": "ความหน่วง",
+      "example": "Low latency is important for gaming.",
+      "exampleTranslation": "ความหน่วงต่ำสำคัญสำหรับการเล่นเกม"
+    },
+    {
+      "vocab": "throughput",
+      "pronunciation": "ธรู-พุท",
+      "meaning": "ปริมาณงานที่ประมวลผลได้",
+      "example": "The system has high throughput.",
+      "exampleTranslation": "ระบบมีปริมาณงานที่ประมวลผลได้สูง"
+    },
+    {
+      "vocab": "redundancy",
+      "pronunciation": "รี-ดัน-ดัน-ซี",
+      "meaning": "ความซ้ำซ้อน (เพื่อสำรอง)",
+      "example": "Redundancy prevents system failures.",
+      "exampleTranslation": "ความซ้ำซ้อนป้องกันระบบล้มเหลว"
+    },
+    {
+      "vocab": "backup",
+      "pronunciation": "แบ็ค-อัพ",
+      "meaning": "สำรองข้อมูล",
+      "example": "Always keep a backup of your files.",
+      "exampleTranslation": "สำรองไฟล์ของคุณไว้เสมอ"
+    },
+    {
+      "vocab": "synchronize",
+      "pronunciation": "ซิง-โคร-ไนซ์",
+      "meaning": "ประสานข้อมูล",
+      "example": "Synchronize your devices automatically.",
+      "exampleTranslation": "ประสานข้อมูลอุปกรณ์ของคุณโดยอัตโนมัติ"
+    },
+    {
+      "vocab": "authenticate",
+      "pronunciation": "ออ-เธน-ทิ-เคท",
+      "meaning": "ยืนยันตัวตน",
+      "example": "You must authenticate to access the system.",
+      "exampleTranslation": "คุณต้องยืนยันตัวตนเพื่อเข้าถึงระบบ"
+    },
+    {
+      "vocab": "biometric",
+      "pronunciation": "ไบ-โอ-เมท-ทริค",
+      "meaning": "ไบโอเมตริกซ์, ลักษณะทางชีวภาพ",
+      "example": "Biometric security uses fingerprints.",
+      "exampleTranslation": "ความปลอดภัยไบโอเมตริกซ์ใช้ลายนิ้วมือ"
+    },
+    {
+      "vocab": "wearable",
+      "pronunciation": "แวร์-เรอ-เบิล",
+      "meaning": "อุปกรณ์สวมใส่ได้",
+      "example": "Wearable devices track your health.",
+      "exampleTranslation": "อุปกรณ์สวมใส่ได้ติดตามสุขภาพของคุณ"
+    },
+    {
+      "vocab": "drone",
+      "pronunciation": "โดรน",
+      "meaning": "โดรน, อากาศยานไร้คนขับ",
+      "example": "Drones are used for delivery.",
+      "exampleTranslation": "โดรนถูกใช้สำหรับการจัดส่ง"
+    },
+    {
+      "vocab": "autonomous",
+      "pronunciation": "ออ-ทอน-โน-มัส",
+      "meaning": "อัตโนมัติ, ไร้คนขับ",
+      "example": "Autonomous vehicles drive themselves.",
+      "exampleTranslation": "ยานพาหนะไร้คนขับขับเคลื่อนตัวเอง"
+    },
+    {
+      "vocab": "robotics",
+      "pronunciation": "โร-บอท-ทิคส์",
+      "meaning": "วิทยาการหุ่นยนต์",
+      "example": "Robotics is advancing rapidly.",
+      "exampleTranslation": "วิทยาการหุ่นยนต์กำลังก้าวหน้าอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "3D printing",
+      "pronunciation": "ธรี-ดี พริน-ทิง",
+      "meaning": "การพิมพ์สามมิติ",
+      "example": "3D printing creates physical objects.",
+      "exampleTranslation": "การพิมพ์สามมิติสร้างวัตถุทางกายภาพ"
+    },
+    {
+      "vocab": "renewable energy",
+      "pronunciation": "รี-นิว-เอะ-เบิล เอ็น-เนอะ-จี",
+      "meaning": "พลังงานหมุนเวียน",
+      "example": "Renewable energy reduces emissions.",
+      "exampleTranslation": "พลังงานหมุนเวียนลดการปล่อยมลพิษ"
+    },
+    {
+      "vocab": "smart city",
+      "pronunciation": "สมาร์ท ซิ-ตี้",
+      "meaning": "เมืองอัจฉริยะ",
+      "example": "Smart cities use technology for efficiency.",
+      "exampleTranslation": "เมืองอัจฉริยะใช้เทคโนโลยีเพื่อประสิทธิภาพ"
+    },
+    {
+      "vocab": "big data",
+      "pronunciation": "บิ๊ก เด-ต้า",
+      "meaning": "ข้อมูลขนาดใหญ่",
+      "example": "Big data analytics reveal patterns.",
+      "exampleTranslation": "การวิเคราะห์ข้อมูลขนาดใหญ่เผยให้เห็นรูปแบบ"
+    },
+    {
+      "vocab": "data mining",
+      "pronunciation": "เด-ต้า ไม-นิง",
+      "meaning": "การขุดข้อมูล",
+      "example": "Data mining extracts useful information.",
+      "exampleTranslation": "การขุดข้อมูลดึงข้อมูลที่มีประโยชน์"
+    },
+    {
+      "vocab": "analytics",
+      "pronunciation": "แอน-นะ-ลิ-ทิคส์",
+      "meaning": "การวิเคราะห์ข้อมูล",
+      "example": "Business analytics drives decisions.",
+      "exampleTranslation": "การวิเคราะห์ธุรกิจขับเคลื่อนการตัดสินใจ"
+    },
+    {
+      "vocab": "visualization",
+      "pronunciation": "วิช-ชวล-ไล-เซ-ชั่น",
+      "meaning": "การแสดงผลข้อมูล",
+      "example": "Data visualization makes data understandable.",
+      "exampleTranslation": "การแสดงผลข้อมูลทำให้ข้อมูลเข้าใจได้"
+    },
+    {
+      "vocab": "open source",
+      "pronunciation": "โอ-เพิน ซอร์ซ",
+      "meaning": "โอเพ่นซอร์ซ, เปิดเผยซอร์สโค้ด",
+      "example": "Linux is open source software.",
+      "exampleTranslation": "Linux เป็นซอฟต์แวร์โอเพ่นซอร์ซ"
+    },
+    {
+      "vocab": "proprietary",
+      "pronunciation": "โพร-ไพร-เอะ-ทะ-รี",
+      "meaning": "เป็นกรรมสิทธิ์, มีลิขสิทธิ์",
+      "example": "This is proprietary software.",
+      "exampleTranslation": "นี่เป็นซอฟต์แวร์ที่มีลิขสิทธิ์"
+    },
+    {
+      "vocab": "patent",
+      "pronunciation": "แพท-เทินท์",
+      "meaning": "สิทธิบัตร",
+      "example": "The invention is protected by a patent.",
+      "exampleTranslation": "สิ่งประดิษฐ์ได้รับการคุ้มครองโดยสิทธิบัตร"
+    },
+    {
+      "vocab": "intellectual property",
+      "pronunciation": "อิน-ทิ-เล็ค-ชวล พรอพ-เพอะ-ตี้",
+      "meaning": "ทรัพย์สินทางปัญญา",
+      "example": "Protect your intellectual property.",
+      "exampleTranslation": "ปกป้องทรัพย์สินทางปัญญาของคุณ"
+    },
+    {
+      "vocab": "ethical",
+      "pronunciation": "เอธ-ธิ-คัล",
+      "meaning": "เกี่ยวกับจริยธรรม",
+      "example": "AI raises ethical concerns.",
+      "exampleTranslation": "AI ทำให้เกิดความกังวลทางจริยธรรม"
+    }
+  ]
+}

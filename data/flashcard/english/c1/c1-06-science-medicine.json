@@ -1,0 +1,398 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Science & Medicine",
+    "description": "C1 level vocabulary for scientific and medical topics",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "science", "medicine"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "hypothesis",
+      "pronunciation": "ไฮ-พอธ-ธิ-ซิส",
+      "meaning": "สมมติฐาน",
+      "example": "The hypothesis needs to be tested.",
+      "exampleTranslation": "สมมติฐานต้องได้รับการทดสอบ"
+    },
+    {
+      "vocab": "genome",
+      "pronunciation": "จี-โนม",
+      "meaning": "จีโนม, พันธุกรรมทั้งหมด",
+      "example": "The human genome was fully sequenced.",
+      "exampleTranslation": "จีโนมมนุษย์ถูกถอดรหัสครบถ้วน"
+    },
+    {
+      "vocab": "mutation",
+      "pronunciation": "มิว-เท-ชั่น",
+      "meaning": "การกลายพันธุ์",
+      "example": "The virus has undergone multiple mutations.",
+      "exampleTranslation": "ไวรัสได้เกิดการกลายพันธุ์หลายครั้ง"
+    },
+    {
+      "vocab": "pathogen",
+      "pronunciation": "พา-โธ-เจน",
+      "meaning": "เชื้อก่อโรค",
+      "example": "The pathogen was identified.",
+      "exampleTranslation": "เชื้อก่อโรคได้รับการระบุ"
+    },
+    {
+      "vocab": "antibody",
+      "pronunciation": "แอน-ทิ-บอ-ดี้",
+      "meaning": "แอนติบอดี, สารภูมิต้านทาน",
+      "example": "Antibodies fight off infections.",
+      "exampleTranslation": "แอนติบอดีต่อสู้กับการติดเชื้อ"
+    },
+    {
+      "vocab": "antigen",
+      "pronunciation": "แอน-ทิ-เจน",
+      "meaning": "แอนติเจน, สารก่อภูมิต้านทาน",
+      "example": "The antigen triggers an immune response.",
+      "exampleTranslation": "แอนติเจนกระตุ้นการตอบสนองทางภูมิคุ้มกัน"
+    },
+    {
+      "vocab": "immunization",
+      "pronunciation": "อิม-มิว-ไน-เซ-ชั่น",
+      "meaning": "การสร้างภูมิคุ้มกัน",
+      "example": "Childhood immunization is essential.",
+      "exampleTranslation": "การสร้างภูมิคุ้มกันในเด็กเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "vaccine efficacy",
+      "pronunciation": "แวค-ซีน เอฟ-ฟิ-คะ-ซี",
+      "meaning": "ประสิทธิภาพของวัคซีน",
+      "example": "Vaccine efficacy was tested in trials.",
+      "exampleTranslation": "ประสิทธิภาพของวัคซีนถูกทดสอบในการทดลอง"
+    },
+    {
+      "vocab": "clinical trial",
+      "pronunciation": "คลิ-นิ-คัล ไทร-อัล",
+      "meaning": "การทดลองทางคลินิก",
+      "example": "The drug is in phase 3 clinical trials.",
+      "exampleTranslation": "ยาอยู่ในการทดลองทางคลินิกระยะที่ 3"
+    },
+    {
+      "vocab": "placebo",
+      "pronunciation": "พลา-ซี-โบ",
+      "meaning": "ยาหลอก",
+      "example": "The control group received a placebo.",
+      "exampleTranslation": "กลุ่มควบคุมได้รับยาหลอก"
+    },
+    {
+      "vocab": "double-blind",
+      "pronunciation": "ดับ-เบิล ไบลด์",
+      "meaning": "การทดลองแบบปกปิดสองทาง",
+      "example": "A double-blind study eliminates bias.",
+      "exampleTranslation": "การศึกษาแบบปกปิดสองทางขจัดอคติ"
+    },
+    {
+      "vocab": "epidemiology",
+      "pronunciation": "เอพ-พิ-ดี-มี-ออล-โล-จี",
+      "meaning": "ระบาดวิทยา",
+      "example": "Epidemiology tracks disease spread.",
+      "exampleTranslation": "ระบาดวิทยาติดตามการแพร่กระจายของโรค"
+    },
+    {
+      "vocab": "pandemic",
+      "pronunciation": "แพน-เด-มิค",
+      "meaning": "โรคระบาดใหญ่",
+      "example": "The pandemic affected the global economy.",
+      "exampleTranslation": "โรคระบาดใหญ่ส่งผลกระทบต่อเศรษฐกิจโลก"
+    },
+    {
+      "vocab": "endemic",
+      "pronunciation": "เอ็น-เด-มิค",
+      "meaning": "โรคประจำถิ่น",
+      "example": "Malaria is endemic in tropical regions.",
+      "exampleTranslation": "มาลาเรียเป็นโรคประจำถิ่นในเขตร้อน"
+    },
+    {
+      "vocab": "prognosis",
+      "pronunciation": "พรอก-โน-ซิส",
+      "meaning": "การพยากรณ์โรค",
+      "example": "The prognosis is favorable.",
+      "exampleTranslation": "การพยากรณ์โรคเป็นไปในทางที่ดี"
+    },
+    {
+      "vocab": "diagnosis",
+      "pronunciation": "ได-แอก-โน-ซิส",
+      "meaning": "การวินิจฉัยโรค",
+      "example": "Early diagnosis improves outcomes.",
+      "exampleTranslation": "การวินิจฉัยโรคเร็วช่วยให้ผลลัพธ์ดีขึ้น"
+    },
+    {
+      "vocab": "symptom",
+      "pronunciation": "ซิมพ์-ทอม",
+      "meaning": "อาการ",
+      "example": "Common symptoms include fever and cough.",
+      "exampleTranslation": "อาการทั่วไปได้แก่ไข้และไอ"
+    },
+    {
+      "vocab": "syndrome",
+      "pronunciation": "ซิน-โดรม",
+      "meaning": "กลุ่มอาการ",
+      "example": "The syndrome affects multiple systems.",
+      "exampleTranslation": "กลุ่มอาการส่งผลกระทบต่อหลายระบบ"
+    },
+    {
+      "vocab": "chronic",
+      "pronunciation": "ครอน-นิค",
+      "meaning": "เรื้อรัง",
+      "example": "Chronic diseases require long-term management.",
+      "exampleTranslation": "โรคเรื้อรังต้องการการจัดการระยะยาว"
+    },
+    {
+      "vocab": "acute",
+      "pronunciation": "อะ-คิวท์",
+      "meaning": "เฉียบพลัน",
+      "example": "Acute pain requires immediate attention.",
+      "exampleTranslation": "ความเจ็บปวดเฉียบพลันต้องการความสนใจทันที"
+    },
+    {
+      "vocab": "benign",
+      "pronunciation": "บิ-ไนน์",
+      "meaning": "ไม่ร้ายแรง (เนื้องอก)",
+      "example": "The tumor was benign.",
+      "exampleTranslation": "เนื้องอกไม่ใช่มะเร็ง"
+    },
+    {
+      "vocab": "malignant",
+      "pronunciation": "มะ-ลิก-แนนท์",
+      "meaning": "ร้ายแรง (มะเร็ง)",
+      "example": "A malignant tumor was detected.",
+      "exampleTranslation": "ตรวจพบเนื้องอกร้าย"
+    },
+    {
+      "vocab": "metastasis",
+      "pronunciation": "มิ-แทส-ทะ-ซิส",
+      "meaning": "การแพร่กระจายของมะเร็ง",
+      "example": "Metastasis to the lungs was found.",
+      "exampleTranslation": "พบการแพร่กระจายไปยังปอด"
+    },
+    {
+      "vocab": "biopsy",
+      "pronunciation": "ไบ-ออพ-ซี",
+      "meaning": "การตัดชิ้นเนื้อตรวจ",
+      "example": "A biopsy confirmed the diagnosis.",
+      "exampleTranslation": "การตัดชิ้นเนื้อตรวจยืนยันการวินิจฉัย"
+    },
+    {
+      "vocab": "neurotransmitter",
+      "pronunciation": "นิว-โร-แทรนส์-มิท-เทอะ",
+      "meaning": "สารสื่อประสาท",
+      "example": "Dopamine is a neurotransmitter.",
+      "exampleTranslation": "โดพามีนเป็นสารสื่อประสาท"
+    },
+    {
+      "vocab": "neuroplasticity",
+      "pronunciation": "นิว-โร-พลาส-ทิ-ซิ-ตี้",
+      "meaning": "ความยืดหยุ่นของสมอง",
+      "example": "Neuroplasticity allows the brain to adapt.",
+      "exampleTranslation": "ความยืดหยุ่นของสมองทำให้สมองปรับตัวได้"
+    },
+    {
+      "vocab": "cognition",
+      "pronunciation": "คอก-นิ-ชั่น",
+      "meaning": "การรับรู้, ความสามารถทางปัญญา",
+      "example": "Aging affects cognition.",
+      "exampleTranslation": "การสูงอายุส่งผลต่อความสามารถทางปัญญา"
+    },
+    {
+      "vocab": "metabolism",
+      "pronunciation": "เม-แทบ-โบ-ลิ-ซึม",
+      "meaning": "เมแทบอลิซึม, การเผาผลาญ",
+      "example": "Exercise boosts metabolism.",
+      "exampleTranslation": "การออกกำลังกายเพิ่มการเผาผลาญ"
+    },
+    {
+      "vocab": "homeostasis",
+      "pronunciation": "โฮ-มี-โอ-สเต-ซิส",
+      "meaning": "สมดุลภายในร่างกาย",
+      "example": "The body maintains homeostasis.",
+      "exampleTranslation": "ร่างกายรักษาสมดุลภายใน"
+    },
+    {
+      "vocab": "autoimmune",
+      "pronunciation": "ออ-โต-อิม-มิวน์",
+      "meaning": "ภูมิต้านตนเอง",
+      "example": "Lupus is an autoimmune disease.",
+      "exampleTranslation": "ลูปัสเป็นโรคภูมิต้านตนเอง"
+    },
+    {
+      "vocab": "degenerative",
+      "pronunciation": "ดิ-เจน-เนอ-ระ-ทีฟ",
+      "meaning": "เสื่อม",
+      "example": "Alzheimer's is a degenerative disease.",
+      "exampleTranslation": "อัลไซเมอร์เป็นโรคเสื่อม"
+    },
+    {
+      "vocab": "hereditary",
+      "pronunciation": "ฮิ-เรด-ดิ-ทะ-รี",
+      "meaning": "กรรมพันธุ์, ทางพันธุกรรม",
+      "example": "The condition is hereditary.",
+      "exampleTranslation": "ภาวะนี้เป็นกรรมพันธุ์"
+    },
+    {
+      "vocab": "congenital",
+      "pronunciation": "คอน-เจน-นิ-ทัล",
+      "meaning": "แต่กำเนิด",
+      "example": "A congenital heart defect was detected.",
+      "exampleTranslation": "ตรวจพบความผิดปกติของหัวใจแต่กำเนิด"
+    },
+    {
+      "vocab": "carcinogen",
+      "pronunciation": "คาร์-ซิ-โน-เจน",
+      "meaning": "สารก่อมะเร็ง",
+      "example": "Tobacco contains known carcinogens.",
+      "exampleTranslation": "ยาสูบมีสารก่อมะเร็งที่รู้จัก"
+    },
+    {
+      "vocab": "antibiotic resistance",
+      "pronunciation": "แอน-ทิ-ไบ-ออ-ทิค รี-ซิส-เทินซ์",
+      "meaning": "การดื้อยาปฏิชีวนะ",
+      "example": "Antibiotic resistance is a growing threat.",
+      "exampleTranslation": "การดื้อยาปฏิชีวนะเป็นภัยคุกคามที่เพิ่มขึ้น"
+    },
+    {
+      "vocab": "stem cell",
+      "pronunciation": "สเต็ม เซลล์",
+      "meaning": "เซลล์ต้นกำเนิด",
+      "example": "Stem cell therapy shows promise.",
+      "exampleTranslation": "การบำบัดด้วยเซลล์ต้นกำเนิดแสดงความหวัง"
+    },
+    {
+      "vocab": "gene therapy",
+      "pronunciation": "จีน เธอ-ระ-พี",
+      "meaning": "การบำบัดด้วยยีน",
+      "example": "Gene therapy could cure genetic diseases.",
+      "exampleTranslation": "การบำบัดด้วยยีนอาจรักษาโรคทางพันธุกรรมได้"
+    },
+    {
+      "vocab": "CRISPR",
+      "pronunciation": "คริส-เปอร์",
+      "meaning": "คริสเปอร์ (เทคโนโลยีแก้ไขยีน)",
+      "example": "CRISPR enables precise gene editing.",
+      "exampleTranslation": "คริสเปอร์ทำให้การแก้ไขยีนแม่นยำ"
+    },
+    {
+      "vocab": "nanotechnology",
+      "pronunciation": "นา-โน-เทค-นอล-โล-จี",
+      "meaning": "นาโนเทคโนโลยี",
+      "example": "Nanotechnology has medical applications.",
+      "exampleTranslation": "นาโนเทคโนโลยีมีการประยุกต์ใช้ทางการแพทย์"
+    },
+    {
+      "vocab": "biomarker",
+      "pronunciation": "ไบ-โอ-มาร์-คเกอะ",
+      "meaning": "ตัวบ่งชี้ทางชีวภาพ",
+      "example": "Biomarkers help detect diseases early.",
+      "exampleTranslation": "ตัวบ่งชี้ทางชีวภาพช่วยตรวจพบโรคได้เร็ว"
+    },
+    {
+      "vocab": "quantum mechanics",
+      "pronunciation": "ควอน-ทัม เมอ-แค-นิคส์",
+      "meaning": "กลศาสตร์ควอนตัม",
+      "example": "Quantum mechanics governs subatomic particles.",
+      "exampleTranslation": "กลศาสตร์ควอนตัมควบคุมอนุภาคย่อยของอะตอม"
+    },
+    {
+      "vocab": "entropy",
+      "pronunciation": "เอ็น-โทร-พี",
+      "meaning": "เอนโทรปี, ความไม่เป็นระเบียบ",
+      "example": "Entropy always increases in closed systems.",
+      "exampleTranslation": "เอนโทรปีเพิ่มขึ้นเสมอในระบบปิด"
+    },
+    {
+      "vocab": "antimatter",
+      "pronunciation": "แอน-ทิ-แมท-เทอะ",
+      "meaning": "ปฏิสสาร",
+      "example": "Antimatter is produced in particle accelerators.",
+      "exampleTranslation": "ปฏิสสารถูกผลิตในเครื่องเร่งอนุภาค"
+    },
+    {
+      "vocab": "dark matter",
+      "pronunciation": "ดาร์ค แมท-เทอะ",
+      "meaning": "สสารมืด",
+      "example": "Dark matter makes up most of the universe.",
+      "exampleTranslation": "สสารมืดเป็นส่วนใหญ่ของจักรวาล"
+    },
+    {
+      "vocab": "gravitational waves",
+      "pronunciation": "แกรฟ-วิ-เท-ชั่น-นัล เวฟส์",
+      "meaning": "คลื่นความโน้มถ่วง",
+      "example": "Gravitational waves were detected in 2015.",
+      "exampleTranslation": "คลื่นความโน้มถ่วงถูกตรวจพบในปี 2015"
+    },
+    {
+      "vocab": "biodiversity",
+      "pronunciation": "ไบ-โอ-ได-เวอร์-ซิ-ตี้",
+      "meaning": "ความหลากหลายทางชีวภาพ",
+      "example": "Biodiversity is declining rapidly.",
+      "exampleTranslation": "ความหลากหลายทางชีวภาพลดลงอย่างรวดเร็ว"
+    },
+    {
+      "vocab": "ecosystem",
+      "pronunciation": "อี-โค-ซิส-เท็ม",
+      "meaning": "ระบบนิเวศ",
+      "example": "The ecosystem is fragile.",
+      "exampleTranslation": "ระบบนิเวศเปราะบาง"
+    },
+    {
+      "vocab": "photosynthesis",
+      "pronunciation": "โฟ-โต-ซิน-ธิ-ซิส",
+      "meaning": "การสังเคราะห์แสง",
+      "example": "Photosynthesis converts sunlight to energy.",
+      "exampleTranslation": "การสังเคราะห์แสงเปลี่ยนแสงอาทิตย์เป็นพลังงาน"
+    },
+    {
+      "vocab": "symbiosis",
+      "pronunciation": "ซิม-ไบ-โอ-ซิส",
+      "meaning": "การอยู่ร่วมกัน, ภาวะพึ่งพาอาศัย",
+      "example": "Symbiosis benefits both organisms.",
+      "exampleTranslation": "การอยู่ร่วมกันเป็นประโยชน์ต่อสิ่งมีชีวิตทั้งสอง"
+    },
+    {
+      "vocab": "taxonomy",
+      "pronunciation": "แท็ก-ซอน-โน-มี",
+      "meaning": "อนุกรมวิธาน",
+      "example": "Taxonomy classifies living organisms.",
+      "exampleTranslation": "อนุกรมวิธานจำแนกสิ่งมีชีวิต"
+    },
+    {
+      "vocab": "phylogeny",
+      "pronunciation": "ไฟ-ลอ-เจ-นี",
+      "meaning": "วิวัฒนาการสายพันธุ์",
+      "example": "Phylogeny shows evolutionary relationships.",
+      "exampleTranslation": "วิวัฒนาการสายพันธุ์แสดงความสัมพันธ์ทางวิวัฒนาการ"
+    },
+    {
+      "vocab": "catalysis",
+      "pronunciation": "คะ-แทล-ลิ-ซิส",
+      "meaning": "การเร่งปฏิกิริยา",
+      "example": "Enzymes enable catalysis in the body.",
+      "exampleTranslation": "เอนไซม์ทำให้เกิดการเร่งปฏิกิริยาในร่างกาย"
+    },
+    {
+      "vocab": "isotope",
+      "pronunciation": "ไอ-โซ-โทป",
+      "meaning": "ไอโซโทป",
+      "example": "Radioactive isotopes are used in medicine.",
+      "exampleTranslation": "ไอโซโทปกัมมันตรังสีถูกใช้ในการแพทย์"
+    },
+    {
+      "vocab": "polymer",
+      "pronunciation": "พอ-ลิ-เมอะ",
+      "meaning": "พอลิเมอร์",
+      "example": "DNA is a biological polymer.",
+      "exampleTranslation": "ดีเอ็นเอเป็นพอลิเมอร์ทางชีวภาพ"
+    },
+    {
+      "vocab": "allotrope",
+      "pronunciation": "แอล-โล-โทรป",
+      "meaning": "รูปแบบต่างๆ ของธาตุเดียวกัน",
+      "example": "Diamond and graphite are carbon allotropes.",
+      "exampleTranslation": "เพชรและแกรไฟต์เป็นรูปแบบต่างๆ ของคาร์บอน"
+    }
+  ]
+}

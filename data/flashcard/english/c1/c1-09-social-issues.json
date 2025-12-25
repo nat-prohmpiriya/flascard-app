@@ -1,0 +1,391 @@
+{
+  "version": "2.0",
+  "deck": {
+    "name": "C1 Social Issues",
+    "description": "C1 level vocabulary for discussing complex social issues",
+    "category": "CEFR C1",
+    "tags": ["english", "C1", "vocabulary", "social", "issues"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "inequality",
+      "pronunciation": "อิน-อี-ควอล-ลิ-ตี้",
+      "meaning": "ความไม่เท่าเทียม",
+      "example": "Income inequality is widening globally.",
+      "exampleTranslation": "ความไม่เท่าเทียมด้านรายได้กว้างขึ้นทั่วโลก"
+    },
+    {
+      "vocab": "discrimination",
+      "pronunciation": "ดิส-คริม-มิ-เน-ชั่น",
+      "meaning": "การเลือกปฏิบัติ",
+      "example": "Fight discrimination in all forms.",
+      "exampleTranslation": "ต่อสู้กับการเลือกปฏิบัติในทุกรูปแบบ"
+    },
+    {
+      "vocab": "marginalization",
+      "pronunciation": "มาร์-จิ-นัล-ไล-เซ-ชั่น",
+      "meaning": "การกีดกัน, การทำให้อยู่ชายขอบ",
+      "example": "Marginalization affects vulnerable groups.",
+      "exampleTranslation": "การกีดกันส่งผลกระทบต่อกลุ่มเปราะบาง"
+    },
+    {
+      "vocab": "disenfranchisement",
+      "pronunciation": "ดิส-เอ็น-แฟรน-ไชส์-เมินท์",
+      "meaning": "การถูกริดรอนสิทธิ์",
+      "example": "Voter disenfranchisement undermines democracy.",
+      "exampleTranslation": "การถูกริดรอนสิทธิ์ในการเลือกตั้งบ่อนทำลายประชาธิปไตย"
+    },
+    {
+      "vocab": "systemic",
+      "pronunciation": "ซิส-เท-มิค",
+      "meaning": "เชิงระบบ, ทั้งระบบ",
+      "example": "Address systemic racism.",
+      "exampleTranslation": "แก้ไขการเหยียดเชื้อชาติเชิงระบบ"
+    },
+    {
+      "vocab": "institutionalized",
+      "pronunciation": "อิน-สติ-ทิว-ชั่น-นัล-ไลซ์ด",
+      "meaning": "ฝังรากในสถาบัน",
+      "example": "Institutionalized bias is hard to change.",
+      "exampleTranslation": "อคติที่ฝังรากในสถาบันเปลี่ยนยาก"
+    },
+    {
+      "vocab": "socioeconomic",
+      "pronunciation": "โซ-ซิ-โอ-อี-โค-นอ-มิค",
+      "meaning": "ทางเศรษฐกิจและสังคม",
+      "example": "Socioeconomic factors affect health outcomes.",
+      "exampleTranslation": "ปัจจัยทางเศรษฐกิจและสังคมส่งผลต่อผลลัพธ์ด้านสุขภาพ"
+    },
+    {
+      "vocab": "demographic",
+      "pronunciation": "เด-โม-กรา-ฟิค",
+      "meaning": "ประชากรศาสตร์",
+      "example": "Demographic changes affect policy.",
+      "exampleTranslation": "การเปลี่ยนแปลงทางประชากรศาสตร์ส่งผลต่อนโยบาย"
+    },
+    {
+      "vocab": "gentrification",
+      "pronunciation": "เจน-ทริ-ฟิ-เค-ชั่น",
+      "meaning": "การปรับปรุงพื้นที่ให้เป็นชนชั้นกลาง",
+      "example": "Gentrification displaces long-term residents.",
+      "exampleTranslation": "การปรับปรุงพื้นที่ทำให้ผู้อยู่อาศัยเดิมต้องย้ายออก"
+    },
+    {
+      "vocab": "urbanization",
+      "pronunciation": "เออร์-บัน-ไน-เซ-ชั่น",
+      "meaning": "การกลายเป็นเมือง",
+      "example": "Rapid urbanization creates challenges.",
+      "exampleTranslation": "การกลายเป็นเมืองอย่างรวดเร็วสร้างความท้าทาย"
+    },
+    {
+      "vocab": "migration",
+      "pronunciation": "ไม-เกร-ชั่น",
+      "meaning": "การอพยพ",
+      "example": "Climate migration is increasing.",
+      "exampleTranslation": "การอพยพเนื่องจากสภาพอากาศเพิ่มขึ้น"
+    },
+    {
+      "vocab": "refugee",
+      "pronunciation": "เร-ฟิว-จี",
+      "meaning": "ผู้ลี้ภัย",
+      "example": "Refugees flee conflict zones.",
+      "exampleTranslation": "ผู้ลี้ภัยหนีจากพื้นที่ขัดแย้ง"
+    },
+    {
+      "vocab": "asylum seeker",
+      "pronunciation": "อะ-ไซ-ลัม ซี-เคอะ",
+      "meaning": "ผู้ขอลี้ภัย",
+      "example": "Asylum seekers await processing.",
+      "exampleTranslation": "ผู้ขอลี้ภัยรอการพิจารณา"
+    },
+    {
+      "vocab": "xenophobia",
+      "pronunciation": "ซี-โน-โฟ-เบีย",
+      "meaning": "ความกลัวคนต่างชาติ",
+      "example": "Combat xenophobia and intolerance.",
+      "exampleTranslation": "ต่อสู้กับความกลัวคนต่างชาติและความไม่ยอมรับ"
+    },
+    {
+      "vocab": "assimilation",
+      "pronunciation": "อะ-ซิม-มิ-เล-ชั่น",
+      "meaning": "การกลืนกลาย",
+      "example": "Cultural assimilation is debated.",
+      "exampleTranslation": "การกลืนกลายทางวัฒนธรรมเป็นที่ถกเถียง"
+    },
+    {
+      "vocab": "multiculturalism",
+      "pronunciation": "มัล-ทิ-คัล-เจอ-รัล-ลิ-ซึม",
+      "meaning": "พหุวัฒนธรรม",
+      "example": "Multiculturalism celebrates diversity.",
+      "exampleTranslation": "พหุวัฒนธรรมเฉลิมฉลองความหลากหลาย"
+    },
+    {
+      "vocab": "intersectionality",
+      "pronunciation": "อิน-เทอะ-เซค-ชั่น-นัล-ลิ-ตี้",
+      "meaning": "ทับซ้อนของอัตลักษณ์",
+      "example": "Intersectionality examines overlapping identities.",
+      "exampleTranslation": "การทับซ้อนของอัตลักษณ์ศึกษาอัตลักษณ์ที่ซ้อนทับกัน"
+    },
+    {
+      "vocab": "privilege",
+      "pronunciation": "พริฟ-วิ-เลจ",
+      "meaning": "สิทธิพิเศษ, อภิสิทธิ์",
+      "example": "Acknowledge your privilege.",
+      "exampleTranslation": "ยอมรับอภิสิทธิ์ของคุณ"
+    },
+    {
+      "vocab": "affirmative action",
+      "pronunciation": "อะ-เฟอร์-มะ-ทีฟ แอค-ชั่น",
+      "meaning": "มาตรการเชิงรุกเพื่อความเท่าเทียม",
+      "example": "Affirmative action promotes diversity.",
+      "exampleTranslation": "มาตรการเชิงรุกส่งเสริมความหลากหลาย"
+    },
+    {
+      "vocab": "advocacy",
+      "pronunciation": "แอด-โว-คะ-ซี",
+      "meaning": "การสนับสนุน, การรณรงค์",
+      "example": "Human rights advocacy is essential.",
+      "exampleTranslation": "การรณรงค์ด้านสิทธิมนุษยชนเป็นสิ่งจำเป็น"
+    },
+    {
+      "vocab": "activism",
+      "pronunciation": "แอค-ทิ-วิ-ซึม",
+      "meaning": "การเคลื่อนไหว",
+      "example": "Climate activism is growing.",
+      "exampleTranslation": "การเคลื่อนไหวด้านสภาพอากาศกำลังเติบโต"
+    },
+    {
+      "vocab": "grassroots",
+      "pronunciation": "กราส-รูทส์",
+      "meaning": "ระดับรากหญ้า",
+      "example": "Grassroots movements create change.",
+      "exampleTranslation": "ขบวนการระดับรากหญ้าสร้างการเปลี่ยนแปลง"
+    },
+    {
+      "vocab": "civil disobedience",
+      "pronunciation": "ซิ-วิล ดิส-โอ-บี-เดียนซ์",
+      "meaning": "อารยะขัดขืน",
+      "example": "Civil disobedience challenges unjust laws.",
+      "exampleTranslation": "อารยะขัดขืนท้าทายกฎหมายที่ไม่ยุติธรรม"
+    },
+    {
+      "vocab": "emancipation",
+      "pronunciation": "อิ-แมน-ซิ-เพ-ชั่น",
+      "meaning": "การปลดปล่อย",
+      "example": "The emancipation movement sought freedom.",
+      "exampleTranslation": "ขบวนการปลดปล่อยแสวงหาเสรีภาพ"
+    },
+    {
+      "vocab": "liberation",
+      "pronunciation": "ลิ-เบอ-เร-ชั่น",
+      "meaning": "การปลดปล่อย",
+      "example": "The liberation struggle continues.",
+      "exampleTranslation": "การต่อสู้เพื่อการปลดปล่อยดำเนินต่อไป"
+    },
+    {
+      "vocab": "empowerment",
+      "pronunciation": "เอ็ม-พาว-เออะ-เมินท์",
+      "meaning": "การเสริมพลัง",
+      "example": "Women's empowerment drives development.",
+      "exampleTranslation": "การเสริมพลังสตรีขับเคลื่อนการพัฒนา"
+    },
+    {
+      "vocab": "stigma",
+      "pronunciation": "สติก-มา",
+      "meaning": "ตราบาป, ความอับอาย",
+      "example": "Reduce mental health stigma.",
+      "exampleTranslation": "ลดตราบาปเรื่องสุขภาพจิต"
+    },
+    {
+      "vocab": "stereotype",
+      "pronunciation": "สเต-รี-โอ-ไทป์",
+      "meaning": "อคติ, ความเชื่อเหมารวม",
+      "example": "Challenge harmful stereotypes.",
+      "exampleTranslation": "ท้าทายอคติที่เป็นอันตราย"
+    },
+    {
+      "vocab": "prejudice",
+      "pronunciation": "เพร็จ-จู-ดิส",
+      "meaning": "อคติ",
+      "example": "Prejudice stems from ignorance.",
+      "exampleTranslation": "อคติเกิดจากความไม่รู้"
+    },
+    {
+      "vocab": "bias",
+      "pronunciation": "ไบ-แอส",
+      "meaning": "อคติ, ความลำเอียง",
+      "example": "Unconscious bias affects decisions.",
+      "exampleTranslation": "อคติโดยไม่รู้ตัวส่งผลต่อการตัดสินใจ"
+    },
+    {
+      "vocab": "disparity",
+      "pronunciation": "ดิส-แพ-ริ-ตี้",
+      "meaning": "ความเหลื่อมล้ำ",
+      "example": "Health disparities persist.",
+      "exampleTranslation": "ความเหลื่อมล้ำด้านสุขภาพยังคงอยู่"
+    },
+    {
+      "vocab": "disproportionate",
+      "pronunciation": "ดิส-โพร-พอร์-ชั่น-เนท",
+      "meaning": "ไม่สมสัดส่วน",
+      "example": "Minorities face disproportionate impact.",
+      "exampleTranslation": "ชนกลุ่มน้อยเผชิญผลกระทบที่ไม่สมสัดส่วน"
+    },
+    {
+      "vocab": "underrepresented",
+      "pronunciation": "อัน-เดอะ-เร็พ-พรี-เซ็น-เท็ด",
+      "meaning": "มีตัวแทนน้อยเกินไป",
+      "example": "Underrepresented groups need more visibility.",
+      "exampleTranslation": "กลุ่มที่มีตัวแทนน้อยต้องการความเห็นมากขึ้น"
+    },
+    {
+      "vocab": "vulnerability",
+      "pronunciation": "วัล-เนอ-ระ-บิ-ลิ-ตี้",
+      "meaning": "ความเปราะบาง",
+      "example": "Reduce community vulnerability.",
+      "exampleTranslation": "ลดความเปราะบางของชุมชน"
+    },
+    {
+      "vocab": "resilience",
+      "pronunciation": "รี-ซิล-เลียนซ์",
+      "meaning": "ความยืดหยุ่น, การฟื้นตัว",
+      "example": "Build community resilience.",
+      "exampleTranslation": "สร้างความยืดหยุ่นของชุมชน"
+    },
+    {
+      "vocab": "sustainability",
+      "pronunciation": "ซัส-เทน-นะ-บิ-ลิ-ตี้",
+      "meaning": "ความยั่งยืน",
+      "example": "Sustainability requires collective action.",
+      "exampleTranslation": "ความยั่งยืนต้องการการกระทำร่วมกัน"
+    },
+    {
+      "vocab": "carbon footprint",
+      "pronunciation": "คาร์-บอน ฟุท-พริ้นท์",
+      "meaning": "รอยเท้าคาร์บอน",
+      "example": "Reduce your carbon footprint.",
+      "exampleTranslation": "ลดรอยเท้าคาร์บอนของคุณ"
+    },
+    {
+      "vocab": "climate justice",
+      "pronunciation": "ไคล-เมท จัส-ทิส",
+      "meaning": "ความเป็นธรรมด้านสภาพอากาศ",
+      "example": "Climate justice addresses unequal impacts.",
+      "exampleTranslation": "ความเป็นธรรมด้านสภาพอากาศกล่าวถึงผลกระทบที่ไม่เท่าเทียม"
+    },
+    {
+      "vocab": "food security",
+      "pronunciation": "ฟูด ซิ-คิว-ริ-ตี้",
+      "meaning": "ความมั่นคงทางอาหาร",
+      "example": "Food security is a global concern.",
+      "exampleTranslation": "ความมั่นคงทางอาหารเป็นความกังวลระดับโลก"
+    },
+    {
+      "vocab": "homelessness",
+      "pronunciation": "โฮม-เลส-เนส",
+      "meaning": "การไร้ที่อยู่",
+      "example": "Address homelessness through housing policies.",
+      "exampleTranslation": "แก้ไขการไร้ที่อยู่ผ่านนโยบายที่อยู่อาศัย"
+    },
+    {
+      "vocab": "poverty line",
+      "pronunciation": "พอฟ-เวอะ-ตี้ ไลน์",
+      "meaning": "เส้นความยากจน",
+      "example": "Millions live below the poverty line.",
+      "exampleTranslation": "หลายล้านคนอยู่ใต้เส้นความยากจน"
+    },
+    {
+      "vocab": "social mobility",
+      "pronunciation": "โซ-เชียล โม-บิ-ลิ-ตี้",
+      "meaning": "การเลื่อนชั้นทางสังคม",
+      "example": "Education promotes social mobility.",
+      "exampleTranslation": "การศึกษาส่งเสริมการเลื่อนชั้นทางสังคม"
+    },
+    {
+      "vocab": "welfare state",
+      "pronunciation": "เวล-แฟร์ สเตท",
+      "meaning": "รัฐสวัสดิการ",
+      "example": "The welfare state provides social protection.",
+      "exampleTranslation": "รัฐสวัสดิการให้ความคุ้มครองทางสังคม"
+    },
+    {
+      "vocab": "universal basic income",
+      "pronunciation": "ยู-นิ-เวอร์-ซัล เบ-ซิค อิน-คัม",
+      "meaning": "รายได้พื้นฐานถ้วนหน้า",
+      "example": "Universal basic income is being tested.",
+      "exampleTranslation": "รายได้พื้นฐานถ้วนหน้ากำลังถูกทดสอบ"
+    },
+    {
+      "vocab": "healthcare access",
+      "pronunciation": "เฮลธ์-แคร์ แอค-เซส",
+      "meaning": "การเข้าถึงบริการสุขภาพ",
+      "example": "Improve healthcare access for all.",
+      "exampleTranslation": "ปรับปรุงการเข้าถึงบริการสุขภาพสำหรับทุกคน"
+    },
+    {
+      "vocab": "reproductive rights",
+      "pronunciation": "รี-โพร-ดัค-ทีฟ ไรท์ส",
+      "meaning": "สิทธิทางการเจริญพันธุ์",
+      "example": "Reproductive rights are human rights.",
+      "exampleTranslation": "สิทธิทางการเจริญพันธุ์เป็นสิทธิมนุษยชน"
+    },
+    {
+      "vocab": "gender parity",
+      "pronunciation": "เจน-เดอะ แพ-ริ-ตี้",
+      "meaning": "ความเท่าเทียมทางเพศ",
+      "example": "Achieve gender parity in leadership.",
+      "exampleTranslation": "บรรลุความเท่าเทียมทางเพศในการเป็นผู้นำ"
+    },
+    {
+      "vocab": "LGBTQ+ rights",
+      "pronunciation": "แอล-จี-บี-ที-คิว ไรท์ส",
+      "meaning": "สิทธิ LGBTQ+",
+      "example": "LGBTQ+ rights have advanced globally.",
+      "exampleTranslation": "สิทธิ LGBTQ+ ก้าวหน้าทั่วโลก"
+    },
+    {
+      "vocab": "disability rights",
+      "pronunciation": "ดิส-อะ-บิ-ลิ-ตี้ ไรท์ส",
+      "meaning": "สิทธิคนพิการ",
+      "example": "Disability rights ensure equal access.",
+      "exampleTranslation": "สิทธิคนพิการรับประกันการเข้าถึงที่เท่าเทียม"
+    },
+    {
+      "vocab": "indigenous rights",
+      "pronunciation": "อิน-ดิจ-จิ-นัส ไรท์ส",
+      "meaning": "สิทธิชนพื้นเมือง",
+      "example": "Protect indigenous rights and lands.",
+      "exampleTranslation": "ปกป้องสิทธิและดินแดนของชนพื้นเมือง"
+    },
+    {
+      "vocab": "reparations",
+      "pronunciation": "เร-พะ-เร-ชั่นส์",
+      "meaning": "การชดเชย, การชดใช้",
+      "example": "Reparations for historical injustices are debated.",
+      "exampleTranslation": "การชดเชยสำหรับความอยุติธรรมทางประวัติศาสตร์เป็นที่ถกเถียง"
+    },
+    {
+      "vocab": "reconciliation",
+      "pronunciation": "เร-คอน-ซิล-ลิ-เอ-ชั่น",
+      "meaning": "การปรองดอง",
+      "example": "National reconciliation is needed.",
+      "exampleTranslation": "ต้องการการปรองดองแห่งชาติ"
+    },
+    {
+      "vocab": "restorative justice",
+      "pronunciation": "รี-สตอ-ระ-ทีฟ จัส-ทิส",
+      "meaning": "กระบวนการยุติธรรมเชิงสมานฉันท์",
+      "example": "Restorative justice focuses on healing.",
+      "exampleTranslation": "กระบวนการยุติธรรมเชิงสมานฉันท์มุ่งเน้นการเยียวยา"
+    },
+    {
+      "vocab": "incarceration",
+      "pronunciation": "อิน-คาร์-เซอ-เร-ชั่น",
+      "meaning": "การจำคุก",
+      "example": "Mass incarceration is criticized.",
+      "exampleTranslation": "การจำคุกจำนวนมากถูกวิพากษ์วิจารณ์"
+    }
+  ]
+}
