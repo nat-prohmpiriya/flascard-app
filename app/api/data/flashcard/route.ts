@@ -6,7 +6,7 @@ import { getAdminDb } from '@/lib/firebase-admin';
 import { Language } from '@/types';
 import { Timestamp } from 'firebase-admin/firestore';
 
-const DATA_DIR = path.join(process.cwd(), 'data/cefr/english');
+const DATA_BASE_DIR = path.join(process.cwd(), 'data');
 
 // Default SRS values
 const DEFAULT_CARD_SRS = {
@@ -21,11 +21,83 @@ function validateApiKey(request: Request): boolean {
   return apiKey === expectedKey && !!expectedKey;
 }
 
+// Validate path to prevent directory traversal
+function validatePath(inputPath: string): boolean {
+  const normalized = path.normalize(inputPath);
+  // Must not contain .. or start with /
+  if (normalized.includes('..') || path.isAbsolute(normalized)) {
+    return false;
+  }
+  return true;
+}
+
 interface ImportRequest {
+  path: string; // e.g., "cefr/english" or "cefr/chinese"
   filename: string;
   userId: string;
 }
 
+// GET - List available flashcard files
+export async function GET(request: Request) {
+  if (!validateApiKey(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const { searchParams } = new URL(request.url);
+    const subPath = searchParams.get('path') || 'cefr/english';
+
+    if (!validatePath(subPath)) {
+      return NextResponse.json({ error: 'Invalid path' }, { status: 400 });
+    }
+
+    const dirPath = path.join(DATA_BASE_DIR, subPath);
+
+    if (!fs.existsSync(dirPath)) {
+      return NextResponse.json({ error: `Directory not found: ${subPath}` }, { status: 404 });
+    }
+
+    const files = fs.readdirSync(dirPath)
+      .filter(file => file.endsWith('.json'))
+      .map(file => {
+        try {
+          const filePath = path.join(dirPath, file);
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const data = JSON.parse(content);
+          return {
+            filename: file,
+            deckName: data.deck?.name || 'Unknown',
+            cardCount: data.cards?.length || 0,
+            category: data.deck?.category || 'Unknown',
+            sourceLang: data.deck?.sourceLang || 'en',
+            targetLang: data.deck?.targetLang || 'th',
+          };
+        } catch {
+          return {
+            filename: file,
+            deckName: 'Error reading file',
+            cardCount: 0,
+            category: 'Unknown',
+          };
+        }
+      });
+
+    return NextResponse.json({
+      success: true,
+      path: subPath,
+      files,
+      totalFiles: files.length,
+    });
+  } catch (error) {
+    console.error('Error listing files:', error);
+    return NextResponse.json(
+      { error: 'Failed to list files', details: String(error) },
+      { status: 500 }
+    );
+  }
+}
+
+// POST - Import flashcard JSON to Firestore
 export async function POST(request: Request) {
   if (!validateApiKey(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -33,7 +105,7 @@ export async function POST(request: Request) {
 
   try {
     const body: ImportRequest = await request.json();
-    const { filename, userId } = body;
+    const { path: subPath, filename, userId } = body;
 
     if (!filename || !userId) {
       return NextResponse.json(
@@ -42,19 +114,17 @@ export async function POST(request: Request) {
       );
     }
 
-    // Validate filename to prevent path traversal
-    if (filename.includes('..') || filename.includes('/')) {
-      return NextResponse.json(
-        { error: 'Invalid filename' },
-        { status: 400 }
-      );
+    const dataPath = subPath || 'cefr/english';
+
+    if (!validatePath(dataPath) || !validatePath(filename)) {
+      return NextResponse.json({ error: 'Invalid path or filename' }, { status: 400 });
     }
 
-    const filePath = path.join(DATA_DIR, filename);
+    const filePath = path.join(DATA_BASE_DIR, dataPath, filename);
 
     if (!fs.existsSync(filePath)) {
       return NextResponse.json(
-        { error: `File not found: ${filename}` },
+        { error: `File not found: ${dataPath}/${filename}` },
         { status: 404 }
       );
     }
@@ -89,30 +159,35 @@ export async function POST(request: Request) {
     const deckRef = await db.collection('decks').add(deckData);
     const deckId = deckRef.id;
 
-    // Create cards using batch write
-    const batch = db.batch();
+    // Create cards using batch write (max 500 per batch)
     const cardsCount = parsed.cards.length;
+    const batchSize = 400;
 
-    parsed.cards.forEach((card) => {
-      const cardRef = db.collection('cards').doc();
-      batch.set(cardRef, {
-        userId,
-        deckId,
-        vocab: card.vocab,
-        pronunciation: card.pronunciation,
-        meaning: card.meaning,
-        example: card.example,
-        exampleTranslation: card.exampleTranslation,
-        nextReview: now,
-        interval: DEFAULT_CARD_SRS.interval,
-        easeFactor: DEFAULT_CARD_SRS.easeFactor,
-        repetitions: DEFAULT_CARD_SRS.repetitions,
-        createdAt: now,
-        updatedAt: now,
+    for (let i = 0; i < cardsCount; i += batchSize) {
+      const batch = db.batch();
+      const chunk = parsed.cards.slice(i, i + batchSize);
+
+      chunk.forEach((card) => {
+        const cardRef = db.collection('cards').doc();
+        batch.set(cardRef, {
+          userId,
+          deckId,
+          vocab: card.vocab,
+          pronunciation: card.pronunciation || '',
+          meaning: card.meaning,
+          example: card.example || '',
+          exampleTranslation: card.exampleTranslation || '',
+          nextReview: now,
+          interval: DEFAULT_CARD_SRS.interval,
+          easeFactor: DEFAULT_CARD_SRS.easeFactor,
+          repetitions: DEFAULT_CARD_SRS.repetitions,
+          createdAt: now,
+          updatedAt: now,
+        });
       });
-    });
 
-    await batch.commit();
+      await batch.commit();
+    }
 
     // Update deck card count
     await deckRef.update({
