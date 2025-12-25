@@ -3,11 +3,12 @@
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTheme } from '@/contexts/ThemeContext';
+import { useNotifications } from '@/hooks/useNotifications';
 import { ProtectedRoute } from '@/components/common/ProtectedRoute';
+import { NotificationSettingsComponent } from '@/components/notifications/NotificationSettings';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { updateUserSettings } from '@/services/auth';
 import { toast } from 'sonner';
@@ -16,9 +17,17 @@ import { Sun, Moon, Monitor } from 'lucide-react';
 export default function SettingsPage() {
   const { firebaseUser, user } = useAuth();
   const { theme, setTheme } = useTheme();
+  const {
+    isSupported: notificationsSupported,
+    permission: notificationPermission,
+    settings: notificationSettings,
+    loading: notificationsLoading,
+    requestPermission,
+    updateSettings: updateNotificationSettings,
+    testNotification,
+  } = useNotifications();
 
   const [dailyGoal, setDailyGoal] = useState(user?.settings?.dailyGoal || 20);
-  const [notifications, setNotifications] = useState(user?.settings?.notifications ?? true);
   const [saving, setSaving] = useState(false);
 
   const handleSaveSettings = async () => {
@@ -28,7 +37,6 @@ export default function SettingsPage() {
     try {
       await updateUserSettings(firebaseUser.uid, {
         dailyGoal,
-        notifications,
         theme,
       });
       toast.success('Settings saved successfully!');
@@ -118,21 +126,19 @@ export default function SettingsPage() {
                 Number of cards you want to study each day
               </p>
             </div>
-
-            <div className="flex items-center justify-between">
-              <div className="space-y-0.5">
-                <Label>Notifications</Label>
-                <p className="text-sm text-muted-foreground">
-                  Get reminded to study
-                </p>
-              </div>
-              <Switch
-                checked={notifications}
-                onCheckedChange={setNotifications}
-              />
-            </div>
           </CardContent>
         </Card>
+
+        {/* Notification Settings */}
+        <NotificationSettingsComponent
+          settings={notificationSettings}
+          permission={notificationPermission}
+          isSupported={notificationsSupported}
+          loading={notificationsLoading}
+          onUpdateSettings={updateNotificationSettings}
+          onRequestPermission={requestPermission}
+          onTestNotification={testNotification}
+        />
 
         {/* Save Button */}
         <Button onClick={handleSaveSettings} disabled={saving} className="w-full">
