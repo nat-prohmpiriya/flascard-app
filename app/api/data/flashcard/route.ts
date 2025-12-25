@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { parseJSON } from '@/services/importExport';
-import { getAdminDb } from '@/lib/firebase-admin';
+import { getAdminDb, validateUserId } from '@/lib/firebase-admin';
 import { Language } from '@/types';
 import { Timestamp } from 'firebase-admin/firestore';
 
@@ -114,6 +114,15 @@ export async function POST(request: Request) {
       );
     }
 
+    // Validate userId exists in Firebase Auth
+    const isValidUser = await validateUserId(userId);
+    if (!isValidUser) {
+      return NextResponse.json(
+        { error: `User not found in Firebase Auth: ${userId}` },
+        { status: 404 }
+      );
+    }
+
     const dataPath = subPath || 'cefr/english';
 
     if (!validatePath(dataPath) || !validatePath(filename)) {
@@ -213,6 +222,104 @@ export async function POST(request: Request) {
   }
 }
 
+// PUT - Update deck or card
+interface UpdateDeckData {
+  name?: string;
+  description?: string;
+  category?: string;
+  tags?: string[];
+  sourceLang?: Language;
+  targetLang?: Language;
+}
+
+interface UpdateCardData {
+  vocab?: string;
+  pronunciation?: string;
+  meaning?: string;
+  example?: string;
+  exampleTranslation?: string;
+  // SRS fields
+  interval?: number;
+  easeFactor?: number;
+  repetitions?: number;
+  nextReview?: string; // ISO date string
+}
+
+interface UpdateRequest {
+  type: 'deck' | 'card';
+  id: string;
+  data: UpdateDeckData | UpdateCardData;
+}
+
+export async function PUT(request: Request) {
+  if (!validateApiKey(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const body: UpdateRequest = await request.json();
+    const { type, id, data } = body;
+
+    if (!type || !id || !data) {
+      return NextResponse.json(
+        { error: 'Missing required fields: type, id, data' },
+        { status: 400 }
+      );
+    }
+
+    if (type !== 'deck' && type !== 'card') {
+      return NextResponse.json(
+        { error: 'Invalid type. Must be "deck" or "card"' },
+        { status: 400 }
+      );
+    }
+
+    const db = getAdminDb();
+    const collection = type === 'deck' ? 'decks' : 'cards';
+    const docRef = db.collection(collection).doc(id);
+
+    // Check if document exists
+    const docSnap = await docRef.get();
+    if (!docSnap.exists) {
+      return NextResponse.json(
+        { error: `${type} not found with id: ${id}` },
+        { status: 404 }
+      );
+    }
+
+    // Prepare update data
+    const updateData: Record<string, unknown> = {
+      ...data,
+      updatedAt: Timestamp.now(),
+    };
+
+    // Convert nextReview string to Timestamp if provided
+    if (type === 'card' && 'nextReview' in data && data.nextReview) {
+      updateData.nextReview = Timestamp.fromDate(new Date(data.nextReview as string));
+    }
+
+    await docRef.update(updateData);
+
+    // Get updated document
+    const updatedDoc = await docRef.get();
+
+    return NextResponse.json({
+      success: true,
+      message: `${type} updated successfully`,
+      [type]: {
+        id: updatedDoc.id,
+        ...updatedDoc.data(),
+      },
+    });
+  } catch (error) {
+    console.error('Update error:', error);
+    return NextResponse.json(
+      { error: 'Failed to update', details: String(error) },
+      { status: 500 }
+    );
+  }
+}
+
 // DELETE - Delete all decks and cards for a user
 export async function DELETE(request: Request) {
   if (!validateApiKey(request)) {
@@ -227,6 +334,15 @@ export async function DELETE(request: Request) {
       return NextResponse.json(
         { error: 'Missing required field: userId' },
         { status: 400 }
+      );
+    }
+
+    // Validate userId exists in Firebase Auth
+    const isValidUser = await validateUserId(userId);
+    if (!isValidUser) {
+      return NextResponse.json(
+        { error: `User not found in Firebase Auth: ${userId}` },
+        { status: 404 }
       );
     }
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
-import { getAdminDb } from '@/lib/firebase-admin';
+import { getAdminDb, validateUserId } from '@/lib/firebase-admin';
 import { Timestamp } from 'firebase-admin/firestore';
 import { parseMarkdownToSnippets, validateMarkdown } from '@/lib/markdownParser';
 import { SUPPORTED_LANGUAGES } from '@/models/typingSnippet';
@@ -127,6 +127,15 @@ export async function POST(request: Request) {
       );
     }
 
+    // Validate userId exists in Firebase Auth
+    const isValidUser = await validateUserId(userId);
+    if (!isValidUser) {
+      return NextResponse.json(
+        { error: `User not found in Firebase Auth: ${userId}` },
+        { status: 404 }
+      );
+    }
+
     if (!validateFilename(filename)) {
       return NextResponse.json({ error: 'Invalid filename' }, { status: 400 });
     }
@@ -217,6 +226,79 @@ export async function POST(request: Request) {
   }
 }
 
+// PUT - Update typing snippet
+interface UpdateSnippetData {
+  language?: string;
+  languageName?: string;
+  title?: string;
+  description?: string;
+  code?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  isPreset?: boolean;
+  isPublic?: boolean;
+}
+
+interface UpdateRequest {
+  id: string;
+  data: UpdateSnippetData;
+}
+
+export async function PUT(request: Request) {
+  if (!validateApiKey(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const body: UpdateRequest = await request.json();
+    const { id, data } = body;
+
+    if (!id || !data) {
+      return NextResponse.json(
+        { error: 'Missing required fields: id, data' },
+        { status: 400 }
+      );
+    }
+
+    const db = getAdminDb();
+    const docRef = db.collection('typingSnippets').doc(id);
+
+    // Check if document exists
+    const docSnap = await docRef.get();
+    if (!docSnap.exists) {
+      return NextResponse.json(
+        { error: `Snippet not found with id: ${id}` },
+        { status: 404 }
+      );
+    }
+
+    // Prepare update data
+    const updateData: Record<string, unknown> = {
+      ...data,
+      updatedAt: Timestamp.now(),
+    };
+
+    await docRef.update(updateData);
+
+    // Get updated document
+    const updatedDoc = await docRef.get();
+
+    return NextResponse.json({
+      success: true,
+      message: 'Snippet updated successfully',
+      snippet: {
+        id: updatedDoc.id,
+        ...updatedDoc.data(),
+      },
+    });
+  } catch (error) {
+    console.error('Update error:', error);
+    return NextResponse.json(
+      { error: 'Failed to update', details: String(error) },
+      { status: 500 }
+    );
+  }
+}
+
 // DELETE - Delete all snippets for a user (or by source file)
 export async function DELETE(request: Request) {
   if (!validateApiKey(request)) {
@@ -231,6 +313,15 @@ export async function DELETE(request: Request) {
       return NextResponse.json(
         { error: 'Missing required field: userId' },
         { status: 400 }
+      );
+    }
+
+    // Validate userId exists in Firebase Auth
+    const isValidUser = await validateUserId(userId);
+    if (!isValidUser) {
+      return NextResponse.json(
+        { error: `User not found in Firebase Auth: ${userId}` },
+        { status: 404 }
       );
     }
 

@@ -1,10 +1,12 @@
 import { initializeApp, getApps, cert, App } from 'firebase-admin/app';
 import { getFirestore, Firestore } from 'firebase-admin/firestore';
+import { getAuth, Auth } from 'firebase-admin/auth';
 import path from 'path';
 import fs from 'fs';
 
 let adminApp: App | undefined;
 let adminDb: Firestore | undefined;
+let adminAuth: Auth | undefined;
 
 function initAdmin() {
   if (getApps().length === 0) {
@@ -31,7 +33,8 @@ function initAdmin() {
   }
 
   adminDb = getFirestore(adminApp);
-  return { adminApp, adminDb };
+  adminAuth = getAuth(adminApp);
+  return { adminApp, adminDb, adminAuth };
 }
 
 export function getAdminDb(): Firestore {
@@ -41,4 +44,22 @@ export function getAdminDb(): Firestore {
   return adminDb!;
 }
 
-export { adminApp, adminDb };
+export function getAdminAuth(): Auth {
+  if (!adminAuth) {
+    initAdmin();
+  }
+  return adminAuth!;
+}
+
+// Validate userId exists in Firebase Auth
+export async function validateUserId(userId: string): Promise<boolean> {
+  try {
+    const auth = getAdminAuth();
+    await auth.getUser(userId);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export { adminApp, adminDb, adminAuth };
