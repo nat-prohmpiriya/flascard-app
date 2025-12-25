@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { Card, ReviewQuality } from '@/types';
+import { Card, ReviewQuality, AchievementDefinition } from '@/types';
 import { getCardsForReview, reviewCard } from '@/services/card';
 import { createStudySession, getTodayStats, calculateStreak } from '@/services/progress';
 import { updateUserSettings } from '@/services/auth';
+import { checkAndUnlockAchievements } from '@/services/achievement';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 
@@ -80,8 +81,8 @@ export function useStudy(deckId?: string) {
     }
   };
 
-  const endSession = async () => {
-    if (!firebaseUser || !sessionStartTime || !deckId) return;
+  const endSession = async (): Promise<AchievementDefinition[]> => {
+    if (!firebaseUser || !sessionStartTime || !deckId) return [];
 
     const duration = Math.round((new Date().getTime() - sessionStartTime.getTime()) / 1000);
     const cardsStudiedThisSession = stats.total - stats.remaining;
@@ -127,8 +128,21 @@ export function useStudy(deckId?: string) {
           description: 'Keep up the great work!',
         });
       }
+
+      // Check and unlock achievements
+      const newlyUnlocked = await checkAndUnlockAchievements(firebaseUser.uid);
+
+      // Show toast for each newly unlocked achievement
+      newlyUnlocked.forEach((achievement) => {
+        toast.success(`🏆 Achievement Unlocked!`, {
+          description: `${achievement.icon} ${achievement.name}`,
+        });
+      });
+
+      return newlyUnlocked;
     } catch (err) {
       console.error('Failed to save study session:', err);
+      return [];
     }
   };
 
