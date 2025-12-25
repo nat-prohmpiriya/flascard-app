@@ -6,7 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { BookOpen, Brain, BarChart3, Volume2 } from 'lucide-react';
+import { BookOpen, Brain, BarChart3, Volume2, Trophy, Target, Bell, Keyboard } from 'lucide-react';
 
 export default function Home() {
   const { firebaseUser, loading } = useAuth();
@@ -39,13 +39,33 @@ export default function Home() {
     },
     {
       icon: BarChart3,
-      title: 'Track Progress',
-      description: 'Monitor your learning with detailed statistics and charts.',
+      title: 'Detailed Analytics',
+      description: 'Monitor your learning with stats, charts, and insights.',
     },
     {
       icon: Volume2,
       title: 'Audio Pronunciation',
       description: 'Listen to pronunciation with text-to-speech support.',
+    },
+    {
+      icon: Trophy,
+      title: 'Achievements',
+      description: 'Unlock 23 achievements across 6 categories as you learn.',
+    },
+    {
+      icon: Target,
+      title: 'Study Planning',
+      description: 'Set goals, plan your schedule, and follow learning paths.',
+    },
+    {
+      icon: Bell,
+      title: 'Smart Reminders',
+      description: 'Get notified for study sessions and streak alerts.',
+    },
+    {
+      icon: Keyboard,
+      title: 'Typing Practice',
+      description: 'Practice coding with typewriter mode for better muscle memory.',
     },
   ];
 
@@ -57,8 +77,8 @@ export default function Home() {
           Learn Smarter with <span className="text-primary">FlashCards</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Master vocabulary and programming concepts with spaced repetition.
-          Track your progress and learn effectively.
+          Master vocabulary and programming with spaced repetition, achievements,
+          study planning, and detailed analytics.
         </p>
         <div className="flex gap-4 justify-center">
           <Button size="lg" asChild>
@@ -71,9 +91,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full max-w-5xl py-12">
+      <section className="w-full max-w-6xl py-12 px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Features</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {features.map((feature, index) => (
             <Card key={index}>
               <CardHeader>
