@@ -3,6 +3,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useDecks } from '@/hooks/useDecks';
+import { useGoals } from '@/hooks/useGoals';
+import { useLearningPaths } from '@/hooks/useLearningPaths';
+import { useAchievements } from '@/hooks/useAchievements';
+import { useNotifications } from '@/hooks/useNotifications';
+import { NotificationPermissionBanner } from '@/components/notifications/NotificationPermissionBanner';
+import { AchievementBadge } from '@/components/achievements/AchievementBadge';
 import { ProtectedRoute } from '@/components/common/ProtectedRoute';
 import { DeckCard } from '@/components/deck/DeckCard';
 import { DeckTable } from '@/components/deck/DeckTable';
@@ -17,7 +23,7 @@ import { getTodayStats, getDailyProgress } from '@/services/progress';
 import { toast } from 'sonner';
 import { Progress } from '@/components/ui/progress';
 import { Card, CardContent } from '@/components/ui/card';
-import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight, Gamepad2, Filter, X } from 'lucide-react';
+import { Plus, BookOpen, Target, TrendingUp, Flame, Search, Trash2, LayoutGrid, List, Zap, Keyboard, ArrowRight, Gamepad2, Filter, X, Route } from 'lucide-react';
 import Link from 'next/link';
 import { SUPPORTED_LANGUAGES } from '@/models/typingSnippet';
 import {
@@ -32,6 +38,11 @@ import {
 export default function DashboardPage() {
   const { firebaseUser, user } = useAuth();
   const { decks, loading, addDeck, editDeck, removeDeck, removeAllDecks } = useDecks();
+  const { goals: activeGoals } = useGoals(true); // Only active goals
+  const { paths: learningPaths } = useLearningPaths();
+  const activePaths = learningPaths.filter((p) => p.status === 'active');
+  const { summary: achievementSummary } = useAchievements();
+  const { permission: notificationPermission, requestPermission } = useNotifications();
 
   const [showDeckForm, setShowDeckForm] = useState(false);
   const [editingDeck, setEditingDeck] = useState<Deck | null>(null);
@@ -157,6 +168,12 @@ export default function DashboardPage() {
           </p>
         </div>
 
+        {/* Notification Permission Banner */}
+        <NotificationPermissionBanner
+          permission={notificationPermission}
+          onRequestPermission={requestPermission}
+        />
+
         {/* Stats */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           <StatsCard
@@ -209,6 +226,13 @@ export default function DashboardPage() {
         {weeklyProgress.length > 0 && (
           <ProgressChart data={weeklyProgress} />
         )}
+
+        {/* Achievements Badge */}
+        <AchievementBadge
+          totalUnlocked={achievementSummary.totalUnlocked}
+          totalAchievements={achievementSummary.totalAchievements}
+          recentUnlock={achievementSummary.recentUnlock}
+        />
 
         {/* Typing Practice */}
         <div>
@@ -286,6 +310,105 @@ export default function DashboardPage() {
             ))}
           </div>
         </div>
+
+        {/* Active Goals */}
+        {activeGoals.length > 0 && (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold flex items-center gap-2">
+                <Target className="h-6 w-6" />
+                Active Goals
+              </h2>
+              <Button variant="ghost" asChild>
+                <Link href="/planning/goals" className="flex items-center gap-1">
+                  View All
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {activeGoals.slice(0, 3).map((goal) => {
+                const cardProgress = Math.min(
+                  (goal.progress.cardsStudied / goal.targets.cardsToStudy) * 100,
+                  100
+                );
+                return (
+                  <Card key={goal.id}>
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <Badge variant="outline">
+                          {goal.type === 'weekly' ? 'Weekly' : 'Monthly'}
+                        </Badge>
+                        <span className="text-sm text-muted-foreground">
+                          {goal.progress.cardsStudied}/{goal.targets.cardsToStudy} cards
+                        </span>
+                      </div>
+                      <Progress value={cardProgress} className="h-2 mb-2" />
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        {goal.targets.accuracy && (
+                          <span>Accuracy: {goal.progress.accuracy}%/{goal.targets.accuracy}%</span>
+                        )}
+                        {goal.targets.streakDays && (
+                          <span>Streak: {goal.progress.currentStreak}/{goal.targets.streakDays} days</span>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Active Learning Paths */}
+        {activePaths.length > 0 && (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold flex items-center gap-2">
+                <Route className="h-6 w-6" />
+                Active Learning Paths
+              </h2>
+              <Button variant="ghost" asChild>
+                <Link href="/planning/paths" className="flex items-center gap-1">
+                  View All
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {activePaths.slice(0, 3).map((path) => {
+                const completedStages = path.stages.filter((s) => s.status === 'completed').length;
+                const overallProgress = path.stages.length > 0
+                  ? Math.round((completedStages / path.stages.length) * 100)
+                  : 0;
+                const currentStage = path.stages.find((s) => s.status === 'active');
+                return (
+                  <Card key={path.id}>
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-medium truncate">{path.name}</span>
+                        <Badge variant="outline">
+                          {completedStages}/{path.stages.length} stages
+                        </Badge>
+                      </div>
+                      <Progress value={overallProgress} className="h-2 mb-2" />
+                      {currentStage && (
+                        <div className="flex items-center justify-between text-sm text-muted-foreground">
+                          <span className="truncate">Current: {currentStage.deckName}</span>
+                          <Link href={`/study/${currentStage.deckId}`}>
+                            <Button size="sm" variant="outline">
+                              Study
+                            </Button>
+                          </Link>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Decks */}
         <div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Header } from "@/components/common/Header";
+import { ServiceWorkerRegistration } from "@/components/common/ServiceWorkerRegistration";
 import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <AuthProvider>
+            <ServiceWorkerRegistration />
             <Header />
             <main className="container mx-auto px-4 py-6">
               {children}

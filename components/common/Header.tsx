@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen, Keyboard } from 'lucide-react';
+import { Sun, Moon, Monitor, LogOut, Settings, User, BookOpen, Keyboard, Target, Trophy, BarChart3 } from 'lucide-react';
 
 export function Header() {
   const router = useRouter();
@@ -108,6 +108,24 @@ export function Header() {
                       <Link href="/dashboard">
                         <User className="mr-2 h-4 w-4" />
                         Dashboard
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link href="/planning">
+                        <Target className="mr-2 h-4 w-4" />
+                        Planning
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link href="/achievements">
+                        <Trophy className="mr-2 h-4 w-4" />
+                        Achievements
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link href="/analytics">
+                        <BarChart3 className="mr-2 h-4 w-4" />
+                        Analytics
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
