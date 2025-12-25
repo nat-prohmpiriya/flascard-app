@@ -37,15 +37,20 @@ export async function getUserAchievements(
 ): Promise<UserAchievement[]> {
   if (!db) return [];
 
-  const q = query(
-    collection(db, COLLECTION),
-    where('oduserId', '==', userId)
-  );
+  try {
+    const q = query(
+      collection(db, COLLECTION),
+      where('userId', '==', userId)
+    );
 
-  const querySnapshot = await getDocs(q);
-  return querySnapshot.docs.map((d) =>
-    toUserAchievement(d.data() as UserAchievementDocument)
-  );
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map((d) =>
+      toUserAchievement(d.data() as UserAchievementDocument)
+    );
+  } catch (error) {
+    console.error(`[Achievement] Failed to query "${COLLECTION}" collection:`, error);
+    throw error;
+  }
 }
 
 // Unlock a specific achievement
@@ -56,7 +61,7 @@ export async function unlockAchievement(
 ): Promise<UserAchievement> {
   const docId = getUserAchievementDocId(userId, achievementId);
   const achievement: UserAchievement = {
-    oduserId: userId,
+    userId: userId,
     odachievementId: achievementId,
     unlockedAt: new Date(),
     progress,
@@ -98,110 +103,170 @@ export interface UserStats {
 }
 
 export async function getUserStats(userId: string): Promise<UserStats> {
+  const defaultStats: UserStats = {
+    streak: 0,
+    totalCardsStudied: 0,
+    overallAccuracy: 0,
+    decksCompleted: 0,
+    goalsCompleted: 0,
+    pathsCompleted: 0,
+    todayCardsStudied: 0,
+    hasStudiedCard: false,
+    hasCreatedDeck: false,
+    hasCreatedGoal: false,
+    hasCreatedPath: false,
+  };
+
   if (!db) {
-    return {
-      streak: 0,
-      totalCardsStudied: 0,
-      overallAccuracy: 0,
-      decksCompleted: 0,
-      goalsCompleted: 0,
-      pathsCompleted: 0,
-      todayCardsStudied: 0,
-      hasStudiedCard: false,
-      hasCreatedDeck: false,
-      hasCreatedGoal: false,
-      hasCreatedPath: false,
-    };
+    return defaultStats;
   }
 
-  // Get user document for streak
-  const userDoc = await getDoc(doc(db, 'users', userId));
-  const userData = userDoc.data();
-  const streak = userData?.settings?.streak || 0;
-
-  // Get all study sessions for total cards and accuracy
-  const sessionsQuery = query(
-    collection(db, 'studySessions'),
-    where('userId', '==', userId)
-  );
-  const sessionsSnapshot = await getDocs(sessionsQuery);
+  let streak = 0;
   let totalCards = 0;
   let totalCorrect = 0;
+  let decksCompleted = 0;
+  let goalsCompleted = 0;
+  let pathsCompleted = 0;
+  let todayCardsStudied = 0;
+  let hasCreatedDeck = false;
+  let hasCreatedGoal = false;
+  let hasCreatedPath = false;
 
-  sessionsSnapshot.docs.forEach((d) => {
-    const data = d.data();
-    totalCards += data.cardsStudied || 0;
-    totalCorrect += data.correctCount || 0;
-  });
+  // 1. Get user document for streak
+  try {
+    console.log('[Achievement] Querying: users/' + userId);
+    const userDoc = await getDoc(doc(db, 'users', userId));
+    const userData = userDoc.data();
+    streak = userData?.settings?.streak || 0;
+    console.log('[Achievement] ✓ users query OK');
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "users" collection:', error);
+  }
+
+  // 2. Get all study sessions
+  let sessionsSnapshot;
+  try {
+    console.log('[Achievement] Querying: studySessions');
+    const sessionsQuery = query(
+      collection(db, 'studySessions'),
+      where('userId', '==', userId)
+    );
+    sessionsSnapshot = await getDocs(sessionsQuery);
+    sessionsSnapshot.docs.forEach((d) => {
+      const data = d.data();
+      totalCards += data.cardsStudied || 0;
+      totalCorrect += data.correctCount || 0;
+    });
+    console.log('[Achievement] ✓ studySessions query OK, found:', sessionsSnapshot.docs.length);
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "studySessions" collection:', error);
+  }
+
+  // 3. Get today's stats
+  try {
+    console.log('[Achievement] Querying: todayStats (via progress service)');
+    const todayStats = await getTodayStats(userId);
+    todayCardsStudied = todayStats.cardsStudied;
+    console.log('[Achievement] ✓ todayStats query OK');
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to get todayStats:', error);
+  }
+
+  // 4. Get decks
+  let decksSnapshot;
+  try {
+    console.log('[Achievement] Querying: decks');
+    const decksQuery = query(
+      collection(db, 'decks'),
+      where('userId', '==', userId)
+    );
+    decksSnapshot = await getDocs(decksQuery);
+    hasCreatedDeck = decksSnapshot.docs.length > 0;
+    console.log('[Achievement] ✓ decks query OK, found:', decksSnapshot.docs.length);
+
+    // Calculate decks completed
+    if (sessionsSnapshot) {
+      const deckSessionsMap = new Map<string, number>();
+      sessionsSnapshot.docs.forEach((d) => {
+        const data = d.data();
+        deckSessionsMap.set(
+          data.deckId,
+          (deckSessionsMap.get(data.deckId) || 0) + data.cardsStudied
+        );
+      });
+
+      for (const deckDoc of decksSnapshot.docs) {
+        const deckData = deckDoc.data();
+        const studiedInDeck = deckSessionsMap.get(deckDoc.id) || 0;
+        if (studiedInDeck >= (deckData.cardCount || 0) && deckData.cardCount > 0) {
+          decksCompleted++;
+        }
+      }
+    }
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "decks" collection:', error);
+  }
+
+  // 5. Get completed goals
+  try {
+    console.log('[Achievement] Querying: goals (completed)');
+    const goalsQuery = query(
+      collection(db, 'goals'),
+      where('userId', '==', userId),
+      where('status', '==', 'completed')
+    );
+    const goalsSnapshot = await getDocs(goalsQuery);
+    goalsCompleted = goalsSnapshot.docs.length;
+    console.log('[Achievement] ✓ goals (completed) query OK, found:', goalsCompleted);
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "goals" (completed) collection:', error);
+  }
+
+  // 6. Check if has created any goal
+  try {
+    console.log('[Achievement] Querying: goals (all)');
+    const allGoalsQuery = query(
+      collection(db, 'goals'),
+      where('userId', '==', userId)
+    );
+    const allGoalsSnapshot = await getDocs(allGoalsQuery);
+    hasCreatedGoal = allGoalsSnapshot.docs.length > 0;
+    console.log('[Achievement] ✓ goals (all) query OK, found:', allGoalsSnapshot.docs.length);
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "goals" (all) collection:', error);
+  }
+
+  // 7. Get completed paths
+  try {
+    console.log('[Achievement] Querying: learningPaths (completed)');
+    const pathsQuery = query(
+      collection(db, 'learningPaths'),
+      where('userId', '==', userId),
+      where('status', '==', 'completed')
+    );
+    const pathsSnapshot = await getDocs(pathsQuery);
+    pathsCompleted = pathsSnapshot.docs.length;
+    console.log('[Achievement] ✓ learningPaths (completed) query OK, found:', pathsCompleted);
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "learningPaths" (completed) collection:', error);
+  }
+
+  // 8. Check if has created any path
+  try {
+    console.log('[Achievement] Querying: learningPaths (all)');
+    const allPathsQuery = query(
+      collection(db, 'learningPaths'),
+      where('userId', '==', userId)
+    );
+    const allPathsSnapshot = await getDocs(allPathsQuery);
+    hasCreatedPath = allPathsSnapshot.docs.length > 0;
+    console.log('[Achievement] ✓ learningPaths (all) query OK, found:', allPathsSnapshot.docs.length);
+  } catch (error) {
+    console.error('[Achievement] ✗ Failed to query "learningPaths" (all) collection:', error);
+  }
 
   const overallAccuracy =
     totalCards >= 100 ? Math.round((totalCorrect / totalCards) * 100) : 0;
-
-  // Get today's stats
-  const todayStats = await getTodayStats(userId);
-
-  // Get decks count
-  const decksQuery = query(
-    collection(db, 'decks'),
-    where('userId', '==', userId)
-  );
-  const decksSnapshot = await getDocs(decksQuery);
-  const hasCreatedDeck = decksSnapshot.docs.length > 0;
-
-  // For decks completed, we need to check if all cards in a deck have been studied
-  // This is a simplified version - just count decks that have at least one session
-  const deckSessionsMap = new Map<string, number>();
-  sessionsSnapshot.docs.forEach((d) => {
-    const data = d.data();
-    deckSessionsMap.set(
-      data.deckId,
-      (deckSessionsMap.get(data.deckId) || 0) + data.cardsStudied
-    );
-  });
-
-  // Count decks where studied cards >= deck card count
-  let decksCompleted = 0;
-  for (const deckDoc of decksSnapshot.docs) {
-    const deckData = deckDoc.data();
-    const studiedInDeck = deckSessionsMap.get(deckDoc.id) || 0;
-    if (studiedInDeck >= (deckData.cardCount || 0) && deckData.cardCount > 0) {
-      decksCompleted++;
-    }
-  }
-
-  // Get completed goals count
-  const goalsQuery = query(
-    collection(db, 'goals'),
-    where('userId', '==', userId),
-    where('status', '==', 'completed')
-  );
-  const goalsSnapshot = await getDocs(goalsQuery);
-  const goalsCompleted = goalsSnapshot.docs.length;
-
-  // Check if has created any goal
-  const allGoalsQuery = query(
-    collection(db, 'goals'),
-    where('userId', '==', userId)
-  );
-  const allGoalsSnapshot = await getDocs(allGoalsQuery);
-  const hasCreatedGoal = allGoalsSnapshot.docs.length > 0;
-
-  // Get completed paths count
-  const pathsQuery = query(
-    collection(db, 'learningPaths'),
-    where('userId', '==', userId),
-    where('status', '==', 'completed')
-  );
-  const pathsSnapshot = await getDocs(pathsQuery);
-  const pathsCompleted = pathsSnapshot.docs.length;
-
-  // Check if has created any path
-  const allPathsQuery = query(
-    collection(db, 'learningPaths'),
-    where('userId', '==', userId)
-  );
-  const allPathsSnapshot = await getDocs(allPathsQuery);
-  const hasCreatedPath = allPathsSnapshot.docs.length > 0;
 
   return {
     streak,
@@ -210,7 +275,7 @@ export async function getUserStats(userId: string): Promise<UserStats> {
     decksCompleted,
     goalsCompleted,
     pathsCompleted,
-    todayCardsStudied: todayStats.cardsStudied,
+    todayCardsStudied,
     hasStudiedCard: totalCards > 0,
     hasCreatedDeck,
     hasCreatedGoal,

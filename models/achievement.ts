@@ -3,7 +3,7 @@ import { UserAchievement } from '@/types';
 
 // Firestore document interface
 export interface UserAchievementDocument {
-  oduserId: string;
+  userId: string;
   odachievementId: string;
   unlockedAt: Timestamp;
   progress: number;
@@ -15,7 +15,7 @@ export function toUserAchievement(
   doc: UserAchievementDocument
 ): UserAchievement {
   return {
-    oduserId: doc.oduserId,
+    userId: doc.userId,
     odachievementId: doc.odachievementId,
     unlockedAt: doc.unlockedAt.toDate(),
     progress: doc.progress,
@@ -28,7 +28,7 @@ export function toUserAchievementDocument(
   achievement: Omit<UserAchievement, 'unlockedAt'> & { unlockedAt: Date }
 ): UserAchievementDocument {
   return {
-    oduserId: achievement.oduserId,
+    userId: achievement.userId,
     odachievementId: achievement.odachievementId,
     unlockedAt: Timestamp.fromDate(achievement.unlockedAt),
     progress: achievement.progress,

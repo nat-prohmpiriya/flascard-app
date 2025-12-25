@@ -278,7 +278,7 @@ export interface AchievementDefinition {
 }
 
 export interface UserAchievement {
-  oduserId: string;
+  userId: string;
   odachievementId: string;
   unlockedAt: Date;
   progress: number;
