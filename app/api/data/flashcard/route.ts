@@ -37,7 +37,7 @@ interface ImportRequest {
   userId: string;
 }
 
-// GET - List available flashcard files
+// GET - List available flashcard files OR user's decks from Firestore
 export async function GET(request: Request) {
   if (!validateApiKey(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -45,6 +45,54 @@ export async function GET(request: Request) {
 
   try {
     const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+
+    // If userId provided, list user's decks from Firestore
+    if (userId) {
+      const isValidUser = await validateUserId(userId);
+      if (!isValidUser) {
+        return NextResponse.json(
+          { error: `User not found: ${userId}` },
+          { status: 404 }
+        );
+      }
+
+      const db = getAdminDb();
+      const snapshot = await db
+        .collection('decks')
+        .where('userId', '==', userId)
+        .get();
+
+      const decks = snapshot.docs
+        .map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            name: data.name,
+            description: data.description,
+            category: data.category,
+            tags: data.tags || [],
+            sourceLang: data.sourceLang,
+            targetLang: data.targetLang,
+            cardCount: data.cardCount || 0,
+            createdAt: data.createdAt?.toDate?.()?.toISOString() || null,
+            updatedAt: data.updatedAt?.toDate?.()?.toISOString() || null,
+          };
+        })
+        .sort((a, b) => {
+          if (!a.createdAt || !b.createdAt) return 0;
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        });
+
+      return NextResponse.json({
+        success: true,
+        userId,
+        decks,
+        totalDecks: decks.length,
+      });
+    }
+
+    // Otherwise, list files from data folder (original behavior)
     const subPath = searchParams.get('path') || 'cefr/english';
 
     if (!validatePath(subPath)) {
