@@ -134,19 +134,16 @@ export async function getUserStats(userId: string): Promise<UserStats> {
 
   // 1. Get user document for streak
   try {
-    console.log('[Achievement] Querying: users/' + userId);
     const userDoc = await getDoc(doc(db, 'users', userId));
     const userData = userDoc.data();
     streak = userData?.settings?.streak || 0;
-    console.log('[Achievement] ✓ users query OK');
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "users" collection:', error);
+    console.error('[Achievement] Failed to query "users" collection:', error);
   }
 
   // 2. Get all study sessions
   let sessionsSnapshot;
   try {
-    console.log('[Achievement] Querying: studySessions');
     const sessionsQuery = query(
       collection(db, 'studySessions'),
       where('userId', '==', userId)
@@ -157,32 +154,27 @@ export async function getUserStats(userId: string): Promise<UserStats> {
       totalCards += data.cardsStudied || 0;
       totalCorrect += data.correctCount || 0;
     });
-    console.log('[Achievement] ✓ studySessions query OK, found:', sessionsSnapshot.docs.length);
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "studySessions" collection:', error);
+    console.error('[Achievement] Failed to query "studySessions" collection:', error);
   }
 
   // 3. Get today's stats
   try {
-    console.log('[Achievement] Querying: todayStats (via progress service)');
     const todayStats = await getTodayStats(userId);
     todayCardsStudied = todayStats.cardsStudied;
-    console.log('[Achievement] ✓ todayStats query OK');
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to get todayStats:', error);
+    console.error('[Achievement] Failed to get todayStats:', error);
   }
 
   // 4. Get decks
   let decksSnapshot;
   try {
-    console.log('[Achievement] Querying: decks');
     const decksQuery = query(
       collection(db, 'decks'),
       where('userId', '==', userId)
     );
     decksSnapshot = await getDocs(decksQuery);
     hasCreatedDeck = decksSnapshot.docs.length > 0;
-    console.log('[Achievement] ✓ decks query OK, found:', decksSnapshot.docs.length);
 
     // Calculate decks completed
     if (sessionsSnapshot) {
@@ -204,12 +196,11 @@ export async function getUserStats(userId: string): Promise<UserStats> {
       }
     }
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "decks" collection:', error);
+    console.error('[Achievement] Failed to query "decks" collection:', error);
   }
 
   // 5. Get completed goals
   try {
-    console.log('[Achievement] Querying: goals (completed)');
     const goalsQuery = query(
       collection(db, 'goals'),
       where('userId', '==', userId),
@@ -217,28 +208,24 @@ export async function getUserStats(userId: string): Promise<UserStats> {
     );
     const goalsSnapshot = await getDocs(goalsQuery);
     goalsCompleted = goalsSnapshot.docs.length;
-    console.log('[Achievement] ✓ goals (completed) query OK, found:', goalsCompleted);
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "goals" (completed) collection:', error);
+    console.error('[Achievement] Failed to query "goals" (completed) collection:', error);
   }
 
   // 6. Check if has created any goal
   try {
-    console.log('[Achievement] Querying: goals (all)');
     const allGoalsQuery = query(
       collection(db, 'goals'),
       where('userId', '==', userId)
     );
     const allGoalsSnapshot = await getDocs(allGoalsQuery);
     hasCreatedGoal = allGoalsSnapshot.docs.length > 0;
-    console.log('[Achievement] ✓ goals (all) query OK, found:', allGoalsSnapshot.docs.length);
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "goals" (all) collection:', error);
+    console.error('[Achievement] Failed to query "goals" (all) collection:', error);
   }
 
   // 7. Get completed paths
   try {
-    console.log('[Achievement] Querying: learningPaths (completed)');
     const pathsQuery = query(
       collection(db, 'learningPaths'),
       where('userId', '==', userId),
@@ -246,23 +233,20 @@ export async function getUserStats(userId: string): Promise<UserStats> {
     );
     const pathsSnapshot = await getDocs(pathsQuery);
     pathsCompleted = pathsSnapshot.docs.length;
-    console.log('[Achievement] ✓ learningPaths (completed) query OK, found:', pathsCompleted);
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "learningPaths" (completed) collection:', error);
+    console.error('[Achievement] Failed to query "learningPaths" (completed) collection:', error);
   }
 
   // 8. Check if has created any path
   try {
-    console.log('[Achievement] Querying: learningPaths (all)');
     const allPathsQuery = query(
       collection(db, 'learningPaths'),
       where('userId', '==', userId)
     );
     const allPathsSnapshot = await getDocs(allPathsQuery);
     hasCreatedPath = allPathsSnapshot.docs.length > 0;
-    console.log('[Achievement] ✓ learningPaths (all) query OK, found:', allPathsSnapshot.docs.length);
   } catch (error) {
-    console.error('[Achievement] ✗ Failed to query "learningPaths" (all) collection:', error);
+    console.error('[Achievement] Failed to query "learningPaths" (all) collection:', error);
   }
 
   const overallAccuracy =
