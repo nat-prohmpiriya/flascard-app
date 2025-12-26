@@ -235,7 +235,7 @@ export default function LearningPathsPage() {
         )}
 
         {/* Delete Confirmation */}
-        <Dialog open={!!deletingPath} onOpenChange={() => setDeletingPath(null)}>
+        <Dialog open={!!deletingPath} onOpenChange={(open) => !open && setDeletingPath(null)}>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Delete Learning Path</DialogTitle>
