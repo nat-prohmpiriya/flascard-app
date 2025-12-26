@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogFooter,
@@ -129,6 +130,9 @@ export function CardForm({ open, onClose, onSubmit, initialData, isUploadingImag
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
           <DialogTitle>{initialData ? 'Edit Card' : 'Create New Card'}</DialogTitle>
+          <DialogDescription>
+            {initialData ? 'Update your flashcard details.' : 'Add a new flashcard to your deck.'}
+          </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit}>
@@ -164,14 +168,15 @@ export function CardForm({ open, onClose, onSubmit, initialData, isUploadingImag
                     )}
                   </div>
                 ) : (
-                  <button
+                  <Button
                     type="button"
+                    variant="outline"
                     onClick={() => fileInputRef.current?.click()}
-                    className="w-24 h-24 rounded-lg border-2 border-dashed border-muted-foreground/25 hover:border-muted-foreground/50 flex flex-col items-center justify-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                    className="w-24 h-24 rounded-lg border-2 border-dashed border-muted-foreground/25 hover:border-muted-foreground/50 flex flex-col items-center justify-center gap-1 text-muted-foreground hover:text-foreground"
                   >
                     <ImagePlus className="h-6 w-6" />
                     <span className="text-xs">Add Image</span>
-                  </button>
+                  </Button>
                 )}
                 <input
                   ref={fileInputRef}

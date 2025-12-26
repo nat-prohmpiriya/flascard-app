@@ -34,13 +34,15 @@ export function NotificationPermissionBanner({
 
   return (
     <div className="relative p-4 mb-4 rounded-lg border bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950">
-      <button
+      <Button
+        variant="ghost"
+        size="icon"
         onClick={() => setDismissed(true)}
-        className="absolute top-2 right-2 p-1 rounded-full hover:bg-muted/50 transition-colors"
+        className="absolute top-2 right-2 h-6 w-6 rounded-full hover:bg-muted/50"
         aria-label="Dismiss"
       >
         <X className="h-4 w-4 text-muted-foreground" />
-      </button>
+      </Button>
 
       <div className="flex items-center gap-4 pr-8">
         <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center flex-shrink-0">
