@@ -80,6 +80,14 @@ export const SUPPORTED_LANGUAGES = [
   { id: 'css', name: 'CSS', color: '#1572B6', isCode: true },
   { id: 'shell', name: 'Shell/Bash', color: '#4EAA25', isCode: true },
   { id: 'docker', name: 'Docker', color: '#2496ED', isCode: true },
+  { id: 'kubernetes', name: 'Kubernetes', color: '#326CE5', isCode: true },
+  { id: 'nginx', name: 'Nginx', color: '#009639', isCode: true },
+  { id: 'redis', name: 'Redis', color: '#DC382D', isCode: true },
+  { id: 'graphql', name: 'GraphQL', color: '#E10098', isCode: true },
+  { id: 'grpc', name: 'gRPC', color: '#244C5A', isCode: true },
+  { id: 'mongodb', name: 'MongoDB', color: '#47A248', isCode: true },
+  { id: 'nestjs', name: 'NestJS', color: '#E0234E', isCode: true },
+  { id: 'svelte', name: 'Svelte', color: '#FF3E00', isCode: true },
   { id: 'other', name: 'Other', color: '#6B7280', isCode: true },
 ] as const;
 
