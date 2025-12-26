@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogFooter,
@@ -53,6 +54,9 @@ export function DeckForm({ open, onClose, onSubmit, initialData }: DeckFormProps
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{initialData ? 'Edit Deck' : 'Create New Deck'}</DialogTitle>
+          <DialogDescription>
+            {initialData ? 'Update your deck details below.' : 'Fill in the details to create a new deck.'}
+          </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit}>

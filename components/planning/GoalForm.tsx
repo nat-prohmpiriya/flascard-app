@@ -11,6 +11,7 @@ import { Switch } from '@/components/ui/switch';
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogFooter,
@@ -78,6 +79,9 @@ export function GoalForm({ open, onClose, onSubmit, initialData }: GoalFormProps
           <DialogTitle>
             {initialData ? 'Edit Goal' : 'Create New Goal'}
           </DialogTitle>
+          <DialogDescription>
+            {initialData ? 'Update your learning goal.' : 'Set a new learning goal to track your progress.'}
+          </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit}>

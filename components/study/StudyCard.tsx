@@ -10,6 +10,7 @@ import { Progress } from '@/components/ui/progress';
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -263,6 +264,9 @@ export function StudyCard({
                 <DialogContent className="sm:max-w-[320px]">
                   <DialogHeader>
                     <DialogTitle>Auto Play Settings</DialogTitle>
+                    <DialogDescription>
+                      Configure what to read during auto play.
+                    </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4 py-4">
                     <div className="flex items-center justify-between">
