@@ -30,13 +30,75 @@ interface ImportRequest {
   isPreset?: boolean;
 }
 
-// GET - List available typewriter markdown files
+// GET - List available typewriter markdown files OR user's snippets from Firestore
 export async function GET(request: Request) {
   if (!validateApiKey(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+    const language = searchParams.get('language');
+
+    // If userId provided, list user's snippets from Firestore
+    if (userId) {
+      const isValidUser = await validateUserId(userId);
+      if (!isValidUser) {
+        return NextResponse.json(
+          { error: `User not found: ${userId}` },
+          { status: 404 }
+        );
+      }
+
+      const db = getAdminDb();
+      let query = db.collection('typingSnippets').where('userId', '==', userId);
+
+      if (language) {
+        query = query.where('language', '==', language);
+      }
+
+      const snapshot = await query.get();
+
+      const snippets = snapshot.docs
+        .map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            title: data.title,
+            description: data.description,
+            language: data.language,
+            languageName: data.languageName,
+            difficulty: data.difficulty,
+            codeLength: data.code?.length || 0,
+            isPreset: data.isPreset || false,
+            isPublic: data.isPublic || false,
+            sourceFile: data.sourceFile,
+            createdAt: data.createdAt?.toDate?.()?.toISOString() || null,
+            updatedAt: data.updatedAt?.toDate?.()?.toISOString() || null,
+          };
+        })
+        .sort((a, b) => {
+          if (!a.createdAt || !b.createdAt) return 0;
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        });
+
+      // Group by language for summary
+      const byLanguage: Record<string, number> = {};
+      snippets.forEach((s) => {
+        byLanguage[s.language] = (byLanguage[s.language] || 0) + 1;
+      });
+
+      return NextResponse.json({
+        success: true,
+        userId,
+        snippets,
+        totalSnippets: snippets.length,
+        byLanguage,
+      });
+    }
+
+    // Otherwise, list files from data folder (original behavior)
     if (!fs.existsSync(DATA_BASE_DIR)) {
       return NextResponse.json({
         success: true,
@@ -59,8 +121,8 @@ export async function GET(request: Request) {
           const codeBlockCount = (content.match(/```\w+/g) || []).length;
 
           // Detect language
-          let language = 'other';
-          let languageName = h1Match?.[1]?.trim() || 'Unknown';
+          let detectedLang = 'other';
+          let langName = h1Match?.[1]?.trim() || 'Unknown';
 
           if (h1Match) {
             const langText = h1Match[1].trim().toLowerCase();
@@ -70,16 +132,16 @@ export async function GET(request: Request) {
                      langText.includes(l.name.toLowerCase())
             );
             if (matched) {
-              language = matched.id;
-              languageName = matched.name;
+              detectedLang = matched.id;
+              langName = matched.name;
             }
           }
 
           return {
             filename: file,
             title: h1Match?.[1]?.trim() || file,
-            language,
-            languageName,
+            language: detectedLang,
+            languageName: langName,
             snippetCount,
             codeBlockCount,
           };
@@ -226,7 +288,7 @@ export async function POST(request: Request) {
   }
 }
 
-// PUT - Update typing snippet
+// PUT - Update typing snippet (single or bulk by sourceFile)
 interface UpdateSnippetData {
   language?: string;
   languageName?: string;
@@ -239,7 +301,9 @@ interface UpdateSnippetData {
 }
 
 interface UpdateRequest {
-  id: string;
+  id?: string;
+  userId?: string;
+  sourceFile?: string;
   data: UpdateSnippetData;
 }
 
@@ -250,19 +314,89 @@ export async function PUT(request: Request) {
 
   try {
     const body: UpdateRequest = await request.json();
-    const { id, data } = body;
+    const { id, userId, sourceFile, data } = body;
 
-    if (!id || !data) {
+    if (!data) {
       return NextResponse.json(
-        { error: 'Missing required fields: id, data' },
+        { error: 'Missing required field: data' },
         { status: 400 }
       );
     }
 
     const db = getAdminDb();
-    const docRef = db.collection('typingSnippets').doc(id);
 
-    // Check if document exists
+    // Bulk update by sourceFile
+    if (userId && sourceFile) {
+      const isValidUser = await validateUserId(userId);
+      if (!isValidUser) {
+        return NextResponse.json(
+          { error: `User not found: ${userId}` },
+          { status: 404 }
+        );
+      }
+
+      const snapshot = await db
+        .collection('typingSnippets')
+        .where('userId', '==', userId)
+        .where('sourceFile', '==', sourceFile)
+        .get();
+
+      if (snapshot.empty) {
+        return NextResponse.json(
+          { error: `No snippets found for sourceFile: ${sourceFile}` },
+          { status: 404 }
+        );
+      }
+
+      // Get languageName from SUPPORTED_LANGUAGES if language is provided
+      let languageName = data.languageName;
+      if (data.language && !languageName) {
+        const langInfo = SUPPORTED_LANGUAGES.find((l) => l.id === data.language);
+        if (langInfo) {
+          languageName = langInfo.name;
+        }
+      }
+
+      const updateData: Record<string, unknown> = {
+        ...data,
+        updatedAt: Timestamp.now(),
+      };
+      if (languageName) {
+        updateData.languageName = languageName;
+      }
+
+      // Batch update
+      const batchSize = 400;
+      const docs = snapshot.docs;
+      let updatedCount = 0;
+
+      for (let i = 0; i < docs.length; i += batchSize) {
+        const batch = db.batch();
+        const chunk = docs.slice(i, i + batchSize);
+        chunk.forEach((doc) => batch.update(doc.ref, updateData));
+        await batch.commit();
+        updatedCount += chunk.length;
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: `Updated ${updatedCount} snippets from "${sourceFile}"`,
+        updated: updatedCount,
+        sourceFile,
+        newLanguage: data.language,
+        newLanguageName: languageName,
+      });
+    }
+
+    // Single update by id
+    if (!id) {
+      return NextResponse.json(
+        { error: 'Missing required field: id (or userId + sourceFile for bulk update)' },
+        { status: 400 }
+      );
+    }
+
+    const docRef = db.collection('typingSnippets').doc(id);
     const docSnap = await docRef.get();
     if (!docSnap.exists) {
       return NextResponse.json(
@@ -271,15 +405,12 @@ export async function PUT(request: Request) {
       );
     }
 
-    // Prepare update data
     const updateData: Record<string, unknown> = {
       ...data,
       updatedAt: Timestamp.now(),
     };
 
     await docRef.update(updateData);
-
-    // Get updated document
     const updatedDoc = await docRef.get();
 
     return NextResponse.json({

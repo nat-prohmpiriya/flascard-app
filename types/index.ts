@@ -251,6 +251,50 @@ export interface LearningPathFormData {
   targetAccuracy: number;
 }
 
+// Typing Path types
+export type TypingPathStatus = 'active' | 'completed' | 'paused';
+export type TypingStageStatus = 'locked' | 'active' | 'completed';
+
+export interface TypingStageProgress {
+  bestWpm: number;
+  bestAccuracy: number;
+  attempts: number;
+  completedAt?: Date;
+}
+
+export interface TypingPathStage {
+  snippetId: string;
+  snippetTitle: string;
+  language: string;
+  languageName: string;
+  difficulty: 'easy' | 'medium' | 'hard';
+  order: number;
+  targetWpm: number;
+  targetAccuracy: number;
+  progress: TypingStageProgress;
+  status: TypingStageStatus;
+}
+
+export interface TypingPath {
+  id: string;
+  userId: string;
+  name: string;
+  description: string;
+  stages: TypingPathStage[];
+  currentStageIndex: number;
+  status: TypingPathStatus;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface TypingPathFormData {
+  name: string;
+  description: string;
+  snippetIds: string[];
+  targetWpm: number;
+  targetAccuracy: number;
+}
+
 // Achievement types
 export type AchievementCategory =
   | 'streak'      // Study streak milestones
