@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from 'react';
 import { User as FirebaseUser } from 'firebase/auth';
 import { onAuthChange, getUserData } from '@/services/auth';
 import { User } from '@/types';
@@ -9,18 +9,27 @@ interface AuthContextType {
   firebaseUser: FirebaseUser | null;
   user: User | null;
   loading: boolean;
+  refreshUser: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType>({
   firebaseUser: null,
   user: null,
   loading: true,
+  refreshUser: async () => {},
 });
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [firebaseUser, setFirebaseUser] = useState<FirebaseUser | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const refreshUser = useCallback(async () => {
+    if (firebaseUser) {
+      const userData = await getUserData(firebaseUser.uid);
+      setUser(userData);
+    }
+  }, [firebaseUser]);
 
   useEffect(() => {
     const unsubscribe = onAuthChange(async (fbUser) => {
@@ -40,7 +49,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ firebaseUser, user, loading }}>
+    <AuthContext.Provider value={{ firebaseUser, user, loading, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );

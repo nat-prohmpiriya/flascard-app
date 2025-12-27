@@ -17,6 +17,8 @@ export interface UserSettings {
   notifications: boolean;
   streak: number;
   lastStudyDate: string | null; // ISO date string (YYYY-MM-DD)
+  pinnedPaths?: string[]; // Learning path IDs to pin on dashboard (max 3)
+  pinnedTypingPaths?: string[]; // Typing path IDs to pin on dashboard (max 3)
 }
 
 // Language types

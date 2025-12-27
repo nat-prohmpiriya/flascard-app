@@ -23,7 +23,10 @@ import {
   Route,
   CheckCircle,
   Clock,
+  Pin,
+  PinOff,
 } from 'lucide-react';
+import { usePinnedPaths } from '@/hooks/usePinnedPaths';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -54,6 +57,8 @@ export function LearningPathCard({
   onResume,
 }: LearningPathCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { isPinned, togglePin, canPinMore } = usePinnedPaths();
+  const pathIsPinned = isPinned(path.id);
 
   const overallProgress = calculateOverallProgress(path);
   const completedCount = getCompletedStagesCount(path);
@@ -111,6 +116,22 @@ export function LearningPathCard({
                 <DropdownMenuItem onClick={() => onRefresh(path.id)}>
                   <RefreshCw className="mr-2 h-4 w-4" />
                   Refresh Progress
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => togglePin(path.id)}
+                  disabled={!pathIsPinned && !canPinMore}
+                >
+                  {pathIsPinned ? (
+                    <>
+                      <PinOff className="mr-2 h-4 w-4" />
+                      Unpin from Dashboard
+                    </>
+                  ) : (
+                    <>
+                      <Pin className="mr-2 h-4 w-4" />
+                      Pin to Dashboard
+                    </>
+                  )}
                 </DropdownMenuItem>
                 {path.status === 'active' ? (
                   <DropdownMenuItem onClick={() => onPause(path.id)}>
