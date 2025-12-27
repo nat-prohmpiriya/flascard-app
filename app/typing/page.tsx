@@ -10,8 +10,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { Keyboard, Code, BookOpen, Loader2, Plus } from 'lucide-react';
-import type { Deck } from '@/types';
+import { Keyboard, Code, BookOpen, Loader2, Plus, Route } from 'lucide-react';
+import type { Deck, TypingPath } from '@/types';
+import { getUserTypingPaths, calculateOverallProgress, getCompletedStagesCount } from '@/services/typingPath';
+import { Progress } from '@/components/ui/progress';
 
 interface LanguageGroup {
   id: string;
@@ -24,6 +26,7 @@ export default function TypingPage() {
   const { firebaseUser } = useAuth();
   const [decks, setDecks] = useState<Deck[]>([]);
   const [snippets, setSnippets] = useState<TypingSnippet[]>([]);
+  const [typingPaths, setTypingPaths] = useState<TypingPath[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -34,12 +37,14 @@ export default function TypingPage() {
       }
 
       try {
-        const [userDecks, userSnippets] = await Promise.all([
+        const [userDecks, userSnippets, userPaths] = await Promise.all([
           getUserDecks(firebaseUser.uid),
           getAvailableSnippets(firebaseUser.uid),
+          getUserTypingPaths(firebaseUser.uid),
         ]);
         setDecks(userDecks);
         setSnippets(userSnippets);
+        setTypingPaths(userPaths);
       } catch (error) {
         console.error('Failed to load data:', error);
       } finally {
@@ -92,17 +97,104 @@ export default function TypingPage() {
         )}
       </div>
 
-      <Tabs defaultValue="code" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
+      <Tabs defaultValue="paths" className="w-full">
+        <TabsList className="grid w-full grid-cols-3">
+          <TabsTrigger value="paths" className="flex items-center gap-2">
+            <Route className="h-4 w-4" />
+            Learning Paths
+          </TabsTrigger>
           <TabsTrigger value="code" className="flex items-center gap-2">
             <Code className="h-4 w-4" />
             Code Snippets
           </TabsTrigger>
           <TabsTrigger value="deck" className="flex items-center gap-2">
             <BookOpen className="h-4 w-4" />
-            From Flashcards
+            Flashcards
           </TabsTrigger>
         </TabsList>
+
+        <TabsContent value="paths" className="mt-6">
+          {!firebaseUser ? (
+            <Card>
+              <CardContent className="p-8 text-center">
+                <Route className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+                <h3 className="text-lg font-semibold mb-2">Login to start</h3>
+                <p className="text-muted-foreground mb-4">
+                  Practice typing with structured learning paths
+                </p>
+                <Button asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ) : loading ? (
+            <div className="flex items-center justify-center p-8">
+              <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+            </div>
+          ) : typingPaths.length === 0 ? (
+            <Card>
+              <CardContent className="p-8 text-center">
+                <Route className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+                <h3 className="text-lg font-semibold mb-2">No learning paths yet</h3>
+                <p className="text-muted-foreground mb-4">
+                  Learning paths help you practice code in a structured way
+                </p>
+                <Button asChild>
+                  <Link href="/typing/paths">
+                    <Route className="mr-2 h-4 w-4" />
+                    View All Paths
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ) : (
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <p className="text-sm text-muted-foreground">
+                  {typingPaths.filter((p) => p.status === 'active').length} active paths
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <Link href="/typing/paths">View All</Link>
+                </Button>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                {typingPaths
+                  .filter((p) => p.status === 'active')
+                  .slice(0, 4)
+                  .map((path) => {
+                    const progress = calculateOverallProgress(path);
+                    const completedStages = getCompletedStagesCount(path);
+                    return (
+                      <Link key={path.id} href={`/typing/paths/${path.id}`}>
+                        <Card className="h-full hover:border-primary transition-colors cursor-pointer">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="flex items-center gap-2 text-lg">
+                              <Route className="h-5 w-5 text-primary" />
+                              {path.name}
+                            </CardTitle>
+                            {path.description && (
+                              <CardDescription className="line-clamp-1">
+                                {path.description}
+                              </CardDescription>
+                            )}
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              <div className="flex justify-between text-sm">
+                                <span className="text-muted-foreground">Progress</span>
+                                <span>{completedStages}/{path.stages.length} stages</span>
+                              </div>
+                              <Progress value={progress} className="h-2" />
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    );
+                  })}
+              </div>
+            </div>
+          )}
+        </TabsContent>
 
         <TabsContent value="code" className="mt-6">
           {!firebaseUser ? (
