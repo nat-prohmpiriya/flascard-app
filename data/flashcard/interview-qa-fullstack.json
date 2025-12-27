@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-27T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Full-stack Developer",
+    "description": "Common interview questions and answers for Full-stack / AI Developer position",
+    "category": "Interview",
+    "tags": ["interview", "english", "job"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "Please introduce yourself and tell us about your background.",
+      "pronunciation": "",
+      "meaning": "กรุณาแนะนำตัวและเล่าประวัติของคุณ",
+      "example": "Hello, my name is Prohmpiriya, but you can call me Nut. I'm a Full-stack Engineer with over 5 years of experience building web applications and distributed systems. Most recently, I worked at TTB Bank as a Python Developer focusing on AI Integration, where I extended the AI assistant's knowledge base and implemented data ingestion workflows using Azure OpenAI. Before that, I spent 3 years at Q-CHANG, where I worked across multiple products, mentored junior developers, and collaborated closely with product teams. I'm passionate about learning modern technologies like Go, TypeScript, and AI integration, and I enjoy experimenting with system design patterns in my personal projects.",
+      "exampleTranslation": "สวัสดีครับ ผมชื่อพร้อมปิริยา เรียกผมว่านัทได้ครับ ผมเป็น Full-stack Engineer มีประสบการณ์กว่า 5 ปีในการสร้าง web application และ distributed systems ล่าสุดผมทำงานที่ธนาคาร TTB ในตำแหน่ง Python Developer ที่เน้นด้าน AI Integration โดยผมขยาย knowledge base ของ AI assistant และสร้าง data ingestion workflow ด้วย Azure OpenAI ก่อนหน้านั้นผมทำงานที่ Q-CHANG 3 ปี ดูแลหลายโปรดักส์ สอนน้องๆ developer และทำงานร่วมกับทีม product อย่างใกล้ชิด ผมชอบเรียนรู้เทคโนโลยีใหม่ๆ เช่น Go, TypeScript และ AI integration และชอบทดลอง system design patterns ในโปรเจคส่วนตัว"
+    },
+    {
+      "vocab": "Can you describe your experience with AI/LLM integration at TTB?",
+      "pronunciation": "",
+      "meaning": "ช่วยเล่าประสบการณ์การทำ AI/LLM integration ที่ TTB ได้ไหม?",
+      "example": "At TTB, I was responsible for extending the AI assistant's knowledge base to cover Mutual Funds, Credit Cards, and Auto Loans through prompt engineering. I also implemented a daily data ingestion workflow using Azure Functions to update logistics statuses, so the AI could provide real-time card tracking information. One interesting challenge was mitigating Azure OpenAI's content filtering issues to ensure reliable response generation in production.",
+      "exampleTranslation": "ที่ TTB ผมรับผิดชอบขยาย knowledge base ของ AI assistant ให้ครอบคลุมกองทุนรวม บัตรเครดิต และสินเชื่อรถยนต์ ผ่าน prompt engineering ผมยังสร้าง daily data ingestion workflow ด้วย Azure Functions เพื่ออัพเดทสถานะการจัดส่ง ทำให้ AI สามารถให้ข้อมูลติดตามบัตรแบบ real-time ได้ ความท้าทายที่น่าสนใจคือการแก้ปัญหา content filtering ของ Azure OpenAI เพื่อให้การ generate response ทำงานได้อย่างเสถียรบน production"
+    },
+    {
+      "vocab": "What technologies have you worked with most extensively?",
+      "pronunciation": "",
+      "meaning": "คุณมีประสบการณ์กับเทคโนโลยีอะไรมากที่สุด?",
+      "example": "On the frontend, I'm most comfortable with React and Next.js, along with Nuxt.js and SvelteKit. For backend development, I work with Node.js, Python with FastAPI, and Go using Gin and Fiber frameworks. For databases, I have experience with PostgreSQL, MongoDB, and Redis. Recently, I've been focusing heavily on AI/LLM technologies including RAG architecture and autonomous agents.",
+      "exampleTranslation": "ฝั่ง frontend ผมถนัด React และ Next.js รวมถึง Nuxt.js และ SvelteKit สำหรับ backend ผมใช้ Node.js, Python กับ FastAPI และ Go ด้วย Gin และ Fiber frameworks ด้าน database ผมมีประสบการณ์กับ PostgreSQL, MongoDB และ Redis ช่วงหลังผมโฟกัสหนักไปที่ AI/LLM technologies รวมถึง RAG architecture และ autonomous agents"
+    },
+    {
+      "vocab": "Tell me about a challenging project you've worked on.",
+      "pronunciation": "",
+      "meaning": "เล่าเกี่ยวกับโปรเจคที่ท้าทายที่คุณเคยทำ",
+      "example": "One project I'm proud of is my personal project called 'Booking Rush' — a high-performance ticket booking system. The challenge was handling 10,000 requests per second during peak load while preventing overselling. I architected a Hybrid Fast-Path system using Redis Lua scripts for atomic operations and implemented a Virtual Queue. I also used the Saga Pattern with Transactional Outbox to ensure eventual consistency across distributed services. This project taught me a lot about high-concurrency control and distributed system design.",
+      "exampleTranslation": "โปรเจคที่ผมภูมิใจคือโปรเจคส่วนตัวชื่อ 'Booking Rush' — ระบบจองตั๋วที่รองรับ high-performance ความท้าทายคือการรองรับ 10,000 requests ต่อวินาทีในช่วง peak load และป้องกันการขายเกิน ผมออกแบบระบบ Hybrid Fast-Path โดยใช้ Redis Lua scripts สำหรับ atomic operations และสร้าง Virtual Queue ผมยังใช้ Saga Pattern กับ Transactional Outbox เพื่อรับประกัน eventual consistency ข้าม distributed services โปรเจคนี้สอนผมเรื่อง high-concurrency control และ distributed system design เยอะมาก"
+    },
+    {
+      "vocab": "How do you approach building a RAG system?",
+      "pronunciation": "RAG = Retrieval-Augmented Generation",
+      "meaning": "คุณมีแนวทางการสร้างระบบ RAG อย่างไร?",
+      "example": "In my RAG Agent Platform project, I designed a domain-agnostic system with three main components: First, a document ingestion pipeline that chunks and embeds documents. Second, a vector search layer using pgvector for high-accuracy retrieval. Third, an orchestration layer that coordinates AI agents for multi-step reasoning tasks. I found that optimizing the chunking strategy and embedding model selection significantly impacts retrieval quality.",
+      "exampleTranslation": "ในโปรเจค RAG Agent Platform ผมออกแบบระบบที่ไม่ขึ้นกับ domain ใดโดยเฉพาะ มี 3 ส่วนหลัก: หนึ่ง document ingestion pipeline ที่ทำการ chunk และ embed เอกสาร สอง vector search layer ใช้ pgvector สำหรับการค้นหาที่แม่นยำสูง สาม orchestration layer ที่ประสานงาน AI agents สำหรับงาน multi-step reasoning ผมพบว่าการ optimize chunking strategy และการเลือก embedding model ส่งผลต่อคุณภาพการ retrieval อย่างมาก"
+    },
+    {
+      "vocab": "How do you handle technical decisions that conflict with business objectives?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการอย่างไรเมื่อการตัดสินใจทางเทคนิคขัดแย้งกับเป้าหมายธุรกิจ?",
+      "example": "At Q-CHANG, I learned to proactively challenge technical decisions when they conflicted with business goals. I would first understand the business requirements deeply, then present data or evidence to support my technical concerns. I always propose alternative solutions rather than just pointing out problems. Communication and collaboration with PO/PM helped us find the best approach together.",
+      "exampleTranslation": "ที่ Q-CHANG ผมเรียนรู้ที่จะท้าทายการตัดสินใจทางเทคนิคอย่างกระตือรือร้นเมื่อมันขัดแย้งกับเป้าหมายธุรกิจ ผมจะเริ่มจากทำความเข้าใจ business requirements อย่างลึกซึ้งก่อน แล้วนำเสนอข้อมูลหรือหลักฐานเพื่อสนับสนุนข้อกังวลทางเทคนิคของผม ผมจะเสนอทางเลือกอื่นเสมอ ไม่ใช่แค่ชี้ปัญหา การสื่อสารและทำงานร่วมกับ PO/PM ช่วยให้เราหาแนวทางที่ดีที่สุดร่วมกัน"
+    },
+    {
+      "vocab": "Describe a time when you had to learn a new technology quickly.",
+      "pronunciation": "",
+      "meaning": "เล่าถึงครั้งที่คุณต้องเรียนรู้เทคโนโลยีใหม่อย่างรวดเร็ว",
+      "example": "When I started working with Go at Jambox, I had limited experience with the language. I spent evenings studying Go patterns and best practices, built small projects to practice, and within a few weeks, I was able to revamp their authentication system to support multi-provider login. I believe consistent practice and hands-on projects are the fastest ways to learn.",
+      "exampleTranslation": "ตอนที่ผมเริ่มทำงานกับ Go ที่ Jambox ผมมีประสบการณ์กับภาษานี้น้อยมาก ผมใช้เวลาตอนเย็นศึกษา Go patterns และ best practices สร้างโปรเจคเล็กๆ เพื่อฝึกฝน และภายในไม่กี่สัปดาห์ ผมสามารถปรับปรุงระบบ authentication ของพวกเขาให้รองรับ multi-provider login ได้ ผมเชื่อว่าการฝึกฝนอย่างสม่ำเสมอและการทำ hands-on projects คือวิธีเรียนรู้ที่เร็วที่สุด"
+    },
+    {
+      "vocab": "How do you mentor junior developers?",
+      "pronunciation": "",
+      "meaning": "คุณสอนน้องๆ developer อย่างไร?",
+      "example": "At Q-CHANG, I mentored one intern and coordinated with vendor developers. My approach was to start with code reviews where I explained the 'why' behind best practices, not just the 'what.' I also pair-programmed on complex features and encouraged them to ask questions. I believe creating a safe environment for learning is essential.",
+      "exampleTranslation": "ที่ Q-CHANG ผมดูแล intern หนึ่งคนและประสานงานกับ vendor developers แนวทางของผมคือเริ่มจาก code review โดยอธิบาย 'ทำไม' เบื้องหลัง best practices ไม่ใช่แค่บอกว่า 'ทำอะไร' ผมยัง pair-program กับพวกเขาในฟีเจอร์ที่ซับซ้อนและสนับสนุนให้ถามคำถาม ผมเชื่อว่าการสร้างสภาพแวดล้อมที่ปลอดภัยสำหรับการเรียนรู้เป็นสิ่งสำคัญ"
+    },
+    {
+      "vocab": "Where do you see yourself in 3-5 years?",
+      "pronunciation": "",
+      "meaning": "คุณเห็นตัวเองอยู่ที่ไหนใน 3-5 ปีข้างหน้า?",
+      "example": "I want to deepen my expertise in AI/LLM application development and distributed systems. In 3-5 years, I see myself as a senior or lead engineer who can architect scalable AI-powered systems and mentor other developers. I'm also interested in contributing to open-source projects in the AI space.",
+      "exampleTranslation": "ผมต้องการเพิ่มความเชี่ยวชาญใน AI/LLM application development และ distributed systems ใน 3-5 ปี ผมเห็นตัวเองเป็น senior หรือ lead engineer ที่สามารถออกแบบระบบ AI-powered ที่ scale ได้และสอนน้องๆ developer ผมยังสนใจที่จะ contribute open-source projects ในสาย AI ด้วย"
+    },
+    {
+      "vocab": "Do you have any questions for us?",
+      "pronunciation": "",
+      "meaning": "คุณมีคำถามอะไรสำหรับเราไหม?",
+      "example": "What does the tech stack look like for this role? How does the team approach code reviews and knowledge sharing? What are the biggest technical challenges the team is currently facing? What does success look like in this position after 6 months?",
+      "exampleTranslation": "Tech stack สำหรับตำแหน่งนี้เป็นอย่างไรบ้างครับ? ทีมมีแนวทาง code review และ knowledge sharing อย่างไร? ความท้าทายทางเทคนิคที่ใหญ่ที่สุดที่ทีมกำลังเผชิญอยู่คืออะไร? ความสำเร็จในตำแหน่งนี้หลังจาก 6 เดือนเป็นอย่างไร?"
+    }
+  ]
+}
