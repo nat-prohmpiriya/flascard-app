@@ -106,7 +106,6 @@ self.addEventListener('notificationclose', (event) => {
 
 // Message event (for communication with main app)
 self.addEventListener('message', (event) => {
-  console.log('[SW] Message received:', event.data);
 
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
