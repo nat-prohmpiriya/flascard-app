@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Networking",
+    "description": "Common interview questions about networking concepts for web developers including HTTP, TCP/IP, DNS, and web protocols",
+    "category": "Interview",
+    "tags": ["interview", "networking", "http", "tcp-ip", "web"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "Explain the OSI model and its 7 layers.",
+      "pronunciation": "",
+      "meaning": "อธิบาย OSI model และ 7 layers",
+      "example": "OSI (Open Systems Interconnection) - conceptual framework for network communication. Layers (bottom to top): 1) Physical - bits, cables, signals. 2) Data Link - MAC addresses, switches, frames. 3) Network - IP addresses, routing, packets. 4) Transport - TCP/UDP, ports, segments. 5) Session - connection management. 6) Presentation - encryption, compression, format. 7) Application - HTTP, FTP, SMTP, user interface. Mnemonic: 'Please Do Not Throw Sausage Pizza Away'. In practice, TCP/IP model (4 layers) is more commonly used. Interview tip: know layers 3-7 best for web development.",
+      "exampleTranslation": "OSI (Open Systems Interconnection) - conceptual framework สำหรับ network communication Layers (ล่างขึ้นบน): 1) Physical - bits, cables, signals 2) Data Link - MAC addresses, switches, frames 3) Network - IP addresses, routing, packets 4) Transport - TCP/UDP, ports, segments 5) Session - connection management 6) Presentation - encryption, compression, format 7) Application - HTTP, FTP, SMTP, user interface Mnemonic: 'Please Do Not Throw Sausage Pizza Away' ในทางปฏิบัติ TCP/IP model (4 layers) ใช้กันมากกว่า Interview tip: รู้ layers 3-7 ดีที่สุดสำหรับ web development"
+    },
+    {
+      "vocab": "What is the difference between TCP and UDP?",
+      "pronunciation": "",
+      "meaning": "TCP กับ UDP ต่างกันอย่างไร?",
+      "example": "TCP (Transmission Control Protocol): Connection-oriented (3-way handshake: SYN, SYN-ACK, ACK). Reliable - guarantees delivery, ordering, error checking. Flow control and congestion control. Slower but accurate. Use for: HTTP, email, file transfer, database. UDP (User Datagram Protocol): Connectionless - no handshake. Unreliable - no guarantee of delivery or order. Faster, lower latency. Use for: video streaming, gaming, DNS, VoIP. Interview question: 'Why is video streaming UDP?' - dropped packet is better than delayed packet causing buffering.",
+      "exampleTranslation": "TCP (Transmission Control Protocol): Connection-oriented (3-way handshake: SYN, SYN-ACK, ACK) Reliable - รับประกัน delivery, ordering, error checking Flow control และ congestion control ช้ากว่าแต่แม่นยำ ใช้สำหรับ: HTTP, email, file transfer, database UDP (User Datagram Protocol): Connectionless - ไม่มี handshake Unreliable - ไม่รับประกัน delivery หรือ order เร็วกว่า, latency ต่ำ ใช้สำหรับ: video streaming, gaming, DNS, VoIP Interview question: 'ทำไม video streaming ใช้ UDP?' - dropped packet ดีกว่า delayed packet ที่ทำให้เกิด buffering"
+    },
+    {
+      "vocab": "How does DNS work?",
+      "pronunciation": "",
+      "meaning": "DNS ทำงานอย่างไร?",
+      "example": "DNS (Domain Name System) - translates domain names to IP addresses. Process: 1) Browser cache check. 2) OS cache check. 3) Query recursive resolver (ISP). 4) Root nameserver (returns TLD server). 5) TLD server (.com, .org - returns authoritative). 6) Authoritative nameserver (returns IP). DNS record types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (verification), NS (nameserver). TTL (Time To Live) controls caching duration. Interview: 'DNS is often the first thing to troubleshoot when website is down.' DNS propagation can take 24-48 hours for changes.",
+      "exampleTranslation": "DNS (Domain Name System) - แปล domain names เป็น IP addresses Process: 1) Browser cache check 2) OS cache check 3) Query recursive resolver (ISP) 4) Root nameserver (return TLD server) 5) TLD server (.com, .org - return authoritative) 6) Authoritative nameserver (return IP) DNS record types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (verification), NS (nameserver) TTL (Time To Live) ควบคุม caching duration Interview: 'DNS มักเป็นสิ่งแรกที่ troubleshoot เมื่อ website down' DNS propagation อาจใช้เวลา 24-48 ชั่วโมงสำหรับ changes"
+    },
+    {
+      "vocab": "Explain HTTP vs HTTPS.",
+      "pronunciation": "",
+      "meaning": "HTTP กับ HTTPS ต่างกันอย่างไร?",
+      "example": "HTTP (HyperText Transfer Protocol): Port 80. Plaintext - data can be intercepted (man-in-the-middle). Fast but insecure. HTTPS (HTTP Secure): Port 443. Encrypted via TLS/SSL. Protects: confidentiality, integrity, authenticity. Process: TLS handshake, certificate verification, key exchange, encrypted communication. Why HTTPS matters: 1) Security - protects user data. 2) SEO - Google ranks HTTPS higher. 3) Trust - browser shows padlock. 4) Required for: HTTP/2, service workers, geolocation API. Let's Encrypt provides free certificates. Interview: always use HTTPS in production.",
+      "exampleTranslation": "HTTP (HyperText Transfer Protocol): Port 80 Plaintext - data ถูก intercept ได้ (man-in-the-middle) เร็วแต่ไม่ปลอดภัย HTTPS (HTTP Secure): Port 443 Encrypted ผ่าน TLS/SSL ปกป้อง: confidentiality, integrity, authenticity Process: TLS handshake, certificate verification, key exchange, encrypted communication ทำไม HTTPS สำคัญ: 1) Security - ปกป้อง user data 2) SEO - Google จัดอันดับ HTTPS สูงกว่า 3) Trust - browser แสดง padlock 4) Required สำหรับ: HTTP/2, service workers, geolocation API Let's Encrypt ให้ certificates ฟรี Interview: ใช้ HTTPS ใน production เสมอ"
+    },
+    {
+      "vocab": "What are HTTP status codes? Give examples.",
+      "pronunciation": "",
+      "meaning": "HTTP status codes คืออะไร? ยกตัวอย่าง",
+      "example": "Status codes indicate response type. Categories: 1xx (Informational), 2xx (Success), 3xx (Redirect), 4xx (Client Error), 5xx (Server Error). Common codes: 200 OK - success. 201 Created - POST success. 204 No Content - success, empty body. 301 Moved Permanently - SEO redirect. 302 Found - temporary redirect. 304 Not Modified - use cache. 400 Bad Request - invalid input. 401 Unauthorized - not authenticated. 403 Forbidden - no permission. 404 Not Found - resource doesn't exist. 429 Too Many Requests - rate limited. 500 Internal Server Error - server bug. 502 Bad Gateway - upstream error. 503 Service Unavailable - overloaded.",
+      "exampleTranslation": "Status codes บอก response type Categories: 1xx (Informational), 2xx (Success), 3xx (Redirect), 4xx (Client Error), 5xx (Server Error) Common codes: 200 OK - สำเร็จ 201 Created - POST สำเร็จ 204 No Content - สำเร็จ, empty body 301 Moved Permanently - SEO redirect 302 Found - temporary redirect 304 Not Modified - ใช้ cache 400 Bad Request - invalid input 401 Unauthorized - not authenticated 403 Forbidden - ไม่มี permission 404 Not Found - resource ไม่มี 429 Too Many Requests - rate limited 500 Internal Server Error - server bug 502 Bad Gateway - upstream error 503 Service Unavailable - overloaded"
+    },
+    {
+      "vocab": "Explain REST API principles.",
+      "pronunciation": "",
+      "meaning": "อธิบายหลักการของ REST API",
+      "example": "REST (REpresentational State Transfer) - architectural style for APIs. Principles: 1) Client-Server separation - frontend/backend independent. 2) Stateless - each request contains all info (no session state). 3) Cacheable - responses specify cacheability. 4) Uniform Interface - standard methods (GET, POST, PUT, DELETE). 5) Layered System - client doesn't know if direct or through proxy. 6) Resource-based - URLs represent resources (/users/123). HTTP methods: GET (read), POST (create), PUT (full update), PATCH (partial update), DELETE (remove). RESTful URL: /users, /users/{id}, /users/{id}/orders. NOT: /getUser, /createUser.",
+      "exampleTranslation": "REST (REpresentational State Transfer) - architectural style สำหรับ APIs Principles: 1) Client-Server separation - frontend/backend แยกกัน 2) Stateless - แต่ละ request มีข้อมูลทั้งหมด (ไม่มี session state) 3) Cacheable - responses ระบุ cacheability 4) Uniform Interface - standard methods (GET, POST, PUT, DELETE) 5) Layered System - client ไม่รู้ว่า direct หรือผ่าน proxy 6) Resource-based - URLs แทน resources (/users/123) HTTP methods: GET (read), POST (create), PUT (full update), PATCH (partial update), DELETE (remove) RESTful URL: /users, /users/{id}, /users/{id}/orders NOT: /getUser, /createUser"
+    },
+    {
+      "vocab": "What is the difference between cookies and sessions?",
+      "pronunciation": "",
+      "meaning": "Cookies กับ Sessions ต่างกันอย่างไร?",
+      "example": "Cookies: Stored in browser. Sent with every request to same domain. Size limit ~4KB. Types: Session cookie (expires on close), Persistent (has expiry date). Attributes: HttpOnly (no JS access), Secure (HTTPS only), SameSite (CSRF protection). Sessions: Server-side storage. Client only stores session ID (in cookie or URL). More secure for sensitive data. Can store more data. Expires based on server config. Modern approach: JWT tokens - stateless, stored in cookie or localStorage. Interview: know cookie security attributes and when to use each approach.",
+      "exampleTranslation": "Cookies: เก็บใน browser ส่งกับทุก request ไปยัง domain เดียวกัน Size limit ~4KB Types: Session cookie (หมดอายุเมื่อปิด), Persistent (มี expiry date) Attributes: HttpOnly (JS เข้าถึงไม่ได้), Secure (HTTPS only), SameSite (CSRF protection) Sessions: Server-side storage Client เก็บแค่ session ID (ใน cookie หรือ URL) ปลอดภัยกว่าสำหรับ sensitive data เก็บ data ได้มากกว่า Expires ตาม server config Modern approach: JWT tokens - stateless, เก็บใน cookie หรือ localStorage Interview: รู้ cookie security attributes และเมื่อไหร่ใช้แต่ละ approach"
+    },
+    {
+      "vocab": "Explain WebSocket and its use cases.",
+      "pronunciation": "",
+      "meaning": "อธิบาย WebSocket และ use cases",
+      "example": "WebSocket - full-duplex, persistent connection between client and server. Unlike HTTP (request-response), WebSocket allows bidirectional real-time communication. Handshake: starts as HTTP, upgrades to WebSocket (101 Switching Protocols). Use cases: real-time chat, live notifications, multiplayer games, live sports scores, collaborative editing, stock tickers. API: new WebSocket('ws://...'), ws.send(), ws.onmessage, ws.onclose. Alternatives: Server-Sent Events (SSE) - one-way server to client, simpler. Long polling - client keeps requesting. Socket.io - library with fallbacks. Interview: know when WebSocket is overkill vs needed.",
+      "exampleTranslation": "WebSocket - full-duplex, persistent connection ระหว่าง client และ server ต่างจาก HTTP (request-response), WebSocket อนุญาต bidirectional real-time communication Handshake: เริ่มเป็น HTTP, upgrade เป็น WebSocket (101 Switching Protocols) Use cases: real-time chat, live notifications, multiplayer games, live sports scores, collaborative editing, stock tickers API: new WebSocket('ws://...'), ws.send(), ws.onmessage, ws.onclose Alternatives: Server-Sent Events (SSE) - one-way server to client, ง่ายกว่า Long polling - client request ต่อเนื่อง Socket.io - library with fallbacks Interview: รู้ว่าเมื่อไหร่ WebSocket overkill vs จำเป็น"
+    },
+    {
+      "vocab": "What is CORS and how does it work?",
+      "pronunciation": "",
+      "meaning": "CORS คืออะไร และทำงานอย่างไร?",
+      "example": "CORS (Cross-Origin Resource Sharing) - browser security feature that blocks requests to different origins. Origin = protocol + domain + port. Same-origin policy: https://a.com can't fetch from https://b.com. CORS headers from server: Access-Control-Allow-Origin (which origins allowed), Access-Control-Allow-Methods (which methods), Access-Control-Allow-Headers (which headers). Preflight request: OPTIONS request before actual request for 'non-simple' requests (PUT, DELETE, custom headers). Fix CORS: configure server to send proper headers, or use proxy. Common mistake: wildcard (*) doesn't work with credentials. Interview: know preflight, why CORS exists, how to configure.",
+      "exampleTranslation": "CORS (Cross-Origin Resource Sharing) - browser security feature ที่บล็อก requests ไป origins ต่างกัน Origin = protocol + domain + port Same-origin policy: https://a.com fetch จาก https://b.com ไม่ได้ CORS headers จาก server: Access-Control-Allow-Origin (origins ไหนอนุญาต), Access-Control-Allow-Methods (methods ไหน), Access-Control-Allow-Headers (headers ไหน) Preflight request: OPTIONS request ก่อน actual request สำหรับ 'non-simple' requests (PUT, DELETE, custom headers) Fix CORS: configure server ส่ง headers ที่ถูกต้อง, หรือใช้ proxy Common mistake: wildcard (*) ใช้กับ credentials ไม่ได้ Interview: รู้ preflight, ทำไม CORS มี, วิธี configure"
+    },
+    {
+      "vocab": "What is a CDN and how does it improve performance?",
+      "pronunciation": "",
+      "meaning": "CDN คืออะไร และปรับปรุง performance อย่างไร?",
+      "example": "CDN (Content Delivery Network) - distributed servers that cache content close to users. How it works: request goes to nearest edge server instead of origin. Benefits: 1) Reduced latency - physically closer servers. 2) Reduced origin load - edge handles most requests. 3) DDoS protection - distributed network absorbs attacks. 4) High availability - failover between nodes. What to CDN: static assets (images, CSS, JS), videos, APIs (with cache rules). Providers: CloudFlare, AWS CloudFront, Akamai, Fastly. Cache invalidation: TTL-based, purge API. Interview: explain cache-control headers, cache invalidation strategies.",
+      "exampleTranslation": "CDN (Content Delivery Network) - distributed servers ที่ cache content ใกล้ users วิธีทำงาน: request ไป nearest edge server แทน origin Benefits: 1) Reduced latency - servers ใกล้กว่าทาง physical 2) Reduced origin load - edge จัดการ requests ส่วนใหญ่ 3) DDoS protection - distributed network ดูดซับ attacks 4) High availability - failover ระหว่าง nodes อะไรควร CDN: static assets (images, CSS, JS), videos, APIs (with cache rules) Providers: CloudFlare, AWS CloudFront, Akamai, Fastly Cache invalidation: TTL-based, purge API Interview: อธิบาย cache-control headers, cache invalidation strategies"
+    },
+    {
+      "vocab": "Explain load balancing and its algorithms.",
+      "pronunciation": "",
+      "meaning": "อธิบาย load balancing และ algorithms",
+      "example": "Load balancer distributes traffic across multiple servers. Benefits: high availability, scalability, no single point of failure. Types: Layer 4 (transport - IP/port), Layer 7 (application - HTTP headers/content). Algorithms: 1) Round Robin - rotate through servers. 2) Weighted Round Robin - based on server capacity. 3) Least Connections - send to server with fewest active. 4) IP Hash - same client always to same server (sticky sessions). 5) Health checks - remove unhealthy servers. Tools: nginx, HAProxy, AWS ALB/NLB. Interview: know sticky sessions problem (stateless better), health check importance, when Layer 4 vs 7.",
+      "exampleTranslation": "Load balancer กระจาย traffic ข้าม servers หลายตัว Benefits: high availability, scalability, no single point of failure Types: Layer 4 (transport - IP/port), Layer 7 (application - HTTP headers/content) Algorithms: 1) Round Robin - หมุนผ่าน servers 2) Weighted Round Robin - ตาม server capacity 3) Least Connections - ส่งไป server ที่ active น้อยสุด 4) IP Hash - client เดียวกันไป server เดียวกันเสมอ (sticky sessions) 5) Health checks - เอา unhealthy servers ออก Tools: nginx, HAProxy, AWS ALB/NLB Interview: รู้ปัญหา sticky sessions (stateless ดีกว่า), ความสำคัญของ health check, เมื่อไหร่ Layer 4 vs 7"
+    },
+    {
+      "vocab": "What is an API Gateway?",
+      "pronunciation": "",
+      "meaning": "API Gateway คืออะไร?",
+      "example": "API Gateway - single entry point for all API requests, sits between clients and backend services. Responsibilities: 1) Request routing - to correct microservice. 2) Authentication/Authorization - validate tokens. 3) Rate limiting - prevent abuse. 4) Request/response transformation. 5) Load balancing. 6) Caching. 7) Logging/monitoring. 8) SSL termination. Patterns: BFF (Backend for Frontend) - separate gateway per client type. Examples: Kong, AWS API Gateway, nginx, Zuul, Traefik. Interview: explain when to use API Gateway vs direct service calls, understand it's an extra hop (latency).",
+      "exampleTranslation": "API Gateway - single entry point สำหรับทุก API requests, อยู่ระหว่าง clients และ backend services Responsibilities: 1) Request routing - ไป microservice ที่ถูกต้อง 2) Authentication/Authorization - validate tokens 3) Rate limiting - ป้องกัน abuse 4) Request/response transformation 5) Load balancing 6) Caching 7) Logging/monitoring 8) SSL termination Patterns: BFF (Backend for Frontend) - gateway แยกต่อ client type ตัวอย่าง: Kong, AWS API Gateway, nginx, Zuul, Traefik Interview: อธิบายเมื่อไหร่ใช้ API Gateway vs direct service calls, เข้าใจว่ามัน extra hop (latency)"
+    },
+    {
+      "vocab": "Explain the difference between HTTP/1.1, HTTP/2, and HTTP/3.",
+      "pronunciation": "",
+      "meaning": "HTTP/1.1, HTTP/2, และ HTTP/3 ต่างกันอย่างไร?",
+      "example": "HTTP/1.1: One request per connection (or keep-alive for reuse). Head-of-line blocking. Text-based protocol. Multiple connections for parallel requests (6 per domain). HTTP/2: Multiplexing - multiple requests on single connection. Binary protocol. Header compression (HPACK). Server push. Still TCP, so HOL blocking at transport layer. HTTP/3: Uses QUIC (UDP-based). No TCP HOL blocking. Faster connection setup (0-RTT). Built-in encryption. Better for mobile (connection migration). Browser support: HTTP/2 widely supported, HTTP/3 growing. Interview: understand why each version was created and key improvements.",
+      "exampleTranslation": "HTTP/1.1: One request per connection (หรือ keep-alive สำหรับ reuse) Head-of-line blocking Text-based protocol Multiple connections สำหรับ parallel requests (6 per domain) HTTP/2: Multiplexing - หลาย requests บน single connection Binary protocol Header compression (HPACK) Server push ยังใช้ TCP, HOL blocking ที่ transport layer HTTP/3: ใช้ QUIC (UDP-based) ไม่มี TCP HOL blocking Connection setup เร็วกว่า (0-RTT) Built-in encryption ดีกว่าสำหรับ mobile (connection migration) Browser support: HTTP/2 รองรับกว้างขวาง, HTTP/3 กำลังโต Interview: เข้าใจทำไมแต่ละ version ถูกสร้างและ key improvements"
+    },
+    {
+      "vocab": "What is a reverse proxy?",
+      "pronunciation": "",
+      "meaning": "Reverse proxy คืออะไร?",
+      "example": "Reverse proxy sits in front of backend servers, forwarding client requests. Client doesn't know about backend servers. Forward proxy (regular proxy): represents clients, hides client identity from servers. Reverse proxy: represents servers, hides server identity from clients. Use cases: 1) Load balancing. 2) SSL termination - handle HTTPS, forward HTTP to backends. 3) Caching static content. 4) Compression. 5) Security - hide backend, WAF. 6) A/B testing. 7) Canary deployments. Examples: nginx, Apache, HAProxy, Traefik. nginx config: proxy_pass http://backend. Interview: know difference from forward proxy, common configurations.",
+      "exampleTranslation": "Reverse proxy อยู่หน้า backend servers, forward client requests Client ไม่รู้เรื่อง backend servers Forward proxy (regular proxy): แทน clients, ซ่อน client identity จาก servers Reverse proxy: แทน servers, ซ่อน server identity จาก clients Use cases: 1) Load balancing 2) SSL termination - จัดการ HTTPS, forward HTTP ไป backends 3) Caching static content 4) Compression 5) Security - ซ่อน backend, WAF 6) A/B testing 7) Canary deployments Examples: nginx, Apache, HAProxy, Traefik nginx config: proxy_pass http://backend Interview: รู้ความต่างจาก forward proxy, common configurations"
+    },
+    {
+      "vocab": "What are common network security attacks?",
+      "pronunciation": "",
+      "meaning": "Network security attacks ที่พบบ่อยมีอะไรบ้าง?",
+      "example": "Common attacks: 1) DDoS (Distributed Denial of Service) - overwhelm with traffic. Mitigation: CDN, rate limiting, WAF. 2) Man-in-the-Middle - intercept communication. Mitigation: HTTPS, certificate pinning. 3) DNS Spoofing - redirect to malicious IP. Mitigation: DNSSEC. 4) ARP Spoofing - local network attack. 5) Port Scanning - discover open ports. Mitigation: firewall rules. 6) SYN Flood - exhaust server resources. 7) IP Spoofing - fake source IP. Defense layers: firewall, IDS/IPS, WAF, encryption. Interview: know DDoS and MITM well, explain mitigation strategies.",
+      "exampleTranslation": "Common attacks: 1) DDoS (Distributed Denial of Service) - overwhelm ด้วย traffic Mitigation: CDN, rate limiting, WAF 2) Man-in-the-Middle - intercept communication Mitigation: HTTPS, certificate pinning 3) DNS Spoofing - redirect ไป malicious IP Mitigation: DNSSEC 4) ARP Spoofing - local network attack 5) Port Scanning - discover open ports Mitigation: firewall rules 6) SYN Flood - หมด server resources 7) IP Spoofing - fake source IP Defense layers: firewall, IDS/IPS, WAF, encryption Interview: รู้ DDoS และ MITM ดี, อธิบาย mitigation strategies"
+    },
+    {
+      "vocab": "Explain the concept of latency and bandwidth.",
+      "pronunciation": "",
+      "meaning": "อธิบาย concept ของ latency และ bandwidth",
+      "example": "Latency: time for data to travel from source to destination (measured in ms). Types: network latency, server processing, client rendering. Factors: physical distance, network congestion, number of hops. Reduce latency: CDN, edge computing, caching, fewer redirects. Bandwidth: maximum data transfer rate (measured in Mbps/Gbps). Like a pipe - width determines throughput. High bandwidth + high latency = fast download but slow start. Analogy: latency = how long truck takes to arrive, bandwidth = how big the truck is. Interview: 'high bandwidth doesn't fix latency problem' - important concept.",
+      "exampleTranslation": "Latency: เวลาที่ data เดินทางจาก source ถึง destination (วัดเป็น ms) Types: network latency, server processing, client rendering Factors: physical distance, network congestion, number of hops ลด latency: CDN, edge computing, caching, fewer redirects Bandwidth: maximum data transfer rate (วัดเป็น Mbps/Gbps) เหมือนท่อ - ความกว้างกำหนด throughput High bandwidth + high latency = download เร็วแต่ start ช้า Analogy: latency = รถบรรทุกมาถึงนานเท่าไหร่, bandwidth = รถบรรทุกใหญ่แค่ไหน Interview: 'high bandwidth ไม่แก้ปัญหา latency' - important concept"
+    },
+    {
+      "vocab": "What is GraphQL and how does it differ from REST?",
+      "pronunciation": "",
+      "meaning": "GraphQL คืออะไร และต่างจาก REST อย่างไร?",
+      "example": "GraphQL - query language for APIs, developed by Facebook. Key differences from REST: 1) Single endpoint (/graphql) vs multiple endpoints (/users, /posts). 2) Client specifies exact data needed - no over-fetching/under-fetching. 3) Strongly typed schema. 4) Nested queries in single request. GraphQL operations: Query (read), Mutation (write), Subscription (real-time). Disadvantages: complex caching (no HTTP cache), N+1 query problem, learning curve. REST advantages: simpler, HTTP caching, well understood. Use GraphQL when: complex data relationships, multiple clients need different data shapes. Interview: understand trade-offs, not 'GraphQL is better'.",
+      "exampleTranslation": "GraphQL - query language สำหรับ APIs, พัฒนาโดย Facebook ความต่างจาก REST: 1) Single endpoint (/graphql) vs multiple endpoints (/users, /posts) 2) Client ระบุ data ที่ต้องการ exact - ไม่มี over-fetching/under-fetching 3) Strongly typed schema 4) Nested queries ใน single request GraphQL operations: Query (read), Mutation (write), Subscription (real-time) Disadvantages: caching ซับซ้อน (ไม่มี HTTP cache), N+1 query problem, learning curve REST advantages: ง่ายกว่า, HTTP caching, เข้าใจกันดี ใช้ GraphQL เมื่อ: data relationships ซับซ้อน, หลาย clients ต้องการ data shapes ต่างกัน Interview: เข้าใจ trade-offs, ไม่ใช่ 'GraphQL ดีกว่า'"
+    },
+    {
+      "vocab": "What happens when you type a URL in the browser?",
+      "pronunciation": "",
+      "meaning": "เกิดอะไรขึ้นเมื่อพิมพ์ URL ใน browser?",
+      "example": "Classic interview question! Steps: 1) URL parsing - extract protocol, domain, path. 2) DNS lookup - resolve domain to IP (check caches first). 3) TCP connection - 3-way handshake with server. 4) TLS handshake (if HTTPS) - certificate exchange, key negotiation. 5) HTTP request - send GET request with headers. 6) Server processing - route, execute code, database query. 7) HTTP response - status code, headers, HTML body. 8) Browser rendering - parse HTML, build DOM, fetch CSS/JS, execute JS, paint. Additional: connection reuse, caching, redirects, cookies sent. Interview tip: explain at the level of detail they want, mention you can go deeper.",
+      "exampleTranslation": "Classic interview question! Steps: 1) URL parsing - extract protocol, domain, path 2) DNS lookup - resolve domain เป็น IP (check caches ก่อน) 3) TCP connection - 3-way handshake กับ server 4) TLS handshake (ถ้า HTTPS) - certificate exchange, key negotiation 5) HTTP request - ส่ง GET request พร้อม headers 6) Server processing - route, execute code, database query 7) HTTP response - status code, headers, HTML body 8) Browser rendering - parse HTML, build DOM, fetch CSS/JS, execute JS, paint Additional: connection reuse, caching, redirects, cookies ถูกส่ง Interview tip: อธิบายที่ level of detail ที่เขาต้องการ, บอกว่าสามารถไป deeper ได้"
+    },
+    {
+      "vocab": "What is a VPN and how does it work?",
+      "pronunciation": "",
+      "meaning": "VPN คืออะไร และทำงานอย่างไร?",
+      "example": "VPN (Virtual Private Network) - creates encrypted tunnel between client and VPN server. How it works: 1) Client connects to VPN server. 2) All traffic encrypted and routed through tunnel. 3) VPN server decrypts and forwards to destination. 4) Response comes back through same tunnel. Benefits: 1) Privacy - hide IP address. 2) Security - encrypt on public WiFi. 3) Access - bypass geo-restrictions. 4) Remote work - access company network. Types: Remote access VPN (individual), Site-to-site VPN (connect networks). Protocols: OpenVPN, WireGuard, IPSec. For development: VPN to access internal staging/dev environments.",
+      "exampleTranslation": "VPN (Virtual Private Network) - สร้าง encrypted tunnel ระหว่าง client และ VPN server วิธีทำงาน: 1) Client connect ไป VPN server 2) Traffic ทั้งหมด encrypted และ route ผ่าน tunnel 3) VPN server decrypt และ forward ไป destination 4) Response กลับมาผ่าน tunnel เดียวกัน Benefits: 1) Privacy - ซ่อน IP address 2) Security - encrypt บน public WiFi 3) Access - bypass geo-restrictions 4) Remote work - เข้าถึง company network Types: Remote access VPN (individual), Site-to-site VPN (connect networks) Protocols: OpenVPN, WireGuard, IPSec สำหรับ development: VPN เพื่อเข้าถึง internal staging/dev environments"
+    },
+    {
+      "vocab": "Explain microservices communication patterns.",
+      "pronunciation": "",
+      "meaning": "อธิบาย microservices communication patterns",
+      "example": "Synchronous: 1) REST - HTTP request/response, simple but blocking. 2) gRPC - binary protocol, faster, type-safe, streaming support. Asynchronous: 3) Message Queue - RabbitMQ, SQS. Producer sends, consumer processes later. Decoupled, reliable. 4) Event Streaming - Kafka. Events stored, multiple consumers. Event sourcing. 5) Pub/Sub - broadcast to all subscribers. Patterns: Request-Reply, Event-Driven, Saga (distributed transactions), CQRS (separate read/write). Considerations: service discovery, circuit breaker, retry logic, idempotency. Interview: know sync vs async trade-offs, when to use message queues.",
+      "exampleTranslation": "Synchronous: 1) REST - HTTP request/response, ง่ายแต่ blocking 2) gRPC - binary protocol, เร็วกว่า, type-safe, streaming support Asynchronous: 3) Message Queue - RabbitMQ, SQS Producer ส่ง, consumer process ทีหลัง Decoupled, reliable 4) Event Streaming - Kafka Events ถูกเก็บ, หลาย consumers Event sourcing 5) Pub/Sub - broadcast ไปทุก subscribers Patterns: Request-Reply, Event-Driven, Saga (distributed transactions), CQRS (separate read/write) Considerations: service discovery, circuit breaker, retry logic, idempotency Interview: รู้ sync vs async trade-offs, เมื่อไหร่ใช้ message queues"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Security & OWASP",
+    "description": "Common interview questions about web security, OWASP Top 10, authentication, and secure coding practices",
+    "category": "Interview",
+    "tags": ["interview", "security", "owasp", "authentication"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the OWASP Top 10?",
+      "pronunciation": "OWASP = Open Web Application Security Project",
+      "meaning": "OWASP Top 10 คืออะไร?",
+      "example": "OWASP Top 10 is a standard awareness document listing the most critical web application security risks. 2021 version: 1) Broken Access Control, 2) Cryptographic Failures, 3) Injection, 4) Insecure Design, 5) Security Misconfiguration, 6) Vulnerable Components, 7) Authentication Failures, 8) Software/Data Integrity Failures, 9) Logging/Monitoring Failures, 10) Server-Side Request Forgery (SSRF). It's updated every few years based on data from security assessments. Use it as a baseline for security testing and developer training. Not exhaustive, but covers most common vulnerabilities.",
+      "exampleTranslation": "OWASP Top 10 คือ standard awareness document ที่ list web application security risks ที่สำคัญที่สุด 2021 version: 1) Broken Access Control, 2) Cryptographic Failures, 3) Injection, 4) Insecure Design, 5) Security Misconfiguration, 6) Vulnerable Components, 7) Authentication Failures, 8) Software/Data Integrity Failures, 9) Logging/Monitoring Failures, 10) Server-Side Request Forgery (SSRF) อัพเดททุกไม่กี่ปีตาม data จาก security assessments ใช้เป็น baseline สำหรับ security testing และ developer training ไม่ครอบคลุมทั้งหมด แต่ครอบคลุม vulnerabilities ที่พบบ่อยสุด"
+    },
+    {
+      "vocab": "What is SQL Injection and how do you prevent it?",
+      "pronunciation": "",
+      "meaning": "SQL Injection คืออะไร และป้องกันอย่างไร?",
+      "example": "SQL Injection occurs when untrusted data is sent to an interpreter as part of a command. Example: query = 'SELECT * FROM users WHERE id = ' + user_input. If user_input is '1; DROP TABLE users;--', it executes malicious SQL. Prevention: 1) Parameterized queries/prepared statements - NEVER concatenate user input. Example: cursor.execute('SELECT * FROM users WHERE id = ?', (user_id,)). 2) ORMs - abstract away raw SQL. 3) Input validation - whitelist expected values. 4) Least privilege - database user shouldn't have DROP permissions. 5) WAF as additional layer. Parameterized queries are the primary defense.",
+      "exampleTranslation": "SQL Injection เกิดเมื่อ untrusted data ถูกส่งไป interpreter เป็นส่วนหนึ่งของ command ตัวอย่าง: query = 'SELECT * FROM users WHERE id = ' + user_input ถ้า user_input คือ '1; DROP TABLE users;--', มัน execute malicious SQL Prevention: 1) Parameterized queries/prepared statements - อย่า concatenate user input ตัวอย่าง: cursor.execute('SELECT * FROM users WHERE id = ?', (user_id,)) 2) ORMs - abstract away raw SQL 3) Input validation - whitelist expected values 4) Least privilege - database user ไม่ควรมี DROP permissions 5) WAF เป็น layer เพิ่มเติม Parameterized queries คือ defense หลัก"
+    },
+    {
+      "vocab": "What is XSS (Cross-Site Scripting) and its types?",
+      "pronunciation": "XSS = Cross-Site Scripting",
+      "meaning": "XSS คืออะไร และมีประเภทอะไรบ้าง?",
+      "example": "XSS injects malicious scripts into web pages viewed by other users. Types: 1) Reflected XSS - malicious script in URL parameter, reflected back in response. Example: search results showing 'Results for <script>...</script>'. 2) Stored XSS - script stored in database, executed when page loads. Example: comment containing <script>. More dangerous as it affects all users. 3) DOM-based XSS - vulnerability in client-side JavaScript that processes untrusted data. Prevention: output encoding (HTML entities), Content Security Policy (CSP), HTTPOnly cookies, input validation. React/Vue auto-escape by default, but dangerouslySetInnerHTML bypasses this.",
+      "exampleTranslation": "XSS inject malicious scripts เข้าไปในหน้าเว็บที่ users อื่นดู Types: 1) Reflected XSS - malicious script ใน URL parameter, reflected กลับใน response ตัวอย่าง: search results แสดง 'Results for <script>...</script>' 2) Stored XSS - script เก็บใน database, execute เมื่อหน้าโหลด ตัวอย่าง: comment ที่มี <script> อันตรายกว่าเพราะกระทบ users ทุกคน 3) DOM-based XSS - vulnerability ใน client-side JavaScript ที่ process untrusted data Prevention: output encoding (HTML entities), Content Security Policy (CSP), HTTPOnly cookies, input validation React/Vue auto-escape by default แต่ dangerouslySetInnerHTML bypass สิ่งนี้"
+    },
+    {
+      "vocab": "What is CSRF and how do you prevent it?",
+      "pronunciation": "CSRF = Cross-Site Request Forgery",
+      "meaning": "CSRF คืออะไร และป้องกันอย่างไร?",
+      "example": "CSRF tricks authenticated users into performing unwanted actions. Attacker's site makes request to your site using victim's session cookies. Example: hidden form on evil.com POSTs to bank.com/transfer. Prevention: 1) CSRF tokens - unique, unpredictable token per session/request, validated server-side. 2) SameSite cookies - SameSite=Strict or Lax prevents cookies from being sent cross-site. 3) Check Origin/Referer headers. 4) Re-authenticate for sensitive actions. Modern default: SameSite=Lax in most browsers now. APIs using Authorization header (not cookies) are immune. Always use CSRF tokens for cookie-based auth.",
+      "exampleTranslation": "CSRF หลอก authenticated users ให้ทำ actions ที่ไม่ต้องการ เว็บ attacker ส่ง request ไปเว็บของคุณโดยใช้ session cookies ของเหยื่อ ตัวอย่าง: hidden form บน evil.com POST ไป bank.com/transfer Prevention: 1) CSRF tokens - unique, unpredictable token ต่อ session/request, validated server-side 2) SameSite cookies - SameSite=Strict หรือ Lax ป้องกัน cookies ถูกส่ง cross-site 3) Check Origin/Referer headers 4) Re-authenticate สำหรับ sensitive actions Modern default: SameSite=Lax ใน browsers ส่วนใหญ่แล้ว APIs ที่ใช้ Authorization header (ไม่ใช่ cookies) ปลอดภัย ใช้ CSRF tokens สำหรับ cookie-based auth เสมอ"
+    },
+    {
+      "vocab": "What is Broken Access Control?",
+      "pronunciation": "",
+      "meaning": "Broken Access Control คืออะไร?",
+      "example": "Broken Access Control occurs when users can act outside their intended permissions. #1 in OWASP 2021. Examples: 1) IDOR (Insecure Direct Object Reference) - accessing /api/users/123 when you're user 456. 2) Privilege escalation - regular user accessing admin functions. 3) Missing function-level access control - API endpoint exists but no auth check. 4) Metadata manipulation - changing JWT claims, cookie values. Prevention: deny by default, implement access control once and reuse, log failures, rate limit, disable directory listing. Every endpoint must verify: is user authenticated? is user authorized for THIS resource?",
+      "exampleTranslation": "Broken Access Control เกิดเมื่อ users ทำนอกเหนือ permissions ที่กำหนด #1 ใน OWASP 2021 ตัวอย่าง: 1) IDOR (Insecure Direct Object Reference) - access /api/users/123 เมื่อคุณเป็น user 456 2) Privilege escalation - regular user access admin functions 3) Missing function-level access control - API endpoint มีอยู่แต่ไม่มี auth check 4) Metadata manipulation - เปลี่ยน JWT claims, cookie values Prevention: deny by default, implement access control ครั้งเดียวและ reuse, log failures, rate limit, disable directory listing ทุก endpoint ต้อง verify: user authenticated หรือยัง? user authorized สำหรับ resource นี้หรือเปล่า?"
+    },
+    {
+      "vocab": "How do you securely store passwords?",
+      "pronunciation": "",
+      "meaning": "คุณเก็บ passwords อย่างปลอดภัยอย่างไร?",
+      "example": "NEVER store plain text or reversible encryption. Use: 1) Strong hashing algorithms designed for passwords - bcrypt, Argon2, scrypt. NOT MD5, SHA1, SHA256 alone (too fast, vulnerable to brute force). 2) Salt - unique random value per password, stored with hash. Prevents rainbow table attacks. 3) Pepper - secret key added to all passwords (stored separately from DB). 4) Work factor - make hashing intentionally slow (bcrypt rounds). Example with bcrypt: hash = bcrypt.hash(password, 12). To verify: bcrypt.compare(input, stored_hash). Modern recommendation: Argon2id with appropriate memory/time parameters.",
+      "exampleTranslation": "อย่าเก็บ plain text หรือ reversible encryption ใช้: 1) Strong hashing algorithms ที่ออกแบบสำหรับ passwords - bcrypt, Argon2, scrypt ไม่ใช่ MD5, SHA1, SHA256 เดี่ยว (เร็วเกิน, vulnerable to brute force) 2) Salt - unique random value ต่อ password, เก็บกับ hash ป้องกัน rainbow table attacks 3) Pepper - secret key เพิ่มกับทุก passwords (เก็บแยกจาก DB) 4) Work factor - ทำ hashing ให้ช้าโดยเจตนา (bcrypt rounds) ตัวอย่างกับ bcrypt: hash = bcrypt.hash(password, 12) เพื่อ verify: bcrypt.compare(input, stored_hash) Modern recommendation: Argon2id ด้วย memory/time parameters ที่เหมาะสม"
+    },
+    {
+      "vocab": "What is JWT and what are its security considerations?",
+      "pronunciation": "JWT = JSON Web Token",
+      "meaning": "JWT คืออะไร และมีข้อพิจารณาด้านความปลอดภัยอะไรบ้าง?",
+      "example": "JWT is a compact token format: header.payload.signature (base64 encoded). Used for stateless authentication. Security considerations: 1) Use strong algorithm (RS256, ES256) - never 'none' algorithm. 2) Validate signature on every request. 3) Check expiration (exp claim). 4) Keep tokens short-lived (15 min access token + refresh token). 5) Don't store sensitive data in payload (it's encoded, not encrypted). 6) Store securely - httpOnly cookie preferred over localStorage (XSS protection). 7) Implement token revocation strategy (blacklist, version). Vulnerabilities: algorithm confusion attacks, key exposure, lack of revocation.",
+      "exampleTranslation": "JWT เป็น compact token format: header.payload.signature (base64 encoded) ใช้สำหรับ stateless authentication Security considerations: 1) ใช้ strong algorithm (RS256, ES256) - ไม่เคยใช้ 'none' algorithm 2) Validate signature ทุก request 3) Check expiration (exp claim) 4) รักษา tokens ให้ short-lived (15 min access token + refresh token) 5) อย่าเก็บ sensitive data ใน payload (มัน encoded ไม่ใช่ encrypted) 6) เก็บอย่างปลอดภัย - httpOnly cookie preferred กว่า localStorage (XSS protection) 7) Implement token revocation strategy (blacklist, version) Vulnerabilities: algorithm confusion attacks, key exposure, lack of revocation"
+    },
+    {
+      "vocab": "What is the difference between authentication and authorization?",
+      "pronunciation": "",
+      "meaning": "Authentication กับ authorization ต่างกันอย่างไร?",
+      "example": "Authentication (AuthN): verifies WHO you are. 'Are you really John?' Methods: passwords, MFA, biometrics, SSO, OAuth. Results in identity confirmation. Authorization (AuthZ): verifies WHAT you can do. 'Can John access this resource?' Methods: RBAC, ABAC, ACLs, policies. Results in permission grant/deny. Flow: authenticate first, then authorize. Example: you login (authentication), then system checks if you can view admin page (authorization). Common mistake: checking only authentication without authorization - any logged-in user accessing any resource.",
+      "exampleTranslation": "Authentication (AuthN): verify ว่าคุณเป็นใคร 'คุณเป็น John จริงไหม?' Methods: passwords, MFA, biometrics, SSO, OAuth ผลลัพธ์คือการยืนยันตัวตน Authorization (AuthZ): verify ว่าคุณทำอะไรได้ 'John เข้าถึง resource นี้ได้ไหม?' Methods: RBAC, ABAC, ACLs, policies ผลลัพธ์คือ permission grant/deny Flow: authenticate ก่อน แล้ว authorize ตัวอย่าง: คุณ login (authentication) แล้วระบบตรวจว่าคุณดูหน้า admin ได้ไหม (authorization) Common mistake: ตรวจแค่ authentication โดยไม่มี authorization - any logged-in user เข้าถึง resource ใดก็ได้"
+    },
+    {
+      "vocab": "What is HTTPS and why is it important?",
+      "pronunciation": "",
+      "meaning": "HTTPS คืออะไร และทำไมถึงสำคัญ?",
+      "example": "HTTPS = HTTP over TLS/SSL. Provides: 1) Encryption - data encrypted in transit, prevents eavesdropping. 2) Integrity - data cannot be modified without detection. 3) Authentication - server proves identity via certificate. Without HTTPS: passwords sent in plain text, session hijacking possible, content injection by ISPs/attackers. Implementation: obtain certificate (Let's Encrypt free), configure web server, redirect HTTP to HTTPS, use HSTS header. Modern requirements: browsers mark HTTP as 'not secure', some APIs require HTTPS, SEO benefits. Always use HTTPS, even for 'non-sensitive' sites.",
+      "exampleTranslation": "HTTPS = HTTP over TLS/SSL ให้: 1) Encryption - data encrypted ระหว่าง transit, ป้องกัน eavesdropping 2) Integrity - data ถูกแก้ไขโดยไม่ถูกตรวจจับไม่ได้ 3) Authentication - server พิสูจน์ตัวตนผ่าน certificate ไม่มี HTTPS: passwords ส่งเป็น plain text, session hijacking เป็นไปได้, content injection โดย ISPs/attackers Implementation: รับ certificate (Let's Encrypt ฟรี), configure web server, redirect HTTP ไป HTTPS, ใช้ HSTS header Modern requirements: browsers mark HTTP ว่า 'not secure', บาง APIs ต้อง HTTPS, SEO benefits ใช้ HTTPS เสมอ แม้กับเว็บที่ 'non-sensitive'"
+    },
+    {
+      "vocab": "What is Content Security Policy (CSP)?",
+      "pronunciation": "CSP = Content Security Policy",
+      "meaning": "Content Security Policy (CSP) คืออะไร?",
+      "example": "CSP is an HTTP header that restricts which resources can be loaded on a page. Powerful defense against XSS. Example: Content-Security-Policy: default-src 'self'; script-src 'self' trusted-cdn.com; style-src 'self' 'unsafe-inline'. Directives: default-src (fallback), script-src (JavaScript), style-src (CSS), img-src (images), connect-src (AJAX/WebSocket). Values: 'self' (same origin), 'none', specific domains, 'unsafe-inline' (needed for inline scripts, weakens security). Blocks: inline scripts (unless nonced), eval(), unauthorized external resources. Start with report-only mode to test without breaking site.",
+      "exampleTranslation": "CSP เป็น HTTP header ที่จำกัดว่า resources ไหนโหลดบนหน้าได้ Defense ที่ทรงพลังต่อ XSS ตัวอย่าง: Content-Security-Policy: default-src 'self'; script-src 'self' trusted-cdn.com; style-src 'self' 'unsafe-inline' Directives: default-src (fallback), script-src (JavaScript), style-src (CSS), img-src (images), connect-src (AJAX/WebSocket) Values: 'self' (same origin), 'none', specific domains, 'unsafe-inline' (ต้องการสำหรับ inline scripts, ลด security) Blocks: inline scripts (unless nonced), eval(), unauthorized external resources เริ่มด้วย report-only mode เพื่อ test โดยไม่ทำให้เว็บพัง"
+    },
+    {
+      "vocab": "What is CORS and why does it exist?",
+      "pronunciation": "CORS = Cross-Origin Resource Sharing",
+      "meaning": "CORS คืออะไร และทำไมถึงมี?",
+      "example": "CORS is a browser security mechanism controlling cross-origin requests. Same-origin policy: JavaScript can only access resources from same origin (protocol + domain + port). CORS relaxes this with server permission. Headers: Access-Control-Allow-Origin (which origins allowed), Access-Control-Allow-Methods (which HTTP methods), Access-Control-Allow-Headers (which headers), Access-Control-Allow-Credentials (allow cookies). Preflight: OPTIONS request sent before actual request for 'complex' requests. Common mistake: Access-Control-Allow-Origin: * with credentials - security risk. CORS is browser-enforced - doesn't protect against server-to-server requests.",
+      "exampleTranslation": "CORS เป็น browser security mechanism ที่ควบคุม cross-origin requests Same-origin policy: JavaScript เข้าถึง resources จาก origin เดียวกันเท่านั้น (protocol + domain + port) CORS ผ่อนปรนด้วย server permission Headers: Access-Control-Allow-Origin (origins ไหนอนุญาต), Access-Control-Allow-Methods (HTTP methods ไหน), Access-Control-Allow-Headers (headers ไหน), Access-Control-Allow-Credentials (อนุญาต cookies) Preflight: OPTIONS request ส่งก่อน actual request สำหรับ 'complex' requests Common mistake: Access-Control-Allow-Origin: * กับ credentials - security risk CORS เป็น browser-enforced - ไม่ป้องกัน server-to-server requests"
+    },
+    {
+      "vocab": "What is SSRF (Server-Side Request Forgery)?",
+      "pronunciation": "SSRF = Server-Side Request Forgery",
+      "meaning": "SSRF คืออะไร?",
+      "example": "SSRF tricks server into making requests to unintended locations. Example: image URL feature - user provides URL, server fetches it. Attacker provides: http://169.254.169.254/latest/meta-data/ (AWS metadata), http://localhost:6379 (internal Redis). Impact: access internal services, cloud metadata (credentials!), port scanning. Prevention: 1) Whitelist allowed domains/IPs. 2) Block private IP ranges (10.x, 172.16.x, 192.168.x, 127.x, 169.254.x). 3) Disable unnecessary URL schemes (file://, gopher://). 4) Use allowlist for protocols (https only). 5) Don't expose raw error messages. SSRF is #10 in OWASP 2021.",
+      "exampleTranslation": "SSRF หลอก server ให้ส่ง requests ไปที่ที่ไม่ได้ตั้งใจ ตัวอย่าง: image URL feature - user ให้ URL, server fetch มัน Attacker ให้: http://169.254.169.254/latest/meta-data/ (AWS metadata), http://localhost:6379 (internal Redis) Impact: access internal services, cloud metadata (credentials!), port scanning Prevention: 1) Whitelist allowed domains/IPs 2) Block private IP ranges (10.x, 172.16.x, 192.168.x, 127.x, 169.254.x) 3) Disable URL schemes ที่ไม่จำเป็น (file://, gopher://) 4) ใช้ allowlist สำหรับ protocols (https only) 5) อย่า expose raw error messages SSRF คือ #10 ใน OWASP 2021"
+    },
+    {
+      "vocab": "What is rate limiting and why is it important?",
+      "pronunciation": "",
+      "meaning": "Rate limiting คืออะไร และทำไมถึงสำคัญ?",
+      "example": "Rate limiting restricts how many requests a client can make in a time window. Protects against: brute force attacks (login), DoS/DDoS, API abuse, web scraping. Implementation strategies: 1) Fixed window - X requests per minute. 2) Sliding window - smoother, counts over rolling period. 3) Token bucket - allows bursts, refills over time. Apply at: IP level, user level, API key level. Headers: X-RateLimit-Limit, X-RateLimit-Remaining, Retry-After. Tools: Redis for distributed rate limiting, nginx, API gateways. Different limits for different endpoints: login stricter than public API.",
+      "exampleTranslation": "Rate limiting จำกัดว่า client ส่ง requests ได้กี่ครั้งในช่วงเวลาหนึ่ง ป้องกัน: brute force attacks (login), DoS/DDoS, API abuse, web scraping Implementation strategies: 1) Fixed window - X requests ต่อนาที 2) Sliding window - ราบรื่นกว่า, นับช่วง rolling period 3) Token bucket - อนุญาต bursts, เติมตามเวลา Apply ที่: IP level, user level, API key level Headers: X-RateLimit-Limit, X-RateLimit-Remaining, Retry-After Tools: Redis สำหรับ distributed rate limiting, nginx, API gateways Limits ต่างกันสำหรับ endpoints ต่างกัน: login เข้มงวดกว่า public API"
+    },
+    {
+      "vocab": "What is the principle of least privilege?",
+      "pronunciation": "",
+      "meaning": "หลักการ least privilege คืออะไร?",
+      "example": "Least privilege: users and systems should have minimum access needed to perform their function. Nothing more. Application: 1) Database users - read-only for queries, no DROP permission for app. 2) API keys - scope to specific operations. 3) IAM roles - narrow permissions per service. 4) File system - app shouldn't run as root. 5) Network - only open required ports. Benefits: limits damage from breaches, reduces attack surface, contains mistakes. Example: web server compromised, but database user can only SELECT - attacker can't DELETE data. Regular audit: remove unused permissions, review access periodically.",
+      "exampleTranslation": "Least privilege: users และ systems ควรมี access ขั้นต่ำที่ต้องการเพื่อทำหน้าที่ ไม่มากกว่านั้น Application: 1) Database users - read-only สำหรับ queries, ไม่มี DROP permission สำหรับ app 2) API keys - scope เฉพาะ operations ที่ต้องการ 3) IAM roles - permissions แคบต่อ service 4) File system - app ไม่ควรรันเป็น root 5) Network - เปิดเฉพาะ ports ที่ต้องการ Benefits: จำกัดความเสียหายจาก breaches, ลด attack surface, contain mistakes ตัวอย่าง: web server ถูก compromise, แต่ database user SELECT ได้เท่านั้น - attacker DELETE data ไม่ได้ Regular audit: ลบ permissions ที่ไม่ใช้, review access เป็นประจำ"
+    },
+    {
+      "vocab": "How do you handle sensitive data in logs?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ sensitive data ใน logs อย่างไร?",
+      "example": "Never log sensitive data: passwords, API keys, credit card numbers, PII, session tokens, full SSN/ID numbers. Techniques: 1) Scrubbing/masking - replace sensitive fields with [REDACTED] or mask (****1234). 2) Structured logging - control what's logged. 3) Field-level encryption - encrypt before logging. 4) Log sanitization middleware. What to log instead: user IDs (not names), operation type, timestamp, success/failure, request IDs for tracing. Compliance: GDPR, PCI-DSS have specific requirements. Audit logs separately - need more detail but stricter access control. Regular review of what's being logged.",
+      "exampleTranslation": "อย่า log sensitive data: passwords, API keys, credit card numbers, PII, session tokens, full SSN/ID numbers เทคนิค: 1) Scrubbing/masking - แทนที่ sensitive fields ด้วย [REDACTED] หรือ mask (****1234) 2) Structured logging - ควบคุมสิ่งที่ log 3) Field-level encryption - encrypt ก่อน logging 4) Log sanitization middleware สิ่งที่ควร log แทน: user IDs (ไม่ใช่ names), operation type, timestamp, success/failure, request IDs สำหรับ tracing Compliance: GDPR, PCI-DSS มีข้อกำหนดเฉพาะ Audit logs แยก - ต้องการ detail มากกว่าแต่ access control เข้มงวดกว่า Review สิ่งที่ log เป็นประจำ"
+    },
+    {
+      "vocab": "What is input validation and sanitization?",
+      "pronunciation": "",
+      "meaning": "Input validation และ sanitization คืออะไร?",
+      "example": "Validation: checking if input meets expected criteria (format, type, range). Reject invalid input. Sanitization: cleaning input to remove/escape dangerous characters. Both needed! Validation approach: whitelist (allow only known good) preferred over blacklist (block known bad). Types: 1) Client-side - UX only, easily bypassed. 2) Server-side - REQUIRED, never trust client. Examples: email format regex, number ranges, allowed characters, maximum length. Sanitization: HTML encoding for display, SQL parameterization for queries. Never rely on client validation alone. Validate early, sanitize late (context-dependent output encoding).",
+      "exampleTranslation": "Validation: ตรวจสอบว่า input ตรงตาม criteria ที่คาดหวัง (format, type, range) Reject invalid input Sanitization: ทำความสะอาด input เพื่อลบ/escape dangerous characters ต้องการทั้งสอง! Validation approach: whitelist (allow เฉพาะ known good) preferred กว่า blacklist (block known bad) Types: 1) Client-side - UX เท่านั้น, bypass ได้ง่าย 2) Server-side - จำเป็น, อย่า trust client ตัวอย่าง: email format regex, number ranges, allowed characters, maximum length Sanitization: HTML encoding สำหรับ display, SQL parameterization สำหรับ queries อย่าพึ่ง client validation เท่านั้น Validate early, sanitize late (context-dependent output encoding)"
+    },
+    {
+      "vocab": "What is security misconfiguration?",
+      "pronunciation": "",
+      "meaning": "Security misconfiguration คืออะไร?",
+      "example": "Security misconfiguration is when security settings are poorly configured or left at defaults. Common issues: 1) Default credentials - admin/admin, root/password. 2) Unnecessary features enabled - debug mode in production. 3) Error messages revealing internals - stack traces to users. 4) Missing security headers - no CSP, HSTS. 5) Open cloud storage - S3 buckets public. 6) Outdated software - unpatched vulnerabilities. 7) Directory listing enabled. Prevention: hardening guides per technology, automated security scanning, infrastructure as code (consistent configs), regular audits, remove unused features/accounts. Security configuration is ongoing, not one-time.",
+      "exampleTranslation": "Security misconfiguration คือเมื่อ security settings configured ไม่ดีหรือปล่อยไว้เป็น defaults Common issues: 1) Default credentials - admin/admin, root/password 2) Unnecessary features enabled - debug mode ใน production 3) Error messages revealing internals - stack traces ให้ users 4) Missing security headers - ไม่มี CSP, HSTS 5) Open cloud storage - S3 buckets public 6) Outdated software - unpatched vulnerabilities 7) Directory listing enabled Prevention: hardening guides ต่อ technology, automated security scanning, infrastructure as code (consistent configs), regular audits, ลบ unused features/accounts Security configuration เป็น ongoing ไม่ใช่ one-time"
+    },
+    {
+      "vocab": "What is Multi-Factor Authentication (MFA)?",
+      "pronunciation": "MFA = Multi-Factor Authentication",
+      "meaning": "Multi-Factor Authentication (MFA) คืออะไร?",
+      "example": "MFA requires two or more authentication factors: 1) Something you know - password, PIN. 2) Something you have - phone, hardware token, smart card. 3) Something you are - biometrics (fingerprint, face). Common implementations: SMS codes (less secure - SIM swapping), authenticator apps (TOTP - Google Authenticator), hardware keys (FIDO2/WebAuthn - most secure), push notifications. When to require: login, sensitive operations, password changes, new device. Implementation: backup codes for recovery, don't rely solely on SMS. MFA significantly reduces account compromise even with stolen passwords.",
+      "exampleTranslation": "MFA ต้องการ authentication factors สองอย่างขึ้นไป: 1) Something you know - password, PIN 2) Something you have - phone, hardware token, smart card 3) Something you are - biometrics (fingerprint, face) Common implementations: SMS codes (less secure - SIM swapping), authenticator apps (TOTP - Google Authenticator), hardware keys (FIDO2/WebAuthn - most secure), push notifications ต้องการเมื่อไหร่: login, sensitive operations, password changes, new device Implementation: backup codes สำหรับ recovery, อย่าพึ่ง SMS อย่างเดียว MFA ลด account compromise อย่างมากแม้ passwords ถูกขโมย"
+    },
+    {
+      "vocab": "What are security headers you should implement?",
+      "pronunciation": "",
+      "meaning": "Security headers อะไรบ้างที่ควร implement?",
+      "example": "Essential security headers: 1) Strict-Transport-Security (HSTS) - force HTTPS. 2) Content-Security-Policy - restrict resource loading. 3) X-Content-Type-Options: nosniff - prevent MIME sniffing. 4) X-Frame-Options: DENY - prevent clickjacking. 5) X-XSS-Protection: 1; mode=block - legacy XSS filter (deprecated but still useful). 6) Referrer-Policy - control referrer information. 7) Permissions-Policy - control browser features. 8) Cache-Control - for sensitive pages. Check with securityheaders.com. Most frameworks have security middleware to set these. Add headers at reverse proxy (nginx) for consistency across services.",
+      "exampleTranslation": "Essential security headers: 1) Strict-Transport-Security (HSTS) - force HTTPS 2) Content-Security-Policy - restrict resource loading 3) X-Content-Type-Options: nosniff - ป้องกัน MIME sniffing 4) X-Frame-Options: DENY - ป้องกัน clickjacking 5) X-XSS-Protection: 1; mode=block - legacy XSS filter (deprecated แต่ยังมีประโยชน์) 6) Referrer-Policy - ควบคุม referrer information 7) Permissions-Policy - ควบคุม browser features 8) Cache-Control - สำหรับหน้า sensitive ตรวจด้วย securityheaders.com Frameworks ส่วนใหญ่มี security middleware เพื่อ set เหล่านี้ เพิ่ม headers ที่ reverse proxy (nginx) เพื่อความสม่ำเสมอข้าม services"
+    },
+    {
+      "vocab": "How do you secure an API?",
+      "pronunciation": "",
+      "meaning": "คุณ secure API อย่างไร?",
+      "example": "API security checklist: 1) Authentication - API keys, OAuth 2.0, JWT. 2) Authorization - verify permissions per endpoint. 3) HTTPS only - encrypt transit. 4) Rate limiting - prevent abuse. 5) Input validation - validate all parameters. 6) Output encoding - prevent injection in responses. 7) Error handling - don't leak internal details. 8) Logging - audit trail, detect attacks. 9) CORS configuration - restrict allowed origins. 10) Versioning - deprecate insecure old versions. 11) Security testing - automated scanning, penetration testing. 12) API gateway - centralized security policies. Document security requirements. Regular security reviews.",
+      "exampleTranslation": "API security checklist: 1) Authentication - API keys, OAuth 2.0, JWT 2) Authorization - verify permissions ต่อ endpoint 3) HTTPS only - encrypt transit 4) Rate limiting - prevent abuse 5) Input validation - validate ทุก parameters 6) Output encoding - ป้องกัน injection ใน responses 7) Error handling - อย่า leak internal details 8) Logging - audit trail, detect attacks 9) CORS configuration - restrict allowed origins 10) Versioning - deprecate insecure old versions 11) Security testing - automated scanning, penetration testing 12) API gateway - centralized security policies Document security requirements Regular security reviews"
+    }
+  ]
+}

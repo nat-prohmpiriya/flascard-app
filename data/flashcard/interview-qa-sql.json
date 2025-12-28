@@ -1,0 +1,161 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - SQL & Database Optimization",
+    "description": "Common interview questions about SQL queries, database optimization, indexing, and performance tuning",
+    "category": "Interview",
+    "tags": ["interview", "sql", "database", "optimization"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the difference between WHERE and HAVING?",
+      "pronunciation": "",
+      "meaning": "WHERE กับ HAVING ต่างกันอย่างไร?",
+      "example": "WHERE filters rows before grouping, HAVING filters groups after aggregation. WHERE cannot use aggregate functions, HAVING can. Example: SELECT department, AVG(salary) FROM employees WHERE status = 'active' GROUP BY department HAVING AVG(salary) > 50000. Here WHERE filters individual rows first, then GROUP BY groups them, then HAVING filters groups based on average salary. Use WHERE when possible - it's more efficient as it reduces data before aggregation.",
+      "exampleTranslation": "WHERE filter rows ก่อน grouping, HAVING filter groups หลัง aggregation WHERE ใช้ aggregate functions ไม่ได้, HAVING ใช้ได้ ตัวอย่าง: SELECT department, AVG(salary) FROM employees WHERE status = 'active' GROUP BY department HAVING AVG(salary) > 50000 ที่นี่ WHERE filter individual rows ก่อน, แล้ว GROUP BY จัดกลุ่ม, แล้ว HAVING filter groups ตาม average salary ใช้ WHERE เมื่อเป็นไปได้ - มีประสิทธิภาพกว่าเพราะลด data ก่อน aggregation"
+    },
+    {
+      "vocab": "Explain different types of SQL JOINs.",
+      "pronunciation": "",
+      "meaning": "อธิบาย SQL JOINs ประเภทต่างๆ",
+      "example": "INNER JOIN: returns only matching rows from both tables. LEFT JOIN: all rows from left table + matching from right (NULL if no match). RIGHT JOIN: all rows from right + matching from left. FULL OUTER JOIN: all rows from both tables (NULL where no match). CROSS JOIN: cartesian product - every row combined with every other row. Self JOIN: table joined with itself. Example: SELECT e.name, d.name FROM employees e LEFT JOIN departments d ON e.dept_id = d.id - returns all employees even if they have no department.",
+      "exampleTranslation": "INNER JOIN: return เฉพาะ rows ที่ match จากทั้งสองตาราง LEFT JOIN: ทุก rows จากตารางซ้าย + matching จากขวา (NULL ถ้าไม่ match) RIGHT JOIN: ทุก rows จากขวา + matching จากซ้าย FULL OUTER JOIN: ทุก rows จากทั้งสองตาราง (NULL ที่ไม่ match) CROSS JOIN: cartesian product - ทุก row รวมกับทุก row อื่น Self JOIN: table join กับตัวเอง ตัวอย่าง: SELECT e.name, d.name FROM employees e LEFT JOIN departments d ON e.dept_id = d.id - return ทุก employees แม้ไม่มี department"
+    },
+    {
+      "vocab": "What is a database index and how does it work?",
+      "pronunciation": "",
+      "meaning": "Database index คืออะไร และทำงานอย่างไร?",
+      "example": "An index is a data structure (usually B-tree) that speeds up data retrieval. Like a book index - instead of scanning every page, you look up the index to find the page number. Without index: full table scan O(n). With index: O(log n) lookup. Trade-offs: faster reads but slower writes (index must be updated), extra storage space. Types: B-tree (default, good for range queries), Hash (exact matches), GIN/GiST (full-text, JSON), Bitmap (low cardinality). Create indexes on: WHERE clause columns, JOIN columns, ORDER BY columns.",
+      "exampleTranslation": "Index คือ data structure (มักเป็น B-tree) ที่เพิ่มความเร็วการดึงข้อมูล เหมือนดัชนีหนังสือ - แทนที่จะอ่านทุกหน้า ดูดัชนีเพื่อหาเลขหน้า ไม่มี index: full table scan O(n) มี index: O(log n) lookup Trade-offs: reads เร็วขึ้นแต่ writes ช้าลง (ต้องอัพเดท index), ใช้ storage เพิ่ม Types: B-tree (default, ดีสำหรับ range queries), Hash (exact matches), GIN/GiST (full-text, JSON), Bitmap (low cardinality) สร้าง indexes บน: columns ใน WHERE clause, JOIN columns, ORDER BY columns"
+    },
+    {
+      "vocab": "What is a composite index and when should you use it?",
+      "pronunciation": "",
+      "meaning": "Composite index คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "Composite index is an index on multiple columns. CREATE INDEX idx_name ON users(last_name, first_name). Column order matters! Index can be used for: queries on (last_name), queries on (last_name, first_name), but NOT for queries only on (first_name) - leftmost prefix rule. Use when: queries frequently filter/sort by multiple columns together. Example: searching by country + city - composite index (country, city) is better than two separate indexes. Consider query patterns when deciding column order - most selective or most frequently filtered column first.",
+      "exampleTranslation": "Composite index คือ index บนหลาย columns CREATE INDEX idx_name ON users(last_name, first_name) ลำดับ column สำคัญ! Index ใช้ได้สำหรับ: queries บน (last_name), queries บน (last_name, first_name), แต่ไม่ใช่สำหรับ queries เฉพาะ (first_name) - leftmost prefix rule ใช้เมื่อ: queries filter/sort ด้วยหลาย columns พร้อมกันบ่อย ตัวอย่าง: search ด้วย country + city - composite index (country, city) ดีกว่าสอง indexes แยก พิจารณา query patterns เมื่อตัดสินใจลำดับ column - column ที่ selective สุดหรือ filter บ่อยสุดก่อน"
+    },
+    {
+      "vocab": "How do you read an EXPLAIN plan?",
+      "pronunciation": "",
+      "meaning": "คุณอ่าน EXPLAIN plan อย่างไร?",
+      "example": "EXPLAIN shows how the database executes a query. Key things to look for: 1) Scan type - Seq Scan (bad for large tables), Index Scan (good), Index Only Scan (best). 2) Rows - estimated vs actual rows processed. 3) Cost - relative cost units. 4) Join types - Nested Loop (small tables), Hash Join (medium), Merge Join (large sorted). Red flags: Seq Scan on large tables, high row estimates, Sort operations without index. Use EXPLAIN ANALYZE for actual execution stats. Example: EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'test@test.com' - should show Index Scan if email is indexed.",
+      "exampleTranslation": "EXPLAIN แสดงว่า database execute query อย่างไร สิ่งที่ต้องดู: 1) Scan type - Seq Scan (แย่สำหรับ tables ใหญ่), Index Scan (ดี), Index Only Scan (ดีสุด) 2) Rows - estimated vs actual rows ที่ประมวลผล 3) Cost - relative cost units 4) Join types - Nested Loop (tables เล็ก), Hash Join (medium), Merge Join (ใหญ่ sorted) Red flags: Seq Scan บน tables ใหญ่, row estimates สูง, Sort operations โดยไม่มี index ใช้ EXPLAIN ANALYZE สำหรับ actual execution stats ตัวอย่าง: EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'test@test.com' - ควรแสดง Index Scan ถ้า email มี index"
+    },
+    {
+      "vocab": "What is query optimization and what techniques do you use?",
+      "pronunciation": "",
+      "meaning": "Query optimization คืออะไร และใช้เทคนิคอะไรบ้าง?",
+      "example": "Query optimization improves query performance. Techniques: 1) Add appropriate indexes based on WHERE, JOIN, ORDER BY. 2) Avoid SELECT * - fetch only needed columns. 3) Use LIMIT for pagination. 4) Avoid functions on indexed columns in WHERE (WHERE YEAR(date) = 2024 can't use index). 5) Use EXISTS instead of IN for subqueries. 6) Batch operations instead of row-by-row. 7) Denormalize for read-heavy workloads. 8) Use covering indexes to avoid table lookups. 9) Analyze and update statistics regularly. Always measure with EXPLAIN before and after optimization.",
+      "exampleTranslation": "Query optimization ปรับปรุง query performance เทคนิค: 1) เพิ่ม indexes ที่เหมาะสมตาม WHERE, JOIN, ORDER BY 2) หลีกเลี่ยง SELECT * - fetch เฉพาะ columns ที่ต้องการ 3) ใช้ LIMIT สำหรับ pagination 4) หลีกเลี่ยง functions บน indexed columns ใน WHERE (WHERE YEAR(date) = 2024 ใช้ index ไม่ได้) 5) ใช้ EXISTS แทน IN สำหรับ subqueries 6) Batch operations แทน row-by-row 7) Denormalize สำหรับ read-heavy workloads 8) ใช้ covering indexes เพื่อหลีกเลี่ยง table lookups 9) Analyze และ update statistics เป็นประจำ วัดด้วย EXPLAIN ก่อนและหลัง optimization เสมอ"
+    },
+    {
+      "vocab": "What is the N+1 query problem and how do you solve it?",
+      "pronunciation": "",
+      "meaning": "N+1 query problem คืออะไร และแก้อย่างไร?",
+      "example": "N+1 occurs when you fetch a list (1 query) then fetch related data for each item (N queries). Example: fetch 100 orders, then fetch customer for each order = 101 queries. Solutions: 1) JOIN - fetch all data in one query. 2) Eager loading - ORMs can batch load relations (e.g., includes in Rails, joinedload in SQLAlchemy). 3) Batch loading - fetch all related records in one query with IN clause. 4) DataLoader pattern - batch and cache in GraphQL. Detection: monitor query logs, use ORM query logging. This is one of the most common performance issues in web applications.",
+      "exampleTranslation": "N+1 เกิดเมื่อ fetch list (1 query) แล้ว fetch related data สำหรับแต่ละ item (N queries) ตัวอย่าง: fetch 100 orders, แล้ว fetch customer สำหรับแต่ละ order = 101 queries Solutions: 1) JOIN - fetch ทุก data ใน query เดียว 2) Eager loading - ORMs สามารถ batch load relations (เช่น includes ใน Rails, joinedload ใน SQLAlchemy) 3) Batch loading - fetch ทุก related records ใน query เดียวด้วย IN clause 4) DataLoader pattern - batch และ cache ใน GraphQL Detection: monitor query logs, ใช้ ORM query logging นี่คือ performance issues ที่พบบ่อยที่สุดใน web applications"
+    },
+    {
+      "vocab": "Explain database normalization and its forms.",
+      "pronunciation": "",
+      "meaning": "อธิบาย database normalization และ forms ต่างๆ",
+      "example": "Normalization reduces data redundancy and improves integrity. Forms: 1NF - atomic values, no repeating groups. 2NF - 1NF + no partial dependencies (non-key columns depend on entire primary key). 3NF - 2NF + no transitive dependencies (non-key columns don't depend on other non-key columns). BCNF - every determinant is a candidate key. Benefits: less redundancy, easier updates, data integrity. Drawbacks: more JOINs, can hurt read performance. In practice: normalize for write-heavy, consider denormalization for read-heavy (data warehouses). Most applications target 3NF.",
+      "exampleTranslation": "Normalization ลด data redundancy และปรับปรุง integrity Forms: 1NF - atomic values, ไม่มี repeating groups 2NF - 1NF + ไม่มี partial dependencies (non-key columns depend on entire primary key) 3NF - 2NF + ไม่มี transitive dependencies (non-key columns ไม่ depend on non-key columns อื่น) BCNF - ทุก determinant เป็น candidate key Benefits: redundancy น้อยลง, updates ง่ายขึ้น, data integrity Drawbacks: JOINs มากขึ้น, อาจกระทบ read performance ในทางปฏิบัติ: normalize สำหรับ write-heavy, พิจารณา denormalization สำหรับ read-heavy (data warehouses) Applications ส่วนใหญ่ target 3NF"
+    },
+    {
+      "vocab": "What are ACID properties in databases?",
+      "pronunciation": "ACID = Atomicity, Consistency, Isolation, Durability",
+      "meaning": "ACID properties ใน databases คืออะไร?",
+      "example": "ACID guarantees reliable transactions: Atomicity - transaction is all-or-nothing, if any part fails, entire transaction rolls back. Consistency - transaction brings database from one valid state to another, enforcing constraints. Isolation - concurrent transactions don't interfere with each other (isolation levels control this). Durability - once committed, data survives crashes (written to disk/WAL). Trade-offs: strict ACID can limit performance and scalability. NoSQL databases often relax ACID for BASE (Basically Available, Soft state, Eventually consistent). Choose based on data criticality - financial data needs ACID, social media likes can use BASE.",
+      "exampleTranslation": "ACID รับประกัน transactions ที่เชื่อถือได้: Atomicity - transaction เป็น all-or-nothing, ถ้าส่วนใดล้มเหลว, ทั้ง transaction rollback Consistency - transaction นำ database จาก valid state หนึ่งไปอีกอัน, enforce constraints Isolation - concurrent transactions ไม่รบกวนกัน (isolation levels ควบคุมสิ่งนี้) Durability - เมื่อ committed แล้ว, data อยู่รอดจาก crashes (เขียนลง disk/WAL) Trade-offs: strict ACID อาจจำกัด performance และ scalability NoSQL databases มักผ่อน ACID เป็น BASE (Basically Available, Soft state, Eventually consistent) เลือกตาม data criticality - financial data ต้อง ACID, social media likes ใช้ BASE ได้"
+    },
+    {
+      "vocab": "What are transaction isolation levels?",
+      "pronunciation": "",
+      "meaning": "Transaction isolation levels คืออะไร?",
+      "example": "Isolation levels control how transactions see each other's changes: 1) Read Uncommitted - can see uncommitted changes (dirty reads). Fastest but dangerous. 2) Read Committed - only see committed changes. Default in PostgreSQL. 3) Repeatable Read - same query returns same results within transaction. Default in MySQL. 4) Serializable - transactions execute as if serial. Slowest but safest. Problems prevented: dirty reads (RU→RC), non-repeatable reads (RC→RR), phantom reads (RR→S). Higher isolation = more locking = less concurrency. Choose based on consistency needs vs performance requirements.",
+      "exampleTranslation": "Isolation levels ควบคุมว่า transactions เห็น changes ของกันอย่างไร: 1) Read Uncommitted - เห็น uncommitted changes ได้ (dirty reads) เร็วสุดแต่อันตราย 2) Read Committed - เห็นเฉพาะ committed changes Default ใน PostgreSQL 3) Repeatable Read - query เดียวกัน return results เดิมใน transaction Default ใน MySQL 4) Serializable - transactions execute เหมือน serial ช้าสุดแต่ปลอดภัยสุด Problems ที่ป้องกัน: dirty reads (RU→RC), non-repeatable reads (RC→RR), phantom reads (RR→S) Isolation สูงขึ้น = locking มากขึ้น = concurrency น้อยลง เลือกตาม consistency needs vs performance requirements"
+    },
+    {
+      "vocab": "How do you handle database deadlocks?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ database deadlocks อย่างไร?",
+      "example": "Deadlock occurs when two transactions wait for each other's locks. Example: T1 locks A, waits for B; T2 locks B, waits for A. Detection: databases detect and kill one transaction (victim). Prevention strategies: 1) Lock ordering - always acquire locks in same order. 2) Lock timeout - don't wait forever. 3) Keep transactions short. 4) Use lower isolation levels when possible. 5) Avoid user interaction during transactions. Handling: catch deadlock error, retry transaction (with backoff). Monitoring: log deadlocks, analyze patterns, fix application code. PostgreSQL: deadlock_timeout setting, pg_locks view for debugging.",
+      "exampleTranslation": "Deadlock เกิดเมื่อสอง transactions รอ locks ของกัน ตัวอย่าง: T1 lock A, รอ B; T2 lock B, รอ A Detection: databases detect และ kill transaction หนึ่ง (victim) Prevention strategies: 1) Lock ordering - acquire locks ในลำดับเดียวกันเสมอ 2) Lock timeout - อย่ารอตลอดไป 3) รักษา transactions ให้สั้น 4) ใช้ lower isolation levels เมื่อเป็นไปได้ 5) หลีกเลี่ยง user interaction ระหว่าง transactions Handling: catch deadlock error, retry transaction (with backoff) Monitoring: log deadlocks, วิเคราะห์ patterns, แก้ application code PostgreSQL: deadlock_timeout setting, pg_locks view สำหรับ debugging"
+    },
+    {
+      "vocab": "What is the difference between clustered and non-clustered index?",
+      "pronunciation": "",
+      "meaning": "Clustered กับ non-clustered index ต่างกันอย่างไร?",
+      "example": "Clustered index: determines physical order of data in table. Only ONE per table (usually primary key). Data rows ARE the index leaf nodes. Fast for range queries because data is physically ordered. Non-clustered index: separate structure with pointers to data rows. Multiple allowed per table. Leaf nodes contain index key + pointer to row. Extra lookup needed to get actual data (unless covering index). PostgreSQL note: doesn't have true clustered indexes, but CLUSTER command can reorder table once. SQL Server and MySQL InnoDB use clustered indexes by default on primary key.",
+      "exampleTranslation": "Clustered index: กำหนด physical order ของ data ใน table มีได้แค่หนึ่งต่อ table (มักเป็น primary key) Data rows เป็น index leaf nodes เร็วสำหรับ range queries เพราะ data เรียงลำดับ physically Non-clustered index: structure แยกที่มี pointers ไป data rows มีได้หลายอันต่อ table Leaf nodes มี index key + pointer ไป row ต้อง lookup เพิ่มเพื่อได้ actual data (ยกเว้น covering index) PostgreSQL note: ไม่มี true clustered indexes แต่ CLUSTER command reorder table ได้ครั้งเดียว SQL Server และ MySQL InnoDB ใช้ clustered indexes by default บน primary key"
+    },
+    {
+      "vocab": "How do you optimize a slow query?",
+      "pronunciation": "",
+      "meaning": "คุณ optimize slow query อย่างไร?",
+      "example": "Systematic approach: 1) Identify slow query (slow query log, APM). 2) Run EXPLAIN ANALYZE to understand execution plan. 3) Check for missing indexes on WHERE, JOIN, ORDER BY columns. 4) Look for Seq Scans on large tables. 5) Check for inefficient JOINs (wrong join type, missing indexes). 6) Review query structure - can it be rewritten? 7) Check for N+1 patterns in application. 8) Consider caching for expensive, frequently-run queries. 9) Analyze data distribution - statistics up to date? 10) Hardware: enough memory for working set? Common quick wins: add missing index, remove unnecessary columns from SELECT, add LIMIT.",
+      "exampleTranslation": "แนวทางเป็นระบบ: 1) ระบุ slow query (slow query log, APM) 2) รัน EXPLAIN ANALYZE เพื่อเข้าใจ execution plan 3) ตรวจหา missing indexes บน WHERE, JOIN, ORDER BY columns 4) หา Seq Scans บน tables ใหญ่ 5) ตรวจหา inefficient JOINs (join type ผิด, missing indexes) 6) Review query structure - เขียนใหม่ได้ไหม? 7) ตรวจหา N+1 patterns ใน application 8) พิจารณา caching สำหรับ queries ที่แพงและรันบ่อย 9) วิเคราะห์ data distribution - statistics update แล้วหรือยัง? 10) Hardware: memory พอสำหรับ working set? Quick wins ที่พบบ่อย: เพิ่ม missing index, ลบ columns ที่ไม่จำเป็นจาก SELECT, เพิ่ม LIMIT"
+    },
+    {
+      "vocab": "What is database partitioning?",
+      "pronunciation": "",
+      "meaning": "Database partitioning คืออะไร?",
+      "example": "Partitioning splits large tables into smaller, manageable pieces. Types: 1) Range partitioning - by date ranges (orders_2024_q1, orders_2024_q2). 2) List partitioning - by specific values (by country, status). 3) Hash partitioning - by hash of column (distribute evenly). Benefits: faster queries (scan only relevant partitions), easier maintenance (drop old partitions), parallel processing. Use cases: time-series data, multi-tenant applications, very large tables (100M+ rows). PostgreSQL: declarative partitioning since v10. Important: partition key must be in WHERE clause to benefit. Different from sharding (partitioning across servers).",
+      "exampleTranslation": "Partitioning แบ่ง tables ใหญ่เป็นชิ้นเล็กที่จัดการได้ Types: 1) Range partitioning - ตาม date ranges (orders_2024_q1, orders_2024_q2) 2) List partitioning - ตาม values เฉพาะ (ตาม country, status) 3) Hash partitioning - ตาม hash ของ column (กระจายเท่าๆ กัน) Benefits: queries เร็วขึ้น (scan เฉพาะ partitions ที่เกี่ยวข้อง), maintenance ง่ายขึ้น (drop old partitions), parallel processing Use cases: time-series data, multi-tenant applications, tables ใหญ่มาก (100M+ rows) PostgreSQL: declarative partitioning ตั้งแต่ v10 สำคัญ: partition key ต้องอยู่ใน WHERE clause เพื่อได้ประโยชน์ ต่างจาก sharding (partitioning ข้าม servers)"
+    },
+    {
+      "vocab": "Write a query to find the second highest salary.",
+      "pronunciation": "",
+      "meaning": "เขียน query หาเงินเดือนสูงสุดอันดับสอง",
+      "example": "Multiple approaches: 1) Using LIMIT/OFFSET: SELECT DISTINCT salary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1. 2) Using subquery: SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees). 3) Using window function: SELECT salary FROM (SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) as rank FROM employees) t WHERE rank = 2. Window function approach is most flexible - can easily get Nth highest. DENSE_RANK handles ties correctly. This is a classic SQL interview question - know multiple solutions.",
+      "exampleTranslation": "หลายวิธี: 1) ใช้ LIMIT/OFFSET: SELECT DISTINCT salary FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 1 2) ใช้ subquery: SELECT MAX(salary) FROM employees WHERE salary < (SELECT MAX(salary) FROM employees) 3) ใช้ window function: SELECT salary FROM (SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) as rank FROM employees) t WHERE rank = 2 Window function approach ยืดหยุ่นสุด - หา Nth highest ได้ง่าย DENSE_RANK handle ties ถูกต้อง นี่คือ classic SQL interview question - รู้หลาย solutions"
+    },
+    {
+      "vocab": "What are window functions and give examples?",
+      "pronunciation": "",
+      "meaning": "Window functions คืออะไร และยกตัวอย่าง",
+      "example": "Window functions perform calculations across rows related to current row, without collapsing rows like GROUP BY. Syntax: function() OVER (PARTITION BY col ORDER BY col). Common functions: ROW_NUMBER() - unique sequential number. RANK() - rank with gaps for ties. DENSE_RANK() - rank without gaps. LAG()/LEAD() - access previous/next row. SUM()/AVG() OVER - running totals. Examples: running total: SUM(amount) OVER (ORDER BY date). Rank within group: RANK() OVER (PARTITION BY department ORDER BY salary DESC). Compare to previous: salary - LAG(salary) OVER (ORDER BY date). Very powerful for analytics queries.",
+      "exampleTranslation": "Window functions ทำ calculations ข้าม rows ที่เกี่ยวข้องกับ current row โดยไม่ collapse rows เหมือน GROUP BY Syntax: function() OVER (PARTITION BY col ORDER BY col) Functions ที่พบบ่อย: ROW_NUMBER() - unique sequential number RANK() - rank มี gaps สำหรับ ties DENSE_RANK() - rank ไม่มี gaps LAG()/LEAD() - access previous/next row SUM()/AVG() OVER - running totals ตัวอย่าง: running total: SUM(amount) OVER (ORDER BY date) Rank within group: RANK() OVER (PARTITION BY department ORDER BY salary DESC) Compare to previous: salary - LAG(salary) OVER (ORDER BY date) ทรงพลังมากสำหรับ analytics queries"
+    },
+    {
+      "vocab": "How do you write an efficient pagination query?",
+      "pronunciation": "",
+      "meaning": "เขียน pagination query ที่มีประสิทธิภาพอย่างไร?",
+      "example": "OFFSET/LIMIT problem: OFFSET 10000 still scans 10000 rows. Solutions: 1) Keyset/Cursor pagination - WHERE id > last_seen_id ORDER BY id LIMIT 20. Much faster for deep pages, requires stable sort column. 2) Covering index - include all needed columns in index to avoid table lookup. 3) Estimate total count - use approximate count for UI instead of exact COUNT(*). 4) Limit maximum page depth - users rarely go beyond page 100. Example: Instead of 'SELECT * FROM posts ORDER BY created_at OFFSET 10000 LIMIT 20', use 'SELECT * FROM posts WHERE created_at < :last_timestamp ORDER BY created_at DESC LIMIT 20'.",
+      "exampleTranslation": "OFFSET/LIMIT problem: OFFSET 10000 ยัง scan 10000 rows Solutions: 1) Keyset/Cursor pagination - WHERE id > last_seen_id ORDER BY id LIMIT 20 เร็วกว่ามากสำหรับ deep pages, ต้องมี stable sort column 2) Covering index - รวมทุก columns ที่ต้องการใน index เพื่อหลีกเลี่ยง table lookup 3) Estimate total count - ใช้ approximate count สำหรับ UI แทน exact COUNT(*) 4) Limit maximum page depth - users ไม่ค่อยไปเกินหน้า 100 ตัวอย่าง: แทน 'SELECT * FROM posts ORDER BY created_at OFFSET 10000 LIMIT 20', ใช้ 'SELECT * FROM posts WHERE created_at < :last_timestamp ORDER BY created_at DESC LIMIT 20'"
+    },
+    {
+      "vocab": "What is database connection pooling?",
+      "pronunciation": "",
+      "meaning": "Database connection pooling คืออะไร?",
+      "example": "Connection pooling maintains a cache of database connections for reuse. Why needed: creating connections is expensive (TCP handshake, authentication, memory allocation). Without pooling: 100 requests = 100 new connections. With pooling: 100 requests share maybe 10 connections. Settings: min/max pool size, connection timeout, idle timeout. Tools: PgBouncer (PostgreSQL), HikariCP (Java), SQLAlchemy pool (Python). Best practices: set pool size based on workload (not too large - databases have connection limits), monitor pool utilization, handle connection errors gracefully. Pool size rule of thumb: (2 * CPU cores) + disk spindles for OLTP.",
+      "exampleTranslation": "Connection pooling รักษา cache ของ database connections สำหรับ reuse ทำไมต้องการ: สร้าง connections แพง (TCP handshake, authentication, memory allocation) ไม่มี pooling: 100 requests = 100 new connections มี pooling: 100 requests แชร์ประมาณ 10 connections Settings: min/max pool size, connection timeout, idle timeout Tools: PgBouncer (PostgreSQL), HikariCP (Java), SQLAlchemy pool (Python) Best practices: set pool size ตาม workload (ไม่ใหญ่เกิน - databases มี connection limits), monitor pool utilization, handle connection errors gracefully Pool size rule of thumb: (2 * CPU cores) + disk spindles สำหรับ OLTP"
+    },
+    {
+      "vocab": "What is the difference between DELETE, TRUNCATE, and DROP?",
+      "pronunciation": "",
+      "meaning": "DELETE, TRUNCATE และ DROP ต่างกันอย่างไร?",
+      "example": "DELETE: removes specific rows, can use WHERE clause, logged (can rollback), triggers fire, slower for large deletes. TRUNCATE: removes ALL rows, cannot use WHERE, minimally logged (faster), triggers don't fire, resets auto-increment, cannot truncate table with foreign key references. DROP: removes entire table structure and data, cannot rollback in most databases. Use cases: DELETE for selective removal, TRUNCATE to quickly empty table while keeping structure, DROP to completely remove table. Performance: TRUNCATE >> DELETE for emptying tables. Safety: DELETE is safest (WHERE + rollback), DROP is most destructive.",
+      "exampleTranslation": "DELETE: ลบ rows เฉพาะ, ใช้ WHERE clause ได้, logged (rollback ได้), triggers fire, ช้าสำหรับ deletes ใหญ่ TRUNCATE: ลบทุก rows, ใช้ WHERE ไม่ได้, minimally logged (เร็วกว่า), triggers ไม่ fire, reset auto-increment, truncate table ที่มี foreign key references ไม่ได้ DROP: ลบทั้ง table structure และ data, rollback ไม่ได้ใน databases ส่วนใหญ่ Use cases: DELETE สำหรับ selective removal, TRUNCATE เพื่อ empty table เร็วโดยรักษา structure, DROP เพื่อลบ table ออกหมด Performance: TRUNCATE >> DELETE สำหรับ emptying tables Safety: DELETE ปลอดภัยสุด (WHERE + rollback), DROP ทำลายสุด"
+    },
+    {
+      "vocab": "How do you handle schema migrations in production?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ schema migrations ใน production อย่างไร?",
+      "example": "Best practices: 1) Use migration tools (Flyway, Liquibase, Alembic, Prisma) - version control for schema. 2) Make migrations backward compatible - deploy new code first if it can handle old schema. 3) Avoid long-running locks - ALTER TABLE on large tables can lock. 4) Use online schema change tools (pt-online-schema-change, gh-ost) for large tables. 5) Test migrations on production-like data. 6) Have rollback plan. 7) Run during low-traffic periods. 8) Monitor query performance after changes. Dangerous operations: adding NOT NULL column without default, changing column type, dropping columns used by code.",
+      "exampleTranslation": "Best practices: 1) ใช้ migration tools (Flyway, Liquibase, Alembic, Prisma) - version control สำหรับ schema 2) ทำ migrations ให้ backward compatible - deploy new code ก่อนถ้า handle old schema ได้ 3) หลีกเลี่ยง long-running locks - ALTER TABLE บน tables ใหญ่อาจ lock 4) ใช้ online schema change tools (pt-online-schema-change, gh-ost) สำหรับ tables ใหญ่ 5) Test migrations บน production-like data 6) มี rollback plan 7) รันช่วง low-traffic periods 8) Monitor query performance หลัง changes Dangerous operations: เพิ่ม NOT NULL column โดยไม่มี default, เปลี่ยน column type, drop columns ที่ code ใช้"
+    },
+    {
+      "vocab": "Write a query to find duplicate records.",
+      "pronunciation": "",
+      "meaning": "เขียน query หา duplicate records",
+      "example": "Using GROUP BY and HAVING: SELECT email, COUNT(*) as count FROM users GROUP BY email HAVING COUNT(*) > 1. To see all duplicate rows: SELECT * FROM users WHERE email IN (SELECT email FROM users GROUP BY email HAVING COUNT(*) > 1). Using window function: SELECT * FROM (SELECT *, COUNT(*) OVER (PARTITION BY email) as cnt FROM users) t WHERE cnt > 1. To delete duplicates keeping one: DELETE FROM users WHERE id NOT IN (SELECT MIN(id) FROM users GROUP BY email). Or using CTE with ROW_NUMBER to keep specific row (latest, first, etc.).",
+      "exampleTranslation": "ใช้ GROUP BY และ HAVING: SELECT email, COUNT(*) as count FROM users GROUP BY email HAVING COUNT(*) > 1 เพื่อดู duplicate rows ทั้งหมด: SELECT * FROM users WHERE email IN (SELECT email FROM users GROUP BY email HAVING COUNT(*) > 1) ใช้ window function: SELECT * FROM (SELECT *, COUNT(*) OVER (PARTITION BY email) as cnt FROM users) t WHERE cnt > 1 เพื่อลบ duplicates เก็บไว้หนึ่ง: DELETE FROM users WHERE id NOT IN (SELECT MIN(id) FROM users GROUP BY email) หรือใช้ CTE กับ ROW_NUMBER เพื่อเก็บ row เฉพาะ (latest, first, etc.)"
+    }
+  ]
+}

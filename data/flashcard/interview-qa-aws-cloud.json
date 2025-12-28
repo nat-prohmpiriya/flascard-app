@@ -1,0 +1,168 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - AWS & Cloud Services",
+    "description": "Common interview questions about AWS services, cloud architecture, and cloud computing concepts",
+    "category": "Interview",
+    "tags": ["interview", "aws", "cloud", "infrastructure"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is cloud computing and what are its benefits?",
+      "pronunciation": "",
+      "meaning": "Cloud computing คืออะไร และมีประโยชน์อะไรบ้าง?",
+      "example": "Cloud computing delivers computing resources (servers, storage, databases, networking) over the internet on-demand. Benefits: 1) Cost efficiency - pay only for what you use, no upfront hardware costs. 2) Scalability - scale up/down based on demand. 3) Reliability - built-in redundancy, high availability. 4) Speed - provision resources in minutes, not weeks. 5) Global reach - deploy worldwide easily. 6) Security - cloud providers invest heavily in security. Service models: IaaS (VMs - EC2), PaaS (managed platform - Elastic Beanstalk), SaaS (applications - Gmail). Major providers: AWS, GCP, Azure.",
+      "exampleTranslation": "Cloud computing ส่งมอบ computing resources (servers, storage, databases, networking) ผ่าน internet แบบ on-demand ประโยชน์: 1) Cost efficiency - จ่ายเฉพาะที่ใช้, ไม่มี upfront hardware costs 2) Scalability - scale up/down ตาม demand 3) Reliability - built-in redundancy, high availability 4) Speed - provision resources ในนาที ไม่ใช่สัปดาห์ 5) Global reach - deploy worldwide ได้ง่าย 6) Security - cloud providers ลงทุนหนักด้าน security Service models: IaaS (VMs - EC2), PaaS (managed platform - Elastic Beanstalk), SaaS (applications - Gmail) Major providers: AWS, GCP, Azure"
+    },
+    {
+      "vocab": "What is the difference between IaaS, PaaS, and SaaS?",
+      "pronunciation": "",
+      "meaning": "IaaS, PaaS และ SaaS ต่างกันอย่างไร?",
+      "example": "IaaS (Infrastructure as a Service): raw computing resources - VMs, storage, networking. You manage: OS, runtime, applications. Provider manages: hardware, virtualization. Examples: EC2, Google Compute Engine. PaaS (Platform as a Service): platform for deploying applications. You manage: application code, data. Provider manages: OS, runtime, scaling. Examples: Heroku, Elastic Beanstalk, App Engine. SaaS (Software as a Service): complete applications. You manage: just use it. Provider manages: everything. Examples: Gmail, Salesforce, Slack. Choose based on control vs convenience trade-off. More control = more responsibility.",
+      "exampleTranslation": "IaaS (Infrastructure as a Service): raw computing resources - VMs, storage, networking คุณจัดการ: OS, runtime, applications Provider จัดการ: hardware, virtualization ตัวอย่าง: EC2, Google Compute Engine PaaS (Platform as a Service): platform สำหรับ deploy applications คุณจัดการ: application code, data Provider จัดการ: OS, runtime, scaling ตัวอย่าง: Heroku, Elastic Beanstalk, App Engine SaaS (Software as a Service): applications ครบ คุณจัดการ: แค่ใช้งาน Provider จัดการ: ทุกอย่าง ตัวอย่าง: Gmail, Salesforce, Slack เลือกตาม control vs convenience trade-off Control มากขึ้น = responsibility มากขึ้น"
+    },
+    {
+      "vocab": "What is AWS EC2 and its instance types?",
+      "pronunciation": "EC2 = Elastic Compute Cloud",
+      "meaning": "AWS EC2 คืออะไร และมี instance types อะไรบ้าง?",
+      "example": "EC2 provides virtual servers in the cloud. Instance families: 1) General Purpose (T, M) - balanced compute/memory, web servers. 2) Compute Optimized (C) - high CPU, batch processing. 3) Memory Optimized (R, X) - large datasets, in-memory caching. 4) Storage Optimized (I, D) - high disk throughput, data warehousing. 5) Accelerated Computing (P, G) - GPU, machine learning. Pricing: On-Demand (pay per hour), Reserved (1-3 year commitment, 30-75% discount), Spot (bid on unused capacity, up to 90% discount but can be interrupted). Choose instance type based on workload requirements.",
+      "exampleTranslation": "EC2 ให้ virtual servers ใน cloud Instance families: 1) General Purpose (T, M) - balanced compute/memory, web servers 2) Compute Optimized (C) - high CPU, batch processing 3) Memory Optimized (R, X) - large datasets, in-memory caching 4) Storage Optimized (I, D) - high disk throughput, data warehousing 5) Accelerated Computing (P, G) - GPU, machine learning Pricing: On-Demand (จ่ายต่อชั่วโมง), Reserved (1-3 ปี commitment, ส่วนลด 30-75%), Spot (bid บน unused capacity, ส่วนลดถึง 90% แต่อาจถูก interrupt) เลือก instance type ตาม workload requirements"
+    },
+    {
+      "vocab": "What is AWS S3 and what are storage classes?",
+      "pronunciation": "S3 = Simple Storage Service",
+      "meaning": "AWS S3 คืออะไร และมี storage classes อะไรบ้าง?",
+      "example": "S3 is object storage service - stores any amount of data as objects in buckets. Features: 11 9's durability (99.999999999%), versioning, encryption, lifecycle policies. Storage classes (cost/access trade-off): 1) Standard - frequently accessed. 2) Intelligent-Tiering - auto-moves between tiers. 3) Standard-IA (Infrequent Access) - lower cost, retrieval fee. 4) One Zone-IA - single AZ, even cheaper. 5) Glacier - archival, minutes to hours retrieval. 6) Glacier Deep Archive - cheapest, 12+ hour retrieval. Use lifecycle policies to auto-transition: Standard → IA after 30 days → Glacier after 90 days.",
+      "exampleTranslation": "S3 เป็น object storage service - เก็บ data ปริมาณเท่าไหร่ก็ได้เป็น objects ใน buckets Features: 11 9's durability (99.999999999%), versioning, encryption, lifecycle policies Storage classes (cost/access trade-off): 1) Standard - accessed บ่อย 2) Intelligent-Tiering - auto-moves ระหว่าง tiers 3) Standard-IA (Infrequent Access) - cost ต่ำกว่า, มี retrieval fee 4) One Zone-IA - single AZ, ถูกกว่าอีก 5) Glacier - archival, retrieval นาทีถึงชั่วโมง 6) Glacier Deep Archive - ถูกสุด, retrieval 12+ ชั่วโมง ใช้ lifecycle policies เพื่อ auto-transition: Standard → IA หลัง 30 วัน → Glacier หลัง 90 วัน"
+    },
+    {
+      "vocab": "What is AWS VPC and its components?",
+      "pronunciation": "VPC = Virtual Private Cloud",
+      "meaning": "AWS VPC คืออะไร และมี components อะไรบ้าง?",
+      "example": "VPC is your isolated virtual network in AWS. Components: 1) Subnets - subdivisions of VPC, public (internet access) or private. 2) Internet Gateway - connects VPC to internet. 3) NAT Gateway - allows private subnet outbound internet access. 4) Route Tables - control traffic routing. 5) Security Groups - stateful firewall at instance level. 6) Network ACLs - stateless firewall at subnet level. 7) VPC Peering - connect VPCs. Best practice: multi-tier architecture - public subnet for load balancer, private subnets for app/database. CIDR block planning is important - can't change after creation.",
+      "exampleTranslation": "VPC คือ isolated virtual network ของคุณใน AWS Components: 1) Subnets - subdivisions ของ VPC, public (internet access) หรือ private 2) Internet Gateway - เชื่อม VPC กับ internet 3) NAT Gateway - อนุญาต private subnet outbound internet access 4) Route Tables - ควบคุม traffic routing 5) Security Groups - stateful firewall ที่ instance level 6) Network ACLs - stateless firewall ที่ subnet level 7) VPC Peering - เชื่อม VPCs Best practice: multi-tier architecture - public subnet สำหรับ load balancer, private subnets สำหรับ app/database CIDR block planning สำคัญ - เปลี่ยนหลัง creation ไม่ได้"
+    },
+    {
+      "vocab": "What is the difference between Security Groups and NACLs?",
+      "pronunciation": "NACL = Network Access Control List",
+      "meaning": "Security Groups กับ NACLs ต่างกันอย่างไร?",
+      "example": "Security Groups: 1) Stateful - return traffic automatically allowed. 2) Instance level - attached to ENI. 3) Allow rules only - no deny rules. 4) All rules evaluated before decision. 5) Default: outbound all allowed, inbound denied. NACLs: 1) Stateless - must explicitly allow return traffic. 2) Subnet level - applies to all instances in subnet. 3) Allow AND deny rules. 4) Rules evaluated in order (lowest number first). 5) Default: all traffic allowed. Use Security Groups as primary firewall (easier). Use NACLs for additional layer - blocking specific IPs, compliance requirements.",
+      "exampleTranslation": "Security Groups: 1) Stateful - return traffic allowed อัตโนมัติ 2) Instance level - attached กับ ENI 3) Allow rules only - ไม่มี deny rules 4) ทุก rules evaluated ก่อนตัดสินใจ 5) Default: outbound all allowed, inbound denied NACLs: 1) Stateless - ต้อง explicitly allow return traffic 2) Subnet level - ใช้กับทุก instances ใน subnet 3) Allow และ deny rules 4) Rules evaluated ตามลำดับ (lowest number ก่อน) 5) Default: traffic ทั้งหมด allowed ใช้ Security Groups เป็น primary firewall (ง่ายกว่า) ใช้ NACLs เป็น layer เพิ่ม - blocking specific IPs, compliance requirements"
+    },
+    {
+      "vocab": "What is AWS IAM and how do you manage access?",
+      "pronunciation": "IAM = Identity and Access Management",
+      "meaning": "AWS IAM คืออะไร และจัดการ access อย่างไร?",
+      "example": "IAM manages access to AWS resources. Components: 1) Users - individual people/applications. 2) Groups - collection of users. 3) Roles - temporary credentials for services/cross-account. 4) Policies - JSON documents defining permissions (Effect, Action, Resource). Best practices: 1) Root account only for billing - use IAM users. 2) Least privilege - minimum permissions needed. 3) Use groups - easier management. 4) Enable MFA. 5) Use roles for EC2/Lambda - not access keys. 6) Rotate credentials regularly. 7) Use IAM Access Analyzer to find unused permissions. Policy types: identity-based, resource-based, permission boundaries.",
+      "exampleTranslation": "IAM จัดการ access ไปยัง AWS resources Components: 1) Users - individual people/applications 2) Groups - collection ของ users 3) Roles - temporary credentials สำหรับ services/cross-account 4) Policies - JSON documents ที่ define permissions (Effect, Action, Resource) Best practices: 1) Root account เฉพาะ billing - ใช้ IAM users 2) Least privilege - permissions ขั้นต่ำที่ต้องการ 3) ใช้ groups - จัดการง่ายกว่า 4) Enable MFA 5) ใช้ roles สำหรับ EC2/Lambda - ไม่ใช่ access keys 6) Rotate credentials เป็นประจำ 7) ใช้ IAM Access Analyzer หา unused permissions Policy types: identity-based, resource-based, permission boundaries"
+    },
+    {
+      "vocab": "What is AWS Lambda and serverless computing?",
+      "pronunciation": "",
+      "meaning": "AWS Lambda และ serverless computing คืออะไร?",
+      "example": "Lambda runs code without provisioning servers. You upload code, Lambda handles execution. Serverless benefits: no server management, auto-scaling, pay per invocation (not idle time), high availability built-in. Lambda specifics: supports multiple languages, max 15 min execution, up to 10GB memory, event-driven (API Gateway, S3, SQS triggers). Pricing: requests + duration (GB-seconds). Use cases: API backends, data processing, scheduled tasks, event handlers. Limitations: cold starts, stateless (use external storage), time limit. Not suitable for: long-running processes, high-performance computing. Consider: Lambda + API Gateway + DynamoDB for serverless web apps.",
+      "exampleTranslation": "Lambda รัน code โดยไม่ต้อง provision servers upload code, Lambda จัดการ execution Serverless benefits: ไม่ต้องจัดการ server, auto-scaling, จ่ายต่อ invocation (ไม่ใช่ idle time), high availability built-in Lambda specifics: รองรับหลายภาษา, max 15 min execution, memory ถึง 10GB, event-driven (API Gateway, S3, SQS triggers) Pricing: requests + duration (GB-seconds) Use cases: API backends, data processing, scheduled tasks, event handlers Limitations: cold starts, stateless (ใช้ external storage), time limit ไม่เหมาะสำหรับ: long-running processes, high-performance computing พิจารณา: Lambda + API Gateway + DynamoDB สำหรับ serverless web apps"
+    },
+    {
+      "vocab": "What is AWS RDS and when would you use it?",
+      "pronunciation": "RDS = Relational Database Service",
+      "meaning": "AWS RDS คืออะไร และใช้เมื่อไหร่?",
+      "example": "RDS is managed relational database service. Supported engines: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora. Managed features: automated backups, patching, Multi-AZ failover, read replicas, monitoring. When to use: need relational database without managing infrastructure, standard database workloads. When NOT to use: need full OS access, specific version not supported, very high performance needs (consider self-managed). Aurora: AWS-native, 5x faster than MySQL, serverless option available. Multi-AZ: synchronous standby for high availability. Read replicas: async, for read scaling. Choose instance size based on workload, storage can auto-scale.",
+      "exampleTranslation": "RDS เป็น managed relational database service Supported engines: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora Managed features: automated backups, patching, Multi-AZ failover, read replicas, monitoring ใช้เมื่อไหร่: ต้องการ relational database โดยไม่จัดการ infrastructure, standard database workloads ไม่ใช้เมื่อไหร่: ต้องการ full OS access, specific version ไม่รองรับ, very high performance needs (พิจารณา self-managed) Aurora: AWS-native, เร็วกว่า MySQL 5x, serverless option มี Multi-AZ: synchronous standby สำหรับ high availability Read replicas: async, สำหรับ read scaling เลือก instance size ตาม workload, storage auto-scale ได้"
+    },
+    {
+      "vocab": "What is AWS DynamoDB and its key features?",
+      "pronunciation": "",
+      "meaning": "AWS DynamoDB คืออะไร และมี features หลักอะไรบ้าง?",
+      "example": "DynamoDB is fully managed NoSQL database. Key features: 1) Key-value and document store. 2) Single-digit millisecond latency. 3) Serverless - auto-scaling, no servers to manage. 4) Global tables - multi-region replication. 5) DAX - in-memory caching layer. Data model: tables with items (rows), attributes (columns). Primary key: partition key or partition key + sort key. Capacity modes: on-demand (pay per request) or provisioned (predictable workload). Use cases: high-scale applications, gaming leaderboards, session stores, IoT. Considerations: query patterns must be planned upfront, limited query flexibility compared to SQL.",
+      "exampleTranslation": "DynamoDB เป็น fully managed NoSQL database Key features: 1) Key-value และ document store 2) Single-digit millisecond latency 3) Serverless - auto-scaling, ไม่ต้องจัดการ servers 4) Global tables - multi-region replication 5) DAX - in-memory caching layer Data model: tables มี items (rows), attributes (columns) Primary key: partition key หรือ partition key + sort key Capacity modes: on-demand (จ่ายต่อ request) หรือ provisioned (predictable workload) Use cases: high-scale applications, gaming leaderboards, session stores, IoT Considerations: query patterns ต้องวางแผนล่วงหน้า, query flexibility จำกัดเทียบกับ SQL"
+    },
+    {
+      "vocab": "What is AWS Load Balancer and its types?",
+      "pronunciation": "",
+      "meaning": "AWS Load Balancer คืออะไร และมีประเภทอะไรบ้าง?",
+      "example": "AWS load balancers distribute traffic across targets. Types: 1) Application Load Balancer (ALB) - Layer 7 (HTTP/HTTPS), path-based routing, host-based routing, WebSocket support. Best for modern web apps. 2) Network Load Balancer (NLB) - Layer 4 (TCP/UDP), ultra-low latency, millions of requests/sec, static IP. Best for extreme performance. 3) Gateway Load Balancer (GWLB) - for third-party virtual appliances. 4) Classic Load Balancer - legacy, avoid for new apps. Features: health checks, sticky sessions, SSL termination, access logs. Target types: instances, IPs, Lambda functions. Use ALB for most web applications.",
+      "exampleTranslation": "AWS load balancers กระจาย traffic ข้าม targets Types: 1) Application Load Balancer (ALB) - Layer 7 (HTTP/HTTPS), path-based routing, host-based routing, WebSocket support ดีที่สุดสำหรับ modern web apps 2) Network Load Balancer (NLB) - Layer 4 (TCP/UDP), ultra-low latency, millions of requests/sec, static IP ดีที่สุดสำหรับ extreme performance 3) Gateway Load Balancer (GWLB) - สำหรับ third-party virtual appliances 4) Classic Load Balancer - legacy, หลีกเลี่ยงสำหรับ apps ใหม่ Features: health checks, sticky sessions, SSL termination, access logs Target types: instances, IPs, Lambda functions ใช้ ALB สำหรับ web applications ส่วนใหญ่"
+    },
+    {
+      "vocab": "What is AWS Auto Scaling?",
+      "pronunciation": "",
+      "meaning": "AWS Auto Scaling คืออะไร?",
+      "example": "Auto Scaling automatically adjusts capacity to maintain performance and minimize cost. Components: 1) Launch Template - what to launch (AMI, instance type, security groups). 2) Auto Scaling Group (ASG) - min/max/desired capacity, availability zones. 3) Scaling Policies - when to scale. Policy types: 1) Target tracking - maintain metric at target (e.g., 70% CPU). 2) Step scaling - scale by specific amount based on thresholds. 3) Simple scaling - single adjustment. 4) Scheduled - scale at specific times. Best practice: use target tracking for most cases, multiple metrics, proper health checks. Cooldown period prevents thrashing.",
+      "exampleTranslation": "Auto Scaling ปรับ capacity อัตโนมัติเพื่อรักษา performance และ minimize cost Components: 1) Launch Template - what to launch (AMI, instance type, security groups) 2) Auto Scaling Group (ASG) - min/max/desired capacity, availability zones 3) Scaling Policies - เมื่อไหร่ควร scale Policy types: 1) Target tracking - รักษา metric ที่ target (เช่น 70% CPU) 2) Step scaling - scale ตาม amount เฉพาะตาม thresholds 3) Simple scaling - single adjustment 4) Scheduled - scale ตามเวลาเฉพาะ Best practice: ใช้ target tracking สำหรับกรณีส่วนใหญ่, multiple metrics, proper health checks Cooldown period ป้องกัน thrashing"
+    },
+    {
+      "vocab": "What is AWS CloudFront?",
+      "pronunciation": "",
+      "meaning": "AWS CloudFront คืออะไร?",
+      "example": "CloudFront is AWS's CDN (Content Delivery Network). Caches content at edge locations worldwide (400+ points of presence). Benefits: 1) Lower latency - content served from nearest edge. 2) Reduced origin load - cached content doesn't hit origin. 3) DDoS protection - integrated with AWS Shield. 4) HTTPS - free SSL certificates via ACM. Origins: S3, ALB, EC2, custom HTTP server. Features: cache behaviors, invalidations, signed URLs/cookies for private content, Lambda@Edge for edge computing. Use cases: static websites, streaming, API acceleration. Pricing: data transfer out + requests. Set appropriate TTLs and cache headers.",
+      "exampleTranslation": "CloudFront เป็น CDN (Content Delivery Network) ของ AWS Cache content ที่ edge locations ทั่วโลก (400+ points of presence) Benefits: 1) Lower latency - content served จาก edge ที่ใกล้สุด 2) Reduced origin load - cached content ไม่ hit origin 3) DDoS protection - integrated กับ AWS Shield 4) HTTPS - free SSL certificates ผ่าน ACM Origins: S3, ALB, EC2, custom HTTP server Features: cache behaviors, invalidations, signed URLs/cookies สำหรับ private content, Lambda@Edge สำหรับ edge computing Use cases: static websites, streaming, API acceleration Pricing: data transfer out + requests Set appropriate TTLs และ cache headers"
+    },
+    {
+      "vocab": "What is AWS SQS and when do you use message queues?",
+      "pronunciation": "SQS = Simple Queue Service",
+      "meaning": "AWS SQS คืออะไร และใช้ message queues เมื่อไหร่?",
+      "example": "SQS is fully managed message queue service. Types: 1) Standard - at-least-once delivery, best-effort ordering, unlimited throughput. 2) FIFO - exactly-once processing, strict ordering, 300 msg/sec (3000 with batching). Use cases: decoupling microservices, handling traffic spikes, async processing, work queues. Features: visibility timeout, dead-letter queues (failed messages), long polling, message retention up to 14 days. Pattern: producer → SQS → consumer. Benefits: reliability (messages don't get lost), scalability (handle spikes), decoupling (producer/consumer independent). Combine with Lambda for serverless processing.",
+      "exampleTranslation": "SQS เป็น fully managed message queue service Types: 1) Standard - at-least-once delivery, best-effort ordering, unlimited throughput 2) FIFO - exactly-once processing, strict ordering, 300 msg/sec (3000 with batching) Use cases: decoupling microservices, handling traffic spikes, async processing, work queues Features: visibility timeout, dead-letter queues (failed messages), long polling, message retention ถึง 14 วัน Pattern: producer → SQS → consumer Benefits: reliability (messages ไม่หาย), scalability (handle spikes), decoupling (producer/consumer independent) รวมกับ Lambda สำหรับ serverless processing"
+    },
+    {
+      "vocab": "What is AWS SNS and how does it differ from SQS?",
+      "pronunciation": "SNS = Simple Notification Service",
+      "meaning": "AWS SNS คืออะไร และต่างจาก SQS อย่างไร?",
+      "example": "SNS is pub/sub messaging service. Publishers send to topic, topic delivers to all subscribers. Subscribers: SQS, Lambda, HTTP/S, email, SMS, mobile push. SNS vs SQS: SNS is push-based (topic pushes to subscribers), SQS is pull-based (consumers poll queue). SNS is fan-out (one message to many), SQS is point-to-point. Common pattern: SNS + SQS fan-out - one message published to SNS, delivered to multiple SQS queues for parallel processing. Use SNS for: notifications, alerts, fan-out scenarios. Use SQS for: work queues, decoupling, guaranteed delivery to single consumer.",
+      "exampleTranslation": "SNS เป็น pub/sub messaging service Publishers ส่งไป topic, topic deliver ไปทุก subscribers Subscribers: SQS, Lambda, HTTP/S, email, SMS, mobile push SNS vs SQS: SNS เป็น push-based (topic push ไป subscribers), SQS เป็น pull-based (consumers poll queue) SNS เป็น fan-out (หนึ่ง message ไปหลายที่), SQS เป็น point-to-point Pattern ที่พบบ่อย: SNS + SQS fan-out - หนึ่ง message published ไป SNS, deliver ไปหลาย SQS queues สำหรับ parallel processing ใช้ SNS สำหรับ: notifications, alerts, fan-out scenarios ใช้ SQS สำหรับ: work queues, decoupling, guaranteed delivery ไป single consumer"
+    },
+    {
+      "vocab": "What is AWS CloudWatch?",
+      "pronunciation": "",
+      "meaning": "AWS CloudWatch คืออะไร?",
+      "example": "CloudWatch is AWS's monitoring and observability service. Features: 1) Metrics - collect and track measurements (CPU, network, custom metrics). 2) Logs - centralized log management, log groups and streams. 3) Alarms - notifications based on metric thresholds. 4) Dashboards - visualize metrics. 5) Events/EventBridge - react to AWS events. 6) Logs Insights - query logs with SQL-like syntax. 7) Container Insights - ECS/EKS monitoring. Custom metrics: send application-specific metrics via PutMetricData. Retention: metrics 15 months, logs configurable. Integrate with SNS for alarm notifications. CloudWatch Agent for detailed system metrics and logs.",
+      "exampleTranslation": "CloudWatch เป็น monitoring และ observability service ของ AWS Features: 1) Metrics - collect และ track measurements (CPU, network, custom metrics) 2) Logs - centralized log management, log groups และ streams 3) Alarms - notifications ตาม metric thresholds 4) Dashboards - visualize metrics 5) Events/EventBridge - react ต่อ AWS events 6) Logs Insights - query logs ด้วย SQL-like syntax 7) Container Insights - ECS/EKS monitoring Custom metrics: ส่ง application-specific metrics ผ่าน PutMetricData Retention: metrics 15 เดือน, logs configurable ได้ Integrate กับ SNS สำหรับ alarm notifications CloudWatch Agent สำหรับ detailed system metrics และ logs"
+    },
+    {
+      "vocab": "What is AWS Route 53?",
+      "pronunciation": "",
+      "meaning": "AWS Route 53 คืออะไร?",
+      "example": "Route 53 is AWS's DNS service. Features: 1) Domain registration. 2) DNS hosting - translate domain names to IPs. 3) Health checks - monitor endpoint health. 4) Traffic management. Routing policies: 1) Simple - single resource. 2) Weighted - distribute traffic by weight. 3) Latency-based - route to lowest latency region. 4) Failover - active-passive with health checks. 5) Geolocation - route based on user location. 6) Geoproximity - route based on geographic distance. 7) Multi-value - return multiple healthy records. Use cases: global load balancing, disaster recovery, blue-green deployments. Integrates with other AWS services via alias records (ELB, CloudFront, S3).",
+      "exampleTranslation": "Route 53 เป็น DNS service ของ AWS Features: 1) Domain registration 2) DNS hosting - translate domain names เป็น IPs 3) Health checks - monitor endpoint health 4) Traffic management Routing policies: 1) Simple - single resource 2) Weighted - distribute traffic ตาม weight 3) Latency-based - route ไป region ที่ latency ต่ำสุด 4) Failover - active-passive กับ health checks 5) Geolocation - route ตาม user location 6) Geoproximity - route ตาม geographic distance 7) Multi-value - return multiple healthy records Use cases: global load balancing, disaster recovery, blue-green deployments Integrates กับ AWS services อื่นผ่าน alias records (ELB, CloudFront, S3)"
+    },
+    {
+      "vocab": "What are Availability Zones and Regions?",
+      "pronunciation": "",
+      "meaning": "Availability Zones และ Regions คืออะไร?",
+      "example": "Region: geographical area containing multiple AZs (e.g., us-east-1, ap-southeast-1). Choose based on: latency to users, data residency requirements, service availability, pricing. Availability Zone (AZ): one or more discrete data centers with redundant power, networking. AZs in a region are connected with high-bandwidth, low-latency links. Why multiple AZs: fault isolation - if one AZ fails, others continue. Best practice: deploy across multiple AZs for high availability. Example: web servers in 2+ AZs behind ALB, RDS Multi-AZ for database. Some services are regional (S3, DynamoDB), others per-AZ (EC2, EBS).",
+      "exampleTranslation": "Region: geographical area ที่มีหลาย AZs (เช่น us-east-1, ap-southeast-1) เลือกตาม: latency ไป users, data residency requirements, service availability, pricing Availability Zone (AZ): หนึ่งหรือหลาย discrete data centers พร้อม redundant power, networking AZs ใน region เชื่อมต่อด้วย high-bandwidth, low-latency links ทำไมต้องหลาย AZs: fault isolation - ถ้า AZ หนึ่งล้ม อันอื่นทำงานต่อได้ Best practice: deploy ข้ามหลาย AZs สำหรับ high availability ตัวอย่าง: web servers ใน 2+ AZs หลัง ALB, RDS Multi-AZ สำหรับ database บาง services เป็น regional (S3, DynamoDB), อื่นๆ per-AZ (EC2, EBS)"
+    },
+    {
+      "vocab": "What is AWS Elastic Beanstalk?",
+      "pronunciation": "",
+      "meaning": "AWS Elastic Beanstalk คืออะไร?",
+      "example": "Elastic Beanstalk is PaaS for deploying and scaling web applications. You provide code, Beanstalk handles: capacity provisioning, load balancing, auto-scaling, health monitoring. Supported platforms: Node.js, Python, Java, .NET, PHP, Ruby, Go, Docker. Components: Application (container), Environment (resources), Version (code). Environment tiers: Web Server (HTTP), Worker (background processing). Benefits: quick deployment, managed infrastructure, still have access to underlying resources. When to use: want managed platform but need some control. When not: need full control (use EC2), simple static site (use S3), containers at scale (use ECS/EKS).",
+      "exampleTranslation": "Elastic Beanstalk เป็น PaaS สำหรับ deploy และ scale web applications คุณให้ code, Beanstalk จัดการ: capacity provisioning, load balancing, auto-scaling, health monitoring Supported platforms: Node.js, Python, Java, .NET, PHP, Ruby, Go, Docker Components: Application (container), Environment (resources), Version (code) Environment tiers: Web Server (HTTP), Worker (background processing) Benefits: deploy เร็ว, managed infrastructure, ยังเข้าถึง underlying resources ได้ ใช้เมื่อไหร่: ต้องการ managed platform แต่ต้องการ control บ้าง ไม่ใช้เมื่อไหร่: ต้องการ full control (ใช้ EC2), simple static site (ใช้ S3), containers at scale (ใช้ ECS/EKS)"
+    },
+    {
+      "vocab": "What is AWS ECS vs EKS?",
+      "pronunciation": "ECS = Elastic Container Service, EKS = Elastic Kubernetes Service",
+      "meaning": "AWS ECS กับ EKS ต่างกันอย่างไร?",
+      "example": "ECS: AWS-native container orchestration. Simpler, tightly integrated with AWS. Components: clusters, services, tasks, task definitions. Launch types: EC2 (manage instances) or Fargate (serverless). Good for: AWS-only shops, simpler requirements, Fargate serverless containers. EKS: Managed Kubernetes. Standard Kubernetes API, portable across clouds. More complex but industry standard. Good for: multi-cloud strategy, existing K8s expertise, complex orchestration needs. Both support Fargate for serverless compute. Pricing: ECS is free (pay for compute), EKS charges per cluster plus compute. Start with ECS if new to containers, EKS if Kubernetes experience.",
+      "exampleTranslation": "ECS: AWS-native container orchestration ง่ายกว่า, integrated กับ AWS แน่น Components: clusters, services, tasks, task definitions Launch types: EC2 (manage instances) หรือ Fargate (serverless) ดีสำหรับ: AWS-only shops, requirements ที่ง่ายกว่า, Fargate serverless containers EKS: Managed Kubernetes Standard Kubernetes API, portable ข้าม clouds ซับซ้อนกว่าแต่เป็น industry standard ดีสำหรับ: multi-cloud strategy, existing K8s expertise, complex orchestration needs ทั้งคู่รองรับ Fargate สำหรับ serverless compute Pricing: ECS ฟรี (จ่าย compute), EKS charge per cluster บวก compute เริ่มด้วย ECS ถ้าใหม่กับ containers, EKS ถ้ามี Kubernetes experience"
+    },
+    {
+      "vocab": "What is AWS Secrets Manager vs Parameter Store?",
+      "pronunciation": "",
+      "meaning": "AWS Secrets Manager กับ Parameter Store ต่างกันอย่างไร?",
+      "example": "Secrets Manager: designed for secrets (passwords, API keys). Features: automatic rotation, cross-account access, RDS integration for auto-rotation. Pricing: $0.40/secret/month + API calls. Parameter Store (SSM): general configuration storage. Types: String, StringList, SecureString (encrypted). Free tier available (standard), advanced tier for more features. No built-in rotation. When to use Secrets Manager: need rotation, database credentials, compliance requirements. When to use Parameter Store: configuration values, simpler secrets without rotation, cost-sensitive. Both integrate with IAM, support encryption with KMS. Can use both: Parameter Store for config, Secrets Manager for sensitive credentials.",
+      "exampleTranslation": "Secrets Manager: ออกแบบสำหรับ secrets (passwords, API keys) Features: automatic rotation, cross-account access, RDS integration สำหรับ auto-rotation Pricing: $0.40/secret/month + API calls Parameter Store (SSM): general configuration storage Types: String, StringList, SecureString (encrypted) Free tier มี (standard), advanced tier สำหรับ features เพิ่ม ไม่มี built-in rotation ใช้ Secrets Manager เมื่อไหร่: ต้องการ rotation, database credentials, compliance requirements ใช้ Parameter Store เมื่อไหร่: configuration values, secrets ที่ง่ายกว่าไม่ต้อง rotation, cost-sensitive ทั้งคู่ integrate กับ IAM, รองรับ encryption ด้วย KMS ใช้ทั้งคู่ได้: Parameter Store สำหรับ config, Secrets Manager สำหรับ sensitive credentials"
+    },
+    {
+      "vocab": "How do you design a highly available architecture on AWS?",
+      "pronunciation": "",
+      "meaning": "คุณออกแบบ highly available architecture บน AWS อย่างไร?",
+      "example": "Key principles: 1) Multi-AZ deployment - distribute across availability zones. 2) Auto Scaling - handle failure and load. 3) Load balancing - distribute traffic, health checks. 4) Managed services - RDS Multi-AZ, ElastiCache with replicas. 5) Stateless design - store state externally (Redis, DynamoDB). 6) Data replication - S3 cross-region, RDS read replicas. Example architecture: Route 53 → CloudFront → ALB (multi-AZ) → Auto Scaling EC2/ECS (multi-AZ) → RDS Multi-AZ + ElastiCache. Also: use health checks everywhere, implement circuit breakers, plan for disaster recovery (backup region), test failure scenarios.",
+      "exampleTranslation": "หลักการสำคัญ: 1) Multi-AZ deployment - กระจายข้าม availability zones 2) Auto Scaling - handle failure และ load 3) Load balancing - กระจาย traffic, health checks 4) Managed services - RDS Multi-AZ, ElastiCache กับ replicas 5) Stateless design - store state externally (Redis, DynamoDB) 6) Data replication - S3 cross-region, RDS read replicas Example architecture: Route 53 → CloudFront → ALB (multi-AZ) → Auto Scaling EC2/ECS (multi-AZ) → RDS Multi-AZ + ElastiCache ด้วย: ใช้ health checks ทุกที่, implement circuit breakers, วางแผนสำหรับ disaster recovery (backup region), test failure scenarios"
+    }
+  ]
+}

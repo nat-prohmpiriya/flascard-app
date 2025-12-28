@@ -1,0 +1,154 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Design Patterns",
+    "description": "Common interview questions about software design patterns including creational, structural, and behavioral patterns",
+    "category": "Interview",
+    "tags": ["interview", "design-patterns", "oop", "architecture"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are design patterns and why are they important?",
+      "pronunciation": "",
+      "meaning": "Design patterns คืออะไร และทำไมถึงสำคัญ?",
+      "example": "Design patterns are reusable solutions to common software design problems. Not code, but templates/blueprints. Categories: Creational (object creation), Structural (composition), Behavioral (communication). Benefits: 1) Proven solutions - tested by many developers. 2) Common vocabulary - 'use Singleton' vs explaining the concept. 3) Best practices - avoid reinventing the wheel. 4) Maintainability - recognizable patterns easier to understand. Caution: don't force patterns where not needed (over-engineering). Learn patterns to recognize when they fit naturally, not to use everywhere. Gang of Four book defined 23 classic patterns.",
+      "exampleTranslation": "Design patterns คือ solutions ที่ reusable สำหรับปัญหา software design ทั่วไป ไม่ใช่ code แต่เป็น templates/blueprints Categories: Creational (object creation), Structural (composition), Behavioral (communication) Benefits: 1) Proven solutions - ทดสอบโดย developers หลายคน 2) Common vocabulary - 'use Singleton' vs อธิบาย concept 3) Best practices - หลีกเลี่ยง reinventing the wheel 4) Maintainability - patterns ที่จำได้เข้าใจง่ายกว่า Caution: อย่า force patterns ที่ไม่ต้องการ (over-engineering) เรียนรู้ patterns เพื่อจำได้ว่าเมื่อไหร่ fit naturally ไม่ใช่ใช้ทุกที่ Gang of Four book กำหนด 23 classic patterns"
+    },
+    {
+      "vocab": "Explain the Singleton pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Singleton pattern",
+      "example": "Singleton ensures a class has only ONE instance and provides global access point. Implementation: private constructor, static instance variable, static getInstance() method. Use cases: database connections, configuration, logging, thread pools. Example: class Database { private static instance; private constructor() {} static getInstance() { if (!instance) instance = new Database(); return instance; } }. Caution: often considered anti-pattern due to: global state, hard to test (can't mock), hidden dependencies. Modern alternatives: dependency injection, passing instance explicitly. In interviews: know it but mention the drawbacks.",
+      "exampleTranslation": "Singleton รับประกันว่า class มีแค่หนึ่ง instance และให้ global access point Implementation: private constructor, static instance variable, static getInstance() method Use cases: database connections, configuration, logging, thread pools ตัวอย่าง: class Database { private static instance; private constructor() {} static getInstance() { if (!instance) instance = new Database(); return instance; } } Caution: มักถูกมองว่าเป็น anti-pattern เพราะ: global state, test ยาก (mock ไม่ได้), hidden dependencies ทางเลือกสมัยใหม่: dependency injection, ส่ง instance explicitly ใน interviews: รู้มันแต่พูดถึง drawbacks ด้วย"
+    },
+    {
+      "vocab": "What is the Factory pattern?",
+      "pronunciation": "",
+      "meaning": "Factory pattern คืออะไร?",
+      "example": "Factory creates objects without exposing creation logic. Client uses factory instead of 'new'. Types: 1) Simple Factory - single method returns different types based on input. 2) Factory Method - subclasses decide which class to instantiate. 3) Abstract Factory - creates families of related objects. Example: createPayment('credit') returns CreditCardPayment, createPayment('paypal') returns PayPalPayment. Benefits: decouples client from concrete classes, easy to add new types, single place for creation logic. Use when: object creation is complex, need to return different subtypes, want to hide implementation details.",
+      "exampleTranslation": "Factory สร้าง objects โดยไม่ expose creation logic Client ใช้ factory แทน 'new' Types: 1) Simple Factory - single method return different types ตาม input 2) Factory Method - subclasses ตัดสินใจว่าจะ instantiate class ไหน 3) Abstract Factory - สร้าง families ของ related objects ตัวอย่าง: createPayment('credit') return CreditCardPayment, createPayment('paypal') return PayPalPayment Benefits: decouple client จาก concrete classes, เพิ่ม types ใหม่ง่าย, single place สำหรับ creation logic ใช้เมื่อ: object creation ซับซ้อน, ต้อง return different subtypes, ต้องการซ่อน implementation details"
+    },
+    {
+      "vocab": "Explain the Builder pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Builder pattern",
+      "example": "Builder constructs complex objects step by step. Separates construction from representation. Example: const user = new UserBuilder().setName('John').setEmail('john@test.com').setAge(30).build(); Benefits: 1) Readable - named methods instead of constructor with many params. 2) Flexible - build different configurations. 3) Immutable - builder creates final immutable object. 4) Validation - validate at build() time. Use when: object has many optional parameters, construction requires multiple steps, want fluent interface. Common in: HTTP clients, query builders, configuration objects. Java: StringBuilder, Lombok @Builder.",
+      "exampleTranslation": "Builder สร้าง complex objects ทีละขั้นตอน แยก construction จาก representation ตัวอย่าง: const user = new UserBuilder().setName('John').setEmail('john@test.com').setAge(30).build(); Benefits: 1) Readable - named methods แทน constructor ที่มี params มาก 2) Flexible - build configurations ต่างกัน 3) Immutable - builder สร้าง final immutable object 4) Validation - validate ตอน build() ใช้เมื่อ: object มี optional parameters มาก, construction ต้องการหลาย steps, ต้องการ fluent interface พบบ่อยใน: HTTP clients, query builders, configuration objects Java: StringBuilder, Lombok @Builder"
+    },
+    {
+      "vocab": "What is the Observer pattern?",
+      "pronunciation": "",
+      "meaning": "Observer pattern คืออะไร?",
+      "example": "Observer defines one-to-many dependency - when subject changes state, all observers are notified automatically. Components: Subject (maintains observers, sends notifications), Observer (interface for receiving updates). Example: event systems, pub/sub. Implementation: subject.subscribe(observer), subject.notify() calls observer.update() for all. Real-world: DOM events (addEventListener), React state updates, RxJS observables, webhook systems. Benefits: loose coupling, dynamic relationships, broadcast communication. Caution: memory leaks (must unsubscribe), unexpected updates, debugging can be tricky. Fundamental pattern in reactive programming.",
+      "exampleTranslation": "Observer กำหนด one-to-many dependency - เมื่อ subject เปลี่ยน state, ทุก observers ได้รับ notification อัตโนมัติ Components: Subject (maintains observers, sends notifications), Observer (interface สำหรับรับ updates) ตัวอย่าง: event systems, pub/sub Implementation: subject.subscribe(observer), subject.notify() เรียก observer.update() สำหรับทั้งหมด Real-world: DOM events (addEventListener), React state updates, RxJS observables, webhook systems Benefits: loose coupling, dynamic relationships, broadcast communication Caution: memory leaks (ต้อง unsubscribe), unexpected updates, debugging อาจยาก Fundamental pattern ใน reactive programming"
+    },
+    {
+      "vocab": "Explain the Strategy pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Strategy pattern",
+      "example": "Strategy defines family of algorithms, encapsulates each one, makes them interchangeable. Client selects algorithm at runtime without changing code structure. Example: payment processing - interface PaymentStrategy { pay(amount) }. Implementations: CreditCardStrategy, PayPalStrategy, CryptoStrategy. Context uses strategy: this.paymentStrategy.pay(100). Benefits: 1) Open/closed - add new strategies without modifying existing code. 2) Eliminates conditionals - no if/else for each algorithm. 3) Runtime flexibility - switch strategies dynamically. Use when: multiple algorithms for same task, want to isolate algorithm logic, need to switch behavior at runtime.",
+      "exampleTranslation": "Strategy กำหนด family ของ algorithms, encapsulate แต่ละตัว, ทำให้ interchangeable Client เลือก algorithm ตอน runtime โดยไม่เปลี่ยน code structure ตัวอย่าง: payment processing - interface PaymentStrategy { pay(amount) } Implementations: CreditCardStrategy, PayPalStrategy, CryptoStrategy Context ใช้ strategy: this.paymentStrategy.pay(100) Benefits: 1) Open/closed - เพิ่ม strategies ใหม่โดยไม่แก้ code ที่มีอยู่ 2) Eliminates conditionals - ไม่มี if/else สำหรับแต่ละ algorithm 3) Runtime flexibility - สลับ strategies dynamically ใช้เมื่อ: หลาย algorithms สำหรับ task เดียวกัน, ต้องการแยก algorithm logic, ต้อง switch behavior ตอน runtime"
+    },
+    {
+      "vocab": "What is the Decorator pattern?",
+      "pronunciation": "",
+      "meaning": "Decorator pattern คืออะไร?",
+      "example": "Decorator attaches additional responsibilities to object dynamically. Alternative to subclassing for extending functionality. Example: coffee shop - base Coffee class, decorators: MilkDecorator, SugarDecorator, WhipDecorator. Each decorator wraps object and adds behavior: new WhipDecorator(new MilkDecorator(new Coffee())). Benefits: 1) Single responsibility - each decorator does one thing. 2) Flexible composition - combine decorators as needed. 3) Open/closed - add features without modifying base class. Real examples: Java I/O streams (BufferedInputStream wrapping FileInputStream), Express.js middleware, Python decorators (@). Use when: need to add behaviors dynamically, extension by subclassing impractical.",
+      "exampleTranslation": "Decorator แนบ responsibilities เพิ่มเติมกับ object แบบ dynamic ทางเลือกแทน subclassing สำหรับ extending functionality ตัวอย่าง: coffee shop - base Coffee class, decorators: MilkDecorator, SugarDecorator, WhipDecorator แต่ละ decorator wrap object และเพิ่ม behavior: new WhipDecorator(new MilkDecorator(new Coffee())) Benefits: 1) Single responsibility - แต่ละ decorator ทำสิ่งเดียว 2) Flexible composition - รวม decorators ตามต้องการ 3) Open/closed - เพิ่ม features โดยไม่แก้ base class Real examples: Java I/O streams (BufferedInputStream wrap FileInputStream), Express.js middleware, Python decorators (@) ใช้เมื่อ: ต้องเพิ่ม behaviors แบบ dynamic, extension โดย subclassing ไม่เหมาะ"
+    },
+    {
+      "vocab": "Explain the Adapter pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Adapter pattern",
+      "example": "Adapter allows incompatible interfaces to work together. Converts interface of a class into another interface clients expect. Like power plug adapters - US plug to EU socket. Example: your app expects PaymentProcessor interface, but third-party library has different interface. Create PaymentAdapter that implements PaymentProcessor and internally uses the library. Types: 1) Object adapter - composition (preferred). 2) Class adapter - inheritance. Use when: integrating legacy code, using third-party libraries, need to make unrelated classes work together. Benefits: reuse existing code, single responsibility (conversion logic isolated).",
+      "exampleTranslation": "Adapter อนุญาตให้ interfaces ที่ incompatible ทำงานร่วมกันได้ แปลง interface ของ class เป็น interface อื่นที่ clients คาดหวัง เหมือน power plug adapters - US plug เข้า EU socket ตัวอย่าง: app ของคุณคาดหวัง PaymentProcessor interface, แต่ third-party library มี interface ต่างกัน สร้าง PaymentAdapter ที่ implement PaymentProcessor และใช้ library ภายใน Types: 1) Object adapter - composition (preferred) 2) Class adapter - inheritance ใช้เมื่อ: integrate legacy code, ใช้ third-party libraries, ต้องให้ unrelated classes ทำงานร่วมกัน Benefits: reuse existing code, single responsibility (conversion logic isolated)"
+    },
+    {
+      "vocab": "What is the Facade pattern?",
+      "pronunciation": "Facade ออกเสียงว่า 'ฟาซาด'",
+      "meaning": "Facade pattern คืออะไร?",
+      "example": "Facade provides simplified interface to complex subsystem. Hides complexity, provides unified entry point. Example: home theater - instead of calling TV.on(), Amplifier.setVolume(), DVDPlayer.play() separately, use HomeTheaterFacade.watchMovie() that orchestrates all. Benefits: 1) Simplifies usage - single method instead of many. 2) Decoupling - client doesn't depend on subsystem classes. 3) Layering - organize code into layers. Real examples: jQuery ($() hides DOM complexity), ORMs (hide SQL), AWS SDK (simplified API calls). Use when: need simple interface to complex system, want to layer subsystems, reduce dependencies.",
+      "exampleTranslation": "Facade ให้ simplified interface สำหรับ complex subsystem ซ่อน complexity, ให้ unified entry point ตัวอย่าง: home theater - แทนที่จะเรียก TV.on(), Amplifier.setVolume(), DVDPlayer.play() แยกกัน, ใช้ HomeTheaterFacade.watchMovie() ที่ orchestrate ทั้งหมด Benefits: 1) Simplifies usage - single method แทนหลายอัน 2) Decoupling - client ไม่ depend on subsystem classes 3) Layering - จัดระเบียบ code เป็น layers Real examples: jQuery ($() ซ่อน DOM complexity), ORMs (ซ่อน SQL), AWS SDK (simplified API calls) ใช้เมื่อ: ต้องการ simple interface สำหรับ complex system, ต้องการ layer subsystems, ลด dependencies"
+    },
+    {
+      "vocab": "Explain the Command pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Command pattern",
+      "example": "Command encapsulates request as object, allowing parameterization, queuing, logging, and undo operations. Components: Command (interface with execute()), ConcreteCommand (implements execute), Invoker (asks command to execute), Receiver (knows how to perform). Example: text editor - commands: BoldCommand, ItalicCommand, each with execute() and undo(). Store command history for undo/redo. Benefits: 1) Decouples invoker from receiver. 2) Commands are objects - can store, queue, serialize. 3) Easy undo/redo. 4) Composite commands (macros). Use cases: GUI actions, transaction systems, task queues, undo functionality.",
+      "exampleTranslation": "Command encapsulate request เป็น object อนุญาต parameterization, queuing, logging และ undo operations Components: Command (interface มี execute()), ConcreteCommand (implement execute), Invoker (ขอให้ command execute), Receiver (รู้วิธี perform) ตัวอย่าง: text editor - commands: BoldCommand, ItalicCommand, แต่ละตัวมี execute() และ undo() เก็บ command history สำหรับ undo/redo Benefits: 1) Decouple invoker จาก receiver 2) Commands เป็น objects - เก็บ, queue, serialize ได้ 3) Undo/redo ง่าย 4) Composite commands (macros) Use cases: GUI actions, transaction systems, task queues, undo functionality"
+    },
+    {
+      "vocab": "What is the Repository pattern?",
+      "pronunciation": "",
+      "meaning": "Repository pattern คืออะไร?",
+      "example": "Repository mediates between domain and data mapping layers, acting like in-memory collection of domain objects. Abstracts data access logic. Example: UserRepository with methods find(id), findAll(), save(user), delete(user). Benefits: 1) Decouples business logic from data access. 2) Testable - mock repository in tests. 3) Single place for query logic. 4) Can switch data sources (SQL to NoSQL) without changing business code. Common in: Domain-Driven Design, clean architecture. Implementation: interface defines methods, concrete class implements using ORM/raw SQL. Often combined with Unit of Work pattern for transactions.",
+      "exampleTranslation": "Repository เป็นตัวกลางระหว่าง domain และ data mapping layers ทำหน้าที่เหมือน in-memory collection ของ domain objects Abstract data access logic ตัวอย่าง: UserRepository มี methods find(id), findAll(), save(user), delete(user) Benefits: 1) Decouple business logic จาก data access 2) Testable - mock repository ใน tests 3) Single place สำหรับ query logic 4) สลับ data sources (SQL ไป NoSQL) ได้โดยไม่เปลี่ยน business code พบบ่อยใน: Domain-Driven Design, clean architecture Implementation: interface กำหนด methods, concrete class implement ใช้ ORM/raw SQL มักรวมกับ Unit of Work pattern สำหรับ transactions"
+    },
+    {
+      "vocab": "Explain the Dependency Injection pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Dependency Injection pattern",
+      "example": "Dependency Injection (DI) provides dependencies from outside rather than creating them internally. Types: 1) Constructor injection - pass via constructor (preferred). 2) Setter injection - pass via setter method. 3) Interface injection - interface defines injection method. Without DI: class UserService { constructor() { this.db = new Database(); } } - hard to test. With DI: class UserService { constructor(db) { this.db = db; } } - can inject mock. Benefits: loose coupling, testability, flexibility. DI Containers (IoC containers): NestJS, Spring, Angular automatically resolve dependencies. Follows Dependency Inversion Principle (D in SOLID).",
+      "exampleTranslation": "Dependency Injection (DI) ให้ dependencies จากข้างนอกแทนที่จะสร้างภายใน Types: 1) Constructor injection - ส่งผ่าน constructor (preferred) 2) Setter injection - ส่งผ่าน setter method 3) Interface injection - interface กำหนด injection method ไม่มี DI: class UserService { constructor() { this.db = new Database(); } } - test ยาก มี DI: class UserService { constructor(db) { this.db = db; } } - inject mock ได้ Benefits: loose coupling, testability, flexibility DI Containers (IoC containers): NestJS, Spring, Angular resolve dependencies อัตโนมัติ ตาม Dependency Inversion Principle (D ใน SOLID)"
+    },
+    {
+      "vocab": "What is the MVC pattern?",
+      "pronunciation": "MVC = Model-View-Controller",
+      "meaning": "MVC pattern คืออะไร?",
+      "example": "MVC separates application into three components: Model - data and business logic, notifies view of changes. View - UI presentation, displays model data. Controller - handles user input, updates model, selects view. Flow: user interacts with view → controller handles → updates model → model notifies view → view re-renders. Benefits: separation of concerns, parallel development, multiple views for same model. Variations: MVP (Model-View-Presenter), MVVM (Model-View-ViewModel). Used in: Rails, Django, ASP.NET MVC. React isn't pure MVC - closer to View layer with its own state management.",
+      "exampleTranslation": "MVC แยก application เป็นสาม components: Model - data และ business logic, แจ้ง view เมื่อเปลี่ยน View - UI presentation, แสดง model data Controller - handle user input, update model, เลือก view Flow: user interact กับ view → controller handle → update model → model แจ้ง view → view re-render Benefits: separation of concerns, parallel development, หลาย views สำหรับ model เดียวกัน Variations: MVP (Model-View-Presenter), MVVM (Model-View-ViewModel) ใช้ใน: Rails, Django, ASP.NET MVC React ไม่ใช่ pure MVC - ใกล้ View layer มากกว่าพร้อม state management ของตัวเอง"
+    },
+    {
+      "vocab": "Explain the Proxy pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Proxy pattern",
+      "example": "Proxy provides surrogate or placeholder for another object to control access. Types: 1) Virtual proxy - lazy initialization, create expensive object only when needed. 2) Protection proxy - control access based on permissions. 3) Remote proxy - local representative for remote object (RPC). 4) Caching proxy - cache results of expensive operations. Example: ImageProxy loads actual image only when display() called, showing placeholder first. JavaScript: ES6 Proxy object for property interception. Benefits: control access, lazy loading, logging, caching without changing original. Used in: ORMs (lazy loading relations), API clients, security layers.",
+      "exampleTranslation": "Proxy ให้ surrogate หรือ placeholder สำหรับ object อื่นเพื่อควบคุม access Types: 1) Virtual proxy - lazy initialization, สร้าง expensive object เมื่อต้องการเท่านั้น 2) Protection proxy - ควบคุม access ตาม permissions 3) Remote proxy - local representative สำหรับ remote object (RPC) 4) Caching proxy - cache results ของ expensive operations ตัวอย่าง: ImageProxy load actual image เมื่อเรียก display() เท่านั้น, แสดง placeholder ก่อน JavaScript: ES6 Proxy object สำหรับ property interception Benefits: control access, lazy loading, logging, caching โดยไม่เปลี่ยน original ใช้ใน: ORMs (lazy loading relations), API clients, security layers"
+    },
+    {
+      "vocab": "What is the State pattern?",
+      "pronunciation": "",
+      "meaning": "State pattern คืออะไร?",
+      "example": "State allows object to change behavior when internal state changes. Object appears to change its class. Alternative to large if/else or switch statements on state. Example: Order with states: PendingState, PaidState, ShippedState, DeliveredState. Each state implements handle() differently. Order delegates to current state: this.state.handle(). State transitions: this.setState(new PaidState()). Benefits: 1) Organizes state-specific code. 2) Makes transitions explicit. 3) Easy to add new states. Use when: object behavior depends on state, many conditionals based on state. Related: Finite State Machines.",
+      "exampleTranslation": "State อนุญาตให้ object เปลี่ยน behavior เมื่อ internal state เปลี่ยน Object ดูเหมือนเปลี่ยน class ทางเลือกแทน if/else หรือ switch statements ใหญ่ๆ บน state ตัวอย่าง: Order มี states: PendingState, PaidState, ShippedState, DeliveredState แต่ละ state implement handle() ต่างกัน Order delegate ไป current state: this.state.handle() State transitions: this.setState(new PaidState()) Benefits: 1) จัดระเบียบ state-specific code 2) ทำให้ transitions ชัดเจน 3) เพิ่ม states ใหม่ง่าย ใช้เมื่อ: object behavior ขึ้นกับ state, มี conditionals มากตาม state Related: Finite State Machines"
+    },
+    {
+      "vocab": "Explain the Template Method pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Template Method pattern",
+      "example": "Template Method defines skeleton of algorithm in base class, letting subclasses override specific steps without changing structure. Example: DataMiner base class with mine() template: openFile() → extractData() → parseData() → analyze() → closeFile(). Subclasses (PDFMiner, CSVMiner) override extractData() and parseData(). Template method (mine) is final - can't be overridden. Hook methods: optional steps subclasses can override. Benefits: 1) Reuse common algorithm. 2) Subclasses customize only specific steps. 3) Avoid code duplication. Use when: have similar algorithms with minor differences, want to let clients extend specific steps only.",
+      "exampleTranslation": "Template Method กำหนด skeleton ของ algorithm ใน base class ให้ subclasses override specific steps ได้โดยไม่เปลี่ยน structure ตัวอย่าง: DataMiner base class มี mine() template: openFile() → extractData() → parseData() → analyze() → closeFile() Subclasses (PDFMiner, CSVMiner) override extractData() และ parseData() Template method (mine) เป็น final - override ไม่ได้ Hook methods: optional steps ที่ subclasses override ได้ Benefits: 1) Reuse common algorithm 2) Subclasses customize เฉพาะ specific steps 3) หลีกเลี่ยง code duplication ใช้เมื่อ: มี similar algorithms ที่ต่างกันเล็กน้อย, ต้องการให้ clients extend เฉพาะ specific steps"
+    },
+    {
+      "vocab": "What is the Composite pattern?",
+      "pronunciation": "",
+      "meaning": "Composite pattern คืออะไร?",
+      "example": "Composite composes objects into tree structures, treating individual objects and compositions uniformly. Components: Component (interface), Leaf (no children), Composite (has children, implements operations by delegating to children). Example: file system - File (leaf) and Folder (composite) both implement getSize(). Folder.getSize() sums children's sizes. Example: UI components - Button (leaf), Panel (composite containing components). Benefits: 1) Uniform treatment - client doesn't care if leaf or composite. 2) Easy to add new component types. 3) Natural for hierarchical structures. Use when: need tree structure, want to treat parts and wholes uniformly.",
+      "exampleTranslation": "Composite compose objects เป็น tree structures treat individual objects และ compositions อย่างเหมือนกัน Components: Component (interface), Leaf (ไม่มี children), Composite (มี children, implement operations โดย delegate ไป children) ตัวอย่าง: file system - File (leaf) และ Folder (composite) ทั้งคู่ implement getSize() Folder.getSize() รวม sizes ของ children ตัวอย่าง: UI components - Button (leaf), Panel (composite มี components) Benefits: 1) Uniform treatment - client ไม่สนว่าเป็น leaf หรือ composite 2) เพิ่ม component types ใหม่ง่าย 3) Natural สำหรับ hierarchical structures ใช้เมื่อ: ต้องการ tree structure, ต้องการ treat parts และ wholes อย่างเดียวกัน"
+    },
+    {
+      "vocab": "What are SOLID principles?",
+      "pronunciation": "",
+      "meaning": "SOLID principles คืออะไร?",
+      "example": "SOLID: five principles for maintainable OOP code. S - Single Responsibility: class should have one reason to change. O - Open/Closed: open for extension, closed for modification. L - Liskov Substitution: subtypes must be substitutable for base types. I - Interface Segregation: many specific interfaces better than one general. D - Dependency Inversion: depend on abstractions, not concretions. Benefits: loosely coupled, testable, maintainable code. Example violations: S - class handling both data and UI, L - Square extending Rectangle breaks behavior, D - directly instantiating dependencies. SOLID guides design decisions toward better architecture.",
+      "exampleTranslation": "SOLID: ห้าหลักการสำหรับ maintainable OOP code S - Single Responsibility: class ควรมีเหตุผลเดียวในการเปลี่ยน O - Open/Closed: open สำหรับ extension, closed สำหรับ modification L - Liskov Substitution: subtypes ต้อง substitutable แทน base types ได้ I - Interface Segregation: หลาย specific interfaces ดีกว่าหนึ่ง general D - Dependency Inversion: depend on abstractions ไม่ใช่ concretions Benefits: loosely coupled, testable, maintainable code Example violations: S - class handle ทั้ง data และ UI, L - Square extend Rectangle ทำลาย behavior, D - instantiate dependencies โดยตรง SOLID guide design decisions ไปสู่ architecture ที่ดีกว่า"
+    },
+    {
+      "vocab": "Explain the Iterator pattern.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Iterator pattern",
+      "example": "Iterator provides way to access elements of collection sequentially without exposing underlying representation. Components: Iterator (interface: next(), hasNext()), ConcreteIterator, Aggregate (interface: createIterator()), ConcreteAggregate (the collection). Example: for...of in JavaScript uses Symbol.iterator. Custom iterator: class Range { [Symbol.iterator]() { let i = this.start; return { next: () => i <= this.end ? {value: i++, done: false} : {done: true} }}}. Benefits: 1) Uniform traversal interface. 2) Multiple iterators on same collection. 3) Hide collection implementation. Built into most languages: Java Iterator, Python iter(), JS iterators.",
+      "exampleTranslation": "Iterator ให้วิธีเข้าถึง elements ของ collection ตามลำดับโดยไม่ expose underlying representation Components: Iterator (interface: next(), hasNext()), ConcreteIterator, Aggregate (interface: createIterator()), ConcreteAggregate (the collection) ตัวอย่าง: for...of ใน JavaScript ใช้ Symbol.iterator Custom iterator: class Range { [Symbol.iterator]() { let i = this.start; return { next: () => i <= this.end ? {value: i++, done: false} : {done: true} }}} Benefits: 1) Uniform traversal interface 2) หลาย iterators บน collection เดียวกัน 3) ซ่อน collection implementation Built into most languages: Java Iterator, Python iter(), JS iterators"
+    },
+    {
+      "vocab": "What is the Middleware pattern?",
+      "pronunciation": "",
+      "meaning": "Middleware pattern คืออะไร?",
+      "example": "Middleware is chain of processing functions that execute in sequence, each able to modify request/response or short-circuit. Popular in web frameworks. Structure: function(request, response, next) { // process, then next() }. Each middleware can: modify request, modify response, call next(), or return early. Example (Express): app.use(authMiddleware), app.use(loggingMiddleware), app.use(router). Order matters! Use cases: authentication, logging, error handling, CORS, compression, rate limiting. Benefits: 1) Composable - add/remove easily. 2) Reusable - same middleware across routes. 3) Separation of concerns. Related to: Chain of Responsibility, Decorator patterns.",
+      "exampleTranslation": "Middleware คือ chain ของ processing functions ที่ execute ตามลำดับ แต่ละตัวสามารถแก้ไข request/response หรือ short-circuit Popular ใน web frameworks Structure: function(request, response, next) { // process, แล้ว next() } แต่ละ middleware สามารถ: แก้ไข request, แก้ไข response, เรียก next(), หรือ return early ตัวอย่าง (Express): app.use(authMiddleware), app.use(loggingMiddleware), app.use(router) Order สำคัญ! Use cases: authentication, logging, error handling, CORS, compression, rate limiting Benefits: 1) Composable - เพิ่ม/ลบง่าย 2) Reusable - middleware เดียวกันข้าม routes 3) Separation of concerns Related to: Chain of Responsibility, Decorator patterns"
+    }
+  ]
+}
