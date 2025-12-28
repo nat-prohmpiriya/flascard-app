@@ -1,0 +1,245 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T14:00:00.000Z",
+  "deck": {
+    "name": "GCP Professional Cloud Developer (PCD)",
+    "description": "Preparation flashcards for Google Cloud Professional Cloud Developer certification exam covering all 4 sections",
+    "category": "Certification",
+    "tags": ["gcp", "certification", "pcd", "cloud-developer", "google-cloud"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are the main compute platforms on GCP and when to use each?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "Compute platforms หลักของ GCP มีอะไรบ้าง และใช้เมื่อไหร่?",
+      "example": "1) Compute Engine (VMs): Full control, custom OS, legacy apps, stateful workloads. 2) GKE (Kubernetes): Container orchestration, microservices, hybrid/multi-cloud. 3) Cloud Run: Serverless containers, auto-scaling to zero, HTTP-triggered. 4) Cloud Functions: Event-driven, single-purpose functions, lightweight. 5) App Engine: PaaS, managed runtime, standard/flexible environments. Decision: Serverless preferred (Cloud Run > Functions > App Engine) unless need control (GKE > Compute Engine). Cloud Run is often the default choice for modern apps.",
+      "exampleTranslation": "1) Compute Engine (VMs): Full control, custom OS, legacy apps, stateful workloads 2) GKE (Kubernetes): Container orchestration, microservices, hybrid/multi-cloud 3) Cloud Run: Serverless containers, auto-scaling to zero, HTTP-triggered 4) Cloud Functions: Event-driven, single-purpose functions, lightweight 5) App Engine: PaaS, managed runtime, standard/flexible environments Decision: Serverless preferred (Cloud Run > Functions > App Engine) ยกเว้นต้องการ control (GKE > Compute Engine) Cloud Run มักเป็น default choice สำหรับ modern apps"
+    },
+    {
+      "vocab": "Cloud Run vs Cloud Functions - when to use which?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "Cloud Run กับ Cloud Functions ใช้อันไหนเมื่อไหร่?",
+      "example": "Cloud Run: Container-based, any language/runtime, longer timeout (60 min), HTTP/gRPC, concurrent requests, more control. Cloud Functions: Function-based, limited runtimes (Node, Python, Go, Java), shorter timeout (9 min gen1, 60 min gen2), event-triggered primarily. Use Cloud Run when: need containers, specific dependencies, longer processing, multiple endpoints. Use Cloud Functions when: simple event handling, quick setup, single purpose. Gen2 Functions run on Cloud Run infrastructure. Trend: Cloud Run becoming preferred for most use cases.",
+      "exampleTranslation": "Cloud Run: Container-based, ภาษาไหนก็ได้, timeout นาน (60 min), HTTP/gRPC, concurrent requests, control มากกว่า Cloud Functions: Function-based, limited runtimes (Node, Python, Go, Java), timeout สั้น (9 min gen1, 60 min gen2), event-triggered เป็นหลัก ใช้ Cloud Run เมื่อ: ต้องการ containers, specific dependencies, processing นาน, หลาย endpoints ใช้ Cloud Functions เมื่อ: event handling ง่ายๆ, setup เร็ว, single purpose Gen2 Functions รันบน Cloud Run infrastructure Trend: Cloud Run กำลังเป็น preferred สำหรับ use cases ส่วนใหญ่"
+    },
+    {
+      "vocab": "How do you implement caching on GCP?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "Implement caching บน GCP อย่างไร?",
+      "example": "1) Memorystore for Redis: Managed Redis, sub-millisecond latency, session storage, caching. 2) Memorystore for Memcached: Simple key-value, horizontal scaling. 3) Cloud CDN: Edge caching for static content, integrated with Load Balancer. 4) Application-level: In-memory caching within instances. Use cases: Memorystore Redis for sessions, frequently accessed data, pub/sub. Cloud CDN for static assets, API responses with Cache-Control headers. Best practices: Set appropriate TTLs, cache invalidation strategy, cache-aside pattern. Exam tip: Know when Redis vs Memcached (Redis = persistence, data structures; Memcached = simple, multi-threaded).",
+      "exampleTranslation": "1) Memorystore for Redis: Managed Redis, sub-millisecond latency, session storage, caching 2) Memorystore for Memcached: Simple key-value, horizontal scaling 3) Cloud CDN: Edge caching สำหรับ static content, integrated กับ Load Balancer 4) Application-level: In-memory caching ใน instances Use cases: Memorystore Redis สำหรับ sessions, frequently accessed data, pub/sub Cloud CDN สำหรับ static assets, API responses กับ Cache-Control headers Best practices: Set TTLs ที่เหมาะสม, cache invalidation strategy, cache-aside pattern Exam tip: รู้ว่าเมื่อไหร่ Redis vs Memcached (Redis = persistence, data structures; Memcached = simple, multi-threaded)"
+    },
+    {
+      "vocab": "Explain Pub/Sub and its use cases.",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "อธิบาย Pub/Sub และ use cases",
+      "example": "Pub/Sub: Fully managed, real-time messaging service. Async communication between services. Components: Topics (channels), Subscriptions (consumers), Messages. Delivery modes: Pull (consumer requests), Push (Pub/Sub sends to endpoint). Features: At-least-once delivery, ordering (with ordering key), dead-letter topics, filtering. Use cases: Event-driven architecture, stream processing, decoupling microservices, load leveling. Integration: Eventarc for Cloud Run/Functions triggers, Dataflow for processing. Exam tip: Know pull vs push, message retention (7 days default), acknowledge deadline, exactly-once processing with Dataflow.",
+      "exampleTranslation": "Pub/Sub: Fully managed, real-time messaging service Async communication ระหว่าง services Components: Topics (channels), Subscriptions (consumers), Messages Delivery modes: Pull (consumer requests), Push (Pub/Sub ส่งไป endpoint) Features: At-least-once delivery, ordering (with ordering key), dead-letter topics, filtering Use cases: Event-driven architecture, stream processing, decoupling microservices, load leveling Integration: Eventarc สำหรับ Cloud Run/Functions triggers, Dataflow สำหรับ processing Exam tip: รู้ pull vs push, message retention (7 days default), acknowledge deadline, exactly-once processing กับ Dataflow"
+    },
+    {
+      "vocab": "What is Eventarc and how does it work?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "Eventarc คืออะไร และทำงานอย่างไร?",
+      "example": "Eventarc: Unified eventing platform for GCP. Routes events from sources to targets. Event sources: 1) Google Cloud services (Cloud Storage, BigQuery, etc.) via Audit Logs. 2) Pub/Sub topics. 3) Third-party sources via Pub/Sub. Targets: Cloud Run, Cloud Functions, GKE, Workflows. How it works: Creates triggers that filter events and route to destinations. Uses CloudEvents format (standard). Example: Trigger Cloud Run when file uploaded to Cloud Storage. Benefits: Decoupled, declarative event routing, no custom code for event handling. Exam tip: Eventarc is preferred way to connect events to Cloud Run.",
+      "exampleTranslation": "Eventarc: Unified eventing platform สำหรับ GCP Route events จาก sources ไป targets Event sources: 1) Google Cloud services (Cloud Storage, BigQuery, etc.) ผ่าน Audit Logs 2) Pub/Sub topics 3) Third-party sources ผ่าน Pub/Sub Targets: Cloud Run, Cloud Functions, GKE, Workflows วิธีทำงาน: สร้าง triggers ที่ filter events และ route ไป destinations ใช้ CloudEvents format (standard) ตัวอย่าง: Trigger Cloud Run เมื่อ file uploaded ไป Cloud Storage Benefits: Decoupled, declarative event routing, ไม่ต้องเขียน custom code สำหรับ event handling Exam tip: Eventarc เป็น preferred way เชื่อมต่อ events กับ Cloud Run"
+    },
+    {
+      "vocab": "How do you handle API rate limiting and authentication on GCP?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "จัดการ API rate limiting และ authentication บน GCP อย่างไร?",
+      "example": "API Gateway options: 1) Apigee: Enterprise API management, full lifecycle, analytics, monetization. 2) API Gateway: Serverless, OpenAPI spec, simpler than Apigee. 3) Cloud Endpoints: Legacy, for App Engine/GKE. Rate limiting: Apigee quotas and spike arrest. API Gateway quotas in OpenAPI spec. Custom implementation with Memorystore counters. Authentication: API keys (simple), OAuth 2.0/JWT (user auth), Service accounts (service-to-service), Identity Platform (end users). Exam tip: Apigee for enterprise needs, API Gateway for serverless APIs. Know OAuth2 flows.",
+      "exampleTranslation": "API Gateway options: 1) Apigee: Enterprise API management, full lifecycle, analytics, monetization 2) API Gateway: Serverless, OpenAPI spec, ง่ายกว่า Apigee 3) Cloud Endpoints: Legacy, สำหรับ App Engine/GKE Rate limiting: Apigee quotas และ spike arrest API Gateway quotas ใน OpenAPI spec Custom implementation กับ Memorystore counters Authentication: API keys (simple), OAuth 2.0/JWT (user auth), Service accounts (service-to-service), Identity Platform (end users) Exam tip: Apigee สำหรับ enterprise needs, API Gateway สำหรับ serverless APIs รู้ OAuth2 flows"
+    },
+    {
+      "vocab": "Explain Cloud Tasks and Cloud Scheduler.",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "อธิบาย Cloud Tasks และ Cloud Scheduler",
+      "example": "Cloud Tasks: Managed task queue for asynchronous work. Features: HTTP/App Engine targets, rate limiting, retry config, delayed execution, deduplication. Use cases: Background processing, rate-limited API calls, reliable task execution. Cloud Scheduler: Managed cron job service. Features: Unix cron syntax, HTTP/Pub/Sub/App Engine targets, time zones. Use cases: Scheduled reports, periodic cleanup, batch jobs. Difference: Tasks = on-demand queued work. Scheduler = time-based triggers. Often combined: Scheduler triggers workflow, Tasks handles individual items. Exam tip: Cloud Tasks for work queues, Scheduler for cron.",
+      "exampleTranslation": "Cloud Tasks: Managed task queue สำหรับ asynchronous work Features: HTTP/App Engine targets, rate limiting, retry config, delayed execution, deduplication Use cases: Background processing, rate-limited API calls, reliable task execution Cloud Scheduler: Managed cron job service Features: Unix cron syntax, HTTP/Pub/Sub/App Engine targets, time zones Use cases: Scheduled reports, periodic cleanup, batch jobs Difference: Tasks = on-demand queued work Scheduler = time-based triggers Often combined: Scheduler trigger workflow, Tasks handle individual items Exam tip: Cloud Tasks สำหรับ work queues, Scheduler สำหรับ cron"
+    },
+    {
+      "vocab": "What is Workflows and when to use it?",
+      "pronunciation": "Section 1: Designing Applications",
+      "meaning": "Workflows คืออะไร และใช้เมื่อไหร่?",
+      "example": "Workflows: Serverless orchestration service for HTTP-based APIs. Features: YAML/JSON syntax, built-in error handling, conditional logic, parallel execution, subworkflows. Connectors: Native connectors for GCP services (BigQuery, Firestore, etc.). Use cases: Multi-step processes, service orchestration, long-running operations, saga patterns. vs Cloud Composer (Airflow): Workflows = simpler, serverless, HTTP focus. Composer = complex DAGs, data pipelines, Python operators. Example: Order processing - validate → charge payment → update inventory → send notification. Exam tip: Workflows for service orchestration, Composer for data pipelines.",
+      "exampleTranslation": "Workflows: Serverless orchestration service สำหรับ HTTP-based APIs Features: YAML/JSON syntax, built-in error handling, conditional logic, parallel execution, subworkflows Connectors: Native connectors สำหรับ GCP services (BigQuery, Firestore, etc.) Use cases: Multi-step processes, service orchestration, long-running operations, saga patterns vs Cloud Composer (Airflow): Workflows = simpler, serverless, HTTP focus Composer = complex DAGs, data pipelines, Python operators ตัวอย่าง: Order processing - validate → charge payment → update inventory → send notification Exam tip: Workflows สำหรับ service orchestration, Composer สำหรับ data pipelines"
+    },
+    {
+      "vocab": "How do you manage secrets in GCP applications?",
+      "pronunciation": "Section 1: Security",
+      "meaning": "จัดการ secrets ใน GCP applications อย่างไร?",
+      "example": "Secret Manager: Fully managed secret storage. Features: Versioning, automatic rotation, IAM access control, audit logging, regional/global replication. Usage: Store API keys, passwords, certificates. Access: Client libraries, gcloud, REST API. Integration: Cloud Run/Functions via environment variables or volume mounts. Best practices: 1) Never hardcode secrets. 2) Use latest version alias. 3) Rotate regularly. 4) Least privilege IAM. 5) Enable audit logs. vs Environment variables: Secret Manager more secure, auditable, versionable. Exam tip: Know Secret Manager integration patterns with Cloud Run.",
+      "exampleTranslation": "Secret Manager: Fully managed secret storage Features: Versioning, automatic rotation, IAM access control, audit logging, regional/global replication Usage: Store API keys, passwords, certificates Access: Client libraries, gcloud, REST API Integration: Cloud Run/Functions ผ่าน environment variables หรือ volume mounts Best practices: 1) Never hardcode secrets 2) ใช้ latest version alias 3) Rotate regularly 4) Least privilege IAM 5) Enable audit logs vs Environment variables: Secret Manager secure กว่า, auditable, versionable Exam tip: รู้ Secret Manager integration patterns กับ Cloud Run"
+    },
+    {
+      "vocab": "Explain Cloud KMS and encryption options.",
+      "pronunciation": "Section 1: Security",
+      "meaning": "อธิบาย Cloud KMS และ encryption options",
+      "example": "Cloud KMS: Managed encryption key service. Key types: 1) Google-managed: Default, no config needed. 2) Customer-managed (CMEK): You control keys in Cloud KMS. 3) Customer-supplied (CSEK): You provide keys (Compute Engine, Cloud Storage only). Hierarchy: Key Ring → Key → Key Version. Features: Automatic rotation, IAM permissions, HSM option, EKM (external). Use cases: CMEK for compliance (you control key lifecycle), envelope encryption for large data. Integration: Most GCP services support CMEK. Exam tip: Know CMEK vs CSEK, envelope encryption pattern, key rotation.",
+      "exampleTranslation": "Cloud KMS: Managed encryption key service Key types: 1) Google-managed: Default, ไม่ต้อง config 2) Customer-managed (CMEK): คุณ control keys ใน Cloud KMS 3) Customer-supplied (CSEK): คุณ provide keys (Compute Engine, Cloud Storage only) Hierarchy: Key Ring → Key → Key Version Features: Automatic rotation, IAM permissions, HSM option, EKM (external) Use cases: CMEK สำหรับ compliance (คุณ control key lifecycle), envelope encryption สำหรับ large data Integration: GCP services ส่วนใหญ่ support CMEK Exam tip: รู้ CMEK vs CSEK, envelope encryption pattern, key rotation"
+    },
+    {
+      "vocab": "What is Identity Platform and how is it used?",
+      "pronunciation": "Section 1: Security",
+      "meaning": "Identity Platform คืออะไร และใช้อย่างไร?",
+      "example": "Identity Platform: Customer identity and access management (CIAM). Features: Multi-tenancy, MFA, social login (Google, Facebook, etc.), SAML/OIDC, email/password, phone auth, anonymous auth. Built on Firebase Auth with enterprise features. Use cases: End-user authentication for apps, B2C applications, multi-tenant SaaS. Integration: Client SDKs, REST API, Cloud Run IAM integration. vs IAM: IAM = GCP resource access. Identity Platform = end-user app authentication. Best practices: Enable MFA, use blocking functions for custom logic, configure password policies. Exam tip: Know difference from IAM, use for end-user auth.",
+      "exampleTranslation": "Identity Platform: Customer identity and access management (CIAM) Features: Multi-tenancy, MFA, social login (Google, Facebook, etc.), SAML/OIDC, email/password, phone auth, anonymous auth Built on Firebase Auth กับ enterprise features Use cases: End-user authentication สำหรับ apps, B2C applications, multi-tenant SaaS Integration: Client SDKs, REST API, Cloud Run IAM integration vs IAM: IAM = GCP resource access Identity Platform = end-user app authentication Best practices: Enable MFA, use blocking functions สำหรับ custom logic, configure password policies Exam tip: รู้ความต่างจาก IAM, ใช้สำหรับ end-user auth"
+    },
+    {
+      "vocab": "How do you secure service-to-service communication?",
+      "pronunciation": "Section 1: Security",
+      "meaning": "Secure service-to-service communication อย่างไร?",
+      "example": "Methods: 1) Service accounts + IAM: Assign SA to service, grant roles to call other services. 2) Cloud Run invoker: Require authentication, grant run.invoker role. 3) VPC Service Controls: Network-level isolation. 4) Workload Identity (GKE): Map K8s SA to GCP SA. 5) Identity tokens: Request ID token, pass in Authorization header. Best practices: Least privilege, dedicated service accounts per service, no key files (use attached SA). Cloud Run: Set --no-allow-unauthenticated, caller needs invoker role. Exam tip: Know service account authentication flow, ID tokens vs access tokens.",
+      "exampleTranslation": "Methods: 1) Service accounts + IAM: Assign SA ให้ service, grant roles เพื่อเรียก services อื่น 2) Cloud Run invoker: Require authentication, grant run.invoker role 3) VPC Service Controls: Network-level isolation 4) Workload Identity (GKE): Map K8s SA ไป GCP SA 5) Identity tokens: Request ID token, ส่งใน Authorization header Best practices: Least privilege, dedicated service accounts ต่อ service, ไม่ใช้ key files (ใช้ attached SA) Cloud Run: Set --no-allow-unauthenticated, caller ต้องมี invoker role Exam tip: รู้ service account authentication flow, ID tokens vs access tokens"
+    },
+    {
+      "vocab": "What is Binary Authorization?",
+      "pronunciation": "Section 1: Security",
+      "meaning": "Binary Authorization คืออะไร?",
+      "example": "Binary Authorization: Deploy-time security control for containers. Ensures only trusted container images are deployed. How it works: 1) Create attestors (who can sign). 2) Create policy (which attestations required). 3) Sign images with attestations. 4) Deploy - GKE/Cloud Run verifies attestations. Use cases: Enforce CI/CD pipeline, prevent unauthorized images, compliance. Integration: Cloud Build can auto-attest after successful build. Policy modes: Require attestations, allow all, deny all, dry-run. Exam tip: Understand attestor/attestation concept, integration with Cloud Build.",
+      "exampleTranslation": "Binary Authorization: Deploy-time security control สำหรับ containers รับรองว่า only trusted container images ถูก deploy วิธีทำงาน: 1) สร้าง attestors (ใครสามารถ sign) 2) สร้าง policy (ต้องการ attestations อะไร) 3) Sign images ด้วย attestations 4) Deploy - GKE/Cloud Run verify attestations Use cases: Enforce CI/CD pipeline, prevent unauthorized images, compliance Integration: Cloud Build สามารถ auto-attest หลัง build สำเร็จ Policy modes: Require attestations, allow all, deny all, dry-run Exam tip: เข้าใจ attestor/attestation concept, integration กับ Cloud Build"
+    },
+    {
+      "vocab": "Explain GCP database options and when to use each.",
+      "pronunciation": "Section 1: Data Storage",
+      "meaning": "อธิบาย GCP database options และใช้อันไหนเมื่อไหร่?",
+      "example": "Relational: 1) Cloud SQL: Managed MySQL/PostgreSQL/SQL Server, regional, familiar SQL. 2) Cloud Spanner: Global, horizontally scalable, strong consistency, expensive. 3) AlloyDB: PostgreSQL-compatible, high performance. NoSQL: 4) Firestore: Document DB, real-time sync, offline support, serverless. 5) Bigtable: Wide-column, high throughput, time-series, IoT. 6) Datastore: Legacy, use Firestore instead. Cache: 7) Memorystore: Redis/Memcached. Decision tree: Need SQL? → Cloud SQL (regional) or Spanner (global). Document/mobile? → Firestore. Time-series/analytics? → Bigtable. Exam tip: Know use cases for each.",
+      "exampleTranslation": "Relational: 1) Cloud SQL: Managed MySQL/PostgreSQL/SQL Server, regional, familiar SQL 2) Cloud Spanner: Global, horizontally scalable, strong consistency, แพง 3) AlloyDB: PostgreSQL-compatible, high performance NoSQL: 4) Firestore: Document DB, real-time sync, offline support, serverless 5) Bigtable: Wide-column, high throughput, time-series, IoT 6) Datastore: Legacy, ใช้ Firestore แทน Cache: 7) Memorystore: Redis/Memcached Decision tree: Need SQL? → Cloud SQL (regional) หรือ Spanner (global) Document/mobile? → Firestore Time-series/analytics? → Bigtable Exam tip: รู้ use cases แต่ละอัน"
+    },
+    {
+      "vocab": "How do you create signed URLs for Cloud Storage?",
+      "pronunciation": "Section 1: Data Storage",
+      "meaning": "สร้าง signed URLs สำหรับ Cloud Storage อย่างไร?",
+      "example": "Signed URLs: Time-limited access to private objects without requiring authentication. Use cases: Share files temporarily, download links, upload URLs. Creation methods: 1) gsutil signurl (with service account key). 2) Client libraries (recommended). 3) V4 signing (current standard). Parameters: Bucket, object, expiration, HTTP method, service account. Security: Short expiration (minutes to hours), specific HTTP method, can include headers. Alternative: Signed policy documents for browser uploads. Exam tip: Know when to use signed URLs vs IAM, V4 signing process.",
+      "exampleTranslation": "Signed URLs: Time-limited access ไป private objects โดยไม่ต้อง authentication Use cases: Share files temporarily, download links, upload URLs Creation methods: 1) gsutil signurl (กับ service account key) 2) Client libraries (recommended) 3) V4 signing (current standard) Parameters: Bucket, object, expiration, HTTP method, service account Security: Short expiration (minutes to hours), specific HTTP method, can include headers Alternative: Signed policy documents สำหรับ browser uploads Exam tip: รู้ว่าเมื่อไหร่ใช้ signed URLs vs IAM, V4 signing process"
+    },
+    {
+      "vocab": "What is Cloud Build and how does it work?",
+      "pronunciation": "Section 2: Building",
+      "meaning": "Cloud Build คืออะไร และทำงานอย่างไร?",
+      "example": "Cloud Build: Serverless CI/CD platform. Components: Build config (cloudbuild.yaml), Steps (container images), Triggers, Substitutions. Build steps: Each step is a container. Built-in builders: docker, gcloud, gsutil, npm, etc. Custom builders possible. Triggers: GitHub, Cloud Source Repos, Pub/Sub, manual, webhook. Features: Parallel steps, artifacts, build logs, notifications. Integration: Artifact Registry (store images), Secret Manager, Cloud Deploy. Build config example: steps with name, args, env. Exam tip: Know cloudbuild.yaml syntax, built-in substitutions ($PROJECT_ID, $COMMIT_SHA).",
+      "exampleTranslation": "Cloud Build: Serverless CI/CD platform Components: Build config (cloudbuild.yaml), Steps (container images), Triggers, Substitutions Build steps: แต่ละ step เป็น container Built-in builders: docker, gcloud, gsutil, npm, etc. Custom builders ได้ Triggers: GitHub, Cloud Source Repos, Pub/Sub, manual, webhook Features: Parallel steps, artifacts, build logs, notifications Integration: Artifact Registry (store images), Secret Manager, Cloud Deploy Build config example: steps กับ name, args, env Exam tip: รู้ cloudbuild.yaml syntax, built-in substitutions ($PROJECT_ID, $COMMIT_SHA)"
+    },
+    {
+      "vocab": "Explain Artifact Registry and container image management.",
+      "pronunciation": "Section 2: Building",
+      "meaning": "อธิบาย Artifact Registry และ container image management",
+      "example": "Artifact Registry: Universal package manager for GCP. Supports: Docker images, npm, Maven, Python, Go, Apt, Yum. Features: IAM access control, vulnerability scanning, regional/multi-regional, cleanup policies. vs Container Registry (deprecated): Artifact Registry is the successor, more features. Image naming: REGION-docker.pkg.dev/PROJECT/REPO/IMAGE:TAG. Best practices: Use immutable tags, enable vulnerability scanning, cleanup old images, use multi-regional for availability. Provenance: Track build origin with SLSA attestations. Exam tip: Know Artifact Registry vs Container Registry, vulnerability scanning, cleanup policies.",
+      "exampleTranslation": "Artifact Registry: Universal package manager สำหรับ GCP Supports: Docker images, npm, Maven, Python, Go, Apt, Yum Features: IAM access control, vulnerability scanning, regional/multi-regional, cleanup policies vs Container Registry (deprecated): Artifact Registry เป็น successor, features มากกว่า Image naming: REGION-docker.pkg.dev/PROJECT/REPO/IMAGE:TAG Best practices: ใช้ immutable tags, enable vulnerability scanning, cleanup old images, ใช้ multi-regional สำหรับ availability Provenance: Track build origin ด้วย SLSA attestations Exam tip: รู้ Artifact Registry vs Container Registry, vulnerability scanning, cleanup policies"
+    },
+    {
+      "vocab": "How do you test applications with Cloud Build?",
+      "pronunciation": "Section 2: Testing",
+      "meaning": "Test applications ด้วย Cloud Build อย่างไร?",
+      "example": "Testing in Cloud Build: Add test steps to cloudbuild.yaml. Unit tests: Run in build step using test framework (pytest, jest, go test). Integration tests: 1) Use Cloud Build to spin up services. 2) Cloud Build private pools for VPC access. 3) Cloud Build can access Cloud SQL, etc. Test patterns: Run tests before building image, fail fast. Parallel testing: Use waitFor to run test steps in parallel. Code coverage: Generate reports, store in Cloud Storage. Example step: - name: 'python' args: ['pytest', 'tests/']. Exam tip: Know how to structure test steps, fail build on test failure.",
+      "exampleTranslation": "Testing in Cloud Build: เพิ่ม test steps ใน cloudbuild.yaml Unit tests: Run ใน build step ด้วย test framework (pytest, jest, go test) Integration tests: 1) ใช้ Cloud Build spin up services 2) Cloud Build private pools สำหรับ VPC access 3) Cloud Build เข้าถึง Cloud SQL ได้ Test patterns: Run tests ก่อน build image, fail fast Parallel testing: ใช้ waitFor เพื่อ run test steps parallel Code coverage: Generate reports, store ใน Cloud Storage Example step: - name: 'python' args: ['pytest', 'tests/'] Exam tip: รู้วิธี structure test steps, fail build เมื่อ test fail"
+    },
+    {
+      "vocab": "What is Cloud Code and how does it help development?",
+      "pronunciation": "Section 2: Development Tools",
+      "meaning": "Cloud Code คืออะไร และช่วย development อย่างไร?",
+      "example": "Cloud Code: IDE extension for GCP development. Available for: VS Code, IntelliJ, Cloud Shell Editor. Features: 1) Local development with emulators (Firestore, Pub/Sub, Spanner). 2) Kubernetes/Cloud Run deployment from IDE. 3) Debug running Cloud Run services. 4) Log streaming. 5) YAML validation for K8s/Cloud Run. 6) Skaffold integration for continuous development. Emulators: Test locally without cloud resources, faster iteration. Cloud Workstations: Managed cloud-based dev environments. Exam tip: Know local emulator usage, Cloud Code debugging features.",
+      "exampleTranslation": "Cloud Code: IDE extension สำหรับ GCP development Available for: VS Code, IntelliJ, Cloud Shell Editor Features: 1) Local development กับ emulators (Firestore, Pub/Sub, Spanner) 2) Kubernetes/Cloud Run deployment จาก IDE 3) Debug running Cloud Run services 4) Log streaming 5) YAML validation สำหรับ K8s/Cloud Run 6) Skaffold integration สำหรับ continuous development Emulators: Test locally โดยไม่ใช้ cloud resources, iteration เร็วกว่า Cloud Workstations: Managed cloud-based dev environments Exam tip: รู้ local emulator usage, Cloud Code debugging features"
+    },
+    {
+      "vocab": "How do you deploy to Cloud Run from source code?",
+      "pronunciation": "Section 3: Deploying",
+      "meaning": "Deploy ไป Cloud Run จาก source code อย่างไร?",
+      "example": "Source-based deployment: gcloud run deploy SERVICE --source . Cloud Build automatically: 1) Detects runtime (Dockerfile or buildpacks). 2) Builds container image. 3) Pushes to Artifact Registry. 4) Deploys to Cloud Run. Buildpacks: Auto-detect language, create optimized image. Supported: Node.js, Python, Go, Java, .NET, Ruby. Dockerfile: Full control over image. Procfile: Define start command. Best practices: Use .gcloudignore, optimize for cold starts. Exam tip: Know buildpacks vs Dockerfile, source deploy command.",
+      "exampleTranslation": "Source-based deployment: gcloud run deploy SERVICE --source . Cloud Build automatically: 1) Detect runtime (Dockerfile หรือ buildpacks) 2) Build container image 3) Push ไป Artifact Registry 4) Deploy ไป Cloud Run Buildpacks: Auto-detect language, create optimized image Supported: Node.js, Python, Go, Java, .NET, Ruby Dockerfile: Full control over image Procfile: Define start command Best practices: ใช้ .gcloudignore, optimize สำหรับ cold starts Exam tip: รู้ buildpacks vs Dockerfile, source deploy command"
+    },
+    {
+      "vocab": "Explain Cloud Run traffic splitting and revisions.",
+      "pronunciation": "Section 3: Deploying",
+      "meaning": "อธิบาย Cloud Run traffic splitting และ revisions",
+      "example": "Revisions: Immutable snapshots of Cloud Run service. Each deploy creates new revision. Traffic splitting: Route percentage of traffic to different revisions. Use cases: 1) Canary deployment: 10% new, 90% old. 2) Blue-green: Instant switch between revisions. 3) A/B testing: Split traffic for experiments. 4) Rollback: Route 100% to previous revision. Commands: gcloud run services update-traffic --to-revisions=REV1=50,REV2=50. Gradual rollout: Increase new revision percentage over time. Tags: Name revisions for stable URLs. Exam tip: Know traffic splitting syntax, canary patterns.",
+      "exampleTranslation": "Revisions: Immutable snapshots ของ Cloud Run service แต่ละ deploy สร้าง revision ใหม่ Traffic splitting: Route percentage ของ traffic ไป revisions ต่างกัน Use cases: 1) Canary deployment: 10% new, 90% old 2) Blue-green: Instant switch ระหว่าง revisions 3) A/B testing: Split traffic สำหรับ experiments 4) Rollback: Route 100% ไป previous revision Commands: gcloud run services update-traffic --to-revisions=REV1=50,REV2=50 Gradual rollout: เพิ่ม new revision percentage ตามเวลา Tags: ตั้งชื่อ revisions สำหรับ stable URLs Exam tip: รู้ traffic splitting syntax, canary patterns"
+    },
+    {
+      "vocab": "How do you configure GKE deployments?",
+      "pronunciation": "Section 3: Deploying",
+      "meaning": "Configure GKE deployments อย่างไร?",
+      "example": "Deployment YAML: apiVersion: apps/v1, kind: Deployment. Key specs: replicas, selector, template (pod spec), containers. Resource requests/limits: CPU, memory - important for scheduling. Health checks: livenessProbe (restart if fails), readinessProbe (remove from service if fails). HPA (Horizontal Pod Autoscaler): Scale based on CPU/memory/custom metrics. Strategies: RollingUpdate (default), Recreate. Pod Disruption Budget: Ensure availability during updates. ConfigMaps/Secrets: Inject configuration. Exam tip: Know liveness vs readiness probes, HPA configuration, resource management.",
+      "exampleTranslation": "Deployment YAML: apiVersion: apps/v1, kind: Deployment Key specs: replicas, selector, template (pod spec), containers Resource requests/limits: CPU, memory - สำคัญสำหรับ scheduling Health checks: livenessProbe (restart ถ้า fail), readinessProbe (remove จาก service ถ้า fail) HPA (Horizontal Pod Autoscaler): Scale based on CPU/memory/custom metrics Strategies: RollingUpdate (default), Recreate Pod Disruption Budget: รับประกัน availability ระหว่าง updates ConfigMaps/Secrets: Inject configuration Exam tip: รู้ liveness vs readiness probes, HPA configuration, resource management"
+    },
+    {
+      "vocab": "What is Cloud Deploy and how does it work?",
+      "pronunciation": "Section 3: Deploying",
+      "meaning": "Cloud Deploy คืออะไร และทำงานอย่างไร?",
+      "example": "Cloud Deploy: Managed continuous delivery service. Components: Delivery pipeline, Targets (environments), Releases, Rollouts. Flow: Cloud Build → Artifact Registry → Cloud Deploy → Targets. Features: 1) Progressive delivery (dev → staging → prod). 2) Approval gates. 3) Rollback support. 4) Parallel deployments. 5) Canary/blue-green strategies. Targets: GKE, Cloud Run, Anthos. Skaffold: Used internally for rendering and deployment. Benefits: Audit trail, separation of build/deploy, consistent deployments. Exam tip: Know pipeline/target concepts, integration with Cloud Build.",
+      "exampleTranslation": "Cloud Deploy: Managed continuous delivery service Components: Delivery pipeline, Targets (environments), Releases, Rollouts Flow: Cloud Build → Artifact Registry → Cloud Deploy → Targets Features: 1) Progressive delivery (dev → staging → prod) 2) Approval gates 3) Rollback support 4) Parallel deployments 5) Canary/blue-green strategies Targets: GKE, Cloud Run, Anthos Skaffold: Used internally สำหรับ rendering และ deployment Benefits: Audit trail, separation of build/deploy, consistent deployments Exam tip: รู้ pipeline/target concepts, integration กับ Cloud Build"
+    },
+    {
+      "vocab": "How do you connect applications to Cloud SQL?",
+      "pronunciation": "Section 4: Integrating",
+      "meaning": "Connect applications ไป Cloud SQL อย่างไร?",
+      "example": "Connection methods: 1) Cloud SQL Auth Proxy: Recommended, handles auth and encryption. 2) Private IP: VPC-native, no public exposure. 3) Public IP with authorized networks: Less secure. 4) Cloud SQL Connectors: Language-specific libraries. Cloud Run integration: Use Cloud SQL connector, set INSTANCE_CONNECTION_NAME. Serverless VPC Access: For private IP connection from serverless. Connection pooling: Use PgBouncer or HikariCP to manage connections. Best practices: Private IP when possible, use proxy/connectors, connection pooling for serverless. Exam tip: Know proxy vs connectors, Cloud Run connection pattern.",
+      "exampleTranslation": "Connection methods: 1) Cloud SQL Auth Proxy: Recommended, จัดการ auth และ encryption 2) Private IP: VPC-native, ไม่ expose public 3) Public IP with authorized networks: Less secure 4) Cloud SQL Connectors: Language-specific libraries Cloud Run integration: ใช้ Cloud SQL connector, set INSTANCE_CONNECTION_NAME Serverless VPC Access: สำหรับ private IP connection จาก serverless Connection pooling: ใช้ PgBouncer หรือ HikariCP จัดการ connections Best practices: Private IP เมื่อเป็นไปได้, ใช้ proxy/connectors, connection pooling สำหรับ serverless Exam tip: รู้ proxy vs connectors, Cloud Run connection pattern"
+    },
+    {
+      "vocab": "How do you call Google Cloud APIs from applications?",
+      "pronunciation": "Section 4: Integrating",
+      "meaning": "เรียก Google Cloud APIs จาก applications อย่างไร?",
+      "example": "Methods: 1) Client Libraries (recommended): Language-specific, handles auth, retries. Available for most languages. 2) REST API: HTTP requests, JSON payload. 3) gRPC: Binary protocol, faster, streaming. Authentication: Use Application Default Credentials (ADC). ADC checks: GOOGLE_APPLICATION_CREDENTIALS env → attached service account → gcloud auth. API enablement: Must enable API in project before use. Error handling: Implement exponential backoff for retries. Pagination: Use pageToken for large result sets. Batching: Some APIs support batch requests. Exam tip: Know ADC, error handling with backoff, pagination.",
+      "exampleTranslation": "Methods: 1) Client Libraries (recommended): Language-specific, จัดการ auth, retries Available for most languages 2) REST API: HTTP requests, JSON payload 3) gRPC: Binary protocol, เร็วกว่า, streaming Authentication: ใช้ Application Default Credentials (ADC) ADC checks: GOOGLE_APPLICATION_CREDENTIALS env → attached service account → gcloud auth API enablement: ต้อง enable API ใน project ก่อนใช้ Error handling: Implement exponential backoff สำหรับ retries Pagination: ใช้ pageToken สำหรับ large result sets Batching: บาง APIs support batch requests Exam tip: รู้ ADC, error handling กับ backoff, pagination"
+    },
+    {
+      "vocab": "Explain Cloud Logging and how to use it effectively.",
+      "pronunciation": "Section 4: Observability",
+      "meaning": "อธิบาย Cloud Logging และวิธีใช้อย่างมีประสิทธิภาพ",
+      "example": "Cloud Logging: Centralized log management. Log types: 1) Platform logs (GCP services). 2) User logs (your applications). 3) Audit logs (who did what). Log structure: JSON format, severity, timestamp, labels. Writing logs: Client libraries, stdout/stderr (auto-captured in Cloud Run/GKE). Structured logging: JSON to stdout for queryable fields. Log-based metrics: Create metrics from log entries. Log Router: Filter and route logs to destinations (BigQuery, Pub/Sub, Cloud Storage). Best practices: Use structured logging, appropriate severity levels, include trace IDs. Exam tip: Know structured logging, log routing, log-based metrics.",
+      "exampleTranslation": "Cloud Logging: Centralized log management Log types: 1) Platform logs (GCP services) 2) User logs (your applications) 3) Audit logs (who did what) Log structure: JSON format, severity, timestamp, labels Writing logs: Client libraries, stdout/stderr (auto-captured ใน Cloud Run/GKE) Structured logging: JSON ไป stdout สำหรับ queryable fields Log-based metrics: สร้าง metrics จาก log entries Log Router: Filter และ route logs ไป destinations (BigQuery, Pub/Sub, Cloud Storage) Best practices: ใช้ structured logging, appropriate severity levels, include trace IDs Exam tip: รู้ structured logging, log routing, log-based metrics"
+    },
+    {
+      "vocab": "How do you implement distributed tracing?",
+      "pronunciation": "Section 4: Observability",
+      "meaning": "Implement distributed tracing อย่างไร?",
+      "example": "Cloud Trace: Distributed tracing service. Purpose: Track requests across microservices, identify latency bottlenecks. Components: Trace (full request journey), Span (single operation), Trace ID (correlates spans). Auto-instrumentation: Cloud Run, App Engine, Cloud Functions automatically traced. Manual instrumentation: OpenTelemetry SDK (recommended), Cloud Trace client library. Trace context propagation: Pass trace ID in headers (X-Cloud-Trace-Context or W3C traceparent). Correlation: Same trace ID in logs and traces. Analysis: Latency distribution, bottleneck identification. Exam tip: Know trace context propagation, OpenTelemetry integration.",
+      "exampleTranslation": "Cloud Trace: Distributed tracing service Purpose: Track requests across microservices, identify latency bottlenecks Components: Trace (full request journey), Span (single operation), Trace ID (correlates spans) Auto-instrumentation: Cloud Run, App Engine, Cloud Functions automatically traced Manual instrumentation: OpenTelemetry SDK (recommended), Cloud Trace client library Trace context propagation: Pass trace ID ใน headers (X-Cloud-Trace-Context หรือ W3C traceparent) Correlation: Same trace ID ใน logs และ traces Analysis: Latency distribution, bottleneck identification Exam tip: รู้ trace context propagation, OpenTelemetry integration"
+    },
+    {
+      "vocab": "What is Cloud Monitoring and how do you use custom metrics?",
+      "pronunciation": "Section 4: Observability",
+      "meaning": "Cloud Monitoring คืออะไร และใช้ custom metrics อย่างไร?",
+      "example": "Cloud Monitoring: Metrics, dashboards, alerting. Metric types: 1) Built-in (GCP services). 2) Custom (your application). 3) External (Prometheus, etc.). Custom metrics: Create with Monitoring client library, OpenTelemetry. Metric kinds: Gauge (current value), Delta (change), Cumulative (total). Dashboards: Visualize metrics, MQL for queries. Alerting policies: Conditions, notifications, documentation. SLOs/SLIs: Define service level objectives. Uptime checks: Monitor endpoint availability. Best practices: Use labels for filtering, set appropriate alerting thresholds. Exam tip: Know custom metric creation, alerting policy configuration.",
+      "exampleTranslation": "Cloud Monitoring: Metrics, dashboards, alerting Metric types: 1) Built-in (GCP services) 2) Custom (your application) 3) External (Prometheus, etc.) Custom metrics: สร้างด้วย Monitoring client library, OpenTelemetry Metric kinds: Gauge (current value), Delta (change), Cumulative (total) Dashboards: Visualize metrics, MQL for queries Alerting policies: Conditions, notifications, documentation SLOs/SLIs: Define service level objectives Uptime checks: Monitor endpoint availability Best practices: ใช้ labels สำหรับ filtering, set appropriate alerting thresholds Exam tip: รู้ custom metric creation, alerting policy configuration"
+    },
+    {
+      "vocab": "How do you handle errors in production applications?",
+      "pronunciation": "Section 4: Observability",
+      "meaning": "จัดการ errors ใน production applications อย่างไร?",
+      "example": "Error Reporting: Automatic error aggregation and alerting. Features: Groups similar errors, tracks error trends, links to logs and traces. Auto-capture: Cloud Run, GKE, Cloud Functions errors automatically captured. Manual reporting: Client library ReportedException. Integration: Connects to Cloud Logging, shows stack traces. Alerting: Notify on new errors or error rate increase. Resolution workflow: Mark errors as resolved, track regressions. Best practices: Include stack traces, use structured logging, correlate with traces. Debugging: Cloud Debugger (deprecated) → use Cloud Trace + Logging. Exam tip: Know Error Reporting features, integration with logging/tracing.",
+      "exampleTranslation": "Error Reporting: Automatic error aggregation และ alerting Features: Groups similar errors, tracks error trends, links to logs และ traces Auto-capture: Cloud Run, GKE, Cloud Functions errors captured อัตโนมัติ Manual reporting: Client library ReportedException Integration: Connects to Cloud Logging, shows stack traces Alerting: Notify เมื่อมี new errors หรือ error rate increase Resolution workflow: Mark errors as resolved, track regressions Best practices: Include stack traces, ใช้ structured logging, correlate กับ traces Debugging: Cloud Debugger (deprecated) → ใช้ Cloud Trace + Logging Exam tip: รู้ Error Reporting features, integration กับ logging/tracing"
+    },
+    {
+      "vocab": "What is Gemini Cloud Assist and how does it help developers?",
+      "pronunciation": "Section 4: Development Tools",
+      "meaning": "Gemini Cloud Assist คืออะไร และช่วย developers อย่างไร?",
+      "example": "Gemini Cloud Assist: AI assistant integrated in GCP console and Cloud Code. Features: 1) Code generation and explanation. 2) Troubleshooting assistance. 3) Architecture recommendations. 4) Query generation (BigQuery, Logging). 5) IAM policy suggestions. In Cloud Code: Code completion, test generation, code explanation. In Console: Natural language queries, error resolution help. Gemini Code Assist: IDE extension for coding assistance. Best practices: Use for exploration, verify suggestions, understand generated code. Exam tip: Know Gemini integration points, use cases for troubleshooting.",
+      "exampleTranslation": "Gemini Cloud Assist: AI assistant integrated ใน GCP console และ Cloud Code Features: 1) Code generation และ explanation 2) Troubleshooting assistance 3) Architecture recommendations 4) Query generation (BigQuery, Logging) 5) IAM policy suggestions In Cloud Code: Code completion, test generation, code explanation In Console: Natural language queries, error resolution help Gemini Code Assist: IDE extension สำหรับ coding assistance Best practices: ใช้สำหรับ exploration, verify suggestions, เข้าใจ generated code Exam tip: รู้ Gemini integration points, use cases สำหรับ troubleshooting"
+    },
+    {
+      "vocab": "How do you optimize Cloud Run for cold starts?",
+      "pronunciation": "Performance Optimization",
+      "meaning": "Optimize Cloud Run สำหรับ cold starts อย่างไร?",
+      "example": "Cold start: Time to start new instance when no warm instances available. Causes: Scale to zero, new deployments, traffic spikes. Optimization: 1) Min instances: Keep instances warm (costs money). 2) CPU allocation: Always-on CPU vs request-only. 3) Smaller images: Reduce download time. 4) Lazy loading: Defer non-critical initialization. 5) Startup CPU boost: Extra CPU during startup. 6) Optimize dependencies: Remove unused packages. 7) Connection pooling: Pre-warm database connections. Language impact: Go, Rust fastest; JVM/Python slower. Exam tip: Know min instances, startup CPU boost, image optimization.",
+      "exampleTranslation": "Cold start: เวลา start instance ใหม่เมื่อไม่มี warm instances Causes: Scale to zero, new deployments, traffic spikes Optimization: 1) Min instances: Keep instances warm (เสียเงิน) 2) CPU allocation: Always-on CPU vs request-only 3) Smaller images: Reduce download time 4) Lazy loading: Defer non-critical initialization 5) Startup CPU boost: Extra CPU ระหว่าง startup 6) Optimize dependencies: Remove unused packages 7) Connection pooling: Pre-warm database connections Language impact: Go, Rust เร็วสุด; JVM/Python ช้ากว่า Exam tip: รู้ min instances, startup CPU boost, image optimization"
+    },
+    {
+      "vocab": "Explain VPC networking for Cloud Run and serverless.",
+      "pronunciation": "Networking",
+      "meaning": "อธิบาย VPC networking สำหรับ Cloud Run และ serverless",
+      "example": "Serverless VPC Access: Connect serverless to VPC resources. Connector: Dedicated resource in VPC for serverless traffic. Use cases: Access Cloud SQL private IP, internal VMs, on-prem via VPN. Egress settings: 1) All traffic through VPC. 2) Only private IP traffic through VPC. Direct VPC egress: New option, no connector needed, lower latency. Ingress settings: 1) All (public). 2) Internal only (VPC). 3) Internal + Cloud Load Balancing. VPC Service Controls: Additional network security perimeter. Exam tip: Know connector vs direct VPC egress, ingress/egress settings.",
+      "exampleTranslation": "Serverless VPC Access: Connect serverless ไป VPC resources Connector: Dedicated resource ใน VPC สำหรับ serverless traffic Use cases: Access Cloud SQL private IP, internal VMs, on-prem via VPN Egress settings: 1) All traffic through VPC 2) Only private IP traffic through VPC Direct VPC egress: Option ใหม่, ไม่ต้องใช้ connector, latency ต่ำกว่า Ingress settings: 1) All (public) 2) Internal only (VPC) 3) Internal + Cloud Load Balancing VPC Service Controls: Additional network security perimeter Exam tip: รู้ connector vs direct VPC egress, ingress/egress settings"
+    },
+    {
+      "vocab": "What are the key differences between gen1 and gen2 Cloud Functions?",
+      "pronunciation": "Cloud Functions",
+      "meaning": "ความแตกต่างหลักระหว่าง gen1 และ gen2 Cloud Functions?",
+      "example": "Gen2 Cloud Functions: Built on Cloud Run. Key differences: 1) Longer timeout: 60 min (gen1: 9 min). 2) Larger instances: 16GB RAM, 4 vCPU. 3) Concurrency: Multiple requests per instance. 4) Traffic splitting: Gradual rollouts. 5) Eventarc integration: More event sources. 6) Minimum instances: Keep warm. Same as Cloud Run: Uses same infrastructure. Migration: New functions should use gen2. Gen1 features kept: Same triggers, similar code. Exam tip: Know timeout, concurrency, Eventarc differences.",
+      "exampleTranslation": "Gen2 Cloud Functions: Built on Cloud Run Key differences: 1) Longer timeout: 60 min (gen1: 9 min) 2) Larger instances: 16GB RAM, 4 vCPU 3) Concurrency: Multiple requests per instance 4) Traffic splitting: Gradual rollouts 5) Eventarc integration: More event sources 6) Minimum instances: Keep warm Same as Cloud Run: ใช้ infrastructure เดียวกัน Migration: New functions ควรใช้ gen2 Gen1 features kept: Same triggers, similar code Exam tip: รู้ timeout, concurrency, Eventarc differences"
+    }
+  ]
+}

@@ -105,7 +105,7 @@ export function ImportExport({ deck, cards, onImport }: ImportExportProps) {
 
       {/* Import Confirmation Dialog */}
       <Dialog open={importDialogOpen} onOpenChange={setImportDialogOpen}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="sm:max-w-125">
           <DialogHeader>
             <DialogTitle>Import Cards</DialogTitle>
             <DialogDescription>
@@ -113,7 +113,7 @@ export function ImportExport({ deck, cards, onImport }: ImportExportProps) {
             </DialogDescription>
           </DialogHeader>
 
-          <div className="max-h-[300px] overflow-y-auto border rounded-md p-4">
+          <div className="max-h-75 overflow-y-auto border rounded-md p-4">
             {importedCards.slice(0, 5).map((card, index) => (
               <div key={index} className="mb-4 last:mb-0 pb-4 last:pb-0 border-b last:border-0">
                 <p className="text-sm">
