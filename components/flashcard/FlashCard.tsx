@@ -53,7 +53,7 @@ export function FlashCard({
     >
       <div
         className={cn(
-          'relative w-full min-h-[300px] transition-transform duration-300 transform-style-preserve-3d cursor-pointer',
+          'relative w-full min-h-[450px] transition-transform duration-300 transform-style-preserve-3d cursor-pointer',
           isFlipped && 'rotate-y-180'
         )}
         style={{
@@ -64,7 +64,7 @@ export function FlashCard({
       >
         {/* Front - Vocab & Pronunciation */}
         <UICard
-          className="absolute inset-0 w-full min-h-[300px] flex flex-col backface-hidden p-6"
+          className="absolute inset-0 w-full min-h-[450px] flex flex-col backface-hidden p-6"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="flex justify-between items-start mb-4">
@@ -83,7 +83,7 @@ export function FlashCard({
               </Button>
             )}
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="flex-1 flex flex-col items-center justify-center overflow-y-auto max-h-[320px]">
             {card.imageUrl && (
               <div className="relative w-32 h-32 mb-4 rounded-lg overflow-hidden">
                 <Image
@@ -107,7 +107,7 @@ export function FlashCard({
 
         {/* Back - Meaning & Example */}
         <UICard
-          className="absolute inset-0 w-full min-h-[300px] flex flex-col backface-hidden p-6 rotate-y-180"
+          className="absolute inset-0 w-full min-h-[450px] flex flex-col backface-hidden p-6 rotate-y-180"
           style={{
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
@@ -141,7 +141,7 @@ export function FlashCard({
               </Button>
             </div>
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center space-y-4">
+          <div className="flex-1 flex flex-col items-center justify-start overflow-y-auto max-h-[320px] py-4 space-y-4">
             <span className="text-2xl font-semibold text-center">{card.meaning}</span>
             {(card.example || card.exampleTranslation) && (
               <div className="text-center">
