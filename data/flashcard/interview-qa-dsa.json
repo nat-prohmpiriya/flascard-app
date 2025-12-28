@@ -1,0 +1,231 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Data Structures & Algorithms",
+    "description": "Common interview questions and answers for coding interviews covering data structures, algorithms, and problem-solving patterns",
+    "category": "Interview",
+    "tags": ["interview", "dsa", "algorithms", "coding", "leetcode"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Big O notation and why is it important?",
+      "pronunciation": "",
+      "meaning": "Big O notation คืออะไร และทำไมถึงสำคัญ?",
+      "example": "Big O notation describes how algorithm performance scales with input size. It measures worst-case time or space complexity. Common complexities (fastest to slowest): O(1) constant - hash lookup, O(log n) logarithmic - binary search, O(n) linear - single loop, O(n log n) - efficient sorting, O(n²) quadratic - nested loops, O(2^n) exponential - recursive subsets. Why important: helps choose the right algorithm for scale. O(n²) might be fine for n=100, but disastrous for n=1,000,000. Interview tip: always analyze your solution's time AND space complexity.",
+      "exampleTranslation": "Big O notation อธิบายว่า algorithm performance scale อย่างไรกับ input size วัด worst-case time หรือ space complexity Complexities ที่พบบ่อย (เร็วไปช้า): O(1) constant - hash lookup, O(log n) logarithmic - binary search, O(n) linear - single loop, O(n log n) - efficient sorting, O(n²) quadratic - nested loops, O(2^n) exponential - recursive subsets ทำไมสำคัญ: ช่วยเลือก algorithm ที่ถูกต้องสำหรับ scale O(n²) อาจโอเคสำหรับ n=100 แต่แย่มากสำหรับ n=1,000,000 Interview tip: วิเคราะห์ time และ space complexity ของ solution เสมอ"
+    },
+    {
+      "vocab": "What is the difference between Array and Linked List?",
+      "pronunciation": "",
+      "meaning": "Array กับ Linked List ต่างกันอย่างไร?",
+      "example": "Array: contiguous memory, O(1) access by index, O(n) insert/delete (shifting required), fixed size (in most languages), cache-friendly. Linked List: non-contiguous memory (nodes with pointers), O(n) access by index, O(1) insert/delete if you have the node reference, dynamic size, extra memory for pointers. When to use Array: frequent random access, known size, memory efficiency matters. When to use Linked List: frequent insertions/deletions, unknown size, implementing stacks/queues. In practice, arrays (and dynamic arrays like ArrayList) are used more often due to cache performance.",
+      "exampleTranslation": "Array: memory ต่อเนื่อง, O(1) access by index, O(n) insert/delete (ต้อง shifting), fixed size (ในภาษาส่วนใหญ่), cache-friendly Linked List: memory ไม่ต่อเนื่อง (nodes มี pointers), O(n) access by index, O(1) insert/delete ถ้ามี node reference, dynamic size, memory เพิ่มสำหรับ pointers ใช้ Array เมื่อไหร่: random access บ่อย, รู้ size, memory efficiency สำคัญ ใช้ Linked List เมื่อไหร่: insertions/deletions บ่อย, ไม่รู้ size, implement stacks/queues ในทางปฏิบัติ arrays (และ dynamic arrays เช่น ArrayList) ใช้บ่อยกว่าเพราะ cache performance"
+    },
+    {
+      "vocab": "Explain Stack and Queue data structures.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Stack และ Queue data structures",
+      "example": "Stack: LIFO (Last In First Out). Operations: push (add to top), pop (remove from top), peek (view top). All O(1). Use cases: undo functionality, expression evaluation, DFS, backtracking, balanced parentheses. Queue: FIFO (First In First Out). Operations: enqueue (add to rear), dequeue (remove from front), peek. All O(1). Use cases: BFS, task scheduling, print queue, message queues. Variations: Deque (double-ended), Priority Queue (based on priority not order), Circular Queue. Implementation: array-based or linked-list-based. Most languages have built-in implementations.",
+      "exampleTranslation": "Stack: LIFO (Last In First Out) Operations: push (เพิ่มที่ top), pop (ลบจาก top), peek (ดู top) ทั้งหมด O(1) Use cases: undo functionality, expression evaluation, DFS, backtracking, balanced parentheses Queue: FIFO (First In First Out) Operations: enqueue (เพิ่มที่ rear), dequeue (ลบจาก front), peek ทั้งหมด O(1) Use cases: BFS, task scheduling, print queue, message queues Variations: Deque (double-ended), Priority Queue (ตาม priority ไม่ใช่ order), Circular Queue Implementation: array-based หรือ linked-list-based ภาษาส่วนใหญ่มี built-in implementations"
+    },
+    {
+      "vocab": "What is a Hash Table and how does it handle collisions?",
+      "pronunciation": "",
+      "meaning": "Hash Table คืออะไร และจัดการ collisions อย่างไร?",
+      "example": "Hash Table stores key-value pairs with O(1) average access. Works by: hashing key to get index, storing value at that index. Collision: when two keys hash to same index. Handling methods: 1) Chaining - each bucket holds a linked list of entries. 2) Open Addressing - find next empty slot (linear probing, quadratic probing, double hashing). Load factor = entries/buckets; when too high, resize and rehash. Time complexity: O(1) average, O(n) worst case (all collisions). Use cases: caching, counting frequencies, removing duplicates, two-sum problem. In interviews, hash maps are your best friend for O(n) solutions.",
+      "exampleTranslation": "Hash Table เก็บ key-value pairs ด้วย O(1) average access ทำงานโดย: hash key เพื่อได้ index, เก็บ value ที่ index นั้น Collision: เมื่อสอง keys hash เป็น index เดียวกัน วิธีจัดการ: 1) Chaining - แต่ละ bucket เก็บ linked list ของ entries 2) Open Addressing - หา empty slot ถัดไป (linear probing, quadratic probing, double hashing) Load factor = entries/buckets; เมื่อสูงเกิน, resize และ rehash Time complexity: O(1) average, O(n) worst case (all collisions) Use cases: caching, counting frequencies, removing duplicates, two-sum problem ใน interviews hash maps เป็นเพื่อนที่ดีที่สุดสำหรับ O(n) solutions"
+    },
+    {
+      "vocab": "Explain Binary Tree, BST, and their traversals.",
+      "pronunciation": "BST = Binary Search Tree",
+      "meaning": "อธิบาย Binary Tree, BST และ traversals",
+      "example": "Binary Tree: each node has at most 2 children. BST: left child < parent < right child (enables O(log n) search). Traversals: 1) Inorder (left, root, right) - gives sorted order for BST. 2) Preorder (root, left, right) - useful for copying tree. 3) Postorder (left, right, root) - useful for deletion. 4) Level-order (BFS) - process level by level. BST operations: search, insert, delete all O(log n) average, O(n) worst (skewed tree). Balanced BSTs (AVL, Red-Black) guarantee O(log n). Interview tip: most tree problems use recursion - think of base case and how to combine results from left/right subtrees.",
+      "exampleTranslation": "Binary Tree: แต่ละ node มีลูกได้มากสุด 2 ตัว BST: left child < parent < right child (ทำให้ O(log n) search ได้) Traversals: 1) Inorder (left, root, right) - ได้ sorted order สำหรับ BST 2) Preorder (root, left, right) - useful สำหรับ copy tree 3) Postorder (left, right, root) - useful สำหรับ deletion 4) Level-order (BFS) - process ทีละ level BST operations: search, insert, delete ทั้งหมด O(log n) average, O(n) worst (skewed tree) Balanced BSTs (AVL, Red-Black) รับประกัน O(log n) Interview tip: tree problems ส่วนใหญ่ใช้ recursion - คิดถึง base case และวิธีรวมผลลัพธ์จาก left/right subtrees"
+    },
+    {
+      "vocab": "What is a Heap and how is it used?",
+      "pronunciation": "",
+      "meaning": "Heap คืออะไร และใช้อย่างไร?",
+      "example": "Heap is a complete binary tree satisfying heap property. Min-Heap: parent ≤ children (root is minimum). Max-Heap: parent ≥ children (root is maximum). Operations: insert O(log n), extract-min/max O(log n), peek O(1). Implemented as array: parent at i, children at 2i+1 and 2i+2. Use cases: 1) Priority Queue - process items by priority. 2) Heap Sort - O(n log n) sorting. 3) K-th largest/smallest element. 4) Merge K sorted lists. 5) Median finding. Interview patterns: 'top K', 'K-th element', 'merge sorted' often hint at heap. Python: heapq (min-heap), Java: PriorityQueue.",
+      "exampleTranslation": "Heap คือ complete binary tree ที่ตรงตาม heap property Min-Heap: parent ≤ children (root คือ minimum) Max-Heap: parent ≥ children (root คือ maximum) Operations: insert O(log n), extract-min/max O(log n), peek O(1) Implement เป็น array: parent ที่ i, children ที่ 2i+1 และ 2i+2 Use cases: 1) Priority Queue - process items ตาม priority 2) Heap Sort - O(n log n) sorting 3) K-th largest/smallest element 4) Merge K sorted lists 5) Median finding Interview patterns: 'top K', 'K-th element', 'merge sorted' มักบอกใบ้ถึง heap Python: heapq (min-heap), Java: PriorityQueue"
+    },
+    {
+      "vocab": "Explain Graph representations and traversals.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Graph representations และ traversals",
+      "example": "Graph representations: 1) Adjacency Matrix - 2D array, matrix[i][j] = edge exists. O(1) lookup, O(V²) space. Good for dense graphs. 2) Adjacency List - array of lists, each vertex stores neighbors. O(V+E) space. Good for sparse graphs. Traversals: DFS (Depth-First) - go deep before wide, uses stack/recursion. Use: cycle detection, topological sort, connected components. BFS (Breadth-First) - explore level by level, uses queue. Use: shortest path (unweighted), level-order processing. Both are O(V+E). Interview tip: draw the graph, identify if directed/undirected, weighted/unweighted.",
+      "exampleTranslation": "Graph representations: 1) Adjacency Matrix - 2D array, matrix[i][j] = edge exists O(1) lookup, O(V²) space ดีสำหรับ dense graphs 2) Adjacency List - array of lists, แต่ละ vertex เก็บ neighbors O(V+E) space ดีสำหรับ sparse graphs Traversals: DFS (Depth-First) - ไปลึกก่อนกว้าง, ใช้ stack/recursion Use: cycle detection, topological sort, connected components BFS (Breadth-First) - explore ทีละ level, ใช้ queue Use: shortest path (unweighted), level-order processing ทั้งคู่ O(V+E) Interview tip: วาด graph, ระบุว่า directed/undirected, weighted/unweighted"
+    },
+    {
+      "vocab": "What is Dynamic Programming?",
+      "pronunciation": "",
+      "meaning": "Dynamic Programming คืออะไร?",
+      "example": "Dynamic Programming (DP) solves problems by breaking into overlapping subproblems and storing results to avoid recomputation. Two approaches: 1) Top-down (Memoization) - recursive with caching. 2) Bottom-up (Tabulation) - iterative, build solution from base cases. When to use: problem has optimal substructure (optimal solution built from optimal sub-solutions) AND overlapping subproblems. Classic examples: Fibonacci, coin change, longest common subsequence, knapsack, edit distance. Steps: 1) Define state. 2) Define recurrence relation. 3) Identify base cases. 4) Determine computation order. Interview tip: start with recursion, add memoization, then optimize to bottom-up if needed.",
+      "exampleTranslation": "Dynamic Programming (DP) แก้ปัญหาโดยแบ่งเป็น overlapping subproblems และเก็บผลลัพธ์เพื่อหลีกเลี่ยงการคำนวณซ้ำ สองแนวทาง: 1) Top-down (Memoization) - recursive พร้อม caching 2) Bottom-up (Tabulation) - iterative, สร้าง solution จาก base cases ใช้เมื่อไหร่: problem มี optimal substructure (optimal solution สร้างจาก optimal sub-solutions) และ overlapping subproblems ตัวอย่าง classic: Fibonacci, coin change, longest common subsequence, knapsack, edit distance Steps: 1) Define state 2) Define recurrence relation 3) Identify base cases 4) Determine computation order Interview tip: เริ่มด้วย recursion, เพิ่ม memoization, แล้ว optimize เป็น bottom-up ถ้าจำเป็น"
+    },
+    {
+      "vocab": "Explain the Two Pointers technique.",
+      "pronunciation": "",
+      "meaning": "อธิบายเทคนิค Two Pointers",
+      "example": "Two Pointers uses two indices to traverse data structure, often reducing O(n²) to O(n). Patterns: 1) Opposite ends - start from both ends, move inward. Examples: two sum in sorted array, valid palindrome, container with most water. 2) Same direction (fast/slow) - detect cycles, find middle, remove nth from end. 3) Sliding window variant - maintain a window between pointers. When to use: sorted arrays, linked lists, string manipulation, finding pairs. Example (Two Sum Sorted): left=0, right=n-1. If sum too small, left++. If too large, right--. Continue until found. Time O(n), Space O(1).",
+      "exampleTranslation": "Two Pointers ใช้สอง indices traverse data structure มักลด O(n²) เป็น O(n) Patterns: 1) Opposite ends - เริ่มจากปลายทั้งสอง เลื่อนเข้าหากัน ตัวอย่าง: two sum in sorted array, valid palindrome, container with most water 2) Same direction (fast/slow) - detect cycles, find middle, remove nth from end 3) Sliding window variant - maintain window ระหว่าง pointers ใช้เมื่อไหร่: sorted arrays, linked lists, string manipulation, finding pairs ตัวอย่าง (Two Sum Sorted): left=0, right=n-1 ถ้า sum เล็กเกิน left++ ถ้าใหญ่เกิน right-- ทำต่อจนเจอ Time O(n), Space O(1)"
+    },
+    {
+      "vocab": "What is the Sliding Window technique?",
+      "pronunciation": "",
+      "meaning": "Sliding Window technique คืออะไร?",
+      "example": "Sliding Window maintains a subset (window) of elements and slides it across the data. Types: 1) Fixed size - window size constant (e.g., max sum of k elements). 2) Variable size - window expands/contracts based on condition (e.g., smallest subarray with sum ≥ target). Pattern: use two pointers (left, right), expand right to include elements, contract left when condition met/exceeded. Common problems: maximum sum subarray of size k, longest substring without repeating characters, minimum window substring, fruits into baskets. Time complexity usually O(n) - each element visited at most twice.",
+      "exampleTranslation": "Sliding Window maintain subset (window) ของ elements และเลื่อนข้าม data Types: 1) Fixed size - window size คงที่ (เช่น max sum ของ k elements) 2) Variable size - window ขยาย/หดตาม condition (เช่น smallest subarray with sum ≥ target) Pattern: ใช้ two pointers (left, right), expand right เพื่อรวม elements, contract left เมื่อ condition met/exceeded Problems ที่พบบ่อย: maximum sum subarray of size k, longest substring without repeating characters, minimum window substring, fruits into baskets Time complexity มักเป็น O(n) - แต่ละ element เยือนมากสุดสองครั้ง"
+    },
+    {
+      "vocab": "Explain Binary Search and its variations.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Binary Search และ variations",
+      "example": "Binary Search finds target in sorted array by repeatedly halving search space. O(log n). Basic: compare with middle, go left or right. Variations: 1) Find first/last occurrence - continue searching even after finding. 2) Search insert position - where should target be inserted? 3) Search in rotated array - determine which half is sorted. 4) Find peak element - compare with neighbors. 5) Binary search on answer - search for minimum/maximum value satisfying condition. Template: while (left <= right) or while (left < right) - know when to use which. Interview tip: binary search can apply to any monotonic function, not just arrays.",
+      "exampleTranslation": "Binary Search หา target ใน sorted array โดยแบ่งครึ่ง search space ซ้ำๆ O(log n) Basic: เปรียบเทียบกับ middle, ไปซ้ายหรือขวา Variations: 1) Find first/last occurrence - search ต่อแม้เจอแล้ว 2) Search insert position - target ควรถูก insert ที่ไหน? 3) Search in rotated array - กำหนดว่าครึ่งไหน sorted 4) Find peak element - เปรียบเทียบกับ neighbors 5) Binary search on answer - search หา min/max value ที่ตรง condition Template: while (left <= right) หรือ while (left < right) - รู้ว่าใช้อันไหนเมื่อไหร่ Interview tip: binary search ใช้กับ monotonic function ได้ ไม่ใช่แค่ arrays"
+    },
+    {
+      "vocab": "What are the common sorting algorithms?",
+      "pronunciation": "",
+      "meaning": "Sorting algorithms ที่พบบ่อยมีอะไรบ้าง?",
+      "example": "Comparison sorts: 1) Bubble Sort - O(n²), swap adjacent, simple but slow. 2) Selection Sort - O(n²), find min and swap. 3) Insertion Sort - O(n²), good for nearly sorted, stable. 4) Merge Sort - O(n log n), divide and conquer, stable, O(n) space. 5) Quick Sort - O(n log n) average, O(n²) worst, in-place, not stable. 6) Heap Sort - O(n log n), in-place, not stable. Non-comparison: Counting Sort, Radix Sort - O(n) for specific cases. For interviews: know merge sort and quick sort well, understand trade-offs (stability, space, cache performance). In practice, languages use hybrid sorts (Timsort).",
+      "exampleTranslation": "Comparison sorts: 1) Bubble Sort - O(n²), swap adjacent, ง่ายแต่ช้า 2) Selection Sort - O(n²), หา min และ swap 3) Insertion Sort - O(n²), ดีสำหรับ nearly sorted, stable 4) Merge Sort - O(n log n), divide and conquer, stable, O(n) space 5) Quick Sort - O(n log n) average, O(n²) worst, in-place, not stable 6) Heap Sort - O(n log n), in-place, not stable Non-comparison: Counting Sort, Radix Sort - O(n) สำหรับกรณีเฉพาะ สำหรับ interviews: รู้ merge sort และ quick sort ดี เข้าใจ trade-offs (stability, space, cache performance) ในทางปฏิบัติ ภาษาใช้ hybrid sorts (Timsort)"
+    },
+    {
+      "vocab": "How does Quick Sort work?",
+      "pronunciation": "",
+      "meaning": "Quick Sort ทำงานอย่างไร?",
+      "example": "Quick Sort: divide and conquer using pivot. Steps: 1) Choose pivot (first, last, random, median-of-three). 2) Partition - rearrange so elements < pivot are left, > pivot are right. 3) Recursively sort left and right partitions. Partition (Lomuto): use last element as pivot, maintain index for smaller elements. Time: O(n log n) average, O(n²) worst (already sorted with bad pivot). Space: O(log n) for recursion. Optimization: random pivot, switch to insertion sort for small subarrays. Why popular: cache-friendly (in-place), good average performance. Interview: know partition logic, can be asked to implement.",
+      "exampleTranslation": "Quick Sort: divide and conquer ใช้ pivot Steps: 1) เลือก pivot (first, last, random, median-of-three) 2) Partition - จัดเรียงให้ elements < pivot อยู่ซ้าย, > pivot อยู่ขวา 3) Sort left และ right partitions แบบ recursive Partition (Lomuto): ใช้ last element เป็น pivot, maintain index สำหรับ smaller elements Time: O(n log n) average, O(n²) worst (already sorted กับ bad pivot) Space: O(log n) สำหรับ recursion Optimization: random pivot, สลับไป insertion sort สำหรับ small subarrays ทำไมนิยม: cache-friendly (in-place), average performance ดี Interview: รู้ partition logic, อาจถูกขอให้ implement"
+    },
+    {
+      "vocab": "How does Merge Sort work?",
+      "pronunciation": "",
+      "meaning": "Merge Sort ทำงานอย่างไร?",
+      "example": "Merge Sort: divide and conquer with guaranteed O(n log n). Steps: 1) Divide array into two halves. 2) Recursively sort each half. 3) Merge two sorted halves. Merge process: compare elements from both halves, take smaller, repeat. Time: O(n log n) always (best, average, worst). Space: O(n) for temporary array. Advantages: stable sort, predictable performance, good for linked lists (no extra space needed), parallelizable. Disadvantages: O(n) extra space for arrays, not cache-friendly. Interview tip: merging two sorted arrays is a common sub-problem - know it well.",
+      "exampleTranslation": "Merge Sort: divide and conquer พร้อม O(n log n) ที่รับประกัน Steps: 1) แบ่ง array เป็นสองครึ่ง 2) Sort แต่ละครึ่งแบบ recursive 3) Merge สองครึ่งที่ sorted แล้ว Merge process: เปรียบเทียบ elements จากทั้งสองครึ่ง, เอาตัวเล็กกว่า, ทำซ้ำ Time: O(n log n) เสมอ (best, average, worst) Space: O(n) สำหรับ temporary array ข้อดี: stable sort, performance ที่คาดเดาได้, ดีสำหรับ linked lists (ไม่ต้องใช้ extra space), parallelizable ข้อเสีย: O(n) extra space สำหรับ arrays, ไม่ cache-friendly Interview tip: merging two sorted arrays เป็น sub-problem ที่พบบ่อย - รู้ให้ดี"
+    },
+    {
+      "vocab": "What is recursion and when should you use it?",
+      "pronunciation": "",
+      "meaning": "Recursion คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "Recursion is when a function calls itself with smaller inputs until reaching a base case. Components: 1) Base case - when to stop. 2) Recursive case - how to break down problem. When to use: tree/graph traversal, divide and conquer, problems with recursive structure (factorial, Fibonacci). Watch out for: stack overflow (too deep), redundant computation (add memoization). Tail recursion: recursive call is last operation, can be optimized to iteration. Converting to iteration: use explicit stack. Interview tip: always identify base case first, trace through small example, consider memoization for overlapping subproblems.",
+      "exampleTranslation": "Recursion คือเมื่อ function เรียกตัวเองด้วย inputs ที่เล็กลงจนถึง base case Components: 1) Base case - เมื่อไหร่ควรหยุด 2) Recursive case - วิธีแบ่งปัญหา ใช้เมื่อไหร่: tree/graph traversal, divide and conquer, problems ที่มี recursive structure (factorial, Fibonacci) ระวัง: stack overflow (ลึกเกินไป), redundant computation (เพิ่ม memoization) Tail recursion: recursive call เป็น operation สุดท้าย, optimize เป็น iteration ได้ แปลงเป็น iteration: ใช้ explicit stack Interview tip: ระบุ base case ก่อนเสมอ, trace ผ่าน small example, พิจารณา memoization สำหรับ overlapping subproblems"
+    },
+    {
+      "vocab": "Explain BFS vs DFS - when to use which?",
+      "pronunciation": "BFS = Breadth-First Search, DFS = Depth-First Search",
+      "meaning": "อธิบาย BFS vs DFS - ใช้อันไหนเมื่อไหร่?",
+      "example": "BFS: level by level, uses queue. Use for: shortest path in unweighted graph, level-order traversal, finding minimum steps. Space: O(width of tree/graph). DFS: go deep first, uses stack/recursion. Use for: detecting cycles, topological sort, connected components, path exists, backtracking. Space: O(height of tree/depth). Decision guide: need shortest path? → BFS. Need to explore all paths? → DFS. Memory limited with wide graph? → DFS. Deep graph? → BFS (iterative DFS). Most tree problems: DFS is more natural. Grid problems: both work, BFS for shortest path.",
+      "exampleTranslation": "BFS: ทีละ level, ใช้ queue ใช้สำหรับ: shortest path ใน unweighted graph, level-order traversal, finding minimum steps Space: O(width ของ tree/graph) DFS: ไปลึกก่อน, ใช้ stack/recursion ใช้สำหรับ: detecting cycles, topological sort, connected components, path exists, backtracking Space: O(height ของ tree/depth) แนวทางตัดสินใจ: ต้องการ shortest path? → BFS ต้อง explore all paths? → DFS Memory จำกัดกับ wide graph? → DFS Deep graph? → BFS (iterative DFS) Tree problems ส่วนใหญ่: DFS natural กว่า Grid problems: ทั้งคู่ใช้ได้, BFS สำหรับ shortest path"
+    },
+    {
+      "vocab": "What is Backtracking?",
+      "pronunciation": "",
+      "meaning": "Backtracking คืออะไร?",
+      "example": "Backtracking is a recursive approach that builds solutions incrementally and abandons paths that cannot lead to valid solutions. Pattern: 1) Make a choice. 2) Recurse with that choice. 3) If it doesn't work, undo (backtrack) and try next choice. Template: backtrack(state) { if (valid solution) { add to results; return; } for each choice { if (is valid) { make choice; backtrack(new state); undo choice; } } } Common problems: N-Queens, Sudoku solver, permutations, combinations, subsets, word search, palindrome partitioning. Key insight: pruning invalid paths early improves performance significantly.",
+      "exampleTranslation": "Backtracking คือแนวทาง recursive ที่สร้าง solutions ทีละขั้นและละทิ้ง paths ที่ไม่สามารถนำไปสู่ valid solutions Pattern: 1) ตัดสินใจเลือก 2) Recurse กับ choice นั้น 3) ถ้าไม่ได้ผล, undo (backtrack) และลอง choice ถัดไป Template: backtrack(state) { if (valid solution) { add to results; return; } for each choice { if (is valid) { make choice; backtrack(new state); undo choice; } } } Problems ที่พบบ่อย: N-Queens, Sudoku solver, permutations, combinations, subsets, word search, palindrome partitioning Key insight: pruning invalid paths เร็วช่วยเพิ่ม performance อย่างมาก"
+    },
+    {
+      "vocab": "How do you find the shortest path in a weighted graph?",
+      "pronunciation": "",
+      "meaning": "หา shortest path ใน weighted graph อย่างไร?",
+      "example": "Algorithms by use case: 1) Dijkstra's - single source, non-negative weights. O((V+E) log V) with min-heap. Greedy approach: always process nearest unvisited node. 2) Bellman-Ford - single source, handles negative weights, detects negative cycles. O(VE). Relax all edges V-1 times. 3) Floyd-Warshall - all pairs shortest path. O(V³). DP approach. 4) A* - single source to single target with heuristic. Faster than Dijkstra for specific targets. Interview tip: Dijkstra is most common - know the implementation with priority queue. For unweighted graphs, simple BFS works.",
+      "exampleTranslation": "Algorithms ตาม use case: 1) Dijkstra's - single source, non-negative weights O((V+E) log V) กับ min-heap Greedy approach: process nearest unvisited node เสมอ 2) Bellman-Ford - single source, handle negative weights, detect negative cycles O(VE) Relax all edges V-1 ครั้ง 3) Floyd-Warshall - all pairs shortest path O(V³) DP approach 4) A* - single source to single target พร้อม heuristic เร็วกว่า Dijkstra สำหรับ specific targets Interview tip: Dijkstra พบบ่อยสุด - รู้ implementation กับ priority queue สำหรับ unweighted graphs ใช้ BFS ธรรมดาได้"
+    },
+    {
+      "vocab": "What is Topological Sort?",
+      "pronunciation": "",
+      "meaning": "Topological Sort คืออะไร?",
+      "example": "Topological Sort orders vertices in a DAG (Directed Acyclic Graph) such that for every edge u→v, u comes before v. Used for: task scheduling, build systems, course prerequisites. Algorithms: 1) Kahn's (BFS) - start with nodes having no incoming edges, remove and add neighbors with updated in-degrees. 2) DFS-based - do DFS, add node to result after visiting all descendants (reverse post-order). Complexity: O(V+E). If cycle exists: Kahn's won't process all nodes, DFS detects back edge. Interview tip: course schedule problem is classic topological sort - often asked.",
+      "exampleTranslation": "Topological Sort เรียงลำดับ vertices ใน DAG (Directed Acyclic Graph) ให้ทุก edge u→v, u มาก่อน v ใช้สำหรับ: task scheduling, build systems, course prerequisites Algorithms: 1) Kahn's (BFS) - เริ่มจาก nodes ที่ไม่มี incoming edges, remove และเพิ่ม neighbors พร้อม updated in-degrees 2) DFS-based - ทำ DFS, เพิ่ม node ไป result หลังเยือน descendants ทั้งหมด (reverse post-order) Complexity: O(V+E) ถ้ามี cycle: Kahn's จะไม่ process ครบทุก nodes, DFS detect back edge Interview tip: course schedule problem เป็น classic topological sort - ถามบ่อย"
+    },
+    {
+      "vocab": "How do you detect a cycle in a graph?",
+      "pronunciation": "",
+      "meaning": "ตรวจจับ cycle ใน graph อย่างไร?",
+      "example": "Undirected graph: DFS - if we visit an already visited node that's not the parent, cycle exists. Or use Union-Find - if two nodes of an edge are already in same set, cycle exists. Directed graph: DFS with coloring - white (unvisited), gray (in current path), black (fully processed). If we hit a gray node, cycle exists. Or Kahn's algorithm - if topological sort doesn't include all nodes, cycle exists. Linked List cycle: Floyd's algorithm (fast/slow pointers) - if they meet, cycle exists. Interview tip: know the directed graph DFS coloring approach well.",
+      "exampleTranslation": "Undirected graph: DFS - ถ้าเยือน node ที่เยือนแล้วที่ไม่ใช่ parent, มี cycle หรือใช้ Union-Find - ถ้าสอง nodes ของ edge อยู่ใน set เดียวกันแล้ว, มี cycle Directed graph: DFS with coloring - white (unvisited), gray (in current path), black (fully processed) ถ้าเจอ gray node, มี cycle หรือ Kahn's algorithm - ถ้า topological sort ไม่รวม nodes ทั้งหมด, มี cycle Linked List cycle: Floyd's algorithm (fast/slow pointers) - ถ้าเจอกัน, มี cycle Interview tip: รู้ directed graph DFS coloring approach ให้ดี"
+    },
+    {
+      "vocab": "What is Union-Find (Disjoint Set Union)?",
+      "pronunciation": "",
+      "meaning": "Union-Find (Disjoint Set Union) คืออะไร?",
+      "example": "Union-Find tracks elements partitioned into disjoint sets. Operations: 1) Find(x) - which set does x belong to? Returns representative/root. 2) Union(x, y) - merge sets containing x and y. Optimizations: 1) Path compression - flatten tree during Find. 2) Union by rank/size - attach smaller tree under larger. With both optimizations: nearly O(1) per operation (amortized). Use cases: Kruskal's MST, cycle detection in undirected graph, connected components, accounts merge, friend circles. Implementation: parent array where parent[i] = parent of i, root has parent[i] = i.",
+      "exampleTranslation": "Union-Find track elements ที่แบ่งเป็น disjoint sets Operations: 1) Find(x) - x อยู่ใน set ไหน? return representative/root 2) Union(x, y) - merge sets ที่มี x และ y Optimizations: 1) Path compression - flatten tree ระหว่าง Find 2) Union by rank/size - ติด smaller tree ใต้ larger ด้วยทั้งสอง optimizations: เกือบ O(1) per operation (amortized) Use cases: Kruskal's MST, cycle detection ใน undirected graph, connected components, accounts merge, friend circles Implementation: parent array ที่ parent[i] = parent ของ i, root มี parent[i] = i"
+    },
+    {
+      "vocab": "Explain the Trie data structure.",
+      "pronunciation": "Trie ออกเสียงว่า 'try'",
+      "meaning": "อธิบาย Trie data structure",
+      "example": "Trie (prefix tree) stores strings with shared prefixes efficiently. Each node represents a character, path from root to node forms a prefix. Operations: insert, search, startsWith - all O(m) where m is string length. Structure: node has children map (char → node) and isEndOfWord flag. Use cases: autocomplete, spell checker, IP routing, word search in board, counting words with prefix. Space: O(total characters) worst case, but shared prefixes save space. Variations: compressed trie, suffix trie. Interview tip: implement insert and search - straightforward but asked often.",
+      "exampleTranslation": "Trie (prefix tree) เก็บ strings ที่มี shared prefixes อย่างมีประสิทธิภาพ แต่ละ node แทนตัวอักษร, path จาก root ไป node สร้าง prefix Operations: insert, search, startsWith - ทั้งหมด O(m) ที่ m คือความยาว string Structure: node มี children map (char → node) และ isEndOfWord flag Use cases: autocomplete, spell checker, IP routing, word search in board, counting words with prefix Space: O(total characters) worst case, แต่ shared prefixes ประหยัด space Variations: compressed trie, suffix trie Interview tip: implement insert และ search - ตรงไปตรงมาแต่ถามบ่อย"
+    },
+    {
+      "vocab": "How do you solve the Two Sum problem?",
+      "pronunciation": "",
+      "meaning": "คุณแก้ปัญหา Two Sum อย่างไร?",
+      "example": "Two Sum: find two numbers in array that sum to target. Solutions: 1) Brute force - check all pairs, O(n²) time, O(1) space. 2) Hash Map - for each num, check if (target - num) exists in map, then add num to map. O(n) time, O(n) space. 3) Two Pointers (if sorted) - left and right pointers, move based on sum comparison. O(n) time, O(1) space. Hash map solution: for i, num in enumerate(arr): complement = target - num; if complement in map: return [map[complement], i]; map[num] = i. This is THE most important pattern - used in many variations.",
+      "exampleTranslation": "Two Sum: หาสองตัวเลขใน array ที่รวมกันได้ target Solutions: 1) Brute force - check ทุก pairs, O(n²) time, O(1) space 2) Hash Map - สำหรับแต่ละ num, check ว่า (target - num) มีใน map ไหม, แล้วเพิ่ม num ไป map O(n) time, O(n) space 3) Two Pointers (if sorted) - left และ right pointers, เลื่อนตามการเปรียบเทียบ sum O(n) time, O(1) space Hash map solution: for i, num in enumerate(arr): complement = target - num; if complement in map: return [map[complement], i]; map[num] = i นี่คือ pattern สำคัญที่สุด - ใช้ในหลาย variations"
+    },
+    {
+      "vocab": "How do you reverse a Linked List?",
+      "pronunciation": "",
+      "meaning": "คุณ reverse Linked List อย่างไร?",
+      "example": "Iterative approach (most common): prev = null, curr = head; while (curr != null) { next = curr.next; curr.next = prev; prev = curr; curr = next; } return prev. Time O(n), Space O(1). Recursive approach: if (head == null || head.next == null) return head; newHead = reverse(head.next); head.next.next = head; head.next = null; return newHead. Time O(n), Space O(n) for call stack. Variations: reverse in groups of k, reverse between positions m and n. Interview tip: draw the pointers, trace through small example (3 nodes). This is a fundamental problem - know it cold.",
+      "exampleTranslation": "Iterative approach (พบบ่อยสุด): prev = null, curr = head; while (curr != null) { next = curr.next; curr.next = prev; prev = curr; curr = next; } return prev Time O(n), Space O(1) Recursive approach: if (head == null || head.next == null) return head; newHead = reverse(head.next); head.next.next = head; head.next = null; return newHead Time O(n), Space O(n) สำหรับ call stack Variations: reverse in groups of k, reverse between positions m and n Interview tip: วาด pointers, trace ผ่าน small example (3 nodes) นี่คือ fundamental problem - รู้ให้ขึ้นใจ"
+    },
+    {
+      "vocab": "How do you find if a Binary Tree is balanced?",
+      "pronunciation": "",
+      "meaning": "หาว่า Binary Tree balanced ไหมอย่างไร?",
+      "example": "Balanced tree: height difference between left and right subtrees is at most 1 for every node. Naive approach: for each node, calculate heights of left and right subtrees, check difference. O(n²). Optimized approach: bottom-up, return -1 if unbalanced. function checkHeight(node) { if (node == null) return 0; left = checkHeight(node.left); if (left == -1) return -1; right = checkHeight(node.right); if (right == -1) return -1; if (abs(left - right) > 1) return -1; return max(left, right) + 1; } O(n) time, O(h) space. Pattern: many tree problems combine checking and calculating in one traversal.",
+      "exampleTranslation": "Balanced tree: ความแตกต่าง height ระหว่าง left และ right subtrees มากสุด 1 สำหรับทุก node Naive approach: สำหรับแต่ละ node, คำนวณ heights ของ left และ right subtrees, check difference O(n²) Optimized approach: bottom-up, return -1 ถ้า unbalanced function checkHeight(node) { if (node == null) return 0; left = checkHeight(node.left); if (left == -1) return -1; right = checkHeight(node.right); if (right == -1) return -1; if (abs(left - right) > 1) return -1; return max(left, right) + 1; } O(n) time, O(h) space Pattern: tree problems หลายอันรวม checking และ calculating ใน traversal เดียว"
+    },
+    {
+      "vocab": "What is the Longest Common Subsequence (LCS) problem?",
+      "pronunciation": "",
+      "meaning": "ปัญหา Longest Common Subsequence (LCS) คืออะไร?",
+      "example": "LCS finds the longest subsequence present in both strings (not necessarily contiguous). Example: LCS of 'ABCDGH' and 'AEDFHR' is 'ADH' (length 3). DP solution: dp[i][j] = LCS length of first i chars of s1 and first j chars of s2. Recurrence: if s1[i-1] == s2[j-1]: dp[i][j] = dp[i-1][j-1] + 1, else: dp[i][j] = max(dp[i-1][j], dp[i][j-1]). Time O(mn), Space O(mn) or O(min(m,n)) optimized. To reconstruct LCS: backtrack through dp table. Related: longest common substring (must be contiguous), edit distance.",
+      "exampleTranslation": "LCS หา subsequence ที่ยาวที่สุดที่มีในทั้งสอง strings (ไม่จำเป็นต้องต่อเนื่อง) ตัวอย่าง: LCS ของ 'ABCDGH' และ 'AEDFHR' คือ 'ADH' (length 3) DP solution: dp[i][j] = LCS length ของ i chars แรกของ s1 และ j chars แรกของ s2 Recurrence: if s1[i-1] == s2[j-1]: dp[i][j] = dp[i-1][j-1] + 1, else: dp[i][j] = max(dp[i-1][j], dp[i][j-1]) Time O(mn), Space O(mn) หรือ O(min(m,n)) optimized เพื่อ reconstruct LCS: backtrack ผ่าน dp table Related: longest common substring (ต้องต่อเนื่อง), edit distance"
+    },
+    {
+      "vocab": "How do you solve the Coin Change problem?",
+      "pronunciation": "",
+      "meaning": "คุณแก้ปัญหา Coin Change อย่างไร?",
+      "example": "Coin Change: minimum coins needed to make amount. DP approach: dp[i] = minimum coins for amount i. Base: dp[0] = 0. Recurrence: for each coin, dp[i] = min(dp[i], dp[i - coin] + 1) if i >= coin. Initialize dp with infinity except dp[0]. Time O(amount × coins), Space O(amount). Example: coins [1,2,5], amount 11. dp[11] = min(dp[10]+1, dp[9]+1, dp[6]+1) = 3. Related problems: number of ways to make change (count combinations), unbounded knapsack. This is a classic DP problem - understand the state definition and transition.",
+      "exampleTranslation": "Coin Change: จำนวน coins ขั้นต่ำที่ต้องใช้เพื่อทำ amount DP approach: dp[i] = minimum coins สำหรับ amount i Base: dp[0] = 0 Recurrence: สำหรับแต่ละ coin, dp[i] = min(dp[i], dp[i - coin] + 1) ถ้า i >= coin Initialize dp ด้วย infinity ยกเว้น dp[0] Time O(amount × coins), Space O(amount) ตัวอย่าง: coins [1,2,5], amount 11 dp[11] = min(dp[10]+1, dp[9]+1, dp[6]+1) = 3 Problems ที่เกี่ยวข้อง: number of ways to make change (count combinations), unbounded knapsack นี่คือ classic DP problem - เข้าใจ state definition และ transition"
+    },
+    {
+      "vocab": "What is the Knapsack problem?",
+      "pronunciation": "",
+      "meaning": "ปัญหา Knapsack คืออะไร?",
+      "example": "0/1 Knapsack: maximize value of items in knapsack with weight limit, each item used at most once. DP: dp[i][w] = max value using first i items with capacity w. Recurrence: dp[i][w] = max(dp[i-1][w], dp[i-1][w-weight[i]] + value[i]) if weight[i] <= w, else dp[i-1][w]. Time O(nW), Space O(nW) or O(W) optimized. Variations: unbounded knapsack (unlimited items), fractional knapsack (greedy works), subset sum (values = weights). Pattern recognition: if asked to maximize/minimize with constraints, think DP. Define state as (items considered, remaining capacity).",
+      "exampleTranslation": "0/1 Knapsack: maximize value ของ items ใน knapsack ที่มี weight limit, แต่ละ item ใช้ได้มากสุดครั้งเดียว DP: dp[i][w] = max value ใช้ i items แรกกับ capacity w Recurrence: dp[i][w] = max(dp[i-1][w], dp[i-1][w-weight[i]] + value[i]) ถ้า weight[i] <= w, ไม่งั้น dp[i-1][w] Time O(nW), Space O(nW) หรือ O(W) optimized Variations: unbounded knapsack (unlimited items), fractional knapsack (greedy works), subset sum (values = weights) Pattern recognition: ถ้าถูกขอให้ maximize/minimize กับ constraints, คิดถึง DP Define state เป็น (items considered, remaining capacity)"
+    },
+    {
+      "vocab": "How do you approach a coding interview problem?",
+      "pronunciation": "",
+      "meaning": "คุณเข้าถึงปัญหา coding interview อย่างไร?",
+      "example": "Framework: 1) Understand - clarify inputs, outputs, constraints, edge cases. Ask questions! 2) Examples - work through examples, find patterns. 3) Brute force - state the obvious solution first, analyze complexity. 4) Optimize - can we use hash map? sorting? two pointers? 5) Code - write clean code, use meaningful names. 6) Test - trace through examples, test edge cases. Time management: don't spend too long on any step. Communication: think out loud, explain your reasoning. If stuck: simplify the problem, solve for smaller input first. Remember: interviewers evaluate problem-solving process, not just the final answer.",
+      "exampleTranslation": "Framework: 1) Understand - clarify inputs, outputs, constraints, edge cases ถามคำถาม! 2) Examples - ทำผ่าน examples, หา patterns 3) Brute force - บอก obvious solution ก่อน, วิเคราะห์ complexity 4) Optimize - ใช้ hash map ได้ไหม? sorting? two pointers? 5) Code - เขียน clean code, ใช้ชื่อที่มีความหมาย 6) Test - trace ผ่าน examples, test edge cases Time management: อย่าใช้เวลานานเกินกับ step ใด Communication: คิดออกเสียง, อธิบาย reasoning ถ้าติด: simplify ปัญหา, solve สำหรับ input เล็กกว่าก่อน จำไว้: interviewers ประเมิน problem-solving process ไม่ใช่แค่คำตอบสุดท้าย"
+    },
+    {
+      "vocab": "What are common patterns for array problems?",
+      "pronunciation": "",
+      "meaning": "Patterns ที่พบบ่อยสำหรับ array problems มีอะไรบ้าง?",
+      "example": "Key patterns: 1) Hash Map - O(n) lookup, counting, two sum. 2) Two Pointers - sorted arrays, palindrome, container water. 3) Sliding Window - subarrays with condition (max sum, longest without repeat). 4) Prefix Sum - range sum queries, subarray sum equals k. 5) Binary Search - sorted or monotonic conditions. 6) Sorting - often simplifies problem, enables two pointers. 7) Kadane's Algorithm - maximum subarray sum in O(n). 8) Dutch National Flag - sort 0s, 1s, 2s in place. Recognition tips: 'subarray' often means sliding window or prefix sum. 'Pairs' often means hash map or two pointers.",
+      "exampleTranslation": "Key patterns: 1) Hash Map - O(n) lookup, counting, two sum 2) Two Pointers - sorted arrays, palindrome, container water 3) Sliding Window - subarrays with condition (max sum, longest without repeat) 4) Prefix Sum - range sum queries, subarray sum equals k 5) Binary Search - sorted หรือ monotonic conditions 6) Sorting - มักทำให้ปัญหาง่ายขึ้น, enable two pointers 7) Kadane's Algorithm - maximum subarray sum ใน O(n) 8) Dutch National Flag - sort 0s, 1s, 2s in place Recognition tips: 'subarray' มักหมายถึง sliding window หรือ prefix sum 'Pairs' มักหมายถึง hash map หรือ two pointers"
+    },
+    {
+      "vocab": "What are common patterns for tree problems?",
+      "pronunciation": "",
+      "meaning": "Patterns ที่พบบ่อยสำหรับ tree problems มีอะไรบ้าง?",
+      "example": "Key patterns: 1) DFS recursive - most tree problems. Think: what info do I need from subtrees? 2) BFS level-order - when level matters (zigzag, right side view). 3) Top-down - pass info from parent to children (path problems). 4) Bottom-up - gather info from children to parent (height, balanced check). 5) Tree DP - optimization on trees. 6) Serialize/Deserialize - convert tree to string and back. Common problems: height, diameter, LCA, path sum, validate BST, serialize. Template: function solve(node) { if (!node) return base; left = solve(node.left); right = solve(node.right); return combine(left, right, node); }",
+      "exampleTranslation": "Key patterns: 1) DFS recursive - tree problems ส่วนใหญ่ คิด: ต้องการ info อะไรจาก subtrees? 2) BFS level-order - เมื่อ level สำคัญ (zigzag, right side view) 3) Top-down - ส่ง info จาก parent ไป children (path problems) 4) Bottom-up - รวบรวม info จาก children ไป parent (height, balanced check) 5) Tree DP - optimization บน trees 6) Serialize/Deserialize - แปลง tree เป็น string และกลับ Problems ที่พบบ่อย: height, diameter, LCA, path sum, validate BST, serialize Template: function solve(node) { if (!node) return base; left = solve(node.left); right = solve(node.right); return combine(left, right, node); }"
+    }
+  ]
+}

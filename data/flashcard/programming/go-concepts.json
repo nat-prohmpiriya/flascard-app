@@ -1,0 +1,336 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Go Concepts",
+    "description": "Core Go programming concepts including goroutines, channels, interfaces, and more",
+    "category": "Programming",
+    "tags": ["go", "golang", "programming", "concepts"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are the basic data types in Go?",
+      "pronunciation": "// Numeric\nvar i int = 42\nvar f float64 = 3.14\nvar c complex128 = 1 + 2i\n\n// Boolean\nvar b bool = true\n\n// String\nvar s string = \"hello\"\n\n// Byte and Rune\nvar by byte = 'A'      // alias for uint8\nvar r rune = '世'      // alias for int32 (Unicode)",
+      "meaning": "Go มี basic data types อะไรบ้าง?",
+      "example": "Go has numeric types (int, int8-64, uint, uint8-64, float32/64, complex64/128), bool, string, byte (uint8 alias), and rune (int32 alias for Unicode). Unlike Python, Go is statically typed - types are fixed at compile time. Zero values: 0 for numbers, false for bool, \"\" for string.",
+      "exampleTranslation": "Go มี numeric types (int, int8-64, uint, uint8-64, float32/64, complex64/128), bool, string, byte (alias ของ uint8) และ rune (alias ของ int32 สำหรับ Unicode) ไม่เหมือน Python Go เป็น statically typed - types ถูกกำหนดตอน compile Zero values: 0 สำหรับ numbers, false สำหรับ bool, \"\" สำหรับ string"
+    },
+    {
+      "vocab": "What is the difference between var and := in Go?",
+      "pronunciation": "// var - explicit declaration\nvar name string = \"John\"\nvar age int  // zero value: 0\nvar x, y int = 1, 2\n\n// := short declaration (type inference)\nname := \"John\"  // infers string\nage := 30       // infers int\nx, y := 1, 2\n\n// := only works inside functions\nfunc main() {\n    count := 0  // OK\n}\ncount := 0  // Error: outside function",
+      "meaning": "var และ := ใน Go ต่างกันอย่างไร?",
+      "example": "var is explicit variable declaration, can be used anywhere, and allows specifying type without initial value (gets zero value). := is short declaration with type inference, only works inside functions, and requires initial value. Use var for package-level variables, := for local variables.",
+      "exampleTranslation": "var คือการประกาศตัวแปรแบบ explicit ใช้ได้ทุกที่ และระบุ type โดยไม่ต้องมีค่าเริ่มต้นได้ (ได้ zero value) := คือ short declaration ที่มี type inference ใช้ได้แค่ใน functions และต้องมีค่าเริ่มต้น ใช้ var สำหรับ package-level variables ใช้ := สำหรับ local variables"
+    },
+    {
+      "vocab": "What is a slice in Go?",
+      "pronunciation": "// Create slice\nnums := []int{1, 2, 3, 4, 5}\nnums := make([]int, 5)      // len=5, cap=5\nnums := make([]int, 0, 10)  // len=0, cap=10\n\n// Slice operations\nnums = append(nums, 6, 7)\npart := nums[1:4]  // [2, 3, 4]\nlen(nums)          // length\ncap(nums)          // capacity\n\n// Slice from array\narr := [5]int{1, 2, 3, 4, 5}\nslice := arr[1:4]  // shares underlying array",
+      "meaning": "Slice ใน Go คืออะไร?",
+      "example": "A slice is a dynamic, flexible view into an array. It has three components: pointer to underlying array, length, and capacity. Unlike arrays (fixed size), slices can grow with append(). Slices are reference types - multiple slices can share the same underlying array. Use make() to create with specific capacity.",
+      "exampleTranslation": "Slice คือ dynamic, flexible view เข้าไปใน array มีสามส่วน: pointer ไปยัง underlying array, length และ capacity ไม่เหมือน arrays (fixed size) slices โตได้ด้วย append() Slices เป็น reference types - หลาย slices แชร์ underlying array เดียวกันได้ ใช้ make() สร้างด้วย capacity เฉพาะ"
+    },
+    {
+      "vocab": "What is the difference between array and slice?",
+      "pronunciation": "// Array - fixed size, value type\narr := [3]int{1, 2, 3}     // size is part of type\nvar arr2 [3]int            // [0, 0, 0]\narr3 := arr                // copies entire array\n\n// Slice - dynamic, reference type\nslice := []int{1, 2, 3}    // no size specified\nslice2 := slice            // shares underlying array\nslice = append(slice, 4)   // can grow\n\n// Function parameters\nfunc takeArray(a [3]int) {}  // copies array\nfunc takeSlice(s []int) {}   // passes reference",
+      "meaning": "Array และ slice ต่างกันอย่างไร?",
+      "example": "Arrays have fixed size (part of type), are value types (copied on assignment), and rarely used directly. Slices are dynamic, reference types (share underlying array), and are the common choice. Array: [3]int, Slice: []int. Passing array to function copies it; passing slice shares reference.",
+      "exampleTranslation": "Arrays มี fixed size (เป็นส่วนของ type) เป็น value types (copy เมื่อ assign) และไม่ค่อยใช้โดยตรง Slices เป็น dynamic, reference types (แชร์ underlying array) และเป็นตัวเลือกที่ใช้บ่อย Array: [3]int, Slice: []int การส่ง array ไป function จะ copy มัน ส่ง slice จะแชร์ reference"
+    },
+    {
+      "vocab": "What is a map in Go?",
+      "pronunciation": "// Create map\nages := map[string]int{\n    \"Alice\": 30,\n    \"Bob\":   25,\n}\nages := make(map[string]int)\n\n// Operations\nages[\"Charlie\"] = 35        // set\nage := ages[\"Alice\"]        // get (returns zero if missing)\nage, ok := ages[\"Unknown\"]  // check existence\ndelete(ages, \"Bob\")         // delete\nlen(ages)                   // count\n\n// Iterate\nfor key, value := range ages {\n    fmt.Println(key, value)\n}",
+      "meaning": "Map ใน Go คืออะไร?",
+      "example": "Map is Go's hash table / dictionary implementation with key-value pairs. Keys must be comparable types (no slices, maps, functions). Maps are reference types. Access missing key returns zero value - use comma-ok idiom to check existence. Maps are not safe for concurrent access without sync.",
+      "exampleTranslation": "Map คือ hash table / dictionary ของ Go ที่มี key-value pairs Keys ต้องเป็น comparable types (ไม่มี slices, maps, functions) Maps เป็น reference types การเข้าถึง missing key return zero value - ใช้ comma-ok idiom เพื่อ check existence Maps ไม่ safe สำหรับ concurrent access โดยไม่มี sync"
+    },
+    {
+      "vocab": "What is a struct in Go?",
+      "pronunciation": "// Define struct\ntype Person struct {\n    Name    string\n    Age     int\n    Email   string `json:\"email\"`  // struct tag\n}\n\n// Create instances\np1 := Person{Name: \"John\", Age: 30}\np2 := Person{\"Jane\", 25, \"jane@example.com\"}\np3 := new(Person)  // returns *Person\n\n// Access fields\np1.Name = \"Johnny\"\nfmt.Println(p1.Age)\n\n// Embedded struct (composition)\ntype Employee struct {\n    Person           // embedded\n    EmployeeID string\n}",
+      "meaning": "Struct ใน Go คืออะไร?",
+      "example": "Struct is a composite type that groups related fields together. It's Go's way of creating custom types (no classes). Fields can have struct tags for metadata (JSON, DB mapping). Structs support embedding for composition (like inheritance). Structs are value types - copied on assignment.",
+      "exampleTranslation": "Struct คือ composite type ที่รวม fields ที่เกี่ยวข้องเข้าด้วยกัน เป็นวิธีของ Go ในการสร้าง custom types (ไม่มี classes) Fields มี struct tags สำหรับ metadata ได้ (JSON, DB mapping) Structs รองรับ embedding สำหรับ composition (คล้าย inheritance) Structs เป็น value types - copy เมื่อ assign"
+    },
+    {
+      "vocab": "What is a pointer in Go?",
+      "pronunciation": "// Pointer basics\nx := 10\np := &x          // p is *int, points to x\nfmt.Println(*p)  // 10 (dereference)\n*p = 20          // modify through pointer\nfmt.Println(x)   // 20\n\n// Pointer to struct\ntype Person struct { Name string }\nperson := &Person{Name: \"John\"}\nperson.Name = \"Jane\"  // auto-dereference\n\n// new vs &\np1 := new(Person)       // returns *Person, zero value\np2 := &Person{}         // same result\np3 := &Person{Name: \"X\"}  // with initialization",
+      "meaning": "Pointer ใน Go คืออะไร?",
+      "example": "Pointers store memory addresses. & gets address (reference), * dereferences (access value). Go has no pointer arithmetic (safer than C). Pointers allow modifying values in functions and avoiding copies of large structs. Go auto-dereferences pointers for struct field access. Use new() or & to create pointers.",
+      "exampleTranslation": "Pointers เก็บ memory addresses & ดึง address (reference), * dereference (เข้าถึงค่า) Go ไม่มี pointer arithmetic (ปลอดภัยกว่า C) Pointers ทำให้แก้ไขค่าใน functions และหลีกเลี่ยง copies ของ structs ขนาดใหญ่ได้ Go auto-dereference pointers สำหรับ struct field access ใช้ new() หรือ & เพื่อสร้าง pointers"
+    },
+    {
+      "vocab": "What is an interface in Go?",
+      "pronunciation": "// Define interface\ntype Writer interface {\n    Write([]byte) (int, error)\n}\n\ntype Reader interface {\n    Read([]byte) (int, error)\n}\n\n// Compose interfaces\ntype ReadWriter interface {\n    Reader\n    Writer\n}\n\n// Implement implicitly\ntype File struct{}\n\nfunc (f *File) Write(data []byte) (int, error) {\n    return len(data), nil\n}\n\n// File now implements Writer automatically\nvar w Writer = &File{}",
+      "meaning": "Interface ใน Go คืออะไร?",
+      "example": "An interface defines a set of method signatures. Types implement interfaces implicitly - no 'implements' keyword needed. If a type has all methods, it satisfies the interface. This enables duck typing with compile-time safety. Interfaces can be composed by embedding other interfaces.",
+      "exampleTranslation": "Interface กำหนด set ของ method signatures Types implement interfaces แบบ implicit - ไม่ต้องมี 'implements' keyword ถ้า type มีทุก methods มันก็ satisfy interface นี้ทำให้เกิด duck typing พร้อม compile-time safety Interfaces รวมกันได้โดย embedding interfaces อื่น"
+    },
+    {
+      "vocab": "What is the empty interface (interface{})?",
+      "pronunciation": "// Empty interface accepts any type\nvar anything interface{}\nanything = 42\nanything = \"hello\"\nanything = []int{1, 2, 3}\n\n// Function accepting any type\nfunc printAny(v interface{}) {\n    fmt.Println(v)\n}\n\n// Type assertion\nvalue := anything.(string)  // panics if wrong type\nvalue, ok := anything.(string)  // safe\n\n// Type switch\nswitch v := anything.(type) {\ncase int:\n    fmt.Println(\"int:\", v)\ncase string:\n    fmt.Println(\"string:\", v)\ndefault:\n    fmt.Println(\"unknown\")\n}\n\n// Go 1.18+: use 'any' alias\nvar x any = 42",
+      "meaning": "Empty interface (interface{}) คืออะไร?",
+      "example": "Empty interface has no methods, so all types satisfy it - Go's way to accept any type. Use type assertions to get the concrete type back. Type switches handle multiple types. Since Go 1.18, 'any' is an alias for interface{}. Use sparingly - prefer specific interfaces for type safety.",
+      "exampleTranslation": "Empty interface ไม่มี methods ดังนั้นทุก types satisfy มัน - เป็นวิธีของ Go ในการรับ type ใดก็ได้ ใช้ type assertions เพื่อดึง concrete type กลับ Type switches จัดการหลาย types ตั้งแต่ Go 1.18 'any' เป็น alias ของ interface{} ใช้อย่างระมัดระวัง - ใช้ specific interfaces สำหรับ type safety"
+    },
+    {
+      "vocab": "What is a goroutine?",
+      "pronunciation": "// Start goroutine\ngo func() {\n    fmt.Println(\"Hello from goroutine\")\n}()\n\n// Named function\nfunc worker(id int) {\n    fmt.Printf(\"Worker %d\\n\", id)\n}\n\nfor i := 0; i < 5; i++ {\n    go worker(i)\n}\n\n// Wait for goroutines\nvar wg sync.WaitGroup\nfor i := 0; i < 5; i++ {\n    wg.Add(1)\n    go func(id int) {\n        defer wg.Done()\n        worker(id)\n    }(i)\n}\nwg.Wait()",
+      "meaning": "Goroutine คืออะไร?",
+      "example": "A goroutine is a lightweight thread managed by Go runtime. Start with 'go' keyword before function call. Goroutines are cheap (~2KB stack) - can run millions. They share memory space. Use sync.WaitGroup to wait for completion. Main function doesn't wait for goroutines by default.",
+      "exampleTranslation": "Goroutine คือ lightweight thread ที่จัดการโดย Go runtime เริ่มด้วย 'go' keyword ก่อน function call Goroutines ราคาถูก (~2KB stack) - รันได้เป็นล้าน มันแชร์ memory space ใช้ sync.WaitGroup เพื่อรอให้เสร็จ Main function ไม่รอ goroutines โดย default"
+    },
+    {
+      "vocab": "What is a channel in Go?",
+      "pronunciation": "// Create channel\nch := make(chan int)        // unbuffered\nch := make(chan int, 5)     // buffered (capacity 5)\n\n// Send and receive\nch <- 42       // send (blocks if full/unbuffered)\nvalue := <-ch  // receive (blocks if empty)\n\n// Close channel\nclose(ch)\nvalue, ok := <-ch  // ok=false if closed\n\n// Range over channel\nfor value := range ch {\n    fmt.Println(value)  // until closed\n}\n\n// Direction-specific channels\nfunc send(ch chan<- int) { ch <- 1 }   // send only\nfunc recv(ch <-chan int) { <-ch }      // receive only",
+      "meaning": "Channel ใน Go คืออะไร?",
+      "example": "Channels are typed conduits for communication between goroutines. Unbuffered channels block until both sender and receiver are ready (synchronization). Buffered channels block only when full/empty. Close channels to signal completion. Use directional channels in function parameters for safety.",
+      "exampleTranslation": "Channels คือ typed conduits สำหรับ communication ระหว่าง goroutines Unbuffered channels block จนกว่า sender และ receiver พร้อมทั้งคู่ (synchronization) Buffered channels block เฉพาะเมื่อ full/empty Close channels เพื่อส่งสัญญาณว่าเสร็จ ใช้ directional channels ใน function parameters เพื่อความปลอดภัย"
+    },
+    {
+      "vocab": "What is select statement in Go?",
+      "pronunciation": "ch1 := make(chan string)\nch2 := make(chan string)\n\nselect {\ncase msg1 := <-ch1:\n    fmt.Println(\"From ch1:\", msg1)\ncase msg2 := <-ch2:\n    fmt.Println(\"From ch2:\", msg2)\ncase ch1 <- \"hello\":  // send case\n    fmt.Println(\"Sent to ch1\")\ncase <-time.After(time.Second):\n    fmt.Println(\"Timeout\")\ndefault:\n    fmt.Println(\"No channel ready\")  // non-blocking\n}\n\n// Common pattern: quit channel\nfor {\n    select {\n    case data := <-dataCh:\n        process(data)\n    case <-quit:\n        return\n    }\n}",
+      "meaning": "Select statement ใน Go คืออะไร?",
+      "example": "Select waits on multiple channel operations, executing the first one that's ready. If multiple are ready, one is chosen randomly. Default case makes it non-blocking. Common uses: multiplexing channels, timeouts with time.After, quit signals, and handling multiple event sources.",
+      "exampleTranslation": "Select รอ channel operations หลายตัว execute ตัวแรกที่พร้อม ถ้าหลายตัวพร้อม จะเลือกแบบ random Default case ทำให้ non-blocking ใช้บ่อยสำหรับ: multiplexing channels, timeouts ด้วย time.After, quit signals และจัดการหลาย event sources"
+    },
+    {
+      "vocab": "What is context in Go?",
+      "pronunciation": "import \"context\"\n\n// Create contexts\nctx := context.Background()           // root context\nctx := context.TODO()                 // placeholder\n\n// With cancellation\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()  // always call cancel\n\n// With timeout/deadline\nctx, cancel := context.WithTimeout(ctx, 5*time.Second)\nctx, cancel := context.WithDeadline(ctx, time.Now().Add(5*time.Second))\n\n// With value (use sparingly)\nctx = context.WithValue(ctx, \"userID\", 123)\nuserID := ctx.Value(\"userID\").(int)\n\n// Check in goroutine\nselect {\ncase <-ctx.Done():\n    return ctx.Err()  // Canceled or DeadlineExceeded\ncase result := <-resultCh:\n    return result\n}",
+      "meaning": "Context ใน Go คืออะไร?",
+      "example": "Context carries deadlines, cancellation signals, and request-scoped values across API boundaries and goroutines. Always pass context as first parameter. Use WithCancel for manual cancellation, WithTimeout/WithDeadline for time limits. Check ctx.Done() channel for cancellation. Essential for graceful shutdown and request handling.",
+      "exampleTranslation": "Context พกพา deadlines, cancellation signals และ request-scoped values ข้าม API boundaries และ goroutines ส่ง context เป็น parameter แรกเสมอ ใช้ WithCancel สำหรับ manual cancellation, WithTimeout/WithDeadline สำหรับ time limits Check ctx.Done() channel สำหรับ cancellation จำเป็นสำหรับ graceful shutdown และ request handling"
+    },
+    {
+      "vocab": "What is defer in Go?",
+      "pronunciation": "func readFile(path string) error {\n    f, err := os.Open(path)\n    if err != nil {\n        return err\n    }\n    defer f.Close()  // executed when function returns\n    \n    // read file...\n    return nil\n}\n\n// Multiple defers - LIFO order\nfunc example() {\n    defer fmt.Println(\"first\")   // prints last\n    defer fmt.Println(\"second\")  // prints second\n    defer fmt.Println(\"third\")   // prints first\n}\n\n// Defer with arguments evaluated immediately\nfor i := 0; i < 3; i++ {\n    defer fmt.Println(i)  // 2, 1, 0\n}\n\n// Common: mutex unlock\nmu.Lock()\ndefer mu.Unlock()",
+      "meaning": "Defer ใน Go คืออะไร?",
+      "example": "Defer schedules a function call to run when the surrounding function returns. Arguments are evaluated immediately but the call is delayed. Multiple defers execute in LIFO (stack) order. Used for cleanup: closing files, unlocking mutexes, recovering from panics. Runs even if function panics.",
+      "exampleTranslation": "Defer schedule function call ให้รันเมื่อ surrounding function return Arguments ถูก evaluate ทันทีแต่ call ถูก delay Multiple defers execute ตาม LIFO (stack) order ใช้สำหรับ cleanup: ปิด files, unlock mutexes, recover จาก panics ทำงานแม้ function panic"
+    },
+    {
+      "vocab": "What is panic and recover?",
+      "pronunciation": "// Panic - runtime error\nfunc divide(a, b int) int {\n    if b == 0 {\n        panic(\"division by zero\")\n    }\n    return a / b\n}\n\n// Recover - catch panic\nfunc safeCall() {\n    defer func() {\n        if r := recover(); r != nil {\n            fmt.Println(\"Recovered:\", r)\n        }\n    }()\n    \n    panic(\"something went wrong\")\n}\n\n// Only recover in deferred function\nfunc handler() {\n    defer func() {\n        recover()  // must be in defer\n    }()\n    panic(\"error\")\n}\n// Program continues after safeCall()",
+      "meaning": "Panic และ recover คืออะไร?",
+      "example": "Panic is Go's mechanism for unrecoverable errors - it stops normal execution, runs deferred functions, then crashes. Recover catches panics, only works inside deferred functions. Use panic for programmer errors (bugs), not user errors. Prefer returning errors over panic for expected error conditions.",
+      "exampleTranslation": "Panic คือกลไกของ Go สำหรับ unrecoverable errors - มันหยุด execution ปกติ รัน deferred functions แล้ว crash Recover จับ panics ทำงานใน deferred functions เท่านั้น ใช้ panic สำหรับ programmer errors (bugs) ไม่ใช่ user errors ใช้ returning errors แทน panic สำหรับ expected error conditions"
+    },
+    {
+      "vocab": "What is error handling in Go?",
+      "pronunciation": "// Return error\nfunc divide(a, b int) (int, error) {\n    if b == 0 {\n        return 0, errors.New(\"division by zero\")\n    }\n    return a / b, nil\n}\n\n// Check error\nresult, err := divide(10, 0)\nif err != nil {\n    log.Fatal(err)\n}\n\n// Custom error type\ntype ValidationError struct {\n    Field   string\n    Message string\n}\n\nfunc (e *ValidationError) Error() string {\n    return fmt.Sprintf(\"%s: %s\", e.Field, e.Message)\n}\n\n// Error wrapping (Go 1.13+)\nif err != nil {\n    return fmt.Errorf(\"failed to process: %w\", err)\n}\n\n// Unwrap\nif errors.Is(err, os.ErrNotExist) { }\nvar valErr *ValidationError\nif errors.As(err, &valErr) { }",
+      "meaning": "Error handling ใน Go ทำอย่างไร?",
+      "example": "Go uses explicit error returns instead of exceptions. Functions return (result, error) - check if err != nil. Create errors with errors.New() or fmt.Errorf(). Custom errors implement the error interface (Error() string). Use %w for wrapping, errors.Is() for comparison, errors.As() for type assertion.",
+      "exampleTranslation": "Go ใช้ explicit error returns แทน exceptions Functions return (result, error) - check ว่า err != nil สร้าง errors ด้วย errors.New() หรือ fmt.Errorf() Custom errors implement error interface (Error() string) ใช้ %w สำหรับ wrapping, errors.Is() สำหรับ comparison, errors.As() สำหรับ type assertion"
+    },
+    {
+      "vocab": "What is a method in Go?",
+      "pronunciation": "type Rectangle struct {\n    Width  float64\n    Height float64\n}\n\n// Value receiver - gets copy\nfunc (r Rectangle) Area() float64 {\n    return r.Width * r.Height\n}\n\n// Pointer receiver - can modify\nfunc (r *Rectangle) Scale(factor float64) {\n    r.Width *= factor\n    r.Height *= factor\n}\n\n// Usage\nrect := Rectangle{10, 5}\nfmt.Println(rect.Area())  // 50\nrect.Scale(2)\nfmt.Println(rect.Area())  // 200\n\n// Go auto-converts between value and pointer\n(&rect).Area()  // works\nrect.Scale(2)   // works (auto &rect)",
+      "meaning": "Method ใน Go คืออะไร?",
+      "example": "Methods are functions with a receiver argument, attached to types. Value receivers get a copy (can't modify original). Pointer receivers can modify and avoid copying large structs. Go automatically converts between value and pointer when calling methods. Convention: use pointer receiver if any method modifies.",
+      "exampleTranslation": "Methods คือ functions ที่มี receiver argument ติดกับ types Value receivers ได้ copy (แก้ไข original ไม่ได้) Pointer receivers แก้ไขได้และหลีกเลี่ยง copying structs ขนาดใหญ่ Go แปลงระหว่าง value และ pointer อัตโนมัติเมื่อเรียก methods Convention: ใช้ pointer receiver ถ้า method ใดก็ตาม modify"
+    },
+    {
+      "vocab": "What is embedding in Go?",
+      "pronunciation": "// Struct embedding\ntype Person struct {\n    Name string\n    Age  int\n}\n\ntype Employee struct {\n    Person      // embedded (no field name)\n    EmployeeID string\n}\n\nemp := Employee{\n    Person:     Person{Name: \"John\", Age: 30},\n    EmployeeID: \"E001\",\n}\nfmt.Println(emp.Name)  // promoted field\nemp.Person.Name        // explicit access\n\n// Interface embedding\ntype Reader interface { Read([]byte) (int, error) }\ntype Writer interface { Write([]byte) (int, error) }\ntype ReadWriter interface {\n    Reader\n    Writer\n}",
+      "meaning": "Embedding ใน Go คืออะไร?",
+      "example": "Embedding is Go's composition mechanism (instead of inheritance). Embedded type's fields and methods are 'promoted' to the outer type. Access directly or explicitly through embedded type name. Works for both structs and interfaces. Provides code reuse and polymorphism without traditional inheritance.",
+      "exampleTranslation": "Embedding คือ composition mechanism ของ Go (แทน inheritance) Fields และ methods ของ embedded type ถูก 'promote' ไปยัง outer type เข้าถึงโดยตรงหรือ explicitly ผ่านชื่อ embedded type ใช้ได้ทั้ง structs และ interfaces ให้ code reuse และ polymorphism โดยไม่มี traditional inheritance"
+    },
+    {
+      "vocab": "What is init() function?",
+      "pronunciation": "package main\n\nimport \"fmt\"\n\nvar globalVar = initGlobal()\n\nfunc initGlobal() int {\n    fmt.Println(\"1. Global var init\")\n    return 42\n}\n\nfunc init() {\n    fmt.Println(\"2. First init()\")\n}\n\nfunc init() {  // multiple init() allowed\n    fmt.Println(\"3. Second init()\")\n}\n\nfunc main() {\n    fmt.Println(\"4. main()\")\n}\n\n// Output:\n// 1. Global var init\n// 2. First init()\n// 3. Second init()\n// 4. main()",
+      "meaning": "init() function คืออะไร?",
+      "example": "init() is a special function that runs automatically before main(). Each package can have multiple init() functions - all will run. Order: imported packages init first, then package-level variables, then init() functions in source order. Used for setup, validation, and registration. Cannot be called directly.",
+      "exampleTranslation": "init() คือ special function ที่รันอัตโนมัติก่อน main() แต่ละ package มี init() functions หลายตัวได้ - ทั้งหมดจะรัน ลำดับ: imported packages init ก่อน แล้ว package-level variables แล้ว init() functions ตามลำดับ source ใช้สำหรับ setup, validation และ registration เรียกโดยตรงไม่ได้"
+    },
+    {
+      "vocab": "What are function closures in Go?",
+      "pronunciation": "// Closure captures outer variable\nfunc counter() func() int {\n    count := 0\n    return func() int {\n        count++\n        return count\n    }\n}\n\nc1 := counter()\nc2 := counter()\nfmt.Println(c1())  // 1\nfmt.Println(c1())  // 2\nfmt.Println(c2())  // 1 (separate state)\n\n// Common gotcha with loops\nfor i := 0; i < 3; i++ {\n    go func() {\n        fmt.Println(i)  // Wrong: prints 3,3,3\n    }()\n}\n\nfor i := 0; i < 3; i++ {\n    go func(n int) {\n        fmt.Println(n)  // Right: prints 0,1,2\n    }(i)\n}",
+      "meaning": "Function closures ใน Go คืออะไร?",
+      "example": "A closure is a function that captures variables from its enclosing scope. The captured variables persist between calls. Each closure instance has its own state. Common gotcha: loop variables are captured by reference - pass them as parameters to goroutines. Used for callbacks, state management, and functional patterns.",
+      "exampleTranslation": "Closure คือ function ที่จับ variables จาก enclosing scope ตัวแปรที่จับไว้คงอยู่ระหว่าง calls แต่ละ closure instance มี state ของตัวเอง Gotcha ที่พบบ่อย: loop variables ถูกจับโดย reference - ส่งเป็น parameters ไปยัง goroutines ใช้สำหรับ callbacks, state management และ functional patterns"
+    },
+    {
+      "vocab": "What is sync.WaitGroup?",
+      "pronunciation": "import \"sync\"\n\nfunc main() {\n    var wg sync.WaitGroup\n    \n    for i := 0; i < 5; i++ {\n        wg.Add(1)  // increment counter\n        go func(id int) {\n            defer wg.Done()  // decrement counter\n            fmt.Printf(\"Worker %d done\\n\", id)\n        }(i)\n    }\n    \n    wg.Wait()  // block until counter is 0\n    fmt.Println(\"All workers completed\")\n}\n\n// Common mistake: Add inside goroutine\n// Wrong:\ngo func() {\n    wg.Add(1)  // race condition!\n    // ...\n}()\n\n// Correct: Add before starting goroutine",
+      "meaning": "sync.WaitGroup คืออะไร?",
+      "example": "WaitGroup waits for a collection of goroutines to finish. Add(n) increments counter, Done() decrements, Wait() blocks until counter is zero. Always call Add() before starting the goroutine, and Done() with defer. Pass WaitGroup by pointer if passing to functions. Essential for coordinating goroutine completion.",
+      "exampleTranslation": "WaitGroup รอ collection ของ goroutines ให้เสร็จ Add(n) เพิ่ม counter, Done() ลด, Wait() block จนกว่า counter จะเป็นศูนย์ เรียก Add() ก่อน start goroutine เสมอ และ Done() ด้วย defer ส่ง WaitGroup ด้วย pointer ถ้าส่งไป functions จำเป็นสำหรับ coordinating goroutine completion"
+    },
+    {
+      "vocab": "What is sync.Mutex?",
+      "pronunciation": "import \"sync\"\n\ntype SafeCounter struct {\n    mu    sync.Mutex\n    count int\n}\n\nfunc (c *SafeCounter) Increment() {\n    c.mu.Lock()\n    defer c.mu.Unlock()\n    c.count++\n}\n\nfunc (c *SafeCounter) Value() int {\n    c.mu.Lock()\n    defer c.mu.Unlock()\n    return c.count\n}\n\n// RWMutex for read-heavy workloads\ntype Cache struct {\n    mu   sync.RWMutex\n    data map[string]string\n}\n\nfunc (c *Cache) Get(key string) string {\n    c.mu.RLock()  // multiple readers allowed\n    defer c.mu.RUnlock()\n    return c.data[key]\n}\n\nfunc (c *Cache) Set(key, value string) {\n    c.mu.Lock()  // exclusive access\n    defer c.mu.Unlock()\n    c.data[key] = value\n}",
+      "meaning": "sync.Mutex คืออะไร?",
+      "example": "Mutex provides mutual exclusion for protecting shared data from concurrent access. Lock() acquires, Unlock() releases - always use defer for safety. RWMutex allows multiple readers OR one writer - better for read-heavy workloads. Never copy a Mutex after first use. Prefer channels for communication, mutexes for state protection.",
+      "exampleTranslation": "Mutex ให้ mutual exclusion สำหรับป้องกัน shared data จาก concurrent access Lock() acquire, Unlock() release - ใช้ defer เสมอเพื่อความปลอดภัย RWMutex อนุญาตหลาย readers หรือ writer เดียว - ดีกว่าสำหรับ read-heavy workloads ห้าม copy Mutex หลังใช้ครั้งแรก ใช้ channels สำหรับ communication, mutexes สำหรับ state protection"
+    },
+    {
+      "vocab": "What is sync.Once?",
+      "pronunciation": "import \"sync\"\n\nvar (\n    instance *Database\n    once     sync.Once\n)\n\nfunc GetDatabase() *Database {\n    once.Do(func() {\n        fmt.Println(\"Creating database connection\")\n        instance = &Database{}\n    })\n    return instance\n}\n\n// Called multiple times, but init runs only once\nGetDatabase()  // \"Creating database connection\"\nGetDatabase()  // (nothing printed)\nGetDatabase()  // (nothing printed)\n\n// Thread-safe singleton pattern\ntype Config struct {\n    once   sync.Once\n    values map[string]string\n}\n\nfunc (c *Config) Load() {\n    c.once.Do(func() {\n        c.values = loadFromFile()\n    })\n}",
+      "meaning": "sync.Once คืออะไร?",
+      "example": "sync.Once ensures a function is executed exactly once, regardless of how many goroutines call it. Thread-safe initialization. The Do method takes a function with no arguments. Once the function completes, subsequent Do calls return immediately. Perfect for singleton pattern and lazy initialization.",
+      "exampleTranslation": "sync.Once รับประกันว่า function จะถูก execute แค่ครั้งเดียว ไม่ว่าจะมีกี่ goroutines เรียก Thread-safe initialization Do method รับ function ที่ไม่มี arguments เมื่อ function เสร็จ Do calls ถัดไปจะ return ทันที เหมาะสำหรับ singleton pattern และ lazy initialization"
+    },
+    {
+      "vocab": "What is sync/atomic package?",
+      "pronunciation": "import \"sync/atomic\"\n\n// Atomic counter\nvar counter int64\n\nfunc increment() {\n    atomic.AddInt64(&counter, 1)\n}\n\nfunc getCount() int64 {\n    return atomic.LoadInt64(&counter)\n}\n\n// Compare and swap\nvar value int32 = 10\nswapped := atomic.CompareAndSwapInt32(&value, 10, 20)\n// swapped=true, value=20\n\n// atomic.Value for any type\nvar config atomic.Value\n\nfunc updateConfig(c *Config) {\n    config.Store(c)\n}\n\nfunc getConfig() *Config {\n    return config.Load().(*Config)\n}\n\n// Go 1.19+: atomic types\nvar count atomic.Int64\ncount.Add(1)\ncount.Load()",
+      "meaning": "sync/atomic package คืออะไร?",
+      "example": "atomic package provides low-level atomic operations for integers and pointers. Operations like AddInt64, LoadInt64, StoreInt64, CompareAndSwap are lock-free and faster than mutexes for simple counters. atomic.Value stores any type atomically. Go 1.19+ has typed atomics (atomic.Int64). Use for simple shared state.",
+      "exampleTranslation": "atomic package ให้ low-level atomic operations สำหรับ integers และ pointers Operations เช่น AddInt64, LoadInt64, StoreInt64, CompareAndSwap เป็น lock-free และเร็วกว่า mutexes สำหรับ counters ง่ายๆ atomic.Value เก็บ type ใดก็ได้แบบ atomically Go 1.19+ มี typed atomics (atomic.Int64) ใช้สำหรับ simple shared state"
+    },
+    {
+      "vocab": "What is the difference between buffered and unbuffered channels?",
+      "pronunciation": "// Unbuffered - synchronous\nch := make(chan int)\n\ngo func() {\n    ch <- 42  // blocks until received\n}()\nvalue := <-ch  // blocks until sent\n\n// Buffered - asynchronous up to capacity\nch := make(chan int, 3)\nch <- 1  // doesn't block\nch <- 2  // doesn't block\nch <- 3  // doesn't block\nch <- 4  // blocks! buffer full\n\n// Check capacity and length\nfmt.Println(cap(ch))  // 3\nfmt.Println(len(ch))  // current items in buffer\n\n// Buffered for rate limiting\nsemaphore := make(chan struct{}, 10)  // max 10 concurrent\nfor task := range tasks {\n    semaphore <- struct{}{}  // acquire\n    go func(t Task) {\n        defer func() { <-semaphore }()  // release\n        process(t)\n    }(task)\n}",
+      "meaning": "Buffered และ unbuffered channels ต่างกันอย่างไร?",
+      "example": "Unbuffered channels (make(chan T)) block on send until receiver is ready - provides synchronization. Buffered channels (make(chan T, n)) only block when full/empty - allows async communication up to capacity. Use unbuffered for synchronization, buffered for decoupling speed differences or implementing semaphores.",
+      "exampleTranslation": "Unbuffered channels (make(chan T)) block on send จนกว่า receiver พร้อม - ให้ synchronization Buffered channels (make(chan T, n)) block เฉพาะเมื่อ full/empty - อนุญาต async communication ถึง capacity ใช้ unbuffered สำหรับ synchronization ใช้ buffered สำหรับ decoupling speed differences หรือ implement semaphores"
+    },
+    {
+      "vocab": "What are generics in Go?",
+      "pronunciation": "// Generic function\nfunc Min[T constraints.Ordered](a, b T) T {\n    if a < b {\n        return a\n    }\n    return b\n}\n\nMin[int](3, 5)     // explicit type\nMin(3, 5)          // type inference\nMin(3.14, 2.71)    // works with float64\n\n// Generic type\ntype Stack[T any] struct {\n    items []T\n}\n\nfunc (s *Stack[T]) Push(item T) {\n    s.items = append(s.items, item)\n}\n\nfunc (s *Stack[T]) Pop() T {\n    item := s.items[len(s.items)-1]\n    s.items = s.items[:len(s.items)-1]\n    return item\n}\n\n// Type constraints\ntype Number interface {\n    int | int64 | float64\n}\n\nfunc Sum[T Number](nums []T) T {\n    var sum T\n    for _, n := range nums {\n        sum += n\n    }\n    return sum\n}",
+      "meaning": "Generics ใน Go คืออะไร?",
+      "example": "Generics (Go 1.18+) allow writing functions and types that work with multiple types. Use [T constraint] syntax. 'any' is alias for interface{} (no constraint). constraints.Ordered for comparable types. Define custom constraints with interface unions (int | string). Enables type-safe reusable code without interface{} casts.",
+      "exampleTranslation": "Generics (Go 1.18+) ทำให้เขียน functions และ types ที่ทำงานกับหลาย types ได้ ใช้ syntax [T constraint] 'any' คือ alias ของ interface{} (ไม่มี constraint) constraints.Ordered สำหรับ comparable types กำหนด custom constraints ด้วย interface unions (int | string) ทำให้ได้ type-safe reusable code โดยไม่ต้อง interface{} casts"
+    },
+    {
+      "vocab": "What is type assertion in Go?",
+      "pronunciation": "var i interface{} = \"hello\"\n\n// Type assertion - may panic\ns := i.(string)\nfmt.Println(s)  // \"hello\"\n\n// Safe type assertion with ok\ns, ok := i.(string)\nif ok {\n    fmt.Println(s)\n}\n\nn, ok := i.(int)  // ok=false, n=0\n\n// Type switch\nfunc describe(i interface{}) {\n    switch v := i.(type) {\n    case int:\n        fmt.Printf(\"Integer: %d\\n\", v)\n    case string:\n        fmt.Printf(\"String: %s\\n\", v)\n    case bool:\n        fmt.Printf(\"Boolean: %t\\n\", v)\n    default:\n        fmt.Printf(\"Unknown type: %T\\n\", v)\n    }\n}",
+      "meaning": "Type assertion ใน Go คืออะไร?",
+      "example": "Type assertion extracts the concrete type from an interface value. Syntax: value.(Type). Single-value form panics on wrong type; two-value form (value, ok) is safe. Type switch handles multiple types elegantly. Used when working with interface{}/any values to get the underlying type.",
+      "exampleTranslation": "Type assertion ดึง concrete type จาก interface value Syntax: value.(Type) Single-value form panic ถ้า type ผิด two-value form (value, ok) ปลอดภัย Type switch จัดการหลาย types ได้ elegantly ใช้เมื่อทำงานกับ interface{}/any values เพื่อดึง underlying type"
+    },
+    {
+      "vocab": "What is reflection in Go?",
+      "pronunciation": "import \"reflect\"\n\ntype User struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age\"`\n}\n\nuser := User{\"John\", 30}\n\n// Get type and value\nt := reflect.TypeOf(user)   // main.User\nv := reflect.ValueOf(user)  // {John 30}\n\n// Inspect fields\nfor i := 0; i < t.NumField(); i++ {\n    field := t.Field(i)\n    value := v.Field(i)\n    tag := field.Tag.Get(\"json\")\n    fmt.Printf(\"%s: %v (tag: %s)\\n\", field.Name, value, tag)\n}\n\n// Modify values (need pointer)\np := reflect.ValueOf(&user).Elem()\np.FieldByName(\"Name\").SetString(\"Jane\")\n\n// Check kind\nif v.Kind() == reflect.Struct { }\nif v.Kind() == reflect.Ptr { }",
+      "meaning": "Reflection ใน Go คืออะไร?",
+      "example": "Reflection allows examining and modifying types at runtime using reflect package. TypeOf() gets type info, ValueOf() gets value. Access struct fields, tags, and methods dynamically. Can modify values through pointers. Use sparingly - it's slower and loses type safety. Common in serialization libraries.",
+      "exampleTranslation": "Reflection ทำให้ตรวจสอบและแก้ไข types ตอน runtime โดยใช้ reflect package TypeOf() ดึง type info, ValueOf() ดึง value เข้าถึง struct fields, tags และ methods แบบ dynamic แก้ไขค่าผ่าน pointers ได้ ใช้อย่างระมัดระวัง - มันช้ากว่าและเสีย type safety พบบ่อยใน serialization libraries"
+    },
+    {
+      "vocab": "What is the difference between make and new?",
+      "pronunciation": "// new - allocates zeroed memory, returns pointer\np := new(int)      // *int, points to 0\ns := new([]int)    // *[]int, points to nil slice\nm := new(map[string]int)  // *map, points to nil map\n\n// make - initializes slices, maps, channels\nslice := make([]int, 5)        // len=5, cap=5\nslice := make([]int, 0, 10)    // len=0, cap=10\nmp := make(map[string]int)     // initialized map\nch := make(chan int)           // unbuffered channel\nch := make(chan int, 10)       // buffered channel\n\n// Difference with maps\nm1 := new(map[string]int)\n(*m1)[\"key\"] = 1  // panic! nil map\n\nm2 := make(map[string]int)\nm2[\"key\"] = 1  // OK\n\n// Common pattern\ntype Config struct { Values map[string]string }\nc := &Config{Values: make(map[string]string)}",
+      "meaning": "make และ new ต่างกันอย่างไร?",
+      "example": "new(T) allocates zeroed memory and returns *T pointer. make(T, args) initializes slices, maps, and channels with internal data structures - returns T (not pointer). new is rarely used; make is essential for slices/maps/channels because they need initialization, not just memory allocation.",
+      "exampleTranslation": "new(T) allocate zeroed memory และ return *T pointer make(T, args) initialize slices, maps และ channels พร้อม internal data structures - return T (ไม่ใช่ pointer) new ไม่ค่อยใช้ make จำเป็นสำหรับ slices/maps/channels เพราะมันต้อง initialization ไม่ใช่แค่ memory allocation"
+    },
+    {
+      "vocab": "What is iota in Go?",
+      "pronunciation": "// Basic counter\nconst (\n    A = iota  // 0\n    B         // 1\n    C         // 2\n)\n\n// Skip values\nconst (\n    _ = iota  // 0 (ignored)\n    KB = 1 << (10 * iota)  // 1 << 10 = 1024\n    MB                      // 1 << 20\n    GB                      // 1 << 30\n)\n\n// Bit flags\nconst (\n    FlagRead = 1 << iota   // 1\n    FlagWrite              // 2\n    FlagExec               // 4\n)\nperm := FlagRead | FlagWrite  // 3\n\n// Reset in new const block\nconst (\n    X = iota  // 0 (reset)\n    Y         // 1\n)\n\n// Multiple per line\nconst (\n    A, B = iota, iota + 10  // 0, 10\n    C, D                     // 1, 11\n)",
+      "meaning": "iota ใน Go คืออะไร?",
+      "example": "iota is a constant generator that starts at 0 and increments by 1 for each const in a block. Resets to 0 in new const blocks. Used for enums, bit flags, and computed constants. Can use expressions with iota. Skip values with blank identifier _. Multiple iota on same line have same value.",
+      "exampleTranslation": "iota คือ constant generator ที่เริ่มที่ 0 และเพิ่มขึ้น 1 สำหรับแต่ละ const ใน block Reset เป็น 0 ใน const blocks ใหม่ ใช้สำหรับ enums, bit flags และ computed constants ใช้ expressions กับ iota ได้ ข้าม values ด้วย blank identifier _ หลาย iota บรรทัดเดียวกันมีค่าเท่ากัน"
+    },
+    {
+      "vocab": "What is a blank identifier (_)?",
+      "pronunciation": "// Ignore return values\n_, err := doSomething()\nif err != nil { }\n\nresult, _ := strconv.Atoi(\"123\")  // ignore error (risky!)\n\n// Import for side effects only\nimport _ \"github.com/lib/pq\"  // registers driver\n\n// Ignore loop index/value\nfor _, value := range items { }\nfor index, _ := range items { }  // same as: for index := range\nfor range items { }  // Go 1.22+\n\n// Compile-time interface check\nvar _ io.Reader = (*MyType)(nil)\n\n// Skip iota values\nconst (\n    _ = iota  // 0, skipped\n    One       // 1\n    Two       // 2\n)",
+      "meaning": "Blank identifier (_) คืออะไร?",
+      "example": "Blank identifier _ discards values. Use to ignore unwanted return values, loop variables, or import packages only for side effects (init). Also for compile-time interface implementation checks. Go requires using all declared variables - _ is the escape hatch when you don't need a value.",
+      "exampleTranslation": "Blank identifier _ ทิ้ง values ใช้เพื่อ ignore return values ที่ไม่ต้องการ, loop variables หรือ import packages สำหรับ side effects เท่านั้น (init) ยังใช้สำหรับ compile-time interface implementation checks Go บังคับใช้ทุก declared variables - _ คือทางออกเมื่อไม่ต้องการค่า"
+    },
+    {
+      "vocab": "What is a variadic function?",
+      "pronunciation": "// Variadic function\nfunc sum(nums ...int) int {\n    total := 0\n    for _, n := range nums {\n        total += n\n    }\n    return total\n}\n\nsum(1, 2, 3)        // 6\nsum(1, 2, 3, 4, 5)  // 15\nsum()               // 0\n\n// Pass slice to variadic\nnums := []int{1, 2, 3}\nsum(nums...)  // unpack slice\n\n// Mixed parameters\nfunc printf(format string, args ...interface{}) {\n    // format is required, args is variadic\n}\n\n// Variadic must be last parameter\nfunc valid(a int, b ...string) {}   // OK\n// func invalid(a ...int, b string) {}  // Error",
+      "meaning": "Variadic function คืออะไร?",
+      "example": "Variadic functions accept variable number of arguments using ...T syntax. The parameter becomes a slice inside the function. Must be the last parameter. Use slice... to unpack a slice into variadic arguments. Common in fmt.Printf, append(), and logging functions.",
+      "exampleTranslation": "Variadic functions รับ arguments จำนวนไม่จำกัดโดยใช้ syntax ...T Parameter กลายเป็น slice ใน function ต้องเป็น parameter สุดท้าย ใช้ slice... เพื่อ unpack slice เป็น variadic arguments พบบ่อยใน fmt.Printf, append() และ logging functions"
+    },
+    {
+      "vocab": "What is the range keyword?",
+      "pronunciation": "// Range over slice\nnums := []int{10, 20, 30}\nfor index, value := range nums {\n    fmt.Println(index, value)\n}\n\n// Range over map (random order)\nm := map[string]int{\"a\": 1, \"b\": 2}\nfor key, value := range m { }\nfor key := range m { }  // keys only\n\n// Range over string (runes, not bytes)\nfor index, runeValue := range \"hello世界\" {\n    fmt.Printf(\"%d: %c\\n\", index, runeValue)\n}\n\n// Range over channel\nfor value := range ch {\n    // until channel is closed\n}\n\n// Go 1.22: range over integer\nfor i := range 5 {\n    fmt.Println(i)  // 0, 1, 2, 3, 4\n}",
+      "meaning": "range keyword คืออะไร?",
+      "example": "range iterates over arrays, slices, maps, strings, and channels. Returns (index, value) for slices/arrays, (key, value) for maps, (index, rune) for strings, just value for channels. Use _ to ignore unwanted values. Map iteration order is random. Go 1.22+ allows range over integers.",
+      "exampleTranslation": "range iterate บน arrays, slices, maps, strings และ channels Return (index, value) สำหรับ slices/arrays, (key, value) สำหรับ maps, (index, rune) สำหรับ strings, แค่ value สำหรับ channels ใช้ _ เพื่อ ignore values ที่ไม่ต้องการ Map iteration order เป็น random Go 1.22+ อนุญาต range บน integers"
+    },
+    {
+      "vocab": "What is a goroutine leak?",
+      "pronunciation": "// Leak: blocked forever on channel\nfunc leak() {\n    ch := make(chan int)\n    go func() {\n        val := <-ch  // blocks forever, no sender\n        fmt.Println(val)\n    }()\n    // function returns, goroutine stuck\n}\n\n// Fix: use context for cancellation\nfunc noLeak(ctx context.Context) {\n    ch := make(chan int)\n    go func() {\n        select {\n        case val := <-ch:\n            fmt.Println(val)\n        case <-ctx.Done():\n            return  // cleanup\n        }\n    }()\n}\n\n// Leak: unbuffered send with no receiver\nfunc leak2() {\n    ch := make(chan int)\n    go func() {\n        ch <- 42  // blocks forever\n    }()\n    return  // goroutine stuck\n}\n\n// Fix: buffered channel\nch := make(chan int, 1)",
+      "meaning": "Goroutine leak คืออะไร?",
+      "example": "Goroutine leak occurs when goroutines are blocked forever and never terminate, consuming memory. Common causes: blocked channel operations without cancellation, forgotten goroutines, missing close(). Fix with: context cancellation, timeouts, buffered channels, or proper cleanup. Use pprof to detect leaks.",
+      "exampleTranslation": "Goroutine leak เกิดเมื่อ goroutines ถูก block ตลอดไปและไม่ terminate กิน memory สาเหตุที่พบบ่อย: blocked channel operations ไม่มี cancellation, goroutines ที่ลืม, ไม่มี close() แก้ด้วย: context cancellation, timeouts, buffered channels หรือ cleanup ที่ถูกต้อง ใช้ pprof เพื่อตรวจหา leaks"
+    },
+    {
+      "vocab": "What is the difference between concurrency and parallelism?",
+      "pronunciation": "// Concurrency: dealing with multiple things\n// (may run on single core, interleaved)\nfunc concurrent() {\n    go task1()  // scheduled\n    go task2()  // scheduled\n    go task3()  // scheduled\n    // Tasks may interleave on 1 CPU\n}\n\n// Parallelism: doing multiple things simultaneously\n// (requires multiple cores)\nfunc parallel() {\n    runtime.GOMAXPROCS(4)  // use 4 cores\n    // Now goroutines can run truly in parallel\n}\n\n// Example: web server\nfunc handleRequests() {\n    for {\n        conn := accept()\n        go handleConn(conn)  // concurrent handling\n    }\n    // 1000 connections don't need 1000 cores\n    // Concurrency handles them efficiently\n}",
+      "meaning": "Concurrency และ parallelism ต่างกันอย่างไร?",
+      "example": "Concurrency is about structure - dealing with multiple things at once (can be single core, time-sliced). Parallelism is about execution - doing multiple things simultaneously (requires multiple cores). Go is designed for concurrency with goroutines. GOMAXPROCS controls parallelism. Concurrency enables parallelism but doesn't require it.",
+      "exampleTranslation": "Concurrency คือเรื่องของ structure - จัดการหลายอย่างพร้อมกัน (core เดียวได้ time-sliced) Parallelism คือเรื่องของ execution - ทำหลายอย่างพร้อมกันจริงๆ (ต้องมีหลาย cores) Go ออกแบบมาสำหรับ concurrency ด้วย goroutines GOMAXPROCS ควบคุม parallelism Concurrency เปิดให้ parallelism แต่ไม่ได้บังคับ"
+    },
+    {
+      "vocab": "What is json encoding and decoding in Go?",
+      "pronunciation": "import \"encoding/json\"\n\ntype User struct {\n    Name  string `json:\"name\"`\n    Age   int    `json:\"age\"`\n    Email string `json:\"email,omitempty\"`\n    Pass  string `json:\"-\"`  // ignore\n}\n\n// Struct to JSON\nuser := User{Name: \"John\", Age: 30}\ndata, err := json.Marshal(user)\n// {\"name\":\"John\",\"age\":30}\n\n// Pretty print\ndata, _ := json.MarshalIndent(user, \"\", \"  \")\n\n// JSON to struct\nvar user User\nerr := json.Unmarshal([]byte(jsonStr), &user)\n\n// Streaming\nencoder := json.NewEncoder(writer)\nencoder.Encode(user)\n\ndecoder := json.NewDecoder(reader)\ndecoder.Decode(&user)\n\n// Dynamic JSON\nvar result map[string]interface{}\njson.Unmarshal(data, &result)",
+      "meaning": "JSON encoding และ decoding ใน Go ทำอย่างไร?",
+      "example": "encoding/json package handles JSON. Marshal converts struct to JSON bytes, Unmarshal parses JSON into struct. Use struct tags to customize field names and behavior: `json:\"name\"` renames, omitempty skips empty values, - ignores field. NewEncoder/NewDecoder for streaming. Use map[string]interface{} for dynamic JSON.",
+      "exampleTranslation": "encoding/json package จัดการ JSON Marshal แปลง struct เป็น JSON bytes, Unmarshal parse JSON เข้า struct ใช้ struct tags เพื่อ customize field names และ behavior: `json:\"name\"` เปลี่ยนชื่อ, omitempty ข้ามค่าว่าง, - ignore field NewEncoder/NewDecoder สำหรับ streaming ใช้ map[string]interface{} สำหรับ dynamic JSON"
+    },
+    {
+      "vocab": "What is http package in Go?",
+      "pronunciation": "import \"net/http\"\n\n// Simple handler\nfunc helloHandler(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprintf(w, \"Hello, %s!\", r.URL.Path[1:])\n}\n\n// Start server\nhttp.HandleFunc(\"/\", helloHandler)\nhttp.ListenAndServe(\":8080\", nil)\n\n// Custom handler (implements http.Handler)\ntype apiHandler struct{}\n\nfunc (h *apiHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {\n    w.Header().Set(\"Content-Type\", \"application/json\")\n    json.NewEncoder(w).Encode(map[string]string{\"status\": \"ok\"})\n}\n\n// HTTP client\nresp, err := http.Get(\"https://api.example.com/data\")\ndefer resp.Body.Close()\nbody, _ := io.ReadAll(resp.Body)\n\n// Custom client with timeout\nclient := &http.Client{Timeout: 10 * time.Second}\nresp, err := client.Get(url)",
+      "meaning": "http package ใน Go ใช้อย่างไร?",
+      "example": "net/http provides HTTP client and server. For servers: HandleFunc registers handlers, ListenAndServe starts server. Handlers receive ResponseWriter and Request. For clients: Get/Post/Do methods, remember to close response body. Use custom Client for timeouts and transport configuration.",
+      "exampleTranslation": "net/http ให้ HTTP client และ server สำหรับ servers: HandleFunc register handlers, ListenAndServe start server Handlers รับ ResponseWriter และ Request สำหรับ clients: Get/Post/Do methods อย่าลืมปิด response body ใช้ custom Client สำหรับ timeouts และ transport configuration"
+    },
+    {
+      "vocab": "What is testing in Go?",
+      "pronunciation": "// math_test.go\nimport \"testing\"\n\n// Test function\nfunc TestAdd(t *testing.T) {\n    result := Add(2, 3)\n    if result != 5 {\n        t.Errorf(\"Add(2,3) = %d; want 5\", result)\n    }\n}\n\n// Table-driven tests\nfunc TestAddTable(t *testing.T) {\n    tests := []struct {\n        a, b, want int\n    }{\n        {1, 2, 3},\n        {0, 0, 0},\n        {-1, 1, 0},\n    }\n    for _, tc := range tests {\n        got := Add(tc.a, tc.b)\n        if got != tc.want {\n            t.Errorf(\"Add(%d,%d) = %d; want %d\", tc.a, tc.b, got, tc.want)\n        }\n    }\n}\n\n// Subtests\nfunc TestAddSubtest(t *testing.T) {\n    t.Run(\"positive\", func(t *testing.T) { })\n    t.Run(\"negative\", func(t *testing.T) { })\n}\n\n// Benchmark\nfunc BenchmarkAdd(b *testing.B) {\n    for i := 0; i < b.N; i++ {\n        Add(1, 2)\n    }\n}\n\n// Run: go test -v -bench=.",
+      "meaning": "Testing ใน Go ทำอย่างไร?",
+      "example": "Go has built-in testing via 'go test'. Test files end with _test.go. Test functions start with Test and take *testing.T. Use t.Error/t.Errorf for failures. Table-driven tests are idiomatic. Subtests with t.Run enable selective running. Benchmarks start with Benchmark and use *testing.B.",
+      "exampleTranslation": "Go มี built-in testing ผ่าน 'go test' Test files ลงท้ายด้วย _test.go Test functions เริ่มด้วย Test และรับ *testing.T ใช้ t.Error/t.Errorf สำหรับ failures Table-driven tests เป็น idiomatic Subtests ด้วย t.Run เปิดให้รันเลือกได้ Benchmarks เริ่มด้วย Benchmark และใช้ *testing.B"
+    },
+    {
+      "vocab": "What is go mod?",
+      "pronunciation": "# Initialize module\ngo mod init github.com/user/project\n\n# Add dependency\ngo get github.com/gin-gonic/gin@v1.9.0\ngo get github.com/gin-gonic/gin@latest\n\n# Update dependencies\ngo get -u ./...          # update all\ngo get -u github.com/pkg  # update specific\n\n# Clean up unused\ngo mod tidy\n\n# Download dependencies\ngo mod download\n\n# View dependency graph\ngo mod graph\n\n# go.mod file\nmodule github.com/user/project\n\ngo 1.21\n\nrequire (\n    github.com/gin-gonic/gin v1.9.0\n)\n\n# go.sum contains checksums for security",
+      "meaning": "go mod คืออะไร?",
+      "example": "go mod is Go's dependency management system (Go 1.11+). go.mod declares module path and dependencies. go.sum contains checksums for security. Key commands: init (create module), get (add/update deps), tidy (cleanup), download (fetch deps). Enables reproducible builds with semantic versioning.",
+      "exampleTranslation": "go mod คือระบบ dependency management ของ Go (Go 1.11+) go.mod ประกาศ module path และ dependencies go.sum มี checksums สำหรับ security Commands สำคัญ: init (สร้าง module), get (add/update deps), tidy (cleanup), download (fetch deps) เปิดให้ reproducible builds ด้วย semantic versioning"
+    },
+    {
+      "vocab": "What is time package in Go?",
+      "pronunciation": "import \"time\"\n\n// Current time\nnow := time.Now()\n\n// Create specific time\nt := time.Date(2024, time.January, 15, 10, 30, 0, 0, time.UTC)\n\n// Parse string\nt, err := time.Parse(\"2006-01-02\", \"2024-01-15\")\nt, err := time.Parse(time.RFC3339, \"2024-01-15T10:30:00Z\")\n\n// Format (use reference time: Mon Jan 2 15:04:05 MST 2006)\ns := now.Format(\"2006-01-02 15:04:05\")\ns := now.Format(time.RFC3339)\n\n// Duration\nduration := 5 * time.Second\ntime.Sleep(duration)\n\n// Timers and tickers\ntimer := time.NewTimer(2 * time.Second)\n<-timer.C  // blocks until timer fires\n\nticker := time.NewTicker(1 * time.Second)\nfor t := range ticker.C {\n    fmt.Println(\"Tick at\", t)\n}\nticker.Stop()\n\n// Timeout\nselect {\ncase <-ch:\ncase <-time.After(5 * time.Second):\n    fmt.Println(\"Timeout\")\n}",
+      "meaning": "time package ใน Go ใช้อย่างไร?",
+      "example": "time package handles dates, times, and durations. Parse/Format use reference time 'Mon Jan 2 15:04:05 MST 2006' (1-2-3-4-5-6-7). Duration type for time spans. Timer fires once, Ticker fires repeatedly. time.After returns channel for timeouts in select. Always handle timezones explicitly.",
+      "exampleTranslation": "time package จัดการ dates, times และ durations Parse/Format ใช้ reference time 'Mon Jan 2 15:04:05 MST 2006' (1-2-3-4-5-6-7) Duration type สำหรับช่วงเวลา Timer fire ครั้งเดียว Ticker fire ซ้ำๆ time.After return channel สำหรับ timeouts ใน select จัดการ timezones explicitly เสมอ"
+    },
+    {
+      "vocab": "What are Go proverbs for best practices?",
+      "pronunciation": "// Don't communicate by sharing memory;\n// share memory by communicating.\nch := make(chan Data)\ngo func() { ch <- processData() }()\nresult := <-ch\n\n// The bigger the interface, the weaker the abstraction.\ntype Reader interface { Read([]byte) (int, error) }  // Good\ntype Everything interface { Read(); Write(); Close(); ... }  // Bad\n\n// Make the zero value useful.\ntype Buffer struct { data []byte }  // zero value is ready to use\nvar buf Buffer\nbuf.Write([]byte(\"hello\"))  // works!\n\n// Errors are values.\nif err != nil {\n    return fmt.Errorf(\"failed to connect: %w\", err)\n}\n\n// Don't panic.\n// Return errors, don't panic\n\n// A little copying is better than a little dependency.\n// Copy small utility code instead of importing huge library",
+      "meaning": "Go proverbs สำหรับ best practices มีอะไรบ้าง?",
+      "example": "Key Go proverbs: 1) Share memory by communicating (use channels), 2) Small interfaces are better, 3) Make zero values useful, 4) Errors are values (handle explicitly), 5) Don't panic (return errors), 6) A little copying > little dependency. These guide idiomatic Go code.",
+      "exampleTranslation": "Go proverbs สำคัญ: 1) Share memory by communicating (ใช้ channels), 2) Small interfaces ดีกว่า, 3) ทำ zero values ให้ useful, 4) Errors are values (handle explicitly), 5) อย่า panic (return errors), 6) Copy เล็กน้อย > dependency เล็กน้อย สิ่งเหล่านี้เป็นแนวทางสำหรับ idiomatic Go code"
+    },
+    {
+      "vocab": "What is interface nil gotcha?",
+      "pronunciation": "type MyError struct { msg string }\nfunc (e *MyError) Error() string { return e.msg }\n\nfunc getError() error {\n    var err *MyError = nil\n    return err  // returns non-nil interface!\n}\n\nfunc main() {\n    err := getError()\n    if err != nil {\n        fmt.Println(\"Error!\")  // This prints!\n    }\n}\n\n// Why? Interface has (type, value)\n// err = (*MyError, nil) - type is not nil!\n\n// Fix: return nil directly\nfunc getError() error {\n    var err *MyError = nil\n    if err == nil {\n        return nil  // return untyped nil\n    }\n    return err\n}\n\n// Or check more carefully\nif err != nil && !reflect.ValueOf(err).IsNil() { }",
+      "meaning": "Interface nil gotcha คืออะไร?",
+      "example": "An interface in Go has two components: (type, value). An interface is nil only when both are nil. If you assign a nil pointer to an interface, the interface has (type=*T, value=nil) which is NOT nil. This is a common source of bugs. Always return explicit nil for interface types.",
+      "exampleTranslation": "Interface ใน Go มีสองส่วน: (type, value) Interface เป็น nil เฉพาะเมื่อทั้งสองเป็น nil ถ้า assign nil pointer ให้ interface มันจะมี (type=*T, value=nil) ซึ่งไม่ใช่ nil นี่เป็นแหล่ง bugs ที่พบบ่อย Return explicit nil สำหรับ interface types เสมอ"
+    },
+    {
+      "vocab": "What is slice capacity gotcha?",
+      "pronunciation": "// Slicing shares underlying array\noriginal := []int{1, 2, 3, 4, 5}\nslice := original[1:3]  // [2, 3]\n\n// Append may modify original!\nslice = append(slice, 100)\nfmt.Println(original)  // [1, 2, 3, 100, 5] - modified!\n\n// Because slice has capacity to grow into original\nfmt.Println(cap(slice))  // 4 (can grow into original)\n\n// Fix 1: full slice expression (limits capacity)\nslice := original[1:3:3]  // len=2, cap=2\nslice = append(slice, 100)  // allocates new array\nfmt.Println(original)  // [1, 2, 3, 4, 5] - unchanged\n\n// Fix 2: copy explicitly\nslice := make([]int, 2)\ncopy(slice, original[1:3])\n\n// Fix 3: append to nil slice\nvar slice []int\nslice = append(slice, original[1:3]...)",
+      "meaning": "Slice capacity gotcha คืออะไร?",
+      "example": "When slicing, the new slice shares the underlying array and may have extra capacity. Appending within capacity modifies the original array! Use full slice expression [low:high:max] to limit capacity, or copy explicitly. This is a common source of subtle bugs in Go.",
+      "exampleTranslation": "เมื่อ slicing slice ใหม่แชร์ underlying array และอาจมี extra capacity Append ภายใน capacity แก้ไข array เดิม! ใช้ full slice expression [low:high:max] เพื่อจำกัด capacity หรือ copy explicitly นี่เป็นแหล่ง bugs ที่ subtle ที่พบบ่อยใน Go"
+    },
+    {
+      "vocab": "What is loop variable capture gotcha?",
+      "pronunciation": "// Wrong: all goroutines see final value\nfor i := 0; i < 3; i++ {\n    go func() {\n        fmt.Println(i)  // prints 3, 3, 3\n    }()\n}\n\n// Fix 1: pass as argument\nfor i := 0; i < 3; i++ {\n    go func(n int) {\n        fmt.Println(n)  // prints 0, 1, 2\n    }(i)\n}\n\n// Fix 2: shadow variable\nfor i := 0; i < 3; i++ {\n    i := i  // shadow, creates new variable\n    go func() {\n        fmt.Println(i)  // prints 0, 1, 2\n    }()\n}\n\n// Go 1.22+: fixed! Each iteration has its own variable\nfor i := 0; i < 3; i++ {\n    go func() {\n        fmt.Println(i)  // prints 0, 1, 2 in Go 1.22+\n    }()\n}",
+      "meaning": "Loop variable capture gotcha คืออะไร?",
+      "example": "Before Go 1.22, loop variables were shared across iterations. Closures captured the variable reference, not its value, seeing the final value. Fix by passing as argument or shadowing. Go 1.22+ creates new variable per iteration, fixing this common gotcha. Still be careful with pre-1.22 code.",
+      "exampleTranslation": "ก่อน Go 1.22 loop variables ถูกแชร์ข้าม iterations Closures จับ variable reference ไม่ใช่ค่า เห็นค่าสุดท้าย แก้โดยส่งเป็น argument หรือ shadowing Go 1.22+ สร้าง variable ใหม่ต่อ iteration แก้ gotcha นี้ ยังต้องระวังกับ code ก่อน 1.22"
+    },
+    {
+      "vocab": "What is string immutability in Go?",
+      "pronunciation": "// Strings are immutable\ns := \"hello\"\n// s[0] = 'H'  // Error: cannot assign\n\n// String concatenation creates new strings\ns = s + \" world\"  // allocates new string\n\n// Efficient concatenation with strings.Builder\nvar builder strings.Builder\nfor i := 0; i < 1000; i++ {\n    builder.WriteString(\"hello\")\n}\nresult := builder.String()\n\n// Or with bytes.Buffer\nvar buf bytes.Buffer\nbuf.WriteString(\"hello\")\n\n// Convert to []byte to modify\nb := []byte(s)\nb[0] = 'H'\ns = string(b)  // \"Hello\"\n\n// String is []byte view, but range gives runes\nfor i, r := range \"hello世界\" {\n    fmt.Printf(\"%d: %c\\n\", i, r)  // runes, not bytes\n}",
+      "meaning": "String immutability ใน Go คืออะไร?",
+      "example": "Go strings are immutable byte sequences. Cannot modify individual characters. Concatenation creates new strings (inefficient in loops). Use strings.Builder or bytes.Buffer for efficient building. Convert to []byte to modify, then back to string. Ranging over string yields runes (Unicode code points), not bytes.",
+      "exampleTranslation": "Go strings เป็น immutable byte sequences แก้ไข characters แต่ละตัวไม่ได้ Concatenation สร้าง strings ใหม่ (ไม่ efficient ใน loops) ใช้ strings.Builder หรือ bytes.Buffer สำหรับ efficient building แปลงเป็น []byte เพื่อแก้ไข แล้วแปลงกลับเป็น string Range บน string ให้ runes (Unicode code points) ไม่ใช่ bytes"
+    },
+    {
+      "vocab": "What is defer evaluation timing?",
+      "pronunciation": "// Arguments evaluated immediately\nfunc example() {\n    x := 10\n    defer fmt.Println(x)  // captures 10\n    x = 20\n}  // prints 10, not 20\n\n// Use closure to capture current value at defer time\nfunc example2() {\n    x := 10\n    defer func() {\n        fmt.Println(x)  // captures variable, not value\n    }()\n    x = 20\n}  // prints 20\n\n// Named return values with defer\nfunc example3() (result int) {\n    defer func() {\n        result++  // modifies return value!\n    }()\n    return 10\n}  // returns 11!\n\n// Common pattern: error handling\nfunc readFile() (err error) {\n    f, err := os.Open(\"file.txt\")\n    if err != nil { return }\n    defer func() {\n        if closeErr := f.Close(); closeErr != nil && err == nil {\n            err = closeErr\n        }\n    }()\n    // ...\n}",
+      "meaning": "Defer evaluation timing เป็นอย่างไร?",
+      "example": "Defer arguments are evaluated immediately when defer is called, but execution is delayed. To capture current value at execution time, use closure. With named return values, deferred functions can modify the return value. This enables patterns like error wrapping and resource cleanup with error handling.",
+      "exampleTranslation": "Defer arguments ถูก evaluate ทันทีเมื่อเรียก defer แต่ execution ถูก delay เพื่อจับค่าปัจจุบันตอน execution ให้ใช้ closure กับ named return values deferred functions สามารถแก้ไข return value ได้ นี่เปิดให้ patterns เช่น error wrapping และ resource cleanup พร้อม error handling"
+    }
+  ]
+}

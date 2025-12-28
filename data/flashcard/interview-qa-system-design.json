@@ -1,0 +1,294 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - System Design",
+    "description": "Common system design interview questions and answers",
+    "category": "Interview",
+    "tags": ["interview", "english", "system-design", "architecture", "job"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "How would you approach a system design interview?",
+      "pronunciation": "",
+      "meaning": "คุณจะ approach system design interview อย่างไร?",
+      "example": "I follow a structured approach: 1) Clarify requirements and constraints (users, scale, features), 2) Define high-level architecture, 3) Deep dive into components, 4) Discuss trade-offs, 5) Address bottlenecks and scaling. I always ask questions about expected scale, read/write ratio, latency requirements, and acceptable downtime before designing.",
+      "exampleTranslation": "ผมใช้แนวทางที่มีโครงสร้าง: 1) Clarify requirements และ constraints (users, scale, features), 2) กำหนด high-level architecture, 3) Deep dive เข้าไปใน components, 4) Discuss trade-offs, 5) แก้ไข bottlenecks และ scaling ผมถามเกี่ยวกับ expected scale, read/write ratio, latency requirements และ acceptable downtime ก่อน design เสมอ"
+    },
+    {
+      "vocab": "Explain the CAP theorem.",
+      "pronunciation": "CAP = Consistency, Availability, Partition tolerance",
+      "meaning": "อธิบาย CAP theorem",
+      "example": "CAP theorem states that a distributed system can only guarantee two of three properties: Consistency (all nodes see same data), Availability (every request gets a response), Partition tolerance (system works despite network failures). Since network partitions are inevitable, we choose between CP (consistent but may be unavailable) or AP (available but may be inconsistent).",
+      "exampleTranslation": "CAP theorem ระบุว่า distributed system รับประกันได้แค่สองจากสามคุณสมบัติ: Consistency (ทุก nodes เห็นข้อมูลเหมือนกัน), Availability (ทุก request ได้ response), Partition tolerance (ระบบทำงานแม้ network failures) เนื่องจาก network partitions หลีกเลี่ยงไม่ได้ เราเลือกระหว่าง CP (consistent แต่อาจ unavailable) หรือ AP (available แต่อาจ inconsistent)"
+    },
+    {
+      "vocab": "What is eventual consistency?",
+      "pronunciation": "",
+      "meaning": "Eventual consistency คืออะไร?",
+      "example": "Eventual consistency means that given enough time without new updates, all replicas will eventually converge to the same value. It prioritizes availability over immediate consistency. Examples include DNS propagation and social media feeds. It's acceptable when slight delays in data sync don't cause business problems, but not for banking transactions.",
+      "exampleTranslation": "Eventual consistency หมายความว่าถ้ามีเวลาเพียงพอโดยไม่มี updates ใหม่ ทุก replicas จะ converge ไปที่ค่าเดียวกันในที่สุด มันให้ความสำคัญกับ availability มากกว่า immediate consistency ตัวอย่างเช่น DNS propagation และ social media feeds ยอมรับได้เมื่อความล่าช้าเล็กน้อยในการ sync ข้อมูลไม่ทำให้เกิดปัญหาทางธุรกิจ แต่ไม่เหมาะสำหรับ banking transactions"
+    },
+    {
+      "vocab": "What is a load balancer and how does it work?",
+      "pronunciation": "",
+      "meaning": "Load balancer คืออะไร และทำงานอย่างไร?",
+      "example": "A load balancer distributes incoming traffic across multiple servers to ensure no single server is overwhelmed. Algorithms include: Round Robin (equal distribution), Least Connections (sends to least busy), IP Hash (consistent routing), and Weighted (based on server capacity). Load balancers also perform health checks and remove unhealthy servers from the pool.",
+      "exampleTranslation": "Load balancer กระจาย incoming traffic ข้ามหลาย servers เพื่อให้แน่ใจว่าไม่มี server ใดรับภาระหนักเกินไป Algorithms รวมถึง: Round Robin (กระจายเท่าๆ กัน), Least Connections (ส่งไปที่ busy น้อยสุด), IP Hash (routing สม่ำเสมอ) และ Weighted (ตาม server capacity) Load balancers ยัง health check และเอา unhealthy servers ออกจาก pool"
+    },
+    {
+      "vocab": "What are the different types of load balancers?",
+      "pronunciation": "",
+      "meaning": "Load balancers มีกี่ประเภท?",
+      "example": "Layer 4 (Transport) load balancers route based on IP and TCP/UDP ports - fast but limited routing options. Layer 7 (Application) load balancers can inspect HTTP headers, cookies, and URLs for smarter routing - useful for A/B testing, sticky sessions, and path-based routing. Cloud providers offer managed options like AWS ALB/NLB, and software options include Nginx and HAProxy.",
+      "exampleTranslation": "Layer 4 (Transport) load balancers route ตาม IP และ TCP/UDP ports - เร็วแต่ routing options จำกัด Layer 7 (Application) load balancers ตรวจ HTTP headers, cookies และ URLs สำหรับ smarter routing - มีประโยชน์สำหรับ A/B testing, sticky sessions และ path-based routing Cloud providers มี managed options เช่น AWS ALB/NLB และ software options เช่น Nginx และ HAProxy"
+    },
+    {
+      "vocab": "How would you design a URL shortening service like bit.ly?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ URL shortening service เช่น bit.ly อย่างไร?",
+      "example": "Key components: 1) Generate unique short codes using base62 encoding of auto-increment ID or random generation with collision checking, 2) Store mapping in key-value store like Redis with SQL backup, 3) Cache popular URLs, 4) 301 redirect for SEO or 302 for tracking. For scale: use consistent hashing for distributed storage, pre-generate codes to avoid contention, and implement rate limiting.",
+      "exampleTranslation": "Components หลัก: 1) Generate unique short codes ด้วย base62 encoding ของ auto-increment ID หรือ random generation กับ collision checking, 2) เก็บ mapping ใน key-value store เช่น Redis พร้อม SQL backup, 3) Cache popular URLs, 4) 301 redirect สำหรับ SEO หรือ 302 สำหรับ tracking สำหรับ scale: ใช้ consistent hashing สำหรับ distributed storage, pre-generate codes หลีกเลี่ยง contention และ implement rate limiting"
+    },
+    {
+      "vocab": "How would you design Twitter's timeline feature?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ Twitter timeline feature อย่างไร?",
+      "example": "Two approaches: 1) Pull model - fetch tweets from followed users on request (slow for users following many people), 2) Push model (fan-out on write) - pre-compute timelines when tweets are posted (fast reads, expensive writes). Hybrid approach: use push for normal users, pull for celebrities with millions of followers. Store timelines in Redis, use sharding by user ID.",
+      "exampleTranslation": "สองแนวทาง: 1) Pull model - fetch tweets จาก users ที่ follow เมื่อ request (ช้าสำหรับ users ที่ follow คนเยอะ), 2) Push model (fan-out on write) - pre-compute timelines เมื่อ tweets ถูกโพสต์ (reads เร็ว, writes แพง) Hybrid approach: ใช้ push สำหรับ normal users, pull สำหรับ celebrities ที่มีผู้ติดตามหลายล้าน เก็บ timelines ใน Redis, ใช้ sharding ด้วย user ID"
+    },
+    {
+      "vocab": "How would you design a rate limiter?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ rate limiter อย่างไร?",
+      "example": "Algorithms: 1) Token Bucket - tokens added at fixed rate, requests consume tokens, 2) Sliding Window Log - track timestamps of requests, 3) Sliding Window Counter - combine fixed windows with weighted counts. For distributed systems, use Redis with Lua scripts for atomic operations. Consider per-user, per-IP, or per-API limits. Return 429 status with Retry-After header.",
+      "exampleTranslation": "Algorithms: 1) Token Bucket - tokens เพิ่มในอัตราคงที่, requests ใช้ tokens, 2) Sliding Window Log - track timestamps ของ requests, 3) Sliding Window Counter - รวม fixed windows กับ weighted counts สำหรับ distributed systems ใช้ Redis กับ Lua scripts สำหรับ atomic operations พิจารณา per-user, per-IP หรือ per-API limits Return 429 status พร้อม Retry-After header"
+    },
+    {
+      "vocab": "How would you design a chat application like WhatsApp?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ chat application เช่น WhatsApp อย่างไร?",
+      "example": "Key components: WebSocket servers for real-time messaging, message queue for reliable delivery, presence service for online status. Store messages in Cassandra (write-heavy). For delivery: send to recipient if online, else store and push notification. Group chats need fan-out logic. End-to-end encryption requires key exchange. Scale with consistent hashing to route users to specific servers.",
+      "exampleTranslation": "Components หลัก: WebSocket servers สำหรับ real-time messaging, message queue สำหรับ reliable delivery, presence service สำหรับ online status เก็บ messages ใน Cassandra (write-heavy) สำหรับ delivery: ส่งถึง recipient ถ้า online ไม่งั้นเก็บและ push notification Group chats ต้องมี fan-out logic End-to-end encryption ต้องการ key exchange Scale ด้วย consistent hashing เพื่อ route users ไป servers เฉพาะ"
+    },
+    {
+      "vocab": "What is consistent hashing?",
+      "pronunciation": "",
+      "meaning": "Consistent hashing คืออะไร?",
+      "example": "Consistent hashing maps both servers and keys to a ring using hash functions. Each key is assigned to the nearest server clockwise on the ring. When a server is added or removed, only keys near that server need remapping, minimizing data movement. Virtual nodes (multiple positions per server) improve load distribution. Used in distributed caches, databases, and load balancing.",
+      "exampleTranslation": "Consistent hashing map ทั้ง servers และ keys ไปยัง ring ด้วย hash functions แต่ละ key ถูก assign ไปยัง server ที่ใกล้ที่สุดตามเข็มนาฬิกาบน ring เมื่อ server ถูกเพิ่มหรือลบ แค่ keys ใกล้ server นั้นต้อง remap ลด data movement Virtual nodes (หลายตำแหน่งต่อ server) ช่วยกระจาย load ใช้ใน distributed caches, databases และ load balancing"
+    },
+    {
+      "vocab": "How do you design for high availability?",
+      "pronunciation": "",
+      "meaning": "คุณออกแบบเพื่อ high availability อย่างไร?",
+      "example": "Key strategies: eliminate single points of failure with redundancy, use multiple availability zones or regions, implement health checks and automatic failover, design for graceful degradation (serve stale data if needed), use circuit breakers to prevent cascade failures. Define SLAs (e.g., 99.99% uptime = 52 min downtime/year) and measure with proper monitoring.",
+      "exampleTranslation": "กลยุทธ์หลัก: กำจัด single points of failure ด้วย redundancy, ใช้หลาย availability zones หรือ regions, implement health checks และ automatic failover, ออกแบบ graceful degradation (serve stale data ถ้าจำเป็น), ใช้ circuit breakers ป้องกัน cascade failures กำหนด SLAs (เช่น 99.99% uptime = 52 นาที downtime/ปี) และวัดด้วย monitoring ที่เหมาะสม"
+    },
+    {
+      "vocab": "What is database replication?",
+      "pronunciation": "",
+      "meaning": "Database replication คืออะไร?",
+      "example": "Replication copies data across multiple database servers. Types: 1) Master-Slave: writes go to master, reads from slaves (read scaling), 2) Master-Master: writes to any node (write scaling, conflict handling needed), 3) Synchronous: ensures all replicas have data before confirming (consistent but slower), 4) Asynchronous: confirms before replication (faster but may lose data on failure).",
+      "exampleTranslation": "Replication คัดลอกข้อมูลข้ามหลาย database servers ประเภท: 1) Master-Slave: writes ไป master, reads จาก slaves (read scaling), 2) Master-Master: writes ไป node ไหนก็ได้ (write scaling, ต้อง handle conflicts), 3) Synchronous: รับประกันทุก replicas มีข้อมูลก่อน confirm (consistent แต่ช้ากว่า), 4) Asynchronous: confirm ก่อน replication (เร็วกว่าแต่อาจเสียข้อมูลเมื่อ failure)"
+    },
+    {
+      "vocab": "How would you design a notification system?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ notification system อย่างไร?",
+      "example": "Components: notification service to handle requests, message queue for reliability, separate workers for each channel (email, SMS, push). Store user preferences and device tokens. Implement templating for messages, rate limiting per user, and retry logic with exponential backoff. Use third-party services (SendGrid, Twilio, FCM) for actual delivery. Track delivery status and analytics.",
+      "exampleTranslation": "Components: notification service จัดการ requests, message queue สำหรับ reliability, workers แยกสำหรับแต่ละ channel (email, SMS, push) เก็บ user preferences และ device tokens Implement templating สำหรับ messages, rate limiting ต่อ user และ retry logic ด้วย exponential backoff ใช้ third-party services (SendGrid, Twilio, FCM) สำหรับ delivery จริง Track delivery status และ analytics"
+    },
+    {
+      "vocab": "What is CDN and when would you use it?",
+      "pronunciation": "CDN = Content Delivery Network",
+      "meaning": "CDN คืออะไร และเมื่อไหร่ควรใช้?",
+      "example": "A CDN is a network of geographically distributed servers that cache and serve content closer to users, reducing latency. Use for: static assets (images, CSS, JS), video streaming, and API responses that can be cached. Types: Push CDN (you upload content) and Pull CDN (caches on first request). Popular options: CloudFlare, AWS CloudFront, Akamai.",
+      "exampleTranslation": "CDN คือ network ของ servers ที่กระจายตามภูมิศาสตร์ที่ cache และ serve content ใกล้ users มากขึ้น ลด latency ใช้สำหรับ: static assets (images, CSS, JS), video streaming และ API responses ที่ cache ได้ ประเภท: Push CDN (คุณ upload content) และ Pull CDN (cache เมื่อ request แรก) ตัวเลือกยอดนิยม: CloudFlare, AWS CloudFront, Akamai"
+    },
+    {
+      "vocab": "How would you design a distributed cache?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ distributed cache อย่างไร?",
+      "example": "Use consistent hashing to distribute keys across cache nodes. Implement replication for fault tolerance. Handle cache misses with read-through or cache-aside patterns. Set appropriate TTLs and implement eviction policies (LRU, LFU). For hot keys, use local caching or key replication. Monitor hit rates and memory usage. Redis Cluster or Memcached are common choices.",
+      "exampleTranslation": "ใช้ consistent hashing กระจาย keys ข้าม cache nodes Implement replication สำหรับ fault tolerance Handle cache misses ด้วย read-through หรือ cache-aside patterns ตั้ง TTLs ที่เหมาะสมและ implement eviction policies (LRU, LFU) สำหรับ hot keys ใช้ local caching หรือ key replication Monitor hit rates และ memory usage Redis Cluster หรือ Memcached เป็นตัวเลือกทั่วไป"
+    },
+    {
+      "vocab": "What is a message queue and when would you use it?",
+      "pronunciation": "",
+      "meaning": "Message queue คืออะไร และเมื่อไหร่ควรใช้?",
+      "example": "A message queue decouples producers and consumers, enabling asynchronous processing. Use cases: task queues for background jobs, event-driven architectures, load leveling during traffic spikes, and reliable delivery with retries. Key features: persistence, acknowledgments, dead letter queues, and ordering guarantees. Choose based on throughput needs: Redis for simple queues, RabbitMQ for complex routing, Kafka for streaming.",
+      "exampleTranslation": "Message queue แยก producers และ consumers ทำให้ asynchronous processing ได้ Use cases: task queues สำหรับ background jobs, event-driven architectures, load leveling ระหว่าง traffic spikes และ reliable delivery กับ retries Features หลัก: persistence, acknowledgments, dead letter queues และ ordering guarantees เลือกตาม throughput needs: Redis สำหรับ simple queues, RabbitMQ สำหรับ complex routing, Kafka สำหรับ streaming"
+    },
+    {
+      "vocab": "How would you design YouTube or Netflix?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ YouTube หรือ Netflix อย่างไร?",
+      "example": "Key components: 1) Video upload and processing pipeline (transcode to multiple resolutions/formats), 2) Object storage (S3) for video files, 3) CDN for delivery, 4) Adaptive bitrate streaming (HLS/DASH), 5) Metadata service for video info, 6) Recommendation engine. Challenges: storage costs, encoding at scale, regional content delivery, and handling viral content with cache warming.",
+      "exampleTranslation": "Components หลัก: 1) Video upload และ processing pipeline (transcode เป็นหลาย resolutions/formats), 2) Object storage (S3) สำหรับ video files, 3) CDN สำหรับ delivery, 4) Adaptive bitrate streaming (HLS/DASH), 5) Metadata service สำหรับ video info, 6) Recommendation engine ความท้าทาย: storage costs, encoding at scale, regional content delivery และ handling viral content ด้วย cache warming"
+    },
+    {
+      "vocab": "How would you design a search engine like Google?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ search engine เช่น Google อย่างไร?",
+      "example": "Core components: 1) Web crawler to discover and fetch pages, 2) Indexer to process and store content with inverted index, 3) Query processor for parsing and ranking, 4) PageRank or similar for relevance scoring. Scale with MapReduce for indexing, shard index by term or document. Cache popular queries. Implement spell correction, autocomplete, and personalization.",
+      "exampleTranslation": "Components หลัก: 1) Web crawler ค้นหาและ fetch pages, 2) Indexer process และเก็บ content ด้วย inverted index, 3) Query processor สำหรับ parsing และ ranking, 4) PageRank หรือคล้ายๆ กันสำหรับ relevance scoring Scale ด้วย MapReduce สำหรับ indexing, shard index ด้วย term หรือ document Cache popular queries Implement spell correction, autocomplete และ personalization"
+    },
+    {
+      "vocab": "What is an inverted index?",
+      "pronunciation": "",
+      "meaning": "Inverted index คืออะไร?",
+      "example": "An inverted index maps terms to the documents containing them, enabling fast full-text search. Instead of scanning all documents for a term, we look up the term and get a list of document IDs instantly. It stores term frequency, positions for phrase queries, and document metadata. Elasticsearch and Solr use inverted indexes. Essential for search engines, log analysis, and e-commerce.",
+      "exampleTranslation": "Inverted index map terms ไปยัง documents ที่มี terms นั้น ทำให้ full-text search เร็ว แทนที่จะ scan ทุก documents หา term เรา look up term แล้วได้ list ของ document IDs ทันที มันเก็บ term frequency, positions สำหรับ phrase queries และ document metadata Elasticsearch และ Solr ใช้ inverted indexes จำเป็นสำหรับ search engines, log analysis และ e-commerce"
+    },
+    {
+      "vocab": "How would you design an e-commerce platform like Amazon?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ e-commerce platform เช่น Amazon อย่างไร?",
+      "example": "Key services: Product catalog (search, filtering), User service (auth, profiles), Cart service (Redis for session), Order service (transactions, saga pattern), Payment service (idempotency, retry), Inventory service (stock management), Shipping service. Use event-driven architecture for order flow. Implement caching for product pages, CDN for images, and search with Elasticsearch.",
+      "exampleTranslation": "Services หลัก: Product catalog (search, filtering), User service (auth, profiles), Cart service (Redis สำหรับ session), Order service (transactions, saga pattern), Payment service (idempotency, retry), Inventory service (stock management), Shipping service ใช้ event-driven architecture สำหรับ order flow Implement caching สำหรับ product pages, CDN สำหรับ images และ search ด้วย Elasticsearch"
+    },
+    {
+      "vocab": "How do you handle inventory in a high-traffic sale?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ inventory ในช่วง high-traffic sale อย่างไร?",
+      "example": "Key challenges: prevent overselling, handle concurrent purchases. Solutions: 1) Optimistic locking with version checks, 2) Redis Lua scripts for atomic decrement, 3) Reservation pattern (hold inventory, confirm/release after payment), 4) Queue-based ordering to serialize requests. Pre-warm caches, use rate limiting, and implement circuit breakers for payment failures.",
+      "exampleTranslation": "ความท้าทายหลัก: ป้องกันการขายเกิน, handle concurrent purchases วิธีแก้: 1) Optimistic locking กับ version checks, 2) Redis Lua scripts สำหรับ atomic decrement, 3) Reservation pattern (hold inventory, confirm/release หลัง payment), 4) Queue-based ordering เพื่อ serialize requests Pre-warm caches, ใช้ rate limiting และ implement circuit breakers สำหรับ payment failures"
+    },
+    {
+      "vocab": "What is database partitioning vs sharding?",
+      "pronunciation": "",
+      "meaning": "Database partitioning และ sharding ต่างกันอย่างไร?",
+      "example": "Partitioning splits data within a single database instance (horizontal by rows, vertical by columns) for manageability and performance. Sharding distributes data across multiple database instances for scalability. Sharding adds complexity: cross-shard queries, distributed transactions, and rebalancing. Choose partition keys carefully - often user_id or tenant_id for even distribution.",
+      "exampleTranslation": "Partitioning แบ่งข้อมูลภายใน database instance เดียว (horizontal ด้วย rows, vertical ด้วย columns) สำหรับ manageability และ performance Sharding กระจายข้อมูลข้ามหลาย database instances สำหรับ scalability Sharding เพิ่มความซับซ้อน: cross-shard queries, distributed transactions และ rebalancing เลือก partition keys อย่างระมัดระวัง - มักจะเป็น user_id หรือ tenant_id สำหรับ even distribution"
+    },
+    {
+      "vocab": "How would you design a file storage service like Dropbox?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ file storage service เช่น Dropbox อย่างไร?",
+      "example": "Key features: file upload/download, sync across devices, sharing. Architecture: chunking large files for efficient sync (only upload changed chunks), deduplication to save storage, object storage (S3) for file content, metadata DB for file info. Sync protocol detects local changes and conflicts. Use WebSockets or long polling for real-time notifications.",
+      "exampleTranslation": "Features หลัก: file upload/download, sync ข้าม devices, sharing Architecture: chunking ไฟล์ใหญ่สำหรับ efficient sync (upload แค่ changed chunks), deduplication ประหยัด storage, object storage (S3) สำหรับ file content, metadata DB สำหรับ file info Sync protocol ตรวจจับ local changes และ conflicts ใช้ WebSockets หรือ long polling สำหรับ real-time notifications"
+    },
+    {
+      "vocab": "What is the difference between SQL and NoSQL for system design?",
+      "pronunciation": "",
+      "meaning": "SQL และ NoSQL ต่างกันอย่างไรในแง่ system design?",
+      "example": "SQL: strong consistency, ACID transactions, complex queries with JOINs, vertical scaling primarily. Best for: financial systems, inventory, relations-heavy data. NoSQL: flexible schema, horizontal scaling, eventual consistency options, denormalized data. Types: Document (MongoDB), Key-Value (Redis), Wide-Column (Cassandra), Graph (Neo4j). Best for: high write throughput, unstructured data, rapid iteration.",
+      "exampleTranslation": "SQL: strong consistency, ACID transactions, complex queries กับ JOINs, vertical scaling เป็นหลัก ดีที่สุดสำหรับ: financial systems, inventory, relations-heavy data NoSQL: flexible schema, horizontal scaling, eventual consistency options, denormalized data ประเภท: Document (MongoDB), Key-Value (Redis), Wide-Column (Cassandra), Graph (Neo4j) ดีที่สุดสำหรับ: high write throughput, unstructured data, rapid iteration"
+    },
+    {
+      "vocab": "How would you design Uber or Lyft?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ Uber หรือ Lyft อย่างไร?",
+      "example": "Key services: Location service (store driver positions in geospatial index like Redis GEO or QuadTree), Matching service (find nearby drivers), Trip service (state machine for ride lifecycle), Payment service. Real-time updates via WebSocket. ETA calculation with routing APIs. Handle surge pricing, driver ranking, and fraud detection. Use message queues for async processing.",
+      "exampleTranslation": "Services หลัก: Location service (เก็บตำแหน่ง driver ใน geospatial index เช่น Redis GEO หรือ QuadTree), Matching service (หา drivers ใกล้ๆ), Trip service (state machine สำหรับ ride lifecycle), Payment service Real-time updates ผ่าน WebSocket คำนวณ ETA ด้วย routing APIs Handle surge pricing, driver ranking และ fraud detection ใช้ message queues สำหรับ async processing"
+    },
+    {
+      "vocab": "What is a geospatial index?",
+      "pronunciation": "",
+      "meaning": "Geospatial index คืออะไร?",
+      "example": "A geospatial index efficiently queries location-based data. Common structures: QuadTree (divides space into quadrants), R-Tree (groups nearby objects), Geohash (encodes locations as strings for range queries). Redis GEO commands and PostGIS extension provide built-in support. Used for: finding nearby restaurants, driver matching, delivery zone lookup. Consider precision vs storage trade-offs.",
+      "exampleTranslation": "Geospatial index query location-based data อย่างมีประสิทธิภาพ โครงสร้างทั่วไป: QuadTree (แบ่ง space เป็น quadrants), R-Tree (จัดกลุ่ม nearby objects), Geohash (encode locations เป็น strings สำหรับ range queries) Redis GEO commands และ PostGIS extension มี built-in support ใช้สำหรับ: หาร้านอาหารใกล้ๆ, driver matching, delivery zone lookup พิจารณา precision vs storage trade-offs"
+    },
+    {
+      "vocab": "How do you estimate capacity for a system?",
+      "pronunciation": "",
+      "meaning": "คุณประมาณ capacity สำหรับระบบอย่างไร?",
+      "example": "Start with user numbers and expected QPS. Calculate storage: daily data * retention period. Estimate bandwidth: request size * QPS. For reads vs writes, consider caching impact. Memory for cache: working set size. Rule of thumb: 1 server handles ~1000 QPS for simple operations. Account for peak traffic (2-10x average) and growth projections.",
+      "exampleTranslation": "เริ่มจาก user numbers และ expected QPS คำนวณ storage: daily data * retention period ประมาณ bandwidth: request size * QPS สำหรับ reads vs writes พิจารณา caching impact Memory สำหรับ cache: working set size กฎเบื้องต้น: 1 server handle ~1000 QPS สำหรับ simple operations คิดถึง peak traffic (2-10x average) และ growth projections"
+    },
+    {
+      "vocab": "What is API Gateway pattern?",
+      "pronunciation": "",
+      "meaning": "API Gateway pattern คืออะไร?",
+      "example": "API Gateway is a single entry point for all client requests, handling cross-cutting concerns: authentication, rate limiting, request routing, protocol translation, and response aggregation. Benefits: simplified client, centralized security, and ability to evolve backend independently. Tools: Kong, AWS API Gateway, Nginx. Consider: single point of failure, potential bottleneck, added latency.",
+      "exampleTranslation": "API Gateway เป็น entry point เดียวสำหรับทุก client requests จัดการ cross-cutting concerns: authentication, rate limiting, request routing, protocol translation และ response aggregation ข้อดี: client ง่ายขึ้น, centralized security และสามารถ evolve backend แยกกันได้ Tools: Kong, AWS API Gateway, Nginx พิจารณา: single point of failure, potential bottleneck, added latency"
+    },
+    {
+      "vocab": "How would you design a metrics and monitoring system?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ metrics และ monitoring system อย่างไร?",
+      "example": "Components: 1) Agents collect metrics from services, 2) Time-series database (InfluxDB, Prometheus) for storage, 3) Query engine for aggregation, 4) Visualization (Grafana), 5) Alerting system. Key metrics: latency percentiles, error rates, throughput (RED method). Handle high cardinality carefully. Implement sampling for high-volume data. Distributed tracing with Jaeger or Zipkin.",
+      "exampleTranslation": "Components: 1) Agents collect metrics จาก services, 2) Time-series database (InfluxDB, Prometheus) สำหรับ storage, 3) Query engine สำหรับ aggregation, 4) Visualization (Grafana), 5) Alerting system Metrics หลัก: latency percentiles, error rates, throughput (RED method) Handle high cardinality อย่างระมัดระวัง Implement sampling สำหรับ high-volume data Distributed tracing ด้วย Jaeger หรือ Zipkin"
+    },
+    {
+      "vocab": "What is the difference between push and pull architectures?",
+      "pronunciation": "",
+      "meaning": "Push และ pull architectures ต่างกันอย่างไร?",
+      "example": "Push: server sends data to clients when available (WebSockets, Server-Sent Events). Lower latency for real-time updates, but server maintains connections. Pull: clients request data periodically (polling). Simpler but higher latency and wasted requests. Long polling is a hybrid - client requests, server holds until data available. Choose based on real-time requirements and scale.",
+      "exampleTranslation": "Push: server ส่งข้อมูลไปยัง clients เมื่อมี (WebSockets, Server-Sent Events) Latency ต่ำกว่าสำหรับ real-time updates แต่ server ต้อง maintain connections Pull: clients request ข้อมูลเป็นระยะ (polling) ง่ายกว่าแต่ latency สูงกว่าและ requests เปล่า Long polling เป็น hybrid - client requests, server hold จนกว่าจะมี data เลือกตาม real-time requirements และ scale"
+    },
+    {
+      "vocab": "How do you handle data migration at scale?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ data migration at scale อย่างไร?",
+      "example": "Strategy: 1) Dual-write during transition (write to both old and new), 2) Backfill historical data in batches, 3) Validate data consistency, 4) Gradually shift reads to new system, 5) Stop writes to old system. Use feature flags to control rollout. Have rollback plan ready. Consider downtime vs complexity trade-offs. Monitor closely during migration.",
+      "exampleTranslation": "กลยุทธ์: 1) Dual-write ระหว่าง transition (เขียนทั้ง old และ new), 2) Backfill historical data เป็น batches, 3) Validate data consistency, 4) ค่อยๆ shift reads ไป new system, 5) Stop writes ไป old system ใช้ feature flags ควบคุม rollout มี rollback plan พร้อม พิจารณา downtime vs complexity trade-offs Monitor อย่างใกล้ชิดระหว่าง migration"
+    },
+    {
+      "vocab": "What is blue-green deployment?",
+      "pronunciation": "",
+      "meaning": "Blue-green deployment คืออะไร?",
+      "example": "Blue-green maintains two identical production environments. Blue is current production, green is new version. Deploy to green, test, then switch traffic instantly via load balancer. If issues arise, switch back to blue. Benefits: zero downtime, instant rollback. Challenges: database migrations, double infrastructure cost. Alternative: canary deployment (gradual traffic shift).",
+      "exampleTranslation": "Blue-green maintain สอง production environments ที่เหมือนกัน Blue คือ production ปัจจุบัน, green คือ version ใหม่ Deploy ไป green, test แล้ว switch traffic ทันทีผ่าน load balancer ถ้ามีปัญหา switch กลับไป blue ข้อดี: zero downtime, instant rollback ความท้าทาย: database migrations, infrastructure cost สองเท่า ทางเลือก: canary deployment (ค่อยๆ shift traffic)"
+    },
+    {
+      "vocab": "How would you design a leaderboard system?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ leaderboard system อย่างไร?",
+      "example": "Use Redis Sorted Sets for real-time ranking - O(log N) for updates, O(log N + M) for range queries. Store user_id with score. Commands: ZADD for updates, ZREVRANGE for top N, ZRANK for user's position. For millions of users, consider sharding by score ranges or time-based leaderboards. Cache top positions, update less frequently for lower ranks.",
+      "exampleTranslation": "ใช้ Redis Sorted Sets สำหรับ real-time ranking - O(log N) สำหรับ updates, O(log N + M) สำหรับ range queries เก็บ user_id กับ score Commands: ZADD สำหรับ updates, ZREVRANGE สำหรับ top N, ZRANK สำหรับตำแหน่ง user สำหรับหลายล้าน users พิจารณา sharding ด้วย score ranges หรือ time-based leaderboards Cache top positions, update น้อยลงสำหรับ lower ranks"
+    },
+    {
+      "vocab": "What is event-driven architecture?",
+      "pronunciation": "",
+      "meaning": "Event-driven architecture คืออะไร?",
+      "example": "Services communicate by producing and consuming events rather than direct calls. Benefits: loose coupling, independent scaling, better fault isolation, natural audit trail. Patterns: Event Notification (simple signals), Event-Carried State Transfer (include data), Event Sourcing (events as source of truth). Use message brokers like Kafka. Challenges: eventual consistency, debugging distributed flows.",
+      "exampleTranslation": "Services สื่อสารโดย producing และ consuming events แทน direct calls ข้อดี: loose coupling, independent scaling, fault isolation ดีกว่า, natural audit trail Patterns: Event Notification (signals ง่ายๆ), Event-Carried State Transfer (รวม data), Event Sourcing (events เป็น source of truth) ใช้ message brokers เช่น Kafka ความท้าทาย: eventual consistency, debugging distributed flows"
+    },
+    {
+      "vocab": "How do you handle hotspots in distributed systems?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ hotspots ใน distributed systems อย่างไร?",
+      "example": "Hotspots occur when certain keys or shards receive disproportionate traffic. Solutions: 1) Add randomness to keys (append random suffix, aggregate later), 2) Local caching to reduce backend hits, 3) Replicate hot data across multiple nodes, 4) Time-based partitioning for temporal hotspots, 5) Rate limiting per key. Monitor for hotspots and rebalance proactively.",
+      "exampleTranslation": "Hotspots เกิดเมื่อ keys หรือ shards บางตัวรับ traffic มากเกินสัดส่วน วิธีแก้: 1) เพิ่ม randomness ให้ keys (append random suffix, aggregate ทีหลัง), 2) Local caching ลด backend hits, 3) Replicate hot data ข้ามหลาย nodes, 4) Time-based partitioning สำหรับ temporal hotspots, 5) Rate limiting ต่อ key Monitor หา hotspots และ rebalance ล่วงหน้า"
+    },
+    {
+      "vocab": "What is the Saga pattern?",
+      "pronunciation": "",
+      "meaning": "Saga pattern คืออะไร?",
+      "example": "Saga manages distributed transactions as a sequence of local transactions. Each step has a compensating action to undo if later steps fail. Two types: Choreography (services listen to events and react) or Orchestration (central coordinator manages flow). Example: order creation saga - reserve inventory, charge payment, confirm order. If payment fails, release inventory.",
+      "exampleTranslation": "Saga จัดการ distributed transactions เป็นลำดับของ local transactions แต่ละ step มี compensating action เพื่อ undo ถ้า steps หลังล้มเหลว สองประเภท: Choreography (services listen events และ react) หรือ Orchestration (central coordinator จัดการ flow) ตัวอย่าง: order creation saga - reserve inventory, charge payment, confirm order ถ้า payment ล้มเหลว release inventory"
+    },
+    {
+      "vocab": "How would you design a distributed lock?",
+      "pronunciation": "",
+      "meaning": "คุณจะออกแบบ distributed lock อย่างไร?",
+      "example": "Use Redis with SET NX PX (set if not exists with expiry) for simple cases. For stronger guarantees, use Redlock algorithm (acquire lock on majority of nodes). Always set TTL to prevent deadlocks if client crashes. Implement lock renewal for long operations. Consider using dedicated tools like Zookeeper or etcd for critical distributed coordination.",
+      "exampleTranslation": "ใช้ Redis กับ SET NX PX (set if not exists พร้อม expiry) สำหรับ cases ง่ายๆ สำหรับ guarantees ที่แข็งแกร่งกว่า ใช้ Redlock algorithm (acquire lock บน majority ของ nodes) ตั้ง TTL เสมอเพื่อป้องกัน deadlocks ถ้า client crash Implement lock renewal สำหรับ long operations พิจารณาใช้ dedicated tools เช่น Zookeeper หรือ etcd สำหรับ critical distributed coordination"
+    },
+    {
+      "vocab": "What is backpressure and how do you handle it?",
+      "pronunciation": "",
+      "meaning": "Backpressure คืออะไร และจัดการอย่างไร?",
+      "example": "Backpressure occurs when a system receives more requests than it can handle. Strategies: 1) Load shedding (reject excess requests with 503), 2) Rate limiting at ingress, 3) Bounded queues that reject when full, 4) Circuit breakers to fail fast, 5) Auto-scaling to add capacity. Communicate limits clearly to clients with retry-after headers.",
+      "exampleTranslation": "Backpressure เกิดเมื่อระบบรับ requests มากกว่าที่จะ handle ได้ กลยุทธ์: 1) Load shedding (reject excess requests ด้วย 503), 2) Rate limiting ที่ ingress, 3) Bounded queues ที่ reject เมื่อเต็ม, 4) Circuit breakers เพื่อ fail fast, 5) Auto-scaling เพื่อเพิ่ม capacity สื่อสาร limits ให้ clients ชัดเจนด้วย retry-after headers"
+    },
+    {
+      "vocab": "How do you ensure data integrity across microservices?",
+      "pronunciation": "",
+      "meaning": "คุณรับประกัน data integrity ข้าม microservices อย่างไร?",
+      "example": "Strategies: 1) Saga pattern for distributed transactions, 2) Transactional Outbox to reliably publish events, 3) Idempotent operations to handle retries safely, 4) Event sourcing for complete history, 5) Compensating transactions to undo partial failures. Accept eventual consistency where possible. Use correlation IDs for tracing and reconciliation jobs for verification.",
+      "exampleTranslation": "กลยุทธ์: 1) Saga pattern สำหรับ distributed transactions, 2) Transactional Outbox เพื่อ publish events อย่างเชื่อถือได้, 3) Idempotent operations handle retries อย่างปลอดภัย, 4) Event sourcing สำหรับ complete history, 5) Compensating transactions เพื่อ undo partial failures ยอมรับ eventual consistency เมื่อทำได้ ใช้ correlation IDs สำหรับ tracing และ reconciliation jobs สำหรับ verification"
+    },
+    {
+      "vocab": "What trade-offs do you consider in system design?",
+      "pronunciation": "",
+      "meaning": "คุณพิจารณา trade-offs อะไรบ้างใน system design?",
+      "example": "Key trade-offs: Consistency vs Availability (CAP), Latency vs Throughput, Read vs Write optimization, Complexity vs Maintainability, Cost vs Performance, Flexibility vs Simplicity. There's no perfect solution - understand requirements and constraints, then optimize for what matters most. Document decisions and revisit as needs evolve.",
+      "exampleTranslation": "Trade-offs หลัก: Consistency vs Availability (CAP), Latency vs Throughput, Read vs Write optimization, Complexity vs Maintainability, Cost vs Performance, Flexibility vs Simplicity ไม่มี solution ที่สมบูรณ์แบบ - เข้าใจ requirements และ constraints แล้ว optimize สิ่งที่สำคัญที่สุด Document decisions และ revisit เมื่อ needs เปลี่ยน"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Behavioral",
+    "description": "Common behavioral interview questions and answers using STAR method",
+    "category": "Interview",
+    "tags": ["interview", "english", "behavioral", "soft-skills", "job"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the STAR method for behavioral interviews?",
+      "pronunciation": "STAR = Situation, Task, Action, Result",
+      "meaning": "STAR method สำหรับ behavioral interviews คืออะไร?",
+      "example": "STAR is a structured way to answer behavioral questions. Situation: Set the context and background. Task: Describe your responsibility or challenge. Action: Explain the specific steps YOU took (use 'I', not 'we'). Result: Share the outcome with measurable impact if possible. Keep answers 2-3 minutes, focusing 60% on Action.",
+      "exampleTranslation": "STAR คือวิธีตอบ behavioral questions อย่างมีโครงสร้าง Situation: ตั้ง context และ background Task: อธิบาย responsibility หรือ challenge ของคุณ Action: อธิบาย steps เฉพาะที่คุณทำ (ใช้ 'I' ไม่ใช่ 'we') Result: แชร์ผลลัพธ์พร้อม measurable impact ถ้าทำได้ ตอบ 2-3 นาที focus 60% ที่ Action"
+    },
+    {
+      "vocab": "Tell me about a time you faced a challenging problem at work.",
+      "pronunciation": "",
+      "meaning": "เล่าเกี่ยวกับครั้งที่คุณเผชิญปัญหาที่ท้าทายในการทำงาน",
+      "example": "At TTB, we faced Azure OpenAI content filtering blocking legitimate banking responses. I analyzed the patterns causing false positives, researched Azure's filtering categories, and implemented a multi-layer approach: pre-processing prompts to avoid trigger words, adjusting temperature settings, and adding fallback responses. This reduced blocking incidents by 90% and improved customer satisfaction scores.",
+      "exampleTranslation": "ที่ TTB เราเจอ Azure OpenAI content filtering บล็อก banking responses ที่ถูกต้อง ผมวิเคราะห์ patterns ที่ทำให้เกิด false positives, research Azure's filtering categories และ implement multi-layer approach: pre-processing prompts หลีกเลี่ยง trigger words, ปรับ temperature settings และเพิ่ม fallback responses ลด blocking incidents ได้ 90% และ customer satisfaction scores ดีขึ้น"
+    },
+    {
+      "vocab": "Describe a time when you had to learn a new technology quickly.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องเรียนรู้เทคโนโลยีใหม่อย่างรวดเร็ว",
+      "example": "When I joined the AI team, I needed to quickly learn LangChain and RAG architecture. I dedicated evenings to building a personal project, read the documentation thoroughly, and joined community Discord channels. Within two weeks, I was contributing to production code. I also created internal documentation to help future team members onboard faster.",
+      "exampleTranslation": "เมื่อเข้าร่วมทีม AI ผมต้องเรียน LangChain และ RAG architecture อย่างรวดเร็ว ผมทุ่มเวลาช่วงเย็นสร้าง personal project, อ่าน documentation อย่างละเอียด และเข้าร่วม community Discord channels ภายในสองสัปดาห์ผม contribute production code ได้ ผมยังสร้าง internal documentation เพื่อช่วยให้ทีมในอนาคต onboard เร็วขึ้น"
+    },
+    {
+      "vocab": "Tell me about a time you disagreed with your manager or team.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณไม่เห็นด้วยกับหัวหน้าหรือทีม",
+      "example": "My manager wanted to use a complex microservices architecture for a small project. I respectfully shared my concerns about the added complexity and maintenance overhead for our team size. I prepared a comparison document showing development time and costs for both approaches. After discussion, we agreed on a modular monolith that could be split later if needed. The project launched on time and was easier to maintain.",
+      "exampleTranslation": "หัวหน้าอยากใช้ complex microservices architecture สำหรับโปรเจคเล็ก ผมแชร์ความกังวลอย่างสุภาพเกี่ยวกับ complexity และ maintenance overhead สำหรับขนาดทีมเรา ผมเตรียมเอกสารเปรียบเทียบ development time และ costs ของทั้งสองแนวทาง หลังจากพูดคุย เราตกลงใช้ modular monolith ที่สามารถแยกทีหลังได้ถ้าจำเป็น โปรเจค launch ตรงเวลาและ maintain ง่ายกว่า"
+    },
+    {
+      "vocab": "Describe a situation where you had to work with a difficult colleague.",
+      "pronunciation": "",
+      "meaning": "เล่าสถานการณ์ที่คุณต้องทำงานกับเพื่อนร่วมงานที่ยากลำบาก",
+      "example": "I worked with a senior developer who was dismissive of new ideas. Instead of confronting him, I focused on building a relationship by asking for his advice on areas where he had expertise. I also demonstrated my competence through my work quality. Over time, he became more receptive to my suggestions, and we eventually collaborated well on a major feature that received positive user feedback.",
+      "exampleTranslation": "ผมทำงานกับ senior developer ที่ไม่สนใจไอเดียใหม่ แทนที่จะ confront เขา ผมโฟกัสสร้างความสัมพันธ์โดยขอคำแนะนำในเรื่องที่เขาเชี่ยวชาญ ผมยังแสดงความสามารถผ่านคุณภาพงาน เวลาผ่านไปเขาเปิดรับ suggestions ของผมมากขึ้น และเราทำงานร่วมกันได้ดีใน major feature ที่ได้รับ positive user feedback"
+    },
+    {
+      "vocab": "Tell me about a time you failed. How did you handle it?",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณล้มเหลว คุณจัดการอย่างไร?",
+      "example": "I once deployed a database migration that caused 30 minutes of downtime because I didn't test the rollback procedure adequately. I immediately took ownership, communicated transparently with stakeholders, and led the recovery effort. Afterward, I created a deployment checklist and proposed a staging environment that mirrored production. This incident actually improved our overall deployment process.",
+      "exampleTranslation": "ครั้งหนึ่งผม deploy database migration ที่ทำให้เกิด downtime 30 นาทีเพราะไม่ได้ test rollback procedure อย่างเพียงพอ ผมรับผิดชอบทันที สื่อสารอย่าง transparent กับ stakeholders และนำการ recovery ภายหลังผมสร้าง deployment checklist และเสนอ staging environment ที่เหมือน production เหตุการณ์นี้ช่วยปรับปรุง deployment process โดยรวม"
+    },
+    {
+      "vocab": "Give an example of when you showed leadership.",
+      "pronunciation": "",
+      "meaning": "ยกตัวอย่างเมื่อคุณแสดงความเป็นผู้นำ",
+      "example": "When our team lead was on leave, I stepped up to coordinate a critical release. I organized daily standups, unblocked team members by escalating issues appropriately, and kept stakeholders informed of progress. I also made the call to delay a risky feature to ensure stability. The release was successful, and my manager praised the team's coordination during a challenging period.",
+      "exampleTranslation": "เมื่อ team lead ลา ผมรับหน้าที่ประสาน critical release ผมจัด daily standups, unblock team members โดย escalate issues อย่างเหมาะสม และแจ้ง stakeholders เรื่อง progress ผมยังตัดสินใจเลื่อน risky feature เพื่อรับประกัน stability Release สำเร็จ และหัวหน้าชม team's coordination ในช่วงเวลาที่ท้าทาย"
+    },
+    {
+      "vocab": "Describe a time you had to meet a tight deadline.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องทำงานให้เสร็จภายใน deadline ที่กระชั้น",
+      "example": "We had two weeks to deliver a payment integration before a marketing campaign. I broke down the work into smaller tasks, identified the critical path, and proposed cutting non-essential features for the initial release. I also arranged for a colleague to help with testing. We delivered on time with core functionality, and added the remaining features in the next sprint.",
+      "exampleTranslation": "เรามีสองสัปดาห์ส่ง payment integration ก่อน marketing campaign ผมแบ่งงานเป็น tasks เล็กๆ ระบุ critical path และเสนอตัด non-essential features สำหรับ initial release ผมยังจัดให้เพื่อนร่วมงานช่วย testing เราส่งตรงเวลากับ core functionality และเพิ่ม remaining features ใน sprint ถัดไป"
+    },
+    {
+      "vocab": "Tell me about a time you went above and beyond.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณทำมากกว่าที่คาดหวัง",
+      "example": "A critical bug was reported late Friday affecting user payments. Even though it wasn't my on-call week, I volunteered to investigate because I had context on that code. I found and fixed the issue, deployed the hotfix, and documented the root cause. I also added monitoring to catch similar issues early. My manager recognized this effort in our team meeting.",
+      "exampleTranslation": "มี critical bug ถูก report ดึกวันศุกร์ กระทบ user payments แม้ไม่ใช่ on-call week ของผม ผมอาสาสืบสวนเพราะผมมี context เรื่องโค้ดนั้น ผมหาและแก้ไขปัญหา deploy hotfix และ document root cause ผมยังเพิ่ม monitoring เพื่อจับปัญหาคล้ายๆ กันได้เร็ว หัวหน้า recognize effort นี้ใน team meeting"
+    },
+    {
+      "vocab": "How do you handle multiple competing priorities?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการกับหลาย priorities ที่แข่งกันอย่างไร?",
+      "example": "I use a combination of urgency-importance matrix and regular communication. First, I list all tasks and categorize by impact and deadline. I discuss priorities with my manager to ensure alignment. I block focused time for important work and batch smaller tasks. When truly conflicting, I'm transparent about trade-offs and propose realistic timelines rather than overcommitting.",
+      "exampleTranslation": "ผมใช้ urgency-importance matrix ร่วมกับการสื่อสารสม่ำเสมอ ก่อนอื่นผม list tasks ทั้งหมดและจัดหมวดตาม impact และ deadline ผมคุยกับหัวหน้าเรื่อง priorities เพื่อให้ตรงกัน ผม block focused time สำหรับงานสำคัญและ batch tasks เล็กๆ เมื่อ conflict จริงๆ ผม transparent เรื่อง trade-offs และเสนอ timelines ที่เป็นจริงแทนการ overcommit"
+    },
+    {
+      "vocab": "Describe a time you received constructive criticism.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณได้รับคำวิจารณ์เชิงสร้างสรรค์",
+      "example": "During a code review, a senior engineer pointed out that my code was correct but hard to understand. Instead of being defensive, I asked for specific examples and suggestions. I learned about better naming conventions and breaking down complex functions. I applied these principles to refactor my code and now proactively seek feedback during reviews to continue improving.",
+      "exampleTranslation": "ระหว่าง code review senior engineer ชี้ว่าโค้ดผมถูกต้องแต่เข้าใจยาก แทนที่จะ defensive ผมถามหาตัวอย่างและข้อเสนอแนะเฉพาะ ผมเรียนรู้เรื่อง naming conventions ที่ดีกว่าและการแบ่ง complex functions ผมใช้หลักการเหล่านี้ refactor โค้ดและตอนนี้ proactively ขอ feedback ระหว่าง reviews เพื่อปรับปรุงต่อเนื่อง"
+    },
+    {
+      "vocab": "Tell me about a time you had to persuade someone.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้อง persuade ใครสักคน",
+      "example": "I wanted to introduce automated testing to our team, but the manager was concerned about slowing down development. I gathered data showing time spent on manual testing and bug fixes. I proposed starting with critical paths only and demonstrated ROI with a pilot project. After seeing 40% reduction in regression bugs, the team adopted testing as standard practice.",
+      "exampleTranslation": "ผมอยากแนะนำ automated testing ให้ทีม แต่หัวหน้ากังวลว่าจะทำให้ development ช้าลง ผมรวบรวมข้อมูลเวลาที่ใช้ใน manual testing และ bug fixes ผมเสนอเริ่มจาก critical paths เท่านั้นและแสดง ROI ด้วย pilot project หลังจากเห็น regression bugs ลด 40% ทีม adopt testing เป็น standard practice"
+    },
+    {
+      "vocab": "Give an example of how you handled a stressful situation.",
+      "pronunciation": "",
+      "meaning": "ยกตัวอย่างวิธีที่คุณจัดการกับสถานการณ์ที่กดดัน",
+      "example": "During a major outage, I stayed calm and focused on systematic troubleshooting rather than panicking. I coordinated with the team to divide investigation areas, kept stakeholders updated every 15 minutes, and documented findings in real-time. We identified the root cause within an hour. Afterward, I led the post-mortem to prevent similar issues.",
+      "exampleTranslation": "ระหว่าง major outage ผมใจเย็นและโฟกัส systematic troubleshooting แทนที่จะตกใจ ผมประสานกับทีมแบ่ง investigation areas แจ้ง stakeholders ทุก 15 นาที และ document findings แบบ real-time เราระบุ root cause ได้ภายในชั่วโมง หลังจากนั้นผมนำ post-mortem เพื่อป้องกันปัญหาคล้ายกัน"
+    },
+    {
+      "vocab": "Describe a time you mentored or helped a colleague.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณ mentor หรือช่วยเหลือเพื่อนร่วมงาน",
+      "example": "A junior developer was struggling with understanding our async job processing system. I scheduled weekly 1-on-1 sessions where we walked through the codebase together. I created diagram documentation and assigned progressively challenging tasks. Within two months, she was independently handling complex features and even suggested improvements to our queue management.",
+      "exampleTranslation": "Junior developer กำลังดิ้นรนเข้าใจ async job processing system ของเรา ผมจัด 1-on-1 sessions รายสัปดาห์ที่เรา walk through codebase ด้วยกัน ผมสร้าง diagram documentation และมอบหมาย tasks ที่ท้าทายขึ้นเรื่อยๆ ภายในสองเดือนเธอ handle complex features ได้เองและยังเสนอ improvements ให้ queue management ของเรา"
+    },
+    {
+      "vocab": "Tell me about a time you had to adapt to a major change.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องปรับตัวกับการเปลี่ยนแปลงครั้งใหญ่",
+      "example": "When our company pivoted from B2C to B2B, the entire product roadmap changed. Instead of resisting, I proactively learned about enterprise requirements and security compliance. I volunteered to lead the multi-tenant architecture redesign. The transition was challenging but expanded my skills significantly, and I became the go-to person for enterprise features.",
+      "exampleTranslation": "เมื่อบริษัท pivot จาก B2C ไป B2B roadmap ของผลิตภัณฑ์ทั้งหมดเปลี่ยน แทนที่จะต่อต้าน ผม proactively เรียนรู้เรื่อง enterprise requirements และ security compliance ผมอาสานำ multi-tenant architecture redesign การเปลี่ยนผ่านท้าทายแต่ขยาย skills ของผมอย่างมาก และผมกลายเป็น go-to person สำหรับ enterprise features"
+    },
+    {
+      "vocab": "How do you handle ambiguous requirements?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการกับ requirements ที่คลุมเครืออย่างไร?",
+      "example": "I start by asking clarifying questions to understand the core problem we're solving. I identify assumptions and validate them with stakeholders. For remaining ambiguity, I propose an MVP approach with clear milestones for feedback. I document decisions and assumptions so we can revisit them. This iterative approach reduces risk of building the wrong thing.",
+      "exampleTranslation": "ผมเริ่มจากถามคำถามให้ชัดเจนเพื่อเข้าใจ core problem ที่เราแก้ ผมระบุ assumptions และ validate กับ stakeholders สำหรับความคลุมเครือที่เหลือ ผมเสนอ MVP approach พร้อม milestones ชัดเจนสำหรับ feedback ผม document decisions และ assumptions เพื่อให้กลับมา revisit ได้ วิธี iterative นี้ลดความเสี่ยงในการสร้างสิ่งที่ผิด"
+    },
+    {
+      "vocab": "Describe your biggest professional achievement.",
+      "pronunciation": "",
+      "meaning": "เล่า achievement ทางวิชาชีพที่ใหญ่ที่สุดของคุณ",
+      "example": "I designed and built a high-performance ticket booking system that handles 10,000 requests per second while preventing overselling. I implemented a Hybrid Fast-Path architecture using Redis Lua scripts for atomic operations and a Virtual Queue for fair ordering. This personal project demonstrated my ability to solve complex distributed systems problems and has become a portfolio piece I'm proud of.",
+      "exampleTranslation": "ผมออกแบบและสร้าง high-performance ticket booking system ที่รองรับ 10,000 requests ต่อวินาทีและป้องกันการขายเกิน ผม implement Hybrid Fast-Path architecture ใช้ Redis Lua scripts สำหรับ atomic operations และ Virtual Queue สำหรับ fair ordering โปรเจคส่วนตัวนี้แสดงความสามารถในการแก้ปัญหา complex distributed systems และกลายเป็น portfolio piece ที่ผมภูมิใจ"
+    },
+    {
+      "vocab": "Tell me about a time you improved a process.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณปรับปรุง process",
+      "example": "Our deployment process was manual and error-prone, taking 2 hours per release. I proposed and implemented a CI/CD pipeline with automated testing and staging deployment. I documented the new process and trained the team. Deployments now take 20 minutes, we release 3x more frequently, and deployment-related bugs decreased by 70%.",
+      "exampleTranslation": "Deployment process ของเราเป็น manual และ error-prone ใช้เวลา 2 ชั่วโมงต่อ release ผมเสนอและ implement CI/CD pipeline กับ automated testing และ staging deployment ผม document process ใหม่และ train ทีม ตอนนี้ Deployments ใช้เวลา 20 นาที เรา release บ่อยขึ้น 3 เท่า และ deployment-related bugs ลด 70%"
+    },
+    {
+      "vocab": "How do you stay updated with technology trends?",
+      "pronunciation": "",
+      "meaning": "คุณ stay updated กับ technology trends อย่างไร?",
+      "example": "I allocate time weekly for learning: I follow key engineering blogs (Uber, Netflix, Stripe), subscribe to newsletters like TLDR and ByteByteGo, and listen to podcasts during commute. I also build personal projects to practice new technologies and contribute to open source when possible. I share interesting findings with my team in our tech sharing sessions.",
+      "exampleTranslation": "ผมจัดสรรเวลาเรียนรู้รายสัปดาห์: ผม follow engineering blogs หลักๆ (Uber, Netflix, Stripe) subscribe newsletters เช่น TLDR และ ByteByteGo และฟัง podcasts ระหว่างเดินทาง ผมยังสร้าง personal projects เพื่อฝึกเทคโนโลยีใหม่และ contribute open source เมื่อทำได้ ผมแชร์สิ่งที่น่าสนใจกับทีมใน tech sharing sessions"
+    },
+    {
+      "vocab": "Describe a time you had to work with incomplete information.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องทำงานกับข้อมูลที่ไม่ครบถ้วน",
+      "example": "We needed to estimate server capacity for a new feature without usage data. I researched similar features, analyzed patterns from comparable products, and created three scenarios (conservative, moderate, aggressive). I proposed starting with moderate estimates and implementing auto-scaling. We monitored closely after launch and our estimates were within 20% of actual usage.",
+      "exampleTranslation": "เราต้องประมาณ server capacity สำหรับ feature ใหม่โดยไม่มี usage data ผม research features ที่คล้ายกัน วิเคราะห์ patterns จาก products ที่เปรียบเทียบได้ และสร้างสาม scenarios (conservative, moderate, aggressive) ผมเสนอเริ่มจาก moderate estimates และ implement auto-scaling เรา monitor อย่างใกล้ชิดหลัง launch และ estimates ของเราอยู่ภายใน 20% ของ actual usage"
+    },
+    {
+      "vocab": "Tell me about a time you took initiative.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณ take initiative",
+      "example": "I noticed our error monitoring was inadequate - we often learned about issues from customer complaints. Without being asked, I researched monitoring solutions, prepared a cost-benefit analysis, and presented to the team. I then led the implementation of Sentry integration. This reduced our mean time to detect issues from hours to minutes.",
+      "exampleTranslation": "ผมสังเกตว่า error monitoring ของเราไม่เพียงพอ - เรามักรู้ปัญหาจาก customer complaints โดยไม่มีใครบอก ผม research monitoring solutions เตรียม cost-benefit analysis และ present ให้ทีม ผมจากนั้นนำ implementation Sentry integration สิ่งนี้ลด mean time to detect issues จากหลายชั่วโมงเหลือนาที"
+    },
+    {
+      "vocab": "How do you handle disagreements within your team?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการกับความขัดแย้งภายในทีมอย่างไร?",
+      "example": "I believe healthy disagreement leads to better solutions. I focus on understanding different perspectives by asking 'help me understand your concern.' I try to find common ground and shared goals. When we can't agree, I suggest time-boxed experiments or prototypes to gather data. I never make it personal and always commit fully once a decision is made.",
+      "exampleTranslation": "ผมเชื่อว่า healthy disagreement นำไปสู่ solutions ที่ดีกว่า ผมโฟกัสเข้าใจ perspectives ต่างๆ โดยถาม 'ช่วยให้ผมเข้าใจความกังวลของคุณ' ผมพยายามหา common ground และ shared goals เมื่อตกลงกันไม่ได้ ผมเสนอ time-boxed experiments หรือ prototypes เพื่อรวบรวมข้อมูล ผมไม่ทำให้เป็นเรื่องส่วนตัวและ commit เต็มที่เมื่อ decision ถูกตัดสินแล้ว"
+    },
+    {
+      "vocab": "Describe a time you had to give difficult feedback.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องให้ feedback ที่ยากลำบาก",
+      "example": "A teammate consistently missed code review comments, causing delays. I scheduled a private 1-on-1 and used the SBI model (Situation, Behavior, Impact). I acknowledged their strengths first, then specifically described the pattern and its impact on the team. Together, we created a checklist for reviews. Their review quality improved significantly within weeks.",
+      "exampleTranslation": "เพื่อนร่วมทีมมักพลาด code review comments ทำให้เกิด delays ผมจัด private 1-on-1 และใช้ SBI model (Situation, Behavior, Impact) ผม acknowledge strengths ของเขาก่อน แล้วอธิบาย pattern และ impact ต่อทีมอย่างเฉพาะเจาะจง เราร่วมกันสร้าง checklist สำหรับ reviews Review quality ของเขาดีขึ้นอย่างมากภายในสัปดาห์"
+    },
+    {
+      "vocab": "Tell me about a time you had to balance quality with speed.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้อง balance quality กับ speed",
+      "example": "For a time-sensitive feature, I proposed a phased approach: Phase 1 with core functionality and essential tests for the deadline, Phase 2 with edge cases and full test coverage right after. I documented the technical debt clearly and scheduled the follow-up work. We met the deadline, and stakeholders appreciated the transparency about trade-offs.",
+      "exampleTranslation": "สำหรับ feature ที่ time-sensitive ผมเสนอ phased approach: Phase 1 กับ core functionality และ essential tests สำหรับ deadline, Phase 2 กับ edge cases และ full test coverage หลังจากนั้น ผม document technical debt อย่างชัดเจนและ schedule follow-up work เรา meet deadline และ stakeholders ชื่นชม transparency เรื่อง trade-offs"
+    },
+    {
+      "vocab": "How do you approach learning from mistakes?",
+      "pronunciation": "",
+      "meaning": "คุณ approach การเรียนรู้จากความผิดพลาดอย่างไร?",
+      "example": "I treat mistakes as learning opportunities rather than failures. I conduct blameless post-mortems focusing on system improvements, not individual fault. I document root causes, contributing factors, and preventive measures. I share learnings with the team so everyone benefits. Most importantly, I implement concrete changes to prevent recurrence.",
+      "exampleTranslation": "ผมมองความผิดพลาดเป็นโอกาสเรียนรู้มากกว่าความล้มเหลว ผมทำ blameless post-mortems โฟกัส system improvements ไม่ใช่ความผิดบุคคล ผม document root causes, contributing factors และ preventive measures ผมแชร์สิ่งที่เรียนรู้กับทีมเพื่อให้ทุกคนได้ประโยชน์ ที่สำคัญที่สุดผม implement concrete changes เพื่อป้องกันการเกิดซ้ำ"
+    },
+    {
+      "vocab": "Describe a situation where you had to influence without authority.",
+      "pronunciation": "",
+      "meaning": "เล่าสถานการณ์ที่คุณต้อง influence โดยไม่มี authority",
+      "example": "I wanted the platform team to prioritize an API improvement that would benefit multiple teams. I gathered requirements from other teams, quantified the collective impact, and built a coalition of supporters. I presented the business case in their planning meeting with data and endorsements. They included it in their next quarter's roadmap.",
+      "exampleTranslation": "ผมอยากให้ platform team prioritize API improvement ที่จะเป็นประโยชน์กับหลายทีม ผมรวบรวม requirements จากทีมอื่น quantify collective impact และสร้าง coalition ของผู้สนับสนุน ผม present business case ใน planning meeting ของพวกเขาพร้อมข้อมูลและ endorsements พวกเขารวมมันใน roadmap ไตรมาสถัดไป"
+    },
+    {
+      "vocab": "Tell me about a time you had to deliver bad news.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องแจ้งข่าวร้าย",
+      "example": "I had to inform stakeholders that a promised feature would miss its deadline due to unexpected technical complexity. I delivered the news early, explained the reasons clearly without making excuses, and presented options: reduced scope by deadline or full feature with delay. I also shared what we learned to prevent similar situations. They appreciated the early communication and transparency.",
+      "exampleTranslation": "ผมต้องแจ้ง stakeholders ว่า feature ที่สัญญาไว้จะพลาด deadline เนื่องจาก technical complexity ที่ไม่คาดคิด ผมแจ้งข่าวเร็ว อธิบายเหตุผลชัดเจนโดยไม่แก้ตัว และเสนอทางเลือก: reduced scope ตาม deadline หรือ full feature พร้อม delay ผมยังแชร์สิ่งที่เรียนรู้เพื่อป้องกันสถานการณ์คล้ายกัน พวกเขาชื่นชมการสื่อสารเร็วและ transparency"
+    },
+    {
+      "vocab": "How do you ensure effective communication in remote teams?",
+      "pronunciation": "",
+      "meaning": "คุณรับประกันการสื่อสารที่มีประสิทธิภาพในทีม remote อย่างไร?",
+      "example": "I over-communicate in async environments: I write detailed PR descriptions, update ticket status regularly, and send summary messages for decisions made in meetings. I use Loom for complex explanations that need visual context. I also protect synchronous time for important discussions and make sure to document outcomes for those who couldn't attend.",
+      "exampleTranslation": "ผม over-communicate ใน async environments: ผมเขียน PR descriptions ละเอียด, update ticket status สม่ำเสมอ และส่ง summary messages สำหรับ decisions ที่ทำใน meetings ผมใช้ Loom สำหรับ complex explanations ที่ต้องการ visual context ผมยังปกป้อง synchronous time สำหรับ important discussions และ document outcomes สำหรับคนที่ไม่ได้เข้าร่วม"
+    },
+    {
+      "vocab": "Describe a time you had to make a decision with limited time.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องตัดสินใจโดยมีเวลาจำกัด",
+      "example": "During a production incident, we had to choose between a quick but risky fix and a safer but slower approach. I quickly assessed the customer impact, consulted with available team members, and decided on the safer approach with clear communication to affected users. The extra 30 minutes was worth avoiding potential data corruption.",
+      "exampleTranslation": "ระหว่าง production incident เราต้องเลือกระหว่าง quick fix ที่มีความเสี่ยงและ safer approach ที่ช้ากว่า ผม assess customer impact อย่างรวดเร็ว ปรึกษากับ team members ที่มี และตัดสินใจใช้ safer approach พร้อม communication ชัดเจนกับ affected users เวลาเพิ่ม 30 นาทีคุ้มค่ากับการหลีกเลี่ยง potential data corruption"
+    },
+    {
+      "vocab": "Tell me about a project you're particularly proud of.",
+      "pronunciation": "",
+      "meaning": "เล่าเกี่ยวกับโปรเจคที่คุณภูมิใจเป็นพิเศษ",
+      "example": "I built a RAG Agent Platform that allows domain-agnostic document Q&A using AI. I designed the architecture from scratch: document ingestion pipeline, vector search with pgvector, and agent orchestration layer. The system handles complex multi-step queries and provides accurate, sourced answers. It demonstrates my ability to architect and implement end-to-end AI solutions.",
+      "exampleTranslation": "ผมสร้าง RAG Agent Platform ที่อนุญาตให้ทำ domain-agnostic document Q&A ด้วย AI ผมออกแบบ architecture ตั้งแต่ต้น: document ingestion pipeline, vector search ด้วย pgvector และ agent orchestration layer ระบบ handle complex multi-step queries และให้คำตอบที่แม่นยำพร้อม sources แสดงความสามารถในการ architect และ implement end-to-end AI solutions"
+    },
+    {
+      "vocab": "How do you handle situations where you don't know the answer?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการกับสถานการณ์ที่คุณไม่รู้คำตอบอย่างไร?",
+      "example": "I'm honest about what I don't know - pretending creates bigger problems later. I say 'I'm not sure, but I'll find out' and then follow through quickly. I leverage my network - often someone on the team or in the community has faced similar situations. I also use this as a learning opportunity to fill gaps in my knowledge.",
+      "exampleTranslation": "ผมซื่อสัตย์เกี่ยวกับสิ่งที่ไม่รู้ - การแกล้งทำสร้างปัญหาใหญ่กว่าทีหลัง ผมพูดว่า 'ผมไม่แน่ใจ แต่จะหาคำตอบ' แล้ว follow through อย่างรวดเร็ว ผมใช้ network ของผม - บ่อยครั้งมีคนในทีมหรือใน community เคยเจอสถานการณ์คล้ายกัน ผมยังใช้โอกาสนี้เรียนรู้เพื่อเติมเต็มช่องว่างในความรู้"
+    },
+    {
+      "vocab": "Describe how you manage your professional development.",
+      "pronunciation": "",
+      "meaning": "เล่าวิธีที่คุณจัดการ professional development ของคุณ",
+      "example": "I set annual learning goals aligned with where I want my career to go. Currently, I'm focusing on AI/ML and system design. I dedicate 5-10 hours weekly to learning through courses, books, and hands-on projects. I maintain a personal project portfolio to practice new skills. I also seek feedback regularly and look for stretch assignments at work.",
+      "exampleTranslation": "ผมตั้ง annual learning goals ที่ align กับทิศทาง career ที่ต้องการ ปัจจุบันผมโฟกัส AI/ML และ system design ผมทุ่ม 5-10 ชั่วโมงต่อสัปดาห์เรียนรู้ผ่าน courses, หนังสือ และ hands-on projects ผม maintain personal project portfolio เพื่อฝึก skills ใหม่ ผมยัง seek feedback สม่ำเสมอและหา stretch assignments ที่ทำงาน"
+    },
+    {
+      "vocab": "Tell me about a time you had to work with cross-functional teams.",
+      "pronunciation": "",
+      "meaning": "เล่าครั้งที่คุณต้องทำงานกับ cross-functional teams",
+      "example": "For a major product launch, I collaborated with design, product, marketing, and QA teams. I set up a shared project channel, created a technical FAQ document for non-technical stakeholders, and held weekly syncs to align on progress. I learned to translate technical constraints into business terms and vice versa. The launch was successful with all teams feeling included.",
+      "exampleTranslation": "สำหรับ major product launch ผม collaborate กับ design, product, marketing และ QA teams ผมตั้ง shared project channel สร้าง technical FAQ document สำหรับ non-technical stakeholders และจัด weekly syncs เพื่อ align เรื่อง progress ผมเรียนรู้การแปล technical constraints เป็น business terms และกลับกัน Launch สำเร็จกับทุกทีมรู้สึก included"
+    },
+    {
+      "vocab": "Why are you looking to leave your current position?",
+      "pronunciation": "",
+      "meaning": "ทำไมคุณถึงต้องการลาออกจากตำแหน่งปัจจุบัน?",
+      "example": "I've grown significantly in my current role and delivered impactful projects. Now I'm seeking opportunities to work on larger-scale systems and deepen my expertise in AI/ML applications. Your company's focus on [specific area] and the technical challenges at your scale are exactly what I'm looking for in my next step. I'm excited about the potential to contribute while continuing to grow.",
+      "exampleTranslation": "ผมเติบโตอย่างมากใน role ปัจจุบันและส่งมอบ projects ที่มี impact ตอนนี้ผมหา opportunities ทำงานกับ larger-scale systems และลึกซึ้งใน AI/ML applications โฟกัสของบริษัทคุณใน [specific area] และ technical challenges ที่ scale ของคุณคือสิ่งที่ผมมองหาใน step ถัดไป ผมตื่นเต้นกับ potential ที่จะ contribute และเติบโตต่อ"
+    },
+    {
+      "vocab": "Where do you see yourself in 5 years?",
+      "pronunciation": "",
+      "meaning": "คุณเห็นตัวเองใน 5 ปีอย่างไร?",
+      "example": "In 5 years, I want to be a technical leader who can architect complex systems and mentor engineers. I'm interested in the intersection of AI and distributed systems. I'd like to have led significant projects from design to production and contributed to the technical direction of a product. I also want to give back through writing, speaking, or open source contributions.",
+      "exampleTranslation": "ใน 5 ปีผมอยากเป็น technical leader ที่สามารถ architect complex systems และ mentor engineers ผมสนใจจุดตัดของ AI และ distributed systems ผมอยากนำ significant projects จาก design ถึง production และ contribute ทิศทาง technical ของผลิตภัณฑ์ ผมยังอยาก give back ผ่านการเขียน, speaking หรือ open source contributions"
+    },
+    {
+      "vocab": "What questions do you have for us?",
+      "pronunciation": "",
+      "meaning": "คุณมีคำถามอะไรสำหรับเรา?",
+      "example": "I'd love to learn more about: What does success look like in this role for the first 90 days? What are the biggest technical challenges your team is facing? How does the team approach knowledge sharing and professional development? What's the team culture like - how do you handle disagreements or technical debates? And what do you personally enjoy most about working here?",
+      "exampleTranslation": "ผมอยากเรียนรู้เพิ่มเติมเกี่ยวกับ: ความสำเร็จใน role นี้หน้าตาเป็นอย่างไรใน 90 วันแรก? อะไรคือ technical challenges ที่ใหญ่ที่สุดที่ทีมเผชิญ? ทีม approach knowledge sharing และ professional development อย่างไร? วัฒนธรรมทีมเป็นอย่างไร - คุณจัดการ disagreements หรือ technical debates อย่างไร? และคุณเองชอบอะไรมากที่สุดในการทำงานที่นี่?"
+    }
+  ]
+}

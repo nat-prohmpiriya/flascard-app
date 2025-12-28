@@ -1,0 +1,287 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Backend Developer",
+    "description": "Common interview questions and answers for Backend Developer position",
+    "category": "Interview",
+    "tags": ["interview", "english", "backend", "job"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the difference between REST and GraphQL?",
+      "pronunciation": "",
+      "meaning": "REST และ GraphQL ต่างกันอย่างไร?",
+      "example": "REST uses multiple endpoints with fixed data structures, while GraphQL uses a single endpoint where clients specify exactly what data they need. REST can lead to over-fetching or under-fetching, but GraphQL solves this by allowing flexible queries. However, GraphQL adds complexity with schema management and can have performance issues with deeply nested queries.",
+      "exampleTranslation": "REST ใช้หลาย endpoints พร้อมโครงสร้างข้อมูลที่ตายตัว ในขณะที่ GraphQL ใช้ endpoint เดียวที่ client ระบุข้อมูลที่ต้องการได้ REST อาจเกิด over-fetching หรือ under-fetching แต่ GraphQL แก้ปัญหานี้ด้วย flexible queries อย่างไรก็ตาม GraphQL เพิ่มความซับซ้อนในการจัดการ schema และอาจมีปัญหา performance กับ nested queries ที่ลึกมาก"
+    },
+    {
+      "vocab": "How do you design a RESTful API?",
+      "pronunciation": "",
+      "meaning": "คุณออกแบบ RESTful API อย่างไร?",
+      "example": "I follow REST principles: use nouns for resources (e.g., /users, /orders), HTTP methods for actions (GET, POST, PUT, DELETE), proper status codes (200, 201, 400, 404, 500), versioning in URL or headers, pagination for large datasets, and HATEOAS for discoverability. I also ensure consistent naming conventions and comprehensive documentation using OpenAPI/Swagger.",
+      "exampleTranslation": "ผมทำตามหลัก REST: ใช้ nouns สำหรับ resources (เช่น /users, /orders), HTTP methods สำหรับ actions (GET, POST, PUT, DELETE), status codes ที่เหมาะสม (200, 201, 400, 404, 500), versioning ใน URL หรือ headers, pagination สำหรับข้อมูลขนาดใหญ่ และ HATEOAS สำหรับ discoverability รวมถึงใช้ naming conventions ที่สม่ำเสมอและเอกสารครบถ้วนด้วย OpenAPI/Swagger"
+    },
+    {
+      "vocab": "Explain the difference between SQL and NoSQL databases.",
+      "pronunciation": "",
+      "meaning": "อธิบายความแตกต่างระหว่าง SQL และ NoSQL databases",
+      "example": "SQL databases are relational, use structured schemas, support ACID transactions, and are ideal for complex queries and data integrity. NoSQL databases are non-relational, schema-flexible, offer horizontal scaling, and are better for unstructured data and high throughput. I choose SQL for financial systems needing strong consistency, and NoSQL like MongoDB for flexible document storage or Redis for caching.",
+      "exampleTranslation": "SQL databases เป็น relational ใช้ schema ที่มีโครงสร้าง รองรับ ACID transactions เหมาะสำหรับ complex queries และ data integrity ส่วน NoSQL เป็น non-relational มี schema ยืดหยุ่น รองรับ horizontal scaling ดีกว่าสำหรับ unstructured data และ high throughput ผมเลือก SQL สำหรับระบบการเงินที่ต้องการ strong consistency และ NoSQL เช่น MongoDB สำหรับ flexible document storage หรือ Redis สำหรับ caching"
+    },
+    {
+      "vocab": "What is database indexing and when would you use it?",
+      "pronunciation": "",
+      "meaning": "Database indexing คืออะไร และเมื่อไหร่ควรใช้?",
+      "example": "An index is a data structure that improves query speed by allowing the database to find rows without scanning the entire table. I use indexes on columns frequently used in WHERE clauses, JOIN conditions, and ORDER BY. However, indexes slow down writes and consume storage, so I avoid over-indexing. Composite indexes are useful for queries filtering on multiple columns.",
+      "exampleTranslation": "Index คือโครงสร้างข้อมูลที่เพิ่มความเร็วการ query โดยให้ database หาแถวได้โดยไม่ต้อง scan ทั้งตาราง ผมใช้ index กับคอลัมน์ที่ใช้บ่อยใน WHERE, JOIN และ ORDER BY อย่างไรก็ตาม index ทำให้ write ช้าลงและใช้ storage มากขึ้น จึงหลีกเลี่ยงการใส่ index มากเกินไป Composite indexes มีประโยชน์สำหรับ queries ที่ filter หลายคอลัมน์"
+    },
+    {
+      "vocab": "Explain ACID properties in database transactions.",
+      "pronunciation": "ACID = Atomicity, Consistency, Isolation, Durability",
+      "meaning": "อธิบาย ACID properties ใน database transactions",
+      "example": "ACID ensures reliable transactions. Atomicity means all operations succeed or all fail. Consistency ensures the database moves from one valid state to another. Isolation prevents concurrent transactions from interfering with each other. Durability guarantees committed transactions persist even after system failures. These properties are crucial for financial systems where data integrity is paramount.",
+      "exampleTranslation": "ACID รับประกัน transactions ที่เชื่อถือได้ Atomicity หมายถึงทุก operations สำเร็จหรือล้มเหลวทั้งหมด Consistency รับประกันว่า database เปลี่ยนจาก valid state หนึ่งไปอีก state หนึ่ง Isolation ป้องกัน concurrent transactions ไม่ให้กระทบกัน Durability รับประกันว่า committed transactions คงอยู่แม้หลัง system failures คุณสมบัติเหล่านี้สำคัญสำหรับระบบการเงินที่ data integrity สำคัญมาก"
+    },
+    {
+      "vocab": "What is database connection pooling?",
+      "pronunciation": "",
+      "meaning": "Database connection pooling คืออะไร?",
+      "example": "Connection pooling maintains a cache of database connections that can be reused, avoiding the overhead of creating new connections for each request. This significantly improves performance. I configure pool size based on expected concurrent users and database limits. Libraries like HikariCP for Java or pgBouncer for PostgreSQL handle this efficiently.",
+      "exampleTranslation": "Connection pooling เก็บ cache ของ database connections ที่สามารถนำกลับมาใช้ใหม่ได้ หลีกเลี่ยง overhead จากการสร้าง connection ใหม่ทุก request ซึ่งเพิ่ม performance อย่างมาก ผม config pool size ตาม concurrent users ที่คาดหวังและ database limits Libraries เช่น HikariCP สำหรับ Java หรือ pgBouncer สำหรับ PostgreSQL จัดการเรื่องนี้ได้ดี"
+    },
+    {
+      "vocab": "How do you implement caching in a backend system?",
+      "pronunciation": "",
+      "meaning": "คุณ implement caching ในระบบ backend อย่างไร?",
+      "example": "I use multi-layer caching: application-level caching with in-memory stores, distributed caching with Redis for shared state across instances, and CDN for static assets. Key strategies include cache-aside (lazy loading), write-through, and write-behind. I set appropriate TTLs, implement cache invalidation strategies, and use cache warming for predictable high-traffic events.",
+      "exampleTranslation": "ผมใช้ multi-layer caching: application-level caching ด้วย in-memory stores, distributed caching ด้วย Redis สำหรับ shared state ข้าม instances และ CDN สำหรับ static assets กลยุทธ์หลักคือ cache-aside (lazy loading), write-through และ write-behind ผมตั้ง TTLs ที่เหมาะสม implement cache invalidation strategies และใช้ cache warming สำหรับ high-traffic events ที่คาดการณ์ได้"
+    },
+    {
+      "vocab": "What caching strategies do you know?",
+      "pronunciation": "",
+      "meaning": "คุณรู้จัก caching strategies อะไรบ้าง?",
+      "example": "Cache-Aside: Application checks cache first, loads from DB if miss. Write-Through: Writes go to cache and DB simultaneously. Write-Behind: Writes to cache immediately, asynchronously updates DB. Read-Through: Cache automatically loads from DB on miss. Refresh-Ahead: Proactively refreshes cache before expiration. I choose based on read/write ratio and consistency requirements.",
+      "exampleTranslation": "Cache-Aside: Application เช็ค cache ก่อน โหลดจาก DB ถ้า miss Write-Through: เขียนไป cache และ DB พร้อมกัน Write-Behind: เขียน cache ทันที แล้ว update DB แบบ async Read-Through: Cache โหลดจาก DB อัตโนมัติเมื่อ miss Refresh-Ahead: refresh cache ล่วงหน้าก่อนหมดอายุ ผมเลือกตาม read/write ratio และ consistency requirements"
+    },
+    {
+      "vocab": "How do you handle cache invalidation?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ cache invalidation อย่างไร?",
+      "example": "Cache invalidation is one of the hardest problems in CS. I use TTL-based expiration for time-sensitive data, event-driven invalidation when data changes (using message queues), and versioned cache keys for atomic updates. For complex scenarios, I implement pub/sub patterns where services publish invalidation events that other services subscribe to.",
+      "exampleTranslation": "Cache invalidation เป็นหนึ่งในปัญหาที่ยากที่สุดใน CS ผมใช้ TTL-based expiration สำหรับ time-sensitive data, event-driven invalidation เมื่อข้อมูลเปลี่ยน (ใช้ message queues) และ versioned cache keys สำหรับ atomic updates สำหรับ scenarios ที่ซับซ้อน ผม implement pub/sub patterns ที่ services publish invalidation events ให้ services อื่น subscribe"
+    },
+    {
+      "vocab": "What is the difference between authentication and authorization?",
+      "pronunciation": "",
+      "meaning": "Authentication และ Authorization ต่างกันอย่างไร?",
+      "example": "Authentication verifies WHO you are (identity) - like logging in with username/password, OAuth, or biometrics. Authorization determines WHAT you can do (permissions) - like role-based access control (RBAC) or attribute-based access control (ABAC). First authenticate the user, then authorize their actions based on roles or policies.",
+      "exampleTranslation": "Authentication ยืนยันว่าคุณเป็นใคร (identity) - เช่น login ด้วย username/password, OAuth หรือ biometrics Authorization กำหนดว่าคุณทำอะไรได้ (permissions) - เช่น role-based access control (RBAC) หรือ attribute-based access control (ABAC) authenticate user ก่อน แล้วค่อย authorize actions ตาม roles หรือ policies"
+    },
+    {
+      "vocab": "How do you implement JWT authentication?",
+      "pronunciation": "JWT = JSON Web Token",
+      "meaning": "คุณ implement JWT authentication อย่างไร?",
+      "example": "JWT contains encoded claims signed with a secret. On login, server validates credentials and issues a JWT with user info and expiration. Client sends JWT in Authorization header for subsequent requests. Server validates signature and expiration. I use short-lived access tokens with refresh tokens for better security, store secrets securely, and implement token revocation for logout.",
+      "exampleTranslation": "JWT มี encoded claims ที่ sign ด้วย secret เมื่อ login server ตรวจ credentials แล้วออก JWT พร้อม user info และ expiration Client ส่ง JWT ใน Authorization header สำหรับ requests ถัดไป Server validate signature และ expiration ผมใช้ short-lived access tokens กับ refresh tokens เพื่อ security ที่ดีขึ้น เก็บ secrets อย่างปลอดภัย และ implement token revocation สำหรับ logout"
+    },
+    {
+      "vocab": "What is OAuth 2.0 and how does it work?",
+      "pronunciation": "",
+      "meaning": "OAuth 2.0 คืออะไร และทำงานอย่างไร?",
+      "example": "OAuth 2.0 is an authorization framework that allows third-party applications to access user resources without exposing credentials. The flow involves: user authorizes app, app receives authorization code, app exchanges code for access token, app uses token to access resources. Common grants include Authorization Code (web apps), Client Credentials (machine-to-machine), and PKCE for mobile apps.",
+      "exampleTranslation": "OAuth 2.0 คือ authorization framework ที่อนุญาตให้ third-party applications เข้าถึง user resources โดยไม่เปิดเผย credentials Flow ประกอบด้วย: user authorize app, app ได้รับ authorization code, app แลก code เป็น access token, app ใช้ token เข้าถึง resources Grants ที่พบบ่อยคือ Authorization Code (web apps), Client Credentials (machine-to-machine) และ PKCE สำหรับ mobile apps"
+    },
+    {
+      "vocab": "How do you prevent SQL injection?",
+      "pronunciation": "",
+      "meaning": "คุณป้องกัน SQL injection อย่างไร?",
+      "example": "I always use parameterized queries or prepared statements - never concatenate user input into SQL strings. ORMs like SQLAlchemy or TypeORM handle this automatically. I also implement input validation, use least-privilege database accounts, and escape special characters when parameterization isn't possible. Regular security audits and code reviews help catch vulnerabilities.",
+      "exampleTranslation": "ผมใช้ parameterized queries หรือ prepared statements เสมอ - ไม่เคย concatenate user input เข้า SQL strings ORMs เช่น SQLAlchemy หรือ TypeORM จัดการเรื่องนี้อัตโนมัติ ผมยัง implement input validation ใช้ least-privilege database accounts และ escape special characters เมื่อใช้ parameterization ไม่ได้ Security audits และ code reviews ช่วยจับ vulnerabilities"
+    },
+    {
+      "vocab": "What is rate limiting and how do you implement it?",
+      "pronunciation": "",
+      "meaning": "Rate limiting คืออะไร และ implement อย่างไร?",
+      "example": "Rate limiting controls how many requests a client can make within a time window to prevent abuse and ensure fair usage. I implement using algorithms like Token Bucket or Sliding Window. Redis is ideal for distributed rate limiting. I apply different limits based on user tiers, endpoint sensitivity, and return proper 429 status codes with Retry-After headers.",
+      "exampleTranslation": "Rate limiting ควบคุมจำนวน requests ที่ client ส่งได้ในช่วงเวลาหนึ่งเพื่อป้องกันการ abuse และรับประกัน fair usage ผม implement ด้วย algorithms เช่น Token Bucket หรือ Sliding Window Redis เหมาะสำหรับ distributed rate limiting ผมใช้ limits ต่างกันตาม user tiers, endpoint sensitivity และ return 429 status codes พร้อม Retry-After headers"
+    },
+    {
+      "vocab": "How do you handle errors in a backend API?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ errors ใน backend API อย่างไร?",
+      "example": "I implement a consistent error response format with error code, message, and optional details. I use appropriate HTTP status codes (4xx for client errors, 5xx for server errors). Errors are logged with context for debugging but sensitive details are never exposed to clients. I use global error handlers and custom exception classes for different error types.",
+      "exampleTranslation": "ผม implement error response format ที่สม่ำเสมอ มี error code, message และ details (optional) ผมใช้ HTTP status codes ที่เหมาะสม (4xx สำหรับ client errors, 5xx สำหรับ server errors) Errors ถูก log พร้อม context สำหรับ debugging แต่ไม่เปิดเผย sensitive details ให้ clients ผมใช้ global error handlers และ custom exception classes สำหรับ error types ต่างๆ"
+    },
+    {
+      "vocab": "What is message queue and when would you use it?",
+      "pronunciation": "",
+      "meaning": "Message queue คืออะไร และเมื่อไหร่ควรใช้?",
+      "example": "A message queue enables asynchronous communication between services by storing messages until they're processed. I use it for: decoupling services, handling traffic spikes (load leveling), ensuring reliability with retries, and background job processing. Popular choices include RabbitMQ for complex routing, Kafka for high-throughput streaming, and Redis for simple queues.",
+      "exampleTranslation": "Message queue ช่วยให้ services สื่อสารแบบ asynchronous โดยเก็บ messages จนกว่าจะถูก process ผมใช้สำหรับ: decoupling services, รองรับ traffic spikes (load leveling), รับประกัน reliability ด้วย retries และ background job processing ตัวเลือกยอดนิยมคือ RabbitMQ สำหรับ complex routing, Kafka สำหรับ high-throughput streaming และ Redis สำหรับ simple queues"
+    },
+    {
+      "vocab": "Explain the difference between RabbitMQ and Kafka.",
+      "pronunciation": "",
+      "meaning": "อธิบายความแตกต่างระหว่าง RabbitMQ และ Kafka",
+      "example": "RabbitMQ is a traditional message broker with complex routing, message acknowledgment, and push-based delivery - great for task queues and RPC. Kafka is a distributed streaming platform with pull-based consumers, message retention, and replay capability - ideal for event sourcing, log aggregation, and real-time analytics. RabbitMQ prioritizes delivery guarantees, Kafka prioritizes throughput.",
+      "exampleTranslation": "RabbitMQ เป็น message broker แบบดั้งเดิม มี complex routing, message acknowledgment และ push-based delivery - เหมาะสำหรับ task queues และ RPC Kafka เป็น distributed streaming platform มี pull-based consumers, message retention และ replay capability - เหมาะสำหรับ event sourcing, log aggregation และ real-time analytics RabbitMQ เน้น delivery guarantees ส่วน Kafka เน้น throughput"
+    },
+    {
+      "vocab": "What are microservices and their benefits?",
+      "pronunciation": "",
+      "meaning": "Microservices คืออะไร และมีข้อดีอย่างไร?",
+      "example": "Microservices architecture breaks an application into small, independent services that communicate via APIs. Benefits include: independent deployment and scaling, technology flexibility per service, fault isolation, and easier team organization. However, it adds complexity in service discovery, distributed tracing, data consistency, and network latency. I recommend starting with a modular monolith.",
+      "exampleTranslation": "Microservices architecture แบ่ง application เป็น services ขนาดเล็กที่เป็นอิสระ สื่อสารผ่าน APIs ข้อดีคือ: deploy และ scale แยกกันได้, เลือก technology ต่างกันได้แต่ละ service, fault isolation และจัดทีมง่ายขึ้น อย่างไรก็ตามเพิ่มความซับซ้อนใน service discovery, distributed tracing, data consistency และ network latency ผมแนะนำเริ่มจาก modular monolith"
+    },
+    {
+      "vocab": "How do services communicate in microservices architecture?",
+      "pronunciation": "",
+      "meaning": "Services สื่อสารกันอย่างไรใน microservices architecture?",
+      "example": "Synchronous: REST APIs for request-response, gRPC for high-performance internal calls. Asynchronous: Message queues like Kafka or RabbitMQ for event-driven communication, better for decoupling and reliability. I prefer async for non-critical paths to improve resilience. Service mesh like Istio can handle cross-cutting concerns like retries, circuit breaking, and observability.",
+      "exampleTranslation": "Synchronous: REST APIs สำหรับ request-response, gRPC สำหรับ high-performance internal calls Asynchronous: Message queues เช่น Kafka หรือ RabbitMQ สำหรับ event-driven communication ดีกว่าสำหรับ decoupling และ reliability ผมชอบ async สำหรับ non-critical paths เพื่อเพิ่ม resilience Service mesh เช่น Istio จัดการ cross-cutting concerns เช่น retries, circuit breaking และ observability"
+    },
+    {
+      "vocab": "What is the Circuit Breaker pattern?",
+      "pronunciation": "",
+      "meaning": "Circuit Breaker pattern คืออะไร?",
+      "example": "Circuit Breaker prevents cascading failures by stopping calls to a failing service. It has three states: Closed (normal operation), Open (calls fail fast), and Half-Open (testing recovery). When failure threshold is reached, it opens. After a timeout, it allows test requests. If successful, it closes. Libraries like Hystrix or Resilience4j implement this pattern.",
+      "exampleTranslation": "Circuit Breaker ป้องกัน cascading failures โดยหยุดเรียก service ที่ล้มเหลว มีสาม states: Closed (ทำงานปกติ), Open (calls fail ทันที) และ Half-Open (ทดสอบ recovery) เมื่อถึง failure threshold จะ open หลัง timeout จะอนุญาต test requests ถ้าสำเร็จจะ close Libraries เช่น Hystrix หรือ Resilience4j implement pattern นี้"
+    },
+    {
+      "vocab": "How do you handle distributed transactions?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ distributed transactions อย่างไร?",
+      "example": "Distributed transactions are challenging. I prefer the Saga pattern where each service executes a local transaction and publishes an event. If one fails, compensating transactions undo previous steps. Two approaches: Choreography (event-based, decentralized) or Orchestration (central coordinator). I also use the Transactional Outbox pattern to ensure reliable event publishing.",
+      "exampleTranslation": "Distributed transactions เป็นเรื่องท้าทาย ผมชอบใช้ Saga pattern ที่แต่ละ service execute local transaction แล้ว publish event ถ้าอันหนึ่งล้มเหลว compensating transactions จะ undo steps ก่อนหน้า สองแนวทาง: Choreography (event-based, decentralized) หรือ Orchestration (central coordinator) ผมยังใช้ Transactional Outbox pattern เพื่อรับประกัน reliable event publishing"
+    },
+    {
+      "vocab": "What is the difference between horizontal and vertical scaling?",
+      "pronunciation": "",
+      "meaning": "Horizontal และ vertical scaling ต่างกันอย่างไร?",
+      "example": "Vertical scaling (scale up) adds more resources to a single machine - more CPU, RAM, or storage. It's simpler but has limits and single point of failure. Horizontal scaling (scale out) adds more machines to distribute load. It's more complex but offers better fault tolerance and theoretically unlimited scaling. Modern cloud-native applications prefer horizontal scaling.",
+      "exampleTranslation": "Vertical scaling (scale up) เพิ่ม resources ให้เครื่องเดียว - CPU, RAM หรือ storage มากขึ้น ง่ายกว่าแต่มีขีดจำกัดและ single point of failure Horizontal scaling (scale out) เพิ่มเครื่องเพื่อกระจาย load ซับซ้อนกว่าแต่ fault tolerance ดีกว่าและ scale ได้ไม่จำกัดในทางทฤษฎี Modern cloud-native applications ชอบ horizontal scaling"
+    },
+    {
+      "vocab": "How do you write unit tests for backend code?",
+      "pronunciation": "",
+      "meaning": "คุณเขียน unit tests สำหรับ backend code อย่างไร?",
+      "example": "I follow the AAA pattern: Arrange (setup), Act (execute), Assert (verify). I use mocking to isolate dependencies and test edge cases. I aim for high coverage on business logic, not just line coverage. Tests should be fast, independent, and deterministic. I use frameworks like pytest, Jest, or Go's testing package with table-driven tests.",
+      "exampleTranslation": "ผมใช้ AAA pattern: Arrange (setup), Act (execute), Assert (verify) ผมใช้ mocking เพื่อ isolate dependencies และ test edge cases ผมเน้น coverage สูงบน business logic ไม่ใช่แค่ line coverage Tests ควรเร็ว, independent และ deterministic ผมใช้ frameworks เช่น pytest, Jest หรือ Go's testing package กับ table-driven tests"
+    },
+    {
+      "vocab": "What is the difference between integration and end-to-end tests?",
+      "pronunciation": "",
+      "meaning": "Integration tests และ end-to-end tests ต่างกันอย่างไร?",
+      "example": "Integration tests verify that multiple components work together correctly - like API with database or service with message queue. End-to-end tests validate the entire system from user perspective, simulating real user scenarios. Integration tests are faster and more focused; E2E tests are slower but catch issues across the full stack. I use the testing pyramid: many unit tests, fewer integration, minimal E2E.",
+      "exampleTranslation": "Integration tests ตรวจสอบว่าหลาย components ทำงานร่วมกันได้ถูกต้อง - เช่น API กับ database หรือ service กับ message queue End-to-end tests validate ทั้งระบบจากมุมมอง user จำลอง real user scenarios Integration tests เร็วกว่าและ focused มากกว่า; E2E tests ช้ากว่าแต่จับปัญหาทั้ง full stack ผมใช้ testing pyramid: unit tests มาก, integration น้อยลง, E2E น้อยที่สุด"
+    },
+    {
+      "vocab": "How do you optimize database query performance?",
+      "pronunciation": "",
+      "meaning": "คุณ optimize database query performance อย่างไร?",
+      "example": "I start with EXPLAIN ANALYZE to understand query execution. Key optimizations: add appropriate indexes, avoid SELECT *, use pagination instead of fetching all rows, optimize JOINs and subqueries, denormalize for read-heavy workloads, and use query caching. I also monitor slow query logs and use connection pooling to reduce connection overhead.",
+      "exampleTranslation": "ผมเริ่มจาก EXPLAIN ANALYZE เพื่อเข้าใจ query execution การ optimize หลักๆ: เพิ่ม indexes ที่เหมาะสม, หลีกเลี่ยง SELECT *, ใช้ pagination แทนการดึงทุกแถว, optimize JOINs และ subqueries, denormalize สำหรับ read-heavy workloads และใช้ query caching ผมยัง monitor slow query logs และใช้ connection pooling เพื่อลด connection overhead"
+    },
+    {
+      "vocab": "What is N+1 query problem and how do you solve it?",
+      "pronunciation": "",
+      "meaning": "N+1 query problem คืออะไร และแก้ไขอย่างไร?",
+      "example": "N+1 problem occurs when fetching a list of items (1 query) and then fetching related data for each item separately (N queries). Solution: use eager loading with JOINs or batch loading. In ORMs, use include/preload for related entities. GraphQL DataLoader batches and caches requests. This can reduce hundreds of queries to just one or two.",
+      "exampleTranslation": "N+1 problem เกิดเมื่อดึง list ของ items (1 query) แล้วดึง related data แยกสำหรับแต่ละ item (N queries) วิธีแก้: ใช้ eager loading ด้วย JOINs หรือ batch loading ใน ORMs ใช้ include/preload สำหรับ related entities GraphQL DataLoader batch และ cache requests สามารถลดจากหลายร้อย queries เหลือแค่หนึ่งหรือสอง"
+    },
+    {
+      "vocab": "How do you handle database migrations in production?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ database migrations ใน production อย่างไร?",
+      "example": "I use migration tools like Flyway or Alembic with version-controlled migration files. Key practices: make migrations reversible, avoid breaking changes (add columns as nullable first), test in staging, run during low-traffic periods, and have a rollback plan. For zero-downtime, I use expand-contract pattern: add new column, deploy code using both, migrate data, remove old column.",
+      "exampleTranslation": "ผมใช้ migration tools เช่น Flyway หรือ Alembic กับ migration files ที่ version-controlled แนวปฏิบัติหลัก: ทำ migrations ให้ reversible ได้, หลีกเลี่ยง breaking changes (เพิ่ม columns เป็น nullable ก่อน), test ใน staging, รันช่วง low-traffic และมี rollback plan สำหรับ zero-downtime ผมใช้ expand-contract pattern: เพิ่ม column ใหม่, deploy code ที่ใช้ทั้งสอง, migrate data, ลบ column เก่า"
+    },
+    {
+      "vocab": "What is database sharding?",
+      "pronunciation": "",
+      "meaning": "Database sharding คืออะไร?",
+      "example": "Sharding horizontally partitions data across multiple database instances. Each shard contains a subset of data based on a shard key (e.g., user_id range or hash). Benefits: improved write scalability and reduced data per instance. Challenges: cross-shard queries are complex, rebalancing shards is difficult, and the shard key choice is critical. I consider sharding only when vertical scaling is exhausted.",
+      "exampleTranslation": "Sharding แบ่งข้อมูลแนวนอนข้ามหลาย database instances แต่ละ shard มี subset ของข้อมูลตาม shard key (เช่น user_id range หรือ hash) ข้อดี: write scalability ดีขึ้นและข้อมูลต่อ instance น้อยลง ความท้าทาย: cross-shard queries ซับซ้อน, rebalancing shards ยาก และการเลือก shard key สำคัญมาก ผมพิจารณา sharding เมื่อ vertical scaling ไม่พอแล้วเท่านั้น"
+    },
+    {
+      "vocab": "How do you implement logging and monitoring?",
+      "pronunciation": "",
+      "meaning": "คุณ implement logging และ monitoring อย่างไร?",
+      "example": "For logging, I use structured logs (JSON) with correlation IDs for request tracing, appropriate log levels, and centralized logging with ELK stack or Loki. For monitoring, I track the RED metrics (Rate, Errors, Duration) and use Prometheus with Grafana. I set up alerts for anomalies and implement distributed tracing with Jaeger or OpenTelemetry for debugging microservices.",
+      "exampleTranslation": "สำหรับ logging ผมใช้ structured logs (JSON) กับ correlation IDs สำหรับ request tracing, log levels ที่เหมาะสม และ centralized logging ด้วย ELK stack หรือ Loki สำหรับ monitoring ผม track RED metrics (Rate, Errors, Duration) และใช้ Prometheus กับ Grafana ผมตั้ง alerts สำหรับ anomalies และ implement distributed tracing ด้วย Jaeger หรือ OpenTelemetry สำหรับ debugging microservices"
+    },
+    {
+      "vocab": "What is the difference between gRPC and REST?",
+      "pronunciation": "gRPC = gRPC Remote Procedure Call",
+      "meaning": "gRPC และ REST ต่างกันอย่างไร?",
+      "example": "REST uses HTTP/1.1 with JSON, is human-readable, and widely supported. gRPC uses HTTP/2 with Protocol Buffers, offers better performance, type safety, and bidirectional streaming. I use REST for public APIs and simple services, gRPC for internal microservice communication where performance matters. gRPC requires more tooling but provides auto-generated clients.",
+      "exampleTranslation": "REST ใช้ HTTP/1.1 กับ JSON อ่านง่ายและ support กว้าง gRPC ใช้ HTTP/2 กับ Protocol Buffers มี performance ดีกว่า, type safety และ bidirectional streaming ผมใช้ REST สำหรับ public APIs และ simple services ใช้ gRPC สำหรับ internal microservice communication ที่ต้องการ performance gRPC ต้องการ tooling มากกว่าแต่ได้ auto-generated clients"
+    },
+    {
+      "vocab": "How do you handle API versioning?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ API versioning อย่างไร?",
+      "example": "Common approaches: URL path versioning (/v1/users), header versioning (Accept: application/vnd.api+json;version=1), or query parameter (?version=1). I prefer URL versioning for clarity. When introducing breaking changes, I maintain old versions during migration period, document deprecation timelines, and help clients upgrade. Semantic versioning principles guide when to bump versions.",
+      "exampleTranslation": "วิธีที่ใช้บ่อย: URL path versioning (/v1/users), header versioning (Accept: application/vnd.api+json;version=1) หรือ query parameter (?version=1) ผมชอบ URL versioning เพราะชัดเจน เมื่อมี breaking changes ผม maintain versions เก่าระหว่าง migration period, document deprecation timelines และช่วย clients upgrade หลัก Semantic versioning บอกว่าเมื่อไหร่ควร bump versions"
+    },
+    {
+      "vocab": "What are WebSockets and when would you use them?",
+      "pronunciation": "",
+      "meaning": "WebSockets คืออะไร และเมื่อไหร่ควรใช้?",
+      "example": "WebSockets provide full-duplex, persistent connections between client and server, enabling real-time bidirectional communication. I use them for: chat applications, live notifications, real-time dashboards, collaborative editing, and gaming. For simpler use cases, Server-Sent Events (SSE) might suffice. I implement heartbeat mechanisms and handle reconnection gracefully.",
+      "exampleTranslation": "WebSockets ให้ full-duplex, persistent connections ระหว่าง client และ server ทำให้สื่อสารแบบ real-time bidirectional ได้ ผมใช้สำหรับ: chat applications, live notifications, real-time dashboards, collaborative editing และ gaming สำหรับ use cases ที่ง่ายกว่า Server-Sent Events (SSE) อาจเพียงพอ ผม implement heartbeat mechanisms และจัดการ reconnection อย่างดี"
+    },
+    {
+      "vocab": "How do you ensure idempotency in APIs?",
+      "pronunciation": "",
+      "meaning": "คุณรับประกัน idempotency ใน APIs อย่างไร?",
+      "example": "Idempotency ensures that multiple identical requests have the same effect as a single request. For GET, PUT, DELETE - they're naturally idempotent. For POST, I use idempotency keys: client sends a unique key, server stores it and returns cached response on retry. This prevents duplicate charges, orders, or any side effects from network retries.",
+      "exampleTranslation": "Idempotency รับประกันว่าหลาย requests เหมือนกันให้ผลเหมือนกับ request เดียว สำหรับ GET, PUT, DELETE - เป็น idempotent โดยธรรมชาติ สำหรับ POST ผมใช้ idempotency keys: client ส่ง unique key, server เก็บไว้และ return cached response เมื่อ retry ป้องกัน duplicate charges, orders หรือ side effects จาก network retries"
+    },
+    {
+      "vocab": "What is event sourcing?",
+      "pronunciation": "",
+      "meaning": "Event sourcing คืออะไร?",
+      "example": "Event sourcing stores all changes to application state as a sequence of immutable events, rather than just storing current state. Benefits: complete audit trail, ability to replay events to rebuild state, and time-travel debugging. Challenges: eventual consistency, event schema evolution, and increased storage. I use it for financial systems, audit-heavy domains, or when historical analysis is needed.",
+      "exampleTranslation": "Event sourcing เก็บทุกการเปลี่ยนแปลงของ application state เป็นลำดับของ immutable events แทนที่จะเก็บแค่ state ปัจจุบัน ข้อดี: audit trail ครบถ้วน, สามารถ replay events เพื่อสร้าง state ใหม่ และ time-travel debugging ความท้าทาย: eventual consistency, event schema evolution และ storage มากขึ้น ผมใช้สำหรับ financial systems, audit-heavy domains หรือเมื่อต้องการ historical analysis"
+    },
+    {
+      "vocab": "How do you handle file uploads in a scalable way?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ file uploads แบบ scalable อย่างไร?",
+      "example": "For scalability, I never store files on application servers. Instead, I use cloud object storage like S3. For large files, I implement multipart uploads with presigned URLs - client uploads directly to S3, bypassing the backend. I validate file types and sizes, scan for malware, generate unique filenames, and store metadata in the database.",
+      "exampleTranslation": "เพื่อ scalability ผมไม่เก็บไฟล์บน application servers แต่ใช้ cloud object storage เช่น S3 สำหรับไฟล์ใหญ่ ผม implement multipart uploads ด้วย presigned URLs - client upload ตรงไป S3 ไม่ผ่าน backend ผม validate file types และ sizes, scan malware, generate unique filenames และเก็บ metadata ใน database"
+    },
+    {
+      "vocab": "What is the difference between synchronous and asynchronous processing?",
+      "pronunciation": "",
+      "meaning": "Synchronous และ asynchronous processing ต่างกันอย่างไร?",
+      "example": "Synchronous processing blocks until the operation completes - simple but can cause latency. Asynchronous processing returns immediately and processes in background - better for long-running tasks like email sending, report generation, or image processing. I use message queues for async tasks, providing better user experience and system resilience.",
+      "exampleTranslation": "Synchronous processing block จนกว่า operation จะเสร็จ - ง่ายแต่อาจทำให้เกิด latency Asynchronous processing return ทันทีและ process ใน background - ดีกว่าสำหรับ long-running tasks เช่น email sending, report generation หรือ image processing ผมใช้ message queues สำหรับ async tasks ให้ user experience และ system resilience ที่ดีขึ้น"
+    },
+    {
+      "vocab": "How do you debug performance issues in production?",
+      "pronunciation": "",
+      "meaning": "คุณ debug performance issues ใน production อย่างไร?",
+      "example": "I start with observability data: check metrics for anomalies, trace slow requests, and analyze logs for errors. I use APM tools like New Relic or Datadog to identify bottlenecks. For deeper analysis, I enable profiling to find CPU or memory hotspots. I reproduce issues in staging when possible and implement fixes incrementally with feature flags.",
+      "exampleTranslation": "ผมเริ่มจาก observability data: เช็ค metrics หา anomalies, trace slow requests และวิเคราะห์ logs หา errors ผมใช้ APM tools เช่น New Relic หรือ Datadog ระบุ bottlenecks สำหรับ analysis ที่ลึกขึ้น ผม enable profiling หา CPU หรือ memory hotspots ผม reproduce issues ใน staging เมื่อทำได้และ implement fixes แบบ incremental ด้วย feature flags"
+    },
+    {
+      "vocab": "What is CORS and how do you handle it?",
+      "pronunciation": "CORS = Cross-Origin Resource Sharing",
+      "meaning": "CORS คืออะไร และจัดการอย่างไร?",
+      "example": "CORS is a browser security feature that restricts web pages from making requests to different domains. The server must include specific headers (Access-Control-Allow-Origin, etc.) to permit cross-origin requests. I configure CORS middleware to whitelist allowed origins, methods, and headers. For credentials, I explicitly allow them and avoid wildcard origins.",
+      "exampleTranslation": "CORS คือ browser security feature ที่จำกัดไม่ให้ web pages ส่ง requests ไปยัง domains อื่น Server ต้องใส่ headers เฉพาะ (Access-Control-Allow-Origin ฯลฯ) เพื่ออนุญาต cross-origin requests ผม configure CORS middleware เพื่อ whitelist allowed origins, methods และ headers สำหรับ credentials ผม allow อย่างชัดเจนและหลีกเลี่ยง wildcard origins"
+    },
+    {
+      "vocab": "How do you implement background job processing?",
+      "pronunciation": "",
+      "meaning": "คุณ implement background job processing อย่างไร?",
+      "example": "I use job queues like Bull (Node.js), Celery (Python), or Sidekiq (Ruby) with Redis or RabbitMQ as the broker. Jobs include retry logic with exponential backoff, dead letter queues for failed jobs, and priority levels. I monitor job metrics, set timeouts, and implement graceful shutdown. For scheduled jobs, I use cron-like syntax with distributed locks to prevent duplicates.",
+      "exampleTranslation": "ผมใช้ job queues เช่น Bull (Node.js), Celery (Python) หรือ Sidekiq (Ruby) กับ Redis หรือ RabbitMQ เป็น broker Jobs มี retry logic ด้วย exponential backoff, dead letter queues สำหรับ failed jobs และ priority levels ผม monitor job metrics, ตั้ง timeouts และ implement graceful shutdown สำหรับ scheduled jobs ผมใช้ cron-like syntax กับ distributed locks ป้องกัน duplicates"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - Frontend Developer",
+    "description": "Common interview questions and answers for Frontend Developer position covering HTML, CSS, JavaScript, React 19, and modern web development",
+    "category": "Interview",
+    "tags": ["interview", "frontend", "react", "javascript"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is semantic HTML and why is it important?",
+      "pronunciation": "",
+      "meaning": "Semantic HTML คืออะไร และทำไมถึงสำคัญ?",
+      "example": "Semantic HTML uses meaningful tags like <header>, <nav>, <main>, <article>, <section>, and <footer> instead of generic <div> elements. It's important for three reasons: First, accessibility - screen readers can navigate content properly. Second, SEO - search engines understand page structure better. Third, maintainability - code is more readable and self-documenting. For example, using <button> instead of <div onclick> provides built-in keyboard support and proper ARIA roles.",
+      "exampleTranslation": "Semantic HTML ใช้ tags ที่มีความหมาย เช่น <header>, <nav>, <main>, <article>, <section> และ <footer> แทน <div> ทั่วไป สำคัญ 3 เหตุผล: หนึ่ง accessibility - screen readers นำทาง content ได้ถูกต้อง สอง SEO - search engines เข้าใจโครงสร้างหน้าได้ดีขึ้น สาม maintainability - code อ่านง่ายและอธิบายตัวเอง เช่น ใช้ <button> แทน <div onclick> จะได้ keyboard support และ ARIA roles ในตัว"
+    },
+    {
+      "vocab": "Explain the CSS Box Model.",
+      "pronunciation": "",
+      "meaning": "อธิบาย CSS Box Model",
+      "example": "The CSS Box Model describes how elements are rendered. From inside out: content (actual text/images), padding (space inside the border), border (the element's border), and margin (space outside the border). By default, width/height only apply to content (content-box). Using box-sizing: border-box makes width/height include padding and border, which is more intuitive for layouts. This is why many CSS resets include * { box-sizing: border-box; }.",
+      "exampleTranslation": "CSS Box Model อธิบายการ render elements จากในออกนอก: content (text/images จริง), padding (พื้นที่ในขอบ), border (ขอบ element), และ margin (พื้นที่นอกขอบ) ปกติ width/height ใช้กับ content เท่านั้น (content-box) การใช้ box-sizing: border-box ทำให้ width/height รวม padding และ border ด้วย ซึ่งเข้าใจง่ายกว่าสำหรับ layouts นี่คือเหตุผลที่ CSS resets หลายตัวใช้ * { box-sizing: border-box; }"
+    },
+    {
+      "vocab": "What's the difference between Flexbox and CSS Grid?",
+      "pronunciation": "",
+      "meaning": "Flexbox กับ CSS Grid ต่างกันอย่างไร?",
+      "example": "Flexbox is one-dimensional - it handles layout in a single direction (row OR column) at a time. It's ideal for components like navigation bars, card layouts in a row, or centering content. CSS Grid is two-dimensional - it handles rows AND columns simultaneously. It's better for page layouts, complex grids, and when you need precise control over both axes. You can combine them: use Grid for the overall page layout and Flexbox for components within grid cells.",
+      "exampleTranslation": "Flexbox เป็น one-dimensional - จัดการ layout ทีละทิศทาง (row หรือ column) เหมาะกับ navigation bars, card layouts ในแถว, หรือ centering content CSS Grid เป็น two-dimensional - จัดการ rows และ columns พร้อมกัน เหมาะกับ page layouts, grids ซับซ้อน, และเมื่อต้องควบคุมทั้งสองแกนอย่างแม่นยำ ใช้ร่วมกันได้: Grid สำหรับ layout หน้าหลัก และ Flexbox สำหรับ components ใน grid cells"
+    },
+    {
+      "vocab": "How does CSS specificity work?",
+      "pronunciation": "",
+      "meaning": "CSS specificity ทำงานอย่างไร?",
+      "example": "CSS specificity determines which styles apply when multiple rules target the same element. It's calculated as a score: inline styles (1000), IDs (100), classes/attributes/pseudo-classes (10), elements/pseudo-elements (1). For example, #header .nav a has specificity 111 (1 ID + 1 class + 1 element). !important overrides everything but should be avoided. When specificity is equal, the last rule wins. Best practice: use classes primarily, avoid IDs for styling, and never rely on !important.",
+      "exampleTranslation": "CSS specificity กำหนดว่า styles ไหนใช้เมื่อหลาย rules target element เดียวกัน คำนวณเป็นคะแนน: inline styles (1000), IDs (100), classes/attributes/pseudo-classes (10), elements/pseudo-elements (1) เช่น #header .nav a มี specificity 111 (1 ID + 1 class + 1 element) !important override ทุกอย่างแต่ควรหลีกเลี่ยง เมื่อ specificity เท่ากัน rule สุดท้ายชนะ Best practice: ใช้ classes เป็นหลัก หลีกเลี่ยง IDs สำหรับ styling และอย่าพึ่ง !important"
+    },
+    {
+      "vocab": "What are CSS media queries and how do you implement responsive design?",
+      "pronunciation": "",
+      "meaning": "CSS media queries คืออะไร และทำ responsive design อย่างไร?",
+      "example": "Media queries apply styles based on device characteristics like viewport width. Modern approach is mobile-first: start with mobile styles, then use min-width queries for larger screens. Example: @media (min-width: 768px) { } for tablets, @media (min-width: 1024px) { } for desktop. Combine with fluid units (%, vw, vh, rem), CSS clamp() for fluid typography, and container queries for component-level responsiveness. Always test on real devices, not just browser DevTools.",
+      "exampleTranslation": "Media queries ใช้ styles ตามคุณสมบัติอุปกรณ์ เช่น viewport width วิธีสมัยใหม่คือ mobile-first: เริ่มด้วย mobile styles แล้วใช้ min-width queries สำหรับหน้าจอใหญ่ขึ้น เช่น @media (min-width: 768px) { } สำหรับ tablets, @media (min-width: 1024px) { } สำหรับ desktop ใช้ร่วมกับ fluid units (%, vw, vh, rem), CSS clamp() สำหรับ fluid typography และ container queries สำหรับ component-level responsiveness ทดสอบบนอุปกรณ์จริงเสมอ ไม่ใช่แค่ browser DevTools"
+    },
+    {
+      "vocab": "Explain JavaScript closures with an example.",
+      "pronunciation": "",
+      "meaning": "อธิบาย JavaScript closures พร้อมตัวอย่าง",
+      "example": "A closure is a function that remembers variables from its outer scope even after the outer function has finished executing. Example: function createCounter() { let count = 0; return function() { return ++count; }; } const counter = createCounter(); counter(); // 1, counter(); // 2. The inner function 'closes over' the count variable. Common uses: data privacy, function factories, and maintaining state in callbacks. It's fundamental to patterns like module pattern and React hooks.",
+      "exampleTranslation": "Closure คือ function ที่จำตัวแปรจาก outer scope แม้ outer function ทำงานเสร็จแล้ว ตัวอย่าง: function createCounter() { let count = 0; return function() { return ++count; }; } const counter = createCounter(); counter(); // 1, counter(); // 2 Inner function 'closes over' ตัวแปร count ใช้งานทั่วไป: data privacy, function factories และรักษา state ใน callbacks เป็นพื้นฐานของ patterns เช่น module pattern และ React hooks"
+    },
+    {
+      "vocab": "What is the JavaScript Event Loop?",
+      "pronunciation": "",
+      "meaning": "JavaScript Event Loop คืออะไร?",
+      "example": "The Event Loop enables JavaScript's non-blocking behavior despite being single-threaded. It consists of: Call Stack (executes sync code), Web APIs (handles async operations like setTimeout, fetch), Callback Queue (holds callbacks ready to run), and Microtask Queue (holds Promise callbacks, higher priority). The loop checks if the Call Stack is empty, then processes all microtasks, then one callback from the queue. This is why Promise.then() runs before setTimeout(..., 0).",
+      "exampleTranslation": "Event Loop ทำให้ JavaScript ไม่ blocking แม้เป็น single-threaded ประกอบด้วย: Call Stack (execute sync code), Web APIs (จัดการ async operations เช่น setTimeout, fetch), Callback Queue (เก็บ callbacks ที่พร้อมทำงาน), และ Microtask Queue (เก็บ Promise callbacks, priority สูงกว่า) Loop ตรวจว่า Call Stack ว่างไหม แล้วประมวลผล microtasks ทั้งหมด แล้วค่อย callback หนึ่งตัวจาก queue นี่คือเหตุผลที่ Promise.then() ทำงานก่อน setTimeout(..., 0)"
+    },
+    {
+      "vocab": "Explain Promises and async/await in JavaScript.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Promises และ async/await ใน JavaScript",
+      "example": "Promises represent eventual completion or failure of async operations. They have three states: pending, fulfilled, rejected. You chain with .then() and handle errors with .catch(). async/await is syntactic sugar over Promises - it makes async code look synchronous. async functions always return Promises; await pauses execution until Promise resolves. Error handling uses try/catch. Example: async function fetchData() { try { const res = await fetch(url); return await res.json(); } catch (e) { handleError(e); } }",
+      "exampleTranslation": "Promises แทนการเสร็จสมบูรณ์หรือล้มเหลวของ async operations มีสามสถานะ: pending, fulfilled, rejected chain ด้วย .then() และจัดการ errors ด้วย .catch() async/await เป็น syntactic sugar เหนือ Promises - ทำให้ async code ดูเหมือน synchronous async functions return Promises เสมอ; await หยุดการทำงานจนกว่า Promise จะ resolve Error handling ใช้ try/catch ตัวอย่าง: async function fetchData() { try { const res = await fetch(url); return await res.json(); } catch (e) { handleError(e); } }"
+    },
+    {
+      "vocab": "What is the difference between var, let, and const?",
+      "pronunciation": "",
+      "meaning": "var, let และ const ต่างกันอย่างไร?",
+      "example": "var is function-scoped, hoisted (initialized as undefined), and can be redeclared. let is block-scoped, hoisted but not initialized (temporal dead zone), and cannot be redeclared. const is like let but cannot be reassigned (though object properties can be mutated). Best practice: use const by default, let when you need to reassign, avoid var entirely. This prevents accidental reassignments and makes code intent clearer. Example: const config = {}; config.api = 'url'; // OK, let count = 0; count++; // OK",
+      "exampleTranslation": "var เป็น function-scoped, hoisted (initialized เป็น undefined), และ redeclare ได้ let เป็น block-scoped, hoisted แต่ไม่ initialized (temporal dead zone), และ redeclare ไม่ได้ const เหมือน let แต่ reassign ไม่ได้ (แต่ object properties แก้ได้) Best practice: ใช้ const เป็นค่าเริ่มต้น, let เมื่อต้อง reassign, หลีกเลี่ยง var ทั้งหมด ป้องกัน reassignments โดยบังเอิญและทำให้ code intent ชัดเจน ตัวอย่าง: const config = {}; config.api = 'url'; // OK, let count = 0; count++; // OK"
+    },
+    {
+      "vocab": "Explain JavaScript prototypal inheritance.",
+      "pronunciation": "",
+      "meaning": "อธิบาย JavaScript prototypal inheritance",
+      "example": "JavaScript uses prototypal inheritance - objects inherit directly from other objects via the prototype chain. Every object has a hidden [[Prototype]] property pointing to its prototype. When accessing a property, JS looks up the prototype chain until found or reaching null. ES6 classes are syntactic sugar over this. Example: const animal = { eat() { } }; const dog = Object.create(animal); dog.bark = function() { }; dog.eat(); // inherited. Understanding this helps with debugging, extending built-ins, and performance optimization.",
+      "exampleTranslation": "JavaScript ใช้ prototypal inheritance - objects สืบทอดจาก objects อื่นผ่าน prototype chain ทุก object มี [[Prototype]] property ซ่อนอยู่ที่ชี้ไปยัง prototype เมื่อเข้าถึง property JS จะค้นหาขึ้นไปตาม prototype chain จนเจอหรือถึง null ES6 classes เป็น syntactic sugar เหนือระบบนี้ ตัวอย่าง: const animal = { eat() { } }; const dog = Object.create(animal); dog.bark = function() { }; dog.eat(); // inherited เข้าใจสิ่งนี้ช่วยในการ debug, extend built-ins และ performance optimization"
+    },
+    {
+      "vocab": "What are ES6+ features you use most frequently?",
+      "pronunciation": "",
+      "meaning": "ES6+ features อะไรที่คุณใช้บ่อยที่สุด?",
+      "example": "Key ES6+ features I use daily: destructuring for clean variable extraction, spread/rest operators for immutable updates and function arguments, arrow functions for concise syntax and lexical this, template literals for string interpolation, optional chaining (?.) and nullish coalescing (??) for safe property access, array methods like map/filter/reduce/find, and async/await for readable async code. Also, ES modules (import/export) for code organization and Set/Map for unique collections and key-value pairs.",
+      "exampleTranslation": "ES6+ features ที่ใช้ทุกวัน: destructuring สำหรับดึงตัวแปรอย่างสะอาด, spread/rest operators สำหรับ immutable updates และ function arguments, arrow functions สำหรับ syntax กระชับและ lexical this, template literals สำหรับ string interpolation, optional chaining (?.) และ nullish coalescing (??) สำหรับเข้าถึง property อย่างปลอดภัย, array methods เช่น map/filter/reduce/find, และ async/await สำหรับ async code อ่านง่าย รวมถึง ES modules (import/export) และ Set/Map"
+    },
+    {
+      "vocab": "What is 'this' keyword in JavaScript and how does it work?",
+      "pronunciation": "",
+      "meaning": "'this' keyword ใน JavaScript คืออะไร และทำงานอย่างไร?",
+      "example": "The value of 'this' depends on how a function is called: 1) Method call (obj.method()): this = obj. 2) Function call: this = undefined (strict) or window. 3) Constructor (new Fn()): this = new instance. 4) call/apply/bind: this = first argument. 5) Arrow functions: this = lexically inherited from enclosing scope. Common pitfall: losing this in callbacks. Solutions: arrow functions, bind(), or storing this in a variable. Understanding this is crucial for React class components and event handlers.",
+      "exampleTranslation": "ค่าของ 'this' ขึ้นกับวิธีเรียก function: 1) Method call (obj.method()): this = obj 2) Function call: this = undefined (strict) หรือ window 3) Constructor (new Fn()): this = instance ใหม่ 4) call/apply/bind: this = argument แรก 5) Arrow functions: this = สืบทอดจาก enclosing scope ปัญหาที่พบบ่อย: สูญเสีย this ใน callbacks วิธีแก้: arrow functions, bind(), หรือเก็บ this ในตัวแปร เข้าใจ this สำคัญสำหรับ React class components และ event handlers"
+    },
+    {
+      "vocab": "Explain how React's Virtual DOM and Reconciliation work.",
+      "pronunciation": "",
+      "meaning": "อธิบายการทำงานของ React Virtual DOM และ Reconciliation",
+      "example": "Virtual DOM is a lightweight JavaScript representation of the actual DOM. When state changes, React creates a new Virtual DOM tree and compares it with the previous one (diffing). The Reconciliation algorithm identifies the minimum changes needed, then batches and applies them to the real DOM. Key optimizations: same component type = update, different type = replace subtree, key prop helps identify list items. This is why keys should be stable, unique, and not array indices. React Fiber (since v16) made reconciliation interruptible.",
+      "exampleTranslation": "Virtual DOM คือ JavaScript representation แบบเบาของ DOM จริง เมื่อ state เปลี่ยน React สร้าง Virtual DOM tree ใหม่และเปรียบเทียบกับอันก่อนหน้า (diffing) Reconciliation algorithm ระบุ changes ขั้นต่ำที่ต้องการ แล้ว batch และ apply ไปยัง DOM จริง Key optimizations: component type เดียวกัน = update, type ต่างกัน = replace subtree, key prop ช่วยระบุ list items นี่คือเหตุผลที่ keys ควร stable, unique และไม่ใช่ array indices React Fiber (ตั้งแต่ v16) ทำให้ reconciliation ขัดจังหวะได้"
+    },
+    {
+      "vocab": "What are React hooks and their rules?",
+      "pronunciation": "",
+      "meaning": "React hooks คืออะไร และมีกฎอะไรบ้าง?",
+      "example": "Hooks let you use state and lifecycle features in function components. Core hooks: useState (local state), useEffect (side effects), useContext (context consumption), useRef (mutable refs), useMemo/useCallback (memoization). Rules: 1) Only call hooks at the top level - never in loops, conditions, or nested functions. 2) Only call hooks from React functions - components or custom hooks. These rules ensure hooks are called in the same order every render, which is how React tracks hook state internally.",
+      "exampleTranslation": "Hooks ให้ใช้ state และ lifecycle features ใน function components Core hooks: useState (local state), useEffect (side effects), useContext (context consumption), useRef (mutable refs), useMemo/useCallback (memoization) กฎ: 1) เรียก hooks ที่ top level เท่านั้น - ไม่เคยใน loops, conditions หรือ nested functions 2) เรียก hooks จาก React functions เท่านั้น - components หรือ custom hooks กฎเหล่านี้ทำให้ hooks ถูกเรียกตามลำดับเดิมทุก render ซึ่งเป็นวิธีที่ React track hook state ภายใน"
+    },
+    {
+      "vocab": "What is the difference between controlled and uncontrolled components?",
+      "pronunciation": "",
+      "meaning": "Controlled กับ uncontrolled components ต่างกันอย่างไร?",
+      "example": "Controlled components have their form values managed by React state. Every change triggers onChange, updates state, and React re-renders with the new value. Example: <input value={name} onChange={e => setName(e.target.value)} />. Uncontrolled components let the DOM handle form values; you access them via refs. Example: <input ref={inputRef} />. Controlled is preferred for validation, conditional disabling, and instant feedback. Uncontrolled is simpler for basic forms or when integrating with non-React code.",
+      "exampleTranslation": "Controlled components มี form values จัดการโดย React state ทุก change trigger onChange, อัพเดท state, และ React re-render ด้วยค่าใหม่ ตัวอย่าง: <input value={name} onChange={e => setName(e.target.value)} /> Uncontrolled components ให้ DOM จัดการ form values; เข้าถึงผ่าน refs ตัวอย่าง: <input ref={inputRef} /> Controlled เหมาะสำหรับ validation, conditional disabling และ instant feedback Uncontrolled ง่ายกว่าสำหรับ forms พื้นฐานหรือเมื่อ integrate กับ non-React code"
+    },
+    {
+      "vocab": "Explain React component composition patterns.",
+      "pronunciation": "",
+      "meaning": "อธิบาย React component composition patterns",
+      "example": "Key composition patterns: 1) Container/Presentational - separate logic from UI. 2) Compound Components - components that work together sharing implicit state (like <Select> and <Option>). 3) Render Props - pass a function as prop that returns JSX. 4) Higher-Order Components (HOC) - function that takes a component and returns enhanced component. 5) Custom Hooks - extract reusable stateful logic. Modern React favors hooks over HOCs and render props for most cases due to better readability and easier debugging.",
+      "exampleTranslation": "Composition patterns หลัก: 1) Container/Presentational - แยก logic จาก UI 2) Compound Components - components ที่ทำงานร่วมกันแชร์ implicit state (เช่น <Select> และ <Option>) 3) Render Props - ส่ง function เป็น prop ที่ return JSX 4) Higher-Order Components (HOC) - function ที่รับ component และ return enhanced component 5) Custom Hooks - extract reusable stateful logic React สมัยใหม่นิยม hooks มากกว่า HOCs และ render props สำหรับกรณีส่วนใหญ่เพราะอ่านง่ายและ debug ง่ายกว่า"
+    },
+    {
+      "vocab": "What is useActionState in React 19?",
+      "pronunciation": "",
+      "meaning": "useActionState ใน React 19 คืออะไร?",
+      "example": "useActionState is a new React 19 hook for managing form actions with automatic pending state and error handling. It returns [state, formAction, isPending]. Example: const [error, submitAction, isPending] = useActionState(async (prevState, formData) => { const result = await saveData(formData); return result.error || null; }, null); Use it with <form action={submitAction}>. It automatically handles the async lifecycle - no need for separate useState for loading/error states. Great for form submissions and server actions.",
+      "exampleTranslation": "useActionState เป็น hook ใหม่ใน React 19 สำหรับจัดการ form actions พร้อม pending state และ error handling อัตโนมัติ return [state, formAction, isPending] ตัวอย่าง: const [error, submitAction, isPending] = useActionState(async (prevState, formData) => { const result = await saveData(formData); return result.error || null; }, null); ใช้กับ <form action={submitAction}> จัดการ async lifecycle อัตโนมัติ - ไม่ต้อง useState แยกสำหรับ loading/error states เหมาะสำหรับ form submissions และ server actions"
+    },
+    {
+      "vocab": "How does useOptimistic work in React 19?",
+      "pronunciation": "",
+      "meaning": "useOptimistic ใน React 19 ทำงานอย่างไร?",
+      "example": "useOptimistic enables optimistic UI updates - showing expected results immediately while the server processes the request. Example: const [optimisticItems, addOptimisticItem] = useOptimistic(items, (state, newItem) => [...state, { ...newItem, pending: true }]); When user adds an item, call addOptimisticItem() to show it instantly, then the actual state updates when the server responds. If the request fails, React automatically reverts to the real state. This creates a snappy UX without manual rollback logic.",
+      "exampleTranslation": "useOptimistic ทำ optimistic UI updates - แสดงผลลัพธ์ที่คาดหวังทันทีขณะ server ประมวลผล ตัวอย่าง: const [optimisticItems, addOptimisticItem] = useOptimistic(items, (state, newItem) => [...state, { ...newItem, pending: true }]); เมื่อ user เพิ่ม item เรียก addOptimisticItem() เพื่อแสดงทันที แล้ว state จริงอัพเดทเมื่อ server ตอบกลับ ถ้า request ล้มเหลว React revert กลับไป state จริงอัตโนมัติ สร้าง UX ที่รวดเร็วโดยไม่ต้อง rollback logic เอง"
+    },
+    {
+      "vocab": "What is useFormStatus and when should you use it?",
+      "pronunciation": "",
+      "meaning": "useFormStatus คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "useFormStatus reads the status of a parent <form> without prop drilling. It must be called from a component rendered inside a <form>. Returns { pending, data, method, action }. Common use: creating a reusable submit button that shows loading state. Example: function SubmitButton() { const { pending } = useFormStatus(); return <button disabled={pending}>{pending ? 'Saving...' : 'Save'}</button>; } This keeps form UI logic encapsulated and reusable across forms.",
+      "exampleTranslation": "useFormStatus อ่านสถานะของ parent <form> โดยไม่ต้อง prop drilling ต้องเรียกจาก component ที่ render ใน <form> return { pending, data, method, action } ใช้งานทั่วไป: สร้าง submit button ที่ reusable แสดง loading state ตัวอย่าง: function SubmitButton() { const { pending } = useFormStatus(); return <button disabled={pending}>{pending ? 'Saving...' : 'Save'}</button>; } ทำให้ form UI logic encapsulated และ reusable ข้าม forms"
+    },
+    {
+      "vocab": "Explain the use() API in React 19.",
+      "pronunciation": "",
+      "meaning": "อธิบาย use() API ใน React 19",
+      "example": "use() is a new React 19 API that lets you read resources (Promises or Context) during render. Unlike hooks, it can be called conditionally. For Promises: const data = use(dataPromise); - React suspends until resolved. For Context: const theme = use(ThemeContext); - works like useContext but callable anywhere. Key benefit: you can pass Promises from Server Components to Client Components and read them with use(). Combined with Suspense, it simplifies async data fetching patterns significantly.",
+      "exampleTranslation": "use() เป็น API ใหม่ใน React 19 ที่ให้อ่าน resources (Promises หรือ Context) ระหว่าง render ต่างจาก hooks คือเรียกแบบ conditionally ได้ สำหรับ Promises: const data = use(dataPromise); - React suspend จนกว่าจะ resolve สำหรับ Context: const theme = use(ThemeContext); - ทำงานเหมือน useContext แต่เรียกได้ทุกที่ ประโยชน์หลัก: ส่ง Promises จาก Server Components ไป Client Components และอ่านด้วย use() ได้ รวมกับ Suspense ทำให้ async data fetching patterns ง่ายขึ้นมาก"
+    },
+    {
+      "vocab": "What changed with ref handling in React 19?",
+      "pronunciation": "",
+      "meaning": "การจัดการ ref เปลี่ยนไปอย่างไรใน React 19?",
+      "example": "In React 19, function components can now accept ref as a regular prop - no more forwardRef needed! Before: const Input = forwardRef((props, ref) => <input ref={ref} {...props} />); After: function Input({ ref, ...props }) { return <input ref={ref} {...props} />; } Also new: ref callbacks can return cleanup functions that run when the element is removed. Example: <div ref={(node) => { setup(node); return () => cleanup(node); }} />. This simplifies ref handling and makes cleanup more intuitive.",
+      "exampleTranslation": "ใน React 19 function components รับ ref เป็น prop ปกติได้ - ไม่ต้องใช้ forwardRef แล้ว! ก่อน: const Input = forwardRef((props, ref) => <input ref={ref} {...props} />); หลัง: function Input({ ref, ...props }) { return <input ref={ref} {...props} />; } ใหม่ด้วย: ref callbacks return cleanup functions ที่ทำงานเมื่อ element ถูกลบได้ ตัวอย่าง: <div ref={(node) => { setup(node); return () => cleanup(node); }} /> ทำให้ ref handling ง่ายขึ้นและ cleanup เข้าใจง่ายกว่า"
+    },
+    {
+      "vocab": "How do Actions work in React 19?",
+      "pronunciation": "",
+      "meaning": "Actions ทำงานอย่างไรใน React 19?",
+      "example": "Actions in React 19 are async functions used with transitions that handle pending states, errors, and form submissions automatically. You can pass functions to <form action={fn}>, <button formAction={fn}>. When submitted, React: 1) Sets isPending true, 2) Executes the action, 3) Handles success/error, 4) Resets form on success. Combined with useActionState, you get full lifecycle management. Example: <form action={async (formData) => { 'use server'; await db.save(formData); revalidatePath('/'); }}>. Works seamlessly with Server Actions.",
+      "exampleTranslation": "Actions ใน React 19 คือ async functions ใช้กับ transitions ที่จัดการ pending states, errors และ form submissions อัตโนมัติ ส่ง functions ไปยัง <form action={fn}>, <button formAction={fn}> ได้ เมื่อ submit React: 1) ตั้ง isPending เป็น true, 2) execute action, 3) จัดการ success/error, 4) reset form เมื่อสำเร็จ รวมกับ useActionState ได้ lifecycle management เต็มรูปแบบ ตัวอย่าง: <form action={async (formData) => { 'use server'; await db.save(formData); revalidatePath('/'); }}> ทำงานร่วมกับ Server Actions ได้ราบรื่น"
+    },
+    {
+      "vocab": "What is the Activity component in React 19.2?",
+      "pronunciation": "",
+      "meaning": "Activity component ใน React 19.2 คืออะไร?",
+      "example": "Activity is a new component in React 19.2 for controlling UI visibility and priority. Two modes: 'visible' (shows children, mounts effects) and 'hidden' (hides children, unmounts effects, defers updates). Use cases: pre-render hidden routes without impacting performance, prepare navigation by loading data/CSS in background, maintain state for back navigation. Example: <Activity mode={isActive ? 'visible' : 'hidden'}><ExpensivePage /></Activity>. Unlike conditional rendering, hidden Activity preserves component state.",
+      "exampleTranslation": "Activity เป็น component ใหม่ใน React 19.2 สำหรับควบคุม UI visibility และ priority สองโหมด: 'visible' (แสดง children, mount effects) และ 'hidden' (ซ่อน children, unmount effects, defer updates) Use cases: pre-render hidden routes โดยไม่กระทบ performance, เตรียม navigation โดย load data/CSS ใน background, รักษา state สำหรับ back navigation ตัวอย่าง: <Activity mode={isActive ? 'visible' : 'hidden'}><ExpensivePage /></Activity> ต่างจาก conditional rendering คือ hidden Activity รักษา component state ไว้"
+    },
+    {
+      "vocab": "Explain useEffectEvent in React 19.2.",
+      "pronunciation": "",
+      "meaning": "อธิบาย useEffectEvent ใน React 19.2",
+      "example": "useEffectEvent solves the problem of Effect dependencies causing unnecessary re-runs. It creates a function that always sees latest props/state but doesn't need to be in the dependency array. Example: function Chat({ roomId, theme }) { const onConnected = useEffectEvent(() => { showNotification('Connected!', theme); }); useEffect(() => { const conn = connect(roomId); conn.on('connected', onConnected); return () => conn.disconnect(); }, [roomId]); } Now the effect only re-runs when roomId changes, not theme.",
+      "exampleTranslation": "useEffectEvent แก้ปัญหา Effect dependencies ทำให้ re-run โดยไม่จำเป็น สร้าง function ที่เห็น props/state ล่าสุดเสมอแต่ไม่ต้องอยู่ใน dependency array ตัวอย่าง: function Chat({ roomId, theme }) { const onConnected = useEffectEvent(() => { showNotification('Connected!', theme); }); useEffect(() => { const conn = connect(roomId); conn.on('connected', onConnected); return () => conn.disconnect(); }, [roomId]); } ตอนนี้ effect re-run เฉพาะเมื่อ roomId เปลี่ยน ไม่ใช่ theme"
+    },
+    {
+      "vocab": "What are React Server Components?",
+      "pronunciation": "",
+      "meaning": "React Server Components คืออะไร?",
+      "example": "Server Components render on the server and send HTML to the client - zero JavaScript bundle impact. They can directly access databases, file systems, and backend services. Benefits: smaller bundles, faster initial load, better SEO. They cannot use hooks, event handlers, or browser APIs. Use 'use client' directive to mark Client Components for interactivity. Pattern: Server Components for data fetching and static content, Client Components for interactivity. Next.js App Router uses Server Components by default.",
+      "exampleTranslation": "Server Components render บน server และส่ง HTML ไป client - ไม่กระทบ JavaScript bundle เข้าถึง databases, file systems และ backend services ได้โดยตรง ประโยชน์: bundles เล็กลง, initial load เร็วขึ้น, SEO ดีขึ้น ใช้ hooks, event handlers หรือ browser APIs ไม่ได้ ใช้ 'use client' directive เพื่อ mark Client Components สำหรับ interactivity Pattern: Server Components สำหรับ data fetching และ static content, Client Components สำหรับ interactivity Next.js App Router ใช้ Server Components เป็น default"
+    },
+    {
+      "vocab": "How do Server Actions work with 'use server' directive?",
+      "pronunciation": "",
+      "meaning": "Server Actions ทำงานกับ 'use server' directive อย่างไร?",
+      "example": "Server Actions are async functions that run on the server, called from Client Components. Mark with 'use server' at function level or file level. Example: async function saveUser(formData) { 'use server'; await db.users.create(formData); revalidatePath('/users'); } In client: <form action={saveUser}>. Benefits: no API route needed, automatic serialization, works with forms natively, integrates with React's action handling. Security note: always validate inputs - Server Actions are public endpoints.",
+      "exampleTranslation": "Server Actions คือ async functions ที่ run บน server เรียกจาก Client Components ได้ mark ด้วย 'use server' ที่ระดับ function หรือ file ตัวอย่าง: async function saveUser(formData) { 'use server'; await db.users.create(formData); revalidatePath('/users'); } ใน client: <form action={saveUser}> ประโยชน์: ไม่ต้อง API route, serialization อัตโนมัติ, ทำงานกับ forms โดยตรง, integrate กับ React action handling ข้อควรระวังด้าน security: validate inputs เสมอ - Server Actions เป็น public endpoints"
+    },
+    {
+      "vocab": "What is Partial Pre-rendering in React 19.2?",
+      "pronunciation": "",
+      "meaning": "Partial Pre-rendering ใน React 19.2 คืออะไร?",
+      "example": "Partial Pre-rendering (PPR) lets you pre-render static parts of your app and serve from CDN, then resume rendering to fill in dynamic content later. APIs: prerender() creates static HTML with AbortController, resume() continues SSR for dynamic parts. Use case: pre-render a page shell (header, sidebar, layout) statically, then stream dynamic content (user data, real-time info). Combines benefits of static site generation and server-side rendering. Available in React 19.2 with Web Streams support.",
+      "exampleTranslation": "Partial Pre-rendering (PPR) ให้ pre-render ส่วน static ของ app และ serve จาก CDN แล้ว resume rendering เพื่อเติม dynamic content ทีหลัง APIs: prerender() สร้าง static HTML ด้วย AbortController, resume() ทำ SSR ต่อสำหรับส่วน dynamic Use case: pre-render page shell (header, sidebar, layout) แบบ static แล้ว stream dynamic content (user data, real-time info) รวมประโยชน์ของ static site generation และ server-side rendering มีใน React 19.2 พร้อม Web Streams support"
+    },
+    {
+      "vocab": "What are Core Web Vitals and how do you optimize them?",
+      "pronunciation": "",
+      "meaning": "Core Web Vitals คืออะไร และ optimize อย่างไร?",
+      "example": "Core Web Vitals are Google's metrics for user experience: LCP (Largest Contentful Paint) - load performance, target <2.5s. Optimize: preload critical resources, optimize images, use CDN. FID/INP (First Input Delay/Interaction to Next Paint) - interactivity, target <100ms/200ms. Optimize: code splitting, defer non-critical JS, use web workers. CLS (Cumulative Layout Shift) - visual stability, target <0.1. Optimize: set image dimensions, avoid inserting content above existing content, use transform for animations.",
+      "exampleTranslation": "Core Web Vitals คือ metrics ของ Google สำหรับ user experience: LCP (Largest Contentful Paint) - load performance, เป้าหมาย <2.5s Optimize: preload critical resources, optimize images, ใช้ CDN FID/INP (First Input Delay/Interaction to Next Paint) - interactivity, เป้าหมาย <100ms/200ms Optimize: code splitting, defer non-critical JS, ใช้ web workers CLS (Cumulative Layout Shift) - visual stability, เป้าหมาย <0.1 Optimize: กำหนด image dimensions, หลีกเลี่ยงการใส่ content เหนือ content ที่มีอยู่, ใช้ transform สำหรับ animations"
+    },
+    {
+      "vocab": "How do you implement code splitting in React?",
+      "pronunciation": "",
+      "meaning": "ทำ code splitting ใน React อย่างไร?",
+      "example": "Code splitting breaks your bundle into smaller chunks loaded on demand. Methods: 1) React.lazy() with Suspense for component-level splitting: const LazyComponent = lazy(() => import('./Component')); <Suspense fallback={<Loading />}><LazyComponent /></Suspense>. 2) Route-based splitting - split by page/route. 3) Dynamic imports for non-component code: const module = await import('./utils'). Best practices: split at route boundaries, prefetch likely next routes, keep initial bundle small. Next.js handles route-based splitting automatically.",
+      "exampleTranslation": "Code splitting แบ่ง bundle เป็น chunks เล็กๆ โหลดตาม demand วิธี: 1) React.lazy() กับ Suspense สำหรับ component-level splitting: const LazyComponent = lazy(() => import('./Component')); <Suspense fallback={<Loading />}><LazyComponent /></Suspense> 2) Route-based splitting - แยกตาม page/route 3) Dynamic imports สำหรับ non-component code: const module = await import('./utils') Best practices: split ที่ route boundaries, prefetch routes ที่น่าจะไปต่อ, รักษา initial bundle ให้เล็ก Next.js จัดการ route-based splitting อัตโนมัติ"
+    },
+    {
+      "vocab": "Explain React.memo, useMemo, and useCallback.",
+      "pronunciation": "",
+      "meaning": "อธิบาย React.memo, useMemo และ useCallback",
+      "example": "React.memo() wraps a component to skip re-renders if props haven't changed (shallow comparison). useMemo() memoizes expensive computed values: const sorted = useMemo(() => expensiveSort(items), [items]). useCallback() memoizes functions to maintain referential equality: const handleClick = useCallback(() => onClick(id), [id]). Use when: passing callbacks to memoized children, expensive calculations, preventing unnecessary effects. Don't overuse - memoization has overhead. Profile first to identify actual performance issues.",
+      "exampleTranslation": "React.memo() wrap component เพื่อข้าม re-renders ถ้า props ไม่เปลี่ยน (shallow comparison) useMemo() memoize computed values ที่แพง: const sorted = useMemo(() => expensiveSort(items), [items]) useCallback() memoize functions เพื่อรักษา referential equality: const handleClick = useCallback(() => onClick(id), [id]) ใช้เมื่อ: ส่ง callbacks ไป memoized children, calculations ที่แพง, ป้องกัน effects ที่ไม่จำเป็น อย่าใช้มากเกิน - memoization มี overhead Profile ก่อนเพื่อระบุปัญหา performance จริงๆ"
+    },
+    {
+      "vocab": "How do you optimize images in web applications?",
+      "pronunciation": "",
+      "meaning": "คุณ optimize images ใน web applications อย่างไร?",
+      "example": "Image optimization strategies: 1) Use modern formats - WebP/AVIF offer 25-50% smaller sizes than JPEG/PNG. 2) Responsive images with srcset and sizes attributes for different screen sizes. 3) Lazy loading with loading='lazy' or Intersection Observer. 4) Set explicit width/height to prevent CLS. 5) Use image CDNs (Cloudinary, Imgix) for automatic optimization. 6) Next.js Image component handles most of this automatically - optimization, lazy loading, responsive sizes, and blur placeholders.",
+      "exampleTranslation": "กลยุทธ์ optimize images: 1) ใช้ formats สมัยใหม่ - WebP/AVIF เล็กกว่า JPEG/PNG 25-50% 2) Responsive images ด้วย srcset และ sizes attributes สำหรับหน้าจอขนาดต่างๆ 3) Lazy loading ด้วย loading='lazy' หรือ Intersection Observer 4) กำหนด width/height ชัดเจนเพื่อป้องกัน CLS 5) ใช้ image CDNs (Cloudinary, Imgix) สำหรับ optimization อัตโนมัติ 6) Next.js Image component จัดการส่วนใหญ่อัตโนมัติ - optimization, lazy loading, responsive sizes และ blur placeholders"
+    },
+    {
+      "vocab": "What is tree shaking and how does it work?",
+      "pronunciation": "",
+      "meaning": "Tree shaking คืออะไร และทำงานอย่างไร?",
+      "example": "Tree shaking is dead code elimination for JavaScript modules - removing unused exports from the final bundle. It relies on ES modules' static structure (import/export). Requirements: use ES modules (not CommonJS), avoid side effects in module scope, mark packages as side-effect-free in package.json. Example: if you import { Button } from 'ui-library', tree shaking removes unused components. Bundlers like Webpack, Rollup, and esbuild perform this optimization. Check bundle size with tools like webpack-bundle-analyzer.",
+      "exampleTranslation": "Tree shaking คือการกำจัด dead code สำหรับ JavaScript modules - ลบ exports ที่ไม่ได้ใช้ออกจาก bundle สุดท้าย อาศัยโครงสร้าง static ของ ES modules (import/export) ข้อกำหนด: ใช้ ES modules (ไม่ใช่ CommonJS), หลีกเลี่ยง side effects ใน module scope, mark packages ว่า side-effect-free ใน package.json ตัวอย่าง: ถ้า import { Button } from 'ui-library' tree shaking จะลบ components ที่ไม่ได้ใช้ Bundlers เช่น Webpack, Rollup และ esbuild ทำ optimization นี้ ตรวจสอบ bundle size ด้วย tools เช่น webpack-bundle-analyzer"
+    },
+    {
+      "vocab": "How do you write unit tests for React components?",
+      "pronunciation": "",
+      "meaning": "เขียน unit tests สำหรับ React components อย่างไร?",
+      "example": "Use React Testing Library with Jest/Vitest for component testing. Philosophy: test user behavior, not implementation. Key methods: render() to mount, screen.getByRole/getByText for queries, userEvent for interactions, waitFor for async. Example: test('submits form', async () => { render(<LoginForm />); await userEvent.type(screen.getByLabelText('Email'), 'test@test.com'); await userEvent.click(screen.getByRole('button', { name: /submit/i })); expect(screen.getByText('Success')).toBeInTheDocument(); }); Avoid testing internal state or implementation details.",
+      "exampleTranslation": "ใช้ React Testing Library กับ Jest/Vitest สำหรับ component testing หลักการ: test user behavior ไม่ใช่ implementation Methods หลัก: render() เพื่อ mount, screen.getByRole/getByText สำหรับ queries, userEvent สำหรับ interactions, waitFor สำหรับ async ตัวอย่าง: test('submits form', async () => { render(<LoginForm />); await userEvent.type(screen.getByLabelText('Email'), 'test@test.com'); await userEvent.click(screen.getByRole('button', { name: /submit/i })); expect(screen.getByText('Success')).toBeInTheDocument(); }); หลีกเลี่ยง testing internal state หรือ implementation details"
+    },
+    {
+      "vocab": "What is the difference between unit, integration, and E2E testing?",
+      "pronunciation": "",
+      "meaning": "Unit, integration และ E2E testing ต่างกันอย่างไร?",
+      "example": "Unit tests: test individual functions/components in isolation, mock dependencies, fast and numerous. Tools: Jest, Vitest. Integration tests: test how multiple units work together, fewer mocks, test user flows within a feature. Tools: React Testing Library. E2E tests: test entire application from user perspective, real browser, database, APIs. Slowest but highest confidence. Tools: Playwright, Cypress. Testing pyramid: many unit tests, fewer integration, fewest E2E. But modern approach favors integration tests for React - they balance coverage and confidence well.",
+      "exampleTranslation": "Unit tests: test functions/components แต่ละตัวแยกกัน, mock dependencies, เร็วและมีจำนวนมาก Tools: Jest, Vitest Integration tests: test หลาย units ทำงานร่วมกัน, mocks น้อยลง, test user flows ในหนึ่ง feature Tools: React Testing Library E2E tests: test ทั้ง application จากมุม user, browser จริง, database, APIs ช้าสุดแต่ confidence สูงสุด Tools: Playwright, Cypress Testing pyramid: unit tests มาก, integration น้อยลง, E2E น้อยสุด แต่แนวทางสมัยใหม่นิยม integration tests สำหรับ React - สมดุลระหว่าง coverage และ confidence ดี"
+    },
+    {
+      "vocab": "How do you mock API calls in tests?",
+      "pronunciation": "",
+      "meaning": "Mock API calls ใน tests อย่างไร?",
+      "example": "Several approaches: 1) MSW (Mock Service Worker) - intercepts network requests at service worker level, works in browser and Node. Best for integration/E2E. Example: server.use(rest.get('/api/user', (req, res, ctx) => res(ctx.json({ name: 'John' })))). 2) Jest mocks - mock fetch/axios directly: jest.mock('axios'). 3) Dependency injection - pass fetcher as prop. MSW is preferred because it tests actual fetch code and works consistently across test types. Remember to reset handlers between tests.",
+      "exampleTranslation": "หลายวิธี: 1) MSW (Mock Service Worker) - intercept network requests ที่ service worker level, ทำงานใน browser และ Node ดีที่สุดสำหรับ integration/E2E ตัวอย่าง: server.use(rest.get('/api/user', (req, res, ctx) => res(ctx.json({ name: 'John' })))) 2) Jest mocks - mock fetch/axios โดยตรง: jest.mock('axios') 3) Dependency injection - ส่ง fetcher เป็น prop MSW เป็นที่นิยมเพราะ test actual fetch code และทำงานสม่ำเสมอข้าม test types จำไว้ reset handlers ระหว่าง tests"
+    },
+    {
+      "vocab": "What is XSS and how do you prevent it in React?",
+      "pronunciation": "XSS = Cross-Site Scripting",
+      "meaning": "XSS คืออะไร และป้องกันใน React อย่างไร?",
+      "example": "XSS attacks inject malicious scripts into web pages viewed by other users. React prevents XSS by default - JSX escapes values before rendering: <div>{userInput}</div> is safe. Danger zones: dangerouslySetInnerHTML (sanitize with DOMPurify first), href attributes with javascript: URLs (validate URLs), server-side rendering with unsanitized data. Best practices: never trust user input, use Content Security Policy headers, avoid dangerouslySetInnerHTML when possible, validate and sanitize on both client and server.",
+      "exampleTranslation": "XSS attacks inject malicious scripts เข้าไปในหน้าเว็บที่ users อื่นดู React ป้องกัน XSS โดย default - JSX escape values ก่อน rendering: <div>{userInput}</div> ปลอดภัย จุดอันตราย: dangerouslySetInnerHTML (sanitize ด้วย DOMPurify ก่อน), href attributes ที่มี javascript: URLs (validate URLs), server-side rendering กับ data ที่ไม่ sanitize Best practices: อย่า trust user input, ใช้ Content Security Policy headers, หลีกเลี่ยง dangerouslySetInnerHTML เมื่อเป็นไปได้, validate และ sanitize ทั้ง client และ server"
+    },
+    {
+      "vocab": "How do you handle authentication securely in frontend?",
+      "pronunciation": "",
+      "meaning": "จัดการ authentication อย่างปลอดภัยใน frontend อย่างไร?",
+      "example": "Secure auth practices: 1) Store tokens in httpOnly cookies, not localStorage (prevents XSS access). 2) Use short-lived access tokens with refresh token rotation. 3) Implement CSRF protection with SameSite cookies and CSRF tokens. 4) Always use HTTPS. 5) Validate tokens server-side on every request. 6) Handle token expiration gracefully - silent refresh or redirect to login. 7) Clear tokens on logout from all storage. Libraries like NextAuth, Auth0 SDK, or Firebase Auth handle many of these concerns automatically.",
+      "exampleTranslation": "Secure auth practices: 1) เก็บ tokens ใน httpOnly cookies ไม่ใช่ localStorage (ป้องกัน XSS access) 2) ใช้ short-lived access tokens กับ refresh token rotation 3) Implement CSRF protection ด้วย SameSite cookies และ CSRF tokens 4) ใช้ HTTPS เสมอ 5) Validate tokens ฝั่ง server ทุก request 6) จัดการ token expiration อย่างราบรื่น - silent refresh หรือ redirect ไป login 7) Clear tokens เมื่อ logout จาก storage ทั้งหมด Libraries เช่น NextAuth, Auth0 SDK หรือ Firebase Auth จัดการหลายเรื่องเหล่านี้อัตโนมัติ"
+    },
+    {
+      "vocab": "What is CSRF and how do you protect against it?",
+      "pronunciation": "CSRF = Cross-Site Request Forgery",
+      "meaning": "CSRF คืออะไร และป้องกันอย่างไร?",
+      "example": "CSRF tricks authenticated users into making unwanted requests. Attacker's site sends request to your API using victim's cookies. Protection: 1) SameSite cookie attribute (Strict or Lax) - prevents cookies from being sent cross-site. 2) CSRF tokens - unique token per session, validate on server. 3) Check Origin/Referer headers. 4) Require re-authentication for sensitive actions. Modern approach: use SameSite=Lax cookies (default in most browsers now) plus CSRF tokens for forms. APIs using Authorization header instead of cookies are naturally protected.",
+      "exampleTranslation": "CSRF หลอก authenticated users ให้ส่ง requests ที่ไม่ต้องการ เว็บ attacker ส่ง request ไป API ของคุณโดยใช้ cookies ของเหยื่อ การป้องกัน: 1) SameSite cookie attribute (Strict หรือ Lax) - ป้องกัน cookies ถูกส่ง cross-site 2) CSRF tokens - token unique ต่อ session, validate บน server 3) ตรวจสอบ Origin/Referer headers 4) ต้อง re-authentication สำหรับ actions ที่ sensitive วิธีสมัยใหม่: ใช้ SameSite=Lax cookies (default ใน browsers ส่วนใหญ่แล้ว) บวก CSRF tokens สำหรับ forms APIs ที่ใช้ Authorization header แทน cookies ได้รับการป้องกันโดยธรรมชาติ"
+    },
+    {
+      "vocab": "What is Vite and how does it differ from Webpack?",
+      "pronunciation": "Vite ออกเสียงว่า 'วีท'",
+      "meaning": "Vite คืออะไร และต่างจาก Webpack อย่างไร?",
+      "example": "Vite is a modern build tool that leverages native ES modules for fast development. Key differences: 1) Dev server - Vite serves files directly using native ESM, no bundling needed. Webpack bundles everything first. 2) HMR - Vite's is near-instant regardless of app size. Webpack slows as app grows. 3) Build - Vite uses Rollup, Webpack uses its own bundler. 4) Config - Vite has sensible defaults, minimal config. Trade-offs: Webpack has more plugins/ecosystem, better for complex custom builds. Vite wins for most new projects.",
+      "exampleTranslation": "Vite เป็น build tool สมัยใหม่ที่ใช้ native ES modules สำหรับ development ที่เร็ว ความแตกต่างหลัก: 1) Dev server - Vite serve files โดยตรงด้วย native ESM ไม่ต้อง bundling Webpack bundle ทุกอย่างก่อน 2) HMR - Vite เกือบทันทีไม่ว่า app ใหญ่แค่ไหน Webpack ช้าลงเมื่อ app โต 3) Build - Vite ใช้ Rollup, Webpack ใช้ bundler ของตัวเอง 4) Config - Vite มี defaults ที่ดี, config น้อย Trade-offs: Webpack มี plugins/ecosystem มากกว่า ดีกว่าสำหรับ builds ที่ซับซ้อน Vite ชนะสำหรับ projects ใหม่ส่วนใหญ่"
+    },
+    {
+      "vocab": "Explain the concept of bundling and what bundlers do.",
+      "pronunciation": "",
+      "meaning": "อธิบายแนวคิดของ bundling และ bundlers ทำอะไร",
+      "example": "Bundlers combine multiple JavaScript files and assets into optimized bundles for production. Key tasks: 1) Resolve imports/dependencies and create dependency graph. 2) Transform code - transpile JSX, TypeScript, modern JS. 3) Bundle modules into fewer files. 4) Optimize - minification, tree shaking, code splitting. 5) Handle assets - CSS, images, fonts. 6) Generate source maps for debugging. Popular bundlers: Webpack (most configurable), Rollup (best for libraries), esbuild (fastest), Vite (uses esbuild + Rollup). Choice depends on project needs and complexity.",
+      "exampleTranslation": "Bundlers รวม JavaScript files และ assets หลายตัวเป็น bundles ที่ optimized สำหรับ production งานหลัก: 1) Resolve imports/dependencies และสร้าง dependency graph 2) Transform code - transpile JSX, TypeScript, modern JS 3) Bundle modules เป็นไฟล์น้อยลง 4) Optimize - minification, tree shaking, code splitting 5) Handle assets - CSS, images, fonts 6) Generate source maps สำหรับ debugging Bundlers ยอดนิยม: Webpack (configurable สุด), Rollup (ดีที่สุดสำหรับ libraries), esbuild (เร็วที่สุด), Vite (ใช้ esbuild + Rollup) เลือกตาม needs และความซับซ้อนของ project"
+    },
+    {
+      "vocab": "What is a monorepo and what tools support it?",
+      "pronunciation": "",
+      "meaning": "Monorepo คืออะไร และมี tools อะไรรองรับ?",
+      "example": "A monorepo stores multiple projects/packages in a single repository. Benefits: shared code, atomic commits across packages, unified CI/CD, easier refactoring. Challenges: build performance, dependency management, access control. Popular tools: 1) Turborepo - caching and parallel execution, great DX. 2) Nx - full-featured with dependency graph visualization. 3) pnpm workspaces - efficient package management. 4) Lerna - original monorepo tool, good for publishing. Modern setup: pnpm workspaces + Turborepo gives excellent performance with minimal config.",
+      "exampleTranslation": "Monorepo เก็บหลาย projects/packages ใน repository เดียว ประโยชน์: shared code, atomic commits ข้าม packages, unified CI/CD, refactoring ง่ายขึ้น ความท้าทาย: build performance, dependency management, access control Tools ยอดนิยม: 1) Turborepo - caching และ parallel execution, DX ดี 2) Nx - full-featured พร้อม dependency graph visualization 3) pnpm workspaces - package management ที่มีประสิทธิภาพ 4) Lerna - monorepo tool ดั้งเดิม ดีสำหรับ publishing Setup สมัยใหม่: pnpm workspaces + Turborepo ให้ performance ดีเยี่ยมด้วย config น้อย"
+    }
+  ]
+}

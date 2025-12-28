@@ -1,0 +1,224 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Interview Q&A - DevOps Engineer",
+    "description": "Common interview questions and answers for DevOps Engineer position covering Docker, Kubernetes, CI/CD, Cloud, and Infrastructure",
+    "category": "Interview",
+    "tags": ["interview", "devops", "docker", "kubernetes", "cicd"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Docker and why do we use it?",
+      "pronunciation": "",
+      "meaning": "Docker คืออะไร และทำไมเราถึงใช้มัน?",
+      "example": "Docker is a platform for containerization - packaging applications with their dependencies into isolated, portable containers. Benefits: 1) Consistency - 'works on my machine' problem solved, same environment everywhere. 2) Isolation - each container runs independently. 3) Portability - run anywhere Docker is installed. 4) Efficiency - containers share OS kernel, lighter than VMs. 5) Fast startup - seconds vs minutes for VMs. Use cases: microservices, CI/CD pipelines, local development, and deployment standardization.",
+      "exampleTranslation": "Docker เป็น platform สำหรับ containerization - package applications พร้อม dependencies เป็น containers ที่แยกและพกพาได้ ประโยชน์: 1) Consistency - แก้ปัญหา 'works on my machine' environment เหมือนกันทุกที่ 2) Isolation - แต่ละ container ทำงานอิสระ 3) Portability - รันได้ทุกที่ที่ติดตั้ง Docker 4) Efficiency - containers แชร์ OS kernel เบากว่า VMs 5) Startup เร็ว - วินาที vs นาทีสำหรับ VMs Use cases: microservices, CI/CD pipelines, local development และ deployment standardization"
+    },
+    {
+      "vocab": "What is the difference between Docker image and container?",
+      "pronunciation": "",
+      "meaning": "Docker image กับ container ต่างกันอย่างไร?",
+      "example": "An image is a read-only template containing application code, runtime, libraries, and dependencies - like a class in OOP. A container is a running instance of an image - like an object instantiated from a class. You can create multiple containers from one image. Images are built from Dockerfiles and stored in registries (Docker Hub, ECR). Containers have a writable layer on top of the image layers. When container is deleted, the writable layer is lost unless you use volumes for persistence.",
+      "exampleTranslation": "Image เป็น template แบบ read-only ที่มี application code, runtime, libraries และ dependencies - เหมือน class ใน OOP Container คือ running instance ของ image - เหมือน object ที่ instantiate จาก class สร้างหลาย containers จาก image เดียวได้ Images ถูก build จาก Dockerfiles และเก็บใน registries (Docker Hub, ECR) Containers มี writable layer อยู่บน image layers เมื่อ container ถูกลบ writable layer จะหายไป ยกเว้นใช้ volumes สำหรับ persistence"
+    },
+    {
+      "vocab": "Explain the main Dockerfile instructions.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Dockerfile instructions หลักๆ",
+      "example": "Key Dockerfile instructions: FROM - base image to build upon. WORKDIR - set working directory. COPY/ADD - copy files into image (COPY preferred, ADD can extract archives). RUN - execute commands during build (install packages). ENV - set environment variables. EXPOSE - document which ports the container listens on. CMD - default command when container starts (can be overridden). ENTRYPOINT - main executable (harder to override). ARG - build-time variables. Best practice: combine RUN commands to reduce layers, use .dockerignore to exclude files.",
+      "exampleTranslation": "Dockerfile instructions หลัก: FROM - base image ที่จะ build ต่อ WORKDIR - set working directory COPY/ADD - copy files เข้า image (COPY preferred, ADD แตก archives ได้) RUN - execute commands ระหว่าง build (install packages) ENV - set environment variables EXPOSE - document ports ที่ container listen CMD - default command เมื่อ container start (override ได้) ENTRYPOINT - main executable (override ยากกว่า) ARG - build-time variables Best practice: รวม RUN commands เพื่อลด layers, ใช้ .dockerignore เพื่อ exclude files"
+    },
+    {
+      "vocab": "What is multi-stage build in Docker?",
+      "pronunciation": "",
+      "meaning": "Multi-stage build ใน Docker คืออะไร?",
+      "example": "Multi-stage builds use multiple FROM statements in one Dockerfile to create smaller, more secure final images. Example: first stage uses node:18 to build a React app, second stage uses nginx:alpine and copies only the built files. Benefits: 1) Smaller images - don't include build tools in production. 2) Security - fewer packages means smaller attack surface. 3) Cleaner Dockerfiles - no need for complex scripts to remove build dependencies. Pattern: FROM node AS builder... FROM nginx:alpine... COPY --from=builder /app/build /usr/share/nginx/html",
+      "exampleTranslation": "Multi-stage builds ใช้หลาย FROM statements ใน Dockerfile เดียวเพื่อสร้าง final images ที่เล็กและปลอดภัยกว่า ตัวอย่าง: stage แรกใช้ node:18 build React app, stage สองใช้ nginx:alpine และ copy เฉพาะ built files ประโยชน์: 1) Images เล็กลง - ไม่รวม build tools ใน production 2) Security - packages น้อยลงหมายถึง attack surface เล็กลง 3) Dockerfiles สะอาดขึ้น - ไม่ต้องมี scripts ซับซ้อนเพื่อลบ build dependencies Pattern: FROM node AS builder... FROM nginx:alpine... COPY --from=builder /app/build /usr/share/nginx/html"
+    },
+    {
+      "vocab": "How do Docker volumes work?",
+      "pronunciation": "",
+      "meaning": "Docker volumes ทำงานอย่างไร?",
+      "example": "Volumes persist data outside the container's writable layer. Three types: 1) Named volumes - Docker manages location, best for production: docker volume create mydata, then -v mydata:/app/data. 2) Bind mounts - map host directory to container: -v /host/path:/container/path, good for development. 3) tmpfs - stored in memory only, for sensitive data. Volumes survive container deletion, can be shared between containers, and are the recommended way to persist database data, uploads, and logs. Use docker volume ls/inspect/rm to manage.",
+      "exampleTranslation": "Volumes เก็บ data นอก container's writable layer สามประเภท: 1) Named volumes - Docker จัดการ location ดีสำหรับ production: docker volume create mydata แล้ว -v mydata:/app/data 2) Bind mounts - map host directory ไป container: -v /host/path:/container/path ดีสำหรับ development 3) tmpfs - เก็บใน memory เท่านั้น สำหรับ sensitive data Volumes อยู่รอดเมื่อ container ถูกลบ, แชร์ระหว่าง containers ได้ และเป็นวิธีที่แนะนำสำหรับ persist database data, uploads และ logs ใช้ docker volume ls/inspect/rm เพื่อจัดการ"
+    },
+    {
+      "vocab": "What is Docker Compose and when do you use it?",
+      "pronunciation": "",
+      "meaning": "Docker Compose คืออะไร และใช้เมื่อไหร่?",
+      "example": "Docker Compose is a tool for defining and running multi-container applications using a YAML file (docker-compose.yml). Use cases: 1) Local development - spin up app + database + cache with one command. 2) Testing environments - reproducible test setups. 3) Small deployments - simple production without Kubernetes. Key concepts: services (containers), networks (communication), volumes (persistence). Commands: docker compose up -d (start), down (stop), logs, exec. Not recommended for: large-scale production (use Kubernetes), single containers (overkill).",
+      "exampleTranslation": "Docker Compose เป็น tool สำหรับ define และรัน multi-container applications ด้วย YAML file (docker-compose.yml) Use cases: 1) Local development - เปิด app + database + cache ด้วย command เดียว 2) Testing environments - test setups ที่ทำซ้ำได้ 3) Small deployments - production ง่ายๆ โดยไม่ต้อง Kubernetes Key concepts: services (containers), networks (communication), volumes (persistence) Commands: docker compose up -d (start), down (stop), logs, exec ไม่แนะนำสำหรับ: large-scale production (ใช้ Kubernetes), single containers (overkill)"
+    },
+    {
+      "vocab": "How do you optimize Docker images for production?",
+      "pronunciation": "",
+      "meaning": "คุณ optimize Docker images สำหรับ production อย่างไร?",
+      "example": "Optimization strategies: 1) Use minimal base images - alpine variants (node:20-alpine vs node:20 saves ~900MB). 2) Multi-stage builds - separate build and runtime. 3) Order Dockerfile for cache - put rarely changing instructions first (dependencies before code). 4) Combine RUN commands - reduce layers. 5) Use .dockerignore - exclude node_modules, .git, tests. 6) Don't run as root - USER node. 7) Pin versions - FROM node:20.10.0-alpine not node:latest. 8) Scan for vulnerabilities - docker scout, trivy. Goal: small, secure, fast-building images.",
+      "exampleTranslation": "กลยุทธ์ optimization: 1) ใช้ minimal base images - alpine variants (node:20-alpine vs node:20 ประหยัด ~900MB) 2) Multi-stage builds - แยก build และ runtime 3) เรียง Dockerfile สำหรับ cache - ใส่ instructions ที่เปลี่ยนน้อยก่อน (dependencies ก่อน code) 4) รวม RUN commands - ลด layers 5) ใช้ .dockerignore - exclude node_modules, .git, tests 6) อย่ารันเป็น root - USER node 7) Pin versions - FROM node:20.10.0-alpine ไม่ใช่ node:latest 8) Scan vulnerabilities - docker scout, trivy เป้าหมาย: images เล็ก ปลอดภัย build เร็ว"
+    },
+    {
+      "vocab": "What is the difference between Docker and Kubernetes?",
+      "pronunciation": "",
+      "meaning": "Docker กับ Kubernetes ต่างกันอย่างไร?",
+      "example": "Docker and Kubernetes solve different problems and work together. Docker: containerization platform - creates and runs individual containers. Handles building images, running containers, local development. Kubernetes: container orchestration - manages many containers across multiple hosts. Handles scaling, load balancing, self-healing, rolling updates, service discovery. Analogy: Docker is like creating and running a single ship, Kubernetes is like managing an entire fleet. For small apps: Docker Compose is enough. For production at scale: Kubernetes orchestrates Docker containers.",
+      "exampleTranslation": "Docker และ Kubernetes แก้ปัญหาต่างกันและทำงานร่วมกัน Docker: containerization platform - สร้างและรัน containers แต่ละตัว จัดการ building images, running containers, local development Kubernetes: container orchestration - จัดการ containers จำนวนมากข้าม hosts หลายตัว จัดการ scaling, load balancing, self-healing, rolling updates, service discovery เปรียบเทียบ: Docker เหมือนสร้างและรันเรือลำเดียว, Kubernetes เหมือนจัดการกองเรือทั้งหมด สำหรับ apps เล็ก: Docker Compose พอ สำหรับ production ขนาดใหญ่: Kubernetes orchestrate Docker containers"
+    },
+    {
+      "vocab": "Explain Kubernetes core components: Pod, Deployment, Service.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Kubernetes core components: Pod, Deployment, Service",
+      "example": "Pod: smallest deployable unit, contains one or more containers sharing network/storage. Usually one container per pod. Pods are ephemeral - they can be killed and recreated. Deployment: manages pod lifecycle - declares desired state (replicas, image version), handles rolling updates and rollbacks, ensures specified number of pods are running. If a pod dies, Deployment creates a new one. Service: stable network endpoint for pods. Types: ClusterIP (internal), NodePort (external via node port), LoadBalancer (cloud LB). Services use label selectors to route traffic to matching pods.",
+      "exampleTranslation": "Pod: หน่วยที่ deploy ได้เล็กสุด มีหนึ่งหรือหลาย containers แชร์ network/storage ปกติหนึ่ง container ต่อ pod Pods เป็น ephemeral - ถูก kill และสร้างใหม่ได้ Deployment: จัดการ pod lifecycle - declare desired state (replicas, image version), จัดการ rolling updates และ rollbacks, รับประกันว่ามี pods ตามจำนวนที่กำหนด ถ้า pod ตาย Deployment สร้างใหม่ Service: network endpoint ที่เสถียรสำหรับ pods Types: ClusterIP (internal), NodePort (external ผ่าน node port), LoadBalancer (cloud LB) Services ใช้ label selectors เพื่อ route traffic ไป pods ที่ตรงกัน"
+    },
+    {
+      "vocab": "What are ConfigMaps and Secrets in Kubernetes?",
+      "pronunciation": "",
+      "meaning": "ConfigMaps และ Secrets ใน Kubernetes คืออะไร?",
+      "example": "ConfigMaps store non-sensitive configuration data as key-value pairs. Use for: environment variables, config files, command-line arguments. Secrets store sensitive data (passwords, API keys, certificates) - base64 encoded (not encrypted by default!). Both can be mounted as files or exposed as environment variables. Best practices: 1) Never commit Secrets to git. 2) Use external secret managers (Vault, AWS Secrets Manager) for production. 3) Enable encryption at rest for Secrets. 4) Use RBAC to restrict Secret access. ConfigMaps and Secrets decouple configuration from container images.",
+      "exampleTranslation": "ConfigMaps เก็บ configuration data ที่ไม่ sensitive เป็น key-value pairs ใช้สำหรับ: environment variables, config files, command-line arguments Secrets เก็บ sensitive data (passwords, API keys, certificates) - base64 encoded (ไม่ได้ encrypt by default!) ทั้งคู่ mount เป็น files หรือ expose เป็น environment variables ได้ Best practices: 1) อย่า commit Secrets ไป git 2) ใช้ external secret managers (Vault, AWS Secrets Manager) สำหรับ production 3) Enable encryption at rest สำหรับ Secrets 4) ใช้ RBAC จำกัด Secret access ConfigMaps และ Secrets แยก configuration ออกจาก container images"
+    },
+    {
+      "vocab": "How does Kubernetes handle scaling?",
+      "pronunciation": "",
+      "meaning": "Kubernetes จัดการ scaling อย่างไร?",
+      "example": "Kubernetes supports multiple scaling methods: 1) Manual scaling: kubectl scale deployment myapp --replicas=5. 2) Horizontal Pod Autoscaler (HPA): automatically scales pods based on CPU/memory or custom metrics. Example: scale when CPU > 70%. 3) Vertical Pod Autoscaler (VPA): adjusts resource requests/limits. 4) Cluster Autoscaler: adds/removes nodes based on pending pods. HPA is most common - define min/max replicas and target metric. Scaling is declarative: you specify desired state, Kubernetes makes it happen. Works with Deployments, ReplicaSets, StatefulSets.",
+      "exampleTranslation": "Kubernetes รองรับหลายวิธี scaling: 1) Manual scaling: kubectl scale deployment myapp --replicas=5 2) Horizontal Pod Autoscaler (HPA): scale pods อัตโนมัติตาม CPU/memory หรือ custom metrics ตัวอย่าง: scale เมื่อ CPU > 70% 3) Vertical Pod Autoscaler (VPA): ปรับ resource requests/limits 4) Cluster Autoscaler: เพิ่ม/ลบ nodes ตาม pending pods HPA พบบ่อยสุด - กำหนด min/max replicas และ target metric Scaling เป็น declarative: คุณระบุ desired state, Kubernetes ทำให้เกิดขึ้น ทำงานกับ Deployments, ReplicaSets, StatefulSets"
+    },
+    {
+      "vocab": "What is Helm and why use it?",
+      "pronunciation": "",
+      "meaning": "Helm คืออะไร และทำไมถึงใช้?",
+      "example": "Helm is a package manager for Kubernetes - like npm for K8s. It uses Charts (packages) containing templated YAML manifests. Benefits: 1) Templating - parameterize configs with values.yaml. 2) Versioning - track and rollback releases. 3) Reusability - share charts via repositories. 4) Dependency management - include sub-charts. Commands: helm install, upgrade, rollback, uninstall. Example: helm install redis bitnami/redis --set auth.password=secret. Use Helm for: complex applications, repeatable deployments, managing third-party software. Write your own charts for custom apps.",
+      "exampleTranslation": "Helm เป็น package manager สำหรับ Kubernetes - เหมือน npm สำหรับ K8s ใช้ Charts (packages) ที่มี templated YAML manifests ประโยชน์: 1) Templating - parameterize configs ด้วย values.yaml 2) Versioning - track และ rollback releases 3) Reusability - แชร์ charts ผ่าน repositories 4) Dependency management - รวม sub-charts Commands: helm install, upgrade, rollback, uninstall ตัวอย่าง: helm install redis bitnami/redis --set auth.password=secret ใช้ Helm สำหรับ: applications ซับซ้อน, deployments ที่ทำซ้ำได้, จัดการ third-party software เขียน charts ของตัวเองสำหรับ custom apps"
+    },
+    {
+      "vocab": "What is CI/CD and why is it important?",
+      "pronunciation": "CI = Continuous Integration, CD = Continuous Delivery/Deployment",
+      "meaning": "CI/CD คืออะไร และทำไมถึงสำคัญ?",
+      "example": "CI (Continuous Integration): automatically build and test code on every commit. Catches bugs early, ensures code integrates properly. CD (Continuous Delivery): automatically prepare releases for deployment - code is always deployable. CD (Continuous Deployment): automatically deploy to production after passing tests. Benefits: 1) Faster feedback - know if code breaks immediately. 2) Reduced risk - small, frequent releases. 3) Consistency - automated, repeatable process. 4) Developer productivity - less manual work. Tools: GitHub Actions, GitLab CI, Jenkins, CircleCI, ArgoCD.",
+      "exampleTranslation": "CI (Continuous Integration): build และ test code อัตโนมัติทุก commit จับ bugs เร็ว รับประกันว่า code integrate ถูกต้อง CD (Continuous Delivery): เตรียม releases สำหรับ deployment อัตโนมัติ - code พร้อม deploy เสมอ CD (Continuous Deployment): deploy ไป production อัตโนมัติหลังผ่าน tests ประโยชน์: 1) Feedback เร็วขึ้น - รู้ทันทีถ้า code พัง 2) ลดความเสี่ยง - releases เล็กและบ่อย 3) Consistency - process อัตโนมัติทำซ้ำได้ 4) Developer productivity - งาน manual น้อยลง Tools: GitHub Actions, GitLab CI, Jenkins, CircleCI, ArgoCD"
+    },
+    {
+      "vocab": "How do you design a CI/CD pipeline?",
+      "pronunciation": "",
+      "meaning": "คุณออกแบบ CI/CD pipeline อย่างไร?",
+      "example": "Typical pipeline stages: 1) Source - trigger on git push/PR. 2) Build - compile code, build Docker image. 3) Test - unit tests, integration tests, linting. 4) Security scan - vulnerability scanning, SAST. 5) Push - push image to registry with version tag. 6) Deploy to staging - automatic deployment. 7) Integration/E2E tests - test in staging environment. 8) Deploy to production - manual approval or automatic. Best practices: fail fast (run quick tests first), parallelize where possible, use caching, keep pipelines under 10 minutes, store artifacts.",
+      "exampleTranslation": "Pipeline stages ทั่วไป: 1) Source - trigger เมื่อ git push/PR 2) Build - compile code, build Docker image 3) Test - unit tests, integration tests, linting 4) Security scan - vulnerability scanning, SAST 5) Push - push image ไป registry พร้อม version tag 6) Deploy to staging - deployment อัตโนมัติ 7) Integration/E2E tests - test ใน staging environment 8) Deploy to production - manual approval หรืออัตโนมัติ Best practices: fail fast (รัน quick tests ก่อน), parallelize ที่ทำได้, ใช้ caching, รักษา pipelines ให้ต่ำกว่า 10 นาที, เก็บ artifacts"
+    },
+    {
+      "vocab": "Explain Blue-Green and Canary deployment strategies.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Blue-Green และ Canary deployment strategies",
+      "example": "Blue-Green: maintain two identical environments. Blue is current production, Green has new version. Deploy to Green, test it, then switch traffic from Blue to Green instantly. Rollback = switch back to Blue. Pros: zero downtime, instant rollback. Cons: needs double resources. Canary: gradually roll out to a small subset of users first (like 5%), monitor for errors, then increase (25%, 50%, 100%). Rollback = route all traffic to old version. Pros: limits blast radius, real user testing. Cons: more complex, needs good monitoring. Choose based on risk tolerance and resources.",
+      "exampleTranslation": "Blue-Green: maintain สอง environments เหมือนกัน Blue คือ production ปัจจุบัน, Green มี version ใหม่ Deploy ไป Green, test แล้วสลับ traffic จาก Blue ไป Green ทันที Rollback = สลับกลับไป Blue ข้อดี: zero downtime, rollback ทันที ข้อเสีย: ต้องการ resources เท่าตัว Canary: roll out ไปยัง users กลุ่มเล็กก่อน (เช่น 5%), monitor errors แล้วเพิ่ม (25%, 50%, 100%) Rollback = route traffic ทั้งหมดไป version เก่า ข้อดี: จำกัด blast radius, real user testing ข้อเสีย: ซับซ้อนกว่า ต้องมี monitoring ดี เลือกตาม risk tolerance และ resources"
+    },
+    {
+      "vocab": "What is GitOps?",
+      "pronunciation": "",
+      "meaning": "GitOps คืออะไร?",
+      "example": "GitOps is a methodology where Git is the single source of truth for infrastructure and application configuration. Key principles: 1) Declarative - describe desired state in Git. 2) Versioned - all changes tracked in Git history. 3) Automated - agents automatically sync cluster state with Git. 4) Continuous reconciliation - detect and fix drift. Tools: ArgoCD, Flux. Workflow: developer pushes manifest change to Git, ArgoCD detects change, applies to cluster. Benefits: audit trail, easy rollback (git revert), consistent environments, pull-based security (cluster pulls config, no push access needed).",
+      "exampleTranslation": "GitOps เป็น methodology ที่ Git เป็น single source of truth สำหรับ infrastructure และ application configuration หลักการสำคัญ: 1) Declarative - อธิบาย desired state ใน Git 2) Versioned - ทุก changes track ใน Git history 3) Automated - agents sync cluster state กับ Git อัตโนมัติ 4) Continuous reconciliation - ตรวจจับและแก้ drift Tools: ArgoCD, Flux Workflow: developer push manifest change ไป Git, ArgoCD ตรวจจับ change, apply ไป cluster ประโยชน์: audit trail, rollback ง่าย (git revert), environments สม่ำเสมอ, pull-based security (cluster pull config, ไม่ต้องมี push access)"
+    },
+    {
+      "vocab": "What is Infrastructure as Code (IaC)?",
+      "pronunciation": "",
+      "meaning": "Infrastructure as Code (IaC) คืออะไร?",
+      "example": "IaC manages infrastructure through code files rather than manual processes. Benefits: 1) Version control - track changes, review, rollback. 2) Reproducibility - create identical environments. 3) Automation - no manual clicking in consoles. 4) Documentation - code IS the documentation. 5) Testing - validate before applying. Tools: Terraform (multi-cloud, declarative), Pulumi (real programming languages), CloudFormation (AWS), Ansible (configuration management). Terraform is most popular: write .tf files declaring resources, terraform plan to preview, terraform apply to create. State file tracks what exists.",
+      "exampleTranslation": "IaC จัดการ infrastructure ผ่าน code files แทนที่จะเป็น manual processes ประโยชน์: 1) Version control - track changes, review, rollback 2) Reproducibility - สร้าง environments เหมือนกัน 3) Automation - ไม่ต้อง click manual ใน consoles 4) Documentation - code คือ documentation 5) Testing - validate ก่อน apply Tools: Terraform (multi-cloud, declarative), Pulumi (programming languages จริง), CloudFormation (AWS), Ansible (configuration management) Terraform นิยมสุด: เขียน .tf files declare resources, terraform plan preview, terraform apply สร้าง State file track สิ่งที่มีอยู่"
+    },
+    {
+      "vocab": "How does Terraform work?",
+      "pronunciation": "",
+      "meaning": "Terraform ทำงานอย่างไร?",
+      "example": "Terraform workflow: 1) Write - define resources in .tf files using HCL (HashiCorp Configuration Language). 2) Init - terraform init downloads providers (AWS, GCP plugins). 3) Plan - terraform plan shows what will be created/changed/destroyed. 4) Apply - terraform apply executes the plan. 5) State - terraform.tfstate tracks real-world resources. Key concepts: providers (cloud APIs), resources (actual infra), data sources (read existing), modules (reusable components), variables (parameterization). Best practices: remote state (S3 + DynamoDB lock), use modules, never edit state manually.",
+      "exampleTranslation": "Terraform workflow: 1) Write - define resources ใน .tf files ด้วย HCL (HashiCorp Configuration Language) 2) Init - terraform init download providers (AWS, GCP plugins) 3) Plan - terraform plan แสดงสิ่งที่จะ created/changed/destroyed 4) Apply - terraform apply execute plan 5) State - terraform.tfstate track real-world resources Key concepts: providers (cloud APIs), resources (actual infra), data sources (read existing), modules (reusable components), variables (parameterization) Best practices: remote state (S3 + DynamoDB lock), ใช้ modules, อย่าแก้ state manually"
+    },
+    {
+      "vocab": "What are the key AWS services for DevOps?",
+      "pronunciation": "",
+      "meaning": "AWS services หลักสำหรับ DevOps มีอะไรบ้าง?",
+      "example": "Compute: EC2 (VMs), ECS/EKS (containers), Lambda (serverless). Storage: S3 (objects), EBS (block), EFS (file). Database: RDS (relational), DynamoDB (NoSQL), ElastiCache (Redis/Memcached). Networking: VPC, ALB/NLB (load balancers), Route53 (DNS), CloudFront (CDN). DevOps tools: CodePipeline/CodeBuild (CI/CD), ECR (container registry), CloudWatch (monitoring), CloudFormation (IaC). Security: IAM (access control), Secrets Manager, KMS (encryption). For containers: ECS is simpler, EKS for full Kubernetes. Most common stack: ECS/EKS + RDS + S3 + ALB + CloudWatch.",
+      "exampleTranslation": "Compute: EC2 (VMs), ECS/EKS (containers), Lambda (serverless) Storage: S3 (objects), EBS (block), EFS (file) Database: RDS (relational), DynamoDB (NoSQL), ElastiCache (Redis/Memcached) Networking: VPC, ALB/NLB (load balancers), Route53 (DNS), CloudFront (CDN) DevOps tools: CodePipeline/CodeBuild (CI/CD), ECR (container registry), CloudWatch (monitoring), CloudFormation (IaC) Security: IAM (access control), Secrets Manager, KMS (encryption) สำหรับ containers: ECS ง่ายกว่า, EKS สำหรับ full Kubernetes Stack ที่พบบ่อย: ECS/EKS + RDS + S3 + ALB + CloudWatch"
+    },
+    {
+      "vocab": "How do you handle secrets in DevOps?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ secrets ใน DevOps อย่างไร?",
+      "example": "Never store secrets in code or git! Solutions: 1) Environment variables - basic but works, set in CI/CD. 2) Cloud secret managers - AWS Secrets Manager, GCP Secret Manager, Azure Key Vault. Auto-rotation, audit logs, encryption. 3) HashiCorp Vault - self-hosted, dynamic secrets, encryption as a service. 4) Kubernetes Secrets + external sync - External Secrets Operator syncs from cloud managers. 5) SOPS - encrypt secrets in git, decrypt at deploy time. Best practice: use cloud secret manager, inject at runtime, rotate regularly, audit access.",
+      "exampleTranslation": "อย่าเก็บ secrets ใน code หรือ git! Solutions: 1) Environment variables - พื้นฐานแต่ใช้ได้ set ใน CI/CD 2) Cloud secret managers - AWS Secrets Manager, GCP Secret Manager, Azure Key Vault Auto-rotation, audit logs, encryption 3) HashiCorp Vault - self-hosted, dynamic secrets, encryption as a service 4) Kubernetes Secrets + external sync - External Secrets Operator sync จาก cloud managers 5) SOPS - encrypt secrets ใน git, decrypt ตอน deploy Best practice: ใช้ cloud secret manager, inject ตอน runtime, rotate สม่ำเสมอ, audit access"
+    },
+    {
+      "vocab": "What is Prometheus and how does it work?",
+      "pronunciation": "",
+      "meaning": "Prometheus คืออะไร และทำงานอย่างไร?",
+      "example": "Prometheus is an open-source monitoring and alerting system. How it works: 1) Pull model - Prometheus scrapes metrics from targets at regular intervals. 2) Time-series database - stores metrics with timestamps and labels. 3) PromQL - query language for analyzing metrics. 4) Alertmanager - handles alerts, routing, silencing, grouping. Components: exporters expose metrics (node_exporter for servers, app instrumentation), Prometheus server collects and stores, Grafana visualizes. Metrics types: counter (always increases), gauge (can go up/down), histogram (distributions), summary.",
+      "exampleTranslation": "Prometheus เป็น open-source monitoring และ alerting system ทำงานอย่างไร: 1) Pull model - Prometheus scrape metrics จาก targets เป็นระยะ 2) Time-series database - เก็บ metrics พร้อม timestamps และ labels 3) PromQL - query language สำหรับวิเคราะห์ metrics 4) Alertmanager - จัดการ alerts, routing, silencing, grouping Components: exporters expose metrics (node_exporter สำหรับ servers, app instrumentation), Prometheus server collect และเก็บ, Grafana visualize Metrics types: counter (เพิ่มเสมอ), gauge (ขึ้นลงได้), histogram (distributions), summary"
+    },
+    {
+      "vocab": "How do you approach logging in a distributed system?",
+      "pronunciation": "",
+      "meaning": "คุณจัดการ logging ใน distributed system อย่างไร?",
+      "example": "Centralized logging is essential - you can't SSH into 50 containers to read logs. Stack: 1) Collection - Fluentd/Fluent Bit, Logstash, or cloud agents collect logs from all sources. 2) Transport - ship to central location. 3) Storage - Elasticsearch, Loki, CloudWatch Logs. 4) Visualization - Kibana, Grafana. Best practices: structured logging (JSON), include correlation IDs for tracing requests across services, log levels (debug, info, warn, error), don't log sensitive data, set retention policies. ELK Stack (Elasticsearch, Logstash, Kibana) is classic. Loki + Grafana is lighter alternative.",
+      "exampleTranslation": "Centralized logging จำเป็น - SSH เข้า 50 containers เพื่ออ่าน logs ไม่ได้ Stack: 1) Collection - Fluentd/Fluent Bit, Logstash หรือ cloud agents collect logs จากทุก sources 2) Transport - ส่งไป central location 3) Storage - Elasticsearch, Loki, CloudWatch Logs 4) Visualization - Kibana, Grafana Best practices: structured logging (JSON), รวม correlation IDs สำหรับ trace requests ข้าม services, log levels (debug, info, warn, error), อย่า log sensitive data, set retention policies ELK Stack (Elasticsearch, Logstash, Kibana) เป็น classic Loki + Grafana เป็นทางเลือกที่เบากว่า"
+    },
+    {
+      "vocab": "What is the difference between monitoring, logging, and tracing?",
+      "pronunciation": "",
+      "meaning": "Monitoring, logging และ tracing ต่างกันอย่างไร?",
+      "example": "Three pillars of observability: Monitoring/Metrics - numerical measurements over time (CPU usage, request count, latency percentiles). Answers 'what is happening?' Tools: Prometheus, Datadog, CloudWatch. Logging - detailed event records. Answers 'what happened?' Shows errors, debug info. Tools: ELK, Loki. Tracing - follows a request's path through distributed services. Answers 'where did time go?' Shows bottlenecks, dependencies. Tools: Jaeger, Zipkin, OpenTelemetry. Use together: metrics alert you to problems, logs show details, traces pinpoint where in the system.",
+      "exampleTranslation": "สามเสาหลักของ observability: Monitoring/Metrics - การวัดตัวเลขตามเวลา (CPU usage, request count, latency percentiles) ตอบ 'เกิดอะไรขึ้น?' Tools: Prometheus, Datadog, CloudWatch Logging - detailed event records ตอบ 'เกิดอะไรขึ้น?' แสดง errors, debug info Tools: ELK, Loki Tracing - ติดตามเส้นทาง request ข้าม distributed services ตอบ 'เวลาไปไหน?' แสดง bottlenecks, dependencies Tools: Jaeger, Zipkin, OpenTelemetry ใช้ร่วมกัน: metrics alert ปัญหา, logs แสดงรายละเอียด, traces ระบุจุดในระบบ"
+    },
+    {
+      "vocab": "What Linux commands do you use daily as a DevOps engineer?",
+      "pronunciation": "",
+      "meaning": "Linux commands อะไรที่คุณใช้ทุกวันในฐานะ DevOps engineer?",
+      "example": "Essential commands: File operations - ls, cd, cat, less, tail -f (follow logs), grep (search), find. Process management - ps aux, top/htop, kill, systemctl. Networking - curl, wget, netstat/ss, ping, dig, nc (netcat). Disk - df -h (disk usage), du -sh (directory size), lsof (open files). Text processing - awk, sed, cut, sort, uniq. Permissions - chmod, chown. Archives - tar, gzip. Remote - ssh, scp, rsync. Combinations: tail -f /var/log/app.log | grep ERROR, ps aux | grep node, find . -name '*.log' -mtime +7 -delete.",
+      "exampleTranslation": "Commands จำเป็น: File operations - ls, cd, cat, less, tail -f (follow logs), grep (search), find Process management - ps aux, top/htop, kill, systemctl Networking - curl, wget, netstat/ss, ping, dig, nc (netcat) Disk - df -h (disk usage), du -sh (directory size), lsof (open files) Text processing - awk, sed, cut, sort, uniq Permissions - chmod, chown Archives - tar, gzip Remote - ssh, scp, rsync Combinations: tail -f /var/log/app.log | grep ERROR, ps aux | grep node, find . -name '*.log' -mtime +7 -delete"
+    },
+    {
+      "vocab": "Explain Linux file permissions.",
+      "pronunciation": "",
+      "meaning": "อธิบาย Linux file permissions",
+      "example": "Permissions shown as rwxrwxrwx: read (r=4), write (w=2), execute (x=1) for owner, group, others. Example: -rwxr-xr-x = 755 means owner can read/write/execute, group and others can read/execute. Common permissions: 644 (files - owner write, all read), 755 (executables/directories), 600 (private files), 700 (private directories). Commands: chmod 755 file, chmod u+x file (add execute for user), chown user:group file. Special: SUID (4), SGID (2), sticky bit (1). Scripts need execute permission. Security: avoid 777, principle of least privilege.",
+      "exampleTranslation": "Permissions แสดงเป็น rwxrwxrwx: read (r=4), write (w=2), execute (x=1) สำหรับ owner, group, others ตัวอย่าง: -rwxr-xr-x = 755 หมายความว่า owner read/write/execute ได้, group และ others read/execute ได้ Permissions ที่พบบ่อย: 644 (files - owner write, ทุกคน read), 755 (executables/directories), 600 (private files), 700 (private directories) Commands: chmod 755 file, chmod u+x file (เพิ่ม execute สำหรับ user), chown user:group file Special: SUID (4), SGID (2), sticky bit (1) Scripts ต้องมี execute permission Security: หลีกเลี่ยง 777, หลักการ least privilege"
+    },
+    {
+      "vocab": "How does DNS work?",
+      "pronunciation": "DNS = Domain Name System",
+      "meaning": "DNS ทำงานอย่างไร?",
+      "example": "DNS translates domain names to IP addresses. Resolution process: 1) Browser checks cache. 2) OS checks /etc/hosts and local cache. 3) Query recursive resolver (ISP or 8.8.8.8). 4) Resolver queries root servers → TLD servers (.com) → authoritative nameservers. 5) Response cached at each level based on TTL. Record types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (verification), NS (nameservers). DevOps relevance: Route53/CloudFlare for DNS management, internal DNS in Kubernetes, debugging with dig/nslookup, TTL considerations for migrations.",
+      "exampleTranslation": "DNS แปลง domain names เป็น IP addresses กระบวนการ Resolution: 1) Browser ตรวจ cache 2) OS ตรวจ /etc/hosts และ local cache 3) Query recursive resolver (ISP หรือ 8.8.8.8) 4) Resolver query root servers → TLD servers (.com) → authoritative nameservers 5) Response ถูก cache ที่แต่ละระดับตาม TTL Record types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (verification), NS (nameservers) ความเกี่ยวข้องกับ DevOps: Route53/CloudFlare สำหรับ DNS management, internal DNS ใน Kubernetes, debugging ด้วย dig/nslookup, TTL considerations สำหรับ migrations"
+    },
+    {
+      "vocab": "What is a load balancer and what types are there?",
+      "pronunciation": "",
+      "meaning": "Load balancer คืออะไร และมีประเภทอะไรบ้าง?",
+      "example": "Load balancer distributes traffic across multiple servers for reliability and performance. Types: Layer 4 (Transport) - routes based on IP/port, faster, no content inspection. TCP/UDP level. Layer 7 (Application) - routes based on HTTP content (URL, headers, cookies). Can do SSL termination, caching, compression. Algorithms: Round Robin, Least Connections, IP Hash (sticky sessions), Weighted. AWS: ALB (L7, HTTP), NLB (L4, TCP/UDP), CLB (legacy). Kubernetes: Service type LoadBalancer, Ingress (L7). Health checks ensure traffic only goes to healthy backends.",
+      "exampleTranslation": "Load balancer กระจาย traffic ข้าม servers หลายตัวเพื่อ reliability และ performance Types: Layer 4 (Transport) - route ตาม IP/port เร็วกว่า ไม่ inspect content ระดับ TCP/UDP Layer 7 (Application) - route ตาม HTTP content (URL, headers, cookies) ทำ SSL termination, caching, compression ได้ Algorithms: Round Robin, Least Connections, IP Hash (sticky sessions), Weighted AWS: ALB (L7, HTTP), NLB (L4, TCP/UDP), CLB (legacy) Kubernetes: Service type LoadBalancer, Ingress (L7) Health checks รับประกันว่า traffic ไปเฉพาะ healthy backends"
+    },
+    {
+      "vocab": "What is SSL/TLS and how does HTTPS work?",
+      "pronunciation": "SSL = Secure Sockets Layer, TLS = Transport Layer Security",
+      "meaning": "SSL/TLS คืออะไร และ HTTPS ทำงานอย่างไร?",
+      "example": "TLS (successor to SSL) encrypts data in transit between client and server. HTTPS = HTTP over TLS. Handshake: 1) Client sends supported TLS versions and cipher suites. 2) Server responds with certificate and chosen cipher. 3) Client verifies certificate against trusted CAs. 4) Key exchange establishes shared secret. 5) Encrypted communication begins. DevOps tasks: obtain certificates (Let's Encrypt free, or paid CAs), configure on load balancer or web server, auto-renewal, redirect HTTP to HTTPS. Certificate chain: your cert → intermediate CA → root CA.",
+      "exampleTranslation": "TLS (ตัวต่อจาก SSL) encrypt data ระหว่าง client และ server HTTPS = HTTP บน TLS Handshake: 1) Client ส่ง TLS versions และ cipher suites ที่รองรับ 2) Server ตอบด้วย certificate และ cipher ที่เลือก 3) Client verify certificate กับ trusted CAs 4) Key exchange สร้าง shared secret 5) เริ่ม encrypted communication งาน DevOps: รับ certificates (Let's Encrypt ฟรี หรือ paid CAs), configure บน load balancer หรือ web server, auto-renewal, redirect HTTP ไป HTTPS Certificate chain: cert ของคุณ → intermediate CA → root CA"
+    },
+    {
+      "vocab": "How do you troubleshoot a slow application?",
+      "pronunciation": "",
+      "meaning": "คุณ troubleshoot application ที่ช้าอย่างไร?",
+      "example": "Systematic approach: 1) Define 'slow' - which endpoint? what latency? since when? 2) Check metrics - CPU, memory, disk I/O, network. Is any resource maxed? 3) Check application logs - errors, slow queries logged? 4) Database - slow query logs, connection pool exhaustion, missing indexes. 5) External dependencies - API calls, third-party services. 6) Tracing - where does time go in request flow? 7) Profiling - CPU/memory profiler for code hotspots. 8) Load testing - reproduce under controlled conditions. Tools: htop, iostat, pg_stat_statements, APM tools (New Relic, Datadog), distributed tracing.",
+      "exampleTranslation": "แนวทางเป็นระบบ: 1) Define 'slow' - endpoint ไหน? latency เท่าไหร่? ตั้งแต่เมื่อไหร่? 2) ตรวจ metrics - CPU, memory, disk I/O, network resource ไหน max? 3) ตรวจ application logs - errors, slow queries logged? 4) Database - slow query logs, connection pool exhaustion, missing indexes 5) External dependencies - API calls, third-party services 6) Tracing - เวลาไปไหนใน request flow? 7) Profiling - CPU/memory profiler สำหรับ code hotspots 8) Load testing - reproduce ภายใต้ controlled conditions Tools: htop, iostat, pg_stat_statements, APM tools (New Relic, Datadog), distributed tracing"
+    },
+    {
+      "vocab": "What is SRE and how does it differ from DevOps?",
+      "pronunciation": "SRE = Site Reliability Engineering",
+      "meaning": "SRE คืออะไร และต่างจาก DevOps อย่างไร?",
+      "example": "SRE is Google's implementation of DevOps principles with specific practices. DevOps is a culture/philosophy emphasizing collaboration between dev and ops. SRE is a job role with concrete practices. Key SRE concepts: SLI (Service Level Indicator) - measurable metrics, SLO (Service Level Objective) - target for SLIs, SLA (Service Level Agreement) - contract with consequences. Error budgets - allowed downtime, spend on features vs reliability. Toil reduction - automate repetitive work. Both aim for reliable, fast software delivery. SRE is more prescriptive, DevOps is broader.",
+      "exampleTranslation": "SRE คือการ implement หลักการ DevOps ของ Google ด้วย practices เฉพาะ DevOps เป็น culture/philosophy เน้นความร่วมมือระหว่าง dev และ ops SRE เป็น job role ที่มี practices เป็นรูปธรรม Key SRE concepts: SLI (Service Level Indicator) - metrics ที่วัดได้, SLO (Service Level Objective) - target สำหรับ SLIs, SLA (Service Level Agreement) - contract ที่มีผลตามมา Error budgets - downtime ที่อนุญาต ใช้กับ features vs reliability Toil reduction - automate งานซ้ำๆ ทั้งคู่มุ่งเป้าที่ reliable, fast software delivery SRE prescriptive กว่า, DevOps กว้างกว่า"
+    }
+  ]
+}
