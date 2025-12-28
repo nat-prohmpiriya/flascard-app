@@ -1,0 +1,259 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Docker Concepts",
+    "description": "Essential Docker concepts including containers, images, Dockerfile, volumes, networks, and Docker Compose",
+    "category": "Programming",
+    "tags": ["docker", "containers", "devops"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Docker?",
+      "pronunciation": "docker run -d -p 80:80 nginx",
+      "meaning": "Docker คืออะไร?",
+      "example": "Docker is a platform for developing, shipping, and running applications in containers. Containers package code and dependencies together, ensuring consistent behavior across environments from development to production.",
+      "exampleTranslation": "Docker คือ platform สำหรับพัฒนา, ส่งมอบ, และรัน applications ใน containers โดย Containers รวม code และ dependencies เข้าด้วยกัน ทำให้ทำงานเหมือนกันทุก environment ตั้งแต่ development ถึง production"
+    },
+    {
+      "vocab": "What is the difference between containers and virtual machines?",
+      "pronunciation": "Container: shares host OS kernel\nVM: runs full guest OS with hypervisor",
+      "meaning": "ความแตกต่างระหว่าง containers และ virtual machines คืออะไร?",
+      "example": "Containers share the host OS kernel, making them lightweight and fast to start (seconds). VMs run a full guest OS on a hypervisor, providing stronger isolation but with more overhead (minutes to start, more resources).",
+      "exampleTranslation": "Containers แชร์ host OS kernel ทำให้เบาและ start เร็ว (วินาที) VMs รัน guest OS เต็มบน hypervisor มี isolation ที่แข็งแกร่งกว่าแต่ใช้ resources มากกว่า (start เป็นนาที ใช้ทรัพยากรมาก)"
+    },
+    {
+      "vocab": "What is a Docker image?",
+      "pronunciation": "docker images\ndocker pull nginx:latest\ndocker build -t myapp:1.0 .",
+      "meaning": "Docker image คืออะไร?",
+      "example": "A Docker image is a read-only template containing application code, runtime, libraries, and dependencies. Images are built in layers, cached for efficiency. Containers are running instances of images. Store images in registries like Docker Hub.",
+      "exampleTranslation": "Docker image คือ read-only template ที่มี application code, runtime, libraries, และ dependencies Images ถูก build เป็น layers และ cache เพื่อประสิทธิภาพ Containers คือ running instances ของ images เก็บ images ใน registries เช่น Docker Hub"
+    },
+    {
+      "vocab": "What is a Dockerfile?",
+      "pronunciation": "FROM node:18-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nEXPOSE 3000\nCMD [\"npm\", \"start\"]",
+      "meaning": "Dockerfile คืออะไร?",
+      "example": "A Dockerfile is a text file with instructions to build a Docker image. Each instruction creates a layer. Common instructions: FROM (base image), RUN (execute commands), COPY (add files), CMD (default command), EXPOSE (document ports).",
+      "exampleTranslation": "Dockerfile คือ text file ที่มีคำสั่งสำหรับ build Docker image แต่ละคำสั่งสร้าง layer คำสั่งที่ใช้บ่อย: FROM (base image), RUN (execute commands), COPY (เพิ่มไฟล์), CMD (default command), EXPOSE (ระบุ ports)"
+    },
+    {
+      "vocab": "What is the difference between CMD and ENTRYPOINT?",
+      "pronunciation": "# CMD - can be overridden\nCMD [\"npm\", \"start\"]\n\n# ENTRYPOINT - always runs\nENTRYPOINT [\"python\", \"app.py\"]\nCMD [\"--port\", \"8080\"]  # default args",
+      "meaning": "ความแตกต่างระหว่าง CMD และ ENTRYPOINT คืออะไร?",
+      "example": "CMD provides default command that can be overridden at runtime. ENTRYPOINT defines the executable that always runs. Combine both: ENTRYPOINT for the command, CMD for default arguments. Use exec form [\"cmd\"] not shell form.",
+      "exampleTranslation": "CMD กำหนด default command ที่ override ตอน runtime ได้ ENTRYPOINT กำหนด executable ที่รันเสมอ ใช้ร่วมกัน: ENTRYPOINT สำหรับ command, CMD สำหรับ default arguments ใช้ exec form [\"cmd\"] ไม่ใช่ shell form"
+    },
+    {
+      "vocab": "What is the difference between COPY and ADD?",
+      "pronunciation": "# COPY - simple copy\nCOPY ./src /app/src\n\n# ADD - extra features\nADD https://example.com/file.tar.gz /tmp/\nADD archive.tar.gz /app/  # auto-extracts",
+      "meaning": "ความแตกต่างระหว่าง COPY และ ADD คืออะไร?",
+      "example": "COPY simply copies files/directories from build context. ADD has extra features: auto-extracts tar archives, can download from URLs. Best practice: prefer COPY for transparency, use ADD only when you need its special features.",
+      "exampleTranslation": "COPY แค่ copy files/directories จาก build context ADD มี features เพิ่ม: auto-extract tar archives, download จาก URLs ได้ Best practice: ใช้ COPY เพื่อความชัดเจน ใช้ ADD เมื่อต้องการ features พิเศษเท่านั้น"
+    },
+    {
+      "vocab": "How do you build a Docker image?",
+      "pronunciation": "# Basic build\ndocker build -t myapp:1.0 .\n\n# With build args\ndocker build --build-arg NODE_ENV=production -t myapp .\n\n# No cache\ndocker build --no-cache -t myapp .",
+      "meaning": "จะ build Docker image ได้อย่างไร?",
+      "example": "Use 'docker build' with -t for tag (name:version). The '.' specifies build context (current directory). Use --build-arg for build-time variables. --no-cache rebuilds all layers. Build context is sent to Docker daemon.",
+      "exampleTranslation": "ใช้ 'docker build' กับ -t สำหรับ tag (name:version) '.' ระบุ build context (current directory) ใช้ --build-arg สำหรับ build-time variables --no-cache rebuild ทุก layers Build context ถูกส่งไปยัง Docker daemon"
+    },
+    {
+      "vocab": "How do you run a Docker container?",
+      "pronunciation": "# Basic run\ndocker run nginx\n\n# Detached with port mapping\ndocker run -d -p 8080:80 --name web nginx\n\n# Interactive with terminal\ndocker run -it ubuntu bash",
+      "meaning": "จะรัน Docker container ได้อย่างไร?",
+      "example": "Use 'docker run' to create and start container. -d for detached (background). -p host:container for port mapping. --name for container name. -it for interactive terminal. -v for volumes. --rm to auto-remove on exit.",
+      "exampleTranslation": "ใช้ 'docker run' สร้างและ start container -d สำหรับ detached (background) -p host:container สำหรับ port mapping --name สำหรับชื่อ container -it สำหรับ interactive terminal -v สำหรับ volumes --rm ลบอัตโนมัติเมื่อ exit"
+    },
+    {
+      "vocab": "What are common Docker container commands?",
+      "pronunciation": "docker ps              # list running\ndocker ps -a           # list all\ndocker stop <id>       # stop container\ndocker start <id>      # start stopped\ndocker rm <id>         # remove container\ndocker logs <id>       # view logs",
+      "meaning": "Docker container commands ที่ใช้บ่อยมีอะไรบ้าง?",
+      "example": "docker ps lists running containers (-a for all). docker stop/start/restart control container state. docker rm removes stopped containers. docker logs shows output (-f to follow). docker exec runs commands in running container.",
+      "exampleTranslation": "docker ps แสดง running containers (-a สำหรับทั้งหมด) docker stop/start/restart ควบคุม container state docker rm ลบ stopped containers docker logs แสดง output (-f เพื่อ follow) docker exec รัน commands ใน running container"
+    },
+    {
+      "vocab": "How do you execute commands in a running container?",
+      "pronunciation": "# Run bash interactively\ndocker exec -it mycontainer bash\n\n# Run single command\ndocker exec mycontainer ls -la /app\n\n# As different user\ndocker exec -u root mycontainer apt update",
+      "meaning": "จะรัน commands ใน running container ได้อย่างไร?",
+      "example": "Use 'docker exec' to run commands in running containers. -it for interactive terminal (needed for bash/sh). -u to specify user. Useful for debugging, inspecting files, or running maintenance tasks inside containers.",
+      "exampleTranslation": "ใช้ 'docker exec' รัน commands ใน running containers -it สำหรับ interactive terminal (ต้องใช้กับ bash/sh) -u ระบุ user มีประโยชน์สำหรับ debugging, ตรวจสอบไฟล์, หรือรัน maintenance tasks ใน containers"
+    },
+    {
+      "vocab": "What are Docker volumes?",
+      "pronunciation": "# Named volume\ndocker run -v mydata:/app/data nginx\n\n# Bind mount\ndocker run -v /host/path:/container/path nginx\n\n# Create volume\ndocker volume create mydata",
+      "meaning": "Docker volumes คืออะไร?",
+      "example": "Volumes persist data beyond container lifecycle. Named volumes managed by Docker (docker volume create). Bind mounts link host directories. Volumes survive container removal, enable data sharing between containers, better performance than bind mounts.",
+      "exampleTranslation": "Volumes เก็บ data ที่คงอยู่เมื่อ container หยุด Named volumes จัดการโดย Docker (docker volume create) Bind mounts เชื่อมกับ host directories Volumes อยู่ได้เมื่อ container ถูกลบ แชร์ data ระหว่าง containers ได้ performance ดีกว่า bind mounts"
+    },
+    {
+      "vocab": "What are Docker networks?",
+      "pronunciation": "# Create network\ndocker network create mynet\n\n# Run with network\ndocker run --network mynet --name web nginx\ndocker run --network mynet --name db postgres\n\n# Containers can reach each other by name",
+      "meaning": "Docker networks คืออะไร?",
+      "example": "Networks enable container communication. Default bridge network for single host. Containers on same network can communicate by container name (DNS). Custom networks provide isolation. Host network shares host's network stack.",
+      "exampleTranslation": "Networks ช่วยให้ containers สื่อสารกัน Default bridge network สำหรับ single host Containers บน network เดียวกันสื่อสารด้วยชื่อ container (DNS) Custom networks ให้ isolation Host network แชร์ network stack ของ host"
+    },
+    {
+      "vocab": "What is Docker Compose?",
+      "pronunciation": "# docker-compose.yml\nversion: '3.8'\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n  db:\n    image: postgres\n    volumes:\n      - pgdata:/var/lib/postgresql/data\nvolumes:\n  pgdata:",
+      "meaning": "Docker Compose คืออะไร?",
+      "example": "Docker Compose defines multi-container applications in YAML. Manages services, networks, and volumes together. 'docker compose up' starts all services. 'docker compose down' stops and removes. Great for development and simple deployments.",
+      "exampleTranslation": "Docker Compose กำหนด multi-container applications ใน YAML จัดการ services, networks, และ volumes ด้วยกัน 'docker compose up' start ทุก services 'docker compose down' stop และลบ เหมาะสำหรับ development และ deployments ง่ายๆ"
+    },
+    {
+      "vocab": "What are common Docker Compose commands?",
+      "pronunciation": "docker compose up -d      # start detached\ndocker compose down       # stop and remove\ndocker compose logs -f    # follow logs\ndocker compose ps         # list services\ndocker compose build      # rebuild images\ndocker compose exec web sh # exec in service",
+      "meaning": "Docker Compose commands ที่ใช้บ่อยมีอะไรบ้าง?",
+      "example": "docker compose up starts services (-d for detached, --build to rebuild). down stops and removes containers/networks. logs shows output from all services. ps lists running services. exec runs commands in service container.",
+      "exampleTranslation": "docker compose up start services (-d สำหรับ detached, --build เพื่อ rebuild) down stop และลบ containers/networks logs แสดง output จากทุก services ps แสดง running services exec รัน commands ใน service container"
+    },
+    {
+      "vocab": "How do you configure environment variables in Docker?",
+      "pronunciation": "# In docker run\ndocker run -e DB_HOST=localhost app\n\n# In Compose\nservices:\n  app:\n    environment:\n      - DB_HOST=localhost\n    env_file:\n      - .env",
+      "meaning": "จะตั้งค่า environment variables ใน Docker ได้อย่างไร?",
+      "example": "Use -e flag with docker run. In Compose, use environment list or env_file. ARG for build-time, ENV for runtime variables. Never put secrets in images - use environment variables or secrets management.",
+      "exampleTranslation": "ใช้ -e flag กับ docker run ใน Compose ใช้ environment list หรือ env_file ARG สำหรับ build-time, ENV สำหรับ runtime variables อย่าใส่ secrets ใน images - ใช้ environment variables หรือ secrets management"
+    },
+    {
+      "vocab": "What is multi-stage build in Docker?",
+      "pronunciation": "FROM node:18 AS builder\nWORKDIR /app\nCOPY . .\nRUN npm ci && npm run build\n\nFROM node:18-alpine\nWORKDIR /app\nCOPY --from=builder /app/dist ./dist\nCMD [\"node\", \"dist/main.js\"]",
+      "meaning": "Multi-stage build ใน Docker คืออะไร?",
+      "example": "Multi-stage builds use multiple FROM statements to create smaller final images. Build stage includes dev dependencies and compiles code. Final stage copies only production artifacts. Reduces image size significantly.",
+      "exampleTranslation": "Multi-stage builds ใช้หลาย FROM statements เพื่อสร้าง final images ที่เล็กลง Build stage มี dev dependencies และ compile code Final stage copy แค่ production artifacts ลดขนาด image ได้มาก"
+    },
+    {
+      "vocab": "What are Docker image layers?",
+      "pronunciation": "FROM node:18          # Layer 1\nWORKDIR /app          # Layer 2\nCOPY package.json .   # Layer 3\nRUN npm install       # Layer 4 (cached if package.json unchanged)\nCOPY . .              # Layer 5",
+      "meaning": "Docker image layers คืออะไร?",
+      "example": "Each Dockerfile instruction creates a read-only layer. Layers are cached and reused when unchanged. Order matters: put rarely changing instructions first. COPY/ADD invalidate cache when files change. Optimize by grouping RUN commands.",
+      "exampleTranslation": "แต่ละคำสั่งใน Dockerfile สร้าง read-only layer Layers ถูก cache และใช้ซ้ำเมื่อไม่เปลี่ยนแปลง ลำดับสำคัญ: วางคำสั่งที่เปลี่ยนน้อยไว้ก่อน COPY/ADD invalidate cache เมื่อไฟล์เปลี่ยน Optimize โดยรวม RUN commands"
+    },
+    {
+      "vocab": "What is a Docker registry?",
+      "pronunciation": "# Push to Docker Hub\ndocker login\ndocker tag myapp:1.0 username/myapp:1.0\ndocker push username/myapp:1.0\n\n# Pull from registry\ndocker pull username/myapp:1.0",
+      "meaning": "Docker registry คืออะไร?",
+      "example": "Registry stores and distributes Docker images. Docker Hub is the default public registry. Private registries: Amazon ECR, Google GCR, Azure ACR, self-hosted. Use docker push/pull to upload/download. Tag images with registry URL.",
+      "exampleTranslation": "Registry เก็บและแจกจ่าย Docker images Docker Hub เป็น default public registry Private registries: Amazon ECR, Google GCR, Azure ACR, self-hosted ใช้ docker push/pull เพื่อ upload/download Tag images ด้วย registry URL"
+    },
+    {
+      "vocab": "How do you optimize Docker image size?",
+      "pronunciation": "# Use alpine base\nFROM node:18-alpine\n\n# Combine RUN commands\nRUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*\n\n# Use .dockerignore\nnode_modules\n.git\n*.md",
+      "meaning": "จะ optimize ขนาด Docker image ได้อย่างไร?",
+      "example": "Use minimal base images (alpine, slim, distroless). Multi-stage builds to exclude build tools. Combine RUN commands to reduce layers. Clean up in same layer (apt clean). Use .dockerignore to exclude unnecessary files.",
+      "exampleTranslation": "ใช้ minimal base images (alpine, slim, distroless) Multi-stage builds เพื่อไม่รวม build tools รวม RUN commands เพื่อลด layers Clean up ใน layer เดียว (apt clean) ใช้ .dockerignore เพื่อไม่รวมไฟล์ที่ไม่จำเป็น"
+    },
+    {
+      "vocab": "What is .dockerignore?",
+      "pronunciation": "# .dockerignore\nnode_modules\n.git\n.gitignore\n*.md\n.env\nDockerfile\n.dockerignore\ncoverage\ndist",
+      "meaning": ".dockerignore คืออะไร?",
+      "example": ".dockerignore excludes files from build context sent to Docker daemon. Similar to .gitignore syntax. Reduces build time and prevents sensitive files from being included. Always ignore node_modules, .git, secrets, and build artifacts.",
+      "exampleTranslation": ".dockerignore ไม่รวมไฟล์จาก build context ที่ส่งไปยัง Docker daemon Syntax คล้าย .gitignore ลด build time และป้องกันไฟล์ sensitive ถูกรวม ควรไม่รวม node_modules, .git, secrets, และ build artifacts เสมอ"
+    },
+    {
+      "vocab": "What are Docker health checks?",
+      "pronunciation": "HEALTHCHECK --interval=30s --timeout=3s --retries=3 \\\n  CMD curl -f http://localhost:3000/health || exit 1\n\n# In Compose\nservices:\n  web:\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:3000/health\"]\n      interval: 30s",
+      "meaning": "Docker health checks คืออะไร?",
+      "example": "Health checks monitor container health status. Define in Dockerfile with HEALTHCHECK instruction. Docker runs check command periodically. Container marked healthy/unhealthy. Orchestrators use health status for decisions. Exit 0 = healthy, 1 = unhealthy.",
+      "exampleTranslation": "Health checks ตรวจสอบสถานะ container กำหนดใน Dockerfile ด้วย HEALTHCHECK instruction Docker รัน check command เป็นระยะ Container ถูก mark healthy/unhealthy Orchestrators ใช้ health status ตัดสินใจ Exit 0 = healthy, 1 = unhealthy"
+    },
+    {
+      "vocab": "What is the difference between docker run and docker create?",
+      "pronunciation": "# create: creates container without starting\ndocker create --name myapp nginx\ndocker start myapp\n\n# run: creates and starts\ndocker run --name myapp nginx",
+      "meaning": "ความแตกต่างระหว่าง docker run และ docker create คืออะไร?",
+      "example": "docker create creates a container without starting it - useful for preparing containers or inspecting before run. docker run is equivalent to docker create + docker start. Most common workflow uses run directly.",
+      "exampleTranslation": "docker create สร้าง container โดยไม่ start - มีประโยชน์สำหรับเตรียม containers หรือตรวจสอบก่อนรัน docker run เท่ากับ docker create + docker start Workflow ทั่วไปใช้ run โดยตรง"
+    },
+    {
+      "vocab": "How do you inspect Docker containers and images?",
+      "pronunciation": "# Inspect container\ndocker inspect mycontainer\n\n# View image layers\ndocker history myimage\n\n# Container resource usage\ndocker stats\n\n# View container filesystem changes\ndocker diff mycontainer",
+      "meaning": "จะตรวจสอบ Docker containers และ images ได้อย่างไร?",
+      "example": "docker inspect shows detailed JSON metadata. docker history shows image layers. docker stats displays real-time resource usage. docker diff shows filesystem changes. Use --format to extract specific fields from inspect output.",
+      "exampleTranslation": "docker inspect แสดง detailed JSON metadata docker history แสดง image layers docker stats แสดง resource usage แบบ real-time docker diff แสดง filesystem changes ใช้ --format เพื่อดึง fields เฉพาะจาก inspect output"
+    },
+    {
+      "vocab": "What are Docker restart policies?",
+      "pronunciation": "# Always restart\ndocker run --restart always nginx\n\n# Restart on failure (max 3 times)\ndocker run --restart on-failure:3 nginx\n\n# In Compose\nservices:\n  web:\n    restart: unless-stopped",
+      "meaning": "Docker restart policies คืออะไร?",
+      "example": "Restart policies control container behavior on exit. 'no' never restarts (default). 'always' always restarts. 'on-failure' restarts on non-zero exit. 'unless-stopped' restarts unless manually stopped. Important for production reliability.",
+      "exampleTranslation": "Restart policies ควบคุมพฤติกรรม container เมื่อ exit 'no' ไม่ restart เลย (default) 'always' restart เสมอ 'on-failure' restart เมื่อ exit ไม่ใช่ 0 'unless-stopped' restart ยกเว้นหยุดด้วยตัวเอง สำคัญสำหรับ production reliability"
+    },
+    {
+      "vocab": "How do you manage Docker resources and limits?",
+      "pronunciation": "# Memory limit\ndocker run -m 512m nginx\n\n# CPU limit\ndocker run --cpus 0.5 nginx\n\n# In Compose\nservices:\n  web:\n    deploy:\n      resources:\n        limits:\n          memory: 512M\n          cpus: '0.5'",
+      "meaning": "จะจัดการ Docker resources และ limits ได้อย่างไร?",
+      "example": "Use -m/--memory for memory limits. --cpus limits CPU usage (0.5 = half a core). --memory-swap for swap limit. Resource limits prevent containers from consuming all host resources. Important for multi-tenant and production environments.",
+      "exampleTranslation": "ใช้ -m/--memory สำหรับ memory limits --cpus จำกัด CPU usage (0.5 = ครึ่ง core) --memory-swap สำหรับ swap limit Resource limits ป้องกัน containers ใช้ host resources หมด สำคัญสำหรับ multi-tenant และ production environments"
+    },
+    {
+      "vocab": "What are Docker secrets?",
+      "pronunciation": "# Create secret\necho \"mypassword\" | docker secret create db_password -\n\n# Use in service\ndocker service create --secret db_password myapp\n\n# In Compose (Swarm mode)\nservices:\n  db:\n    secrets:\n      - db_password\nsecrets:\n  db_password:\n    external: true",
+      "meaning": "Docker secrets คืออะไร?",
+      "example": "Secrets securely store sensitive data like passwords and API keys. Encrypted at rest and in transit. Available only to services that need them. Mounted as files in /run/secrets/. Only available in Swarm mode or Kubernetes.",
+      "exampleTranslation": "Secrets เก็บ sensitive data อย่างปลอดภัย เช่น passwords และ API keys Encrypted ทั้งตอนเก็บและส่ง มีให้เฉพาะ services ที่ต้องการ Mount เป็นไฟล์ใน /run/secrets/ มีเฉพาะใน Swarm mode หรือ Kubernetes"
+    },
+    {
+      "vocab": "What is Docker Swarm?",
+      "pronunciation": "# Initialize swarm\ndocker swarm init\n\n# Deploy stack\ndocker stack deploy -c docker-compose.yml myapp\n\n# Scale service\ndocker service scale myapp_web=5\n\n# List services\ndocker service ls",
+      "meaning": "Docker Swarm คืออะไร?",
+      "example": "Docker Swarm is native container orchestration. Manages cluster of Docker nodes. Provides service discovery, load balancing, rolling updates. Simpler than Kubernetes but less features. Good for smaller deployments.",
+      "exampleTranslation": "Docker Swarm คือ native container orchestration จัดการ cluster ของ Docker nodes มี service discovery, load balancing, rolling updates ง่ายกว่า Kubernetes แต่มี features น้อยกว่า เหมาะสำหรับ deployments ขนาดเล็ก"
+    },
+    {
+      "vocab": "How do you clean up Docker resources?",
+      "pronunciation": "# Remove stopped containers\ndocker container prune\n\n# Remove unused images\ndocker image prune -a\n\n# Remove unused volumes\ndocker volume prune\n\n# Remove everything unused\ndocker system prune -a --volumes",
+      "meaning": "จะทำความสะอาด Docker resources ได้อย่างไร?",
+      "example": "docker system prune removes all unused containers, networks, images. Add -a to remove all unused images (not just dangling). --volumes also removes unused volumes. docker container/image/volume prune for specific cleanup.",
+      "exampleTranslation": "docker system prune ลบ unused containers, networks, images ทั้งหมด เพิ่ม -a เพื่อลบ unused images ทั้งหมด (ไม่ใช่แค่ dangling) --volumes ลบ unused volumes ด้วย docker container/image/volume prune สำหรับ cleanup เฉพาะส่วน"
+    },
+    {
+      "vocab": "What is the USER instruction in Dockerfile?",
+      "pronunciation": "FROM node:18\n\n# Create non-root user\nRUN addgroup --system app && adduser --system --group app\n\n# Switch to non-root user\nUSER app\n\nWORKDIR /app\nCOPY --chown=app:app . .",
+      "meaning": "USER instruction ใน Dockerfile คืออะไร?",
+      "example": "USER sets the user for subsequent instructions and container runtime. Security best practice: don't run as root. Create dedicated user with adduser/addgroup. Use --chown with COPY to set file ownership. Some images have built-in non-root users.",
+      "exampleTranslation": "USER ตั้ง user สำหรับคำสั่งถัดไปและ container runtime Security best practice: อย่ารันเป็น root สร้าง dedicated user ด้วย adduser/addgroup ใช้ --chown กับ COPY เพื่อตั้ง file ownership บาง images มี non-root users ในตัว"
+    },
+    {
+      "vocab": "How do you debug Docker build issues?",
+      "pronunciation": "# Build with progress output\ndocker build --progress=plain -t myapp .\n\n# Build specific stage\ndocker build --target builder -t myapp:builder .\n\n# Run intermediate image\ndocker run -it <intermediate-image-id> sh",
+      "meaning": "จะ debug Docker build issues ได้อย่างไร?",
+      "example": "Use --progress=plain for detailed build output. Build specific stage with --target. Run intermediate images to inspect state. Check layer cache with docker history. Use docker build --no-cache to force rebuild all layers.",
+      "exampleTranslation": "ใช้ --progress=plain สำหรับ detailed build output Build specific stage ด้วย --target รัน intermediate images เพื่อตรวจสอบ state ดู layer cache ด้วย docker history ใช้ docker build --no-cache เพื่อบังคับ rebuild ทุก layers"
+    },
+    {
+      "vocab": "What is the WORKDIR instruction?",
+      "pronunciation": "FROM node:18\nWORKDIR /app           # Creates if not exists\nCOPY package.json .    # Copies to /app/package.json\nRUN npm install        # Runs in /app\nCOPY . .               # Copies to /app",
+      "meaning": "WORKDIR instruction คืออะไร?",
+      "example": "WORKDIR sets the working directory for subsequent instructions (RUN, CMD, COPY, etc). Creates directory if it doesn't exist. Better than 'RUN cd' as it persists. Use absolute paths. Can be used multiple times.",
+      "exampleTranslation": "WORKDIR ตั้ง working directory สำหรับคำสั่งถัดไป (RUN, CMD, COPY ฯลฯ) สร้าง directory ถ้าไม่มี ดีกว่า 'RUN cd' เพราะคงอยู่ ใช้ absolute paths ใช้หลายครั้งได้"
+    },
+    {
+      "vocab": "What is Docker BuildKit?",
+      "pronunciation": "# Enable BuildKit\nDOCKER_BUILDKIT=1 docker build -t myapp .\n\n# BuildKit features\n# syntax=docker/dockerfile:1\nFROM node:18\nRUN --mount=type=cache,target=/root/.npm npm install",
+      "meaning": "Docker BuildKit คืออะไร?",
+      "example": "BuildKit is Docker's next-generation build engine. Parallel build stages, better caching, build secrets. Mount caches for faster rebuilds. Enabled by default in newer Docker versions. Use # syntax directive for advanced features.",
+      "exampleTranslation": "BuildKit คือ build engine รุ่นใหม่ของ Docker มี parallel build stages, caching ที่ดีกว่า, build secrets Mount caches สำหรับ rebuilds ที่เร็วขึ้น Enable by default ใน Docker versions ใหม่ ใช้ # syntax directive สำหรับ advanced features"
+    },
+    {
+      "vocab": "How do you copy files from container to host?",
+      "pronunciation": "# Copy from container to host\ndocker cp mycontainer:/app/logs ./logs\n\n# Copy from host to container\ndocker cp ./config.json mycontainer:/app/config.json\n\n# Works with running or stopped containers",
+      "meaning": "จะ copy files จาก container ไป host ได้อย่างไร?",
+      "example": "Use 'docker cp' to copy files between container and host. Works with both running and stopped containers. Syntax: docker cp <container>:<path> <host-path> or reverse. Useful for extracting logs or injecting config files.",
+      "exampleTranslation": "ใช้ 'docker cp' copy files ระหว่าง container และ host ใช้ได้ทั้ง running และ stopped containers Syntax: docker cp <container>:<path> <host-path> หรือกลับกัน มีประโยชน์สำหรับดึง logs หรือใส่ config files"
+    },
+    {
+      "vocab": "What are Docker Compose profiles?",
+      "pronunciation": "services:\n  web:\n    image: nginx\n  debug:\n    image: busybox\n    profiles:\n      - debug\n  test:\n    image: test-runner\n    profiles:\n      - test\n\n# docker compose --profile debug up",
+      "meaning": "Docker Compose profiles คืออะไร?",
+      "example": "Profiles group services for selective startup. Services without profiles always start. Use --profile flag to include profiled services. Multiple profiles can be combined. Useful for development vs production, or optional debugging services.",
+      "exampleTranslation": "Profiles จัดกลุ่ม services สำหรับ startup เฉพาะส่วน Services ที่ไม่มี profiles จะ start เสมอ ใช้ --profile flag เพื่อรวม profiled services รวมหลาย profiles ได้ มีประโยชน์สำหรับ development vs production หรือ debugging services ที่เป็น optional"
+    },
+    {
+      "vocab": "What are Docker Compose service dependencies?",
+      "pronunciation": "services:\n  web:\n    depends_on:\n      db:\n        condition: service_healthy\n      redis:\n        condition: service_started\n  db:\n    healthcheck:\n      test: pg_isready\n  redis:\n    image: redis",
+      "meaning": "Docker Compose service dependencies คืออะไร?",
+      "example": "depends_on controls service startup order. condition: service_started waits for container start. condition: service_healthy waits for health check pass. Important: doesn't wait for application readiness - use health checks for that.",
+      "exampleTranslation": "depends_on ควบคุมลำดับ startup ของ services condition: service_started รอ container start condition: service_healthy รอ health check ผ่าน สำคัญ: ไม่รอ application readiness - ใช้ health checks สำหรับนั้น"
+    }
+  ]
+}

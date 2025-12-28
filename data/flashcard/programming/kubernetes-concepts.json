@@ -1,0 +1,301 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "Kubernetes Concepts",
+    "description": "Essential Kubernetes concepts including pods, deployments, services, ingress, configmaps, secrets, and cluster management",
+    "category": "Programming",
+    "tags": ["kubernetes", "k8s", "devops", "orchestration"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Kubernetes?",
+      "pronunciation": "kubectl get pods\nkubectl apply -f deployment.yaml",
+      "meaning": "Kubernetes คืออะไร?",
+      "example": "Kubernetes (K8s) is an open-source container orchestration platform. It automates deployment, scaling, and management of containerized applications. Provides self-healing, load balancing, service discovery, and declarative configuration.",
+      "exampleTranslation": "Kubernetes (K8s) คือ open-source container orchestration platform ทำ deployment, scaling, และ management ของ containerized applications โดยอัตโนมัติ มี self-healing, load balancing, service discovery, และ declarative configuration"
+    },
+    {
+      "vocab": "What is a Pod in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: my-pod\nspec:\n  containers:\n  - name: app\n    image: nginx\n    ports:\n    - containerPort: 80",
+      "meaning": "Pod ใน Kubernetes คืออะไร?",
+      "example": "Pod is the smallest deployable unit in Kubernetes. Contains one or more containers that share network and storage. Containers in a pod share localhost and can communicate via IPC. Pods are ephemeral - use controllers for management.",
+      "exampleTranslation": "Pod คือหน่วย deployable ที่เล็กที่สุดใน Kubernetes มี containers หนึ่งหรือมากกว่าที่แชร์ network และ storage Containers ใน pod แชร์ localhost และสื่อสารผ่าน IPC ได้ Pods เป็น ephemeral - ใช้ controllers จัดการ"
+    },
+    {
+      "vocab": "What is a Deployment in Kubernetes?",
+      "pronunciation": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: my-app\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: my-app\n  template:\n    metadata:\n      labels:\n        app: my-app\n    spec:\n      containers:\n      - name: app\n        image: my-app:1.0",
+      "meaning": "Deployment ใน Kubernetes คืออะไร?",
+      "example": "Deployment manages ReplicaSets and provides declarative updates for Pods. Handles rolling updates, rollbacks, and scaling. Ensures desired number of pod replicas are running. Most common way to deploy stateless applications.",
+      "exampleTranslation": "Deployment จัดการ ReplicaSets และให้ declarative updates สำหรับ Pods จัดการ rolling updates, rollbacks, และ scaling ทำให้มี pod replicas ตามจำนวนที่ต้องการ วิธีที่ใช้บ่อยที่สุดในการ deploy stateless applications"
+    },
+    {
+      "vocab": "What is a Service in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: Service\nmetadata:\n  name: my-service\nspec:\n  selector:\n    app: my-app\n  ports:\n  - port: 80\n    targetPort: 8080\n  type: ClusterIP",
+      "meaning": "Service ใน Kubernetes คืออะไร?",
+      "example": "Service provides stable network endpoint for pods. Pods are ephemeral with changing IPs - Service provides consistent DNS name and IP. Load balances traffic across pod replicas. Types: ClusterIP, NodePort, LoadBalancer, ExternalName.",
+      "exampleTranslation": "Service ให้ stable network endpoint สำหรับ pods Pods เป็น ephemeral มี IPs เปลี่ยน - Service ให้ DNS name และ IP ที่คงที่ Load balance traffic ข้าม pod replicas Types: ClusterIP, NodePort, LoadBalancer, ExternalName"
+    },
+    {
+      "vocab": "What are the Service types in Kubernetes?",
+      "pronunciation": "ClusterIP: internal only (default)\nNodePort: expose on node's IP:port\nLoadBalancer: cloud load balancer\nExternalName: DNS CNAME to external service",
+      "meaning": "Service types ใน Kubernetes มีอะไรบ้าง?",
+      "example": "ClusterIP: internal cluster access only (default). NodePort: exposes on each node's IP at static port (30000-32767). LoadBalancer: provisions cloud load balancer. ExternalName: maps to external DNS name. Choose based on access requirements.",
+      "exampleTranslation": "ClusterIP: เข้าถึงภายใน cluster เท่านั้น (default) NodePort: expose บน IP ของแต่ละ node ที่ static port (30000-32767) LoadBalancer: สร้าง cloud load balancer ExternalName: map ไปยัง external DNS name เลือกตามความต้องการการเข้าถึง"
+    },
+    {
+      "vocab": "What is an Ingress in Kubernetes?",
+      "pronunciation": "apiVersion: networking.k8s.io/v1\nkind: Ingress\nmetadata:\n  name: my-ingress\nspec:\n  rules:\n  - host: app.example.com\n    http:\n      paths:\n      - path: /\n        pathType: Prefix\n        backend:\n          service:\n            name: my-service\n            port:\n              number: 80",
+      "meaning": "Ingress ใน Kubernetes คืออะไร?",
+      "example": "Ingress manages external HTTP/HTTPS access to services. Provides URL routing, SSL termination, name-based virtual hosting. Requires Ingress Controller (nginx, traefik, etc). More efficient than multiple LoadBalancer services.",
+      "exampleTranslation": "Ingress จัดการ external HTTP/HTTPS access ไปยัง services มี URL routing, SSL termination, name-based virtual hosting ต้องมี Ingress Controller (nginx, traefik ฯลฯ) มีประสิทธิภาพกว่าการใช้หลาย LoadBalancer services"
+    },
+    {
+      "vocab": "What is a ConfigMap in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: app-config\ndata:\n  DATABASE_URL: postgres://db:5432\n  LOG_LEVEL: info\n---\nenvFrom:\n- configMapRef:\n    name: app-config",
+      "meaning": "ConfigMap ใน Kubernetes คืออะไร?",
+      "example": "ConfigMap stores non-sensitive configuration data as key-value pairs. Decouple configuration from container images. Mount as environment variables or files. Changes can be picked up without pod restart (when mounted as volume).",
+      "exampleTranslation": "ConfigMap เก็บ configuration data ที่ไม่ sensitive เป็น key-value pairs แยก configuration ออกจาก container images Mount เป็น environment variables หรือ files การเปลี่ยนแปลงรับได้โดยไม่ต้อง restart pod (เมื่อ mount เป็น volume)"
+    },
+    {
+      "vocab": "What is a Secret in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: Secret\nmetadata:\n  name: db-secret\ntype: Opaque\ndata:\n  password: cGFzc3dvcmQxMjM=  # base64 encoded\n---\nenv:\n- name: DB_PASSWORD\n  valueFrom:\n    secretKeyRef:\n      name: db-secret\n      key: password",
+      "meaning": "Secret ใน Kubernetes คืออะไร?",
+      "example": "Secret stores sensitive data like passwords, tokens, keys. Similar to ConfigMap but base64 encoded (not encrypted by default!). Enable encryption at rest for security. Types: Opaque, docker-registry, tls. Use external secret managers for production.",
+      "exampleTranslation": "Secret เก็บ sensitive data เช่น passwords, tokens, keys คล้าย ConfigMap แต่ base64 encoded (ไม่ encrypted by default!) เปิด encryption at rest เพื่อความปลอดภัย Types: Opaque, docker-registry, tls ใช้ external secret managers สำหรับ production"
+    },
+    {
+      "vocab": "What is a Namespace in Kubernetes?",
+      "pronunciation": "kubectl create namespace development\nkubectl get pods -n development\nkubectl apply -f app.yaml -n production\n\n# Set default namespace\nkubectl config set-context --current --namespace=development",
+      "meaning": "Namespace ใน Kubernetes คืออะไร?",
+      "example": "Namespaces provide logical isolation within a cluster. Organize resources by team, environment, or project. Resource names must be unique within namespace. Apply resource quotas and network policies per namespace. Default namespaces: default, kube-system, kube-public.",
+      "exampleTranslation": "Namespaces ให้ logical isolation ภายใน cluster จัดระเบียบ resources ตาม team, environment, หรือ project ชื่อ resources ต้องไม่ซ้ำภายใน namespace ใช้ resource quotas และ network policies ต่อ namespace Default namespaces: default, kube-system, kube-public"
+    },
+    {
+      "vocab": "What are Labels and Selectors in Kubernetes?",
+      "pronunciation": "metadata:\n  labels:\n    app: web\n    environment: production\n    version: v1.2.0\n---\nselector:\n  matchLabels:\n    app: web\n  matchExpressions:\n  - key: environment\n    operator: In\n    values: [production, staging]",
+      "meaning": "Labels และ Selectors ใน Kubernetes คืออะไร?",
+      "example": "Labels are key-value pairs attached to objects for identification. Selectors query objects by labels. Services and Deployments use selectors to find pods. matchLabels for equality, matchExpressions for complex queries. Essential for organizing resources.",
+      "exampleTranslation": "Labels คือ key-value pairs ติดกับ objects เพื่อระบุตัวตน Selectors query objects ด้วย labels Services และ Deployments ใช้ selectors หา pods matchLabels สำหรับ equality, matchExpressions สำหรับ queries ซับซ้อน สำคัญสำหรับจัดระเบียบ resources"
+    },
+    {
+      "vocab": "What is a ReplicaSet in Kubernetes?",
+      "pronunciation": "apiVersion: apps/v1\nkind: ReplicaSet\nmetadata:\n  name: my-replicaset\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: my-app\n  template:\n    spec:\n      containers:\n      - name: app\n        image: my-app:1.0",
+      "meaning": "ReplicaSet ใน Kubernetes คืออะไร?",
+      "example": "ReplicaSet ensures specified number of pod replicas are running. Replaces failed pods automatically. Usually managed by Deployment (don't create directly). Deployment provides additional features like rolling updates and rollbacks.",
+      "exampleTranslation": "ReplicaSet ทำให้มี pod replicas ตามจำนวนที่กำหนด แทนที่ pods ที่ fail อัตโนมัติ ปกติจัดการโดย Deployment (ไม่สร้างโดยตรง) Deployment มี features เพิ่มเช่น rolling updates และ rollbacks"
+    },
+    {
+      "vocab": "What is a StatefulSet in Kubernetes?",
+      "pronunciation": "apiVersion: apps/v1\nkind: StatefulSet\nmetadata:\n  name: mysql\nspec:\n  serviceName: mysql\n  replicas: 3\n  selector:\n    matchLabels:\n      app: mysql\n  volumeClaimTemplates:\n  - metadata:\n      name: data\n    spec:\n      accessModes: [ReadWriteOnce]\n      resources:\n        requests:\n          storage: 10Gi",
+      "meaning": "StatefulSet ใน Kubernetes คืออะไร?",
+      "example": "StatefulSet manages stateful applications with stable identities. Pods get persistent names (mysql-0, mysql-1). Ordered deployment and scaling. Stable network identities and persistent storage. Use for databases, message queues, distributed systems.",
+      "exampleTranslation": "StatefulSet จัดการ stateful applications ที่มี stable identities Pods ได้ชื่อถาวร (mysql-0, mysql-1) มีลำดับการ deployment และ scaling มี stable network identities และ persistent storage ใช้สำหรับ databases, message queues, distributed systems"
+    },
+    {
+      "vocab": "What is a DaemonSet in Kubernetes?",
+      "pronunciation": "apiVersion: apps/v1\nkind: DaemonSet\nmetadata:\n  name: log-collector\nspec:\n  selector:\n    matchLabels:\n      name: log-collector\n  template:\n    spec:\n      containers:\n      - name: fluentd\n        image: fluentd",
+      "meaning": "DaemonSet ใน Kubernetes คืออะไร?",
+      "example": "DaemonSet ensures a pod runs on all (or some) nodes. New nodes automatically get the pod. Use for node-level operations: log collection, monitoring agents, network plugins. Can target specific nodes using nodeSelector or affinity.",
+      "exampleTranslation": "DaemonSet ทำให้ pod รันบนทุก (หรือบาง) nodes Nodes ใหม่จะได้ pod อัตโนมัติ ใช้สำหรับ node-level operations: log collection, monitoring agents, network plugins กำหนด nodes เฉพาะได้โดยใช้ nodeSelector หรือ affinity"
+    },
+    {
+      "vocab": "What is a Job in Kubernetes?",
+      "pronunciation": "apiVersion: batch/v1\nkind: Job\nmetadata:\n  name: backup-job\nspec:\n  completions: 1\n  parallelism: 1\n  template:\n    spec:\n      containers:\n      - name: backup\n        image: backup-tool\n      restartPolicy: Never",
+      "meaning": "Job ใน Kubernetes คืออะไร?",
+      "example": "Job runs pods to completion (not continuously like Deployment). Tracks successful completions. Retries failed pods. Use for batch processing, migrations, backups. Set completions for number of successful runs, parallelism for concurrent pods.",
+      "exampleTranslation": "Job รัน pods จนเสร็จ (ไม่ใช่รันต่อเนื่องเหมือน Deployment) ติดตาม completions ที่สำเร็จ Retry pods ที่ fail ใช้สำหรับ batch processing, migrations, backups ตั้ง completions สำหรับจำนวน runs ที่สำเร็จ, parallelism สำหรับ concurrent pods"
+    },
+    {
+      "vocab": "What is a CronJob in Kubernetes?",
+      "pronunciation": "apiVersion: batch/v1\nkind: CronJob\nmetadata:\n  name: nightly-backup\nspec:\n  schedule: \"0 2 * * *\"  # 2 AM daily\n  jobTemplate:\n    spec:\n      template:\n        spec:\n          containers:\n          - name: backup\n            image: backup-tool\n          restartPolicy: Never",
+      "meaning": "CronJob ใน Kubernetes คืออะไร?",
+      "example": "CronJob creates Jobs on a schedule using cron syntax. For periodic tasks like backups, reports, cleanup. concurrencyPolicy controls overlapping jobs (Allow, Forbid, Replace). successfulJobsHistoryLimit/failedJobsHistoryLimit control job history retention.",
+      "exampleTranslation": "CronJob สร้าง Jobs ตามกำหนดเวลาด้วย cron syntax สำหรับ periodic tasks เช่น backups, reports, cleanup concurrencyPolicy ควบคุม overlapping jobs (Allow, Forbid, Replace) successfulJobsHistoryLimit/failedJobsHistoryLimit ควบคุมการเก็บ job history"
+    },
+    {
+      "vocab": "What is a PersistentVolume (PV) in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: PersistentVolume\nmetadata:\n  name: pv-storage\nspec:\n  capacity:\n    storage: 10Gi\n  accessModes:\n    - ReadWriteOnce\n  persistentVolumeReclaimPolicy: Retain\n  storageClassName: standard\n  hostPath:\n    path: /data",
+      "meaning": "PersistentVolume (PV) ใน Kubernetes คืออะไร?",
+      "example": "PersistentVolume is cluster-level storage resource provisioned by admin. Lifecycle independent of pods. Access modes: ReadWriteOnce, ReadOnlyMany, ReadWriteMany. Reclaim policies: Retain, Delete, Recycle. Backend: cloud disks, NFS, local storage.",
+      "exampleTranslation": "PersistentVolume เป็น cluster-level storage resource ที่ admin provision Lifecycle แยกจาก pods Access modes: ReadWriteOnce, ReadOnlyMany, ReadWriteMany Reclaim policies: Retain, Delete, Recycle Backend: cloud disks, NFS, local storage"
+    },
+    {
+      "vocab": "What is a PersistentVolumeClaim (PVC) in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: my-pvc\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 5Gi\n  storageClassName: standard\n---\nvolumes:\n- name: data\n  persistentVolumeClaim:\n    claimName: my-pvc",
+      "meaning": "PersistentVolumeClaim (PVC) ใน Kubernetes คืออะไร?",
+      "example": "PVC is a request for storage by a user. Binds to matching PV automatically. Abstracts storage details from pods. Dynamic provisioning creates PV automatically when StorageClass is specified. Mount in pod spec using volumes.",
+      "exampleTranslation": "PVC คือ request สำหรับ storage โดย user Bind กับ PV ที่ match อัตโนมัติ Abstract storage details จาก pods Dynamic provisioning สร้าง PV อัตโนมัติเมื่อระบุ StorageClass Mount ใน pod spec โดยใช้ volumes"
+    },
+    {
+      "vocab": "What is a StorageClass in Kubernetes?",
+      "pronunciation": "apiVersion: storage.k8s.io/v1\nkind: StorageClass\nmetadata:\n  name: fast\nprovisioner: kubernetes.io/gce-pd\nparameters:\n  type: pd-ssd\nreclaimPolicy: Delete\nallowVolumeExpansion: true",
+      "meaning": "StorageClass ใน Kubernetes คืออะไร?",
+      "example": "StorageClass defines classes of storage with different performance/cost. Enables dynamic provisioning - PV created automatically for PVC. Parameters are provisioner-specific (SSD vs HDD, replication). allowVolumeExpansion enables resizing.",
+      "exampleTranslation": "StorageClass กำหนด classes ของ storage ที่มี performance/cost ต่างกัน เปิดใช้ dynamic provisioning - PV สร้างอัตโนมัติสำหรับ PVC Parameters ขึ้นกับ provisioner (SSD vs HDD, replication) allowVolumeExpansion เปิดใช้การ resize"
+    },
+    {
+      "vocab": "What are common kubectl commands?",
+      "pronunciation": "kubectl get pods/deployments/services\nkubectl describe pod <name>\nkubectl logs <pod> [-f]\nkubectl exec -it <pod> -- sh\nkubectl apply -f manifest.yaml\nkubectl delete -f manifest.yaml",
+      "meaning": "kubectl commands ที่ใช้บ่อยมีอะไรบ้าง?",
+      "example": "kubectl get lists resources. describe shows detailed info. logs shows container output (-f to follow). exec runs commands in container. apply creates/updates from YAML. delete removes resources. Use -n for namespace, -o yaml/json for output format.",
+      "exampleTranslation": "kubectl get แสดงรายการ resources describe แสดงข้อมูลละเอียด logs แสดง container output (-f เพื่อ follow) exec รัน commands ใน container apply สร้าง/อัปเดตจาก YAML delete ลบ resources ใช้ -n สำหรับ namespace, -o yaml/json สำหรับ output format"
+    },
+    {
+      "vocab": "How do you scale applications in Kubernetes?",
+      "pronunciation": "# Manual scaling\nkubectl scale deployment my-app --replicas=5\n\n# Horizontal Pod Autoscaler\nkubectl autoscale deployment my-app --min=2 --max=10 --cpu-percent=80\n\n# Or in YAML\napiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler",
+      "meaning": "จะ scale applications ใน Kubernetes ได้อย่างไร?",
+      "example": "Manual: kubectl scale or edit replicas in Deployment. HPA (Horizontal Pod Autoscaler) scales based on CPU/memory or custom metrics. VPA (Vertical Pod Autoscaler) adjusts resource requests. Cluster Autoscaler adds/removes nodes.",
+      "exampleTranslation": "Manual: kubectl scale หรือแก้ไข replicas ใน Deployment HPA (Horizontal Pod Autoscaler) scale ตาม CPU/memory หรือ custom metrics VPA (Vertical Pod Autoscaler) ปรับ resource requests Cluster Autoscaler เพิ่ม/ลด nodes"
+    },
+    {
+      "vocab": "How do rolling updates work in Kubernetes?",
+      "pronunciation": "spec:\n  strategy:\n    type: RollingUpdate\n    rollingUpdate:\n      maxSurge: 1\n      maxUnavailable: 0\n\n# Rollback\nkubectl rollout undo deployment/my-app\nkubectl rollout history deployment/my-app",
+      "meaning": "Rolling updates ใน Kubernetes ทำงานอย่างไร?",
+      "example": "Rolling updates gradually replace old pods with new ones. maxSurge: extra pods during update. maxUnavailable: pods that can be unavailable. Zero-downtime deployments. Rollback with kubectl rollout undo. View history with rollout history.",
+      "exampleTranslation": "Rolling updates ค่อยๆ แทนที่ pods เก่าด้วยใหม่ maxSurge: pods เพิ่มระหว่าง update maxUnavailable: pods ที่ unavailable ได้ Zero-downtime deployments Rollback ด้วย kubectl rollout undo ดู history ด้วย rollout history"
+    },
+    {
+      "vocab": "What are Resource Requests and Limits?",
+      "pronunciation": "containers:\n- name: app\n  resources:\n    requests:\n      memory: \"256Mi\"\n      cpu: \"250m\"\n    limits:\n      memory: \"512Mi\"\n      cpu: \"500m\"",
+      "meaning": "Resource Requests และ Limits คืออะไร?",
+      "example": "Requests: minimum resources guaranteed for scheduling. Limits: maximum resources allowed. CPU measured in millicores (1000m = 1 core). Memory in bytes (Mi, Gi). Exceeding memory limit causes OOMKilled. Exceeding CPU limit causes throttling.",
+      "exampleTranslation": "Requests: resources ขั้นต่ำที่รับประกันสำหรับ scheduling Limits: resources สูงสุดที่อนุญาต CPU วัดเป็น millicores (1000m = 1 core) Memory เป็น bytes (Mi, Gi) เกิน memory limit ทำให้ OOMKilled เกิน CPU limit ทำให้ถูก throttle"
+    },
+    {
+      "vocab": "What are Liveness and Readiness Probes?",
+      "pronunciation": "livenessProbe:\n  httpGet:\n    path: /healthz\n    port: 8080\n  initialDelaySeconds: 15\n  periodSeconds: 10\nreadinessProbe:\n  httpGet:\n    path: /ready\n    port: 8080\n  initialDelaySeconds: 5",
+      "meaning": "Liveness และ Readiness Probes คืออะไร?",
+      "example": "Liveness: checks if container should be restarted (deadlock detection). Readiness: checks if container can receive traffic. Startup probe for slow-starting containers. Types: httpGet, tcpSocket, exec command. Configure delay, period, threshold.",
+      "exampleTranslation": "Liveness: ตรวจว่า container ควร restart ไหม (deadlock detection) Readiness: ตรวจว่า container รับ traffic ได้ไหม Startup probe สำหรับ containers ที่ start ช้า Types: httpGet, tcpSocket, exec command ตั้งค่า delay, period, threshold"
+    },
+    {
+      "vocab": "What is a NetworkPolicy in Kubernetes?",
+      "pronunciation": "apiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: api-policy\nspec:\n  podSelector:\n    matchLabels:\n      app: api\n  ingress:\n  - from:\n    - podSelector:\n        matchLabels:\n          app: web\n    ports:\n    - port: 8080",
+      "meaning": "NetworkPolicy ใน Kubernetes คืออะไร?",
+      "example": "NetworkPolicy controls pod-to-pod traffic at IP/port level. Default: all traffic allowed. Define ingress (incoming) and egress (outgoing) rules. Uses label selectors. Requires CNI plugin that supports policies (Calico, Cilium). Namespace-scoped.",
+      "exampleTranslation": "NetworkPolicy ควบคุม pod-to-pod traffic ที่ระดับ IP/port Default: traffic ทั้งหมดอนุญาต กำหนด ingress (incoming) และ egress (outgoing) rules ใช้ label selectors ต้องมี CNI plugin ที่รองรับ policies (Calico, Cilium) Namespace-scoped"
+    },
+    {
+      "vocab": "What is RBAC in Kubernetes?",
+      "pronunciation": "apiVersion: rbac.authorization.k8s.io/v1\nkind: Role\nmetadata:\n  name: pod-reader\nrules:\n- apiGroups: [\"\"]\n  resources: [\"pods\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n---\nkind: RoleBinding\nsubjects:\n- kind: User\n  name: developer",
+      "meaning": "RBAC ใน Kubernetes คืออะไร?",
+      "example": "RBAC (Role-Based Access Control) manages authorization. Role/ClusterRole define permissions (verbs on resources). RoleBinding/ClusterRoleBinding grant roles to subjects (users, groups, service accounts). Role is namespace-scoped, ClusterRole is cluster-wide.",
+      "exampleTranslation": "RBAC (Role-Based Access Control) จัดการ authorization Role/ClusterRole กำหนด permissions (verbs บน resources) RoleBinding/ClusterRoleBinding ให้ roles กับ subjects (users, groups, service accounts) Role เป็น namespace-scoped, ClusterRole เป็น cluster-wide"
+    },
+    {
+      "vocab": "What is a ServiceAccount in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: ServiceAccount\nmetadata:\n  name: my-app-sa\n---\nspec:\n  serviceAccountName: my-app-sa\n  containers:\n  - name: app\n    image: my-app",
+      "meaning": "ServiceAccount ใน Kubernetes คืออะไร?",
+      "example": "ServiceAccount provides identity for pods to access Kubernetes API. Default SA created per namespace. Token mounted at /var/run/secrets/kubernetes.io/serviceaccount. Bind to Roles for pod permissions. Use for in-cluster authentication.",
+      "exampleTranslation": "ServiceAccount ให้ identity สำหรับ pods เข้าถึง Kubernetes API Default SA สร้างต่อ namespace Token mount ที่ /var/run/secrets/kubernetes.io/serviceaccount Bind กับ Roles สำหรับ pod permissions ใช้สำหรับ in-cluster authentication"
+    },
+    {
+      "vocab": "What is Helm in Kubernetes?",
+      "pronunciation": "# Install chart\nhelm install myapp ./mychart\nhelm install myapp bitnami/nginx\n\n# Upgrade\nhelm upgrade myapp ./mychart --set replicas=3\n\n# List releases\nhelm list\nhelm uninstall myapp",
+      "meaning": "Helm ใน Kubernetes คืออะไร?",
+      "example": "Helm is the package manager for Kubernetes. Charts are packages of pre-configured K8s resources. Templates with values for customization. Manages releases (install, upgrade, rollback). Repository for sharing charts. Simplifies complex deployments.",
+      "exampleTranslation": "Helm คือ package manager สำหรับ Kubernetes Charts คือ packages ของ K8s resources ที่ pre-configured Templates ที่มี values สำหรับ customization จัดการ releases (install, upgrade, rollback) Repository สำหรับแชร์ charts ทำให้ deployments ซับซ้อนง่ายขึ้น"
+    },
+    {
+      "vocab": "What is a Helm Chart structure?",
+      "pronunciation": "mychart/\n  Chart.yaml        # Chart metadata\n  values.yaml       # Default values\n  templates/\n    deployment.yaml\n    service.yaml\n    _helpers.tpl    # Template helpers\n  charts/           # Dependencies",
+      "meaning": "โครงสร้าง Helm Chart เป็นอย่างไร?",
+      "example": "Chart.yaml contains metadata (name, version, dependencies). values.yaml has default configuration values. templates/ contains Kubernetes manifest templates with Go templating. _helpers.tpl for reusable template snippets. charts/ for chart dependencies.",
+      "exampleTranslation": "Chart.yaml มี metadata (name, version, dependencies) values.yaml มี default configuration values templates/ มี Kubernetes manifest templates ที่ใช้ Go templating _helpers.tpl สำหรับ reusable template snippets charts/ สำหรับ chart dependencies"
+    },
+    {
+      "vocab": "What is a Kubernetes Node?",
+      "pronunciation": "kubectl get nodes\nkubectl describe node node-1\nkubectl cordon node-1    # Mark unschedulable\nkubectl drain node-1     # Evict pods\nkubectl uncordon node-1  # Mark schedulable",
+      "meaning": "Kubernetes Node คืออะไร?",
+      "example": "Node is a worker machine (VM or physical) running pods. Components: kubelet (agent), container runtime (Docker/containerd), kube-proxy (networking). Master nodes run control plane. Use cordon/drain for maintenance. Node conditions indicate health.",
+      "exampleTranslation": "Node คือ worker machine (VM หรือ physical) ที่รัน pods Components: kubelet (agent), container runtime (Docker/containerd), kube-proxy (networking) Master nodes รัน control plane ใช้ cordon/drain สำหรับ maintenance Node conditions บอกสถานะ health"
+    },
+    {
+      "vocab": "What are Node Affinity and Anti-Affinity?",
+      "pronunciation": "affinity:\n  nodeAffinity:\n    requiredDuringSchedulingIgnoredDuringExecution:\n      nodeSelectorTerms:\n      - matchExpressions:\n        - key: disktype\n          operator: In\n          values:\n          - ssd",
+      "meaning": "Node Affinity และ Anti-Affinity คืออะไร?",
+      "example": "Node affinity attracts pods to specific nodes based on labels. Required: must match. Preferred: try to match. More expressive than nodeSelector. Pod anti-affinity spreads pods across nodes/zones. Use for high availability and resource optimization.",
+      "exampleTranslation": "Node affinity ดึง pods ไปยัง nodes เฉพาะตาม labels Required: ต้อง match Preferred: พยายาม match มี expressiveness มากกว่า nodeSelector Pod anti-affinity กระจาย pods ข้าม nodes/zones ใช้สำหรับ high availability และ resource optimization"
+    },
+    {
+      "vocab": "What are Taints and Tolerations?",
+      "pronunciation": "# Taint a node\nkubectl taint nodes node1 key=value:NoSchedule\n\n# Pod toleration\ntolerations:\n- key: \"key\"\n  operator: \"Equal\"\n  value: \"value\"\n  effect: \"NoSchedule\"",
+      "meaning": "Taints และ Tolerations คืออะไร?",
+      "example": "Taints repel pods from nodes. Tolerations allow pods to schedule on tainted nodes. Effects: NoSchedule (prevent), PreferNoSchedule (avoid), NoExecute (evict existing). Use for dedicated nodes, special hardware, or node problems.",
+      "exampleTranslation": "Taints ผลัก pods ออกจาก nodes Tolerations อนุญาต pods schedule บน tainted nodes Effects: NoSchedule (ป้องกัน), PreferNoSchedule (หลีกเลี่ยง), NoExecute (evict ที่มีอยู่) ใช้สำหรับ dedicated nodes, special hardware, หรือ node problems"
+    },
+    {
+      "vocab": "What is kustomize in Kubernetes?",
+      "pronunciation": "# kustomization.yaml\napiVersion: kustomize.config.k8s.io/v1beta1\nkind: Kustomization\nresources:\n- deployment.yaml\n- service.yaml\nnamePrefix: prod-\nimages:\n- name: my-app\n  newTag: v2.0.0\n\nkubectl apply -k ./overlays/production",
+      "meaning": "Kustomize ใน Kubernetes คืออะไร?",
+      "example": "Kustomize is template-free customization of Kubernetes manifests. Built into kubectl (kubectl apply -k). Base + overlays pattern for environments. Patches, name prefixes, labels without editing originals. Alternative to Helm for simpler needs.",
+      "exampleTranslation": "Kustomize คือ template-free customization ของ Kubernetes manifests Built into kubectl (kubectl apply -k) Base + overlays pattern สำหรับ environments Patches, name prefixes, labels โดยไม่แก้ originals เป็นทางเลือกแทน Helm สำหรับความต้องการง่ายๆ"
+    },
+    {
+      "vocab": "What is an Operator in Kubernetes?",
+      "pronunciation": "# Custom Resource\napiVersion: databases.example.com/v1\nkind: PostgresCluster\nmetadata:\n  name: my-db\nspec:\n  replicas: 3\n  version: \"14\"",
+      "meaning": "Operator ใน Kubernetes คืออะไร?",
+      "example": "Operator extends Kubernetes with custom controllers. Manages complex stateful applications automatically. Uses Custom Resource Definitions (CRDs) for new resource types. Encapsulates operational knowledge. Examples: database operators, cert-manager.",
+      "exampleTranslation": "Operator ขยาย Kubernetes ด้วย custom controllers จัดการ complex stateful applications อัตโนมัติ ใช้ Custom Resource Definitions (CRDs) สำหรับ resource types ใหม่ Encapsulate operational knowledge ตัวอย่าง: database operators, cert-manager"
+    },
+    {
+      "vocab": "What is a Custom Resource Definition (CRD)?",
+      "pronunciation": "apiVersion: apiextensions.k8s.io/v1\nkind: CustomResourceDefinition\nmetadata:\n  name: databases.example.com\nspec:\n  group: example.com\n  names:\n    kind: Database\n    plural: databases\n  scope: Namespaced\n  versions:\n  - name: v1\n    served: true\n    storage: true",
+      "meaning": "Custom Resource Definition (CRD) คืออะไร?",
+      "example": "CRD extends Kubernetes API with custom resource types. Define schema for new resources. Combined with controllers to create operators. API versioning and validation support. kubectl works with custom resources like built-in ones.",
+      "exampleTranslation": "CRD ขยาย Kubernetes API ด้วย custom resource types กำหนด schema สำหรับ resources ใหม่ รวมกับ controllers เพื่อสร้าง operators รองรับ API versioning และ validation kubectl ทำงานกับ custom resources เหมือน built-in ones"
+    },
+    {
+      "vocab": "What is a Pod Disruption Budget (PDB)?",
+      "pronunciation": "apiVersion: policy/v1\nkind: PodDisruptionBudget\nmetadata:\n  name: my-pdb\nspec:\n  minAvailable: 2\n  # or maxUnavailable: 1\n  selector:\n    matchLabels:\n      app: my-app",
+      "meaning": "Pod Disruption Budget (PDB) คืออะไร?",
+      "example": "PDB limits voluntary disruptions during maintenance. minAvailable: minimum pods that must be available. maxUnavailable: maximum pods that can be unavailable. Protects against: node drain, cluster upgrades, voluntary evictions. Doesn't protect against crashes.",
+      "exampleTranslation": "PDB จำกัด voluntary disruptions ระหว่าง maintenance minAvailable: pods ขั้นต่ำที่ต้อง available maxUnavailable: pods สูงสุดที่ unavailable ได้ ป้องกัน: node drain, cluster upgrades, voluntary evictions ไม่ป้องกัน crashes"
+    },
+    {
+      "vocab": "What is the Kubernetes control plane?",
+      "pronunciation": "# Control plane components\nkube-apiserver       # API endpoint\netcd                 # Cluster state storage\nkube-scheduler       # Pod placement\nkube-controller-manager  # Controllers\ncloud-controller-manager # Cloud integrations",
+      "meaning": "Kubernetes control plane คืออะไร?",
+      "example": "Control plane manages cluster state and decisions. API server: all communication hub. etcd: distributed key-value store for cluster state. Scheduler: assigns pods to nodes. Controller Manager: runs controllers (Deployment, ReplicaSet, etc.).",
+      "exampleTranslation": "Control plane จัดการ cluster state และการตัดสินใจ API server: hub การสื่อสารทั้งหมด etcd: distributed key-value store สำหรับ cluster state Scheduler: assign pods ไปยัง nodes Controller Manager: รัน controllers (Deployment, ReplicaSet ฯลฯ)"
+    },
+    {
+      "vocab": "How do you debug pods in Kubernetes?",
+      "pronunciation": "kubectl logs pod-name [-c container]\nkubectl logs pod-name --previous\nkubectl describe pod pod-name\nkubectl exec -it pod-name -- sh\nkubectl get events --sort-by='.lastTimestamp'",
+      "meaning": "จะ debug pods ใน Kubernetes ได้อย่างไร?",
+      "example": "kubectl logs for container output (--previous for crashed container). describe for events and status. exec for interactive shell. get events for cluster events. Check pod status: Pending (scheduling), CrashLoopBackOff (startup failure), ImagePullBackOff (image issue).",
+      "exampleTranslation": "kubectl logs สำหรับ container output (--previous สำหรับ crashed container) describe สำหรับ events และ status exec สำหรับ interactive shell get events สำหรับ cluster events ดู pod status: Pending (scheduling), CrashLoopBackOff (startup failure), ImagePullBackOff (image issue)"
+    },
+    {
+      "vocab": "What is an Init Container?",
+      "pronunciation": "spec:\n  initContainers:\n  - name: init-db\n    image: busybox\n    command: ['sh', '-c', 'until nc -z db 5432; do sleep 2; done']\n  containers:\n  - name: app\n    image: my-app",
+      "meaning": "Init Container คืออะไร?",
+      "example": "Init containers run before app containers start. Must complete successfully before app starts. Use for: waiting for dependencies, setup tasks, downloading configs. Run sequentially if multiple. Useful for separation of concerns.",
+      "exampleTranslation": "Init containers รันก่อน app containers start ต้องเสร็จสำเร็จก่อน app จะ start ใช้สำหรับ: รอ dependencies, setup tasks, download configs รันตามลำดับถ้ามีหลายตัว มีประโยชน์สำหรับ separation of concerns"
+    },
+    {
+      "vocab": "What is a Sidecar container pattern?",
+      "pronunciation": "spec:\n  containers:\n  - name: app\n    image: my-app\n  - name: log-shipper\n    image: fluentd\n    volumeMounts:\n    - name: logs\n      mountPath: /var/log/app\n  volumes:\n  - name: logs\n    emptyDir: {}",
+      "meaning": "Sidecar container pattern คืออะไร?",
+      "example": "Sidecar runs alongside main container in same pod. Shares network and storage with main container. Common uses: logging, monitoring, proxies, security. Examples: Envoy proxy for service mesh, log collectors. Enhances functionality without modifying main app.",
+      "exampleTranslation": "Sidecar รันควบคู่กับ main container ใน pod เดียวกัน แชร์ network และ storage กับ main container ใช้บ่อยสำหรับ: logging, monitoring, proxies, security ตัวอย่าง: Envoy proxy สำหรับ service mesh, log collectors เพิ่ม functionality โดยไม่แก้ไข main app"
+    },
+    {
+      "vocab": "What is a Service Mesh?",
+      "pronunciation": "# Istio example - traffic management\napiVersion: networking.istio.io/v1alpha3\nkind: VirtualService\nspec:\n  http:\n  - route:\n    - destination:\n        host: reviews\n        subset: v2\n      weight: 90",
+      "meaning": "Service Mesh คืออะไร?",
+      "example": "Service mesh manages service-to-service communication. Features: traffic management, security (mTLS), observability. Sidecar proxies handle networking. Popular: Istio, Linkerd, Cilium. Adds complexity but powerful for microservices. Enables canary deployments, circuit breaking.",
+      "exampleTranslation": "Service mesh จัดการ service-to-service communication Features: traffic management, security (mTLS), observability Sidecar proxies จัดการ networking ที่นิยม: Istio, Linkerd, Cilium เพิ่มความซับซ้อนแต่ทรงพลังสำหรับ microservices เปิดใช้ canary deployments, circuit breaking"
+    },
+    {
+      "vocab": "What is Resource Quota in Kubernetes?",
+      "pronunciation": "apiVersion: v1\nkind: ResourceQuota\nmetadata:\n  name: compute-quota\n  namespace: development\nspec:\n  hard:\n    requests.cpu: \"10\"\n    requests.memory: 20Gi\n    limits.cpu: \"20\"\n    limits.memory: 40Gi\n    pods: \"50\"",
+      "meaning": "Resource Quota ใน Kubernetes คืออะไร?",
+      "example": "ResourceQuota limits aggregate resource consumption per namespace. Set limits on CPU, memory, storage, object counts. Enforces resource budgets for teams/projects. LimitRange sets per-pod defaults and limits. Essential for multi-tenant clusters.",
+      "exampleTranslation": "ResourceQuota จำกัด aggregate resource consumption ต่อ namespace ตั้ง limits บน CPU, memory, storage, object counts บังคับใช้ resource budgets สำหรับ teams/projects LimitRange ตั้ง per-pod defaults และ limits จำเป็นสำหรับ multi-tenant clusters"
+    }
+  ]
+}
