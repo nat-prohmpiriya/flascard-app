@@ -368,7 +368,7 @@ export async function PUT(request: Request) {
   }
 }
 
-// DELETE - Delete all decks and cards for a user
+// DELETE - Delete a single deck or all decks for a user
 export async function DELETE(request: Request) {
   if (!validateApiKey(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -376,7 +376,7 @@ export async function DELETE(request: Request) {
 
   try {
     const body = await request.json();
-    const { userId } = body;
+    const { userId, deckId } = body;
 
     if (!userId) {
       return NextResponse.json(
@@ -395,21 +395,66 @@ export async function DELETE(request: Request) {
     }
 
     const db = getAdminDb();
+    const batchSize = 400;
+    let deletedDecks = 0;
+    let deletedCards = 0;
 
-    // Get all decks for user
+    // If deckId provided, delete only that deck
+    if (deckId) {
+      // Verify deck exists and belongs to user
+      const deckDoc = await db.collection('decks').doc(deckId).get();
+      if (!deckDoc.exists) {
+        return NextResponse.json(
+          { error: `Deck not found: ${deckId}` },
+          { status: 404 }
+        );
+      }
+      if (deckDoc.data()?.userId !== userId) {
+        return NextResponse.json(
+          { error: 'Deck does not belong to this user' },
+          { status: 403 }
+        );
+      }
+
+      // Get cards for this deck
+      const cardsSnapshot = await db.collection('cards')
+        .where('deckId', '==', deckId)
+        .get();
+
+      // Delete cards in batches
+      const cardDocs = cardsSnapshot.docs;
+      for (let i = 0; i < cardDocs.length; i += batchSize) {
+        const batch = db.batch();
+        const chunk = cardDocs.slice(i, i + batchSize);
+        chunk.forEach((doc) => batch.delete(doc.ref));
+        await batch.commit();
+        deletedCards += chunk.length;
+      }
+
+      // Delete the deck
+      await db.collection('decks').doc(deckId).delete();
+      deletedDecks = 1;
+
+      return NextResponse.json({
+        success: true,
+        message: `Deleted deck "${deckDoc.data()?.name}" with ${deletedCards} cards`,
+        deleted: {
+          decks: deletedDecks,
+          cards: deletedCards,
+          deckId,
+          deckName: deckDoc.data()?.name,
+        },
+      });
+    }
+
+    // No deckId - delete all decks and cards for user
     const decksSnapshot = await db.collection('decks')
       .where('userId', '==', userId)
       .get();
 
-    // Get all cards for user
     const cardsSnapshot = await db.collection('cards')
       .where('userId', '==', userId)
       .get();
-
-    // Delete in batches (Firestore batch limit is 500)
-    const batchSize = 400;
-    let deletedDecks = 0;
-    let deletedCards = 0;
 
     // Delete cards
     const cardDocs = cardsSnapshot.docs;
