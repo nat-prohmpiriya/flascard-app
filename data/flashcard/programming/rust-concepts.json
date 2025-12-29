@@ -5,7 +5,11 @@
     "name": "Rust Concepts",
     "description": "Essential Rust programming concepts including ownership, borrowing, lifetimes, traits, error handling, and concurrency",
     "category": "Programming",
-    "tags": ["rust", "systems-programming", "memory-safety"],
+    "tags": [
+      "rust",
+      "systems-programming",
+      "memory-safety"
+    ],
     "sourceLang": "en",
     "targetLang": "th"
   },
@@ -75,42 +79,42 @@
     },
     {
       "vocab": "How does pattern matching work with match?",
-      "pronunciation": "fn value_in_cents(coin: Coin) -> u8 {\n    match coin {\n        Coin::Penny => 1,\n        Coin::Nickel => 5,\n        Coin::Dime => 10,\n        Coin::Quarter(state) => {\n            println!(\"State: {:?}\", state);\n            25\n        }\n    }\n}",
+      "pronunciation": "fn value_in_cents(coin: Coin) -> u8 {\n    match coin {\n        Coin::Penny => 1,",
       "meaning": "Pattern matching ด้วย match ทำงานอย่างไร?",
       "example": "Match compares a value against patterns and executes code for the matching arm. Must be exhaustive (cover all cases). Use _ as catch-all pattern. Can destructure enums, structs, and tuples.",
       "exampleTranslation": "Match เปรียบเทียบค่ากับ patterns และ execute code ของ arm ที่ match ต้อง exhaustive (ครอบคลุมทุก cases) ใช้ _ เป็น catch-all pattern สามารถ destructure enums, structs, และ tuples ได้"
     },
     {
       "vocab": "What is the Option type in Rust?",
-      "pronunciation": "fn divide(a: f64, b: f64) -> Option<f64> {\n    if b == 0.0 {\n        None\n    } else {\n        Some(a / b)\n    }\n}\n\nmatch divide(10.0, 2.0) {\n    Some(result) => println!(\"Result: {}\", result),\n    None => println!(\"Cannot divide by zero\"),\n}",
+      "pronunciation": "fn divide(a: f64, b: f64) -> Option<f64> {\n    if b == 0.0 {\n        None",
       "meaning": "Option type ใน Rust คืออะไร?",
       "example": "Option<T> represents an optional value: Some(T) contains a value, None represents absence. Rust has no null - Option forces explicit handling of missing values. Use unwrap(), expect(), or pattern matching to extract values.",
       "exampleTranslation": "Option<T> แทนค่าที่อาจมีหรือไม่มี: Some(T) มีค่า, None แทนไม่มีค่า Rust ไม่มี null - Option บังคับให้จัดการค่าที่หายไปอย่างชัดเจน ใช้ unwrap(), expect(), หรือ pattern matching เพื่อดึงค่า"
     },
     {
       "vocab": "What is the Result type in Rust?",
-      "pronunciation": "use std::fs::File;\n\nfn read_file(path: &str) -> Result<String, io::Error> {\n    let file = File::open(path)?;\n    let mut contents = String::new();\n    file.read_to_string(&mut contents)?;\n    Ok(contents)\n}",
+      "pronunciation": "use std::fs::File;\nfn read_file(path: &str) -> Result<String, io::Error> {\n    let file = File::open(path)?;",
       "meaning": "Result type ใน Rust คืออะไร?",
       "example": "Result<T, E> represents success (Ok(T)) or failure (Err(E)). Used for operations that can fail. Handle with match, unwrap(), expect(), or the ? operator which propagates errors. Enables recoverable error handling.",
       "exampleTranslation": "Result<T, E> แทนความสำเร็จ (Ok(T)) หรือล้มเหลว (Err(E)) ใช้สำหรับ operations ที่อาจ fail จัดการด้วย match, unwrap(), expect(), หรือ ? operator ที่ส่งต่อ errors ทำให้จัดการ recoverable errors ได้"
     },
     {
       "vocab": "What is the ? operator in Rust?",
-      "pronunciation": "fn read_username_from_file() -> Result<String, io::Error> {\n    let mut file = File::open(\"hello.txt\")?;\n    let mut username = String::new();\n    file.read_to_string(&mut username)?;\n    Ok(username)\n}",
+      "pronunciation": "fn read_username_from_file() -> Result<String, io::Error> {\n    let mut file = File::open(\"hello.txt\")?;\n    let mut username = String::new();",
       "meaning": "? operator ใน Rust คืออะไร?",
       "example": "The ? operator unwraps Ok values or returns Err early from the function. It's shorthand for match that propagates errors. Can only be used in functions returning Result or Option. Enables concise error handling.",
       "exampleTranslation": "? operator unwrap ค่า Ok หรือ return Err ออกจาก function ทันที เป็น shorthand ของ match ที่ส่งต่อ errors ใช้ได้เฉพาะใน functions ที่ return Result หรือ Option ทำให้เขียน error handling กระชับ"
     },
     {
       "vocab": "How do you define and implement traits?",
-      "pronunciation": "trait Summary {\n    fn summarize(&self) -> String;\n    \n    fn default_summary(&self) -> String {\n        String::from(\"Read more...\")\n    }\n}\n\nimpl Summary for Article {\n    fn summarize(&self) -> String {\n        format!(\"{}: {}\", self.author, self.headline)\n    }\n}",
+      "pronunciation": "trait Summary {\n    fn summarize(&self) -> String;\n    fn default_summary(&self) -> String {",
       "meaning": "จะสร้างและ implement traits ได้อย่างไร?",
       "example": "Traits define shared behavior (like interfaces). Use 'trait' keyword with method signatures. Implement with 'impl TraitName for Type'. Can have default implementations. Types can implement multiple traits.",
       "exampleTranslation": "Traits กำหนด shared behavior (เหมือน interfaces) ใช้ keyword 'trait' กับ method signatures Implement ด้วย 'impl TraitName for Type' มี default implementations ได้ Types implement หลาย traits ได้"
     },
     {
       "vocab": "What are trait bounds in Rust?",
-      "pronunciation": "// Using trait bound syntax\nfn notify<T: Summary>(item: &T) {\n    println!(\"News: {}\", item.summarize());\n}\n\n// Using where clause\nfn notify<T, U>(t: &T, u: &U)\nwhere\n    T: Summary + Clone,\n    U: Clone + Debug,\n{ }",
+      "pronunciation": "// Using trait bound syntax\nfn notify<T: Summary>(item: &T) {\n    println!(\"News: {}\", item.summarize());",
       "meaning": "Trait bounds ใน Rust คืออะไร?",
       "example": "Trait bounds constrain generic types to types implementing specific traits. Use T: TraitName syntax or where clause for complex bounds. Use + for multiple traits. Enables compile-time polymorphism.",
       "exampleTranslation": "Trait bounds จำกัด generic types ให้เป็น types ที่ implement traits ที่กำหนด ใช้ syntax T: TraitName หรือ where clause สำหรับ bounds ซับซ้อน ใช้ + สำหรับหลาย traits ทำให้เกิด compile-time polymorphism"
@@ -131,7 +135,7 @@
     },
     {
       "vocab": "What is the HashMap type in Rust?",
-      "pronunciation": "use std::collections::HashMap;\n\nlet mut scores = HashMap::new();\nscores.insert(String::from(\"Blue\"), 10);\nscores.insert(String::from(\"Red\"), 50);\n\nif let Some(score) = scores.get(\"Blue\") {\n    println!(\"Score: {}\", score);\n}",
+      "pronunciation": "use std::collections::HashMap;\nlet mut scores = HashMap::new();\nscores.insert(String::from(\"Blue\"), 10);",
       "meaning": "HashMap type ใน Rust คืออะไร?",
       "example": "HashMap<K, V> stores key-value pairs with O(1) lookup. Keys must implement Eq and Hash traits. Use insert() to add, get() to retrieve. Entry API for conditional insert/update. Not in prelude - must import.",
       "exampleTranslation": "HashMap<K, V> เก็บ key-value pairs มี O(1) lookup Keys ต้อง implement Eq และ Hash traits ใช้ insert() เพิ่ม, get() ดึงค่า Entry API สำหรับ insert/update แบบมีเงื่อนไข ต้อง import เพราะไม่อยู่ใน prelude"
@@ -145,7 +149,7 @@
     },
     {
       "vocab": "What are closures in Rust?",
-      "pronunciation": "let add_one = |x| x + 1;\n\nlet expensive_closure = |num: u32| -> u32 {\n    println!(\"calculating...\");\n    thread::sleep(Duration::from_secs(2));\n    num\n};\n\n// Closures capture environment\nlet x = 4;\nlet equal_to_x = |z| z == x;",
+      "pronunciation": "let add_one = |x| x + 1;\nlet expensive_closure = |num: u32| -> u32 {\n    println!(\"calculating...\");",
       "meaning": "Closures ใน Rust คืออะไร?",
       "example": "Closures are anonymous functions that capture their environment. Define with |params| expression syntax. Type annotations optional - inferred from usage. Can capture by reference, mutable reference, or ownership (move keyword).",
       "exampleTranslation": "Closures คือ anonymous functions ที่ capture environment ของมัน กำหนดด้วย syntax |params| expression Type annotations เป็น optional - infer จากการใช้งาน Capture ด้วย reference, mutable reference, หรือ ownership (move keyword)"
@@ -180,28 +184,28 @@
     },
     {
       "vocab": "What are common Cargo commands?",
-      "pronunciation": "cargo new project_name   # Create new project\ncargo build              # Build project\ncargo run                # Build and run\ncargo test               # Run tests\ncargo check              # Check without building\ncargo doc --open         # Generate docs",
+      "pronunciation": "cargo new project_name   # Create new project\ncargo build              # Build project\ncargo run                # Build and run",
       "meaning": "Cargo commands ที่ใช้บ่อยมีอะไรบ้าง?",
       "example": "cargo new creates project. cargo build compiles (--release for optimized). cargo run builds and executes. cargo test runs tests. cargo check validates without full compile (fast). cargo doc generates documentation. cargo fmt formats code.",
       "exampleTranslation": "cargo new สร้าง project cargo build compile (--release สำหรับ optimized) cargo run build และ execute cargo test รัน tests cargo check validate โดยไม่ compile เต็ม (เร็ว) cargo doc สร้าง documentation cargo fmt format code"
     },
     {
       "vocab": "How do you write tests in Rust?",
-      "pronunciation": "#[cfg(test)]\nmod tests {\n    use super::*;\n    \n    #[test]\n    fn it_works() {\n        assert_eq!(2 + 2, 4);\n    }\n    \n    #[test]\n    #[should_panic(expected = \"error\")]\n    fn test_panic() {\n        panic!(\"error\");\n    }\n}",
+      "pronunciation": "#[cfg(test)]\nmod tests {\n    use super::*;",
       "meaning": "จะเขียน tests ใน Rust ได้อย่างไร?",
       "example": "Use #[test] attribute on functions. Assert with assert!, assert_eq!, assert_ne!. #[should_panic] tests panics. #[ignore] skips tests. Unit tests in same file with #[cfg(test)]. Integration tests in tests/ directory.",
       "exampleTranslation": "ใช้ #[test] attribute บน functions Assert ด้วย assert!, assert_eq!, assert_ne! #[should_panic] test panics #[ignore] ข้าม tests Unit tests อยู่ในไฟล์เดียวกับ #[cfg(test)] Integration tests อยู่ใน tests/ directory"
     },
     {
       "vocab": "What is the difference between panic! and Result?",
-      "pronunciation": "// Unrecoverable - program crashes\npanic!(\"crash and burn\");\n\n// Recoverable - caller handles\nfn read_file() -> Result<String, io::Error> {\n    Err(io::Error::new(io::ErrorKind::NotFound, \"not found\"))\n}",
+      "pronunciation": "// Unrecoverable - program crashes\npanic!(\"crash and burn\");\n// Recoverable - caller handles",
       "meaning": "ความแตกต่างระหว่าง panic! และ Result คืออะไร?",
       "example": "panic! is for unrecoverable errors - program terminates (unwinds stack or aborts). Result<T, E> is for recoverable errors - caller decides how to handle. Use panic! for bugs/impossible states. Use Result for expected failures.",
       "exampleTranslation": "panic! สำหรับ unrecoverable errors - โปรแกรมหยุด (unwind stack หรือ abort) Result<T, E> สำหรับ recoverable errors - caller ตัดสินใจจัดการ ใช้ panic! สำหรับ bugs/impossible states ใช้ Result สำหรับ failures ที่คาดไว้"
     },
     {
       "vocab": "How do you create custom error types?",
-      "pronunciation": "#[derive(Debug)]\nenum MyError {\n    IoError(io::Error),\n    ParseError(String),\n}\n\nimpl std::error::Error for MyError {}\n\nimpl fmt::Display for MyError {\n    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {\n        match self {\n            MyError::IoError(e) => write!(f, \"IO: {}\", e),\n            MyError::ParseError(s) => write!(f, \"Parse: {}\", s),\n        }\n    }\n}",
+      "pronunciation": "#[derive(Debug)]\nenum MyError {\n    IoError(io::Error),",
       "meaning": "จะสร้าง custom error types ได้อย่างไร?",
       "example": "Create enum with error variants. Implement std::error::Error trait (requires Debug + Display). Use From trait for automatic conversion. Libraries like thiserror simplify this. anyhow for application-level error handling.",
       "exampleTranslation": "สร้าง enum กับ error variants Implement std::error::Error trait (ต้องมี Debug + Display) ใช้ From trait สำหรับ automatic conversion Libraries เช่น thiserror ช่วยให้ง่ายขึ้น ใช้ anyhow สำหรับ error handling ระดับ application"
@@ -236,7 +240,7 @@
     },
     {
       "vocab": "How do you share data between threads?",
-      "pronunciation": "use std::sync::{Arc, Mutex};\n\nlet counter = Arc::new(Mutex::new(0));\nlet mut handles = vec![];\n\nfor _ in 0..10 {\n    let counter = Arc::clone(&counter);\n    let handle = thread::spawn(move || {\n        let mut num = counter.lock().unwrap();\n        *num += 1;\n    });\n    handles.push(handle);\n}",
+      "pronunciation": "use std::sync::{Arc, Mutex};\nlet counter = Arc::new(Mutex::new(0));\nlet mut handles = vec![];",
       "meaning": "จะ share data ระหว่าง threads ได้อย่างไร?",
       "example": "Use Arc<T> (Atomic Reference Counting) for shared ownership across threads. Combine with Mutex<T> for mutual exclusion. lock() returns MutexGuard for safe access. Deadlocks are possible - be careful with lock ordering.",
       "exampleTranslation": "ใช้ Arc<T> (Atomic Reference Counting) สำหรับ shared ownership ข้าม threads รวมกับ Mutex<T> สำหรับ mutual exclusion lock() return MutexGuard สำหรับ safe access Deadlocks เป็นไปได้ - ระวังลำดับการ lock"
@@ -250,21 +254,21 @@
     },
     {
       "vocab": "What is async/await in Rust?",
-      "pronunciation": "async fn fetch_data() -> Result<String, Error> {\n    let response = reqwest::get(\"https://api.com\")\n        .await?\n        .text()\n        .await?;\n    Ok(response)\n}\n\n#[tokio::main]\nasync fn main() {\n    let data = fetch_data().await.unwrap();\n}",
+      "pronunciation": "async fn fetch_data() -> Result<String, Error> {\n    let response = reqwest::get(\"https://api.com\")\n        .await?",
       "meaning": "async/await ใน Rust คืออะไร?",
       "example": "async fn returns a Future that must be awaited or spawned. .await suspends until future completes. Requires async runtime (tokio, async-std). Enables efficient I/O-bound concurrency without blocking threads.",
       "exampleTranslation": "async fn return Future ที่ต้อง await หรือ spawn .await หยุดจนกว่า future จะเสร็จ ต้องใช้ async runtime (tokio, async-std) ทำให้ I/O-bound concurrency มีประสิทธิภาพโดยไม่ block threads"
     },
     {
       "vocab": "What is the Send and Sync trait?",
-      "pronunciation": "// Send: safe to transfer between threads\n// Sync: safe to share references between threads\n\n// Most types are Send + Sync automatically\n// Rc<T> is not Send (use Arc<T>)\n// RefCell<T> is not Sync (use Mutex<T>)",
+      "pronunciation": "// Send: safe to transfer between threads\n// Sync: safe to share references between threads\n// Most types are Send + Sync automatically",
       "meaning": "Send และ Sync trait คืออะไร?",
       "example": "Send means ownership can be transferred between threads. Sync means references can be shared between threads. Most types are automatically Send+Sync. Compiler enforces these for thread safety. Manually implement only with unsafe code.",
       "exampleTranslation": "Send หมายถึง ownership โอนระหว่าง threads ได้ Sync หมายถึง references แชร์ระหว่าง threads ได้ Types ส่วนใหญ่เป็น Send+Sync อัตโนมัติ Compiler บังคับใช้เพื่อ thread safety Implement เองได้แค่ด้วย unsafe code"
     },
     {
       "vocab": "What are macros in Rust?",
-      "pronunciation": "// Declarative macro (macro_rules!)\nmacro_rules! vec {\n    ( $( $x:expr ),* ) => {\n        {\n            let mut temp_vec = Vec::new();\n            $( temp_vec.push($x); )*\n            temp_vec\n        }\n    };\n}\n\nlet v = vec![1, 2, 3];",
+      "pronunciation": "// Declarative macro (macro_rules!)\nmacro_rules! vec {\n    ( $( $x:expr ),* ) => {",
       "meaning": "Macros ใน Rust คืออะไร?",
       "example": "Macros are metaprogramming - code that writes code. Declarative macros (macro_rules!) match patterns and expand. Procedural macros modify Rust code: derive macros (#[derive]), attribute macros, function-like macros. Execute at compile time.",
       "exampleTranslation": "Macros คือ metaprogramming - code ที่เขียน code Declarative macros (macro_rules!) match patterns และ expand Procedural macros แก้ไข Rust code: derive macros (#[derive]), attribute macros, function-like macros ทำงานตอน compile time"
@@ -285,7 +289,7 @@
     },
     {
       "vocab": "What is pattern matching with if let?",
-      "pronunciation": "let config_max = Some(3u8);\n\n// Instead of verbose match\nif let Some(max) = config_max {\n    println!(\"Maximum is {}\", max);\n}\n\n// With else\nif let Some(x) = option {\n    println!(\"Got: {}\", x);\n} else {\n    println!(\"Got nothing\");\n}",
+      "pronunciation": "let config_max = Some(3u8);\n// Instead of verbose match\nif let Some(max) = config_max {",
       "meaning": "Pattern matching ด้วย if let คืออะไร?",
       "example": "if let is syntax sugar for match with one pattern. Less boilerplate when you only care about one case. Can include else for other cases. Also while let for loops that continue while pattern matches.",
       "exampleTranslation": "if let เป็น syntax sugar ของ match ที่มี pattern เดียว ลด boilerplate เมื่อสนใจแค่ case เดียว ใช้ else สำหรับ cases อื่นได้ มี while let สำหรับ loops ที่ทำต่อเมื่อ pattern match"
@@ -299,21 +303,21 @@
     },
     {
       "vocab": "What is the Copy trait vs Clone trait?",
-      "pronunciation": "// Copy: implicit, stack-only, bitwise copy\n#[derive(Copy, Clone)]\nstruct Point { x: i32, y: i32 }\n\nlet p1 = Point { x: 1, y: 2 };\nlet p2 = p1; // p1 still valid!\n\n// Clone: explicit, can be expensive\nlet s1 = String::from(\"hello\");\nlet s2 = s1.clone();",
+      "pronunciation": "// Copy: implicit, stack-only, bitwise copy\n#[derive(Copy, Clone)]\nstruct Point { x: i32, y: i32 }",
       "meaning": "ความแตกต่างระหว่าง Copy trait และ Clone trait คืออะไร?",
       "example": "Copy is implicit stack duplication (integers, bool, tuples of Copy types). Clone is explicit via .clone() method (can be expensive). Copy types don't move - original remains valid. Types with heap data can't implement Copy.",
       "exampleTranslation": "Copy เป็น implicit stack duplication (integers, bool, tuples ของ Copy types) Clone เป็น explicit ผ่าน .clone() method (อาจแพง) Copy types ไม่ move - original ยังใช้ได้ Types ที่มี heap data ไม่สามารถ implement Copy"
     },
     {
       "vocab": "What is the Drop trait?",
-      "pronunciation": "struct CustomSmartPointer {\n    data: String,\n}\n\nimpl Drop for CustomSmartPointer {\n    fn drop(&mut self) {\n        println!(\"Dropping: {}\", self.data);\n    }\n}\n\n// drop() called automatically when out of scope\n// Or manually with std::mem::drop(value)",
+      "pronunciation": "struct CustomSmartPointer {\n    data: String,\n}",
       "meaning": "Drop trait คืออะไร?",
       "example": "Drop trait defines cleanup when value goes out of scope. Implement drop(&mut self) method. Called automatically - Rust's RAII pattern. Can't call drop directly - use std::mem::drop() for early cleanup. Used for resource management.",
       "exampleTranslation": "Drop trait กำหนด cleanup เมื่อค่าออกนอก scope Implement drop(&mut self) method ถูกเรียกอัตโนมัติ - เป็น RAII pattern ของ Rust เรียก drop โดยตรงไม่ได้ - ใช้ std::mem::drop() สำหรับ early cleanup ใช้สำหรับ resource management"
     },
     {
       "vocab": "What is the Deref trait?",
-      "pronunciation": "use std::ops::Deref;\n\nstruct MyBox<T>(T);\n\nimpl<T> Deref for MyBox<T> {\n    type Target = T;\n    \n    fn deref(&self) -> &Self::Target {\n        &self.0\n    }\n}\n\nlet x = MyBox(5);\nassert_eq!(5, *x); // *(x.deref())",
+      "pronunciation": "use std::ops::Deref;\nstruct MyBox<T>(T);\nimpl<T> Deref for MyBox<T> {",
       "meaning": "Deref trait คืออะไร?",
       "example": "Deref trait customizes dereference operator (*). Enables deref coercion - automatic conversion through references. Box, Rc, Arc implement it. &String coerces to &str because String implements Deref<Target=str>.",
       "exampleTranslation": "Deref trait ปรับแต่ง dereference operator (*) ทำให้เกิด deref coercion - แปลงอัตโนมัติผ่าน references Box, Rc, Arc implement มัน &String แปลงเป็น &str ได้เพราะ String implement Deref<Target=str>"
@@ -327,7 +331,7 @@
     },
     {
       "vocab": "What is serde for serialization?",
-      "pronunciation": "use serde::{Serialize, Deserialize};\n\n#[derive(Serialize, Deserialize)]\nstruct User {\n    name: String,\n    age: u32,\n}\n\nlet user = User { name: \"Alice\".into(), age: 30 };\nlet json = serde_json::to_string(&user)?;\nlet user2: User = serde_json::from_str(&json)?;",
+      "pronunciation": "use serde::{Serialize, Deserialize};\n#[derive(Serialize, Deserialize)]\nstruct User {",
       "meaning": "Serde สำหรับ serialization คืออะไร?",
       "example": "Serde is Rust's serialization/deserialization framework. Derive Serialize/Deserialize traits. Format-agnostic - works with JSON (serde_json), TOML, YAML, etc. Attributes customize field names, skip fields, default values.",
       "exampleTranslation": "Serde คือ serialization/deserialization framework ของ Rust Derive Serialize/Deserialize traits รองรับหลาย format - ใช้กับ JSON (serde_json), TOML, YAML ฯลฯ Attributes ปรับแต่งชื่อ fields, ข้าม fields, default values"

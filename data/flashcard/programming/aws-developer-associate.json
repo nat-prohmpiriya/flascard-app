@@ -1,0 +1,468 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "AWS Developer Associate",
+    "description": "AWS Developer Associate (DVA-C02) certification concepts focusing on Lambda, API Gateway, DynamoDB, SDK, CI/CD, and serverless development",
+    "category": "Cloud",
+    "tags": [
+      "aws",
+      "cloud",
+      "certification",
+      "developer",
+      "serverless"
+    ],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is AWS Lambda?",
+      "pronunciation": "exports.handler = async (event, context) => {\n  console.log('Event:', JSON.stringify(event));\n  return {\n    statusCode: 200,\n    body: JSON.stringify({ message: 'Hello' })\n  };\n};",
+      "meaning": "AWS Lambda คืออะไร?",
+      "example": "Lambda is serverless compute that runs code in response to events. No servers to manage. Pay per invocation and duration. Supports Node.js, Python, Java, Go, .NET, Ruby. Max 15 minutes timeout, 10GB memory. Scales automatically from 0 to thousands of concurrent executions.",
+      "exampleTranslation": "Lambda คือ serverless compute ที่รัน code ตอบสนองต่อ events ไม่ต้องจัดการ servers จ่ายตาม invocation และ duration รองรับ Node.js, Python, Java, Go, .NET, Ruby timeout สูงสุด 15 นาที, memory 10GB Scale อัตโนมัติจาก 0 ถึงหลายพัน concurrent executions"
+    },
+    {
+      "vocab": "What is the Lambda execution context?",
+      "pronunciation": "// Outside handler - reused across invocations\nconst dbConnection = createConnection();\nexports.handler = async (event) => {",
+      "meaning": "Lambda execution context คืออะไร?",
+      "example": "Execution context is the runtime environment that persists between invocations. Code outside handler runs once and is reused (warm start). Use for: database connections, SDK clients, static data. Initialize outside handler to improve performance. Context is frozen between invocations.",
+      "exampleTranslation": "Execution context คือ runtime environment ที่คงอยู่ระหว่าง invocations Code นอก handler รันครั้งเดียวและถูกใช้ซ้ำ (warm start) ใช้สำหรับ: database connections, SDK clients, static data Initialize นอก handler เพื่อเพิ่ม performance Context ถูก frozen ระหว่าง invocations"
+    },
+    {
+      "vocab": "What is Lambda cold start vs warm start?",
+      "pronunciation": "Cold Start:\n  Download code → Start container → Init runtime → Run handler\n  (100ms - few seconds)\n\nWarm Start:\n  Reuse container → Run handler\n  (milliseconds)",
+      "meaning": "Lambda cold start vs warm start คืออะไร?",
+      "example": "Cold start: first invocation or after idle timeout, includes container initialization. Warm start: reuses existing container, much faster. Reduce cold starts: use Provisioned Concurrency, smaller packages, fewer dependencies. VPC adds cold start latency (use VPC-to-VPC NAT).",
+      "exampleTranslation": "Cold start: invocation แรกหรือหลัง idle timeout รวม container initialization Warm start: ใช้ container เดิม เร็วกว่ามาก ลด cold starts: ใช้ Provisioned Concurrency, packages เล็ก, dependencies น้อย VPC เพิ่ม cold start latency (ใช้ VPC-to-VPC NAT)"
+    },
+    {
+      "vocab": "What is Lambda Provisioned Concurrency?",
+      "pronunciation": "aws lambda put-provisioned-concurrency-config \\\n  --function-name my-function \\\n  --qualifier prod \\\n  --provisioned-concurrent-executions 100",
+      "meaning": "Lambda Provisioned Concurrency คืออะไร?",
+      "example": "Provisioned Concurrency keeps functions initialized and ready. Eliminates cold starts. Pay for provisioned capacity even when idle. Use for: latency-sensitive apps, predictable traffic. Can use Application Auto Scaling to adjust based on schedule or utilization.",
+      "exampleTranslation": "Provisioned Concurrency ทำให้ functions initialized และพร้อมใช้ ไม่มี cold starts จ่ายสำหรับ provisioned capacity แม้ไม่มีการใช้ ใช้สำหรับ: apps ที่ sensitive กับ latency, traffic ที่คาดเดาได้ ใช้ Application Auto Scaling ปรับตาม schedule หรือ utilization ได้"
+    },
+    {
+      "vocab": "What are Lambda environment variables?",
+      "pronunciation": "// Set in Lambda configuration\nDB_HOST=mydb.example.com\nDB_PASSWORD=encrypted_value\n\n// Access in code\nconst dbHost = process.env.DB_HOST;\nconst dbPassword = process.env.DB_PASSWORD;",
+      "meaning": "Lambda environment variables คืออะไร?",
+      "example": "Environment variables pass configuration to Lambda without code changes. Encrypted at rest with KMS. Max 4KB total size. Access via process.env (Node), os.environ (Python). Use for: database URLs, API keys, feature flags. Encrypt sensitive values with KMS.",
+      "exampleTranslation": "Environment variables ส่ง configuration ไป Lambda โดยไม่ต้องเปลี่ยน code Encrypted at rest ด้วย KMS ขนาดรวมสูงสุด 4KB เข้าถึงผ่าน process.env (Node), os.environ (Python) ใช้สำหรับ: database URLs, API keys, feature flags Encrypt sensitive values ด้วย KMS"
+    },
+    {
+      "vocab": "What are Lambda Layers?",
+      "pronunciation": "# Layer contains shared code/dependencies\nlayers/\n  python/",
+      "meaning": "Lambda Layers คืออะไร?",
+      "example": "Layers package libraries, custom runtimes, or shared code separately from function code. Reduces deployment package size. Share across multiple functions. Up to 5 layers per function. Total unzipped size limit 250MB. Mounted at /opt directory.",
+      "exampleTranslation": "Layers package libraries, custom runtimes, หรือ shared code แยกจาก function code ลดขนาด deployment package แชร์ข้าม functions ได้ สูงสุด 5 layers ต่อ function ขนาด unzipped รวมสูงสุด 250MB Mount ที่ /opt directory"
+    },
+    {
+      "vocab": "What are Lambda versions and aliases?",
+      "pronunciation": "Function: my-function\n  $LATEST (mutable)\n  Version 1 (immutable)\n  Version 2 (immutable)\n  \nAliases:\n  prod → Version 2\n  dev → $LATEST\n  staging → Version 2 (90%) / Version 3 (10%)",
+      "meaning": "Lambda versions และ aliases คืออะไร?",
+      "example": "Version: immutable snapshot of function code and config. $LATEST is mutable working version. Alias: pointer to version, can be updated. Use aliases for stages (dev, prod). Weighted aliases for canary deployments (shift traffic gradually). Event sources point to alias, not version.",
+      "exampleTranslation": "Version: immutable snapshot ของ function code และ config $LATEST เป็น mutable working version Alias: pointer ไป version, อัปเดตได้ ใช้ aliases สำหรับ stages (dev, prod) Weighted aliases สำหรับ canary deployments (shift traffic ทีละน้อย) Event sources point ไป alias ไม่ใช่ version"
+    },
+    {
+      "vocab": "What is Lambda Destinations?",
+      "pronunciation": "OnSuccess:\n  - SQS queue\n  - SNS topic\n  - Lambda function\n  - EventBridge\n\nOnFailure:\n  - SQS (Dead Letter Queue)\n  - SNS\n  - Lambda\n  - EventBridge",
+      "meaning": "Lambda Destinations คืออะไร?",
+      "example": "Destinations route async invocation results to other services. OnSuccess: invoke on successful execution. OnFailure: invoke on failure after retries. Better than DLQ: includes more context (request payload, response). Supports SQS, SNS, Lambda, EventBridge. For async invocations only.",
+      "exampleTranslation": "Destinations route ผลลัพธ์ async invocation ไปยัง services อื่น OnSuccess: invoke เมื่อ execution สำเร็จ OnFailure: invoke เมื่อ failure หลัง retries ดีกว่า DLQ: มี context มากกว่า (request payload, response) รองรับ SQS, SNS, Lambda, EventBridge สำหรับ async invocations เท่านั้น"
+    },
+    {
+      "vocab": "How does Lambda handle errors and retries?",
+      "pronunciation": "Sync invocation (API Gateway):\n  → Error returned to caller\n  → No automatic retry\n\nAsync invocation (S3, SNS):\n  → Retry 2 times (with delays)\n  → Then send to DLQ/Destination",
+      "meaning": "Lambda จัดการ errors และ retries อย่างไร?",
+      "example": "Synchronous: error returned immediately, no retry. Asynchronous: retries twice with exponential backoff (1 min, 2 min), then DLQ/Destination. Stream (Kinesis/DynamoDB): retries until success or data expires. Configure max retry attempts and max event age for async.",
+      "exampleTranslation": "Synchronous: return error ทันที, ไม่ retry Asynchronous: retry 2 ครั้งด้วย exponential backoff (1 นาที, 2 นาที), แล้ว DLQ/Destination Stream (Kinesis/DynamoDB): retry จนสำเร็จหรือ data expire ตั้งค่า max retry attempts และ max event age สำหรับ async"
+    },
+    {
+      "vocab": "What is AWS Lambda with VPC?",
+      "pronunciation": "Lambda → ENI → VPC → Private resources\n                  ↓\n              NAT Gateway → Internet\n\nConfig:\n  VpcConfig:\n    SubnetIds: [subnet-1, subnet-2]\n    SecurityGroupIds: [sg-xxx]",
+      "meaning": "AWS Lambda กับ VPC คืออะไร?",
+      "example": "Lambda can access VPC resources (RDS, ElastiCache, EC2). Attach to private subnets. Needs NAT Gateway for internet access. Creates ENI in your VPC (Hyperplane now reduces cold start). Configure subnet IDs and security groups. Execution role needs ec2:CreateNetworkInterface permission.",
+      "exampleTranslation": "Lambda เข้าถึง VPC resources ได้ (RDS, ElastiCache, EC2) Attach กับ private subnets ต้องมี NAT Gateway สำหรับ internet access สร้าง ENI ใน VPC ของคุณ (Hyperplane ลด cold start แล้ว) ตั้งค่า subnet IDs และ security groups Execution role ต้องมี ec2:CreateNetworkInterface permission"
+    },
+    {
+      "vocab": "What is Amazon API Gateway?",
+      "pronunciation": "Client → API Gateway → Lambda/HTTP/AWS Service\n              ↓\n    (auth, throttling, caching, transformation)",
+      "meaning": "Amazon API Gateway คืออะไร?",
+      "example": "API Gateway creates, publishes, and manages APIs at scale. Types: REST API (full features), HTTP API (cheaper, simpler), WebSocket (real-time). Features: request validation, transformation, caching, throttling, authentication. Integrates with Lambda, HTTP backends, AWS services.",
+      "exampleTranslation": "API Gateway สร้าง, publish, และจัดการ APIs ได้ตาม scale Types: REST API (features ครบ), HTTP API (ถูกกว่า, ง่ายกว่า), WebSocket (real-time) Features: request validation, transformation, caching, throttling, authentication Integrate กับ Lambda, HTTP backends, AWS services"
+    },
+    {
+      "vocab": "What is the difference between REST API and HTTP API?",
+      "pronunciation": "REST API:\n  - Full features\n  - Request validation\n  - Caching\n  - $3.50/million requests\n\nHTTP API:\n  - Simpler, faster\n  - JWT/OIDC auth only\n  - No caching\n  - $1.00/million requests",
+      "meaning": "ความแตกต่างระหว่าง REST API และ HTTP API คืออะไร?",
+      "example": "REST API: full features including caching, request validation, API keys, usage plans, private endpoints. HTTP API: 70% cheaper, lower latency, simpler, JWT authorizers, no caching or API keys. Choose HTTP API for simple Lambda proxies, REST API for complex requirements.",
+      "exampleTranslation": "REST API: features ครบรวม caching, request validation, API keys, usage plans, private endpoints HTTP API: ถูกกว่า 70%, latency ต่ำกว่า, ง่ายกว่า, JWT authorizers, ไม่มี caching หรือ API keys เลือก HTTP API สำหรับ simple Lambda proxies, REST API สำหรับความต้องการซับซ้อน"
+    },
+    {
+      "vocab": "What are API Gateway stages and deployments?",
+      "pronunciation": "API: my-api\n  Stages:\n    dev  → deployment-1 (stage variables: env=dev)\n    prod → deployment-2 (stage variables: env=prod)\n\nURL: https://api-id.execute-api.region.amazonaws.com/prod",
+      "meaning": "API Gateway stages และ deployments คืออะไร?",
+      "example": "Deployment: snapshot of API configuration. Stage: named reference to deployment (dev, prod, v1). Stage variables: key-value pairs for configuration (like Lambda alias). Each stage has unique URL. Enable canary deployments to shift traffic gradually.",
+      "exampleTranslation": "Deployment: snapshot ของ API configuration Stage: named reference ไป deployment (dev, prod, v1) Stage variables: key-value pairs สำหรับ configuration (เหมือน Lambda alias) แต่ละ stage มี URL เฉพาะ เปิด canary deployments เพื่อ shift traffic ทีละน้อย"
+    },
+    {
+      "vocab": "What are API Gateway integration types?",
+      "pronunciation": "Lambda Proxy:    Pass full request, Lambda returns response format\nLambda Custom:   Transform request/response with mapping templates\nHTTP Proxy:      Pass through to HTTP endpoint",
+      "meaning": "API Gateway integration types มีอะไรบ้าง?",
+      "example": "Lambda Proxy: simplest, passes entire request object, Lambda controls response. Lambda Custom: use mapping templates (VTL) for transformation. HTTP: proxy or with transformation. AWS Service: invoke AWS APIs directly without Lambda. Mock: return static response for testing.",
+      "exampleTranslation": "Lambda Proxy: ง่ายสุด, ส่ง request object ทั้งหมด, Lambda ควบคุม response Lambda Custom: ใช้ mapping templates (VTL) สำหรับ transformation HTTP: proxy หรือมี transformation AWS Service: invoke AWS APIs โดยตรงไม่ต้องมี Lambda Mock: return static response สำหรับ testing"
+    },
+    {
+      "vocab": "How does API Gateway authentication work?",
+      "pronunciation": "IAM:          AWS Signature v4\nCognito:      JWT tokens from User Pools\nLambda Auth:  Custom authorizer function",
+      "meaning": "API Gateway authentication ทำงานอย่างไร?",
+      "example": "IAM: SigV4 signed requests, for AWS clients. Cognito: JWT tokens validated by API Gateway. Lambda Authorizer: custom logic returns IAM policy (token or request-based). API Keys: for throttling/metering, not authentication. Combine with resource policies for fine-grained access.",
+      "exampleTranslation": "IAM: SigV4 signed requests สำหรับ AWS clients Cognito: JWT tokens validated โดย API Gateway Lambda Authorizer: custom logic return IAM policy (token หรือ request-based) API Keys: สำหรับ throttling/metering ไม่ใช่ authentication รวมกับ resource policies สำหรับ fine-grained access"
+    },
+    {
+      "vocab": "What is a Lambda Authorizer?",
+      "pronunciation": "// Token-based authorizer\nexports.handler = async (event) => {\n  const token = event.authorizationToken;",
+      "meaning": "Lambda Authorizer คืออะไร?",
+      "example": "Lambda Authorizer is custom authentication/authorization logic. Token-based: receives token, returns IAM policy. Request-based: receives full request context. Response cached by token/request parameters. Returns principal ID and IAM policy. Use for: custom JWT, external auth systems.",
+      "exampleTranslation": "Lambda Authorizer คือ custom authentication/authorization logic Token-based: รับ token, return IAM policy Request-based: รับ full request context Response cached ตาม token/request parameters Return principal ID และ IAM policy ใช้สำหรับ: custom JWT, external auth systems"
+    },
+    {
+      "vocab": "What is API Gateway caching?",
+      "pronunciation": "CacheClusterEnabled: true\nCacheClusterSize: 0.5GB\nCacheTTL: 300 seconds\n\nCache key: method + resource path + query strings + headers",
+      "meaning": "API Gateway caching คืออะไร?",
+      "example": "Caching reduces backend calls by storing responses. REST API only (not HTTP API). Configure per stage. Cache size: 0.5GB to 237GB. TTL: 0-3600 seconds. Cache key includes: method, path, query strings, headers (configurable). Invalidate with Cache-Control: max-age=0 header.",
+      "exampleTranslation": "Caching ลด backend calls โดยเก็บ responses REST API เท่านั้น (ไม่ใช่ HTTP API) ตั้งค่าต่อ stage Cache size: 0.5GB ถึง 237GB TTL: 0-3600 วินาที Cache key รวม: method, path, query strings, headers (ตั้งค่าได้) Invalidate ด้วย Cache-Control: max-age=0 header"
+    },
+    {
+      "vocab": "What is API Gateway throttling?",
+      "pronunciation": "Account limit: 10,000 requests/second\nStage limit:   5,000 requests/second (configurable)\nMethod limit:  1,000 requests/second\n\nUsage Plans:\n  Basic:  100 requests/day\n  Pro:    10,000 requests/day",
+      "meaning": "API Gateway throttling คืออะไร?",
+      "example": "Throttling limits request rate to protect backends. Account-level: 10,000 RPS default (soft limit). Stage/method level: configurable. Burst limit for spikes. Usage Plans: quota and throttle per API key. Returns 429 Too Many Requests when exceeded.",
+      "exampleTranslation": "Throttling จำกัด request rate เพื่อป้องกัน backends Account-level: default 10,000 RPS (soft limit) Stage/method level: ตั้งค่าได้ Burst limit สำหรับ spikes Usage Plans: quota และ throttle ต่อ API key Return 429 Too Many Requests เมื่อเกิน"
+    },
+    {
+      "vocab": "What is Amazon DynamoDB?",
+      "pronunciation": "Table: Users\n  Partition Key (PK): user_id\n  Sort Key (SK): created_at\n  Attributes: name, email, status\n\nItem: { user_id: \"123\", created_at: \"2024-01-01\", name: \"John\" }",
+      "meaning": "Amazon DynamoDB คืออะไร?",
+      "example": "DynamoDB is fully managed NoSQL key-value and document database. Single-digit millisecond latency at any scale. Serverless with on-demand or provisioned capacity. Global Tables for multi-region. DAX for microsecond caching. Streams for change data capture.",
+      "exampleTranslation": "DynamoDB คือ fully managed NoSQL key-value และ document database latency ไม่เกิน 10ms ไม่ว่า scale เท่าไหร่ Serverless มี on-demand หรือ provisioned capacity Global Tables สำหรับ multi-region DAX สำหรับ microsecond caching Streams สำหรับ change data capture"
+    },
+    {
+      "vocab": "What are DynamoDB primary keys?",
+      "pronunciation": "Simple Primary Key:\n  PK: user_id → item\n\nComposite Primary Key:\n  PK: user_id + SK: order_date → item\n  \nPK determines partition, SK enables range queries",
+      "meaning": "DynamoDB primary keys มีอะไรบ้าง?",
+      "example": "Simple primary key: partition key only, must be unique. Composite primary key: partition key + sort key, combination must be unique. Partition key determines data distribution across partitions. Sort key enables range queries within partition. Choose keys based on access patterns.",
+      "exampleTranslation": "Simple primary key: partition key อย่างเดียว ต้อง unique Composite primary key: partition key + sort key รวมกันต้อง unique Partition key กำหนดการกระจาย data ข้าม partitions Sort key เปิดใช้ range queries ภายใน partition เลือก keys ตาม access patterns"
+    },
+    {
+      "vocab": "What are DynamoDB secondary indexes?",
+      "pronunciation": "Global Secondary Index (GSI):\n  New PK + SK, any attributes\n  Separate throughput",
+      "meaning": "DynamoDB secondary indexes มีอะไรบ้าง?",
+      "example": "GSI: different partition key, own throughput, can add anytime, eventually consistent only. LSI: same partition key, different sort key, must create with table, supports strongly consistent. Project attributes to index to reduce read costs. Choose based on query patterns.",
+      "exampleTranslation": "GSI: partition key ต่าง, throughput แยก, เพิ่มเมื่อไหร่ก็ได้, eventually consistent เท่านั้น LSI: partition key เดิม, sort key ต่าง, ต้องสร้างพร้อมตาราง, รองรับ strongly consistent Project attributes ไป index เพื่อลด read costs เลือกตาม query patterns"
+    },
+    {
+      "vocab": "What are DynamoDB read consistency models?",
+      "pronunciation": "Eventually Consistent Read:\n  Default, cheaper, may return stale data\n  \nStrongly Consistent Read:\n  ConsistentRead: true\n  2x cost, returns latest data",
+      "meaning": "DynamoDB read consistency models มีอะไรบ้าง?",
+      "example": "Eventually consistent: default, reflects writes within 1 second usually, half the RCU cost. Strongly consistent: returns most recent write, uses full RCU, not available on GSI. Choose based on application requirements. Transactions provide ACID for multiple items.",
+      "exampleTranslation": "Eventually consistent: default, reflect writes ภายใน 1 วินาทีโดยปกติ, ใช้ RCU ครึ่งเดียว Strongly consistent: return write ล่าสุด, ใช้ RCU เต็ม, ไม่มีบน GSI เลือกตามความต้องการของ application Transactions ให้ ACID สำหรับหลาย items"
+    },
+    {
+      "vocab": "What are DynamoDB capacity modes?",
+      "pronunciation": "On-Demand:\n  Pay per request\n  Auto-scales instantly\n  Good for unpredictable traffic\n\nProvisioned:\n  RCU/WCU specified\n  Auto Scaling available\n  Cheaper for steady traffic",
+      "meaning": "DynamoDB capacity modes มีอะไรบ้าง?",
+      "example": "On-demand: pay per request, instant scaling, no capacity planning, 2.5x more expensive. Provisioned: specify RCU/WCU, use Auto Scaling, reserved capacity discounts available. Switch between modes once per 24 hours. Choose on-demand for variable, provisioned for predictable workloads.",
+      "exampleTranslation": "On-demand: จ่ายต่อ request, scaling ทันที, ไม่ต้องวางแผน capacity, แพงกว่า 2.5 เท่า Provisioned: กำหนด RCU/WCU, ใช้ Auto Scaling, มี reserved capacity discounts สลับ modes ได้วันละครั้ง เลือก on-demand สำหรับ variable, provisioned สำหรับ predictable workloads"
+    },
+    {
+      "vocab": "What are RCU and WCU in DynamoDB?",
+      "pronunciation": "1 RCU = 1 strongly consistent read/sec (4KB)\n      = 2 eventually consistent reads/sec (4KB)\n      \n1 WCU = 1 write/sec (1KB)\n\nExample: 10KB item, strongly consistent = 3 RCU",
+      "meaning": "RCU และ WCU ใน DynamoDB คืออะไร?",
+      "example": "RCU (Read Capacity Unit): 1 strongly consistent read up to 4KB, or 2 eventually consistent reads. Round up to 4KB increments. WCU (Write Capacity Unit): 1 write up to 1KB. Round up to 1KB increments. Transactional operations use 2x capacity.",
+      "exampleTranslation": "RCU (Read Capacity Unit): 1 strongly consistent read สูงสุด 4KB, หรือ 2 eventually consistent reads ปัดขึ้นทุก 4KB WCU (Write Capacity Unit): 1 write สูงสุด 1KB ปัดขึ้นทุก 1KB Transactional operations ใช้ capacity 2 เท่า"
+    },
+    {
+      "vocab": "What is DynamoDB Query vs Scan?",
+      "pronunciation": "Query:\n  PK required, SK optional\n  Efficient, reads only matching items\n\nScan:\n  Reads entire table\n  Expensive, use as last resort\n  Use Parallel Scan for large tables",
+      "meaning": "DynamoDB Query vs Scan คืออะไร?",
+      "example": "Query: requires partition key, optional sort key conditions, returns matching items only, efficient. Scan: reads every item in table, filters after reading, expensive and slow. Always prefer Query. Use GSI if you need different query patterns. Scan: only for exports or one-time operations.",
+      "exampleTranslation": "Query: ต้องมี partition key, sort key conditions เป็น optional, return เฉพาะ items ที่ match, มีประสิทธิภาพ Scan: อ่านทุก item ในตาราง, filter หลังอ่าน, แพงและช้า ใช้ Query เสมอ ใช้ GSI ถ้าต้องการ query patterns ต่าง Scan: สำหรับ exports หรือ operations ครั้งเดียว"
+    },
+    {
+      "vocab": "What are DynamoDB write operations?",
+      "pronunciation": "PutItem:    Create or replace entire item\nUpdateItem: Update specific attributes\nDeleteItem: Delete item",
+      "meaning": "DynamoDB write operations มีอะไรบ้าง?",
+      "example": "PutItem: creates new or replaces existing item entirely. UpdateItem: modifies specific attributes, supports atomic counters. DeleteItem: removes item. Use ConditionExpression for conditional writes (optimistic locking). ReturnValues to get old/new values. BatchWriteItem for bulk operations.",
+      "exampleTranslation": "PutItem: สร้างใหม่หรือแทนที่ item ทั้งหมด UpdateItem: แก้ไข attributes เฉพาะ, รองรับ atomic counters DeleteItem: ลบ item ใช้ ConditionExpression สำหรับ conditional writes (optimistic locking) ReturnValues เพื่อดูค่าเก่า/ใหม่ BatchWriteItem สำหรับ bulk operations"
+    },
+    {
+      "vocab": "What are DynamoDB Streams?",
+      "pronunciation": "Table → DynamoDB Streams → Lambda/Kinesis\n\nStream Record:\n  KEYS_ONLY:     Primary key only\n  NEW_IMAGE:     Item after change\n  OLD_IMAGE:     Item before change\n  NEW_AND_OLD_IMAGES: Both",
+      "meaning": "DynamoDB Streams คืออะไร?",
+      "example": "DynamoDB Streams captures item-level changes in order. Each record has: event type (INSERT/MODIFY/REMOVE), key, and optionally old/new images. Retained for 24 hours. Trigger Lambda for real-time processing. Use for: replication, analytics, audit logs, event-driven architectures.",
+      "exampleTranslation": "DynamoDB Streams capture item-level changes ตามลำดับ แต่ละ record มี: event type (INSERT/MODIFY/REMOVE), key, และ old/new images (optional) เก็บไว้ 24 ชั่วโมง Trigger Lambda สำหรับ real-time processing ใช้สำหรับ: replication, analytics, audit logs, event-driven architectures"
+    },
+    {
+      "vocab": "What is DynamoDB DAX?",
+      "pronunciation": "Application → DAX Cluster → DynamoDB\n                (cache)\n\nRead: DAX cache hit → microseconds\n      DAX cache miss → milliseconds (DynamoDB)\nWrite: Write-through to DynamoDB",
+      "meaning": "DynamoDB DAX คืออะไร?",
+      "example": "DAX (DynamoDB Accelerator) is in-memory cache for DynamoDB. Microsecond latency for reads. API-compatible, minimal code changes. Write-through cache. Item cache (individual items) and query cache (query results). Deployed in VPC. Use for read-heavy, latency-sensitive workloads.",
+      "exampleTranslation": "DAX (DynamoDB Accelerator) เป็น in-memory cache สำหรับ DynamoDB latency เป็น microseconds สำหรับ reads API-compatible, เปลี่ยน code น้อยมาก Write-through cache Item cache (items แต่ละตัว) และ query cache (query results) Deploy ใน VPC ใช้สำหรับ read-heavy, latency-sensitive workloads"
+    },
+    {
+      "vocab": "What are DynamoDB Transactions?",
+      "pronunciation": "// TransactWriteItems - all or nothing\nconst params = {\n  TransactItems: [",
+      "meaning": "DynamoDB Transactions คืออะไร?",
+      "example": "Transactions provide ACID guarantees across multiple items/tables. TransactWriteItems: up to 100 writes atomically. TransactGetItems: up to 100 consistent reads. 2x capacity cost. Use for: financial transactions, maintaining data integrity. Idempotent with ClientRequestToken.",
+      "exampleTranslation": "Transactions ให้ ACID guarantees ข้ามหลาย items/tables TransactWriteItems: สูงสุด 100 writes atomically TransactGetItems: สูงสุด 100 consistent reads ใช้ capacity 2 เท่า ใช้สำหรับ: financial transactions, รักษา data integrity Idempotent ด้วย ClientRequestToken"
+    },
+    {
+      "vocab": "What is Amazon S3 SDK operations?",
+      "pronunciation": "const s3 = new S3Client({});\n// Upload\nawait s3.send(new PutObjectCommand({",
+      "meaning": "Amazon S3 SDK operations มีอะไรบ้าง?",
+      "example": "PutObject: upload up to 5GB single operation. GetObject: download, supports range requests. DeleteObject/DeleteObjects: delete single or multiple. ListObjectsV2: list with pagination. CopyObject: copy within S3. Use multipart upload for files > 100MB.",
+      "exampleTranslation": "PutObject: upload สูงสุด 5GB ต่อ operation GetObject: download, รองรับ range requests DeleteObject/DeleteObjects: ลบ single หรือ multiple ListObjectsV2: list พร้อม pagination CopyObject: copy ภายใน S3 ใช้ multipart upload สำหรับไฟล์ > 100MB"
+    },
+    {
+      "vocab": "What are S3 pre-signed URLs?",
+      "pronunciation": "const command = new GetObjectCommand({ Bucket, Key });\nconst url = await getSignedUrl(s3Client, command, {\n  expiresIn: 3600 // 1 hour\n});\n\n// URL includes signature, anyone can access temporarily",
+      "meaning": "S3 pre-signed URLs คืออะไร?",
+      "example": "Pre-signed URLs grant temporary access to private S3 objects. Generate using SDK with expiration time (1 second to 7 days). Use for: secure file downloads, direct uploads from browser. URL includes credentials of signer. Can pre-sign GET, PUT, DELETE operations.",
+      "exampleTranslation": "Pre-signed URLs ให้ temporary access ไปยัง private S3 objects Generate โดยใช้ SDK กับ expiration time (1 วินาที ถึง 7 วัน) ใช้สำหรับ: secure file downloads, direct uploads จาก browser URL มี credentials ของคน sign Pre-sign GET, PUT, DELETE operations ได้"
+    },
+    {
+      "vocab": "What is S3 Event Notifications?",
+      "pronunciation": "S3 Bucket → Event Notification → Lambda/SQS/SNS\n\nEvents:\n  s3:ObjectCreated:*\n  s3:ObjectRemoved:*\n  s3:ObjectRestore:*\n\nFilter: prefix and suffix",
+      "meaning": "S3 Event Notifications คืออะไร?",
+      "example": "S3 events trigger actions when objects are created, deleted, restored. Destinations: Lambda, SQS, SNS, EventBridge. Filter by prefix (folder/) and suffix (.jpg). EventBridge: advanced filtering, multiple destinations, archive/replay. Use for: image processing, ETL, auditing.",
+      "exampleTranslation": "S3 events trigger actions เมื่อ objects ถูกสร้าง ลบ restore Destinations: Lambda, SQS, SNS, EventBridge Filter ด้วย prefix (folder/) และ suffix (.jpg) EventBridge: advanced filtering, หลาย destinations, archive/replay ใช้สำหรับ: image processing, ETL, auditing"
+    },
+    {
+      "vocab": "What is Amazon SQS?",
+      "pronunciation": "Producer → SQS Queue → Consumer\n                ↓\n        (visibility timeout)\n                ↓\n        Delete message after processing",
+      "meaning": "Amazon SQS คืออะไร?",
+      "example": "SQS is fully managed message queue service. Decouples producers and consumers. Standard: unlimited throughput, at-least-once, best-effort ordering. FIFO: exactly-once, strict ordering, 300/3000 msg/s. Messages retained up to 14 days. Max message size 256KB.",
+      "exampleTranslation": "SQS คือ fully managed message queue service แยก producers และ consumers Standard: throughput ไม่จำกัด, at-least-once, best-effort ordering FIFO: exactly-once, strict ordering, 300/3000 msg/s เก็บ messages ได้ถึง 14 วัน ขนาด message สูงสุด 256KB"
+    },
+    {
+      "vocab": "What is SQS visibility timeout?",
+      "pronunciation": "Message received → Invisible (30s default) → Visible again\n                           ↓\n                   Process + Delete\n\nIf not deleted before timeout → reappears in queue",
+      "meaning": "SQS visibility timeout คืออะไร?",
+      "example": "Visibility timeout hides message from other consumers while processing. Default 30 seconds, max 12 hours. If not deleted before timeout, message reappears for reprocessing. Extend with ChangeMessageVisibility if processing takes longer. Set based on expected processing time.",
+      "exampleTranslation": "Visibility timeout ซ่อน message จาก consumers อื่นระหว่าง processing Default 30 วินาที, สูงสุด 12 ชั่วโมง ถ้าไม่ delete ก่อน timeout, message จะกลับมาใน queue Extend ด้วย ChangeMessageVisibility ถ้า processing ใช้เวลานาน ตั้งค่าตามเวลา processing ที่คาดไว้"
+    },
+    {
+      "vocab": "What is SQS Dead Letter Queue (DLQ)?",
+      "pronunciation": "Main Queue → (failed 3 times) → Dead Letter Queue\n\nRedrivePolicy:\n  deadLetterTargetArn: arn:aws:sqs:...:dlq\n  maxReceiveCount: 3",
+      "meaning": "SQS Dead Letter Queue (DLQ) คืออะไร?",
+      "example": "DLQ stores messages that failed processing multiple times. Configure maxReceiveCount on source queue. Helps isolate problematic messages for debugging. Set retention period to allow investigation. Use DLQ redrive to move messages back to source queue after fixing issues.",
+      "exampleTranslation": "DLQ เก็บ messages ที่ fail processing หลายครั้ง ตั้งค่า maxReceiveCount บน source queue ช่วยแยก problematic messages สำหรับ debugging ตั้ง retention period เพื่อให้ตรวจสอบได้ ใช้ DLQ redrive ย้าย messages กลับไป source queue หลังแก้ปัญหา"
+    },
+    {
+      "vocab": "What is Lambda with SQS integration?",
+      "pronunciation": "SQS → Lambda (event source mapping)\n// Lambda receives batch of messages\nexports.handler = async (event) => {",
+      "meaning": "Lambda กับ SQS integration ทำงานอย่างไร?",
+      "example": "Lambda polls SQS with event source mapping. Receives batches (1-10000 messages). Successfully processed messages auto-deleted. On error: entire batch retried (or use partial batch response). Configure: batch size, batch window, concurrency. Scale up to 1000 concurrent executions.",
+      "exampleTranslation": "Lambda poll SQS ด้วย event source mapping รับเป็น batches (1-10000 messages) Messages ที่ process สำเร็จจะถูกลบอัตโนมัติ เมื่อ error: batch ทั้งหมด retry (หรือใช้ partial batch response) ตั้งค่า: batch size, batch window, concurrency Scale ได้ถึง 1000 concurrent executions"
+    },
+    {
+      "vocab": "What is Amazon SNS?",
+      "pronunciation": "Publisher → SNS Topic → Subscribers\n                   ├→ SQS Queue\n                   ├→ Lambda\n                   ├→ HTTP/HTTPS\n                   ├→ Email\n                   └→ SMS",
+      "meaning": "Amazon SNS คืออะไร?",
+      "example": "SNS is fully managed pub/sub messaging service. Publisher sends to topic, subscribers receive. Fan-out: one message to multiple destinations. Supports: SQS, Lambda, HTTP, email, SMS, mobile push. Message filtering by attributes. Use for: alerts, notifications, event fan-out.",
+      "exampleTranslation": "SNS คือ fully managed pub/sub messaging service Publisher ส่งไป topic, subscribers รับ Fan-out: message เดียวไปหลาย destinations รองรับ: SQS, Lambda, HTTP, email, SMS, mobile push Message filtering ตาม attributes ใช้สำหรับ: alerts, notifications, event fan-out"
+    },
+    {
+      "vocab": "What is SNS + SQS Fan-out pattern?",
+      "pronunciation": "Order Created → SNS Topic → SQS: Inventory\n                         → SQS: Shipping  \n                         → SQS: Analytics\n                         → Lambda: Email",
+      "meaning": "SNS + SQS Fan-out pattern คืออะไร?",
+      "example": "Fan-out sends one message to multiple queues via SNS. SQS queues subscribe to SNS topic. Each queue processes independently with own consumers. Benefits: decoupling, independent scaling, reliability. Use for: parallel processing, cross-service communication, event-driven architectures.",
+      "exampleTranslation": "Fan-out ส่ง message เดียวไปหลาย queues ผ่าน SNS SQS queues subscribe ไป SNS topic แต่ละ queue process แยกกันด้วย consumers ของตัวเอง ประโยชน์: decoupling, independent scaling, reliability ใช้สำหรับ: parallel processing, cross-service communication, event-driven architectures"
+    },
+    {
+      "vocab": "What is AWS X-Ray?",
+      "pronunciation": "Client → API Gateway → Lambda → DynamoDB\n    |________|___________|_________|_______ X-Ray Trace\n    \nSegments + Subsegments = Service Map + Traces",
+      "meaning": "AWS X-Ray คืออะไร?",
+      "example": "X-Ray provides distributed tracing for microservices. Traces requests across services. Creates service map visualization. Identifies performance bottlenecks and errors. SDK instruments code automatically. Supports: Lambda, API Gateway, ECS, EC2, Elastic Beanstalk. Sampling rules control data collection.",
+      "exampleTranslation": "X-Ray ให้ distributed tracing สำหรับ microservices Trace requests ข้าม services สร้าง service map visualization ระบุ performance bottlenecks และ errors SDK instrument code อัตโนมัติ รองรับ: Lambda, API Gateway, ECS, EC2, Elastic Beanstalk Sampling rules ควบคุม data collection"
+    },
+    {
+      "vocab": "How do you instrument X-Ray in Lambda?",
+      "pronunciation": "// Enable Active Tracing in Lambda config\n// Or use SDK for custom subsegments\nconst AWSXRay = require('aws-xray-sdk');",
+      "meaning": "จะ instrument X-Ray ใน Lambda ได้อย่างไร?",
+      "example": "Enable Active Tracing in Lambda configuration (automatic). Use X-Ray SDK to capture AWS SDK calls. Create custom subsegments for external HTTP calls or custom logic. Add annotations (indexed) and metadata (not indexed) for filtering. Environment variable: AWS_XRAY_DAEMON_ADDRESS.",
+      "exampleTranslation": "เปิด Active Tracing ใน Lambda configuration (automatic) ใช้ X-Ray SDK capture AWS SDK calls สร้าง custom subsegments สำหรับ external HTTP calls หรือ custom logic เพิ่ม annotations (indexed) และ metadata (not indexed) สำหรับ filtering Environment variable: AWS_XRAY_DAEMON_ADDRESS"
+    },
+    {
+      "vocab": "What is Amazon Cognito User Pools?",
+      "pronunciation": "Sign up/Sign in → User Pool → JWT tokens\n                              (id, access, refresh)\n\nFeatures:\n  - Username/password\n  - MFA\n  - Social login (Google, Facebook)\n  - SAML/OIDC federation",
+      "meaning": "Amazon Cognito User Pools คืออะไร?",
+      "example": "User Pools provide user directory and authentication. Sign-up, sign-in, password reset. Returns JWT tokens (ID, access, refresh). Customizable UI or hosted UI. Triggers Lambda for custom logic. Federation with social/enterprise identity providers. Integrates with API Gateway, ALB.",
+      "exampleTranslation": "User Pools ให้ user directory และ authentication Sign-up, sign-in, password reset Return JWT tokens (ID, access, refresh) Customizable UI หรือ hosted UI Triggers Lambda สำหรับ custom logic Federation กับ social/enterprise identity providers Integrate กับ API Gateway, ALB"
+    },
+    {
+      "vocab": "What is Amazon Cognito Identity Pools?",
+      "pronunciation": "User (authenticated/guest)\n    ↓\nIdentity Pool\n    ↓\nTemporary AWS Credentials (STS)\n    ↓\nAccess AWS Resources (S3, DynamoDB)",
+      "meaning": "Amazon Cognito Identity Pools คืออะไร?",
+      "example": "Identity Pools (Federated Identities) provide temporary AWS credentials. Exchange tokens from User Pools, social, or SAML for AWS credentials. Enables direct access to AWS services from mobile/web. IAM roles define permissions. Supports unauthenticated (guest) access with limited permissions.",
+      "exampleTranslation": "Identity Pools (Federated Identities) ให้ temporary AWS credentials แลก tokens จาก User Pools, social, หรือ SAML เป็น AWS credentials เข้าถึง AWS services จาก mobile/web โดยตรง IAM roles กำหนด permissions รองรับ unauthenticated (guest) access ที่มี permissions จำกัด"
+    },
+    {
+      "vocab": "What is AWS SAM?",
+      "pronunciation": "# template.yaml\nAWSTemplateFormatVersion: '2010-09-09'\nTransform: AWS::Serverless-2016-10-31",
+      "meaning": "AWS SAM คืออะไร?",
+      "example": "SAM (Serverless Application Model) is framework for serverless apps. Extension of CloudFormation with simplified syntax. sam init: create project. sam build: compile. sam local invoke/start-api: local testing. sam deploy: deploy to AWS. Defines Lambda, API Gateway, DynamoDB with minimal code.",
+      "exampleTranslation": "SAM (Serverless Application Model) คือ framework สำหรับ serverless apps เป็น extension ของ CloudFormation ที่มี simplified syntax sam init: สร้าง project sam build: compile sam local invoke/start-api: local testing sam deploy: deploy ไป AWS กำหนด Lambda, API Gateway, DynamoDB ด้วย code น้อย"
+    },
+    {
+      "vocab": "What is AWS CDK?",
+      "pronunciation": "import * as cdk from 'aws-cdk-lib';\nimport * as lambda from 'aws-cdk-lib/aws-lambda';\nexport class MyStack extends cdk.Stack {",
+      "meaning": "AWS CDK คืออะไร?",
+      "example": "CDK (Cloud Development Kit) defines infrastructure using programming languages. Supports TypeScript, Python, Java, C#, Go. Synthesizes to CloudFormation. Higher-level constructs (L2, L3) simplify common patterns. cdk init, cdk synth, cdk deploy. Better IDE support, testing, and reusability than YAML.",
+      "exampleTranslation": "CDK (Cloud Development Kit) กำหนด infrastructure โดยใช้ programming languages รองรับ TypeScript, Python, Java, C#, Go Synthesize เป็น CloudFormation Higher-level constructs (L2, L3) ทำ common patterns ง่ายขึ้น cdk init, cdk synth, cdk deploy มี IDE support, testing, และ reusability ดีกว่า YAML"
+    },
+    {
+      "vocab": "What is AWS CodePipeline?",
+      "pronunciation": "Source → Build → Test → Deploy\n  (CodeCommit,  (CodeBuild)  (CodeDeploy)\n   GitHub,                    (CloudFormation)\n   S3)                        (ECS, Lambda)",
+      "meaning": "AWS CodePipeline คืออะไร?",
+      "example": "CodePipeline is managed CI/CD service. Orchestrates build, test, deploy stages. Integrates with CodeCommit, GitHub, CodeBuild, CodeDeploy, CloudFormation. Parallel and sequential actions. Manual approval gates. Artifacts stored in S3. Event-driven triggers from source changes.",
+      "exampleTranslation": "CodePipeline คือ managed CI/CD service Orchestrate build, test, deploy stages Integrate กับ CodeCommit, GitHub, CodeBuild, CodeDeploy, CloudFormation Parallel และ sequential actions Manual approval gates Artifacts เก็บใน S3 Event-driven triggers จาก source changes"
+    },
+    {
+      "vocab": "What is AWS CodeBuild?",
+      "pronunciation": "# buildspec.yml\nversion: 0.2\nphases:\n  install:\n    commands:\n      - npm install\n  build:\n    commands:\n      - npm run build\n      - npm test\nartifacts:\n  files:\n    - '**/*'\n  base-directory: dist",
+      "meaning": "AWS CodeBuild คืออะไร?",
+      "example": "CodeBuild is managed build service. Compiles, tests, produces artifacts. Uses buildspec.yml for build commands. Managed images or custom Docker. Scales automatically. Pay per build minute. Integrates with CodePipeline, VPC for private resources. Environment variables for secrets.",
+      "exampleTranslation": "CodeBuild คือ managed build service Compile, test, สร้าง artifacts ใช้ buildspec.yml สำหรับ build commands Managed images หรือ custom Docker Scale อัตโนมัติ จ่ายต่อ build minute Integrate กับ CodePipeline, VPC สำหรับ private resources Environment variables สำหรับ secrets"
+    },
+    {
+      "vocab": "What is AWS CodeDeploy?",
+      "pronunciation": "Deployment Types:\n  In-place:    Stop → Deploy → Start (EC2)\n  Blue/Green:  New env → Switch traffic",
+      "meaning": "AWS CodeDeploy คืออะไร?",
+      "example": "CodeDeploy automates deployments to EC2, ECS, Lambda. appspec.yml defines lifecycle hooks. EC2: in-place or blue/green with Auto Scaling. Lambda: traffic shifting (all-at-once, linear, canary). Automatic rollback on failure. Deployment configurations control rollout speed.",
+      "exampleTranslation": "CodeDeploy automate deployments ไป EC2, ECS, Lambda appspec.yml กำหนด lifecycle hooks EC2: in-place หรือ blue/green กับ Auto Scaling Lambda: traffic shifting (all-at-once, linear, canary) Automatic rollback เมื่อ failure Deployment configurations ควบคุม rollout speed"
+    },
+    {
+      "vocab": "What are Lambda deployment strategies with CodeDeploy?",
+      "pronunciation": "AllAtOnce:    100% immediately\nLinear10PercentEvery1Minute: 10% every minute\nCanary10Percent5Minutes: 10% first, wait 5 min, then 90%\n\nAuto-rollback on CloudWatch Alarms",
+      "meaning": "Lambda deployment strategies กับ CodeDeploy มีอะไรบ้าง?",
+      "example": "AllAtOnce: shifts 100% traffic immediately. Linear: incremental shift at regular intervals. Canary: small percentage first, then remaining. Pre/post traffic hooks for testing. CloudWatch Alarms trigger automatic rollback. Use aliases and versions for traffic routing.",
+      "exampleTranslation": "AllAtOnce: shift traffic 100% ทันที Linear: shift แบบ incremental ตาม intervals Canary: percentage เล็กก่อน แล้วค่อยที่เหลือ Pre/post traffic hooks สำหรับ testing CloudWatch Alarms trigger automatic rollback ใช้ aliases และ versions สำหรับ traffic routing"
+    },
+    {
+      "vocab": "What is AWS Secrets Manager vs Parameter Store?",
+      "pronunciation": "Secrets Manager:\n  - Automatic rotation\n  - $0.40/secret/month",
+      "meaning": "ความแตกต่างระหว่าง Secrets Manager และ Parameter Store คืออะไร?",
+      "example": "Secrets Manager: automatic rotation with Lambda, native RDS integration, more expensive. Parameter Store: free tier, manual rotation, hierarchical naming (/app/dev/db_host), version tracking. Choose Secrets Manager for database credentials with rotation. Parameter Store for configuration and cost savings.",
+      "exampleTranslation": "Secrets Manager: automatic rotation ด้วย Lambda, native RDS integration, แพงกว่า Parameter Store: free tier, manual rotation, hierarchical naming (/app/dev/db_host), version tracking เลือก Secrets Manager สำหรับ database credentials ที่ต้อง rotation Parameter Store สำหรับ configuration และประหยัด"
+    },
+    {
+      "vocab": "How do you access secrets in Lambda?",
+      "pronunciation": "// Using AWS SDK\nconst client = new SecretsManagerClient({});\nconst response = await client.send(",
+      "meaning": "จะเข้าถึง secrets ใน Lambda ได้อย่างไร?",
+      "example": "Use AWS SDK to call GetSecretValue. Cache secrets outside handler for reuse (avoid API calls per invocation). Use Secrets Manager Lambda extension for automatic caching. Grant Lambda execution role secretsmanager:GetSecretValue permission. Never log or expose secret values.",
+      "exampleTranslation": "ใช้ AWS SDK เรียก GetSecretValue Cache secrets นอก handler เพื่อใช้ซ้ำ (หลีกเลี่ยง API calls ต่อ invocation) ใช้ Secrets Manager Lambda extension สำหรับ automatic caching ให้ Lambda execution role มี secretsmanager:GetSecretValue permission อย่า log หรือ expose secret values"
+    },
+    {
+      "vocab": "What is AWS KMS encryption in applications?",
+      "pronunciation": "// Encrypt\nconst encrypted = await kmsClient.send(\n  new EncryptCommand({",
+      "meaning": "AWS KMS encryption ใน applications ทำงานอย่างไร?",
+      "example": "KMS encrypts/decrypts data up to 4KB directly. For larger data, use envelope encryption: generate data key, encrypt data with data key, encrypt data key with KMS. SDK handles envelope encryption with GenerateDataKey. Grant kms:Encrypt, kms:Decrypt, kms:GenerateDataKey permissions.",
+      "exampleTranslation": "KMS encrypt/decrypt data สูงสุด 4KB โดยตรง สำหรับ data ใหญ่กว่า ใช้ envelope encryption: generate data key, encrypt data ด้วย data key, encrypt data key ด้วย KMS SDK จัดการ envelope encryption ด้วย GenerateDataKey Grant permissions: kms:Encrypt, kms:Decrypt, kms:GenerateDataKey"
+    },
+    {
+      "vocab": "What is AWS Step Functions?",
+      "pronunciation": "{\n  \"StartAt\": \"ProcessOrder\",\n  \"States\": {",
+      "meaning": "AWS Step Functions คืออะไร?",
+      "example": "Step Functions orchestrates serverless workflows. State machine with visual representation. States: Task (invoke Lambda/service), Choice (branching), Wait (delay), Parallel, Map (iterate). Standard: long-running (1 year max). Express: high-volume, short (5 min max). Built-in error handling and retry.",
+      "exampleTranslation": "Step Functions orchestrate serverless workflows State machine มี visual representation States: Task (invoke Lambda/service), Choice (branching), Wait (delay), Parallel, Map (iterate) Standard: long-running (สูงสุด 1 ปี) Express: high-volume, สั้น (สูงสุด 5 นาที) Built-in error handling และ retry"
+    },
+    {
+      "vocab": "What are Step Functions integrations?",
+      "pronunciation": "Optimized integrations:\n  - Lambda: invoke function\n  - DynamoDB: GetItem, PutItem, Query",
+      "meaning": "Step Functions integrations มีอะไรบ้าง?",
+      "example": "Direct integrations call AWS services without Lambda. Optimized: Lambda, DynamoDB, SQS, SNS, ECS, Batch, SageMaker. SDK integrations: 200+ AWS services. Use .sync for synchronous waits. Use .waitForTaskToken for callback patterns. Reduces costs and latency vs Lambda intermediaries.",
+      "exampleTranslation": "Direct integrations เรียก AWS services โดยไม่ต้องใช้ Lambda Optimized: Lambda, DynamoDB, SQS, SNS, ECS, Batch, SageMaker SDK integrations: 200+ AWS services ใช้ .sync สำหรับ synchronous waits ใช้ .waitForTaskToken สำหรับ callback patterns ลด costs และ latency เทียบกับ Lambda intermediaries"
+    },
+    {
+      "vocab": "What is Amazon EventBridge for developers?",
+      "pronunciation": "// Put custom event\nconst client = new EventBridgeClient({});\nawait client.send(new PutEventsCommand({",
+      "meaning": "Amazon EventBridge สำหรับ developers คืออะไร?",
+      "example": "EventBridge is serverless event bus. Custom events from applications. Event rules match and route to targets. Schema registry for event discovery. Archive and replay events. Scheduler for cron/one-time events. Content-based filtering on event payload. Use for: event-driven architectures, cross-service communication.",
+      "exampleTranslation": "EventBridge คือ serverless event bus Custom events จาก applications Event rules match และ route ไป targets Schema registry สำหรับ event discovery Archive และ replay events Scheduler สำหรับ cron/one-time events Content-based filtering บน event payload ใช้สำหรับ: event-driven architectures, cross-service communication"
+    },
+    {
+      "vocab": "What is AWS AppSync?",
+      "pronunciation": "GraphQL Query:\n  query GetUser($id: ID!) {\n    getUser(id: $id) {\n      name\n      orders {\n        items { id, total }\n      }\n    }\n  }\n\nResolvers → DynamoDB, Lambda, HTTP, RDS",
+      "meaning": "AWS AppSync คืออะไร?",
+      "example": "AppSync is managed GraphQL service. Single endpoint for multiple data sources. Real-time subscriptions via WebSocket. Resolvers connect to DynamoDB, Lambda, HTTP, Aurora. Caching, offline support for mobile. Pipeline resolvers for complex operations. Built-in auth: API key, Cognito, IAM, OIDC.",
+      "exampleTranslation": "AppSync คือ managed GraphQL service Single endpoint สำหรับหลาย data sources Real-time subscriptions ผ่าน WebSocket Resolvers เชื่อมกับ DynamoDB, Lambda, HTTP, Aurora Caching, offline support สำหรับ mobile Pipeline resolvers สำหรับ operations ซับซ้อน Built-in auth: API key, Cognito, IAM, OIDC"
+    },
+    {
+      "vocab": "What is Amazon ElastiCache for developers?",
+      "pronunciation": "// Redis client\nconst redis = createClient({ url: 'redis://...' });\n// Cache-aside pattern",
+      "meaning": "Amazon ElastiCache สำหรับ developers คืออะไร?",
+      "example": "ElastiCache provides managed Redis or Memcached. Use for: session storage, database caching, rate limiting, leaderboards. Cache-aside pattern: check cache, if miss query database and cache result. TTL for expiration. Redis: data structures, persistence. Memcached: simple, multi-threaded.",
+      "exampleTranslation": "ElastiCache ให้ managed Redis หรือ Memcached ใช้สำหรับ: session storage, database caching, rate limiting, leaderboards Cache-aside pattern: ดู cache, ถ้า miss query database แล้ว cache ผลลัพธ์ TTL สำหรับ expiration Redis: data structures, persistence Memcached: simple, multi-threaded"
+    },
+    {
+      "vocab": "What is Amazon ECS for developers?",
+      "pronunciation": "Task Definition:\n  containerDefinitions:\n    - name: app",
+      "meaning": "Amazon ECS สำหรับ developers คืออะไร?",
+      "example": "ECS runs Docker containers. Task Definition: container config, resources, IAM role. Service: maintains desired task count, integrates with ALB. Fargate: serverless, no EC2 management. ECR: container registry. Environment variables and Secrets Manager integration. CloudWatch Logs for container logs.",
+      "exampleTranslation": "ECS รัน Docker containers Task Definition: container config, resources, IAM role Service: รักษาจำนวน tasks ที่ต้องการ, integrate กับ ALB Fargate: serverless, ไม่ต้องจัดการ EC2 ECR: container registry Environment variables และ Secrets Manager integration CloudWatch Logs สำหรับ container logs"
+    },
+    {
+      "vocab": "What is CloudWatch Logs Insights?",
+      "pronunciation": "fields @timestamp, @message\n| filter @message like /ERROR/\n| stats count(*) by bin(5m)\n| sort @timestamp desc\n| limit 100",
+      "meaning": "CloudWatch Logs Insights คืออะไร?",
+      "example": "Logs Insights queries log data interactively. SQL-like query language. Aggregations: count, sum, avg, percentile. Filter, parse, sort operations. Visualize as time series or table. Query multiple log groups. Save queries for reuse. Automatic field discovery. Pay per query (data scanned).",
+      "exampleTranslation": "Logs Insights query log data แบบ interactive ภาษา query คล้าย SQL Aggregations: count, sum, avg, percentile Filter, parse, sort operations Visualize เป็น time series หรือ table Query หลาย log groups Save queries เพื่อใช้ซ้ำ Automatic field discovery จ่ายต่อ query (data scanned)"
+    },
+    {
+      "vocab": "What is CloudWatch Contributor Insights?",
+      "pronunciation": "Top contributors:\n  1. IP 1.2.3.4     - 10,000 requests\n  2. IP 5.6.7.8     - 8,000 requests\n  3. /api/users    - 50,000 requests\n  \nRules analyze log fields automatically",
+      "meaning": "CloudWatch Contributor Insights คืออะไร?",
+      "example": "Contributor Insights identifies top contributors in log data. Find highest traffic IPs, URLs, users. Create rules to analyze log fields. Built-in rules for VPC Flow Logs, API Gateway. Real-time analysis. Use for: identifying abuse, performance issues, traffic patterns. Integrates with dashboards.",
+      "exampleTranslation": "Contributor Insights ระบุ top contributors ใน log data หา IPs, URLs, users ที่มี traffic สูงสุด สร้าง rules เพื่อวิเคราะห์ log fields Built-in rules สำหรับ VPC Flow Logs, API Gateway Real-time analysis ใช้สำหรับ: ระบุ abuse, performance issues, traffic patterns Integrate กับ dashboards"
+    },
+    {
+      "vocab": "What are Lambda best practices?",
+      "pronunciation": "1. Initialize SDK outside handler\n2. Use environment variables\n3. Minimize package size",
+      "meaning": "Lambda best practices มีอะไรบ้าง?",
+      "example": "Initialize connections outside handler (reuse). Right-size memory (CPU scales with memory). Minimize deployment package (exclude dev dependencies). Use Layers for shared code. Set timeout based on expected duration. Implement idempotency for retries. Use environment variables for configuration. Structure logs as JSON.",
+      "exampleTranslation": "Initialize connections นอก handler (ใช้ซ้ำ) Right-size memory (CPU scale ตาม memory) ลดขนาด deployment package (ไม่รวม dev dependencies) ใช้ Layers สำหรับ shared code ตั้ง timeout ตาม duration ที่คาดไว้ Implement idempotency สำหรับ retries ใช้ environment variables สำหรับ configuration Structure logs เป็น JSON"
+    },
+    {
+      "vocab": "What is idempotency in serverless applications?",
+      "pronunciation": "// Idempotency with DynamoDB\nconst params = {\n  TableName: 'Orders',\n  Item: { orderId, ... },\n  ConditionExpression: 'attribute_not_exists(orderId)'\n};\n\n// Same request multiple times = same result",
+      "meaning": "Idempotency ใน serverless applications คืออะไร?",
+      "example": "Idempotency ensures repeated requests produce same result. Critical for async processing with retries. Techniques: idempotency key in DynamoDB, conditional writes, deduplication with SQS FIFO. Store processing status. Return cached result for duplicate requests. Prevents double charges, duplicate records.",
+      "exampleTranslation": "Idempotency ทำให้ requests ซ้ำได้ผลลัพธ์เดิม สำคัญสำหรับ async processing ที่มี retries เทคนิค: idempotency key ใน DynamoDB, conditional writes, deduplication ด้วย SQS FIFO เก็บ processing status Return cached result สำหรับ duplicate requests ป้องกัน double charges, duplicate records"
+    },
+    {
+      "vocab": "What is Amazon Kinesis Data Streams?",
+      "pronunciation": "Producer → Kinesis Stream → Consumer\n              (Shards)      (Lambda, KCL, Firehose)\n              \nShard: 1MB/s write, 2MB/s read\nRetention: 24 hours - 365 days",
+      "meaning": "Amazon Kinesis Data Streams คืออะไร?",
+      "example": "Kinesis Data Streams collects real-time streaming data. Shards provide throughput (1MB/s write, 2MB/s read per shard). Partition key determines shard routing. Consumers: Lambda, KCL, Kinesis Data Analytics. Data retained 24 hours by default (up to 365 days). Use for: logs, clickstreams, IoT.",
+      "exampleTranslation": "Kinesis Data Streams collect real-time streaming data Shards ให้ throughput (1MB/s write, 2MB/s read ต่อ shard) Partition key กำหนด shard routing Consumers: Lambda, KCL, Kinesis Data Analytics Data เก็บ 24 ชั่วโมง by default (สูงสุด 365 วัน) ใช้สำหรับ: logs, clickstreams, IoT"
+    },
+    {
+      "vocab": "What is Lambda with Kinesis integration?",
+      "pronunciation": "// Lambda receives batch of records\nexports.handler = async (event) => {\n  for (const record of event.Records) {",
+      "meaning": "Lambda กับ Kinesis integration ทำงานอย่างไร?",
+      "example": "Lambda polls Kinesis shards with event source mapping. One Lambda invocation per shard. Batch size up to 10,000 records. Retries until success or data expires. Configure: parallelization factor (up to 10 per shard), batch window, error handling. Report batch item failures for partial success.",
+      "exampleTranslation": "Lambda poll Kinesis shards ด้วย event source mapping Lambda invocation หนึ่งต่อ shard Batch size สูงสุด 10,000 records Retry จนสำเร็จหรือ data expire ตั้งค่า: parallelization factor (สูงสุด 10 ต่อ shard), batch window, error handling Report batch item failures สำหรับ partial success"
+    },
+    {
+      "vocab": "What is AWS Amplify for developers?",
+      "pronunciation": "amplify init\namplify add api      # GraphQL or REST\namplify add auth     # Cognito\namplify add storage  # S3, DynamoDB\namplify push         # Deploy to AWS\n\nLibraries: Auth, API, Storage, Analytics",
+      "meaning": "AWS Amplify สำหรับ developers คืออะไร?",
+      "example": "Amplify is framework for full-stack apps. CLI provisions backend resources. Libraries for frontend (React, Vue, Angular, React Native). Features: Auth (Cognito), API (AppSync/API Gateway), Storage (S3), Analytics. Hosting with CI/CD. Studio for visual development. Use for: rapid prototyping, mobile apps.",
+      "exampleTranslation": "Amplify คือ framework สำหรับ full-stack apps CLI provision backend resources Libraries สำหรับ frontend (React, Vue, Angular, React Native) Features: Auth (Cognito), API (AppSync/API Gateway), Storage (S3), Analytics Hosting กับ CI/CD Studio สำหรับ visual development ใช้สำหรับ: rapid prototyping, mobile apps"
+    }
+  ]
+}

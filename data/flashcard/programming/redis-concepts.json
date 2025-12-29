@@ -5,238 +5,243 @@
     "name": "Redis Concepts",
     "description": "Core Redis concepts including data structures, caching patterns, persistence, clustering, and common use cases",
     "category": "Database",
-    "tags": ["redis", "cache", "database", "concepts"],
+    "tags": [
+      "redis",
+      "cache",
+      "database",
+      "concepts"
+    ],
     "sourceLang": "en",
     "targetLang": "th"
   },
   "cards": [
     {
       "vocab": "What is Redis and when to use it?",
-      "pronunciation": "# Redis = Remote Dictionary Server\n# In-memory data structure store\n\n# Use cases:\n- Caching (session, API responses)\n- Real-time analytics\n- Message queues (Pub/Sub, Streams)\n- Leaderboards (Sorted Sets)\n- Rate limiting\n- Distributed locks\n- Geospatial indexing",
+      "pronunciation": "# Redis = Remote Dictionary Server\n# In-memory data structure store\n# Use cases:",
       "meaning": "Redis คืออะไรและใช้เมื่อไหร่?",
       "example": "Redis is an in-memory data structure store used as database, cache, and message broker. Single-threaded with async I/O, extremely fast (100K+ ops/sec). Supports persistence to disk. Use for caching, sessions, real-time features, queues, and anywhere low-latency data access is critical.",
       "exampleTranslation": "Redis คือ in-memory data structure store ใช้เป็น database, cache และ message broker Single-threaded กับ async I/O เร็วมาก (100K+ ops/sec) รองรับ persistence ลง disk ใช้สำหรับ caching, sessions, real-time features, queues และที่ใดก็ตามที่ต้องการ low-latency data access"
     },
     {
       "vocab": "What are the main data types in Redis?",
-      "pronunciation": "# String - binary-safe, max 512MB\nSET key \"value\"\nGET key\n\n# List - ordered collection\nLPUSH mylist \"a\" \"b\"\nRPOP mylist\n\n# Set - unique unordered elements\nSADD myset \"a\" \"b\"\nSMEMBERS myset\n\n# Sorted Set - unique elements with score\nZADD leaderboard 100 \"player1\"\nZRANGE leaderboard 0 -1 WITHSCORES\n\n# Hash - field-value pairs\nHSET user:1 name \"John\" age 30\nHGETALL user:1\n\n# Stream - append-only log\nXADD mystream * field value",
+      "pronunciation": "# String - binary-safe, max 512MB\nSET key \"value\"\nGET key",
       "meaning": "Redis มี data types หลักอะไรบ้าง?",
       "example": "Redis has 5 main types: String (binary-safe text/numbers), List (ordered, duplicates allowed), Set (unique unordered), Sorted Set (unique with scores for ranking), Hash (object with fields). Also: Streams (log), Bitmaps, HyperLogLog, Geospatial. Each optimized for specific operations.",
       "exampleTranslation": "Redis มี 5 types หลัก: String (binary-safe text/numbers), List (เรียงลำดับ มี duplicates ได้), Set (unique ไม่เรียง), Sorted Set (unique มี scores สำหรับ ranking), Hash (object มี fields) นอกจากนี้: Streams (log), Bitmaps, HyperLogLog, Geospatial แต่ละตัว optimize สำหรับ operations เฉพาะ"
     },
     {
       "vocab": "What are String commands in Redis?",
-      "pronunciation": "# Basic\nSET key \"value\"           # set value\nGET key                   # get value\nDEL key                   # delete\n\n# With options\nSET key \"value\" EX 60     # expire in 60 seconds\nSET key \"value\" NX        # only if not exists\nSET key \"value\" XX        # only if exists\nSETNX key \"value\"         # set if not exists\n\n# Numeric operations\nINCR counter              # increment by 1\nINCRBY counter 5          # increment by 5\nDECR counter              # decrement by 1\nINCRBYFLOAT price 0.5     # float increment\n\n# Multiple keys\nMSET k1 \"v1\" k2 \"v2\"      # set multiple\nMGET k1 k2                # get multiple\n\n# String manipulation\nAPPEND key \"suffix\"       # append\nSTRLEN key                # length\nGETRANGE key 0 5          # substring",
+      "pronunciation": "# Basic\nSET key \"value\"           # set value\nGET key                   # get value",
       "meaning": "Redis มี String commands อะไรบ้าง?",
       "example": "SET/GET for basic operations. SET with EX/PX for expiration, NX for create-only, XX for update-only. INCR/DECR for atomic counters. MSET/MGET for batch operations. Strings can store any binary data up to 512MB. SETNX useful for distributed locks. All operations are atomic.",
       "exampleTranslation": "SET/GET สำหรับ operations พื้นฐาน SET กับ EX/PX สำหรับ expiration, NX สำหรับ create-only, XX สำหรับ update-only INCR/DECR สำหรับ atomic counters MSET/MGET สำหรับ batch operations Strings เก็บ binary data ใดก็ได้ถึง 512MB SETNX มีประโยชน์สำหรับ distributed locks ทุก operations เป็น atomic"
     },
     {
       "vocab": "What are List commands in Redis?",
-      "pronunciation": "# Push/Pop\nLPUSH mylist \"a\" \"b\"      # push left: [b, a]\nRPUSH mylist \"c\"          # push right: [b, a, c]\nLPOP mylist               # pop left: returns \"b\"\nRPOP mylist               # pop right: returns \"c\"\n\n# Blocking pop (for queues)\nBLPOP mylist 10           # block 10 sec if empty\nBRPOP mylist 10\n\n# Range operations\nLRANGE mylist 0 -1        # get all elements\nLRANGE mylist 0 9         # first 10 elements\nLINDEX mylist 0           # get by index\nLLEN mylist               # length\n\n# Modify\nLSET mylist 0 \"new\"       # set by index\nLTRIM mylist 0 99         # keep only first 100\nLREM mylist 2 \"value\"     # remove 2 occurrences\n\n# Move between lists\nRPOPLPUSH src dest        # atomic move\nLMOVE src dest LEFT RIGHT # Redis 6.2+",
+      "pronunciation": "# Push/Pop\nLPUSH mylist \"a\" \"b\"      # push left: [b, a]\nRPUSH mylist \"c\"          # push right: [b, a, c]",
       "meaning": "Redis มี List commands อะไรบ้าง?",
       "example": "Lists are linked lists - fast push/pop at ends O(1), slow random access O(N). LPUSH/RPUSH add elements, LPOP/RPOP remove. BLPOP/BRPOP block if empty - perfect for queues. LRANGE gets ranges. LTRIM caps list size. RPOPLPUSH for reliable queue patterns. Good for queues, timelines, latest items.",
       "exampleTranslation": "Lists เป็น linked lists - push/pop ที่ปลายเร็ว O(1), random access ช้า O(N) LPUSH/RPUSH เพิ่ม elements, LPOP/RPOP ลบ BLPOP/BRPOP block ถ้าว่าง - เหมาะสำหรับ queues LRANGE ดึง ranges LTRIM จำกัด list size RPOPLPUSH สำหรับ reliable queue patterns ดีสำหรับ queues, timelines, latest items"
     },
     {
       "vocab": "What are Set commands in Redis?",
-      "pronunciation": "# Add/Remove\nSADD myset \"a\" \"b\" \"c\"    # add members\nSREM myset \"a\"            # remove member\nSPOP myset                # remove random\nSMOVE src dest \"a\"        # move between sets\n\n# Query\nSMEMBERS myset            # all members\nSISMEMBER myset \"a\"       # check membership\nSCARD myset               # count\nSRANDMEMBER myset 3       # random members\n\n# Set operations\nSUNION set1 set2          # union\nSINTER set1 set2          # intersection\nSDIFF set1 set2           # difference\n\n# Store results\nSUNIONSTORE dest set1 set2\nSINTERSTORE dest set1 set2\n\n# Use cases:\n- Tags\n- Unique visitors\n- Friend lists\n- Online users",
+      "pronunciation": "# Add/Remove\nSADD myset \"a\" \"b\" \"c\"    # add members\nSREM myset \"a\"            # remove member",
       "meaning": "Redis มี Set commands อะไรบ้าง?",
       "example": "Sets store unique unordered elements. SADD adds (returns count of new), SREM removes. SISMEMBER checks O(1). Set operations SUNION/SINTER/SDIFF for combining sets. SRANDMEMBER for random sampling. Perfect for tags, unique counters, social relationships, and deduplication.",
       "exampleTranslation": "Sets เก็บ unique unordered elements SADD เพิ่ม (return จำนวนที่เพิ่มใหม่), SREM ลบ SISMEMBER check O(1) Set operations SUNION/SINTER/SDIFF สำหรับรวม sets SRANDMEMBER สำหรับ random sampling เหมาะสำหรับ tags, unique counters, social relationships และ deduplication"
     },
     {
       "vocab": "What are Sorted Set commands in Redis?",
-      "pronunciation": "# Add with scores\nZADD leaderboard 100 \"player1\"\nZADD leaderboard 85 \"player2\" 90 \"player3\"\n\n# Update score\nZINCRBY leaderboard 5 \"player1\"  # add 5 to score\n\n# Range queries (by rank)\nZRANGE leaderboard 0 9           # top 10 (low to high)\nZREVRANGE leaderboard 0 9        # top 10 (high to low)\nZRANGE leaderboard 0 9 WITHSCORES\n\n# Range by score\nZRANGEBYSCORE leaderboard 80 100  # scores 80-100\nZRANGEBYSCORE leaderboard -inf +inf\n\n# Rank and score\nZRANK leaderboard \"player1\"      # rank (0-indexed)\nZREVRANK leaderboard \"player1\"   # reverse rank\nZSCORE leaderboard \"player1\"     # get score\n\n# Remove\nZREM leaderboard \"player1\"\nZREMRANGEBYRANK leaderboard 0 9   # remove by rank\nZREMRANGEBYSCORE leaderboard 0 50 # remove by score",
+      "pronunciation": "# Add with scores\nZADD leaderboard 100 \"player1\"\nZADD leaderboard 85 \"player2\" 90 \"player3\"",
       "meaning": "Redis มี Sorted Set commands อะไรบ้าง?",
       "example": "Sorted Sets combine Set uniqueness with scores for ordering. ZADD adds with score, ZINCRBY updates. ZRANGE/ZREVRANGE get by rank, ZRANGEBYSCORE by score range. ZRANK gets position. O(log N) for most operations. Perfect for leaderboards, priority queues, time-series by timestamp, rate limiting.",
       "exampleTranslation": "Sorted Sets รวม Set uniqueness กับ scores สำหรับการเรียงลำดับ ZADD เพิ่มพร้อม score, ZINCRBY อัพเดท ZRANGE/ZREVRANGE ดึงตาม rank, ZRANGEBYSCORE ตาม score range ZRANK ดึง position O(log N) สำหรับ operations ส่วนใหญ่ เหมาะสำหรับ leaderboards, priority queues, time-series ตาม timestamp, rate limiting"
     },
     {
       "vocab": "What are Hash commands in Redis?",
-      "pronunciation": "# Set fields\nHSET user:1 name \"John\" age 30\nHSETNX user:1 name \"John\"    # only if not exists\nHMSET user:1 name \"John\" age 30  # deprecated, use HSET\n\n# Get fields\nHGET user:1 name              # single field\nHMGET user:1 name age         # multiple fields\nHGETALL user:1                # all fields and values\nHKEYS user:1                  # all field names\nHVALS user:1                  # all values\n\n# Modify\nHINCRBY user:1 age 1          # increment integer\nHINCRBYFLOAT user:1 score 0.5 # increment float\nHDEL user:1 age               # delete field\n\n# Query\nHEXISTS user:1 name           # check field exists\nHLEN user:1                   # count fields\nHSTRLEN user:1 name           # field value length\n\n# Use cases:\n- User profiles\n- Object storage\n- Configuration\n- Counters per object",
+      "pronunciation": "# Set fields\nHSET user:1 name \"John\" age 30\nHSETNX user:1 name \"John\"    # only if not exists",
       "meaning": "Redis มี Hash commands อะไรบ้าง?",
       "example": "Hashes store field-value pairs under a key - like objects. HSET sets fields, HGET retrieves. HGETALL gets entire hash. HINCRBY for field-level counters. More memory-efficient than separate keys for objects. Perfect for user profiles, sessions, product details, and any structured data.",
       "exampleTranslation": "Hashes เก็บ field-value pairs ภายใต้ key - เหมือน objects HSET set fields, HGET ดึง HGETALL ดึงทั้ง hash HINCRBY สำหรับ field-level counters ประหยัด memory กว่า keys แยกสำหรับ objects เหมาะสำหรับ user profiles, sessions, product details และ structured data ใดๆ"
     },
     {
       "vocab": "What is key expiration (TTL) in Redis?",
-      "pronunciation": "# Set expiration on new key\nSET session:123 \"data\" EX 3600    # 1 hour in seconds\nSET session:123 \"data\" PX 60000   # 1 minute in milliseconds\n\n# Set expiration on existing key\nEXPIRE key 3600                   # expire in 3600 seconds\nPEXPIRE key 60000                 # expire in 60000 ms\nEXPIREAT key 1735689600           # expire at Unix timestamp\n\n# Check TTL\nTTL key                           # seconds remaining (-1 = no expire, -2 = not exists)\nPTTL key                          # milliseconds remaining\n\n# Remove expiration\nPERSIST key                       # make key permanent\n\n# Set only if has TTL\nSET key \"value\" KEEPTTL           # preserve existing TTL\n\n# Expiration is lazy + active\n# Lazy: checked on access\n# Active: background sampling and deletion",
+      "pronunciation": "# Set expiration on new key\nSET session:123 \"data\" EX 3600    # 1 hour in seconds\nSET session:123 \"data\" PX 60000   # 1 minute in milliseconds",
       "meaning": "Key expiration (TTL) ใน Redis คืออะไร?",
       "example": "TTL (Time To Live) automatically deletes keys after specified time. Set with EX/PX in SET command or EXPIRE after. TTL returns remaining seconds. Redis uses lazy deletion (on access) plus active expiration (background sampling). Essential for caching, sessions, rate limiting, and temporary data.",
       "exampleTranslation": "TTL (Time To Live) ลบ keys อัตโนมัติหลังเวลาที่กำหนด Set ด้วย EX/PX ใน SET command หรือ EXPIRE หลังจาก TTL return วินาทีที่เหลือ Redis ใช้ lazy deletion (เมื่อเข้าถึง) บวก active expiration (background sampling) จำเป็นสำหรับ caching, sessions, rate limiting และ temporary data"
     },
     {
       "vocab": "What is Redis Pub/Sub?",
-      "pronunciation": "# Publisher\nPUBLISH news \"Breaking news!\"\nPUBLISH chat:room1 \"Hello everyone\"\n\n# Subscriber (blocks and listens)\nSUBSCRIBE news                   # subscribe to channel\nSUBSCRIBE chat:room1 chat:room2  # multiple channels\nPSUBSCRIBE chat:*                # pattern subscribe\n\n# Unsubscribe\nUNSUBSCRIBE news\nPUNSUBSCRIBE chat:*\n\n# Check subscribers\nPUBSUB CHANNELS                  # active channels\nPUBSUB NUMSUB news              # subscriber count\n\n# Limitations:\n# - Fire and forget (no persistence)\n# - No message history\n# - Subscriber must be connected\n# - Use Streams for reliable messaging",
+      "pronunciation": "# Publisher\nPUBLISH news \"Breaking news!\"\nPUBLISH chat:room1 \"Hello everyone\"",
       "meaning": "Redis Pub/Sub คืออะไร?",
       "example": "Pub/Sub enables publish-subscribe messaging. Publishers send to channels, subscribers receive in real-time. PSUBSCRIBE allows pattern matching. Messages are fire-and-forget - not persisted, offline subscribers miss them. Good for real-time notifications, chat, live updates. For reliability, use Redis Streams instead.",
       "exampleTranslation": "Pub/Sub เปิดให้ publish-subscribe messaging Publishers ส่งไปยัง channels, subscribers รับแบบ real-time PSUBSCRIBE อนุญาต pattern matching Messages เป็น fire-and-forget - ไม่ persist, offline subscribers พลาดมัน ดีสำหรับ real-time notifications, chat, live updates สำหรับ reliability ใช้ Redis Streams แทน"
     },
     {
       "vocab": "What are Redis Streams?",
-      "pronunciation": "# Add to stream\nXADD mystream * field1 value1 field2 value2\n# Returns ID like \"1234567890123-0\"\n\n# Read from stream\nXREAD COUNT 10 STREAMS mystream 0       # from beginning\nXREAD COUNT 10 STREAMS mystream $       # new entries only\nXREAD BLOCK 5000 STREAMS mystream $     # block 5 seconds\n\n# Range queries\nXRANGE mystream - +                     # all entries\nXRANGE mystream 1234567890123-0 +       # from ID\nXLEN mystream                           # count entries\n\n# Consumer groups (for distributed processing)\nXGROUP CREATE mystream mygroup $ MKSTREAM\nXREADGROUP GROUP mygroup consumer1 COUNT 10 STREAMS mystream >\nXACK mystream mygroup 1234567890123-0   # acknowledge\nXPENDING mystream mygroup               # unacknowledged\n\n# Trim stream\nXTRIM mystream MAXLEN 1000              # keep last 1000",
+      "pronunciation": "# Add to stream\nXADD mystream * field1 value1 field2 value2\n# Returns ID like \"1234567890123-0\"",
       "meaning": "Redis Streams คืออะไร?",
       "example": "Streams are append-only log data structure. Each entry has auto-generated ID (timestamp-sequence). Supports consumer groups for distributed processing with acknowledgment. Unlike Pub/Sub, messages persist and can be replayed. Perfect for event sourcing, message queues, activity feeds, and log aggregation.",
       "exampleTranslation": "Streams คือ append-only log data structure แต่ละ entry มี auto-generated ID (timestamp-sequence) รองรับ consumer groups สำหรับ distributed processing พร้อม acknowledgment ไม่เหมือน Pub/Sub messages persist และ replay ได้ เหมาะสำหรับ event sourcing, message queues, activity feeds และ log aggregation"
     },
     {
       "vocab": "What are Redis transactions?",
-      "pronunciation": "# Basic transaction\nMULTI                        # start transaction\nSET key1 \"value1\"\nINCR counter\nLPUSH mylist \"item\"\nEXEC                         # execute all commands\n# DISCARD                    # cancel transaction\n\n# Watch for optimistic locking\nWATCH balance               # watch key for changes\nval = GET balance\nMULTI\nSET balance (val - 100)\nEXEC                        # fails if balance changed\n# Returns nil if watched key was modified\n\n# Note: No rollback on error\n# Commands queue, execute atomically\n# If one command fails, others still execute\n\n# For complex atomic operations, use Lua scripts\nEVAL \"return redis.call('SET', KEYS[1], ARGV[1])\" 1 key value",
+      "pronunciation": "# Basic transaction\nMULTI                        # start transaction\nSET key1 \"value1\"",
       "meaning": "Redis transactions คืออะไร?",
       "example": "MULTI/EXEC queues commands and executes atomically. WATCH enables optimistic locking - transaction fails if watched key changed. No rollback: if one command fails, others still execute. For true atomicity with logic, use Lua scripts. Transactions isolate commands from other clients.",
       "exampleTranslation": "MULTI/EXEC queue commands และ execute แบบ atomic WATCH เปิดให้ optimistic locking - transaction fail ถ้า watched key เปลี่ยน ไม่มี rollback: ถ้า command หนึ่ง fail ตัวอื่นยัง execute สำหรับ atomicity จริงพร้อม logic ใช้ Lua scripts Transactions แยก commands จาก clients อื่น"
     },
     {
       "vocab": "What is Lua scripting in Redis?",
-      "pronunciation": "# Execute Lua script\nEVAL \"return redis.call('GET', KEYS[1])\" 1 mykey\n\n# Script with logic\nEVAL \"\nlocal current = redis.call('GET', KEYS[1])\nif current then\n  return redis.call('INCR', KEYS[1])\nelse\n  redis.call('SET', KEYS[1], 1)\n  return 1\nend\n\" 1 counter\n\n# Load script (returns SHA)\nSCRIPT LOAD \"return redis.call('GET', KEYS[1])\"\n# Returns: \"a42059b356c875f0717db19a51f6aaa9161e77a2\"\n\n# Execute by SHA (faster)\nEVALSHA a42059b356c875f0717db19a51f6aaa9161e77a2 1 mykey\n\n# Check script exists\nSCRIPT EXISTS <sha>\n\n# Flush scripts\nSCRIPT FLUSH",
+      "pronunciation": "# Execute Lua script\nEVAL \"return redis.call('GET', KEYS[1])\" 1 mykey\n# Script with logic",
       "meaning": "Lua scripting ใน Redis คืออะไร?",
       "example": "Lua scripts run atomically on Redis server. EVAL executes script with KEYS and ARGV arrays. Scripts can contain logic, loops, conditionals impossible in transactions. SCRIPT LOAD caches script, EVALSHA runs by hash (faster). Use for: atomic operations, complex logic, reducing round trips. Scripts block other commands while running.",
       "exampleTranslation": "Lua scripts รันแบบ atomic บน Redis server EVAL execute script ด้วย KEYS และ ARGV arrays Scripts มี logic, loops, conditionals ที่ทำไม่ได้ใน transactions SCRIPT LOAD cache script, EVALSHA รันด้วย hash (เร็วกว่า) ใช้สำหรับ: atomic operations, complex logic, ลด round trips Scripts block commands อื่นขณะรัน"
     },
     {
       "vocab": "What is Redis persistence (RDB vs AOF)?",
-      "pronunciation": "# RDB - Point-in-time snapshots\n# redis.conf:\nsave 900 1        # snapshot if 1 change in 900 sec\nsave 300 10       # snapshot if 10 changes in 300 sec\nsave 60 10000     # snapshot if 10000 changes in 60 sec\n\n# Manual snapshot\nBGSAVE            # background save\nSAVE              # blocking save (avoid in production)\n\n# AOF - Append Only File (log every write)\n# redis.conf:\nappendonly yes\nappendfsync always    # fsync every write (safest, slowest)\nappendfsync everysec  # fsync every second (recommended)\nappendfsync no        # let OS decide\n\n# Rewrite AOF (compact)\nBGREWRITEAOF\n\n# Combined (Redis 7+)\naof-use-rdb-preamble yes  # hybrid: RDB + AOF tail",
+      "pronunciation": "# RDB - Point-in-time snapshots\n# redis.conf:\nsave 900 1        # snapshot if 1 change in 900 sec",
       "meaning": "Redis persistence (RDB vs AOF) คืออะไร?",
       "example": "RDB creates point-in-time snapshots at intervals. Fast restart, compact files, but may lose recent data. AOF logs every write operation - better durability but larger files. Use both: RDB for backups, AOF for durability. Redis 7+ supports hybrid: RDB snapshot with AOF for changes since snapshot.",
       "exampleTranslation": "RDB สร้าง point-in-time snapshots ตาม intervals Restart เร็ว files กะทัดรัด แต่อาจสูญเสีย data ล่าสุด AOF log ทุก write operation - durability ดีกว่าแต่ files ใหญ่กว่า ใช้ทั้งคู่: RDB สำหรับ backups, AOF สำหรับ durability Redis 7+ รองรับ hybrid: RDB snapshot กับ AOF สำหรับ changes หลัง snapshot"
     },
     {
       "vocab": "What is Redis replication?",
-      "pronunciation": "# On replica server\nREPLICAOF master-ip 6379     # connect to master\nREPLICAOF NO ONE             # stop replication, become master\n\n# redis.conf (replica)\nreplicaof master-ip 6379\nreplica-read-only yes        # recommended\n\n# Check replication status\nINFO replication\n\n# Output:\n# role:master\n# connected_slaves:2\n# slave0:ip=10.0.0.2,port=6379,state=online\n\n# Replication is async by default\n# WAIT for sync replication\nWAIT 1 1000    # wait for 1 replica, 1000ms timeout\n\n# Replication flow:\n# 1. Replica connects to master\n# 2. Master creates RDB snapshot\n# 3. Master sends RDB to replica\n# 4. Master sends buffered commands\n# 5. Ongoing replication of new commands",
+      "pronunciation": "# On replica server\nREPLICAOF master-ip 6379     # connect to master\nREPLICAOF NO ONE             # stop replication, become master",
       "meaning": "Redis replication คืออะไร?",
       "example": "Replication creates exact copies of master on replica servers. Replicas are read-only by default. Replication is asynchronous - replicas may lag slightly. Use for read scaling, high availability, and backups. WAIT command can force synchronous replication for critical writes.",
       "exampleTranslation": "Replication สร้าง copies ที่เหมือนกันของ master บน replica servers Replicas เป็น read-only โดย default Replication เป็น asynchronous - replicas อาจล่าช้าเล็กน้อย ใช้สำหรับ read scaling, high availability และ backups WAIT command บังคับ synchronous replication สำหรับ critical writes ได้"
     },
     {
       "vocab": "What is Redis Cluster?",
-      "pronunciation": "# Cluster uses hash slots (16384 total)\n# Each node handles a range of slots\n# Key -> slot: CRC16(key) mod 16384\n\n# Create cluster (redis-cli)\nredis-cli --cluster create \\\n  node1:6379 node2:6379 node3:6379 \\\n  node4:6379 node5:6379 node6:6379 \\\n  --cluster-replicas 1\n\n# Cluster commands\nCLUSTER INFO             # cluster state\nCLUSTER NODES            # node list\nCLUSTER SLOTS            # slot assignments\nCLUSTER KEYSLOT mykey    # which slot for key\n\n# Hash tags - force keys to same slot\nSET user:{123}:name \"John\"\nSET user:{123}:email \"john@example.com\"\n# Both go to same slot because of {123}\n\n# Multi-key commands require same slot\nMGET user:{123}:name user:{123}:email  # OK\nMGET user:1:name user:2:name           # ERROR",
+      "pronunciation": "# Cluster uses hash slots (16384 total)\n# Each node handles a range of slots\n# Key -> slot: CRC16(key) mod 16384",
       "meaning": "Redis Cluster คืออะไร?",
       "example": "Redis Cluster provides automatic sharding across multiple nodes. Data distributed using hash slots (16384 total). Each master handles subset of slots with optional replicas. Hash tags {} force related keys to same slot. Multi-key operations only work on same slot. Provides horizontal scaling and high availability.",
       "exampleTranslation": "Redis Cluster ให้ automatic sharding ข้าม nodes หลายตัว Data กระจายโดยใช้ hash slots (16384 รวม) แต่ละ master จัดการ subset ของ slots พร้อม replicas ที่เลือกได้ Hash tags {} บังคับ related keys ไปที่ slot เดียวกัน Multi-key operations ทำงานบน slot เดียวกันเท่านั้น ให้ horizontal scaling และ high availability"
     },
     {
       "vocab": "What is Redis Sentinel?",
-      "pronunciation": "# Sentinel monitors master and replicas\n# Provides automatic failover\n\n# sentinel.conf\nsentinel monitor mymaster 192.168.1.1 6379 2\n# 2 = quorum (sentinels needed to agree on failure)\n\nsentinel down-after-milliseconds mymaster 5000\nsentinel failover-timeout mymaster 60000\nsentinel parallel-syncs mymaster 1\n\n# Run sentinel\nredis-sentinel /path/to/sentinel.conf\n# or: redis-server /path/to/sentinel.conf --sentinel\n\n# Query sentinel\nSENTINEL masters                    # list masters\nSENTINEL master mymaster            # master info\nSENTINEL replicas mymaster          # replica list\nSENTINEL get-master-addr-by-name mymaster\n\n# Client connects to sentinel first\n# Sentinel returns current master address\n# On failover, sentinel updates clients",
+      "pronunciation": "# Sentinel monitors master and replicas\n# Provides automatic failover\n# sentinel.conf",
       "meaning": "Redis Sentinel คืออะไร?",
       "example": "Sentinel provides high availability for non-clustered Redis. Monitors master and replicas, performs automatic failover if master fails. Multiple sentinels form quorum for reliability. Clients connect to sentinel to discover current master. Good for simpler setups without sharding needs.",
       "exampleTranslation": "Sentinel ให้ high availability สำหรับ Redis ที่ไม่ใช่ cluster Monitor master และ replicas ทำ automatic failover ถ้า master fail หลาย sentinels สร้าง quorum สำหรับ reliability Clients connect กับ sentinel เพื่อค้นหา current master ดีสำหรับ setups ที่ง่ายกว่าโดยไม่ต้อง sharding"
     },
     {
       "vocab": "What is the Cache-Aside pattern?",
-      "pronunciation": "# Read pattern:\n# 1. Check cache\n# 2. If miss, read from database\n# 3. Store in cache\n\ndef get_user(user_id):\n    # Try cache first\n    cached = redis.get(f\"user:{user_id}\")\n    if cached:\n        return json.loads(cached)\n    \n    # Cache miss - get from DB\n    user = db.query(\"SELECT * FROM users WHERE id = ?\", user_id)\n    \n    # Store in cache with TTL\n    redis.setex(f\"user:{user_id}\", 3600, json.dumps(user))\n    \n    return user\n\n# Write pattern:\n# Option 1: Invalidate cache\ndef update_user(user_id, data):\n    db.update(user_id, data)\n    redis.delete(f\"user:{user_id}\")  # invalidate\n\n# Option 2: Update cache (less common)\ndef update_user(user_id, data):\n    db.update(user_id, data)\n    redis.setex(f\"user:{user_id}\", 3600, json.dumps(data))",
+      "pronunciation": "# Read pattern:\n# 1. Check cache\n# 2. If miss, read from database",
       "meaning": "Cache-Aside pattern คืออะไร?",
       "example": "Cache-Aside (Lazy Loading): application manages cache. On read: check cache, if miss load from DB and cache it. On write: update DB then invalidate cache (preferred) or update both. Simple and flexible. Downsides: first request always slow, cache may become stale if invalidation fails.",
       "exampleTranslation": "Cache-Aside (Lazy Loading): application จัดการ cache เมื่ออ่าน: check cache ถ้า miss load จาก DB และ cache มัน เมื่อเขียน: update DB แล้ว invalidate cache (แนะนำ) หรือ update ทั้งคู่ ง่ายและยืดหยุ่น ข้อเสีย: request แรก slow เสมอ cache อาจ stale ถ้า invalidation fail"
     },
     {
       "vocab": "What is Write-Through and Write-Behind caching?",
-      "pronunciation": "# Write-Through:\n# Write to cache and DB synchronously\n\ndef save_user(user_id, data):\n    # Write to both atomically\n    redis.setex(f\"user:{user_id}\", 3600, json.dumps(data))\n    db.save(user_id, data)  # synchronous\n    return data\n\n# Pros: cache always consistent\n# Cons: write latency (both operations)\n\n# Write-Behind (Write-Back):\n# Write to cache, async write to DB\n\ndef save_user(user_id, data):\n    redis.setex(f\"user:{user_id}\", 3600, json.dumps(data))\n    queue.enqueue('sync_to_db', user_id, data)  # async\n    return data\n\n# Background worker syncs to DB\ndef sync_to_db(user_id, data):\n    db.save(user_id, data)\n\n# Pros: very fast writes\n# Cons: complex, data loss risk if cache fails",
+      "pronunciation": "# Write-Through:\n# Write to cache and DB synchronously\ndef save_user(user_id, data):",
       "meaning": "Write-Through และ Write-Behind caching คืออะไร?",
       "example": "Write-Through: write to cache and DB synchronously. Data always consistent but slower writes. Write-Behind: write to cache immediately, async sync to DB. Very fast writes but complex and risk of data loss if cache fails before sync. Choose based on consistency vs performance needs.",
       "exampleTranslation": "Write-Through: เขียนไปยัง cache และ DB พร้อมกัน Data consistent เสมอแต่เขียนช้ากว่า Write-Behind: เขียนไปยัง cache ทันที async sync ไปยัง DB เขียนเร็วมากแต่ซับซ้อนและเสี่ยงสูญเสีย data ถ้า cache fail ก่อน sync เลือกตาม consistency vs performance needs"
     },
     {
       "vocab": "What is cache stampede and how to prevent it?",
-      "pronunciation": "# Problem: Many requests hit expired key simultaneously\n# All go to database, causing overload\n\n# Solution 1: Locking\ndef get_data(key):\n    data = redis.get(key)\n    if data:\n        return data\n    \n    lock_key = f\"lock:{key}\"\n    if redis.setnx(lock_key, 1):\n        redis.expire(lock_key, 10)\n        try:\n            data = fetch_from_db()\n            redis.setex(key, 3600, data)\n        finally:\n            redis.delete(lock_key)\n        return data\n    else:\n        time.sleep(0.1)  # wait and retry\n        return get_data(key)\n\n# Solution 2: Probabilistic early expiration\nttl = redis.ttl(key)\nif ttl < threshold and random() < probability:\n    # Refresh before actual expiration\n    refresh_cache(key)\n\n# Solution 3: Never expire, background refresh\n# Cache indefinitely, worker refreshes periodically",
+      "pronunciation": "# Problem: Many requests hit expired key simultaneously\n# All go to database, causing overload\n# Solution 1: Locking",
       "meaning": "Cache stampede คืออะไรและป้องกันอย่างไร?",
       "example": "Cache stampede occurs when many requests hit an expired key simultaneously, all querying the database. Solutions: 1) Locking - only one request refreshes, others wait. 2) Probabilistic early refresh - refresh before expiration based on probability. 3) Never expire with background refresh. Critical for high-traffic systems.",
       "exampleTranslation": "Cache stampede เกิดเมื่อหลาย requests hit expired key พร้อมกัน ทั้งหมด query database Solutions: 1) Locking - แค่ request เดียว refresh ที่เหลือรอ 2) Probabilistic early refresh - refresh ก่อน expiration ตาม probability 3) ไม่ expire กับ background refresh สำคัญสำหรับ high-traffic systems"
     },
     {
       "vocab": "What is distributed locking with Redis?",
-      "pronunciation": "# Simple lock (single Redis)\nSET lock:resource value NX EX 30\n# NX = only if not exists\n# EX = expire in 30 seconds\n\n# Release (must verify owner)\nif redis.get(\"lock:resource\") == my_value:\n    redis.delete(\"lock:resource\")\n\n# Better: Lua script for atomic release\nEVAL \"\nif redis.call('get', KEYS[1]) == ARGV[1] then\n    return redis.call('del', KEYS[1])\nelse\n    return 0\nend\n\" 1 lock:resource my_value\n\n# Redlock algorithm (multiple Redis instances)\n# 1. Get current time\n# 2. Try to acquire lock on N instances\n# 3. Lock acquired if majority (N/2+1) succeed\n# 4. Lock validity = TTL - acquisition time\n# 5. Release on all instances\n\n# Using redlock-py or similar library\nlock = redlock.lock(\"resource\", 1000)  # 1000ms TTL\ntry:\n    # do work\nfinally:\n    redlock.unlock(lock)",
+      "pronunciation": "# Simple lock (single Redis)\nSET lock:resource value NX EX 30\n# NX = only if not exists",
       "meaning": "Distributed locking กับ Redis คืออะไร?",
       "example": "Use SET with NX (not exists) and EX (expiration) for simple locks. Always use unique value and verify before release. Lua script ensures atomic release. For multiple Redis instances, use Redlock algorithm (acquire on majority). Essential for preventing race conditions in distributed systems.",
       "exampleTranslation": "ใช้ SET กับ NX (not exists) และ EX (expiration) สำหรับ locks ง่ายๆ ใช้ unique value เสมอและ verify ก่อน release Lua script รับประกัน atomic release สำหรับหลาย Redis instances ใช้ Redlock algorithm (acquire บน majority) จำเป็นสำหรับป้องกัน race conditions ใน distributed systems"
     },
     {
       "vocab": "What is rate limiting with Redis?",
-      "pronunciation": "# Fixed window counter\ndef is_allowed(user_id, limit=100, window=60):\n    key = f\"ratelimit:{user_id}:{int(time.time() / window)}\"\n    current = redis.incr(key)\n    if current == 1:\n        redis.expire(key, window)\n    return current <= limit\n\n# Sliding window (Sorted Set)\ndef is_allowed(user_id, limit=100, window=60):\n    key = f\"ratelimit:{user_id}\"\n    now = time.time()\n    \n    pipe = redis.pipeline()\n    pipe.zremrangebyscore(key, 0, now - window)  # remove old\n    pipe.zadd(key, {str(now): now})               # add current\n    pipe.zcard(key)                               # count\n    pipe.expire(key, window)\n    _, _, count, _ = pipe.execute()\n    \n    return count <= limit\n\n# Token bucket (using Lua for atomicity)\n# Tokens added at fixed rate, consumed per request\n# Allows bursting up to bucket size",
+      "pronunciation": "# Fixed window counter\ndef is_allowed(user_id, limit=100, window=60):\n    key = f\"ratelimit:{user_id}:{int(time.time() / window)}\"",
       "meaning": "Rate limiting กับ Redis คืออะไร?",
       "example": "Fixed window: simple counter per time window, but allows burst at window edges. Sliding window (Sorted Set): tracks exact timestamps, more accurate but more memory. Token bucket: allows controlled bursting. Use pipelines or Lua for atomicity. Redis perfect for rate limiting due to speed and atomic operations.",
       "exampleTranslation": "Fixed window: counter ง่ายต่อ time window แต่อนุญาต burst ที่ขอบ window Sliding window (Sorted Set): track timestamps ที่แน่นอน แม่นยำกว่าแต่ใช้ memory มากกว่า Token bucket: อนุญาต controlled bursting ใช้ pipelines หรือ Lua สำหรับ atomicity Redis เหมาะสำหรับ rate limiting เพราะความเร็วและ atomic operations"
     },
     {
       "vocab": "What is Redis memory management?",
-      "pronunciation": "# Check memory usage\nINFO memory\nMEMORY USAGE key        # memory for specific key\nMEMORY DOCTOR           # memory issues report\n\n# Set max memory\n# redis.conf:\nmaxmemory 4gb\nmaxmemory-policy allkeys-lru\n\n# Eviction policies:\n# noeviction - return errors (default)\n# allkeys-lru - remove least recently used\n# allkeys-lfu - remove least frequently used\n# volatile-lru - LRU among keys with TTL\n# volatile-lfu - LFU among keys with TTL\n# allkeys-random - random eviction\n# volatile-random - random among TTL keys\n# volatile-ttl - shortest TTL first\n\n# Memory optimization\n# Use hashes for small objects (ziplist encoding)\n# Shorter key names\n# Use appropriate data types\n# Set TTL on temporary data\n\n# Check encoding\nOBJECT ENCODING key     # ziplist, hashtable, etc.",
+      "pronunciation": "# Check memory usage\nINFO memory\nMEMORY USAGE key        # memory for specific key",
       "meaning": "Redis memory management คืออะไร?",
       "example": "Set maxmemory to limit Redis memory usage. Eviction policies determine what to remove when full: LRU (least recently used), LFU (least frequently used), TTL-based, or random. allkeys-lru common for caches. Optimize with: hashes for small objects, short keys, TTLs. Monitor with INFO memory.",
       "exampleTranslation": "Set maxmemory เพื่อจำกัด Redis memory usage Eviction policies กำหนดว่าจะลบอะไรเมื่อเต็ม: LRU (least recently used), LFU (least frequently used), TTL-based หรือ random allkeys-lru ใช้บ่อยสำหรับ caches Optimize ด้วย: hashes สำหรับ small objects, keys สั้น, TTLs Monitor ด้วย INFO memory"
     },
     {
       "vocab": "What are Redis pipelining and batching?",
-      "pronunciation": "# Without pipeline - one round trip per command\nredis.set(\"key1\", \"value1\")  # RTT\nredis.set(\"key2\", \"value2\")  # RTT\nredis.set(\"key3\", \"value3\")  # RTT\n# Total: 3 round trips\n\n# With pipeline - one round trip for all\npipe = redis.pipeline()\npipe.set(\"key1\", \"value1\")\npipe.set(\"key2\", \"value2\")\npipe.set(\"key3\", \"value3\")\nresults = pipe.execute()\n# Total: 1 round trip\n\n# Pipeline with transaction\npipe = redis.pipeline(transaction=True)  # wraps in MULTI/EXEC\n\n# Batch reads\npipe = redis.pipeline(transaction=False)\nfor user_id in user_ids:\n    pipe.hgetall(f\"user:{user_id}\")\nusers = pipe.execute()\n\n# Performance: Pipeline can improve throughput 5-10x\n# by reducing network round trips",
+      "pronunciation": "# Without pipeline - one round trip per command\nredis.set(\"key1\", \"value1\")  # RTT\nredis.set(\"key2\", \"value2\")  # RTT",
       "meaning": "Redis pipelining และ batching คืออะไร?",
       "example": "Pipelining sends multiple commands in single network round trip without waiting for replies. Dramatically reduces latency when executing many commands. Commands execute in order but not atomically unless combined with MULTI/EXEC. Can improve throughput 5-10x. Essential for bulk operations.",
       "exampleTranslation": "Pipelining ส่งหลาย commands ใน single network round trip โดยไม่รอ replies ลด latency ได้มากเมื่อ execute หลาย commands Commands execute ตามลำดับแต่ไม่ atomic ยกเว้นรวมกับ MULTI/EXEC สามารถปรับปรุง throughput 5-10x จำเป็นสำหรับ bulk operations"
     },
     {
       "vocab": "What are Redis best practices?",
-      "pronunciation": "# Key naming convention\nuser:123:profile           # object:id:field\nsession:abc123             # type:identifier\ncache:api:/users           # namespace:source\n\n# Avoid large keys\n# String: < 100KB recommended\n# Hash/List/Set: < 1000 elements for ziplist\n\n# Use appropriate types\n# Counters: String with INCR\n# Objects: Hash (not JSON string)\n# Unique items: Set\n# Ranking: Sorted Set\n# Queue: List or Stream\n\n# Always set TTL for cache\nSETEX key 3600 value      # 1 hour\n\n# Avoid blocking commands in production\n# KEYS * -> use SCAN\n# SMEMBERS large_set -> use SSCAN\n# DEL large_key -> use UNLINK\n\n# Monitor slow commands\nSLOWLOG GET 10\nCONFIG SET slowlog-log-slower-than 10000  # 10ms\n\n# Use connection pooling in applications",
+      "pronunciation": "# Key naming convention\nuser:123:profile           # object:id:field\nsession:abc123             # type:identifier",
       "meaning": "Redis best practices มีอะไรบ้าง?",
       "example": "Naming: use colons for hierarchy (user:123:profile). Keep values small (< 100KB). Use appropriate data types (Hash for objects, not JSON strings). Always set TTL for cache data. Avoid blocking commands (use SCAN instead of KEYS). Monitor with SLOWLOG. Use connection pooling in applications.",
       "exampleTranslation": "Naming: ใช้ colons สำหรับ hierarchy (user:123:profile) เก็บค่าให้เล็ก (< 100KB) ใช้ data types ที่เหมาะสม (Hash สำหรับ objects ไม่ใช่ JSON strings) Set TTL สำหรับ cache data เสมอ หลีกเลี่ยง blocking commands (ใช้ SCAN แทน KEYS) Monitor ด้วย SLOWLOG ใช้ connection pooling ใน applications"
     },
     {
       "vocab": "What is SCAN vs KEYS?",
-      "pronunciation": "# KEYS - blocks Redis, avoid in production!\nKEYS user:*              # returns all matching keys\nKEYS *                   # NEVER do this!\n# Scans entire keyspace, blocks other operations\n\n# SCAN - cursor-based iteration, non-blocking\nSCAN 0 MATCH user:* COUNT 100\n# Returns: (new_cursor, [keys])\n# Continue until cursor returns 0\n\n# Python example\ncursor = 0\nall_keys = []\nwhile True:\n    cursor, keys = redis.scan(cursor, match=\"user:*\", count=100)\n    all_keys.extend(keys)\n    if cursor == 0:\n        break\n\n# Type-specific scans\nSSCAN myset 0 MATCH pattern* COUNT 100   # Set\nHSCAN myhash 0 MATCH field* COUNT 100    # Hash\nZSCAN myzset 0 MATCH member* COUNT 100   # Sorted Set\n\n# COUNT is hint, not guarantee\n# May return 0 keys in some iterations\n# May return duplicates (handle in application)",
+      "pronunciation": "# KEYS - blocks Redis, avoid in production!\nKEYS user:*              # returns all matching keys\nKEYS *                   # NEVER do this!",
       "meaning": "SCAN vs KEYS ต่างกันอย่างไร?",
       "example": "KEYS blocks Redis while scanning entire keyspace - never use in production. SCAN is cursor-based, non-blocking, returns results incrementally. Use COUNT to hint batch size. May return duplicates or empty results in some iterations. Type-specific variants: SSCAN, HSCAN, ZSCAN. Always prefer SCAN for pattern matching.",
       "exampleTranslation": "KEYS block Redis ขณะ scan ทั้ง keyspace - ห้ามใช้ใน production SCAN เป็น cursor-based, non-blocking, return results แบบ incremental ใช้ COUNT เพื่อ hint batch size อาจ return duplicates หรือ empty results ในบาง iterations Type-specific variants: SSCAN, HSCAN, ZSCAN ใช้ SCAN สำหรับ pattern matching เสมอ"
     },
     {
       "vocab": "What is HyperLogLog?",
-      "pronunciation": "# Count unique items with constant memory (~12KB)\nPFADD visitors \"user1\" \"user2\" \"user3\"\nPFADD visitors \"user1\" \"user4\"  # duplicate ignored\nPFCOUNT visitors                 # returns ~4\n\n# Merge multiple HyperLogLogs\nPFADD page1:visitors \"user1\" \"user2\"\nPFADD page2:visitors \"user2\" \"user3\"\nPFMERGE all:visitors page1:visitors page2:visitors\nPFCOUNT all:visitors             # ~3 unique\n\n# Standard error: 0.81%\n# 1 million unique items = ~12KB memory\n# vs Set: 1 million items = ~50MB+ memory\n\n# Use cases:\n# - Unique visitors per day\n# - Unique searches\n# - Unique events\n# - Any cardinality counting where approximation is OK\n\n# Trade-off: Cannot retrieve actual elements\n# Only get approximate count",
+      "pronunciation": "# Count unique items with constant memory (~12KB)\nPFADD visitors \"user1\" \"user2\" \"user3\"\nPFADD visitors \"user1\" \"user4\"  # duplicate ignored",
       "meaning": "HyperLogLog คืออะไร?",
       "example": "HyperLogLog counts unique elements with constant memory (~12KB) regardless of cardinality. Standard error ~0.81%. PFADD adds elements, PFCOUNT returns approximate count, PFMERGE combines. Cannot retrieve actual elements. Perfect for unique visitor counts, event counting - anywhere exact count isn't required.",
       "exampleTranslation": "HyperLogLog นับ unique elements ด้วย constant memory (~12KB) ไม่ว่า cardinality จะเท่าไหร่ Standard error ~0.81% PFADD เพิ่ม elements, PFCOUNT return approximate count, PFMERGE รวม ดึง actual elements ไม่ได้ เหมาะสำหรับนับ unique visitors, event counting - ที่ไหนก็ตามที่ไม่ต้องการ exact count"
     },
     {
       "vocab": "What are Bitmaps in Redis?",
-      "pronunciation": "# Set/Get individual bits\nSETBIT daily:active:2024-01-15 123 1   # user 123 active\nGETBIT daily:active:2024-01-15 123     # returns 1\n\n# Count set bits\nBITCOUNT daily:active:2024-01-15       # total active users\n\n# Bit operations\nBITOP AND weekly daily:mon daily:tue daily:wed\n# Users active all 3 days\n\nBITOP OR weekly daily:mon daily:tue daily:wed\n# Users active any day\n\n# Find first set/unset bit\nBITPOS daily:active:2024-01-15 1       # first active user ID\nBITPOS daily:active:2024-01-15 0       # first inactive user ID\n\n# Memory efficient for boolean per-user data\n# 1 million users = 125KB\n\n# Use cases:\n# - Daily active users\n# - Feature flags per user\n# - Online status\n# - Bloom filter implementation",
+      "pronunciation": "# Set/Get individual bits\nSETBIT daily:active:2024-01-15 123 1   # user 123 active\nGETBIT daily:active:2024-01-15 123     # returns 1",
       "meaning": "Bitmaps ใน Redis คืออะไร?",
       "example": "Bitmaps are strings treated as bit arrays. SETBIT/GETBIT for individual bits. BITCOUNT counts set bits. BITOP performs AND/OR/XOR/NOT across bitmaps. Very memory efficient for per-user boolean flags (1M users = 125KB). Use for daily active users, feature flags, online status tracking.",
       "exampleTranslation": "Bitmaps คือ strings ที่ treat เป็น bit arrays SETBIT/GETBIT สำหรับ bits แต่ละตัว BITCOUNT นับ set bits BITOP ทำ AND/OR/XOR/NOT ข้าม bitmaps ประหยัด memory มากสำหรับ per-user boolean flags (1M users = 125KB) ใช้สำหรับ daily active users, feature flags, online status tracking"
     },
     {
       "vocab": "What is Geospatial indexing in Redis?",
-      "pronunciation": "# Add locations (longitude, latitude, name)\nGEOADD stores -122.4194 37.7749 \"San Francisco\"\nGEOADD stores -73.9857 40.7484 \"New York\"\nGEOADD stores -0.1276 51.5074 \"London\"\n\n# Get position\nGEOPOS stores \"San Francisco\"\n# Returns: -122.4194, 37.7749\n\n# Distance between points\nGEODIST stores \"San Francisco\" \"New York\" km\n# Returns: ~4130 km\n\n# Find nearby (radius search)\nGEORADIUS stores -122.4 37.8 100 km WITHDIST\n# Returns stores within 100km with distance\n\n# Redis 6.2+: GEOSEARCH\nGEOSEARCH stores FROMMEMBER \"San Francisco\" BYRADIUS 100 km\n\n# Stored as Sorted Set internally\n# Score = geohash\nZRANGE stores 0 -1 WITHSCORES\n\n# Use cases:\n# - Store locator\n# - Nearby friends\n# - Delivery radius\n# - Location-based services",
+      "pronunciation": "# Add locations (longitude, latitude, name)\nGEOADD stores -122.4194 37.7749 \"San Francisco\"\nGEOADD stores -73.9857 40.7484 \"New York\"",
       "meaning": "Geospatial indexing ใน Redis คืออะไร?",
       "example": "Redis Geo stores coordinates using Sorted Sets with geohash scores. GEOADD adds locations, GEODIST calculates distance, GEORADIUS/GEOSEARCH finds points within radius. Supports units (m, km, mi, ft). Good for store locators, nearby search, location-based features. Internally uses Sorted Set, so all ZSET commands work.",
       "exampleTranslation": "Redis Geo เก็บ coordinates โดยใช้ Sorted Sets กับ geohash scores GEOADD เพิ่ม locations, GEODIST คำนวณระยะทาง, GEORADIUS/GEOSEARCH หาจุดภายใน radius รองรับ units (m, km, mi, ft) ดีสำหรับ store locators, nearby search, location-based features ใช้ Sorted Set ภายใน ดังนั้น ZSET commands ทั้งหมดใช้ได้"
     },
     {
       "vocab": "What is Redis JSON (RedisJSON)?",
-      "pronunciation": "# RedisJSON module - native JSON support\n\n# Set JSON document\nJSON.SET user:1 $ '{\"name\":\"John\",\"age\":30,\"email\":\"john@example.com\"}'\n\n# Get entire document\nJSON.GET user:1\n\n# Get specific path\nJSON.GET user:1 $.name         # returns [\"John\"]\nJSON.GET user:1 $.age          # returns [30]\n\n# Set nested value\nJSON.SET user:1 $.address '{\"city\":\"NYC\",\"zip\":\"10001\"}'\n\n# Update value\nJSON.SET user:1 $.age 31\nJSON.NUMINCRBY user:1 $.age 1  # increment\n\n# Array operations\nJSON.SET user:1 $.tags '[\"admin\"]'\nJSON.ARRAPPEND user:1 $.tags '\"vip\"'\nJSON.ARRLEN user:1 $.tags\n\n# Query with JSONPath\nJSON.GET user:1 '$..city'      # all cities\n\n# Benefits over Hash:\n# - Nested structures\n# - Array operations\n# - JSONPath queries",
+      "pronunciation": "# RedisJSON module - native JSON support\n# Set JSON document\nJSON.SET user:1 $ '{\"name\":\"John\",\"age\":30,\"email\":\"john@example.com\"}'",
       "meaning": "Redis JSON (RedisJSON) คืออะไร?",
       "example": "RedisJSON is a module for native JSON document storage. Supports JSONPath for queries, nested structures, in-place updates. JSON.SET stores, JSON.GET retrieves with path selection. Better than storing JSON strings: partial updates, atomic operations on nested data, array operations. Requires RedisJSON module.",
       "exampleTranslation": "RedisJSON คือ module สำหรับ native JSON document storage รองรับ JSONPath สำหรับ queries, nested structures, in-place updates JSON.SET เก็บ, JSON.GET ดึงด้วย path selection ดีกว่าเก็บ JSON strings: partial updates, atomic operations บน nested data, array operations ต้องมี RedisJSON module"
     },
     {
       "vocab": "What is the difference between Redis and Memcached?",
-      "pronunciation": "# Redis advantages:\n# - Multiple data structures (not just strings)\n# - Persistence (RDB, AOF)\n# - Replication and Cluster\n# - Pub/Sub, Streams\n# - Lua scripting\n# - Transactions\n# - TTL per key\n\n# Memcached advantages:\n# - Multi-threaded (better for simple caching)\n# - Lower memory overhead per key\n# - Simpler, less features = less complexity\n# - Mature, battle-tested for caching\n\n# Choose Redis when:\n# - Need data structures beyond strings\n# - Need persistence\n# - Need pub/sub or streams\n# - Need complex operations (Lua)\n\n# Choose Memcached when:\n# - Simple key-value caching only\n# - Memory efficiency is critical\n# - Already using and working well",
+      "pronunciation": "# Redis advantages:\n# - Multiple data structures (not just strings)\n# - Persistence (RDB, AOF)",
       "meaning": "Redis และ Memcached ต่างกันอย่างไร?",
       "example": "Redis: rich data structures, persistence, replication, pub/sub, Lua scripting, single-threaded. Memcached: simple key-value, multi-threaded, no persistence, lower memory overhead. Choose Redis for complex needs (data structures, persistence, pub/sub). Choose Memcached for simple high-throughput string caching.",
       "exampleTranslation": "Redis: rich data structures, persistence, replication, pub/sub, Lua scripting, single-threaded Memcached: simple key-value, multi-threaded, ไม่มี persistence, memory overhead ต่ำกว่า เลือก Redis สำหรับ needs ที่ซับซ้อน (data structures, persistence, pub/sub) เลือก Memcached สำหรับ simple high-throughput string caching"
     },
     {
       "vocab": "What is Redis connection management?",
-      "pronunciation": "# Check connected clients\nCLIENT LIST\nINFO clients\n\n# Max clients setting\n# redis.conf: maxclients 10000\n\n# Connection pooling (application side)\n# Python example with redis-py\nimport redis\n\npool = redis.ConnectionPool(\n    host='localhost',\n    port=6379,\n    max_connections=50,\n    decode_responses=True\n)\nredis_client = redis.Redis(connection_pool=pool)\n\n# Connection timeout\npool = redis.ConnectionPool(\n    socket_timeout=5,\n    socket_connect_timeout=5\n)\n\n# Kill specific client\nCLIENT KILL ID 123\nCLIENT KILL TYPE normal\n\n# Set client name (for debugging)\nCLIENT SETNAME myapp-worker-1\n\n# Avoid:\n# - Creating new connection per request\n# - Leaving connections idle too long\n# - Not handling connection errors",
+      "pronunciation": "# Check connected clients\nCLIENT LIST\nINFO clients",
       "meaning": "Redis connection management คืออะไร?",
       "example": "Use connection pooling in applications - don't create connection per request. Set appropriate pool size based on concurrency needs. Configure timeouts for reliability. Monitor with CLIENT LIST and INFO clients. Set client names for debugging. Handle connection errors with retry logic. Close idle connections.",
       "exampleTranslation": "ใช้ connection pooling ใน applications - อย่าสร้าง connection ต่อ request Set pool size ที่เหมาะสมตาม concurrency needs Configure timeouts สำหรับ reliability Monitor ด้วย CLIENT LIST และ INFO clients Set client names สำหรับ debugging Handle connection errors ด้วย retry logic ปิด idle connections"
     },
     {
       "vocab": "What is UNLINK vs DEL?",
-      "pronunciation": "# DEL - synchronous deletion\nDEL key1 key2 key3\n# Blocks Redis until deletion complete\n# Fast for small keys, slow for large keys\n\n# UNLINK - asynchronous deletion (Redis 4.0+)\nUNLINK key1 key2 key3\n# Returns immediately\n# Actual deletion happens in background thread\n\n# When to use UNLINK:\n# - Large keys (big lists, sets, hashes)\n# - When you don't need immediate memory reclaim\n# - Production environments\n\n# When to use DEL:\n# - Small keys (few bytes)\n# - When you need immediate deletion\n# - Testing/development\n\n# Check key size before deciding\nMEMORY USAGE bigkey\nDEBUG OBJECT bigkey  # encoding, serializedlength\n\n# Also: FLUSHALL ASYNC, FLUSHDB ASYNC\nFLUSHDB ASYNC  # non-blocking flush",
+      "pronunciation": "# DEL - synchronous deletion\nDEL key1 key2 key3\n# Blocks Redis until deletion complete",
       "meaning": "UNLINK vs DEL ต่างกันอย่างไร?",
       "example": "DEL deletes synchronously - blocks Redis until complete. UNLINK (Redis 4.0+) deletes asynchronously - returns immediately, actual deletion in background. Use UNLINK for large keys to avoid blocking. Both free memory eventually. FLUSHDB/FLUSHALL also support ASYNC option.",
       "exampleTranslation": "DEL ลบแบบ synchronous - block Redis จนกว่าจะเสร็จ UNLINK (Redis 4.0+) ลบแบบ asynchronous - return ทันที การลบจริงทำใน background ใช้ UNLINK สำหรับ large keys เพื่อหลีกเลี่ยง blocking ทั้งคู่ free memory ในที่สุด FLUSHDB/FLUSHALL ก็รองรับ ASYNC option"
     },
     {
       "vocab": "What are common Redis security practices?",
-      "pronunciation": "# Set password\n# redis.conf: requirepass your_strong_password\nAUTH your_strong_password\n\n# Rename dangerous commands\n# redis.conf:\nrename-command FLUSHALL \"\"\nrename-command FLUSHDB \"\"\nrename-command CONFIG \"\"\nrename-command KEYS \"\"\n\n# Bind to specific interface\n# redis.conf: bind 127.0.0.1 192.168.1.100\n\n# Disable specific commands\n# redis.conf: rename-command DEBUG \"\"\n\n# ACL (Redis 6+)\nACL SETUSER app on >password ~cache:* +@read +@write\nACL SETUSER readonly on >readpass ~* +@read -@write\n\n# TLS encryption (Redis 6+)\n# redis.conf:\ntls-port 6379\nport 0\ntls-cert-file /path/to/cert.pem\ntls-key-file /path/to/key.pem\n\n# Network security\n# - Firewall rules\n# - VPC/private network\n# - No public exposure",
+      "pronunciation": "# Set password\n# redis.conf: requirepass your_strong_password\nAUTH your_strong_password",
       "meaning": "Redis security practices มีอะไรบ้าง?",
       "example": "Set strong password (requirepass). Rename/disable dangerous commands (FLUSHALL, CONFIG, KEYS). Bind to specific interfaces, never 0.0.0.0 in production. Use ACLs (Redis 6+) for user permissions. Enable TLS for encryption. Use firewall rules, keep Redis in private network. Never expose directly to internet.",
       "exampleTranslation": "Set password ที่แข็งแรง (requirepass) Rename/disable dangerous commands (FLUSHALL, CONFIG, KEYS) Bind กับ specific interfaces ไม่ใช่ 0.0.0.0 ใน production ใช้ ACLs (Redis 6+) สำหรับ user permissions Enable TLS สำหรับ encryption ใช้ firewall rules เก็บ Redis ใน private network ห้าม expose ตรงไปยัง internet"

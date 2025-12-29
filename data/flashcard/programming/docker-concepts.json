@@ -5,7 +5,11 @@
     "name": "Docker Concepts",
     "description": "Essential Docker concepts including containers, images, Dockerfile, volumes, networks, and Docker Compose",
     "category": "Programming",
-    "tags": ["docker", "containers", "devops"],
+    "tags": [
+      "docker",
+      "containers",
+      "devops"
+    ],
     "sourceLang": "en",
     "targetLang": "th"
   },
@@ -68,7 +72,7 @@
     },
     {
       "vocab": "What are common Docker container commands?",
-      "pronunciation": "docker ps              # list running\ndocker ps -a           # list all\ndocker stop <id>       # stop container\ndocker start <id>      # start stopped\ndocker rm <id>         # remove container\ndocker logs <id>       # view logs",
+      "pronunciation": "docker ps              # list running\ndocker ps -a           # list all\ndocker stop <id>       # stop container",
       "meaning": "Docker container commands ที่ใช้บ่อยมีอะไรบ้าง?",
       "example": "docker ps lists running containers (-a for all). docker stop/start/restart control container state. docker rm removes stopped containers. docker logs shows output (-f to follow). docker exec runs commands in running container.",
       "exampleTranslation": "docker ps แสดง running containers (-a สำหรับทั้งหมด) docker stop/start/restart ควบคุม container state docker rm ลบ stopped containers docker logs แสดง output (-f เพื่อ follow) docker exec รัน commands ใน running container"
@@ -103,7 +107,7 @@
     },
     {
       "vocab": "What are common Docker Compose commands?",
-      "pronunciation": "docker compose up -d      # start detached\ndocker compose down       # stop and remove\ndocker compose logs -f    # follow logs\ndocker compose ps         # list services\ndocker compose build      # rebuild images\ndocker compose exec web sh # exec in service",
+      "pronunciation": "docker compose up -d      # start detached\ndocker compose down       # stop and remove\ndocker compose logs -f    # follow logs",
       "meaning": "Docker Compose commands ที่ใช้บ่อยมีอะไรบ้าง?",
       "example": "docker compose up starts services (-d for detached, --build to rebuild). down stops and removes containers/networks. logs shows output from all services. ps lists running services. exec runs commands in service container.",
       "exampleTranslation": "docker compose up start services (-d สำหรับ detached, --build เพื่อ rebuild) down stop และลบ containers/networks logs แสดง output จากทุก services ps แสดง running services exec รัน commands ใน service container"
@@ -152,7 +156,7 @@
     },
     {
       "vocab": "What are Docker health checks?",
-      "pronunciation": "HEALTHCHECK --interval=30s --timeout=3s --retries=3 \\\n  CMD curl -f http://localhost:3000/health || exit 1\n\n# In Compose\nservices:\n  web:\n    healthcheck:\n      test: [\"CMD\", \"curl\", \"-f\", \"http://localhost:3000/health\"]\n      interval: 30s",
+      "pronunciation": "HEALTHCHECK --interval=30s --timeout=3s --retries=3 \\\n  CMD curl -f http://localhost:3000/health || exit 1\n# In Compose",
       "meaning": "Docker health checks คืออะไร?",
       "example": "Health checks monitor container health status. Define in Dockerfile with HEALTHCHECK instruction. Docker runs check command periodically. Container marked healthy/unhealthy. Orchestrators use health status for decisions. Exit 0 = healthy, 1 = unhealthy.",
       "exampleTranslation": "Health checks ตรวจสอบสถานะ container กำหนดใน Dockerfile ด้วย HEALTHCHECK instruction Docker รัน check command เป็นระยะ Container ถูก mark healthy/unhealthy Orchestrators ใช้ health status ตัดสินใจ Exit 0 = healthy, 1 = unhealthy"
@@ -180,14 +184,14 @@
     },
     {
       "vocab": "How do you manage Docker resources and limits?",
-      "pronunciation": "# Memory limit\ndocker run -m 512m nginx\n\n# CPU limit\ndocker run --cpus 0.5 nginx\n\n# In Compose\nservices:\n  web:\n    deploy:\n      resources:\n        limits:\n          memory: 512M\n          cpus: '0.5'",
+      "pronunciation": "# Memory limit\ndocker run -m 512m nginx\n# CPU limit",
       "meaning": "จะจัดการ Docker resources และ limits ได้อย่างไร?",
       "example": "Use -m/--memory for memory limits. --cpus limits CPU usage (0.5 = half a core). --memory-swap for swap limit. Resource limits prevent containers from consuming all host resources. Important for multi-tenant and production environments.",
       "exampleTranslation": "ใช้ -m/--memory สำหรับ memory limits --cpus จำกัด CPU usage (0.5 = ครึ่ง core) --memory-swap สำหรับ swap limit Resource limits ป้องกัน containers ใช้ host resources หมด สำคัญสำหรับ multi-tenant และ production environments"
     },
     {
       "vocab": "What are Docker secrets?",
-      "pronunciation": "# Create secret\necho \"mypassword\" | docker secret create db_password -\n\n# Use in service\ndocker service create --secret db_password myapp\n\n# In Compose (Swarm mode)\nservices:\n  db:\n    secrets:\n      - db_password\nsecrets:\n  db_password:\n    external: true",
+      "pronunciation": "# Create secret\necho \"mypassword\" | docker secret create db_password -\n# Use in service",
       "meaning": "Docker secrets คืออะไร?",
       "example": "Secrets securely store sensitive data like passwords and API keys. Encrypted at rest and in transit. Available only to services that need them. Mounted as files in /run/secrets/. Only available in Swarm mode or Kubernetes.",
       "exampleTranslation": "Secrets เก็บ sensitive data อย่างปลอดภัย เช่น passwords และ API keys Encrypted ทั้งตอนเก็บและส่ง มีให้เฉพาะ services ที่ต้องการ Mount เป็นไฟล์ใน /run/secrets/ มีเฉพาะใน Swarm mode หรือ Kubernetes"
@@ -201,7 +205,7 @@
     },
     {
       "vocab": "How do you clean up Docker resources?",
-      "pronunciation": "# Remove stopped containers\ndocker container prune\n\n# Remove unused images\ndocker image prune -a\n\n# Remove unused volumes\ndocker volume prune\n\n# Remove everything unused\ndocker system prune -a --volumes",
+      "pronunciation": "# Remove stopped containers\ndocker container prune\n# Remove unused images",
       "meaning": "จะทำความสะอาด Docker resources ได้อย่างไร?",
       "example": "docker system prune removes all unused containers, networks, images. Add -a to remove all unused images (not just dangling). --volumes also removes unused volumes. docker container/image/volume prune for specific cleanup.",
       "exampleTranslation": "docker system prune ลบ unused containers, networks, images ทั้งหมด เพิ่ม -a เพื่อลบ unused images ทั้งหมด (ไม่ใช่แค่ dangling) --volumes ลบ unused volumes ด้วย docker container/image/volume prune สำหรับ cleanup เฉพาะส่วน"
@@ -215,7 +219,7 @@
     },
     {
       "vocab": "How do you debug Docker build issues?",
-      "pronunciation": "# Build with progress output\ndocker build --progress=plain -t myapp .\n\n# Build specific stage\ndocker build --target builder -t myapp:builder .\n\n# Run intermediate image\ndocker run -it <intermediate-image-id> sh",
+      "pronunciation": "# Build with progress output\ndocker build --progress=plain -t myapp .\n# Build specific stage",
       "meaning": "จะ debug Docker build issues ได้อย่างไร?",
       "example": "Use --progress=plain for detailed build output. Build specific stage with --target. Run intermediate images to inspect state. Check layer cache with docker history. Use docker build --no-cache to force rebuild all layers.",
       "exampleTranslation": "ใช้ --progress=plain สำหรับ detailed build output Build specific stage ด้วย --target รัน intermediate images เพื่อตรวจสอบ state ดู layer cache ด้วย docker history ใช้ docker build --no-cache เพื่อบังคับ rebuild ทุก layers"

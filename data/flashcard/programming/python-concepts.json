@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "exportedAt": "2024-12-27T12:00:00.000Z",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
   "deck": {
     "name": "Python Concepts",
     "description": "Core Python programming concepts including data types, functions, OOP, async, and more",
@@ -12,476 +12,476 @@
   "cards": [
     {
       "vocab": "What are Python's mutable vs immutable data types?",
-      "pronunciation": "# Immutable\nx = 10\nx = 20  # Creates new object\n\n# Mutable\nmy_list = [1, 2, 3]\nmy_list.append(4)  # Modifies same object",
+      "pronunciation": "immutable: int, str, tuple | mutable: list, dict, set",
       "meaning": "Python มี data types แบบ mutable และ immutable ต่างกันอย่างไร?",
       "example": "Immutable types (int, float, str, tuple, frozenset) cannot be changed after creation - any modification creates a new object. Mutable types (list, dict, set) can be modified in place. This affects how Python handles assignments, function arguments, and memory.",
       "exampleTranslation": "Immutable types (int, float, str, tuple, frozenset) ไม่สามารถเปลี่ยนแปลงหลังสร้าง - การแก้ไขจะสร้าง object ใหม่ Mutable types (list, dict, set) สามารถแก้ไขได้โดยตรง สิ่งนี้ส่งผลต่อการ assign ค่า, function arguments และ memory"
     },
     {
       "vocab": "What is the difference between list and tuple?",
-      "pronunciation": "my_list = [1, 2, 3]  # Mutable\nmy_tuple = (1, 2, 3)  # Immutable\n\nmy_list[0] = 10  # OK\nmy_tuple[0] = 10  # TypeError",
+      "pronunciation": "list = [1, 2, 3] (mutable), tuple = (1, 2, 3) (immutable)",
       "meaning": "list และ tuple ต่างกันอย่างไร?",
       "example": "Lists are mutable, use square brackets [], and are used for collections that may change. Tuples are immutable, use parentheses (), are hashable (can be dict keys), slightly faster, and used for fixed collections like coordinates or database rows.",
       "exampleTranslation": "List เป็น mutable ใช้ [] สำหรับ collection ที่อาจเปลี่ยนแปลง Tuple เป็น immutable ใช้ () สามารถ hash ได้ (เป็น dict key ได้) เร็วกว่าเล็กน้อย ใช้สำหรับ fixed collection เช่น coordinates หรือ database rows"
     },
     {
       "vocab": "What is a dictionary comprehension?",
-      "pronunciation": "# Basic\nsquares = {x: x**2 for x in range(5)}\n# {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}\n\n# With condition\neven_squares = {x: x**2 for x in range(10) if x % 2 == 0}",
+      "pronunciation": "{key: value for item in iterable if condition}",
       "meaning": "Dictionary comprehension คืออะไร?",
       "example": "A concise way to create dictionaries using a single line expression. Syntax: {key_expr: value_expr for item in iterable if condition}. More readable and often faster than using loops with dict updates.",
       "exampleTranslation": "วิธีสร้าง dictionary แบบกระชับในบรรทัดเดียว Syntax: {key_expr: value_expr for item in iterable if condition} อ่านง่ายกว่าและมักเร็วกว่าการใช้ loop กับ dict update"
     },
     {
       "vocab": "What is the difference between set and frozenset?",
-      "pronunciation": "my_set = {1, 2, 3}\nmy_set.add(4)  # OK\n\nmy_frozenset = frozenset([1, 2, 3])\nmy_frozenset.add(4)  # AttributeError\n\n# frozenset can be dict key\nd = {my_frozenset: 'value'}",
+      "pronunciation": "set = {1, 2, 3} (mutable), frozenset([1, 2, 3]) (immutable)",
       "meaning": "set และ frozenset ต่างกันอย่างไร?",
       "example": "Set is mutable - you can add/remove elements. Frozenset is immutable - cannot be modified after creation. Because frozenset is immutable and hashable, it can be used as dictionary keys or elements of other sets.",
       "exampleTranslation": "Set เป็น mutable สามารถ add/remove elements ได้ Frozenset เป็น immutable ไม่สามารถแก้ไขหลังสร้าง เนื่องจาก frozenset เป็น immutable และ hashable จึงใช้เป็น dictionary key หรือ element ของ set อื่นได้"
     },
     {
       "vocab": "What are *args and **kwargs?",
-      "pronunciation": "def func(*args, **kwargs):\n    print(args)    # tuple\n    print(kwargs)  # dict\n\nfunc(1, 2, 3, name='John', age=30)\n# (1, 2, 3)\n# {'name': 'John', 'age': 30}",
+      "pronunciation": "def func(*args, **kwargs):",
       "meaning": "*args และ **kwargs คืออะไร?",
       "example": "*args collects positional arguments into a tuple. **kwargs collects keyword arguments into a dictionary. They allow functions to accept variable number of arguments. The names 'args' and 'kwargs' are conventions - * and ** are the actual operators.",
       "exampleTranslation": "*args รวบรวม positional arguments เป็น tuple **kwargs รวบรวม keyword arguments เป็น dictionary ทำให้ function รับ arguments จำนวนไม่จำกัดได้ ชื่อ 'args' และ 'kwargs' เป็นแค่ convention - * และ ** คือ operators จริง"
     },
     {
       "vocab": "What is a Python decorator?",
-      "pronunciation": "def timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'Took {time.time() - start}s')\n        return result\n    return wrapper\n\n@timer\ndef slow_func():\n    time.sleep(1)",
+      "pronunciation": "@decorator def func():",
       "meaning": "Python decorator คืออะไร?",
       "example": "A decorator is a function that takes another function as argument and returns a new function, adding behavior without modifying the original code. The @ syntax is syntactic sugar: @decorator above a function is equivalent to func = decorator(func).",
       "exampleTranslation": "Decorator คือ function ที่รับ function อื่นเป็น argument และ return function ใหม่ เพิ่ม behavior โดยไม่แก้ code เดิม Syntax @ เป็น syntactic sugar: @decorator บน function เทียบเท่ากับ func = decorator(func)"
     },
     {
       "vocab": "What is a decorator with arguments?",
-      "pronunciation": "def repeat(times):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(times):\n                result = func(*args, **kwargs)\n            return result\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef greet(name):\n    print(f'Hello {name}')",
+      "pronunciation": "@repeat(3) def func():",
       "meaning": "Decorator ที่รับ arguments ทำงานอย่างไร?",
       "example": "To create a decorator with arguments, you need three levels of nested functions: 1) outer function takes decorator arguments, 2) middle function takes the decorated function, 3) inner function (wrapper) takes function arguments. The outer function returns the actual decorator.",
       "exampleTranslation": "การสร้าง decorator ที่รับ arguments ต้องมี nested functions 3 ชั้น: 1) outer function รับ decorator arguments 2) middle function รับ decorated function 3) inner function (wrapper) รับ function arguments โดย outer function return decorator จริง"
     },
     {
       "vocab": "What is functools.wraps and why use it?",
-      "pronunciation": "from functools import wraps\n\ndef my_decorator(func):\n    @wraps(func)  # Preserves metadata\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs)\n    return wrapper\n\n@my_decorator\ndef greet():\n    '''Say hello'''\n    pass\n\nprint(greet.__name__)  # 'greet' not 'wrapper'\nprint(greet.__doc__)   # 'Say hello'",
+      "pronunciation": "@wraps(func)",
       "meaning": "functools.wraps คืออะไรและทำไมต้องใช้?",
       "example": "functools.wraps preserves the original function's metadata (__name__, __doc__, __annotations__) when creating a decorator. Without it, the wrapped function loses its identity, making debugging and documentation harder.",
       "exampleTranslation": "functools.wraps รักษา metadata ของ function ดั้งเดิม (__name__, __doc__, __annotations__) เมื่อสร้าง decorator ถ้าไม่ใช้ wrapped function จะสูญเสีย identity ทำให้ debug และ documentation ยากขึ้น"
     },
     {
       "vocab": "What is a lambda function?",
-      "pronunciation": "# Basic lambda\nsquare = lambda x: x ** 2\n\n# With multiple args\nadd = lambda x, y: x + y\n\n# Common use with sorted\nusers = [{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]\nsorted(users, key=lambda u: u['age'])",
+      "pronunciation": "lambda x: x ** 2",
       "meaning": "Lambda function คืออะไร?",
       "example": "Lambda is an anonymous function defined with the lambda keyword. It can have multiple arguments but only one expression (no statements). Commonly used for short callbacks, sorting keys, and functional programming with map/filter/reduce.",
       "exampleTranslation": "Lambda คือ anonymous function ที่สร้างด้วย keyword lambda มีได้หลาย arguments แต่มีได้แค่ expression เดียว (ไม่มี statements) ใช้บ่อยสำหรับ short callbacks, sorting keys และ functional programming กับ map/filter/reduce"
     },
     {
       "vocab": "What is a closure in Python?",
-      "pronunciation": "def outer(x):\n    def inner(y):\n        return x + y  # x is 'closed over'\n    return inner\n\nadd_5 = outer(5)\nprint(add_5(3))  # 8\nprint(add_5(10))  # 15",
+      "pronunciation": "def outer(x): def inner(y): return x + y",
       "meaning": "Closure ใน Python คืออะไร?",
       "example": "A closure is a nested function that captures and remembers values from its enclosing scope, even after the outer function has finished executing. The inner function 'closes over' the variables from the outer scope. Used for data hiding and creating function factories.",
       "exampleTranslation": "Closure คือ nested function ที่จับและจดจำค่าจาก enclosing scope แม้ว่า outer function จะทำงานเสร็จแล้ว Inner function 'closes over' ตัวแปรจาก outer scope ใช้สำหรับ data hiding และสร้าง function factories"
     },
     {
       "vocab": "What is the difference between class method and static method?",
-      "pronunciation": "class MyClass:\n    count = 0\n    \n    @classmethod\n    def get_count(cls):\n        return cls.count  # Access class\n    \n    @staticmethod\n    def validate(value):\n        return value > 0  # No access to class/instance",
+      "pronunciation": "@classmethod (cls), @staticmethod (no self/cls)",
       "meaning": "Class method และ static method ต่างกันอย่างไร?",
       "example": "@classmethod receives the class (cls) as first argument - can access/modify class state and is inherited properly. @staticmethod receives no implicit argument - just a regular function namespaced in the class, used for utility functions related to the class.",
       "exampleTranslation": "@classmethod รับ class (cls) เป็น argument แรก สามารถ access/modify class state และ inherit ได้ถูกต้อง @staticmethod ไม่รับ implicit argument ใดๆ เป็นแค่ function ปกติที่อยู่ใน class namespace ใช้สำหรับ utility functions ที่เกี่ยวข้องกับ class"
     },
     {
       "vocab": "What is @property decorator?",
-      "pronunciation": "class Circle:\n    def __init__(self, radius):\n        self._radius = radius\n    \n    @property\n    def radius(self):\n        return self._radius\n    \n    @radius.setter\n    def radius(self, value):\n        if value < 0:\n            raise ValueError('Radius must be positive')\n        self._radius = value\n\nc = Circle(5)\nprint(c.radius)  # 5 (getter)\nc.radius = 10    # (setter)",
+      "pronunciation": "@property, @name.setter, @name.deleter",
       "meaning": "@property decorator คืออะไร?",
       "example": "@property turns a method into a read-only attribute. Combined with @name.setter and @name.deleter, it provides controlled access to private attributes with validation, computed properties, and encapsulation while maintaining simple attribute syntax.",
       "exampleTranslation": "@property เปลี่ยน method เป็น read-only attribute เมื่อใช้ร่วมกับ @name.setter และ @name.deleter จะให้ controlled access กับ private attributes พร้อม validation, computed properties และ encapsulation โดยยังคง syntax การเข้าถึง attribute แบบง่าย"
     },
     {
       "vocab": "What is __init__ vs __new__?",
-      "pronunciation": "class Singleton:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    \n    def __init__(self):\n        self.value = 42\n\n# __new__ creates, __init__ initializes\ns1 = Singleton()\ns2 = Singleton()\nprint(s1 is s2)  # True",
+      "pronunciation": "__new__ (creates), __init__ (initializes)",
       "meaning": "__init__ และ __new__ ต่างกันอย่างไร?",
       "example": "__new__ is the constructor that creates and returns a new instance. __init__ is the initializer that sets up the instance after creation. __new__ is called first, receives the class, and must return an instance. __init__ receives the instance and returns None.",
       "exampleTranslation": "__new__ คือ constructor ที่สร้างและ return instance ใหม่ __init__ คือ initializer ที่ setup instance หลังจากสร้างแล้ว __new__ ถูกเรียกก่อน รับ class และต้อง return instance __init__ รับ instance และ return None"
     },
     {
       "vocab": "What is multiple inheritance and MRO?",
-      "pronunciation": "class A:\n    def greet(self): print('A')\n\nclass B(A):\n    def greet(self): print('B')\n\nclass C(A):\n    def greet(self): print('C')\n\nclass D(B, C):\n    pass\n\nprint(D.__mro__)\n# (D, B, C, A, object)\nD().greet()  # 'B'",
+      "pronunciation": "class D(B, C): ... | D.__mro__",
       "meaning": "Multiple inheritance และ MRO คืออะไร?",
       "example": "Multiple inheritance allows a class to inherit from multiple parent classes. MRO (Method Resolution Order) determines the order in which base classes are searched when looking for a method. Python uses C3 linearization algorithm to create a consistent MRO.",
       "exampleTranslation": "Multiple inheritance ทำให้ class สืบทอดจากหลาย parent classes ได้ MRO (Method Resolution Order) กำหนดลำดับการค้นหา base classes เมื่อหา method Python ใช้ C3 linearization algorithm เพื่อสร้าง MRO ที่ consistent"
     },
     {
       "vocab": "What is super() and how does it work?",
-      "pronunciation": "class Parent:\n    def __init__(self, name):\n        self.name = name\n\nclass Child(Parent):\n    def __init__(self, name, age):\n        super().__init__(name)  # Call parent's __init__\n        self.age = age\n\n# In multiple inheritance, super() follows MRO\nclass A:\n    def method(self): print('A')\n\nclass B(A):\n    def method(self):\n        super().method()  # Calls next in MRO\n        print('B')",
+      "pronunciation": "super().__init__() | super().method()",
       "meaning": "super() คืออะไรและทำงานอย่างไร?",
       "example": "super() returns a proxy object that delegates method calls to a parent or sibling class. It follows the MRO, not just the immediate parent. In single inheritance, it calls the parent. In multiple inheritance, it enables cooperative method calls across the hierarchy.",
       "exampleTranslation": "super() return proxy object ที่ delegate method calls ไปยัง parent หรือ sibling class มันทำตาม MRO ไม่ใช่แค่ parent ตรง ใน single inheritance มันเรียก parent ใน multiple inheritance มันทำให้เกิด cooperative method calls ข้าม hierarchy"
     },
     {
       "vocab": "What is an Abstract Base Class (ABC)?",
-      "pronunciation": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n    \n    @abstractmethod\n    def perimeter(self):\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return 3.14 * self.radius ** 2\n    \n    def perimeter(self):\n        return 2 * 3.14 * self.radius\n\n# shape = Shape()  # TypeError: Can't instantiate",
+      "pronunciation": "from abc import ABC, abstractmethod",
       "meaning": "Abstract Base Class (ABC) คืออะไร?",
       "example": "ABC is a class that cannot be instantiated and may contain abstract methods that must be implemented by subclasses. It defines an interface/contract that all subclasses must follow. Use abc module with @abstractmethod decorator to create ABCs.",
       "exampleTranslation": "ABC คือ class ที่ไม่สามารถ instantiate ได้และอาจมี abstract methods ที่ subclass ต้อง implement มันกำหนด interface/contract ที่ทุก subclass ต้องทำตาม ใช้ abc module กับ @abstractmethod decorator เพื่อสร้าง ABCs"
     },
     {
       "vocab": "What is __slots__ and when to use it?",
-      "pronunciation": "class WithSlots:\n    __slots__ = ['name', 'age']\n    \n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\nobj = WithSlots('John', 30)\nobj.email = 'john@example.com'  # AttributeError\n\n# Memory comparison\nimport sys\nclass Normal: pass\nclass Slotted: __slots__ = []\nprint(sys.getsizeof(Normal()))  # ~152 bytes\nprint(sys.getsizeof(Slotted()))  # ~48 bytes",
+      "pronunciation": "__slots__ = ['name', 'age']",
       "meaning": "__slots__ คืออะไรและใช้เมื่อไหร่?",
       "example": "__slots__ defines a fixed set of attributes for a class, preventing __dict__ creation. Benefits: 35-40% less memory per instance, slightly faster attribute access. Drawbacks: no dynamic attributes, complications with multiple inheritance. Use when creating many instances.",
       "exampleTranslation": "__slots__ กำหนด set ของ attributes ที่ตายตัวสำหรับ class ป้องกันการสร้าง __dict__ ข้อดี: ใช้ memory น้อยลง 35-40% ต่อ instance, เข้าถึง attribute เร็วขึ้นเล็กน้อย ข้อเสีย: ไม่มี dynamic attributes, ซับซ้อนกับ multiple inheritance ใช้เมื่อสร้าง instances จำนวนมาก"
     },
     {
       "vocab": "What is a generator and yield?",
-      "pronunciation": "def count_up_to(n):\n    i = 1\n    while i <= n:\n        yield i  # Pause and return value\n        i += 1\n\ngen = count_up_to(3)\nprint(next(gen))  # 1\nprint(next(gen))  # 2\nprint(next(gen))  # 3\nprint(next(gen))  # StopIteration\n\n# Memory efficient\ndef read_large_file(path):\n    with open(path) as f:\n        for line in f:\n            yield line.strip()",
+      "pronunciation": "def gen(): yield value",
       "meaning": "Generator และ yield คืออะไร?",
       "example": "A generator is a function that uses yield to return values one at a time, pausing execution between each yield. It creates an iterator lazily without storing all values in memory. Perfect for large datasets, infinite sequences, or pipeline processing.",
       "exampleTranslation": "Generator คือ function ที่ใช้ yield เพื่อ return ค่าทีละตัว โดย pause execution ระหว่าง yield แต่ละครั้ง มันสร้าง iterator แบบ lazy โดยไม่เก็บค่าทั้งหมดใน memory เหมาะสำหรับ dataset ขนาดใหญ่ infinite sequences หรือ pipeline processing"
     },
     {
       "vocab": "What is a generator expression?",
-      "pronunciation": "# Generator expression (lazy)\ngen = (x**2 for x in range(1000000))\nprint(next(gen))  # 0\nprint(next(gen))  # 1\n\n# vs List comprehension (eager)\nlst = [x**2 for x in range(1000000)]  # All in memory\n\n# Memory comparison\nimport sys\nprint(sys.getsizeof([x for x in range(1000)]))  # ~8856 bytes\nprint(sys.getsizeof((x for x in range(1000))))  # ~200 bytes",
+      "pronunciation": "(x**2 for x in range(n))",
       "meaning": "Generator expression คืออะไร?",
       "example": "A generator expression is like a list comprehension but with parentheses instead of brackets. It creates a generator object that yields values lazily, using constant memory regardless of size. Use when you only need to iterate once or with large datasets.",
       "exampleTranslation": "Generator expression เหมือน list comprehension แต่ใช้วงเล็บแทน brackets มันสร้าง generator object ที่ yield ค่าแบบ lazy ใช้ memory คงที่ไม่ว่า size จะเท่าไหร่ ใช้เมื่อต้อง iterate แค่ครั้งเดียวหรือกับ dataset ขนาดใหญ่"
     },
     {
       "vocab": "What is yield from?",
-      "pronunciation": "def generator1():\n    yield 1\n    yield 2\n\ndef generator2():\n    yield 3\n    yield 4\n\n# Without yield from\ndef combined_old():\n    for x in generator1():\n        yield x\n    for x in generator2():\n        yield x\n\n# With yield from\ndef combined_new():\n    yield from generator1()\n    yield from generator2()\n\nlist(combined_new())  # [1, 2, 3, 4]",
+      "pronunciation": "yield from sub_generator()",
       "meaning": "yield from คืออะไร?",
       "example": "yield from delegates to a sub-generator, yielding all its values. It simplifies nested generators and enables two-way communication between caller and sub-generator. Also works with any iterable, not just generators.",
       "exampleTranslation": "yield from delegate ไปยัง sub-generator โดย yield ค่าทั้งหมดของมัน ทำให้ nested generators ง่ายขึ้นและเปิดให้ two-way communication ระหว่าง caller กับ sub-generator ใช้ได้กับ iterable ทุกชนิด ไม่ใช่แค่ generators"
     },
     {
       "vocab": "What is the iterator protocol?",
-      "pronunciation": "class Counter:\n    def __init__(self, max_count):\n        self.max = max_count\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current >= self.max:\n            raise StopIteration\n        self.current += 1\n        return self.current\n\nfor num in Counter(3):\n    print(num)  # 1, 2, 3",
+      "pronunciation": "__iter__() returns self, __next__() returns next value",
       "meaning": "Iterator protocol คืออะไร?",
       "example": "The iterator protocol requires two methods: __iter__() returns the iterator object itself, and __next__() returns the next value or raises StopIteration when exhausted. Any object implementing these methods can be used in for loops and other iteration contexts.",
       "exampleTranslation": "Iterator protocol ต้องมีสอง methods: __iter__() return iterator object ตัวเอง และ __next__() return ค่าถัดไปหรือ raise StopIteration เมื่อหมด Object ใดที่ implement methods เหล่านี้สามารถใช้ใน for loops และ iteration contexts อื่นๆ ได้"
     },
     {
       "vocab": "What is a context manager?",
-      "pronunciation": "# Using class\nclass FileManager:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n    \n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.file.close()\n        return False  # Don't suppress exceptions\n\nwith FileManager('test.txt', 'w') as f:\n    f.write('Hello')",
+      "pronunciation": "with resource as r: ... | __enter__, __exit__",
       "meaning": "Context manager คืออะไร?",
       "example": "A context manager handles setup and cleanup code using the 'with' statement. It implements __enter__ (called on entry, returns resource) and __exit__ (called on exit, handles cleanup and exceptions). Ensures resources are properly released even if errors occur.",
       "exampleTranslation": "Context manager จัดการ setup และ cleanup code โดยใช้ 'with' statement มัน implement __enter__ (เรียกเมื่อเข้า, return resource) และ __exit__ (เรียกเมื่อออก, จัดการ cleanup และ exceptions) รับประกันว่า resources จะถูกปล่อยอย่างถูกต้องแม้เกิด errors"
     },
     {
       "vocab": "What is @contextmanager decorator?",
-      "pronunciation": "from contextlib import contextmanager\n\n@contextmanager\ndef timer():\n    import time\n    start = time.time()\n    try:\n        yield  # Code in 'with' block runs here\n    finally:\n        end = time.time()\n        print(f'Elapsed: {end - start:.2f}s')\n\nwith timer():\n    time.sleep(1)\n# Elapsed: 1.00s",
+      "pronunciation": "@contextmanager def cm(): yield resource",
       "meaning": "@contextmanager decorator คืออะไร?",
       "example": "@contextmanager from contextlib lets you create context managers using a generator function. Code before yield is __enter__, code after yield is __exit__. The yielded value becomes the 'as' target. Simpler than implementing the class-based protocol.",
       "exampleTranslation": "@contextmanager จาก contextlib ให้สร้าง context managers โดยใช้ generator function code ก่อน yield คือ __enter__ code หลัง yield คือ __exit__ ค่าที่ yield ออกมาเป็น 'as' target ง่ายกว่าการ implement class-based protocol"
     },
     {
       "vocab": "What is try/except/else/finally?",
-      "pronunciation": "try:\n    result = risky_operation()\nexcept ValueError as e:\n    print(f'Value error: {e}')\nexcept (TypeError, KeyError) as e:\n    print(f'Type or Key error: {e}')\nexcept Exception as e:\n    print(f'Unexpected: {e}')\n    raise  # Re-raise\nelse:\n    print('Success!')  # Runs if no exception\nfinally:\n    print('Cleanup')  # Always runs",
+      "pronunciation": "try: ... except: ... else: ... finally: ...",
       "meaning": "try/except/else/finally ทำงานอย่างไร?",
       "example": "try: code that might raise exceptions. except: handle specific exceptions (can catch multiple). else: runs only if no exception was raised - good for code that shouldn't be in try block. finally: always runs for cleanup, even if exception is raised or return is called.",
       "exampleTranslation": "try: code ที่อาจ raise exceptions except: จัดการ exceptions เฉพาะ (catch หลายตัวได้) else: ทำงานเฉพาะเมื่อไม่มี exception - ดีสำหรับ code ที่ไม่ควรอยู่ใน try block finally: ทำงานเสมอสำหรับ cleanup แม้มี exception หรือ return"
     },
     {
       "vocab": "How to create a custom exception?",
-      "pronunciation": "class ValidationError(Exception):\n    def __init__(self, field, message):\n        self.field = field\n        self.message = message\n        super().__init__(f'{field}: {message}')\n\nclass InsufficientFundsError(Exception):\n    pass\n\n# Usage\ndef withdraw(amount, balance):\n    if amount > balance:\n        raise InsufficientFundsError(\n            f'Cannot withdraw {amount}, balance is {balance}'\n        )",
+      "pronunciation": "class MyError(Exception): pass",
       "meaning": "สร้าง custom exception อย่างไร?",
       "example": "Create custom exceptions by inheriting from Exception or a more specific built-in exception. Add custom attributes in __init__ and call super().__init__() with a message. Use descriptive names ending in 'Error'. Custom exceptions make error handling more specific and meaningful.",
       "exampleTranslation": "สร้าง custom exceptions โดย inherit จาก Exception หรือ built-in exception ที่เฉพาะเจาะจงกว่า เพิ่ม custom attributes ใน __init__ และเรียก super().__init__() พร้อม message ใช้ชื่อที่สื่อความหมายลงท้ายด้วย 'Error' Custom exceptions ทำให้ error handling เฉพาะเจาะจงและมีความหมายมากขึ้น"
     },
     {
       "vocab": "What is exception chaining?",
-      "pronunciation": "def fetch_data():\n    try:\n        return api_call()\n    except ConnectionError as e:\n        raise DataFetchError('Failed to fetch') from e\n\n# Output shows both exceptions:\n# DataFetchError: Failed to fetch\n# The above exception was the direct cause of:\n# ConnectionError: ...\n\n# Suppress original exception\nraise NewError() from None",
+      "pronunciation": "raise NewError() from original",
       "meaning": "Exception chaining คืออะไร?",
       "example": "Exception chaining links exceptions using 'raise ... from original'. It preserves the original exception as __cause__, showing the full error chain in tracebacks. Use 'from None' to suppress the original exception. Helps debugging by showing the root cause.",
       "exampleTranslation": "Exception chaining เชื่อม exceptions โดยใช้ 'raise ... from original' มันเก็บ original exception ไว้เป็น __cause__ แสดง full error chain ใน tracebacks ใช้ 'from None' เพื่อซ่อน original exception ช่วย debug โดยแสดง root cause"
     },
     {
       "vocab": "What is list comprehension?",
-      "pronunciation": "# Basic\nsquares = [x**2 for x in range(5)]\n# [0, 1, 4, 9, 16]\n\n# With condition\nevens = [x for x in range(10) if x % 2 == 0]\n# [0, 2, 4, 6, 8]\n\n# Nested\nmatrix = [[1, 2], [3, 4], [5, 6]]\nflat = [n for row in matrix for n in row]\n# [1, 2, 3, 4, 5, 6]\n\n# With if-else\nlabels = ['even' if x % 2 == 0 else 'odd' for x in range(5)]",
+      "pronunciation": "[expr for item in iterable if condition]",
       "meaning": "List comprehension คืออะไร?",
       "example": "List comprehension is a concise way to create lists. Syntax: [expression for item in iterable if condition]. Supports nested loops (outer first, then inner), conditional filtering (if at end), and conditional expressions (if-else in expression). More readable and often faster than loops.",
       "exampleTranslation": "List comprehension คือวิธีสร้าง lists แบบกระชับ Syntax: [expression for item in iterable if condition] รองรับ nested loops (outer ก่อน แล้ว inner) conditional filtering (if ท้าย) และ conditional expressions (if-else ใน expression) อ่านง่ายกว่าและมักเร็วกว่า loops"
     },
     {
       "vocab": "What is set comprehension?",
-      "pronunciation": "# Basic - removes duplicates automatically\nwords = ['hello', 'world', 'hello', 'python']\nunique_lengths = {len(w) for w in words}\n# {5, 6}\n\n# With condition\nnumbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]\neven_unique = {x for x in numbers if x % 2 == 0}\n# {2, 4}",
+      "pronunciation": "{expr for item in iterable if condition}",
       "meaning": "Set comprehension คืออะไร?",
       "example": "Set comprehension creates a set using curly braces with the same syntax as list comprehension. Automatically removes duplicates. Syntax: {expression for item in iterable if condition}. Useful when you need unique values from a transformation.",
       "exampleTranslation": "Set comprehension สร้าง set โดยใช้ curly braces ด้วย syntax เดียวกับ list comprehension ลบ duplicates อัตโนมัติ Syntax: {expression for item in iterable if condition} มีประโยชน์เมื่อต้องการค่า unique จาก transformation"
     },
     {
       "vocab": "What is async/await in Python?",
-      "pronunciation": "import asyncio\n\nasync def fetch_data(url):\n    print(f'Fetching {url}')\n    await asyncio.sleep(1)  # Non-blocking\n    return f'Data from {url}'\n\nasync def main():\n    # Run concurrently\n    results = await asyncio.gather(\n        fetch_data('url1'),\n        fetch_data('url2'),\n        fetch_data('url3'),\n    )\n    print(results)\n\nasyncio.run(main())  # Takes ~1s, not 3s",
+      "pronunciation": "async def fn(): await coroutine()",
       "meaning": "async/await ใน Python คืออะไร?",
       "example": "async/await enables asynchronous programming for I/O-bound tasks. 'async def' declares a coroutine function. 'await' pauses execution until the awaited coroutine completes, allowing other tasks to run. Perfect for concurrent network requests, file I/O, or database queries.",
       "exampleTranslation": "async/await เปิดให้ทำ asynchronous programming สำหรับ I/O-bound tasks 'async def' ประกาศ coroutine function 'await' หยุด execution จนกว่า awaited coroutine จะเสร็จ ให้ tasks อื่นทำงานได้ เหมาะสำหรับ concurrent network requests, file I/O หรือ database queries"
     },
     {
       "vocab": "What is asyncio.gather vs asyncio.wait?",
-      "pronunciation": "import asyncio\n\nasync def task(n):\n    await asyncio.sleep(n)\n    return n\n\n# gather - returns results in order\nresults = await asyncio.gather(\n    task(2), task(1), task(3)\n)  # [2, 1, 3]\n\n# wait - returns done/pending sets\ndone, pending = await asyncio.wait(\n    [task(2), task(1), task(3)],\n    return_when=asyncio.FIRST_COMPLETED\n)",
+      "pronunciation": "await asyncio.gather(*coros) vs await asyncio.wait(tasks)",
       "meaning": "asyncio.gather และ asyncio.wait ต่างกันอย่างไร?",
       "example": "gather: runs coroutines concurrently, returns results in input order, raises first exception by default. wait: returns (done, pending) sets of Task objects, more control with return_when parameter (FIRST_COMPLETED, FIRST_EXCEPTION, ALL_COMPLETED). Use gather for simple cases, wait for complex control flow.",
       "exampleTranslation": "gather: รัน coroutines พร้อมกัน return results ตามลำดับ input raise exception แรกโดย default wait: return (done, pending) sets ของ Task objects ควบคุมได้มากขึ้นด้วย return_when parameter ใช้ gather สำหรับ cases ง่ายๆ ใช้ wait สำหรับ control flow ที่ซับซ้อน"
     },
     {
       "vocab": "What is an async context manager?",
-      "pronunciation": "import aiohttp\n\nasync def fetch(url):\n    async with aiohttp.ClientSession() as session:\n        async with session.get(url) as response:\n            return await response.text()\n\n# Custom async context manager\nclass AsyncDB:\n    async def __aenter__(self):\n        self.conn = await create_connection()\n        return self.conn\n    \n    async def __aexit__(self, *args):\n        await self.conn.close()",
+      "pronunciation": "async with resource as r: ... | __aenter__, __aexit__",
       "meaning": "Async context manager คืออะไร?",
       "example": "Async context manager uses 'async with' and implements __aenter__ and __aexit__ as async methods. Used when setup/cleanup involves I/O operations like database connections, HTTP sessions, or file operations. Can also use @asynccontextmanager decorator from contextlib.",
       "exampleTranslation": "Async context manager ใช้ 'async with' และ implement __aenter__ กับ __aexit__ เป็น async methods ใช้เมื่อ setup/cleanup เกี่ยวข้องกับ I/O operations เช่น database connections, HTTP sessions หรือ file operations ใช้ @asynccontextmanager decorator จาก contextlib ได้ด้วย"
     },
     {
       "vocab": "What is asyncio.create_task?",
-      "pronunciation": "async def background_task():\n    while True:\n        print('Working...')\n        await asyncio.sleep(1)\n\nasync def main():\n    # Create task - starts running immediately\n    task = asyncio.create_task(background_task())\n    \n    # Do other work\n    await asyncio.sleep(3)\n    \n    # Cancel if needed\n    task.cancel()\n    try:\n        await task\n    except asyncio.CancelledError:\n        print('Task cancelled')",
+      "pronunciation": "task = asyncio.create_task(coro())",
       "meaning": "asyncio.create_task คืออะไร?",
       "example": "create_task schedules a coroutine to run concurrently as a Task object. Unlike await, it doesn't block - the task starts immediately in the background. Returns a Task that can be awaited later, cancelled, or checked for completion. Essential for true concurrency.",
       "exampleTranslation": "create_task schedule coroutine ให้ทำงาน concurrently เป็น Task object ไม่เหมือน await มันไม่ block - task เริ่มทันทีใน background Return Task ที่สามารถ await ทีหลัง cancel หรือ check completion ได้ จำเป็นสำหรับ concurrency จริง"
     },
     {
       "vocab": "What is asyncio.Queue?",
-      "pronunciation": "import asyncio\n\nasync def producer(queue):\n    for i in range(5):\n        await queue.put(i)\n        print(f'Produced: {i}')\n\nasync def consumer(queue):\n    while True:\n        item = await queue.get()\n        print(f'Consumed: {item}')\n        queue.task_done()\n\nasync def main():\n    queue = asyncio.Queue(maxsize=2)\n    \n    producer_task = asyncio.create_task(producer(queue))\n    consumer_task = asyncio.create_task(consumer(queue))\n    \n    await producer_task\n    await queue.join()  # Wait until all processed\n    consumer_task.cancel()",
+      "pronunciation": "queue = asyncio.Queue() | await queue.put(), await queue.get()",
       "meaning": "asyncio.Queue คืออะไร?",
       "example": "asyncio.Queue is a thread-safe async queue for producer-consumer patterns. put() and get() are coroutines that can await. maxsize limits queue size (put blocks when full). task_done() and join() coordinate completion. Perfect for work distribution in async applications.",
       "exampleTranslation": "asyncio.Queue คือ thread-safe async queue สำหรับ producer-consumer patterns put() และ get() เป็น coroutines ที่ await ได้ maxsize จำกัด queue size (put blocks เมื่อเต็ม) task_done() และ join() ประสานงาน completion เหมาะสำหรับ work distribution ใน async applications"
     },
     {
       "vocab": "What are type hints in Python?",
-      "pronunciation": "from typing import List, Dict, Optional, Union\n\ndef greet(name: str) -> str:\n    return f'Hello, {name}'\n\ndef process(items: List[int]) -> Dict[str, int]:\n    return {'sum': sum(items), 'count': len(items)}\n\ndef find_user(user_id: int) -> Optional[User]:\n    return db.get(user_id)  # Returns User or None\n\ndef handle(value: Union[str, int]) -> None:\n    print(value)",
+      "pronunciation": "def fn(x: int) -> str: ...",
       "meaning": "Type hints ใน Python คืออะไร?",
       "example": "Type hints are optional annotations that specify expected types for variables, parameters, and return values. They don't affect runtime but enable static type checking (mypy), better IDE support, and serve as documentation. Introduced in Python 3.5+.",
       "exampleTranslation": "Type hints คือ annotations ที่ระบุ types ที่คาดหวังสำหรับ variables, parameters และ return values มันไม่กระทบ runtime แต่เปิดให้ทำ static type checking (mypy), IDE support ที่ดีขึ้น และเป็น documentation เริ่มมีใน Python 3.5+"
     },
     {
       "vocab": "What is Optional and Union types?",
-      "pronunciation": "from typing import Optional, Union\n\n# Optional[X] is same as Union[X, None]\ndef find(id: int) -> Optional[str]:\n    return data.get(id)  # str or None\n\n# Union for multiple possible types\ndef process(value: Union[str, int, float]) -> str:\n    return str(value)\n\n# Python 3.10+ syntax\ndef find_new(id: int) -> str | None:\n    return data.get(id)\n\ndef process_new(value: str | int | float) -> str:\n    return str(value)",
+      "pronunciation": "Optional[str] = str | None, Union[int, str]",
       "meaning": "Optional และ Union types คืออะไร?",
       "example": "Optional[X] means the value can be X or None - equivalent to Union[X, None]. Union[A, B, C] means the value can be any of those types. Python 3.10+ allows using | operator instead: str | None, int | str. Use Optional for nullable values, Union for multiple accepted types.",
       "exampleTranslation": "Optional[X] หมายถึงค่าเป็น X หรือ None ได้ เทียบเท่า Union[X, None] Union[A, B, C] หมายถึงค่าเป็น type ใดก็ได้ Python 3.10+ ใช้ | operator แทนได้: str | None, int | str ใช้ Optional สำหรับ nullable values ใช้ Union สำหรับหลาย accepted types"
     },
     {
       "vocab": "What is Generic type?",
-      "pronunciation": "from typing import TypeVar, Generic, List\n\nT = TypeVar('T')\n\nclass Stack(Generic[T]):\n    def __init__(self) -> None:\n        self._items: List[T] = []\n    \n    def push(self, item: T) -> None:\n        self._items.append(item)\n    \n    def pop(self) -> T:\n        return self._items.pop()\n\n# Usage with type parameter\nint_stack: Stack[int] = Stack()\nint_stack.push(1)  # OK\nint_stack.push('a')  # Type error",
+      "pronunciation": "T = TypeVar('T'); class Box(Generic[T]): ...",
       "meaning": "Generic type คืออะไร?",
       "example": "Generics allow classes and functions to work with multiple types while maintaining type safety. Use TypeVar to define type variables and Generic[T] as base class. The type parameter is specified at usage time. Enables reusable, type-safe containers and utilities.",
       "exampleTranslation": "Generics ทำให้ classes และ functions ทำงานกับหลาย types โดยยังคง type safety ใช้ TypeVar กำหนด type variables และ Generic[T] เป็น base class Type parameter ระบุตอนใช้งาน ทำให้สร้าง containers และ utilities ที่ reusable และ type-safe ได้"
     },
     {
       "vocab": "What is Callable type?",
-      "pronunciation": "from typing import Callable\n\n# Function that takes (int, str) and returns bool\ndef register(callback: Callable[[int, str], bool]) -> None:\n    result = callback(42, 'test')\n    print(result)\n\n# Higher-order function\ndef apply_twice(\n    func: Callable[[int], int],\n    value: int\n) -> int:\n    return func(func(value))\n\n# Callable with no args\ndef run_later(task: Callable[[], None]) -> None:\n    task()",
+      "pronunciation": "Callable[[int, str], bool]",
       "meaning": "Callable type คืออะไร?",
       "example": "Callable[[arg_types], return_type] annotates function types. The first list contains argument types, second is return type. Callable[[], None] is a no-argument void function. Use for callbacks, higher-order functions, and function parameters.",
       "exampleTranslation": "Callable[[arg_types], return_type] annotate function types List แรกมี argument types ตัวที่สองคือ return type Callable[[], None] คือ function ไม่มี argument และ return None ใช้สำหรับ callbacks, higher-order functions และ function parameters"
     },
     {
       "vocab": "What is TypedDict?",
-      "pronunciation": "from typing import TypedDict, Required, NotRequired\n\nclass User(TypedDict):\n    name: str\n    age: int\n    email: str\n\n# Python 3.11+ with Required/NotRequired\nclass Config(TypedDict):\n    host: Required[str]\n    port: Required[int]\n    debug: NotRequired[bool]  # Optional key\n\nuser: User = {\n    'name': 'John',\n    'age': 30,\n    'email': 'john@example.com'\n}",
+      "pronunciation": "class User(TypedDict): name: str; age: int",
       "meaning": "TypedDict คืออะไร?",
       "example": "TypedDict defines the structure of dictionaries with specific keys and value types. Unlike regular Dict[str, Any], each key has its own type. Useful for JSON-like data, API responses, and configuration objects. Type checkers validate key names and value types.",
       "exampleTranslation": "TypedDict กำหนดโครงสร้างของ dictionaries ที่มี keys และ value types เฉพาะ ไม่เหมือน Dict[str, Any] ทั่วไป แต่ละ key มี type ของตัวเอง มีประโยชน์สำหรับ JSON-like data, API responses และ configuration objects Type checkers validate ชื่อ key และ value types"
     },
     {
       "vocab": "What is __str__ vs __repr__?",
-      "pronunciation": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __str__(self):\n        return f'({self.x}, {self.y})'\n    \n    def __repr__(self):\n        return f'Point({self.x}, {self.y})'\n\np = Point(3, 4)\nprint(str(p))   # (3, 4)\nprint(repr(p))  # Point(3, 4)\nprint(p)        # (3, 4) - uses __str__\nprint([p])      # [Point(3, 4)] - uses __repr__",
+      "pronunciation": "__str__ (user-friendly), __repr__ (dev-friendly)",
       "meaning": "__str__ และ __repr__ ต่างกันอย่างไร?",
       "example": "__str__ returns a human-readable string for end users (print). __repr__ returns an unambiguous developer-friendly string, ideally valid Python code to recreate the object. If only one is defined, __repr__ is used as fallback for __str__. Containers always use __repr__ for elements.",
       "exampleTranslation": "__str__ return string ที่อ่านง่ายสำหรับ end users (print) __repr__ return string ที่ชัดเจนสำหรับ developers ควรเป็น Python code ที่สร้าง object ได้ ถ้ากำหนดแค่อันเดียว __repr__ ใช้แทน __str__ ได้ Containers ใช้ __repr__ สำหรับ elements เสมอ"
     },
     {
       "vocab": "What are comparison magic methods?",
-      "pronunciation": "from functools import total_ordering\n\n@total_ordering\nclass Version:\n    def __init__(self, major, minor):\n        self.major = major\n        self.minor = minor\n    \n    def __eq__(self, other):\n        return (self.major, self.minor) == (other.major, other.minor)\n    \n    def __lt__(self, other):\n        return (self.major, self.minor) < (other.major, other.minor)\n\nv1, v2 = Version(1, 0), Version(2, 0)\nprint(v1 < v2)   # True\nprint(v1 <= v2)  # True (from @total_ordering)\nprint(v1 == v2)  # False",
+      "pronunciation": "__eq__, __lt__, __le__, __gt__, __ge__, __ne__",
       "meaning": "Comparison magic methods คืออะไร?",
       "example": "__eq__ (==), __ne__ (!=), __lt__ (<), __le__ (<=), __gt__ (>), __ge__ (>=) define comparison behavior. Use @total_ordering decorator to only implement __eq__ and one of __lt__/__gt__, and get the rest automatically. Return NotImplemented for unsupported comparisons.",
       "exampleTranslation": "__eq__ (==), __ne__ (!=), __lt__ (<), __le__ (<=), __gt__ (>), __ge__ (>=) กำหนด comparison behavior ใช้ @total_ordering decorator เพื่อ implement แค่ __eq__ กับ __lt__/__gt__ อันเดียว แล้วได้ที่เหลืออัตโนมัติ Return NotImplemented สำหรับ comparisons ที่ไม่รองรับ"
     },
     {
       "vocab": "What is __call__ method?",
-      "pronunciation": "class Multiplier:\n    def __init__(self, factor):\n        self.factor = factor\n    \n    def __call__(self, value):\n        return value * self.factor\n\ndouble = Multiplier(2)\ntriple = Multiplier(3)\n\nprint(double(5))   # 10\nprint(triple(5))   # 15\nprint(callable(double))  # True\n\n# Useful for stateful functions\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def __call__(self):\n        self.count += 1\n        return self.count",
+      "pronunciation": "def __call__(self, *args): ...",
       "meaning": "__call__ method คืออะไร?",
       "example": "__call__ makes instances callable like functions. When you do obj(), Python calls obj.__call__(). Useful for creating stateful functions, function-like objects with configuration, decorators as classes, and factory patterns. callable() returns True for objects with __call__.",
       "exampleTranslation": "__call__ ทำให้ instances เรียกได้เหมือน functions เมื่อทำ obj() Python เรียก obj.__call__() มีประโยชน์สำหรับสร้าง stateful functions, function-like objects ที่มี configuration, decorators เป็น classes และ factory patterns callable() return True สำหรับ objects ที่มี __call__"
     },
     {
       "vocab": "What are __getitem__, __setitem__, __delitem__?",
-      "pronunciation": "class CustomList:\n    def __init__(self):\n        self._data = {}\n    \n    def __getitem__(self, key):\n        return self._data[key]\n    \n    def __setitem__(self, key, value):\n        self._data[key] = value\n    \n    def __delitem__(self, key):\n        del self._data[key]\n    \n    def __contains__(self, key):\n        return key in self._data\n\nobj = CustomList()\nobj['name'] = 'John'    # __setitem__\nprint(obj['name'])      # __getitem__\nprint('name' in obj)    # __contains__\ndel obj['name']         # __delitem__",
+      "pronunciation": "obj[key] access via __getitem__, __setitem__, __delitem__",
       "meaning": "__getitem__, __setitem__, __delitem__ คืออะไร?",
       "example": "These methods enable bracket notation: __getitem__(key) for obj[key], __setitem__(key, value) for obj[key] = value, __delitem__(key) for del obj[key]. Also add __contains__ for 'in' operator and __len__ for len(). Together they make custom container types.",
       "exampleTranslation": "Methods เหล่านี้เปิดให้ใช้ bracket notation: __getitem__(key) สำหรับ obj[key], __setitem__(key, value) สำหรับ obj[key] = value, __delitem__(key) สำหรับ del obj[key] เพิ่ม __contains__ สำหรับ 'in' operator และ __len__ สำหรับ len() รวมกันทำให้สร้าง custom container types ได้"
     },
     {
       "vocab": "What is __getattr__ vs __getattribute__?",
-      "pronunciation": "class Example:\n    def __init__(self):\n        self.name = 'John'\n    \n    def __getattr__(self, attr):\n        # Called only when attr NOT found\n        return f'{attr} not found'\n    \n    def __getattribute__(self, attr):\n        # Called for EVERY attribute access\n        print(f'Accessing: {attr}')\n        return super().__getattribute__(attr)\n\nobj = Example()\nprint(obj.name)      # Accessing: name -> John\nprint(obj.unknown)   # Accessing: unknown -> unknown not found",
+      "pronunciation": "__getattr__ (fallback), __getattribute__ (all access)",
       "meaning": "__getattr__ และ __getattribute__ ต่างกันอย่างไร?",
       "example": "__getattribute__ is called for every attribute access, even existing ones - use carefully to avoid infinite recursion. __getattr__ is called only when attribute is not found through normal lookup. Use __getattr__ for fallback behavior, __getattribute__ for proxies or logging all access.",
       "exampleTranslation": "__getattribute__ ถูกเรียกทุกครั้งที่เข้าถึง attribute แม้แต่ที่มีอยู่ - ใช้ระวังเพื่อหลีกเลี่ยง infinite recursion __getattr__ ถูกเรียกเฉพาะเมื่อหา attribute ไม่เจอ ใช้ __getattr__ สำหรับ fallback behavior ใช้ __getattribute__ สำหรับ proxies หรือ logging ทุก access"
     },
     {
       "vocab": "What is __enter__ and __exit__?",
-      "pronunciation": "class Transaction:\n    def __enter__(self):\n        print('Starting transaction')\n        self.conn = get_connection()\n        return self.conn\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if exc_type is None:\n            self.conn.commit()\n            print('Committed')\n        else:\n            self.conn.rollback()\n            print(f'Rolled back: {exc_val}')\n        self.conn.close()\n        return False  # Don't suppress exception\n\nwith Transaction() as conn:\n    conn.execute('INSERT ...')",
+      "pronunciation": "__enter__ (setup), __exit__ (cleanup with exc info)",
       "meaning": "__enter__ และ __exit__ คืออะไร?",
       "example": "__enter__ is called when entering 'with' block, returns the context value (used with 'as'). __exit__ receives exception info (type, value, traceback) or (None, None, None) if no exception. Return True to suppress exception, False to propagate. Used for resource management.",
       "exampleTranslation": "__enter__ ถูกเรียกเมื่อเข้า 'with' block return context value (ใช้กับ 'as') __exit__ รับ exception info (type, value, traceback) หรือ (None, None, None) ถ้าไม่มี exception Return True เพื่อซ่อน exception Return False เพื่อ propagate ใช้สำหรับ resource management"
     },
     {
       "vocab": "What is __hash__ and when to implement it?",
-      "pronunciation": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n    \n    def __hash__(self):\n        return hash((self.x, self.y))\n\n# Now can use as dict key or in set\np1 = Point(1, 2)\np2 = Point(1, 2)\n\npoints = {p1: 'A', p2: 'B'}  # Same key!\nprint(len(points))  # 1\nprint(p1 in {p2})   # True",
+      "pronunciation": "def __hash__(self): return hash((self.x, self.y))",
       "meaning": "__hash__ คืออะไรและเมื่อไหร่ต้อง implement?",
       "example": "__hash__ returns an integer hash value for use in sets and dict keys. Rule: objects that compare equal must have the same hash. If you define __eq__, Python sets __hash__ to None by default (unhashable). Only implement __hash__ for immutable objects. Use hash() on immutable components.",
       "exampleTranslation": "__hash__ return integer hash value สำหรับใช้ใน sets และ dict keys กฎ: objects ที่ compare equal ต้องมี hash เดียวกัน ถ้ากำหนด __eq__ Python set __hash__ เป็น None โดย default (unhashable) Implement __hash__ สำหรับ immutable objects เท่านั้น ใช้ hash() กับ immutable components"
     },
     {
       "vocab": "What is map, filter, reduce?",
-      "pronunciation": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\n\n# map - apply function to each element\nsquares = list(map(lambda x: x**2, numbers))\n# [1, 4, 9, 16, 25]\n\n# filter - keep elements that pass test\nevens = list(filter(lambda x: x % 2 == 0, numbers))\n# [2, 4]\n\n# reduce - accumulate into single value\ntotal = reduce(lambda acc, x: acc + x, numbers, 0)\n# 15",
+      "pronunciation": "map(fn, iter), filter(fn, iter), reduce(fn, iter)",
       "meaning": "map, filter, reduce คืออะไร?",
       "example": "map(func, iterable) applies function to each element, returns iterator. filter(func, iterable) keeps elements where func returns True. reduce(func, iterable, initial) accumulates values left-to-right. These are functional programming primitives, though list comprehensions are often more Pythonic.",
       "exampleTranslation": "map(func, iterable) apply function กับแต่ละ element return iterator filter(func, iterable) เก็บ elements ที่ func return True reduce(func, iterable, initial) accumulate ค่าจากซ้ายไปขวา เหล่านี้คือ functional programming primitives แต่ list comprehensions มักจะ Pythonic กว่า"
     },
     {
       "vocab": "What is functools.partial?",
-      "pronunciation": "from functools import partial\n\ndef power(base, exponent):\n    return base ** exponent\n\nsquare = partial(power, exponent=2)\ncube = partial(power, exponent=3)\n\nprint(square(5))  # 25\nprint(cube(5))    # 125\n\n# Useful with callbacks\nimport requests\nfetch_json = partial(requests.get, headers={'Accept': 'application/json'})",
+      "pronunciation": "partial(func, arg1, kwarg=val)",
       "meaning": "functools.partial คืออะไร?",
       "example": "partial(func, *args, **kwargs) creates a new function with some arguments pre-filled. It 'freezes' certain arguments, returning a callable with fewer parameters. Useful for callbacks, creating specialized versions of general functions, and adapting function signatures.",
       "exampleTranslation": "partial(func, *args, **kwargs) สร้าง function ใหม่ที่มีบาง arguments กรอกไว้แล้ว มัน 'freeze' บาง arguments return callable ที่มี parameters น้อยลง มีประโยชน์สำหรับ callbacks สร้าง specialized versions ของ general functions และปรับ function signatures"
     },
     {
       "vocab": "What is functools.lru_cache?",
-      "pronunciation": "from functools import lru_cache\n\n@lru_cache(maxsize=128)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nprint(fibonacci(100))  # Instant!\nprint(fibonacci.cache_info())\n# CacheInfo(hits=98, misses=101, maxsize=128, currsize=101)\n\n# Clear cache\nfibonacci.cache_clear()\n\n# Python 3.9+ for methods\nfrom functools import cached_property\n\nclass Circle:\n    @cached_property\n    def area(self):\n        return 3.14 * self.radius ** 2",
+      "pronunciation": "@lru_cache(maxsize=128)",
       "meaning": "functools.lru_cache คืออะไร?",
       "example": "lru_cache is a decorator that memoizes function results. LRU = Least Recently Used - when maxsize is reached, oldest entries are discarded. Arguments must be hashable. Use cache_info() to see stats, cache_clear() to reset. For class methods, use cached_property (Python 3.8+).",
       "exampleTranslation": "lru_cache คือ decorator ที่ memoize ผลลัพธ์ของ function LRU = Least Recently Used เมื่อถึง maxsize entries เก่าสุดจะถูกลบ Arguments ต้อง hashable ใช้ cache_info() ดู stats ใช้ cache_clear() reset สำหรับ class methods ใช้ cached_property (Python 3.8+)"
     },
     {
       "vocab": "What is itertools module?",
-      "pronunciation": "import itertools\n\n# count - infinite counter\nfor i in itertools.count(10, 2):  # 10, 12, 14...\n    if i > 16: break\n\n# cycle - infinite loop over iterable\ncycle = itertools.cycle(['A', 'B', 'C'])\n\n# chain - combine iterables\nlist(itertools.chain([1,2], [3,4]))  # [1,2,3,4]\n\n# combinations / permutations\nlist(itertools.combinations('ABC', 2))  # [('A','B'), ('A','C'), ('B','C')]\nlist(itertools.permutations('AB', 2))   # [('A','B'), ('B','A')]\n\n# groupby - group consecutive elements\ndata = [('a', 1), ('a', 2), ('b', 3)]\nfor key, group in itertools.groupby(data, key=lambda x: x[0]):\n    print(key, list(group))",
+      "pronunciation": "count, cycle, chain, combinations, permutations, groupby",
       "meaning": "itertools module คืออะไร?",
       "example": "itertools provides memory-efficient iterator building blocks. Key functions: count/cycle/repeat (infinite), chain/zip_longest (combining), combinations/permutations/product (combinatorics), groupby/takewhile/dropwhile (filtering), accumulate (reduction). All return iterators for lazy evaluation.",
       "exampleTranslation": "itertools ให้ iterator building blocks ที่ประหยัด memory Functions สำคัญ: count/cycle/repeat (infinite), chain/zip_longest (combining), combinations/permutations/product (combinatorics), groupby/takewhile/dropwhile (filtering), accumulate (reduction) ทั้งหมด return iterators สำหรับ lazy evaluation"
     },
     {
       "vocab": "What is collections.defaultdict?",
-      "pronunciation": "from collections import defaultdict\n\n# Regular dict - raises KeyError\nregular = {}\nregular['missing']  # KeyError\n\n# defaultdict - creates default value\ncounts = defaultdict(int)  # default 0\ncounts['a'] += 1\ncounts['b'] += 1\nprint(counts)  # {'a': 1, 'b': 1}\n\n# Group items\ngrouped = defaultdict(list)\nfor name, score in [('Alice', 90), ('Bob', 85), ('Alice', 95)]:\n    grouped[name].append(score)\n# {'Alice': [90, 95], 'Bob': [85]}",
+      "pronunciation": "defaultdict(int), defaultdict(list)",
       "meaning": "collections.defaultdict คืออะไร?",
       "example": "defaultdict automatically creates missing keys with a default value from the factory function. defaultdict(int) gives 0, defaultdict(list) gives [], defaultdict(set) gives set(). Eliminates need for key existence checks. The factory is called with no arguments each time.",
       "exampleTranslation": "defaultdict สร้าง missing keys อัตโนมัติด้วย default value จาก factory function defaultdict(int) ให้ 0, defaultdict(list) ให้ [], defaultdict(set) ให้ set() ไม่ต้อง check ว่า key มีอยู่หรือไม่ Factory ถูกเรียกโดยไม่มี arguments ทุกครั้ง"
     },
     {
       "vocab": "What is collections.Counter?",
-      "pronunciation": "from collections import Counter\n\n# Count occurrences\ntext = 'abracadabra'\ncounts = Counter(text)\nprint(counts)  # Counter({'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1})\n\n# Most common\nprint(counts.most_common(2))  # [('a', 5), ('b', 2)]\n\n# Arithmetic operations\nc1 = Counter(a=3, b=1)\nc2 = Counter(a=1, b=2)\nprint(c1 + c2)  # Counter({'a': 4, 'b': 3})\nprint(c1 - c2)  # Counter({'a': 2})\n\n# Elements iterator\nlist(Counter(a=2, b=1).elements())  # ['a', 'a', 'b']",
+      "pronunciation": "Counter('abracadabra'), Counter.most_common(n)",
       "meaning": "collections.Counter คืออะไร?",
       "example": "Counter is a dict subclass for counting hashable objects. Initialize from iterable, mapping, or keyword args. Key methods: most_common(n), elements(), update(), subtract(). Supports arithmetic (+, -, &, |) and comparison. Missing keys return 0 instead of KeyError.",
       "exampleTranslation": "Counter คือ dict subclass สำหรับนับ hashable objects Initialize จาก iterable, mapping หรือ keyword args Methods สำคัญ: most_common(n), elements(), update(), subtract() รองรับ arithmetic (+, -, &, |) และ comparison Missing keys return 0 แทน KeyError"
     },
     {
       "vocab": "What is collections.namedtuple?",
-      "pronunciation": "from collections import namedtuple\n\n# Create a named tuple class\nPoint = namedtuple('Point', ['x', 'y'])\np = Point(3, 4)\n\nprint(p.x, p.y)     # 3 4 (access by name)\nprint(p[0], p[1])   # 3 4 (access by index)\nx, y = p            # Unpacking works\n\n# With defaults (Python 3.7+)\nPoint3D = namedtuple('Point3D', ['x', 'y', 'z'], defaults=[0])\nPoint3D(1, 2)       # Point3D(x=1, y=2, z=0)\n\n# Convert to dict\np._asdict()  # {'x': 3, 'y': 4}\n\n# Replace values (creates new tuple)\np._replace(x=10)  # Point(x=10, y=4)",
+      "pronunciation": "Point = namedtuple('Point', ['x', 'y'])",
       "meaning": "collections.namedtuple คืออะไร?",
       "example": "namedtuple creates tuple subclasses with named fields. Combines tuple immutability and efficiency with named attribute access. Useful for simple data classes, database records, and API responses. Methods: _asdict(), _replace(), _fields. Consider dataclass for more features.",
       "exampleTranslation": "namedtuple สร้าง tuple subclasses ที่มี named fields รวม immutability และ efficiency ของ tuple กับ named attribute access มีประโยชน์สำหรับ simple data classes, database records และ API responses Methods: _asdict(), _replace(), _fields พิจารณาใช้ dataclass ถ้าต้องการ features มากกว่า"
     },
     {
       "vocab": "What is dataclass?",
-      "pronunciation": "from dataclasses import dataclass, field\nfrom typing import List\n\n@dataclass\nclass User:\n    name: str\n    age: int\n    email: str = 'N/A'\n    tags: List[str] = field(default_factory=list)\n\nuser = User('John', 30)\nprint(user)  # User(name='John', age=30, email='N/A', tags=[])\n\n# Auto-generates __init__, __repr__, __eq__\n\n@dataclass(frozen=True)  # Immutable\nclass Point:\n    x: float\n    y: float\n\n@dataclass(order=True)  # Comparison methods\nclass Version:\n    major: int\n    minor: int",
+      "pronunciation": "@dataclass class User: name: str; age: int",
       "meaning": "dataclass คืออะไร?",
       "example": "dataclass decorator auto-generates __init__, __repr__, __eq__ from class annotations. Options: frozen=True (immutable), order=True (comparison), slots=True (memory efficient). Use field() for mutable defaults or metadata. Cleaner than namedtuple for complex data with methods.",
       "exampleTranslation": "dataclass decorator auto-generate __init__, __repr__, __eq__ จาก class annotations Options: frozen=True (immutable), order=True (comparison), slots=True (memory efficient) ใช้ field() สำหรับ mutable defaults หรือ metadata สะอาดกว่า namedtuple สำหรับ data ที่ซับซ้อนที่มี methods"
     },
     {
       "vocab": "What is __name__ == '__main__'?",
-      "pronunciation": "# mymodule.py\ndef main():\n    print('Running main function')\n\ndef helper():\n    return 'I am a helper'\n\nif __name__ == '__main__':\n    # Only runs when executed directly\n    # NOT when imported\n    main()\n\n# Usage:\n# python mymodule.py  -> 'Running main function'\n# import mymodule     -> nothing printed",
+      "pronunciation": "if __name__ == '__main__': main()",
       "meaning": "__name__ == '__main__' คืออะไร?",
       "example": "__name__ is a special variable set by Python. When a file is run directly, __name__ is '__main__'. When imported as module, __name__ is the module name. This pattern lets files work both as importable modules and standalone scripts. Put script logic inside this guard.",
       "exampleTranslation": "__name__ เป็น special variable ที่ Python กำหนด เมื่อรัน file โดยตรง __name__ คือ '__main__' เมื่อ import เป็น module __name__ คือชื่อ module Pattern นี้ให้ files ทำงานได้ทั้งเป็น importable modules และ standalone scripts ใส่ script logic ไว้ใน guard นี้"
     },
     {
       "vocab": "What is __all__ in modules?",
-      "pronunciation": "# mypackage/__init__.py\nfrom .module_a import ClassA, func_a\nfrom .module_b import ClassB\n\n__all__ = ['ClassA', 'func_a', 'ClassB']\n\n# Now users can do:\n# from mypackage import *  # Only gets items in __all__\n\n# Without __all__, 'from x import *' exports all\n# names not starting with underscore\n\n# mymodule.py\n__all__ = ['public_func']\n\ndef public_func(): pass\ndef _private(): pass\ndef helper(): pass  # Not in __all__, won't be star-imported",
+      "pronunciation": "__all__ = ['public_func', 'PublicClass']",
       "meaning": "__all__ ใน modules คืออะไร?",
       "example": "__all__ is a list defining what 'from module import *' exports. It controls the public API of your module or package. Names not in __all__ are still accessible via direct import but won't be star-imported. Also serves as documentation of intended public interface.",
       "exampleTranslation": "__all__ คือ list ที่กำหนดว่า 'from module import *' export อะไร มันควบคุม public API ของ module หรือ package ชื่อที่ไม่อยู่ใน __all__ ยังเข้าถึงได้ผ่าน direct import แต่จะไม่ถูก star-import ยังเป็น documentation ของ intended public interface ด้วย"
     },
     {
       "vocab": "What is the difference between import and from import?",
-      "pronunciation": "# import module - need prefix\nimport os\nos.path.join('a', 'b')\n\n# from module import names - no prefix\nfrom os.path import join, exists\njoin('a', 'b')\n\n# import with alias\nimport numpy as np\nnp.array([1, 2, 3])\n\n# from import with alias\nfrom collections import defaultdict as dd\n\n# Relative imports (inside packages)\nfrom . import sibling_module\nfrom ..parent import something\nfrom .subpackage import module",
+      "pronunciation": "import module vs from module import name",
       "meaning": "import และ from import ต่างกันอย่างไร?",
       "example": "'import module' imports the whole module, requiring prefix for access. 'from module import name' imports specific names into current namespace. Use 'as' for aliases. Relative imports (. for current, .. for parent) work only inside packages. Prefer explicit imports over 'import *'.",
       "exampleTranslation": "'import module' import ทั้ง module ต้องใช้ prefix เพื่อเข้าถึง 'from module import name' import ชื่อเฉพาะเข้า namespace ปัจจุบัน ใช้ 'as' สำหรับ aliases Relative imports (. สำหรับ current, .. สำหรับ parent) ทำงานใน packages เท่านั้น ใช้ explicit imports แทน 'import *'"
     },
     {
       "vocab": "What is GIL (Global Interpreter Lock)?",
-      "pronunciation": "import threading\nimport multiprocessing\n\n# CPU-bound - GIL is a bottleneck\ndef cpu_task():\n    sum(range(10**7))\n\n# Threading - limited by GIL for CPU work\nthreads = [threading.Thread(target=cpu_task) for _ in range(4)]\n# Runs slower than expected on multi-core\n\n# Multiprocessing - bypasses GIL\nprocesses = [multiprocessing.Process(target=cpu_task) for _ in range(4)]\n# True parallelism\n\n# I/O-bound - GIL released during I/O\ndef io_task():\n    requests.get(url)  # GIL released\n# Threading works well for I/O",
+      "pronunciation": "",
       "meaning": "GIL (Global Interpreter Lock) คืออะไร?",
       "example": "GIL is a mutex in CPython that allows only one thread to execute Python bytecode at a time. It simplifies memory management but limits CPU parallelism. GIL is released during I/O operations. For CPU-bound tasks, use multiprocessing. For I/O-bound, threading or asyncio work fine.",
       "exampleTranslation": "GIL คือ mutex ใน CPython ที่อนุญาตให้แค่ thread เดียว execute Python bytecode ในเวลาเดียวกัน ทำให้ memory management ง่ายขึ้นแต่จำกัด CPU parallelism GIL ถูกปล่อยระหว่าง I/O operations สำหรับ CPU-bound tasks ใช้ multiprocessing สำหรับ I/O-bound ใช้ threading หรือ asyncio ได้"
     },
     {
       "vocab": "What is the walrus operator :=?",
-      "pronunciation": "# Without walrus\ndata = get_data()\nif data:\n    process(data)\n\n# With walrus - assign and use in one expression\nif (data := get_data()):\n    process(data)\n\n# In while loops\nwhile (line := file.readline()):\n    process(line)\n\n# In list comprehensions\nresults = [y for x in data if (y := expensive(x)) > threshold]\n\n# In function arguments\nprint(length := len(my_list))",
+      "pronunciation": "if (n := len(data)) > 10:",
       "meaning": "Walrus operator := คืออะไร?",
       "example": "The walrus operator (:=) assigns values as part of an expression, introduced in Python 3.8. It assigns and returns the value, reducing repetition. Useful in if/while conditions, comprehensions, and anywhere you need to capture an intermediate value. Must be parenthesized in many contexts.",
       "exampleTranslation": "Walrus operator (:=) assign ค่าเป็นส่วนหนึ่งของ expression เริ่มมีใน Python 3.8 มัน assign และ return ค่า ลดการทำซ้ำ มีประโยชน์ใน if/while conditions, comprehensions และที่ใดก็ตามที่ต้อง capture intermediate value ต้องใส่วงเล็บในหลาย contexts"
     },
     {
       "vocab": "What is match-case (structural pattern matching)?",
-      "pronunciation": "def handle_command(command):\n    match command:\n        case ['quit']:\n            return 'Goodbye'\n        case ['load', filename]:\n            return f'Loading {filename}'\n        case ['save', filename, '--force']:\n            return f'Force saving {filename}'\n        case {'action': 'create', 'name': name}:\n            return f'Creating {name}'\n        case int(x) if x > 0:\n            return f'Positive int: {x}'\n        case _:\n            return 'Unknown command'\n\nhandle_command(['load', 'data.csv'])  # 'Loading data.csv'",
+      "pronunciation": "match value: case pattern: ...",
       "meaning": "match-case (structural pattern matching) คืออะไร?",
       "example": "match-case (Python 3.10+) is structural pattern matching, more powerful than switch-case. It matches against patterns: literals, sequences, mappings, classes, with guards (if). Use _ as wildcard. Captures values from matched patterns. Great for parsing commands, ASTs, and complex data structures.",
       "exampleTranslation": "match-case (Python 3.10+) คือ structural pattern matching มีพลังมากกว่า switch-case มัน match กับ patterns: literals, sequences, mappings, classes พร้อม guards (if) ใช้ _ เป็น wildcard จับค่าจาก matched patterns ดีสำหรับ parsing commands, ASTs และ data structures ที่ซับซ้อน"
     },
     {
       "vocab": "What is the difference between deepcopy and shallow copy?",
-      "pronunciation": "import copy\n\noriginal = [[1, 2], [3, 4]]\n\n# Shallow copy - copies outer list, shares inner\nshallow = copy.copy(original)\nshallow[0][0] = 'X'\nprint(original)  # [['X', 2], [3, 4]] - affected!\n\n# Deep copy - copies everything recursively\noriginal = [[1, 2], [3, 4]]\ndeep = copy.deepcopy(original)\ndeep[0][0] = 'X'\nprint(original)  # [[1, 2], [3, 4]] - unchanged\n\n# Also: list() and [:] are shallow copies\nshallow = original[:]",
+      "pronunciation": "copy.copy() (shallow), copy.deepcopy() (deep)",
       "meaning": "deepcopy และ shallow copy ต่างกันอย่างไร?",
       "example": "Shallow copy creates a new container but references the same nested objects. Changes to nested objects affect both copies. Deep copy recursively copies all nested objects, creating fully independent copies. Use copy.copy() for shallow, copy.deepcopy() for deep. list(), [:], dict() create shallow copies.",
       "exampleTranslation": "Shallow copy สร้าง container ใหม่แต่ reference nested objects เดิม การเปลี่ยน nested objects กระทบทั้งสอง copies Deep copy copy nested objects ทั้งหมดแบบ recursive สร้าง copies ที่เป็นอิสระ ใช้ copy.copy() สำหรับ shallow, copy.deepcopy() สำหรับ deep list(), [:], dict() สร้าง shallow copies"
     },
     {
       "vocab": "What is Python's memory management?",
-      "pronunciation": "import sys\n\n# Reference counting\na = [1, 2, 3]\nprint(sys.getrefcount(a))  # 2 (a + temp ref)\nb = a  # refcount = 3\ndel a  # refcount = 2\n\n# Garbage collection for cycles\nimport gc\ngc.collect()  # Force garbage collection\n\n# Memory optimization\na = 256\nb = 256\nprint(a is b)  # True - small int caching (-5 to 256)\n\ns1 = 'hello'\ns2 = 'hello'\nprint(s1 is s2)  # True - string interning",
+      "pronunciation": "reference counting + cyclic garbage collector",
       "meaning": "Python จัดการ memory อย่างไร?",
       "example": "Python uses reference counting as primary memory management - objects are freed when refcount reaches 0. Cyclic garbage collector handles reference cycles. Optimizations include small integer caching (-5 to 256), string interning, and free lists for common objects. Use sys.getrefcount() and gc module for inspection.",
       "exampleTranslation": "Python ใช้ reference counting เป็น memory management หลัก - objects ถูกปล่อยเมื่อ refcount ถึง 0 Cyclic garbage collector จัดการ reference cycles Optimizations รวมถึง small integer caching (-5 to 256), string interning และ free lists สำหรับ common objects ใช้ sys.getrefcount() และ gc module เพื่อตรวจสอบ"
     },
     {
       "vocab": "What is metaclass in Python?",
-      "pronunciation": "class SingletonMeta(type):\n    _instances = {}\n    \n    def __call__(cls, *args, **kwargs):\n        if cls not in cls._instances:\n            cls._instances[cls] = super().__call__(*args, **kwargs)\n        return cls._instances[cls]\n\nclass Database(metaclass=SingletonMeta):\n    def __init__(self):\n        print('Creating database connection')\n\ndb1 = Database()  # 'Creating database connection'\ndb2 = Database()  # Nothing printed\nprint(db1 is db2)  # True",
+      "pronunciation": "class MyClass(metaclass=MyMeta):",
       "meaning": "Metaclass ใน Python คืออะไร?",
       "example": "A metaclass is the 'class of a class' - it defines how classes behave. type is the default metaclass. Use metaclass to customize class creation, add methods to all instances, enforce interfaces, register classes, or implement patterns like Singleton. Define with 'class MyClass(metaclass=MyMeta)'.",
       "exampleTranslation": "Metaclass คือ 'class ของ class' มันกำหนดว่า classes ทำงานอย่างไร type เป็น default metaclass ใช้ metaclass เพื่อ customize class creation เพิ่ม methods ให้ทุก instances บังคับ interfaces register classes หรือ implement patterns เช่น Singleton กำหนดด้วย 'class MyClass(metaclass=MyMeta)'"
     },
     {
       "vocab": "What is descriptor protocol?",
-      "pronunciation": "class Validator:\n    def __init__(self, min_val, max_val):\n        self.min_val = min_val\n        self.max_val = max_val\n    \n    def __set_name__(self, owner, name):\n        self.name = name\n    \n    def __get__(self, obj, objtype=None):\n        return obj.__dict__.get(self.name)\n    \n    def __set__(self, obj, value):\n        if not self.min_val <= value <= self.max_val:\n            raise ValueError(f'{self.name} must be between {self.min_val} and {self.max_val}')\n        obj.__dict__[self.name] = value\n\nclass Person:\n    age = Validator(0, 150)\n\np = Person()\np.age = 30   # OK\np.age = 200  # ValueError",
+      "pronunciation": "__get__, __set__, __delete__, __set_name__",
       "meaning": "Descriptor protocol คืออะไร?",
       "example": "Descriptors are objects that define __get__, __set__, and/or __delete__ methods. They customize attribute access when used as class attributes. Data descriptors (with __set__) take priority over instance __dict__. Used internally by property, classmethod, staticmethod. Great for validation, lazy loading, and type checking.",
       "exampleTranslation": "Descriptors คือ objects ที่กำหนด __get__, __set__ และ/หรือ __delete__ methods มันปรับ attribute access เมื่อใช้เป็น class attributes Data descriptors (ที่มี __set__) มีความสำคัญกว่า instance __dict__ ใช้ภายในโดย property, classmethod, staticmethod ดีสำหรับ validation, lazy loading และ type checking"
     },
     {
       "vocab": "What is __init_subclass__?",
-      "pronunciation": "class Plugin:\n    registry = []\n    \n    def __init_subclass__(cls, **kwargs):\n        super().__init_subclass__(**kwargs)\n        cls.registry.append(cls)\n        print(f'Registered: {cls.__name__}')\n\nclass AudioPlugin(Plugin):\n    pass  # 'Registered: AudioPlugin'\n\nclass VideoPlugin(Plugin):\n    pass  # 'Registered: VideoPlugin'\n\nprint(Plugin.registry)  # [AudioPlugin, VideoPlugin]\n\n# With parameters\nclass Base:\n    def __init_subclass__(cls, required_attr=None, **kwargs):\n        if required_attr and not hasattr(cls, required_attr):\n            raise TypeError(f'Must define {required_attr}')",
+      "pronunciation": "def __init_subclass__(cls, **kwargs):",
       "meaning": "__init_subclass__ คืออะไร?",
       "example": "__init_subclass__ is called when a class is subclassed, receiving the new subclass. Added in Python 3.6 as simpler alternative to metaclasses for class customization. Use for auto-registration, validation of subclasses, or adding class-level behavior. Accepts keyword arguments from class definition.",
       "exampleTranslation": "__init_subclass__ ถูกเรียกเมื่อ class ถูก subclass โดยรับ new subclass เพิ่มใน Python 3.6 เป็นทางเลือกที่ง่ายกว่า metaclasses สำหรับ class customization ใช้สำหรับ auto-registration, validation ของ subclasses หรือเพิ่ม class-level behavior รับ keyword arguments จาก class definition"
     },
     {
       "vocab": "What is __class_getitem__?",
-      "pronunciation": "from typing import TypeVar, Generic\n\nT = TypeVar('T')\n\nclass Box(Generic[T]):\n    def __init__(self, item: T):\n        self.item = item\n\n# Custom implementation\nclass MyContainer:\n    def __class_getitem__(cls, item):\n        print(f'Getting item type: {item}')\n        return cls  # or return a special class\n\n# Usage\nMyContainer[int]  # 'Getting item type: <class 'int'>'\nMyContainer[str]  # 'Getting item type: <class 'str'>'\n\n# This enables the [] syntax on the class itself\n# list[int], dict[str, int] use this",
+      "pronunciation": "def __class_getitem__(cls, item):",
       "meaning": "__class_getitem__ คืออะไร?",
       "example": "__class_getitem__ enables subscript notation on classes: MyClass[SomeType]. Called when you do Class[item]. Used by typing system for generic types like List[int], Dict[str, Any]. Return a parameterized version of the class or any object. Added in Python 3.7.",
       "exampleTranslation": "__class_getitem__ เปิดให้ใช้ subscript notation บน classes: MyClass[SomeType] ถูกเรียกเมื่อทำ Class[item] ใช้โดย typing system สำหรับ generic types เช่น List[int], Dict[str, Any] Return parameterized version ของ class หรือ object ใดก็ได้ เพิ่มใน Python 3.7"
     },
     {
       "vocab": "What is Enum in Python?",
-      "pronunciation": "from enum import Enum, auto, IntEnum\n\nclass Color(Enum):\n    RED = 1\n    GREEN = 2\n    BLUE = 3\n\n# Access\nprint(Color.RED)        # Color.RED\nprint(Color.RED.name)   # 'RED'\nprint(Color.RED.value)  # 1\nprint(Color['RED'])     # Color.RED\nprint(Color(1))         # Color.RED\n\n# auto() for automatic values\nclass Status(Enum):\n    PENDING = auto()   # 1\n    APPROVED = auto()  # 2\n    REJECTED = auto()  # 3\n\n# IntEnum for integer comparison\nclass Priority(IntEnum):\n    LOW = 1\n    HIGH = 2\n\nprint(Priority.HIGH > Priority.LOW)  # True",
+      "pronunciation": "class Color(Enum): RED = 1; GREEN = 2",
       "meaning": "Enum ใน Python คืออะไร?",
       "example": "Enum creates enumeration types with named constants. Members are unique and compared by identity (is), not value. Access by name (Color.RED), by value (Color(1)), or subscript (Color['RED']). Use auto() for automatic values, IntEnum for integer behavior, Flag for bitwise operations.",
       "exampleTranslation": "Enum สร้าง enumeration types ที่มี named constants Members เป็น unique และเปรียบเทียบด้วย identity (is) ไม่ใช่ value เข้าถึงด้วย name (Color.RED), value (Color(1)) หรือ subscript (Color['RED']) ใช้ auto() สำหรับ automatic values, IntEnum สำหรับ integer behavior, Flag สำหรับ bitwise operations"
     },
     {
       "vocab": "What is Pydantic and how to use it?",
-      "pronunciation": "from pydantic import BaseModel, Field, validator\nfrom typing import Optional, List\n\nclass User(BaseModel):\n    name: str\n    age: int = Field(gt=0, le=150)\n    email: Optional[str] = None\n    tags: List[str] = []\n    \n    @validator('name')\n    def name_must_not_be_empty(cls, v):\n        if not v.strip():\n            raise ValueError('Name cannot be empty')\n        return v.title()\n\n# Automatic validation\nuser = User(name='john doe', age=30)\nprint(user.name)  # 'John Doe'\n\n# From dict/JSON\nuser = User.parse_obj({'name': 'jane', 'age': 25})\nuser = User.parse_raw('{\"name\": \"jane\", \"age\": 25}')\n\n# To dict/JSON\nuser.dict()\nuser.json()",
+      "pronunciation": "class User(BaseModel): name: str; age: int",
       "meaning": "Pydantic คืออะไรและใช้อย่างไร?",
       "example": "Pydantic is a data validation library using Python type hints. BaseModel provides automatic validation, serialization (dict/JSON), and parsing. Use Field() for constraints, @validator for custom logic. Widely used in FastAPI, settings management, and API data validation.",
       "exampleTranslation": "Pydantic คือ data validation library ที่ใช้ Python type hints BaseModel ให้ automatic validation, serialization (dict/JSON) และ parsing ใช้ Field() สำหรับ constraints, @validator สำหรับ custom logic ใช้กันมากใน FastAPI, settings management และ API data validation"
     },
     {
       "vocab": "What is pathlib module?",
-      "pronunciation": "from pathlib import Path\n\n# Create path\np = Path('/home/user/documents')\np = Path.home() / 'documents' / 'file.txt'\n\n# Properties\nprint(p.name)      # 'file.txt'\nprint(p.stem)      # 'file'\nprint(p.suffix)    # '.txt'\nprint(p.parent)    # '/home/user/documents'\nprint(p.parts)     # ('/', 'home', 'user', 'documents', 'file.txt')\n\n# Operations\np.exists()\np.is_file()\np.is_dir()\np.mkdir(parents=True, exist_ok=True)\np.read_text()\np.write_text('content')\nlist(p.parent.glob('*.txt'))\nlist(p.parent.rglob('*.py'))  # Recursive",
+      "pronunciation": "from pathlib import Path; p = Path('/home')",
       "meaning": "pathlib module คืออะไร?",
       "example": "pathlib provides object-oriented filesystem paths. Path objects use / operator for joining. Properties: name, stem, suffix, parent, parts. Methods: exists(), is_file(), is_dir(), mkdir(), read_text(), write_text(), glob(), rglob(). More readable and powerful than os.path functions.",
       "exampleTranslation": "pathlib ให้ object-oriented filesystem paths Path objects ใช้ / operator สำหรับ joining Properties: name, stem, suffix, parent, parts Methods: exists(), is_file(), is_dir(), mkdir(), read_text(), write_text(), glob(), rglob() อ่านง่ายกว่าและมีพลังมากกว่า os.path functions"

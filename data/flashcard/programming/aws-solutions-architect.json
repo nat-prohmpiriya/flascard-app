@@ -1,0 +1,476 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-28T12:00:00.000Z",
+  "deck": {
+    "name": "AWS Solutions Architect Associate",
+    "description": "AWS Solutions Architect Associate (SAA-C03) certification concepts covering compute, storage, database, networking, security, and architecture best practices",
+    "category": "Cloud",
+    "tags": ["aws", "cloud", "certification", "solutions-architect"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is AWS Region and Availability Zone?",
+      "pronunciation": "Region: ap-southeast-1 (Singapore)\nAZs: ap-southeast-1a, 1b, 1c",
+      "meaning": "AWS Region และ Availability Zone คืออะไร?",
+      "example": "Region is a geographic area with multiple isolated data centers. Availability Zone (AZ) is one or more discrete data centers with redundant power and networking. Deploy across multiple AZs for high availability.",
+      "exampleTranslation": "Region คือพื้นที่ทางภูมิศาสตร์ที่มี data centers หลายแห่งแยกกัน Availability Zone (AZ) คือ data centers หนึ่งหรือมากกว่าที่มี power และ networking สำรอง Deploy ข้ามหลาย AZs เพื่อ high availability"
+    },
+    {
+      "vocab": "What is Amazon EC2?",
+      "pronunciation": "aws ec2 run-instances \\\n  --image-id ami-xxx \\\n  --instance-type t3.micro \\\n  --key-name mykey",
+      "meaning": "Amazon EC2 คืออะไร?",
+      "example": "EC2 (Elastic Compute Cloud) provides resizable virtual servers. Choose instance types for different workloads (compute, memory, storage optimized). Pricing: On-Demand, Reserved, Spot, Savings Plans. Use Auto Scaling for elasticity.",
+      "exampleTranslation": "EC2 (Elastic Compute Cloud) ให้บริการ virtual servers ที่ปรับขนาดได้ เลือก instance types สำหรับ workloads ต่างกัน (compute, memory, storage optimized) ราคา: On-Demand, Reserved, Spot, Savings Plans ใช้ Auto Scaling สำหรับ elasticity"
+    },
+    {
+      "vocab": "What are EC2 instance types?",
+      "pronunciation": "t3.micro  - General purpose (burstable)\nm5.large  - General purpose\nc5.xlarge - Compute optimized\nr5.large  - Memory optimized\ni3.large  - Storage optimized\np3.large  - GPU/ML",
+      "meaning": "EC2 instance types มีอะไรบ้าง?",
+      "example": "T-series: burstable, good for variable workloads. M-series: balanced compute/memory. C-series: compute-intensive (batch, gaming). R-series: memory-intensive (databases, caching). I-series: high I/O (NoSQL). P/G-series: GPU for ML/graphics.",
+      "exampleTranslation": "T-series: burstable เหมาะกับ workloads ที่ไม่คงที่ M-series: สมดุล compute/memory C-series: compute-intensive (batch, gaming) R-series: memory-intensive (databases, caching) I-series: high I/O (NoSQL) P/G-series: GPU สำหรับ ML/graphics"
+    },
+    {
+      "vocab": "What are EC2 pricing options?",
+      "pronunciation": "On-Demand:  pay per hour/second\nReserved:   1-3 year commitment (up to 72% off)\nSpot:       bid for unused capacity (up to 90% off)\nSavings Plans: flexible commitment",
+      "meaning": "EC2 pricing options มีอะไรบ้าง?",
+      "example": "On-Demand: no commitment, highest cost. Reserved: 1-3 year term, significant discount. Spot: unused capacity at steep discount but can be interrupted. Savings Plans: commit to $/hour, flexible across instance types. Dedicated Hosts for compliance.",
+      "exampleTranslation": "On-Demand: ไม่มี commitment ราคาสูงสุด Reserved: 1-3 ปี ได้ส่วนลดมาก Spot: unused capacity ราคาถูกมากแต่อาจถูกหยุด Savings Plans: commit $/hour ยืดหยุ่นข้าม instance types Dedicated Hosts สำหรับ compliance"
+    },
+    {
+      "vocab": "What is EC2 Auto Scaling?",
+      "pronunciation": "Auto Scaling Group:\n  Min: 2\n  Desired: 4\n  Max: 10\n  \nScaling Policy:\n  CPU > 70% → add 2 instances\n  CPU < 30% → remove 1 instance",
+      "meaning": "EC2 Auto Scaling คืออะไร?",
+      "example": "Auto Scaling automatically adjusts EC2 capacity based on demand. Define min/max/desired capacity. Scaling policies: target tracking, step scaling, scheduled. Uses Launch Template for instance configuration. Integrates with ELB for load distribution.",
+      "exampleTranslation": "Auto Scaling ปรับ EC2 capacity อัตโนมัติตาม demand กำหนด min/max/desired capacity Scaling policies: target tracking, step scaling, scheduled ใช้ Launch Template สำหรับ instance configuration ทำงานร่วมกับ ELB สำหรับกระจาย load"
+    },
+    {
+      "vocab": "What is Elastic Load Balancing (ELB)?",
+      "pronunciation": "ALB: Layer 7 (HTTP/HTTPS)\nNLB: Layer 4 (TCP/UDP)\nGLB: Layer 3 (Gateway)\nCLB: Classic (legacy)",
+      "meaning": "Elastic Load Balancing (ELB) คืออะไร?",
+      "example": "ELB distributes traffic across targets. ALB: HTTP/HTTPS routing, path-based, host-based. NLB: ultra-low latency, static IP, TCP/UDP. GLB: third-party appliances. All support health checks, cross-zone balancing, and integrate with Auto Scaling.",
+      "exampleTranslation": "ELB กระจาย traffic ไปยัง targets ALB: HTTP/HTTPS routing, path-based, host-based NLB: latency ต่ำมาก, static IP, TCP/UDP GLB: third-party appliances ทุกตัวรองรับ health checks, cross-zone balancing, และทำงานกับ Auto Scaling"
+    },
+    {
+      "vocab": "When to use ALB vs NLB?",
+      "pronunciation": "ALB: Web apps, microservices, containers\nNLB: Gaming, IoT, real-time, static IP needed",
+      "meaning": "เมื่อไหร่ควรใช้ ALB vs NLB?",
+      "example": "Use ALB for HTTP/HTTPS applications needing path/host routing, authentication, WebSocket. Use NLB for extreme performance, TCP/UDP protocols, static IP requirements, or when you need to preserve source IP without proxy protocol.",
+      "exampleTranslation": "ใช้ ALB สำหรับ HTTP/HTTPS applications ที่ต้องการ path/host routing, authentication, WebSocket ใช้ NLB สำหรับ performance สูงสุด, TCP/UDP protocols, ต้องการ static IP, หรือต้อง preserve source IP โดยไม่ใช้ proxy protocol"
+    },
+    {
+      "vocab": "What is Amazon S3?",
+      "pronunciation": "aws s3 cp file.txt s3://my-bucket/\naws s3 sync ./folder s3://my-bucket/folder\n\nBucket: my-bucket\nObject: folder/file.txt",
+      "meaning": "Amazon S3 คืออะไร?",
+      "example": "S3 (Simple Storage Service) is object storage with 99.999999999% (11 9's) durability. Store unlimited objects up to 5TB each. Access via HTTP/HTTPS. Use cases: backup, static hosting, data lake, archive. Organize with prefixes (folders).",
+      "exampleTranslation": "S3 (Simple Storage Service) คือ object storage ที่มี durability 99.999999999% (11 9's) เก็บ objects ไม่จำกัดขนาดสูงสุด 5TB ต่อชิ้น เข้าถึงผ่าน HTTP/HTTPS ใช้สำหรับ: backup, static hosting, data lake, archive จัดระเบียบด้วย prefixes (folders)"
+    },
+    {
+      "vocab": "What are S3 storage classes?",
+      "pronunciation": "Standard:           Frequent access\nIntelligent-Tiering: Auto-tiering\nStandard-IA:        Infrequent access\nOne Zone-IA:        Single AZ, infrequent\nGlacier Instant:    Archive, ms retrieval\nGlacier Flexible:   Archive, min-hours\nGlacier Deep:       Cheapest, 12-48 hours",
+      "meaning": "S3 storage classes มีอะไรบ้าง?",
+      "example": "Standard: frequently accessed, highest cost. IA classes: lower cost, retrieval fee. Glacier tiers: archive with varying retrieval times. Intelligent-Tiering: auto-moves between tiers. Use Lifecycle policies to transition objects automatically.",
+      "exampleTranslation": "Standard: เข้าถึงบ่อย ราคาสูงสุด IA classes: ราคาต่ำกว่า มี retrieval fee Glacier tiers: archive มี retrieval times ต่างกัน Intelligent-Tiering: ย้าย tiers อัตโนมัติ ใช้ Lifecycle policies เพื่อ transition objects อัตโนมัติ"
+    },
+    {
+      "vocab": "What is S3 versioning and replication?",
+      "pronunciation": "Versioning:\n  file.txt (version 1)\n  file.txt (version 2) ← current\n  \nReplication:\n  Source bucket → Destination bucket\n  (same or cross region)",
+      "meaning": "S3 versioning และ replication คืออะไร?",
+      "example": "Versioning keeps multiple versions of objects, protects against accidental deletion. Enable MFA Delete for extra protection. Cross-Region Replication (CRR) copies to another region. Same-Region Replication (SRR) for compliance or log aggregation.",
+      "exampleTranslation": "Versioning เก็บหลาย versions ของ objects ป้องกันการลบโดยไม่ตั้งใจ เปิด MFA Delete เพื่อป้องกันเพิ่ม Cross-Region Replication (CRR) copy ไป region อื่น Same-Region Replication (SRR) สำหรับ compliance หรือ log aggregation"
+    },
+    {
+      "vocab": "What is S3 security?",
+      "pronunciation": "Bucket Policy:\n{\n  \"Effect\": \"Allow\",\n  \"Principal\": \"*\",\n  \"Action\": \"s3:GetObject\",\n  \"Resource\": \"arn:aws:s3:::bucket/*\",\n  \"Condition\": {\"IpAddress\": ...}\n}",
+      "meaning": "S3 security มีอะไรบ้าง?",
+      "example": "Bucket policies: resource-based JSON policies. ACLs: legacy, object-level. Block Public Access: account/bucket level protection. Encryption: SSE-S3, SSE-KMS, SSE-C, client-side. Pre-signed URLs for temporary access. VPC Endpoints for private access.",
+      "exampleTranslation": "Bucket policies: resource-based JSON policies ACLs: legacy, object-level Block Public Access: ป้องกันระดับ account/bucket Encryption: SSE-S3, SSE-KMS, SSE-C, client-side Pre-signed URLs สำหรับ temporary access VPC Endpoints สำหรับ private access"
+    },
+    {
+      "vocab": "What is Amazon EBS?",
+      "pronunciation": "Volume Types:\ngp3:  General purpose SSD (default)\nio2:  High performance SSD (databases)\nst1:  Throughput HDD (big data)\nsc1:  Cold HDD (infrequent access)",
+      "meaning": "Amazon EBS คืออะไร?",
+      "example": "EBS (Elastic Block Store) provides persistent block storage for EC2. Volumes are AZ-specific. Snapshots stored in S3 (incremental). gp3: balanced price/performance. io2: highest IOPS for databases. Volume can be resized without downtime.",
+      "exampleTranslation": "EBS (Elastic Block Store) ให้ persistent block storage สำหรับ EC2 Volumes อยู่เฉพาะ AZ Snapshots เก็บใน S3 (incremental) gp3: สมดุลราคา/performance io2: IOPS สูงสุดสำหรับ databases Volume ปรับขนาดได้โดยไม่ downtime"
+    },
+    {
+      "vocab": "What is Amazon EFS?",
+      "pronunciation": "Mount target in each AZ:\n  AZ-a: mount-target-1\n  AZ-b: mount-target-2\n\nEC2 instances mount: \n  mount -t efs fs-xxx:/ /mnt/efs",
+      "meaning": "Amazon EFS คืออะไร?",
+      "example": "EFS (Elastic File System) is managed NFS that can be mounted by multiple EC2 instances across AZs. Auto-scales, pay for what you use. Storage classes: Standard, IA. Use cases: shared content, web serving, container storage. Supports POSIX permissions.",
+      "exampleTranslation": "EFS (Elastic File System) คือ managed NFS ที่หลาย EC2 instances mount ได้ข้าม AZs Auto-scales จ่ายตามที่ใช้ Storage classes: Standard, IA ใช้สำหรับ: shared content, web serving, container storage รองรับ POSIX permissions"
+    },
+    {
+      "vocab": "What is the difference between EBS, EFS, and S3?",
+      "pronunciation": "EBS: Block, single EC2, AZ-level\nEFS: File, multi EC2, Region-level\nS3:  Object, HTTP access, Global",
+      "meaning": "ความแตกต่างระหว่าง EBS, EFS, และ S3 คืออะไร?",
+      "example": "EBS: block storage for single EC2, highest performance, AZ-bound. EFS: shared file system, NFS protocol, multi-AZ. S3: object storage, HTTP API, unlimited scale, cheapest. Choose based on access pattern, sharing needs, and protocol requirements.",
+      "exampleTranslation": "EBS: block storage สำหรับ EC2 เดียว performance สูงสุด ผูกกับ AZ EFS: shared file system, NFS protocol, multi-AZ S3: object storage, HTTP API, scale ไม่จำกัด ถูกสุด เลือกตาม access pattern, ความต้องการแชร์, และ protocol"
+    },
+    {
+      "vocab": "What is Amazon VPC?",
+      "pronunciation": "VPC: 10.0.0.0/16\n  Public Subnet:  10.0.1.0/24 (AZ-a)\n  Private Subnet: 10.0.2.0/24 (AZ-a)\n  Public Subnet:  10.0.3.0/24 (AZ-b)\n  Private Subnet: 10.0.4.0/24 (AZ-b)",
+      "meaning": "Amazon VPC คืออะไร?",
+      "example": "VPC (Virtual Private Cloud) is your isolated network in AWS. Define IP range with CIDR. Create subnets in each AZ. Public subnets have route to Internet Gateway. Private subnets use NAT Gateway for outbound internet. Control traffic with Security Groups and NACLs.",
+      "exampleTranslation": "VPC (Virtual Private Cloud) คือ network ที่แยกของคุณใน AWS กำหนด IP range ด้วย CIDR สร้าง subnets ในแต่ละ AZ Public subnets มี route ไป Internet Gateway Private subnets ใช้ NAT Gateway สำหรับ outbound internet ควบคุม traffic ด้วย Security Groups และ NACLs"
+    },
+    {
+      "vocab": "What is the difference between Security Group and NACL?",
+      "pronunciation": "Security Group:\n  - Stateful (return traffic auto-allowed)\n  - Instance level\n  - Allow rules only\n\nNACL:\n  - Stateless (must allow both directions)\n  - Subnet level\n  - Allow and Deny rules",
+      "meaning": "ความแตกต่างระหว่าง Security Group และ NACL คืออะไร?",
+      "example": "Security Groups: stateful firewall at instance level, only allow rules, evaluates all rules. NACLs: stateless at subnet level, allow/deny rules, processed in order. Use SGs for instance protection, NACLs for subnet-level blocking.",
+      "exampleTranslation": "Security Groups: stateful firewall ระดับ instance มีแค่ allow rules ประเมินทุก rules NACLs: stateless ระดับ subnet มี allow/deny rules ประมวลผลตามลำดับ ใช้ SGs ปกป้อง instance, NACLs สำหรับ block ระดับ subnet"
+    },
+    {
+      "vocab": "What is NAT Gateway?",
+      "pronunciation": "Private Subnet → NAT Gateway → Internet Gateway → Internet\n\nRoute Table (Private):\n  0.0.0.0/0 → nat-gateway-id",
+      "meaning": "NAT Gateway คืออะไร?",
+      "example": "NAT Gateway allows private subnet instances to access internet while remaining unreachable from outside. Managed, highly available in single AZ. Deploy in each AZ for HA. Alternative: NAT Instance (self-managed, cheaper but less reliable).",
+      "exampleTranslation": "NAT Gateway ให้ private subnet instances เข้าถึง internet ได้โดยยัง unreachable จากภายนอก เป็น Managed, highly available ใน AZ เดียว Deploy ในแต่ละ AZ เพื่อ HA ทางเลือก: NAT Instance (self-managed, ถูกกว่าแต่ reliable น้อยกว่า)"
+    },
+    {
+      "vocab": "What is VPC Peering and Transit Gateway?",
+      "pronunciation": "VPC Peering: VPC-A <---> VPC-B\n  (one-to-one, non-transitive)\n\nTransit Gateway:\n  VPC-A ──┐\n  VPC-B ──┼── Transit Gateway\n  VPC-C ──┘",
+      "meaning": "VPC Peering และ Transit Gateway คืออะไร?",
+      "example": "VPC Peering: connects two VPCs directly, non-transitive (A-B, B-C doesn't mean A-C). Transit Gateway: hub-and-spoke model, connects multiple VPCs and on-premises. Use TGW for complex networks, peering for simple two-VPC connections.",
+      "exampleTranslation": "VPC Peering: เชื่อม 2 VPCs โดยตรง, non-transitive (A-B, B-C ไม่ได้หมายความว่า A-C) Transit Gateway: hub-and-spoke model เชื่อมหลาย VPCs และ on-premises ใช้ TGW สำหรับ networks ซับซ้อน, peering สำหรับเชื่อม 2 VPCs แบบง่าย"
+    },
+    {
+      "vocab": "What is AWS Direct Connect?",
+      "pronunciation": "On-premises ──── Direct Connect ──── AWS\n              (dedicated fiber)\n              \nSpeed: 1Gbps, 10Gbps, 100Gbps",
+      "meaning": "AWS Direct Connect คืออะไร?",
+      "example": "Direct Connect provides dedicated private connection from on-premises to AWS. Bypasses public internet for consistent performance and lower latency. Use cases: hybrid cloud, large data transfer, compliance. Takes weeks to provision. Use VPN as backup.",
+      "exampleTranslation": "Direct Connect ให้ dedicated private connection จาก on-premises ไป AWS ไม่ผ่าน public internet เพื่อ performance คงที่และ latency ต่ำ ใช้สำหรับ: hybrid cloud, data transfer ใหญ่, compliance ใช้เวลา provision หลายสัปดาห์ ใช้ VPN เป็น backup"
+    },
+    {
+      "vocab": "What is Amazon Route 53?",
+      "pronunciation": "Record Types:\n  A:     domain → IPv4\n  AAAA:  domain → IPv6\n  CNAME: domain → domain\n  Alias: domain → AWS resource",
+      "meaning": "Amazon Route 53 คืออะไร?",
+      "example": "Route 53 is managed DNS service. Register domains, route traffic. Routing policies: Simple, Weighted, Latency, Failover, Geolocation, Multi-value. Health checks for failover. Alias records for AWS resources (free, no TTL restrictions).",
+      "exampleTranslation": "Route 53 คือ managed DNS service ลงทะเบียน domains, route traffic Routing policies: Simple, Weighted, Latency, Failover, Geolocation, Multi-value Health checks สำหรับ failover Alias records สำหรับ AWS resources (ฟรี, ไม่มี TTL restrictions)"
+    },
+    {
+      "vocab": "What are Route 53 routing policies?",
+      "pronunciation": "Simple:      single resource\nWeighted:    traffic % split\nLatency:     lowest latency region\nFailover:    primary/secondary\nGeolocation: by user location\nMulti-value: multiple healthy IPs",
+      "meaning": "Route 53 routing policies มีอะไรบ้าง?",
+      "example": "Simple: single resource. Weighted: A/B testing, gradual migration. Latency: route to fastest region. Failover: active-passive DR. Geolocation: content localization, compliance. Geoproximity: shift traffic with bias. Multi-value: simple load balancing with health checks.",
+      "exampleTranslation": "Simple: resource เดียว Weighted: A/B testing, gradual migration Latency: route ไป region เร็วสุด Failover: active-passive DR Geolocation: content localization, compliance Geoproximity: shift traffic ด้วย bias Multi-value: load balancing ง่ายๆ กับ health checks"
+    },
+    {
+      "vocab": "What is Amazon CloudFront?",
+      "pronunciation": "User → Edge Location → Origin (S3/ALB/EC2)\n         (cache)       (source)\n\nEdge Locations: 400+ worldwide",
+      "meaning": "Amazon CloudFront คืออะไร?",
+      "example": "CloudFront is global CDN for low latency content delivery. Caches at 400+ edge locations. Origins: S3, ALB, EC2, custom HTTP. Features: HTTPS, geo-restriction, signed URLs, Lambda@Edge. Use for static assets, APIs, live/on-demand video.",
+      "exampleTranslation": "CloudFront คือ global CDN สำหรับส่ง content ด้วย latency ต่ำ Cache ที่ 400+ edge locations Origins: S3, ALB, EC2, custom HTTP Features: HTTPS, geo-restriction, signed URLs, Lambda@Edge ใช้สำหรับ static assets, APIs, live/on-demand video"
+    },
+    {
+      "vocab": "What is Amazon RDS?",
+      "pronunciation": "Engines:\n  MySQL, PostgreSQL, MariaDB,\n  Oracle, SQL Server, Aurora\n\naws rds create-db-instance \\\n  --engine postgres \\\n  --db-instance-class db.t3.medium",
+      "meaning": "Amazon RDS คืออะไร?",
+      "example": "RDS (Relational Database Service) is managed SQL database. Handles backups, patching, replication. Multi-AZ for HA (synchronous standby). Read Replicas for read scaling (async). Automated backups with point-in-time recovery up to 35 days.",
+      "exampleTranslation": "RDS (Relational Database Service) คือ managed SQL database จัดการ backups, patching, replication Multi-AZ สำหรับ HA (synchronous standby) Read Replicas สำหรับ read scaling (async) Automated backups กับ point-in-time recovery ถึง 35 วัน"
+    },
+    {
+      "vocab": "What is the difference between RDS Multi-AZ and Read Replicas?",
+      "pronunciation": "Multi-AZ:\n  Primary ←sync→ Standby (failover)\n  Same endpoint, automatic failover\n\nRead Replica:\n  Primary ←async→ Replica (read traffic)\n  Different endpoint, manual promotion",
+      "meaning": "ความแตกต่างระหว่าง RDS Multi-AZ และ Read Replicas คืออะไร?",
+      "example": "Multi-AZ: synchronous standby for HA, automatic failover, same DNS endpoint. Read Replicas: async copies for read scaling, can be cross-region, manual promotion to primary. Multi-AZ for availability, Read Replicas for performance.",
+      "exampleTranslation": "Multi-AZ: synchronous standby สำหรับ HA, automatic failover, DNS endpoint เดียวกัน Read Replicas: async copies สำหรับ read scaling, ข้าม region ได้, promote เป็น primary เอง Multi-AZ สำหรับ availability, Read Replicas สำหรับ performance"
+    },
+    {
+      "vocab": "What is Amazon Aurora?",
+      "pronunciation": "Aurora Cluster:\n  Writer instance (primary)\n  Reader instance (read replica)\n  Reader instance\n  \n  Shared storage (6 copies, 3 AZs)",
+      "meaning": "Amazon Aurora คืออะไร?",
+      "example": "Aurora is AWS-built MySQL/PostgreSQL compatible database. 5x faster than MySQL, 3x faster than PostgreSQL. Distributed storage: 6 copies across 3 AZs, self-healing. Up to 15 read replicas. Aurora Serverless for variable workloads. Aurora Global Database for cross-region.",
+      "exampleTranslation": "Aurora คือ database ที่ AWS สร้างเอง รองรับ MySQL/PostgreSQL เร็วกว่า MySQL 5x, PostgreSQL 3x Distributed storage: 6 copies ใน 3 AZs, self-healing มี read replicas ได้ถึง 15 ตัว Aurora Serverless สำหรับ variable workloads Aurora Global Database สำหรับ cross-region"
+    },
+    {
+      "vocab": "What is Amazon DynamoDB?",
+      "pronunciation": "Table: Users\n  Partition Key: user_id\n  Sort Key: created_at\n  Attributes: name, email, ...\n\nCapacity: On-demand or Provisioned",
+      "meaning": "Amazon DynamoDB คืออะไร?",
+      "example": "DynamoDB is fully managed NoSQL key-value/document database. Single-digit millisecond latency at any scale. Capacity modes: on-demand or provisioned. Global Tables for multi-region. DAX for microsecond caching. DynamoDB Streams for change capture.",
+      "exampleTranslation": "DynamoDB คือ fully managed NoSQL key-value/document database latency ไม่เกิน 10ms ไม่ว่า scale เท่าไหร่ Capacity modes: on-demand หรือ provisioned Global Tables สำหรับ multi-region DAX สำหรับ microsecond caching DynamoDB Streams สำหรับ change capture"
+    },
+    {
+      "vocab": "What is Amazon ElastiCache?",
+      "pronunciation": "Redis: data structures, persistence, replication\nMemcached: simple caching, multi-threaded\n\nUse cases:\n  - Session storage\n  - Database caching\n  - Leaderboards",
+      "meaning": "Amazon ElastiCache คืออะไร?",
+      "example": "ElastiCache is managed Redis or Memcached. Microsecond latency for caching. Redis: data structures, persistence, replication, pub/sub. Memcached: simple, multi-threaded. Use cases: session store, database cache, real-time analytics.",
+      "exampleTranslation": "ElastiCache คือ managed Redis หรือ Memcached latency เป็น microsecond สำหรับ caching Redis: data structures, persistence, replication, pub/sub Memcached: simple, multi-threaded ใช้สำหรับ: session store, database cache, real-time analytics"
+    },
+    {
+      "vocab": "What is AWS Lambda?",
+      "pronunciation": "exports.handler = async (event) => {\n  return {\n    statusCode: 200,\n    body: JSON.stringify('Hello!')\n  };\n};\n\nTimeout: 15 minutes max\nMemory: 128MB - 10GB",
+      "meaning": "AWS Lambda คืออะไร?",
+      "example": "Lambda runs code without managing servers. Pay per invocation and duration. Triggers: API Gateway, S3, DynamoDB, SQS, EventBridge. 15-minute max timeout. Scales automatically. Use for event-driven, short-running tasks. Cold starts for infrequent invocations.",
+      "exampleTranslation": "Lambda รัน code โดยไม่ต้องจัดการ servers จ่ายตาม invocation และ duration Triggers: API Gateway, S3, DynamoDB, SQS, EventBridge timeout สูงสุด 15 นาที Scale อัตโนมัติ ใช้สำหรับ event-driven, short-running tasks มี Cold starts สำหรับ invocations ไม่บ่อย"
+    },
+    {
+      "vocab": "What is Amazon API Gateway?",
+      "pronunciation": "REST API / HTTP API / WebSocket API\n\nClient → API Gateway → Lambda/EC2/Any HTTP\n              ↓\n         (auth, throttling, caching)",
+      "meaning": "Amazon API Gateway คืออะไร?",
+      "example": "API Gateway creates, publishes, and manages APIs at scale. Features: throttling, caching, authentication (Cognito, Lambda authorizer), request/response transformation. REST API: full features. HTTP API: lower cost, simpler. WebSocket: real-time two-way communication.",
+      "exampleTranslation": "API Gateway สร้าง, publish, และจัดการ APIs ได้ตาม scale Features: throttling, caching, authentication (Cognito, Lambda authorizer), request/response transformation REST API: features ครบ HTTP API: ราคาต่ำกว่า ง่ายกว่า WebSocket: real-time two-way communication"
+    },
+    {
+      "vocab": "What is AWS IAM?",
+      "pronunciation": "Principal (User/Role)\n    ↓\n  Policy (Allow/Deny)\n    ↓\n  Resource (S3 bucket, EC2, etc.)",
+      "meaning": "AWS IAM คืออะไร?",
+      "example": "IAM (Identity and Access Management) controls who can do what. Users: people. Groups: collection of users. Roles: assumed by services/users. Policies: JSON documents defining permissions. Follow least privilege principle. Use MFA for security.",
+      "exampleTranslation": "IAM (Identity and Access Management) ควบคุมว่าใครทำอะไรได้ Users: คน Groups: กลุ่มของ users Roles: ถูก assume โดย services/users Policies: JSON documents กำหนด permissions ทำตาม least privilege principle ใช้ MFA เพื่อความปลอดภัย"
+    },
+    {
+      "vocab": "What are IAM policies?",
+      "pronunciation": "{\n  \"Effect\": \"Allow\",\n  \"Action\": [\"s3:GetObject\"],\n  \"Resource\": \"arn:aws:s3:::bucket/*\",\n  \"Condition\": {\n    \"IpAddress\": {\"aws:SourceIp\": \"1.2.3.4/32\"}\n  }\n}",
+      "meaning": "IAM policies คืออะไร?",
+      "example": "Policies define permissions in JSON. Effect: Allow/Deny. Action: API operations. Resource: ARN of resource. Condition: optional constraints. Identity-based: attached to user/group/role. Resource-based: attached to resource (S3, SQS). Explicit Deny always wins.",
+      "exampleTranslation": "Policies กำหนด permissions ใน JSON Effect: Allow/Deny Action: API operations Resource: ARN ของ resource Condition: constraints เพิ่มเติม Identity-based: ติดกับ user/group/role Resource-based: ติดกับ resource (S3, SQS) Explicit Deny ชนะเสมอ"
+    },
+    {
+      "vocab": "What is AWS IAM Role?",
+      "pronunciation": "EC2 Instance → IAM Role → Access S3\n  (no credentials stored on EC2)\n\nLambda → IAM Role → Access DynamoDB\nECS Task → Task Role → Access SQS",
+      "meaning": "AWS IAM Role คืออะไร?",
+      "example": "IAM Role is an identity with permissions that can be assumed. No permanent credentials. EC2 instance profile attaches role to EC2. Service roles for AWS services. Cross-account roles for multi-account access. Federation for external identity providers.",
+      "exampleTranslation": "IAM Role คือ identity ที่มี permissions ที่ถูก assume ได้ ไม่มี permanent credentials EC2 instance profile ติด role กับ EC2 Service roles สำหรับ AWS services Cross-account roles สำหรับ access ข้าม accounts Federation สำหรับ external identity providers"
+    },
+    {
+      "vocab": "What is AWS KMS?",
+      "pronunciation": "Customer Managed Key (CMK)\n  ↓\n  Encrypt/Decrypt data\n  \nKMS API:\n  aws kms encrypt --key-id xxx --plaintext \"secret\"",
+      "meaning": "AWS KMS คืออะไร?",
+      "example": "KMS (Key Management Service) creates and manages encryption keys. Integrated with most AWS services. Key types: AWS managed, Customer managed, Custom key store. Automatic rotation available. Audit key usage with CloudTrail. Envelope encryption for large data.",
+      "exampleTranslation": "KMS (Key Management Service) สร้างและจัดการ encryption keys ทำงานร่วมกับ AWS services ส่วนใหญ่ Key types: AWS managed, Customer managed, Custom key store Automatic rotation มีให้ Audit key usage ด้วย CloudTrail Envelope encryption สำหรับ data ขนาดใหญ่"
+    },
+    {
+      "vocab": "What is AWS Secrets Manager?",
+      "pronunciation": "Secret: db-credentials\n  username: admin\n  password: ********\n  \nAuto-rotation: every 30 days\nIntegration: RDS, Redshift, DocumentDB",
+      "meaning": "AWS Secrets Manager คืออะไร?",
+      "example": "Secrets Manager stores and rotates secrets (passwords, API keys). Automatic rotation with Lambda. Native integration with RDS, Redshift, DocumentDB. Retrieval via API/SDK. Pay per secret and API calls. Alternative: Systems Manager Parameter Store (cheaper, manual rotation).",
+      "exampleTranslation": "Secrets Manager เก็บและ rotate secrets (passwords, API keys) Automatic rotation ด้วย Lambda ทำงานร่วมกับ RDS, Redshift, DocumentDB เลย ดึงค่าผ่าน API/SDK จ่ายตาม secret และ API calls ทางเลือก: Systems Manager Parameter Store (ถูกกว่า, rotate เอง)"
+    },
+    {
+      "vocab": "What is Amazon SQS?",
+      "pronunciation": "Producer → SQS Queue → Consumer\n\nStandard: at-least-once, best-effort order\nFIFO: exactly-once, ordered (300 msg/s)",
+      "meaning": "Amazon SQS คืออะไร?",
+      "example": "SQS (Simple Queue Service) is fully managed message queue. Decouples components. Standard: unlimited throughput, at-least-once. FIFO: 300 msg/s, exactly-once, ordered. Visibility timeout hides message during processing. Dead Letter Queue for failed messages.",
+      "exampleTranslation": "SQS (Simple Queue Service) คือ fully managed message queue แยก components ออกจากกัน Standard: throughput ไม่จำกัด, at-least-once FIFO: 300 msg/s, exactly-once, เรียงลำดับ Visibility timeout ซ่อน message ระหว่าง processing Dead Letter Queue สำหรับ messages ที่ fail"
+    },
+    {
+      "vocab": "What is Amazon SNS?",
+      "pronunciation": "Publisher → SNS Topic → Subscribers\n                    ├→ SQS\n                    ├→ Lambda\n                    ├→ Email\n                    └→ HTTP endpoint",
+      "meaning": "Amazon SNS คืออะไร?",
+      "example": "SNS (Simple Notification Service) is pub/sub messaging. Publishers send to topics. Subscribers receive from topics. Subscribers: SQS, Lambda, HTTP, email, SMS, mobile push. Fan-out pattern: one message to multiple queues. Message filtering by attributes.",
+      "exampleTranslation": "SNS (Simple Notification Service) คือ pub/sub messaging Publishers ส่งไป topics Subscribers รับจาก topics Subscribers: SQS, Lambda, HTTP, email, SMS, mobile push Fan-out pattern: message เดียวไปหลาย queues Message filtering ตาม attributes"
+    },
+    {
+      "vocab": "What is Amazon EventBridge?",
+      "pronunciation": "Event Source → EventBridge → Target\n  (AWS services,    (rules)     (Lambda, SQS,\n   custom apps)                  Step Functions)",
+      "meaning": "Amazon EventBridge คืออะไร?",
+      "example": "EventBridge is serverless event bus. Connect AWS services, SaaS, and custom apps. Rules match events and route to targets. Schema registry for event structure. Scheduler for cron/rate-based events. Archive and replay events. Better than CloudWatch Events.",
+      "exampleTranslation": "EventBridge คือ serverless event bus เชื่อม AWS services, SaaS, และ custom apps Rules match events และ route ไป targets Schema registry สำหรับ event structure Scheduler สำหรับ cron/rate-based events Archive และ replay events ดีกว่า CloudWatch Events"
+    },
+    {
+      "vocab": "What is AWS Step Functions?",
+      "pronunciation": "Start → Lambda A → Choice\n                    ├→ Lambda B → End\n                    └→ Lambda C → Wait → Lambda D → End",
+      "meaning": "AWS Step Functions คืออะไร?",
+      "example": "Step Functions orchestrates Lambda functions and AWS services into workflows. Visual workflow designer. States: Task, Choice, Wait, Parallel, Map. Standard: long-running (up to 1 year). Express: high-volume, short-duration. Error handling and retry built-in.",
+      "exampleTranslation": "Step Functions orchestrate Lambda functions และ AWS services เป็น workflows มี Visual workflow designer States: Task, Choice, Wait, Parallel, Map Standard: long-running (ถึง 1 ปี) Express: high-volume, short-duration Error handling และ retry มีในตัว"
+    },
+    {
+      "vocab": "What is Amazon CloudWatch?",
+      "pronunciation": "Metrics: CPU, Memory, Custom\nAlarms:  CPU > 80% → SNS notification\nLogs:    Application logs → Log Groups\nDashboards: Visualize metrics",
+      "meaning": "Amazon CloudWatch คืออะไร?",
+      "example": "CloudWatch monitors AWS resources and applications. Metrics: built-in and custom. Alarms: trigger actions on thresholds. Logs: collect, store, analyze log data. Dashboards: visualize metrics. Events/EventBridge: respond to state changes. Insights for log analytics.",
+      "exampleTranslation": "CloudWatch monitor AWS resources และ applications Metrics: built-in และ custom Alarms: trigger actions เมื่อถึง thresholds Logs: collect, store, analyze log data Dashboards: visualize metrics Events/EventBridge: respond to state changes Insights สำหรับ log analytics"
+    },
+    {
+      "vocab": "What is AWS CloudTrail?",
+      "pronunciation": "Who: user/role\nWhat: API action (RunInstances)\nWhen: timestamp\nWhere: region, source IP\n\nTrail → S3 bucket (logs)",
+      "meaning": "AWS CloudTrail คืออะไร?",
+      "example": "CloudTrail records API calls for auditing and compliance. Who did what, when, and from where. Management events: control plane operations. Data events: S3 object-level, Lambda invocations. Store logs in S3, analyze with Athena. Enable in all regions.",
+      "exampleTranslation": "CloudTrail บันทึก API calls สำหรับ auditing และ compliance ใครทำอะไร เมื่อไหร่ จากไหน Management events: control plane operations Data events: S3 object-level, Lambda invocations เก็บ logs ใน S3, analyze ด้วย Athena Enable ในทุก regions"
+    },
+    {
+      "vocab": "What is AWS CloudFormation?",
+      "pronunciation": "template.yaml:\n  Resources:\n    MyBucket:\n      Type: AWS::S3::Bucket\n    MyLambda:\n      Type: AWS::Lambda::Function\n      \naws cloudformation create-stack --template-body file://template.yaml",
+      "meaning": "AWS CloudFormation คืออะไร?",
+      "example": "CloudFormation is Infrastructure as Code (IaC). Define resources in YAML/JSON templates. Stacks manage related resources together. Change sets preview changes. Rollback on failure. Drift detection finds manual changes. StackSets for multi-account/region deployment.",
+      "exampleTranslation": "CloudFormation คือ Infrastructure as Code (IaC) กำหนด resources ใน YAML/JSON templates Stacks จัดการ related resources ด้วยกัน Change sets preview การเปลี่ยนแปลง Rollback เมื่อ failure Drift detection หา manual changes StackSets สำหรับ deployment ข้าม accounts/regions"
+    },
+    {
+      "vocab": "What is Amazon ECS?",
+      "pronunciation": "ECS Cluster\n  ├── Service (desired: 3 tasks)\n  │     ├── Task (container A, B)\n  │     ├── Task\n  │     └── Task\n  └── Launch type: EC2 or Fargate",
+      "meaning": "Amazon ECS คืออะไร?",
+      "example": "ECS (Elastic Container Service) runs Docker containers. Task Definition defines containers. Service maintains desired count. Launch types: EC2 (you manage) or Fargate (serverless). Integrates with ALB, Auto Scaling, CloudWatch. ECR for container registry.",
+      "exampleTranslation": "ECS (Elastic Container Service) รัน Docker containers Task Definition กำหนด containers Service รักษาจำนวนที่ต้องการ Launch types: EC2 (คุณจัดการ) หรือ Fargate (serverless) ทำงานร่วมกับ ALB, Auto Scaling, CloudWatch ECR สำหรับ container registry"
+    },
+    {
+      "vocab": "What is the difference between ECS and EKS?",
+      "pronunciation": "ECS: AWS-native, simpler\nEKS: Kubernetes, portable, more control\n\nBoth support:\n  - Fargate (serverless)\n  - EC2 launch type\n  - ALB integration",
+      "meaning": "ความแตกต่างระหว่าง ECS และ EKS คืออะไร?",
+      "example": "ECS: AWS-native, simpler learning curve, tighter AWS integration, cheaper. EKS: managed Kubernetes, portable to other clouds, larger ecosystem, more complex. Choose ECS for AWS-only, EKS if you need Kubernetes compatibility or multi-cloud.",
+      "exampleTranslation": "ECS: AWS-native, เรียนรู้ง่ายกว่า, integration กับ AWS ดีกว่า, ถูกกว่า EKS: managed Kubernetes, portable ไป clouds อื่น, ecosystem ใหญ่กว่า, ซับซ้อนกว่า เลือก ECS สำหรับ AWS-only, EKS ถ้าต้องการ Kubernetes compatibility หรือ multi-cloud"
+    },
+    {
+      "vocab": "What is AWS Fargate?",
+      "pronunciation": "ECS/EKS + Fargate:\n  No EC2 to manage\n  Pay per vCPU and memory\n  Define CPU/memory per task",
+      "meaning": "AWS Fargate คืออะไร?",
+      "example": "Fargate is serverless compute for containers. No EC2 instances to manage. Works with ECS and EKS. Define CPU and memory per task. Pay for resources used. Best for: variable workloads, small teams, no infrastructure management. Less control than EC2.",
+      "exampleTranslation": "Fargate คือ serverless compute สำหรับ containers ไม่ต้องจัดการ EC2 instances ใช้ได้กับ ECS และ EKS กำหนด CPU และ memory ต่อ task จ่ายตาม resources ที่ใช้ เหมาะสำหรับ: variable workloads, ทีมเล็ก, ไม่อยากจัดการ infrastructure ควบคุมน้อยกว่า EC2"
+    },
+    {
+      "vocab": "What is AWS WAF?",
+      "pronunciation": "WAF Rules:\n  - Block SQL injection\n  - Block XSS\n  - Rate limiting (1000 req/5min)\n  - Geo-blocking\n  \nAttach to: CloudFront, ALB, API Gateway",
+      "meaning": "AWS WAF คืออะไร?",
+      "example": "WAF (Web Application Firewall) protects against web exploits. Rules: SQL injection, XSS, rate limiting, geo-blocking. Managed rule groups from AWS and marketplace. Attach to CloudFront, ALB, API Gateway. Web ACLs contain rules. Log to CloudWatch, S3, Kinesis.",
+      "exampleTranslation": "WAF (Web Application Firewall) ป้องกัน web exploits Rules: SQL injection, XSS, rate limiting, geo-blocking Managed rule groups จาก AWS และ marketplace Attach กับ CloudFront, ALB, API Gateway Web ACLs มี rules Log ไป CloudWatch, S3, Kinesis"
+    },
+    {
+      "vocab": "What is AWS Shield?",
+      "pronunciation": "Shield Standard: Free, all accounts\n  - Layer 3/4 DDoS protection\n  \nShield Advanced: $3000/month\n  - Layer 7 protection\n  - DDoS Response Team\n  - Cost protection",
+      "meaning": "AWS Shield คืออะไร?",
+      "example": "Shield provides DDoS protection. Standard: free, automatic, protects against common L3/L4 attacks. Advanced: paid, enhanced protection, 24/7 DDoS Response Team, cost protection for scaling during attacks, near real-time visibility. Protects CloudFront, Route 53, ALB, ELB.",
+      "exampleTranslation": "Shield ให้ DDoS protection Standard: ฟรี, อัตโนมัติ, ป้องกัน L3/L4 attacks ทั่วไป Advanced: เสียเงิน, protection ดีกว่า, 24/7 DDoS Response Team, cost protection สำหรับ scaling ระหว่างโจมตี, near real-time visibility ป้องกัน CloudFront, Route 53, ALB, ELB"
+    },
+    {
+      "vocab": "What is a Well-Architected Framework?",
+      "pronunciation": "Six Pillars:\n1. Operational Excellence\n2. Security\n3. Reliability\n4. Performance Efficiency\n5. Cost Optimization\n6. Sustainability",
+      "meaning": "Well-Architected Framework คืออะไร?",
+      "example": "Framework for building secure, high-performing, resilient, efficient infrastructure. Six pillars guide architectural decisions. AWS Well-Architected Tool assesses workloads. Lenses for specific use cases (serverless, SaaS, ML). Regular reviews recommended.",
+      "exampleTranslation": "Framework สำหรับสร้าง infrastructure ที่ secure, high-performing, resilient, efficient มี 6 pillars guide การตัดสินใจ architecture AWS Well-Architected Tool ประเมิน workloads Lenses สำหรับ use cases เฉพาะ (serverless, SaaS, ML) แนะนำให้ review เป็นประจำ"
+    },
+    {
+      "vocab": "What are the reliability design principles?",
+      "pronunciation": "- Multi-AZ deployment\n- Auto Scaling\n- Loose coupling (SQS, SNS)\n- Backup and disaster recovery\n- Test recovery procedures\n- Automate change management",
+      "meaning": "Reliability design principles มีอะไรบ้าง?",
+      "example": "Automatically recover from failure. Test recovery procedures. Scale horizontally for availability. Stop guessing capacity (Auto Scaling). Manage change through automation. Use Multi-AZ and multi-region. Implement proper backup/restore strategies.",
+      "exampleTranslation": "Recover จาก failure อัตโนมัติ Test recovery procedures Scale horizontally เพื่อ availability หยุดเดา capacity (ใช้ Auto Scaling) จัดการ change ผ่าน automation ใช้ Multi-AZ และ multi-region Implement backup/restore strategies ที่ดี"
+    },
+    {
+      "vocab": "What is RTO and RPO?",
+      "pronunciation": "RPO: How much data can you lose?\n     (backup frequency)\n     \nRTO: How fast must you recover?\n     (downtime tolerance)\n\nExample: RPO=1hr, RTO=4hr",
+      "meaning": "RTO และ RPO คืออะไร?",
+      "example": "RPO (Recovery Point Objective): maximum acceptable data loss, determines backup frequency. RTO (Recovery Time Objective): maximum acceptable downtime, determines recovery strategy. Lower values = more expensive. Define based on business requirements.",
+      "exampleTranslation": "RPO (Recovery Point Objective): data loss สูงสุดที่รับได้ กำหนดความถี่ backup RTO (Recovery Time Objective): downtime สูงสุดที่รับได้ กำหนด recovery strategy ค่าต่ำ = แพงกว่า กำหนดตาม business requirements"
+    },
+    {
+      "vocab": "What are disaster recovery strategies?",
+      "pronunciation": "Cost ↑  Recovery Time ↓\n─────────────────────────\nBackup & Restore (hours)\nPilot Light (10s of minutes)\nWarm Standby (minutes)\nMulti-Site Active-Active (real-time)",
+      "meaning": "Disaster recovery strategies มีอะไรบ้าง?",
+      "example": "Backup & Restore: cheapest, slowest (hours). Pilot Light: core systems running, scale on disaster. Warm Standby: scaled-down version always running. Multi-Site Active-Active: full capacity in multiple regions, instant failover, most expensive.",
+      "exampleTranslation": "Backup & Restore: ถูกสุด ช้าสุด (หลายชม.) Pilot Light: core systems รันอยู่ scale เมื่อ disaster Warm Standby: version ย่อรันอยู่ตลอด Multi-Site Active-Active: capacity เต็มในหลาย regions, failover ทันที, แพงสุด"
+    },
+    {
+      "vocab": "What is Amazon Kinesis?",
+      "pronunciation": "Kinesis Data Streams:  real-time streaming\nKinesis Data Firehose: load to S3/Redshift\nKinesis Data Analytics: SQL on streams\nKinesis Video Streams:  video processing",
+      "meaning": "Amazon Kinesis คืออะไร?",
+      "example": "Kinesis collects and processes real-time streaming data. Data Streams: custom processing with consumers. Firehose: near real-time delivery to S3, Redshift, Elasticsearch. Analytics: SQL queries on streaming data. Use cases: IoT, clickstreams, logs, video.",
+      "exampleTranslation": "Kinesis collect และ process real-time streaming data Data Streams: custom processing กับ consumers Firehose: near real-time delivery ไป S3, Redshift, Elasticsearch Analytics: SQL queries บน streaming data ใช้สำหรับ: IoT, clickstreams, logs, video"
+    },
+    {
+      "vocab": "What is Amazon Redshift?",
+      "pronunciation": "Redshift Cluster:\n  - Leader node (query planning)\n  - Compute nodes (storage + processing)\n  \nData Warehouse: Petabyte-scale\nColumnar storage, parallel queries",
+      "meaning": "Amazon Redshift คืออะไร?",
+      "example": "Redshift is petabyte-scale data warehouse. Columnar storage for analytics. Massively parallel processing (MPP). Spectrum queries S3 data directly. Serverless option available. Use for: BI, reporting, complex queries on large datasets. Not for OLTP.",
+      "exampleTranslation": "Redshift คือ petabyte-scale data warehouse Columnar storage สำหรับ analytics Massively parallel processing (MPP) Spectrum query S3 data โดยตรง มี Serverless option ใช้สำหรับ: BI, reporting, complex queries บน datasets ใหญ่ ไม่ใช่สำหรับ OLTP"
+    },
+    {
+      "vocab": "What is AWS Glue?",
+      "pronunciation": "Data Sources → Glue Crawler → Data Catalog\n                                    ↓\n              Glue ETL Job → Target (S3, Redshift)",
+      "meaning": "AWS Glue คืออะไร?",
+      "example": "Glue is serverless ETL (Extract, Transform, Load) service. Crawlers discover schema, populate Data Catalog. ETL jobs in Python/Scala. Data Catalog: central metadata repository. Integrates with Athena, Redshift, EMR. Use for data preparation and cataloging.",
+      "exampleTranslation": "Glue คือ serverless ETL (Extract, Transform, Load) service Crawlers ค้นหา schema, populate Data Catalog ETL jobs ใน Python/Scala Data Catalog: central metadata repository ทำงานร่วมกับ Athena, Redshift, EMR ใช้สำหรับ data preparation และ cataloging"
+    },
+    {
+      "vocab": "What is Amazon Athena?",
+      "pronunciation": "S3 (data) + Glue Data Catalog (schema)\n              ↓\n          Athena (SQL)\n              ↓\n          Query Results",
+      "meaning": "Amazon Athena คืออะไร?",
+      "example": "Athena is serverless interactive query service. Query S3 data using standard SQL. No infrastructure to manage. Pay per query (data scanned). Uses Glue Data Catalog. Supports CSV, JSON, Parquet, ORC. Use for: ad-hoc analysis, log analysis, CloudTrail queries.",
+      "exampleTranslation": "Athena คือ serverless interactive query service Query S3 data ด้วย standard SQL ไม่ต้องจัดการ infrastructure จ่ายต่อ query (data scanned) ใช้ Glue Data Catalog รองรับ CSV, JSON, Parquet, ORC ใช้สำหรับ: ad-hoc analysis, log analysis, CloudTrail queries"
+    },
+    {
+      "vocab": "What is AWS Organizations?",
+      "pronunciation": "Root\n├── OU: Production\n│   ├── Account: Prod-App\n│   └── Account: Prod-DB\n└── OU: Development\n    └── Account: Dev\n\nSCP: Service Control Policies",
+      "meaning": "AWS Organizations คืออะไร?",
+      "example": "Organizations manages multiple AWS accounts. Organizational Units (OUs) group accounts. Service Control Policies (SCPs) set permission guardrails. Consolidated billing for cost management. Use for: security boundaries, environment separation, compliance.",
+      "exampleTranslation": "Organizations จัดการหลาย AWS accounts Organizational Units (OUs) จัดกลุ่ม accounts Service Control Policies (SCPs) ตั้ง permission guardrails Consolidated billing สำหรับ cost management ใช้สำหรับ: security boundaries, แยก environment, compliance"
+    },
+    {
+      "vocab": "What is AWS Control Tower?",
+      "pronunciation": "Control Tower:\n  - Landing Zone (multi-account setup)\n  - Guardrails (preventive/detective)\n  - Account Factory (provision accounts)\n  - Dashboard (compliance status)",
+      "meaning": "AWS Control Tower คืออะไร?",
+      "example": "Control Tower sets up and governs multi-account environments. Landing Zone: secure baseline configuration. Guardrails: pre-configured governance rules (preventive SCPs, detective Config rules). Account Factory: self-service account provisioning. Built on Organizations, Config, CloudFormation.",
+      "exampleTranslation": "Control Tower ตั้งค่าและ govern multi-account environments Landing Zone: secure baseline configuration Guardrails: governance rules ที่ pre-configured (preventive SCPs, detective Config rules) Account Factory: self-service account provisioning สร้างบน Organizations, Config, CloudFormation"
+    },
+    {
+      "vocab": "What is AWS Config?",
+      "pronunciation": "Config Rules:\n  - s3-bucket-public-read-prohibited\n  - encrypted-volumes\n  - required-tags\n  \nConfiguration Timeline → Compliance status",
+      "meaning": "AWS Config คืออะไร?",
+      "example": "Config assesses, audits, and evaluates resource configurations. Records configuration changes over time. Config Rules evaluate compliance (managed or custom). Remediation actions can auto-fix issues. Use for: compliance auditing, security analysis, change management.",
+      "exampleTranslation": "Config ประเมิน, audit, และ evaluate resource configurations บันทึก configuration changes ตลอดเวลา Config Rules evaluate compliance (managed หรือ custom) Remediation actions แก้ไขปัญหาอัตโนมัติได้ ใช้สำหรับ: compliance auditing, security analysis, change management"
+    },
+    {
+      "vocab": "What is Amazon Cognito?",
+      "pronunciation": "User Pools: Sign-up, sign-in, user directory\n  → JWT tokens\n  \nIdentity Pools: Temporary AWS credentials\n  → Access AWS resources (S3, DynamoDB)",
+      "meaning": "Amazon Cognito คืออะไร?",
+      "example": "Cognito provides authentication and authorization. User Pools: user directory with sign-up/sign-in, MFA, social/SAML federation. Identity Pools: federated identities, temporary AWS credentials for mobile/web apps. Often used together for complete auth solution.",
+      "exampleTranslation": "Cognito ให้ authentication และ authorization User Pools: user directory มี sign-up/sign-in, MFA, social/SAML federation Identity Pools: federated identities, temporary AWS credentials สำหรับ mobile/web apps มักใช้ด้วยกันเป็น auth solution ครบ"
+    },
+    {
+      "vocab": "What is AWS Storage Gateway?",
+      "pronunciation": "File Gateway:   NFS/SMB → S3\nVolume Gateway: iSCSI → S3 (EBS snapshots)\nTape Gateway:   Virtual tapes → S3/Glacier",
+      "meaning": "AWS Storage Gateway คืออะไร?",
+      "example": "Storage Gateway connects on-premises to cloud storage. File Gateway: file shares backed by S3. Volume Gateway: block storage with snapshots to S3 (cached or stored mode). Tape Gateway: virtual tape library for backup software. Enables hybrid cloud storage.",
+      "exampleTranslation": "Storage Gateway เชื่อม on-premises กับ cloud storage File Gateway: file shares backed โดย S3 Volume Gateway: block storage มี snapshots ไป S3 (cached หรือ stored mode) Tape Gateway: virtual tape library สำหรับ backup software ทำให้เกิด hybrid cloud storage"
+    },
+    {
+      "vocab": "What is AWS Transfer Family?",
+      "pronunciation": "Protocols: SFTP, FTPS, FTP\n           AS2 (B2B)\n           \nClients → Transfer Family → S3 or EFS",
+      "meaning": "AWS Transfer Family คืออะไร?",
+      "example": "Transfer Family provides managed file transfer to S3/EFS. Supports SFTP, FTPS, FTP, AS2. Fully managed, scales automatically. Integrate with existing authentication (AD, LDAP, custom). Use for: B2B file exchange, migration from legacy FTP servers.",
+      "exampleTranslation": "Transfer Family ให้ managed file transfer ไป S3/EFS รองรับ SFTP, FTPS, FTP, AS2 Fully managed, scale อัตโนมัติ ทำงานร่วมกับ authentication ที่มี (AD, LDAP, custom) ใช้สำหรับ: B2B file exchange, migration จาก legacy FTP servers"
+    },
+    {
+      "vocab": "What is AWS DataSync?",
+      "pronunciation": "On-premises NFS/SMB → DataSync Agent → AWS\n                                        ↓\n                              S3, EFS, FSx",
+      "meaning": "AWS DataSync คืออะไร?",
+      "example": "DataSync automates data transfer between on-premises and AWS. 10x faster than open-source tools. Agent-based for on-premises sources. Transfer to S3, EFS, FSx. Scheduling, filtering, verification built-in. Use for: migration, archiving, DR replication.",
+      "exampleTranslation": "DataSync automate data transfer ระหว่าง on-premises และ AWS เร็วกว่า open-source tools 10 เท่า ใช้ Agent สำหรับ on-premises sources Transfer ไป S3, EFS, FSx Scheduling, filtering, verification มีในตัว ใช้สำหรับ: migration, archiving, DR replication"
+    },
+    {
+      "vocab": "What is AWS Snow Family?",
+      "pronunciation": "Snowcone:  8TB, portable\nSnowball Edge: 80TB, compute option\nSnowmobile: 100PB, shipping container\n\nUse case: Offline data migration",
+      "meaning": "AWS Snow Family คืออะไร?",
+      "example": "Snow Family provides physical devices for offline data transfer. Snowcone: 8TB, rugged, portable. Snowball Edge: 80TB, with optional compute. Snowmobile: 100PB, exabyte-scale migration. Use when network transfer would take weeks. Edge computing capabilities available.",
+      "exampleTranslation": "Snow Family ให้ physical devices สำหรับ offline data transfer Snowcone: 8TB, rugged, portable Snowball Edge: 80TB, มี compute เสริม Snowmobile: 100PB, exabyte-scale migration ใช้เมื่อ network transfer ใช้เวลาหลายสัปดาห์ มี Edge computing capabilities"
+    },
+    {
+      "vocab": "What is AWS Global Accelerator?",
+      "pronunciation": "Users → Edge Location → AWS Global Network → ALB/NLB/EC2\n       (anycast IP)    (optimized path)\n       \nvs CloudFront: content caching\nvs Global Accelerator: network optimization",
+      "meaning": "AWS Global Accelerator คืออะไร?",
+      "example": "Global Accelerator improves global application availability and performance. Static anycast IPs route to optimal AWS endpoint. Uses AWS global network instead of public internet. Health checks for automatic failover. Use for: non-HTTP (TCP/UDP), gaming, IoT, VoIP.",
+      "exampleTranslation": "Global Accelerator ปรับปรุง availability และ performance ของ global applications Static anycast IPs route ไปยัง AWS endpoint ที่ optimal ใช้ AWS global network แทน public internet Health checks สำหรับ automatic failover ใช้สำหรับ: non-HTTP (TCP/UDP), gaming, IoT, VoIP"
+    },
+    {
+      "vocab": "What is Amazon FSx?",
+      "pronunciation": "FSx for Windows: Windows file server (SMB)\nFSx for Lustre:  HPC, ML workloads\nFSx for NetApp:  NetApp ONTAP features\nFSx for OpenZFS: ZFS features",
+      "meaning": "Amazon FSx คืออะไร?",
+      "example": "FSx provides fully managed third-party file systems. Windows File Server: SMB, AD integration, Windows workloads. Lustre: high-performance for HPC, ML, integrates with S3. NetApp ONTAP: enterprise features. OpenZFS: Linux workloads. Choose based on protocol and feature needs.",
+      "exampleTranslation": "FSx ให้ fully managed third-party file systems Windows File Server: SMB, AD integration, Windows workloads Lustre: high-performance สำหรับ HPC, ML, integrate กับ S3 NetApp ONTAP: enterprise features OpenZFS: Linux workloads เลือกตาม protocol และ features ที่ต้องการ"
+    },
+    {
+      "vocab": "How to choose the right database?",
+      "pronunciation": "Relational (ACID):     RDS, Aurora\nKey-value:             DynamoDB\nDocument:              DocumentDB\nGraph:                 Neptune\nTime-series:           Timestream\nLedger:                QLDB\nCache:                 ElastiCache\nData warehouse:        Redshift",
+      "meaning": "จะเลือก database ที่เหมาะสมได้อย่างไร?",
+      "example": "RDS/Aurora: relational, SQL, ACID transactions. DynamoDB: key-value, millisecond latency, serverless. DocumentDB: MongoDB compatible. Neptune: graph relationships. Timestream: IoT, time-series. QLDB: immutable ledger. ElastiCache: caching. Redshift: analytics, OLAP.",
+      "exampleTranslation": "RDS/Aurora: relational, SQL, ACID transactions DynamoDB: key-value, millisecond latency, serverless DocumentDB: MongoDB compatible Neptune: graph relationships Timestream: IoT, time-series QLDB: immutable ledger ElastiCache: caching Redshift: analytics, OLAP"
+    },
+    {
+      "vocab": "What is cost optimization in AWS?",
+      "pronunciation": "Right-sizing: match instance to workload\nReserved/Savings: commit for discount\nSpot: use for fault-tolerant workloads\nS3 tiers: lifecycle policies\nAuto Scaling: scale down when idle",
+      "meaning": "Cost optimization ใน AWS คืออะไร?",
+      "example": "Right-size instances using CloudWatch metrics. Use Reserved Instances/Savings Plans for steady workloads. Spot for fault-tolerant batch jobs. S3 lifecycle policies for storage tiering. Delete unused resources. Use Cost Explorer and Budgets for visibility. Consider Graviton for better price/performance.",
+      "exampleTranslation": "Right-size instances โดยใช้ CloudWatch metrics ใช้ Reserved Instances/Savings Plans สำหรับ steady workloads Spot สำหรับ fault-tolerant batch jobs S3 lifecycle policies สำหรับ storage tiering ลบ unused resources ใช้ Cost Explorer และ Budgets สำหรับ visibility พิจารณา Graviton เพื่อ price/performance ที่ดีกว่า"
+    }
+  ]
+}
