@@ -4,7 +4,7 @@
   "deck": {
     "name": "GCP DevOps - Observability",
     "description": "SLO/SLI, Alerting policies, Incident management, Cloud Profiler และ observability best practices สำหรับ GCP",
-    "category": "DevOps",
+    "category": "devops",
     "tags": ["gcp", "devops", "observability", "monitoring", "sre"],
     "sourceLang": "en",
     "targetLang": "th"

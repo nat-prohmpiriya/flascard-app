@@ -1,0 +1,56 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T12:00:00.000Z",
+  "deck": {
+    "name": "GCP PCA - Migration",
+    "description": "Migration strategies, tools และ best practices สำหรับ GCP Professional Cloud Architect",
+    "category": "devops",
+    "tags": ["gcp", "certification", "pca", "migration", "modernization"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are the cloud migration strategies (6 Rs)?",
+      "pronunciation": "Migration 6 Rs",
+      "meaning": "Cloud migration strategies (6 Rs) มีอะไรบ้าง?",
+      "example": "The 6 Rs: 1) Rehost (Lift-and-shift): Move as-is to cloud VMs. Fastest, minimal changes, limited cloud benefits. 2) Replatform (Lift-and-reshape): Minor optimizations. Example: Move to managed database. 3) Repurchase: Replace with SaaS. Example: On-prem CRM → Salesforce. 4) Refactor/Re-architect: Redesign for cloud-native. Most effort, most benefits. 5) Retire: Decommission unused apps. 6) Retain: Keep on-premises (not suitable for cloud). Decision factors: Time, cost, team skills, app criticality, technical debt. Typical journey: Rehost first (quick wins), then replatform/refactor strategic apps. Exam tip: Know when each strategy is appropriate, trade-offs of each.",
+      "exampleTranslation": "The 6 Rs: 1) Rehost (Lift-and-shift): ย้าย as-is ไป cloud VMs เร็วที่สุด, minimal changes, limited cloud benefits 2) Replatform (Lift-and-reshape): Minor optimizations Example: ย้ายไป managed database 3) Repurchase: Replace ด้วย SaaS Example: On-prem CRM → Salesforce 4) Refactor/Re-architect: Redesign for cloud-native Most effort, most benefits 5) Retire: Decommission unused apps 6) Retain: Keep on-premises (not suitable for cloud) Decision factors: Time, cost, team skills, app criticality, technical debt Typical journey: Rehost first (quick wins), then replatform/refactor strategic apps Exam tip: รู้เมื่อไหร่แต่ละ strategy เหมาะสม, trade-offs ของแต่ละอัน"
+    },
+    {
+      "vocab": "What is Migrate for Compute Engine?",
+      "pronunciation": "Migrate for Compute Engine",
+      "meaning": "Migrate for Compute Engine คืออะไร?",
+      "example": "Migrate for Compute Engine: Tool for migrating VMs to GCP. Sources: VMware, AWS, Azure, physical servers. Features: 1) Continuous replication: Minimal downtime. 2) Test clones: Validate before cutover. 3) Waves: Group VMs for batch migration. 4) Automatic adaptation: Adjust for GCP (drivers, etc.). Process: 1) Install Migrate connector at source. 2) Discover and assess VMs. 3) Configure replication. 4) Create test clones, validate. 5) Cutover (short downtime). Best practices: 1) Assess before migrating (fit-assessment). 2) Start with non-critical workloads. 3) Test thoroughly before cutover. 4) Plan network connectivity first. Exam tip: Know migration phases, test clones capability, continuous replication.",
+      "exampleTranslation": "Migrate for Compute Engine: Tool สำหรับ migrating VMs ไป GCP Sources: VMware, AWS, Azure, physical servers Features: 1) Continuous replication: Minimal downtime 2) Test clones: Validate ก่อน cutover 3) Waves: Group VMs สำหรับ batch migration 4) Automatic adaptation: Adjust สำหรับ GCP (drivers, etc.) Process: 1) Install Migrate connector ที่ source 2) Discover และ assess VMs 3) Configure replication 4) Create test clones, validate 5) Cutover (short downtime) Best practices: 1) Assess ก่อน migrating (fit-assessment) 2) Start กับ non-critical workloads 3) Test thoroughly ก่อน cutover 4) Plan network connectivity ก่อน Exam tip: รู้ migration phases, test clones capability, continuous replication"
+    },
+    {
+      "vocab": "What is Migrate for Anthos/Containers?",
+      "pronunciation": "Migrate for Containers",
+      "meaning": "Migrate for Anthos/Containers คืออะไร?",
+      "example": "Migrate for Containers: Modernize VMs to containers. Sources: VMware VMs, Compute Engine VMs, AWS VMs. Process: 1) Discover and assess workloads. 2) Generate migration plan. 3) Extract container artifacts. 4) Generate Kubernetes manifests. 5) Deploy to GKE or Cloud Run. Fit assessment: Identifies VM suitability for containerization. Artifacts generated: 1) Dockerfile. 2) Container image. 3) Kubernetes deployment YAML. 4) Service YAML. Benefits: 1) No code changes required. 2) Automated containerization. 3) Path to cloud-native. 4) Supports stateless and stateful apps. Limitations: Not all apps suitable (Windows limitations, kernel dependencies). Exam tip: Know when Migrate for Containers is appropriate vs manual containerization.",
+      "exampleTranslation": "Migrate for Containers: Modernize VMs to containers Sources: VMware VMs, Compute Engine VMs, AWS VMs Process: 1) Discover และ assess workloads 2) Generate migration plan 3) Extract container artifacts 4) Generate Kubernetes manifests 5) Deploy to GKE หรือ Cloud Run Fit assessment: Identifies VM suitability for containerization Artifacts generated: 1) Dockerfile 2) Container image 3) Kubernetes deployment YAML 4) Service YAML Benefits: 1) No code changes required 2) Automated containerization 3) Path to cloud-native 4) Supports stateless และ stateful apps Limitations: Not all apps suitable (Windows limitations, kernel dependencies) Exam tip: รู้เมื่อไหร่ Migrate for Containers เหมาะสม vs manual containerization"
+    },
+    {
+      "vocab": "How do you migrate databases to GCP?",
+      "pronunciation": "Database Migration",
+      "meaning": "Migrate databases ไป GCP อย่างไร?",
+      "example": "Database Migration Service (DMS): Managed service for database migration. Supported: MySQL, PostgreSQL, SQL Server → Cloud SQL, AlloyDB. Oracle → Bare Metal Solution. Features: 1) Continuous replication (CDC). 2) Minimal downtime. 3) Serverless (no infrastructure). Process: 1) Create connection profiles (source, destination). 2) Create migration job. 3) Initial load + continuous replication. 4) Validate data. 5) Promote destination (cutover). Heterogeneous migrations: Different database types. Use: Striim, Datastream, custom ETL. BigQuery migration: Transfer Service for data warehouses (Teradata, Redshift). Best practices: 1) Assess schema compatibility. 2) Test with production-like data. 3) Plan for application connection string updates. 4) Have rollback plan. Exam tip: Know DMS capabilities, homogeneous vs heterogeneous migrations.",
+      "exampleTranslation": "Database Migration Service (DMS): Managed service สำหรับ database migration Supported: MySQL, PostgreSQL, SQL Server → Cloud SQL, AlloyDB Oracle → Bare Metal Solution Features: 1) Continuous replication (CDC) 2) Minimal downtime 3) Serverless (no infrastructure) Process: 1) Create connection profiles (source, destination) 2) Create migration job 3) Initial load + continuous replication 4) Validate data 5) Promote destination (cutover) Heterogeneous migrations: Different database types ใช้: Striim, Datastream, custom ETL BigQuery migration: Transfer Service สำหรับ data warehouses (Teradata, Redshift) Best practices: 1) Assess schema compatibility 2) Test กับ production-like data 3) Plan สำหรับ application connection string updates 4) มี rollback plan Exam tip: รู้ DMS capabilities, homogeneous vs heterogeneous migrations"
+    },
+    {
+      "vocab": "How do you migrate data to Cloud Storage?",
+      "pronunciation": "Data Migration",
+      "meaning": "Migrate data ไป Cloud Storage อย่างไร?",
+      "example": "Migration methods: 1) gsutil: Command-line, good for <1TB, parallel upload. 2) Storage Transfer Service: Managed, from S3/Azure/HTTP/other GCS. Scheduled, incremental. 3) Transfer Appliance: Physical device for large data (100TB-1PB). Ship to Google for upload. 4) BigQuery Data Transfer Service: For data warehouse sources. Decision factors: Data volume, network bandwidth, time constraints. gsutil: Small data, good connectivity. Storage Transfer Service: Cloud-to-cloud, ongoing sync, large data with good bandwidth. Transfer Appliance: Massive data (petabytes), limited bandwidth, one-time. Time estimates: 1Gbps network = ~10TB/day. Transfer Appliance = ship + upload time. Exam tip: Know when to use each method based on data size and bandwidth.",
+      "exampleTranslation": "Migration methods: 1) gsutil: Command-line, good for <1TB, parallel upload 2) Storage Transfer Service: Managed, from S3/Azure/HTTP/other GCS Scheduled, incremental 3) Transfer Appliance: Physical device สำหรับ large data (100TB-1PB) Ship to Google for upload 4) BigQuery Data Transfer Service: สำหรับ data warehouse sources Decision factors: Data volume, network bandwidth, time constraints gsutil: Small data, good connectivity Storage Transfer Service: Cloud-to-cloud, ongoing sync, large data กับ good bandwidth Transfer Appliance: Massive data (petabytes), limited bandwidth, one-time Time estimates: 1Gbps network = ~10TB/day Transfer Appliance = ship + upload time Exam tip: รู้เมื่อไหร่ใช้แต่ละ method based on data size และ bandwidth"
+    },
+    {
+      "vocab": "How do you plan a migration project?",
+      "pronunciation": "Migration Planning",
+      "meaning": "วางแผน migration project อย่างไร?",
+      "example": "Migration phases: 1) Assess: Inventory apps, dependencies, requirements. Tools: CAST, Stratozone, manual discovery. 2) Plan: Define waves, target architecture, timeline. 3) Deploy: Build landing zone (VPC, IAM, security). 4) Migrate: Execute migration per wave. 5) Optimize: Right-size, modernize, cost optimize. Landing zone: Foundation infrastructure. Components: Org structure, VPCs, IAM, security policies, logging. Wave planning: Group apps by: Dependencies, criticality, complexity. Start with: Low-risk, independent apps. Move to: Business-critical apps. Change management: 1) Application connection string updates. 2) DNS changes. 3) User training. 4) Runbook documentation. Exam tip: Know migration phases, landing zone components, wave planning criteria.",
+      "exampleTranslation": "Migration phases: 1) Assess: Inventory apps, dependencies, requirements Tools: CAST, Stratozone, manual discovery 2) Plan: Define waves, target architecture, timeline 3) Deploy: Build landing zone (VPC, IAM, security) 4) Migrate: Execute migration per wave 5) Optimize: Right-size, modernize, cost optimize Landing zone: Foundation infrastructure Components: Org structure, VPCs, IAM, security policies, logging Wave planning: Group apps by: Dependencies, criticality, complexity Start with: Low-risk, independent apps Move to: Business-critical apps Change management: 1) Application connection string updates 2) DNS changes 3) User training 4) Runbook documentation Exam tip: รู้ migration phases, landing zone components, wave planning criteria"
+    }
+  ]
+}

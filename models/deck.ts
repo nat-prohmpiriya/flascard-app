@@ -35,6 +35,7 @@ export function toDeckDocument(deck: Deck): DeckDocument {
 export const DECK_CATEGORIES = [
   'english',
   'programming',
+  'devops',
   'science',
   'math',
   'language',

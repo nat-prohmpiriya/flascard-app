@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T12:00:00.000Z",
+  "deck": {
+    "name": "GCP PCA - Compute Options",
+    "description": "Compute service selection และ decision making สำหรับ GCP Professional Cloud Architect",
+    "category": "devops",
+    "tags": ["gcp", "certification", "pca", "compute", "architect"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "How do you choose between GCP compute options?",
+      "pronunciation": "Compute Decision Tree",
+      "meaning": "เลือกระหว่าง GCP compute options อย่างไร?",
+      "example": "Decision tree: 1) Need full control over OS/kernel? → Compute Engine. 2) Containerized workload? → Container: Need orchestration? → GKE. Simple deployment? → Cloud Run. 3) Event-driven, short tasks? → Cloud Functions. 4) Web app with managed runtime? → App Engine. Key factors: Control vs management overhead, Scaling requirements, Cost model (per-VM vs per-request), Cold start tolerance, Stateful vs stateless. Default recommendation: Start with Cloud Run (serverless containers), move to GKE if need more control, Compute Engine only if specific OS/hardware needs. Exam tip: Know the trade-offs, not just features.",
+      "exampleTranslation": "Decision tree: 1) Need full control over OS/kernel? → Compute Engine 2) Containerized workload? → Container: Need orchestration? → GKE Simple deployment? → Cloud Run 3) Event-driven, short tasks? → Cloud Functions 4) Web app กับ managed runtime? → App Engine Key factors: Control vs management overhead, Scaling requirements, Cost model (per-VM vs per-request), Cold start tolerance, Stateful vs stateless Default recommendation: Start กับ Cloud Run (serverless containers), ไป GKE ถ้าต้องการ control มากกว่า, Compute Engine เมื่อต้องการ specific OS/hardware เท่านั้น Exam tip: รู้ trade-offs, ไม่ใช่แค่ features"
+    },
+    {
+      "vocab": "When should you use GKE vs Cloud Run?",
+      "pronunciation": "GKE vs Cloud Run",
+      "meaning": "เมื่อไหร่ควรใช้ GKE vs Cloud Run?",
+      "example": "Use Cloud Run when: 1) Stateless HTTP/gRPC services. 2) Variable traffic, scale to zero needed. 3) Simple deployment, minimal ops. 4) Per-request pricing preferred. 5) Quick cold starts acceptable. Use GKE when: 1) Complex microservices architecture. 2) Stateful workloads. 3) Need DaemonSets, custom operators. 4) GPU/TPU workloads. 5) Specific networking (service mesh). 6) Multi-container pods. 7) Persistent volumes needed. Hybrid: Use both - Cloud Run for stateless APIs, GKE for stateful/complex. Exam tip: Cloud Run is preferred for most new workloads unless specific GKE features needed.",
+      "exampleTranslation": "ใช้ Cloud Run เมื่อ: 1) Stateless HTTP/gRPC services 2) Variable traffic, scale to zero needed 3) Simple deployment, minimal ops 4) Per-request pricing preferred 5) Quick cold starts acceptable ใช้ GKE เมื่อ: 1) Complex microservices architecture 2) Stateful workloads 3) Need DaemonSets, custom operators 4) GPU/TPU workloads 5) Specific networking (service mesh) 6) Multi-container pods 7) Persistent volumes needed Hybrid: ใช้ทั้งคู่ - Cloud Run สำหรับ stateless APIs, GKE สำหรับ stateful/complex Exam tip: Cloud Run preferred สำหรับ new workloads ส่วนใหญ่ ยกเว้นต้องการ specific GKE features"
+    },
+    {
+      "vocab": "When should you use Compute Engine?",
+      "pronunciation": "Compute Engine Use Cases",
+      "meaning": "เมื่อไหร่ควรใช้ Compute Engine?",
+      "example": "Use Compute Engine when: 1) Lift-and-shift migrations (unchanged VMs). 2) Custom OS or kernel requirements. 3) Windows workloads. 4) Licensed software requiring specific hardware. 5) Stateful applications (databases, legacy). 6) Specific hardware needs (GPUs, local SSD). 7) Compliance requiring dedicated hosts (sole-tenant nodes). Instance types: General purpose (E2, N2), Compute-optimized (C2), Memory-optimized (M2), Accelerator-optimized (A2). Features: Managed Instance Groups (MIG) for scaling, Instance templates, Preemptible/Spot VMs for cost. Exam tip: Compute Engine is often NOT the answer for new cloud-native apps - prefer managed services.",
+      "exampleTranslation": "ใช้ Compute Engine เมื่อ: 1) Lift-and-shift migrations (unchanged VMs) 2) Custom OS หรือ kernel requirements 3) Windows workloads 4) Licensed software ที่ต้องการ specific hardware 5) Stateful applications (databases, legacy) 6) Specific hardware needs (GPUs, local SSD) 7) Compliance ที่ต้องการ dedicated hosts (sole-tenant nodes) Instance types: General purpose (E2, N2), Compute-optimized (C2), Memory-optimized (M2), Accelerator-optimized (A2) Features: Managed Instance Groups (MIG) สำหรับ scaling, Instance templates, Preemptible/Spot VMs สำหรับ cost Exam tip: Compute Engine มักไม่ใช่คำตอบสำหรับ new cloud-native apps - prefer managed services"
+    },
+    {
+      "vocab": "What are the GKE cluster modes and when to use each?",
+      "pronunciation": "GKE Modes",
+      "meaning": "GKE cluster modes มีอะไร และใช้เมื่อไหร่?",
+      "example": "GKE Standard: Full control over nodes, you manage node pools. Use when: Custom machine types, GPUs/TPUs, DaemonSets, privileged containers, specific node configurations. GKE Autopilot: Fully managed nodes, pay per pod. Use when: Want minimal ops, standard workloads, cost optimization for variable workloads, security hardening by default. Comparison: Standard = more control, more responsibility. Autopilot = less ops, Google best practices enforced. Autopilot restrictions: No SSH to nodes, no privileged pods, no DaemonSets (use sidecar), limited node customization. Exam tip: Autopilot is recommended default, Standard only when Autopilot limitations are blockers.",
+      "exampleTranslation": "GKE Standard: Full control over nodes, คุณจัดการ node pools ใช้เมื่อ: Custom machine types, GPUs/TPUs, DaemonSets, privileged containers, specific node configurations GKE Autopilot: Fully managed nodes, pay per pod ใช้เมื่อ: Want minimal ops, standard workloads, cost optimization สำหรับ variable workloads, security hardening by default Comparison: Standard = control มากกว่า, responsibility มากกว่า Autopilot = ops น้อยกว่า, Google best practices enforced Autopilot restrictions: No SSH to nodes, no privileged pods, no DaemonSets (use sidecar), limited node customization Exam tip: Autopilot เป็น recommended default, Standard เมื่อ Autopilot limitations เป็น blockers เท่านั้น"
+    },
+    {
+      "vocab": "How do you choose between App Engine Standard and Flexible?",
+      "pronunciation": "App Engine Modes",
+      "meaning": "เลือกระหว่าง App Engine Standard และ Flexible อย่างไร?",
+      "example": "App Engine Standard: Managed runtime (Python, Java, Go, Node.js, PHP, Ruby). Features: Scale to zero, fast scaling, sandbox environment, free tier. Limitations: Specific runtime versions, no custom binaries, 60s request timeout. App Engine Flexible: Custom Docker containers. Features: Any language/runtime, SSH access, longer timeouts (60 min). Limitations: Minimum 1 instance (no scale to zero), slower scaling. Decision: Standard for supported runtimes and cost optimization. Flexible for custom runtimes or Docker needs. Modern recommendation: Consider Cloud Run instead of App Engine Flexible - similar features, better pricing. Exam tip: Standard preferred for supported languages, Cloud Run over Flexible for containers.",
+      "exampleTranslation": "App Engine Standard: Managed runtime (Python, Java, Go, Node.js, PHP, Ruby) Features: Scale to zero, fast scaling, sandbox environment, free tier Limitations: Specific runtime versions, no custom binaries, 60s request timeout App Engine Flexible: Custom Docker containers Features: Any language/runtime, SSH access, longer timeouts (60 min) Limitations: Minimum 1 instance (no scale to zero), slower scaling Decision: Standard สำหรับ supported runtimes และ cost optimization Flexible สำหรับ custom runtimes หรือ Docker needs Modern recommendation: Consider Cloud Run แทน App Engine Flexible - similar features, better pricing Exam tip: Standard preferred สำหรับ supported languages, Cloud Run over Flexible สำหรับ containers"
+    },
+    {
+      "vocab": "When should you use Cloud Functions vs Cloud Run?",
+      "pronunciation": "Functions vs Run",
+      "meaning": "เมื่อไหร่ควรใช้ Cloud Functions vs Cloud Run?",
+      "example": "Cloud Functions: Function-based, event-triggered primarily. Use when: Simple event handlers (Pub/Sub, Storage), Single-purpose functions, Quick prototypes, Background tasks. Limitations: Limited runtimes, shorter timeout (gen1: 9min, gen2: 60min). Cloud Run: Container-based, HTTP/gRPC primarily. Use when: Custom dependencies, Multiple endpoints in one service, Longer processing, Any language/framework. Key difference: Functions = deploy a function. Run = deploy a container. Gen2 Functions: Built on Cloud Run, similar capabilities. Modern recommendation: Cloud Run for most use cases, Functions for simple event handlers. Exam tip: Cloud Run is more flexible, Functions for simplicity.",
+      "exampleTranslation": "Cloud Functions: Function-based, event-triggered เป็นหลัก ใช้เมื่อ: Simple event handlers (Pub/Sub, Storage), Single-purpose functions, Quick prototypes, Background tasks Limitations: Limited runtimes, shorter timeout (gen1: 9min, gen2: 60min) Cloud Run: Container-based, HTTP/gRPC เป็นหลัก ใช้เมื่อ: Custom dependencies, Multiple endpoints ใน one service, Longer processing, Any language/framework Key difference: Functions = deploy a function Run = deploy a container Gen2 Functions: Built on Cloud Run, similar capabilities Modern recommendation: Cloud Run สำหรับ most use cases, Functions สำหรับ simple event handlers Exam tip: Cloud Run flexible กว่า, Functions สำหรับ simplicity"
+    },
+    {
+      "vocab": "How do you optimize compute costs on GCP?",
+      "pronunciation": "Compute Cost Optimization",
+      "meaning": "Optimize compute costs บน GCP อย่างไร?",
+      "example": "Strategies by service: Compute Engine: 1) Committed Use Discounts (CUDs): 1-3 year, up to 57% off. 2) Spot/Preemptible VMs: Up to 91% off, fault-tolerant workloads. 3) Right-sizing: Use Recommender. 4) Scheduling: Stop dev VMs nights/weekends. GKE: 1) Autopilot: Pay per pod resources. 2) Spot node pools for batch. 3) Cluster autoscaler. 4) Right-size pod requests. Cloud Run: 1) Min instances = 0 when possible. 2) CPU throttling (default) for lower cost. 3) Optimize cold starts. General: 1) Use serverless for variable workloads. 2) Regional vs multi-regional for data. 3) Sustained use discounts (automatic). Exam tip: Know CUDs, Spot VMs, and serverless cost models.",
+      "exampleTranslation": "Strategies by service: Compute Engine: 1) Committed Use Discounts (CUDs): 1-3 year, up to 57% off 2) Spot/Preemptible VMs: Up to 91% off, fault-tolerant workloads 3) Right-sizing: ใช้ Recommender 4) Scheduling: Stop dev VMs nights/weekends GKE: 1) Autopilot: Pay per pod resources 2) Spot node pools สำหรับ batch 3) Cluster autoscaler 4) Right-size pod requests Cloud Run: 1) Min instances = 0 เมื่อเป็นไปได้ 2) CPU throttling (default) สำหรับ lower cost 3) Optimize cold starts General: 1) ใช้ serverless สำหรับ variable workloads 2) Regional vs multi-regional สำหรับ data 3) Sustained use discounts (automatic) Exam tip: รู้ CUDs, Spot VMs, และ serverless cost models"
+    },
+    {
+      "vocab": "What is Anthos and when should you use it?",
+      "pronunciation": "Anthos Platform",
+      "meaning": "Anthos คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "Anthos: Google's hybrid/multi-cloud platform. Components: 1) Anthos GKE: Consistent Kubernetes across environments. 2) Anthos Service Mesh: Managed Istio. 3) Anthos Config Management: GitOps, Policy Controller. 4) Anthos on-prem: GKE on VMware/bare metal. 5) Anthos on AWS/Azure: GKE on other clouds. Use cases: 1) Hybrid cloud (on-prem + GCP). 2) Multi-cloud (GCP + AWS/Azure). 3) Edge deployments. 4) Consistent platform across environments. 5) Modernizing on-prem apps. When NOT to use: Cloud-only workloads (use GKE), simple apps (use Cloud Run). Exam tip: Anthos for hybrid/multi-cloud Kubernetes, not for cloud-only.",
+      "exampleTranslation": "Anthos: Google's hybrid/multi-cloud platform Components: 1) Anthos GKE: Consistent Kubernetes across environments 2) Anthos Service Mesh: Managed Istio 3) Anthos Config Management: GitOps, Policy Controller 4) Anthos on-prem: GKE บน VMware/bare metal 5) Anthos on AWS/Azure: GKE บน other clouds Use cases: 1) Hybrid cloud (on-prem + GCP) 2) Multi-cloud (GCP + AWS/Azure) 3) Edge deployments 4) Consistent platform across environments 5) Modernizing on-prem apps When NOT to use: Cloud-only workloads (ใช้ GKE), simple apps (ใช้ Cloud Run) Exam tip: Anthos สำหรับ hybrid/multi-cloud Kubernetes, ไม่ใช่สำหรับ cloud-only"
+    }
+  ]
+}

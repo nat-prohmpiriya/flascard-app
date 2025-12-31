@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T12:00:00.000Z",
+  "deck": {
+    "name": "GCP PCA - Storage & Database",
+    "description": "Storage และ Database selection สำหรับ GCP Professional Cloud Architect",
+    "category": "devops",
+    "tags": ["gcp", "certification", "pca", "storage", "database"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "How do you choose between GCP database options?",
+      "pronunciation": "Database Decision Tree",
+      "meaning": "เลือกระหว่าง GCP database options อย่างไร?",
+      "example": "Decision tree: 1) Need SQL and transactions? → Relational: Regional, managed? → Cloud SQL. Global scale, strong consistency? → Spanner. PostgreSQL high performance? → AlloyDB. 2) Document model, mobile/web? → Firestore. 3) High throughput, time-series, IoT? → Bigtable. 4) In-memory caching? → Memorystore (Redis/Memcached). 5) Analytics warehouse? → BigQuery. Key factors: Data model (relational vs document vs key-value), Scale requirements, Consistency needs, Query patterns, Cost. Exam tip: Know use cases for each, especially Spanner vs Cloud SQL, Firestore vs Bigtable.",
+      "exampleTranslation": "Decision tree: 1) Need SQL และ transactions? → Relational: Regional, managed? → Cloud SQL Global scale, strong consistency? → Spanner PostgreSQL high performance? → AlloyDB 2) Document model, mobile/web? → Firestore 3) High throughput, time-series, IoT? → Bigtable 4) In-memory caching? → Memorystore (Redis/Memcached) 5) Analytics warehouse? → BigQuery Key factors: Data model (relational vs document vs key-value), Scale requirements, Consistency needs, Query patterns, Cost Exam tip: รู้ use cases แต่ละอัน, โดยเฉพาะ Spanner vs Cloud SQL, Firestore vs Bigtable"
+    },
+    {
+      "vocab": "When should you use Cloud Spanner vs Cloud SQL?",
+      "pronunciation": "Spanner vs Cloud SQL",
+      "meaning": "เมื่อไหร่ควรใช้ Cloud Spanner vs Cloud SQL?",
+      "example": "Cloud SQL: Regional MySQL/PostgreSQL/SQL Server. Use when: Traditional RDBMS needs, Regional scale sufficient (<10TB), Cost-sensitive, Familiar SQL ecosystem, Read replicas adequate for read scaling. Cloud Spanner: Globally distributed, horizontally scalable. Use when: Global consistency required, Horizontal write scaling needed, >10TB data, 99.999% availability needed, Financial/inventory systems needing strong consistency. Key differences: Spanner = global, auto-sharding, expensive. Cloud SQL = regional, vertical scaling, cheaper. Cost: Spanner ~10x more than Cloud SQL for similar capacity. Exam tip: Spanner only when global scale AND strong consistency needed.",
+      "exampleTranslation": "Cloud SQL: Regional MySQL/PostgreSQL/SQL Server ใช้เมื่อ: Traditional RDBMS needs, Regional scale เพียงพอ (<10TB), Cost-sensitive, Familiar SQL ecosystem, Read replicas เพียงพอสำหรับ read scaling Cloud Spanner: Globally distributed, horizontally scalable ใช้เมื่อ: Global consistency required, Horizontal write scaling needed, >10TB data, 99.999% availability needed, Financial/inventory systems ที่ต้องการ strong consistency Key differences: Spanner = global, auto-sharding, แพง Cloud SQL = regional, vertical scaling, ถูกกว่า Cost: Spanner ~10x มากกว่า Cloud SQL สำหรับ capacity เท่ากัน Exam tip: Spanner เมื่อ global scale AND strong consistency needed เท่านั้น"
+    },
+    {
+      "vocab": "When should you use Firestore vs Bigtable?",
+      "pronunciation": "Firestore vs Bigtable",
+      "meaning": "เมื่อไหร่ควรใช้ Firestore vs Bigtable?",
+      "example": "Firestore: Document database, serverless. Use when: Mobile/web applications, Real-time sync needed, Hierarchical data (documents/collections), Offline support required, Query flexibility (indexes), <1TB data or moderate throughput. Bigtable: Wide-column store, provisioned. Use when: High throughput (millions ops/sec), Time-series data, IoT sensor data, Analytics backend, >1TB data, Low latency at scale. Key differences: Firestore = flexible queries, real-time, serverless pricing. Bigtable = high throughput, row-key access patterns, cluster pricing. Exam tip: Firestore for apps with flexible queries, Bigtable for high-volume time-series/IoT.",
+      "exampleTranslation": "Firestore: Document database, serverless ใช้เมื่อ: Mobile/web applications, Real-time sync needed, Hierarchical data (documents/collections), Offline support required, Query flexibility (indexes), <1TB data หรือ moderate throughput Bigtable: Wide-column store, provisioned ใช้เมื่อ: High throughput (millions ops/sec), Time-series data, IoT sensor data, Analytics backend, >1TB data, Low latency at scale Key differences: Firestore = flexible queries, real-time, serverless pricing Bigtable = high throughput, row-key access patterns, cluster pricing Exam tip: Firestore สำหรับ apps กับ flexible queries, Bigtable สำหรับ high-volume time-series/IoT"
+    },
+    {
+      "vocab": "How do you choose Cloud Storage classes?",
+      "pronunciation": "Storage Classes",
+      "meaning": "เลือก Cloud Storage classes อย่างไร?",
+      "example": "Storage classes by access frequency: 1) Standard: Frequently accessed, hot data. No minimum storage duration. 2) Nearline: ~once per month access. 30-day minimum, lower storage cost. 3) Coldline: ~once per quarter access. 90-day minimum, even lower storage cost. 4) Archive: ~once per year access. 365-day minimum, lowest storage cost. Cost trade-off: Lower storage class = cheaper storage, more expensive retrieval. Autoclass: Automatically moves objects between classes based on access. Object Lifecycle Management: Rules to transition or delete objects. Location types: Regional (single region), Dual-region (2 specific regions), Multi-region (continent). Exam tip: Know minimum durations, use Autoclass for uncertain access patterns.",
+      "exampleTranslation": "Storage classes by access frequency: 1) Standard: Frequently accessed, hot data ไม่มี minimum storage duration 2) Nearline: ~once per month access 30-day minimum, lower storage cost 3) Coldline: ~once per quarter access 90-day minimum, even lower storage cost 4) Archive: ~once per year access 365-day minimum, lowest storage cost Cost trade-off: Lower storage class = cheaper storage, more expensive retrieval Autoclass: ย้าย objects ระหว่าง classes อัตโนมัติตาม access Object Lifecycle Management: Rules เพื่อ transition หรือ delete objects Location types: Regional (single region), Dual-region (2 specific regions), Multi-region (continent) Exam tip: รู้ minimum durations, ใช้ Autoclass สำหรับ uncertain access patterns"
+    },
+    {
+      "vocab": "What is AlloyDB and when should you use it?",
+      "pronunciation": "AlloyDB",
+      "meaning": "AlloyDB คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "AlloyDB: Fully managed PostgreSQL-compatible database. Key features: 1) Up to 4x faster than standard PostgreSQL (transactional). 2) Up to 100x faster for analytical queries. 3) 99.99% availability (including maintenance). 4) Automated backups, point-in-time recovery. 5) ML integration with Vertex AI. Architecture: Disaggregated compute and storage, intelligent caching. Use cases: 1) High-performance OLTP. 2) Mixed OLTP/OLAP workloads. 3) Migrating from commercial databases (Oracle, SQL Server). 4) PostgreSQL apps needing better performance. vs Cloud SQL PostgreSQL: AlloyDB = higher performance, higher cost, regional. Cloud SQL = standard PostgreSQL, cheaper, simpler. Exam tip: AlloyDB for high-performance PostgreSQL, especially mixed workloads.",
+      "exampleTranslation": "AlloyDB: Fully managed PostgreSQL-compatible database Key features: 1) Up to 4x faster than standard PostgreSQL (transactional) 2) Up to 100x faster for analytical queries 3) 99.99% availability (including maintenance) 4) Automated backups, point-in-time recovery 5) ML integration กับ Vertex AI Architecture: Disaggregated compute และ storage, intelligent caching Use cases: 1) High-performance OLTP 2) Mixed OLTP/OLAP workloads 3) Migrating from commercial databases (Oracle, SQL Server) 4) PostgreSQL apps ที่ต้องการ better performance vs Cloud SQL PostgreSQL: AlloyDB = higher performance, higher cost, regional Cloud SQL = standard PostgreSQL, cheaper, simpler Exam tip: AlloyDB สำหรับ high-performance PostgreSQL, โดยเฉพาะ mixed workloads"
+    },
+    {
+      "vocab": "How do you design data lakes on GCP?",
+      "pronunciation": "Data Lake Design",
+      "meaning": "ออกแบบ data lakes บน GCP อย่างไร?",
+      "example": "Data lake components: 1) Storage: Cloud Storage (raw data, any format). 2) Catalog: Dataplex for discovery, governance. 3) Processing: Dataflow (streaming/batch), Dataproc (Spark). 4) Analytics: BigQuery (SQL), Vertex AI (ML). Architecture patterns: 1) Raw zone: Original data, immutable. 2) Curated zone: Cleaned, transformed data. 3) Consumption zone: Ready for analytics. Dataplex: Unified data management across data lake and warehouse. Features: Data discovery, quality, security, governance. BigLake: Query data in Cloud Storage with BigQuery, unified fine-grained access control. Best practices: Organize by domain/project, enable versioning, set lifecycle policies. Exam tip: Know Dataplex for governance, BigLake for unified access.",
+      "exampleTranslation": "Data lake components: 1) Storage: Cloud Storage (raw data, any format) 2) Catalog: Dataplex สำหรับ discovery, governance 3) Processing: Dataflow (streaming/batch), Dataproc (Spark) 4) Analytics: BigQuery (SQL), Vertex AI (ML) Architecture patterns: 1) Raw zone: Original data, immutable 2) Curated zone: Cleaned, transformed data 3) Consumption zone: Ready for analytics Dataplex: Unified data management across data lake และ warehouse Features: Data discovery, quality, security, governance BigLake: Query data ใน Cloud Storage ด้วย BigQuery, unified fine-grained access control Best practices: Organize by domain/project, enable versioning, set lifecycle policies Exam tip: รู้ Dataplex สำหรับ governance, BigLake สำหรับ unified access"
+    },
+    {
+      "vocab": "What is BigQuery and when should you use it?",
+      "pronunciation": "BigQuery",
+      "meaning": "BigQuery คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "BigQuery: Serverless, petabyte-scale data warehouse. Key features: 1) Serverless (no infrastructure management). 2) Standard SQL. 3) Separation of compute and storage. 4) Real-time analytics with streaming inserts. 5) ML with BigQuery ML. 6) BI Engine for fast dashboards. Use cases: 1) Data warehousing. 2) Business intelligence. 3) Log analytics. 4) ML model training. 5) Geospatial analytics. Pricing models: 1) On-demand: $5/TB scanned. 2) Flat-rate: Reserved slots. 3) Editions: Standard, Enterprise, Enterprise Plus. Optimization: Partitioning, clustering, materialized views. Exam tip: BigQuery for analytics, not OLTP. Know partitioning/clustering for optimization.",
+      "exampleTranslation": "BigQuery: Serverless, petabyte-scale data warehouse Key features: 1) Serverless (no infrastructure management) 2) Standard SQL 3) Separation of compute และ storage 4) Real-time analytics กับ streaming inserts 5) ML กับ BigQuery ML 6) BI Engine สำหรับ fast dashboards Use cases: 1) Data warehousing 2) Business intelligence 3) Log analytics 4) ML model training 5) Geospatial analytics Pricing models: 1) On-demand: $5/TB scanned 2) Flat-rate: Reserved slots 3) Editions: Standard, Enterprise, Enterprise Plus Optimization: Partitioning, clustering, materialized views Exam tip: BigQuery สำหรับ analytics, ไม่ใช่ OLTP รู้ partitioning/clustering สำหรับ optimization"
+    },
+    {
+      "vocab": "How do you implement data backup and recovery?",
+      "pronunciation": "Backup & Recovery",
+      "meaning": "Implement data backup และ recovery อย่างไร?",
+      "example": "By service: Cloud SQL: Automated backups (7-day retention), on-demand backups, point-in-time recovery (PITR), cross-region replicas. Spanner: Automated backups, PITR, export to Cloud Storage. Firestore: Automated backups, PITR, export to Cloud Storage. Bigtable: Automated backups per cluster, export to Cloud Storage. Cloud Storage: Object versioning, cross-region replication, retention policies. BigQuery: Time travel (7 days), snapshots, cross-region dataset copies. Strategies: 1) RPO (Recovery Point Objective): How much data loss acceptable. 2) RTO (Recovery Time Objective): How fast to recover. 3) 3-2-1 rule: 3 copies, 2 media types, 1 offsite. Exam tip: Know backup options per service, understand RPO/RTO trade-offs.",
+      "exampleTranslation": "By service: Cloud SQL: Automated backups (7-day retention), on-demand backups, point-in-time recovery (PITR), cross-region replicas Spanner: Automated backups, PITR, export to Cloud Storage Firestore: Automated backups, PITR, export to Cloud Storage Bigtable: Automated backups per cluster, export to Cloud Storage Cloud Storage: Object versioning, cross-region replication, retention policies BigQuery: Time travel (7 days), snapshots, cross-region dataset copies Strategies: 1) RPO (Recovery Point Objective): How much data loss acceptable 2) RTO (Recovery Time Objective): How fast to recover 3) 3-2-1 rule: 3 copies, 2 media types, 1 offsite Exam tip: รู้ backup options ต่อ service, เข้าใจ RPO/RTO trade-offs"
+    }
+  ]
+}

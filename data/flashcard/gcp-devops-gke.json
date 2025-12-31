@@ -4,7 +4,7 @@
   "deck": {
     "name": "GCP DevOps - GKE Advanced",
     "description": "Google Kubernetes Engine advanced topics: Autopilot, Node pools, Workload Identity, Security, และ Service Mesh",
-    "category": "DevOps",
+    "category": "devops",
     "tags": ["gcp", "devops", "gke", "kubernetes", "containers"],
     "sourceLang": "en",
     "targetLang": "th"

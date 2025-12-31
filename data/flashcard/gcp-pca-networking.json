@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T12:00:00.000Z",
+  "deck": {
+    "name": "GCP PCA - Networking",
+    "description": "Networking architecture, Hybrid connectivity และ Load Balancing สำหรับ GCP Professional Cloud Architect",
+    "category": "devops",
+    "tags": ["gcp", "certification", "pca", "networking", "hybrid"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "How do you design VPC networks for enterprise?",
+      "pronunciation": "VPC Design Patterns",
+      "meaning": "ออกแบบ VPC networks สำหรับ enterprise อย่างไร?",
+      "example": "Common patterns: 1) Shared VPC: Centralized network management. Host project owns VPC, service projects use subnets. Best for: Central IT control, consistent policies. 2) VPC Peering: Direct connection between VPCs. Non-transitive (A-B, B-C doesn't mean A-C). Best for: Cross-project connectivity, simple needs. 3) Hub-and-spoke: Central hub VPC, spokes connect via peering/VPN. Best for: Centralized services (NAT, firewall), inspection. Design considerations: IP address planning (avoid overlaps), subnet sizing, region placement, firewall rules (deny by default). Exam tip: Shared VPC for organization-wide control, understand non-transitive peering.",
+      "exampleTranslation": "Common patterns: 1) Shared VPC: Centralized network management Host project owns VPC, service projects ใช้ subnets Best for: Central IT control, consistent policies 2) VPC Peering: Direct connection ระหว่าง VPCs Non-transitive (A-B, B-C ไม่ได้หมายความว่า A-C) Best for: Cross-project connectivity, simple needs 3) Hub-and-spoke: Central hub VPC, spokes connect via peering/VPN Best for: Centralized services (NAT, firewall), inspection Design considerations: IP address planning (avoid overlaps), subnet sizing, region placement, firewall rules (deny by default) Exam tip: Shared VPC สำหรับ organization-wide control, เข้าใจ non-transitive peering"
+    },
+    {
+      "vocab": "How do you choose between hybrid connectivity options?",
+      "pronunciation": "Hybrid Connectivity",
+      "meaning": "เลือกระหว่าง hybrid connectivity options อย่างไร?",
+      "example": "Options comparison: 1) Cloud VPN: Over internet, encrypted, up to 3 Gbps/tunnel. Use when: Quick setup, <3Gbps needed, cost-sensitive. HA VPN for 99.99% SLA. 2) Dedicated Interconnect: Physical connection at colocation. 10/100 Gbps, 99.99% SLA with redundancy. Use when: >10 Gbps, low latency critical, consistent bandwidth. 3) Partner Interconnect: Via service provider. 50 Mbps - 50 Gbps. Use when: Can't reach colocation, need >3 Gbps but <10 Gbps. Decision factors: Bandwidth needs, latency requirements, cost, setup time. For encryption over Interconnect, use VPN tunnels on top. Exam tip: Know bandwidth limits, when Dedicated vs Partner Interconnect.",
+      "exampleTranslation": "Options comparison: 1) Cloud VPN: Over internet, encrypted, up to 3 Gbps/tunnel ใช้เมื่อ: Quick setup, <3Gbps needed, cost-sensitive HA VPN สำหรับ 99.99% SLA 2) Dedicated Interconnect: Physical connection at colocation 10/100 Gbps, 99.99% SLA กับ redundancy ใช้เมื่อ: >10 Gbps, low latency critical, consistent bandwidth 3) Partner Interconnect: Via service provider 50 Mbps - 50 Gbps ใช้เมื่อ: Can't reach colocation, need >3 Gbps but <10 Gbps Decision factors: Bandwidth needs, latency requirements, cost, setup time สำหรับ encryption over Interconnect, ใช้ VPN tunnels on top Exam tip: รู้ bandwidth limits, เมื่อไหร่ Dedicated vs Partner Interconnect"
+    },
+    {
+      "vocab": "How do you select the right load balancer?",
+      "pronunciation": "Load Balancer Selection",
+      "meaning": "เลือก load balancer ที่เหมาะสมอย่างไร?",
+      "example": "Decision tree: 1) Internal or External traffic? Internal: Internal HTTP(S) LB (L7), Internal TCP/UDP LB (L4). External: Continue... 2) Global or Regional? Global (anycast IP, multi-region): Global HTTP(S) LB, SSL Proxy, TCP Proxy. Regional: Regional HTTP(S) LB, Network LB. 3) HTTP(S) or TCP/UDP? HTTP(S): Global/Regional HTTP(S) LB (L7 features). TCP/UDP: SSL Proxy, TCP Proxy, Network LB (L4). Key features by type: Global HTTP(S): URL routing, CDN, Cloud Armor, managed SSL. Network LB: Preserve client IP, high performance, no proxy. Exam tip: Global HTTP(S) LB is most common for web apps, know when Network LB needed.",
+      "exampleTranslation": "Decision tree: 1) Internal หรือ External traffic? Internal: Internal HTTP(S) LB (L7), Internal TCP/UDP LB (L4) External: Continue... 2) Global หรือ Regional? Global (anycast IP, multi-region): Global HTTP(S) LB, SSL Proxy, TCP Proxy Regional: Regional HTTP(S) LB, Network LB 3) HTTP(S) หรือ TCP/UDP? HTTP(S): Global/Regional HTTP(S) LB (L7 features) TCP/UDP: SSL Proxy, TCP Proxy, Network LB (L4) Key features by type: Global HTTP(S): URL routing, CDN, Cloud Armor, managed SSL Network LB: Preserve client IP, high performance, no proxy Exam tip: Global HTTP(S) LB common สุดสำหรับ web apps, รู้เมื่อไหร่ต้อง Network LB"
+    },
+    {
+      "vocab": "What is Private Google Access and Private Service Connect?",
+      "pronunciation": "Private Access Options",
+      "meaning": "Private Google Access และ Private Service Connect คืออะไร?",
+      "example": "Private Google Access (PGA): Access Google APIs from VMs without external IPs. Enable per subnet. Routes traffic to Google APIs internally. DNS: private.googleapis.com or restricted.googleapis.com. Private Service Connect (PSC): Private endpoints in your VPC for Google services or your own services. Types: 1) Access Google APIs: Dedicated IP in your VPC. 2) Published services: Expose your service privately. 3) Consumer endpoints: Access partner services. Benefits over PGA: 1) Dedicated IP (not shared). 2) Firewall rules work on the endpoint. 3) No DNS complexity. 4) Works across VPC peering. Exam tip: PGA for simple needs, PSC for enterprise requirements (dedicated IPs, firewall control).",
+      "exampleTranslation": "Private Google Access (PGA): Access Google APIs จาก VMs ไม่มี external IPs Enable per subnet Route traffic ไป Google APIs internally DNS: private.googleapis.com หรือ restricted.googleapis.com Private Service Connect (PSC): Private endpoints ใน VPC ของคุณสำหรับ Google services หรือ services ของคุณ Types: 1) Access Google APIs: Dedicated IP ใน VPC 2) Published services: Expose service ของคุณ privately 3) Consumer endpoints: Access partner services Benefits over PGA: 1) Dedicated IP (not shared) 2) Firewall rules work บน endpoint 3) No DNS complexity 4) Works across VPC peering Exam tip: PGA สำหรับ simple needs, PSC สำหรับ enterprise requirements (dedicated IPs, firewall control)"
+    },
+    {
+      "vocab": "How do you implement network security on GCP?",
+      "pronunciation": "Network Security",
+      "meaning": "Implement network security บน GCP อย่างไร?",
+      "example": "Layers of security: 1) Perimeter: Cloud Armor (DDoS, WAF), reCAPTCHA Enterprise. 2) Network: VPC firewall rules, hierarchical firewall policies, network tags. 3) Application: Identity-Aware Proxy (IAP), API Gateway authentication. 4) Data: VPC Service Controls, Private Google Access. Firewall best practices: 1) Default deny ingress. 2) Use service accounts for rules (not tags). 3) Hierarchical policies for organization-wide rules. 4) Log firewall rules for audit. Zero-trust approach: 1) BeyondCorp Enterprise. 2) IAP for application access. 3) VPC Service Controls for API perimeter. 4) Workload Identity for service-to-service. Exam tip: Know Cloud Armor capabilities, VPC Service Controls for data exfiltration prevention.",
+      "exampleTranslation": "Layers of security: 1) Perimeter: Cloud Armor (DDoS, WAF), reCAPTCHA Enterprise 2) Network: VPC firewall rules, hierarchical firewall policies, network tags 3) Application: Identity-Aware Proxy (IAP), API Gateway authentication 4) Data: VPC Service Controls, Private Google Access Firewall best practices: 1) Default deny ingress 2) ใช้ service accounts สำหรับ rules (not tags) 3) Hierarchical policies สำหรับ organization-wide rules 4) Log firewall rules สำหรับ audit Zero-trust approach: 1) BeyondCorp Enterprise 2) IAP สำหรับ application access 3) VPC Service Controls สำหรับ API perimeter 4) Workload Identity สำหรับ service-to-service Exam tip: รู้ Cloud Armor capabilities, VPC Service Controls สำหรับ data exfiltration prevention"
+    },
+    {
+      "vocab": "How do you design DNS for GCP environments?",
+      "pronunciation": "DNS Design",
+      "meaning": "ออกแบบ DNS สำหรับ GCP environments อย่างไร?",
+      "example": "Cloud DNS zones: 1) Public zones: Internet-resolvable domains. 2) Private zones: Internal resolution within VPCs. 3) Forwarding zones: Forward queries to on-prem DNS. 4) Peering zones: Share DNS across VPCs without peering. Hybrid DNS patterns: 1) GCP → On-prem: Forwarding zones or DNS peering. 2) On-prem → GCP: Inbound DNS policy (create DNS server IPs in VPC). Split-horizon DNS: Same domain, different records internal vs external. Example: api.company.com → internal LB (private) vs external LB (public). Best practices: 1) Use private zones for internal services. 2) DNSSEC for public zones. 3) Consistent naming conventions. 4) Use forwarding for on-prem integration. Exam tip: Know private zones, forwarding zones, split-horizon patterns.",
+      "exampleTranslation": "Cloud DNS zones: 1) Public zones: Internet-resolvable domains 2) Private zones: Internal resolution ภายใน VPCs 3) Forwarding zones: Forward queries ไป on-prem DNS 4) Peering zones: Share DNS across VPCs โดยไม่ต้อง peering Hybrid DNS patterns: 1) GCP → On-prem: Forwarding zones หรือ DNS peering 2) On-prem → GCP: Inbound DNS policy (create DNS server IPs in VPC) Split-horizon DNS: Same domain, different records internal vs external Example: api.company.com → internal LB (private) vs external LB (public) Best practices: 1) ใช้ private zones สำหรับ internal services 2) DNSSEC สำหรับ public zones 3) Consistent naming conventions 4) ใช้ forwarding สำหรับ on-prem integration Exam tip: รู้ private zones, forwarding zones, split-horizon patterns"
+    },
+    {
+      "vocab": "What is Cloud CDN and when should you use it?",
+      "pronunciation": "Cloud CDN",
+      "meaning": "Cloud CDN คืออะไร และควรใช้เมื่อไหร่?",
+      "example": "Cloud CDN: Global content delivery network. Features: 1) Edge caching at 100+ edge locations. 2) Integrated with Global HTTP(S) LB. 3) Cache static and dynamic content. 4) Signed URLs/cookies for access control. 5) Cache invalidation API. Use cases: 1) Static websites and assets. 2) Software downloads. 3) Video streaming. 4) API response caching. Configuration: Enable on backend service/bucket. Cache modes: USE_ORIGIN_HEADERS, CACHE_ALL_STATIC, FORCE_CACHE_ALL. Cache keys: Default (URI), custom (headers, cookies, query params). Cost: CDN egress cheaper than standard egress. Exam tip: Know cache modes, when to use signed URLs, cache key customization.",
+      "exampleTranslation": "Cloud CDN: Global content delivery network Features: 1) Edge caching ที่ 100+ edge locations 2) Integrated กับ Global HTTP(S) LB 3) Cache static และ dynamic content 4) Signed URLs/cookies สำหรับ access control 5) Cache invalidation API Use cases: 1) Static websites และ assets 2) Software downloads 3) Video streaming 4) API response caching Configuration: Enable บน backend service/bucket Cache modes: USE_ORIGIN_HEADERS, CACHE_ALL_STATIC, FORCE_CACHE_ALL Cache keys: Default (URI), custom (headers, cookies, query params) Cost: CDN egress ถูกกว่า standard egress Exam tip: รู้ cache modes, เมื่อไหร่ใช้ signed URLs, cache key customization"
+    },
+    {
+      "vocab": "How do you implement network segmentation?",
+      "pronunciation": "Network Segmentation",
+      "meaning": "Implement network segmentation อย่างไร?",
+      "example": "Segmentation strategies: 1) Subnet-based: Different subnets for tiers (web, app, db). Firewall rules between subnets. 2) Project-based: Separate projects for environments or teams. Use Shared VPC or peering. 3) VPC-based: Separate VPCs for high isolation. Connect via peering or VPN if needed. GKE segmentation: 1) Namespace isolation. 2) Network Policies (pod-to-pod rules). 3) Private clusters (no public IPs). 4) Authorized networks (API server access). Micro-segmentation: Service-to-service firewalling using service accounts. Example: Only frontend SA can reach backend SA. Best practices: 1) Least privilege network access. 2) Segment by sensitivity level. 3) Use tags or service accounts for rules. 4) Log and monitor traffic. Exam tip: Know firewall rules with service accounts, GKE Network Policies.",
+      "exampleTranslation": "Segmentation strategies: 1) Subnet-based: Different subnets สำหรับ tiers (web, app, db) Firewall rules ระหว่าง subnets 2) Project-based: Separate projects สำหรับ environments หรือ teams ใช้ Shared VPC หรือ peering 3) VPC-based: Separate VPCs สำหรับ high isolation Connect via peering หรือ VPN ถ้าต้องการ GKE segmentation: 1) Namespace isolation 2) Network Policies (pod-to-pod rules) 3) Private clusters (no public IPs) 4) Authorized networks (API server access) Micro-segmentation: Service-to-service firewalling ใช้ service accounts Example: Only frontend SA can reach backend SA Best practices: 1) Least privilege network access 2) Segment by sensitivity level 3) ใช้ tags หรือ service accounts สำหรับ rules 4) Log และ monitor traffic Exam tip: รู้ firewall rules กับ service accounts, GKE Network Policies"
+    }
+  ]
+}

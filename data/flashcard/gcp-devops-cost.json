@@ -4,7 +4,7 @@
   "deck": {
     "name": "GCP DevOps - Cost & Resource Management",
     "description": "Cost optimization, Committed use discounts, Resource hierarchy และ billing best practices สำหรับ GCP",
-    "category": "DevOps",
+    "category": "devops",
     "tags": ["gcp", "devops", "cost", "finops", "billing"],
     "sourceLang": "en",
     "targetLang": "th"

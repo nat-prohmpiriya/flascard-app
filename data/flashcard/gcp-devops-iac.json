@@ -4,7 +4,7 @@
   "deck": {
     "name": "GCP DevOps - Infrastructure as Code",
     "description": "Terraform, Deployment Manager, และ Config Connector สำหรับ GCP infrastructure management",
-    "category": "DevOps",
+    "category": "devops",
     "tags": ["gcp", "devops", "terraform", "iac", "infrastructure"],
     "sourceLang": "en",
     "targetLang": "th"

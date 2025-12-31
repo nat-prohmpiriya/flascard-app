@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T12:00:00.000Z",
+  "deck": {
+    "name": "GCP PCA - Solution Design",
+    "description": "Solution Architecture Design, Case Studies และ Design Patterns สำหรับ GCP Professional Cloud Architect",
+    "category": "devops",
+    "tags": ["gcp", "certification", "pca", "architect", "design"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the GCP Well-Architected Framework?",
+      "pronunciation": "Well-Architected Framework",
+      "meaning": "GCP Well-Architected Framework คืออะไร?",
+      "example": "Framework with 4 pillars for cloud architecture: 1) Operational Excellence: Monitoring, incident response, deployment automation. 2) Security, Privacy, Compliance: Defense in depth, IAM, encryption, compliance controls. 3) Reliability: HA, DR, fault tolerance, capacity planning. 4) Performance & Cost Optimization: Right-sizing, autoscaling, cost management. Each pillar has design principles and best practices. Use for: Architecture reviews, identifying improvements, validating designs. Exam tip: Understand trade-offs between pillars (e.g., reliability vs cost).",
+      "exampleTranslation": "Framework กับ 4 pillars สำหรับ cloud architecture: 1) Operational Excellence: Monitoring, incident response, deployment automation 2) Security, Privacy, Compliance: Defense in depth, IAM, encryption, compliance controls 3) Reliability: HA, DR, fault tolerance, capacity planning 4) Performance & Cost Optimization: Right-sizing, autoscaling, cost management แต่ละ pillar มี design principles และ best practices ใช้สำหรับ: Architecture reviews, identifying improvements, validating designs Exam tip: เข้าใจ trade-offs ระหว่าง pillars (e.g., reliability vs cost)"
+    },
+    {
+      "vocab": "How do you approach a PCA case study question?",
+      "pronunciation": "Case Study Approach",
+      "meaning": "วิธี approach คำถาม case study ใน PCA?",
+      "example": "Step-by-step approach: 1) Identify requirements: Technical (performance, scale), Business (cost, time), Compliance (regulations). 2) Identify constraints: Existing systems, budget, timeline, team skills. 3) Map to GCP services: Match requirements to services. 4) Consider trade-offs: Cost vs performance, managed vs self-managed. 5) Validate against requirements: Does solution meet all needs? Key patterns: Lift-and-shift vs re-architect, hybrid vs cloud-native, global vs regional. Common case studies: EHR Healthcare, Helicopter Racing League, Mountkirk Games, TerramEarth. Exam tip: Read case study details carefully, requirements change between questions.",
+      "exampleTranslation": "Step-by-step approach: 1) Identify requirements: Technical (performance, scale), Business (cost, time), Compliance (regulations) 2) Identify constraints: Existing systems, budget, timeline, team skills 3) Map to GCP services: Match requirements กับ services 4) Consider trade-offs: Cost vs performance, managed vs self-managed 5) Validate against requirements: Solution ตอบโจทย์ทั้งหมดไหม? Key patterns: Lift-and-shift vs re-architect, hybrid vs cloud-native, global vs regional Common case studies: EHR Healthcare, Helicopter Racing League, Mountkirk Games, TerramEarth Exam tip: อ่าน case study details อย่างละเอียด, requirements เปลี่ยนระหว่างคำถาม"
+    },
+    {
+      "vocab": "What are the key decision factors for choosing GCP services?",
+      "pronunciation": "Service Selection",
+      "meaning": "ปัจจัยหลักในการเลือก GCP services?",
+      "example": "Decision factors: 1) Managed vs Self-managed: Operational overhead vs control. 2) Serverless vs Provisioned: Variable vs predictable workloads. 3) Global vs Regional: Latency requirements, data residency. 4) Cost model: Per-request vs per-hour, committed use. 5) Scale requirements: Max users, data volume, transactions/sec. 6) Integration: Existing systems, APIs, data sources. 7) Compliance: Industry regulations, data location. 8) Team skills: Learning curve, existing expertise. Framework: Start with managed/serverless, move to self-managed only if needed. Exam tip: Questions often test trade-off understanding, not just feature knowledge.",
+      "exampleTranslation": "Decision factors: 1) Managed vs Self-managed: Operational overhead vs control 2) Serverless vs Provisioned: Variable vs predictable workloads 3) Global vs Regional: Latency requirements, data residency 4) Cost model: Per-request vs per-hour, committed use 5) Scale requirements: Max users, data volume, transactions/sec 6) Integration: Existing systems, APIs, data sources 7) Compliance: Industry regulations, data location 8) Team skills: Learning curve, existing expertise Framework: Start กับ managed/serverless, ไป self-managed เมื่อจำเป็นเท่านั้น Exam tip: คำถามมักทดสอบ trade-off understanding, ไม่ใช่แค่ feature knowledge"
+    },
+    {
+      "vocab": "How do you design for global scale on GCP?",
+      "pronunciation": "Global Scale Design",
+      "meaning": "ออกแบบสำหรับ global scale บน GCP อย่างไร?",
+      "example": "Global architecture components: 1) Global Load Balancer: Single anycast IP, routes to nearest healthy backend. 2) Multi-region deployment: GKE/Cloud Run in multiple regions. 3) Global database: Spanner (strong consistency) or Firestore (eventual). 4) CDN: Cloud CDN for static content. 5) DNS: Cloud DNS with geo-routing. Patterns: Active-active (all regions serve traffic), Active-passive (failover). Data strategies: Global Spanner, regional Cloud SQL with read replicas, Firestore multi-region. Considerations: Data residency laws, latency requirements, cost of cross-region traffic. Exam tip: Know when Spanner vs regional databases, global vs regional LB.",
+      "exampleTranslation": "Global architecture components: 1) Global Load Balancer: Single anycast IP, routes ไป nearest healthy backend 2) Multi-region deployment: GKE/Cloud Run ในหลาย regions 3) Global database: Spanner (strong consistency) หรือ Firestore (eventual) 4) CDN: Cloud CDN สำหรับ static content 5) DNS: Cloud DNS กับ geo-routing Patterns: Active-active (ทุก regions serve traffic), Active-passive (failover) Data strategies: Global Spanner, regional Cloud SQL กับ read replicas, Firestore multi-region Considerations: Data residency laws, latency requirements, cost ของ cross-region traffic Exam tip: รู้ว่าเมื่อไหร่ Spanner vs regional databases, global vs regional LB"
+    },
+    {
+      "vocab": "What is the microservices architecture pattern on GCP?",
+      "pronunciation": "Microservices Pattern",
+      "meaning": "Microservices architecture pattern บน GCP คืออะไร?",
+      "example": "Components: 1) Compute: Cloud Run (serverless), GKE (containers), Cloud Functions (events). 2) Communication: Sync (HTTP/gRPC), Async (Pub/Sub). 3) Service mesh: Anthos Service Mesh for traffic management, security. 4) API Gateway: Apigee or API Gateway for external APIs. 5) Data: Database per service pattern, event sourcing. 6) Observability: Cloud Trace, Logging, Monitoring. Patterns: Saga pattern for distributed transactions, CQRS for read/write separation, Event sourcing for audit trails. Anti-patterns: Distributed monolith, shared database, synchronous chains. Exam tip: Know when microservices vs monolith, sync vs async communication.",
+      "exampleTranslation": "Components: 1) Compute: Cloud Run (serverless), GKE (containers), Cloud Functions (events) 2) Communication: Sync (HTTP/gRPC), Async (Pub/Sub) 3) Service mesh: Anthos Service Mesh สำหรับ traffic management, security 4) API Gateway: Apigee หรือ API Gateway สำหรับ external APIs 5) Data: Database per service pattern, event sourcing 6) Observability: Cloud Trace, Logging, Monitoring Patterns: Saga pattern สำหรับ distributed transactions, CQRS สำหรับ read/write separation, Event sourcing สำหรับ audit trails Anti-patterns: Distributed monolith, shared database, synchronous chains Exam tip: รู้ว่าเมื่อไหร่ microservices vs monolith, sync vs async communication"
+    },
+    {
+      "vocab": "How do you design event-driven architectures on GCP?",
+      "pronunciation": "Event-Driven Architecture",
+      "meaning": "ออกแบบ event-driven architectures บน GCP อย่างไร?",
+      "example": "Core components: 1) Pub/Sub: Message broker, at-least-once delivery, global. 2) Eventarc: Event routing to Cloud Run/Functions. 3) Cloud Functions: Event handlers, small tasks. 4) Cloud Run: Event consumers, larger workloads. 5) Workflows: Orchestrate multi-step processes. Patterns: 1) Fan-out: One event triggers multiple consumers. 2) Event sourcing: Store events as source of truth. 3) CQRS: Separate read/write models. 4) Saga: Distributed transaction coordination. Use cases: Real-time analytics, IoT ingestion, order processing, notifications. Best practices: Idempotent handlers, dead-letter topics, exactly-once with Dataflow. Exam tip: Know Pub/Sub delivery guarantees, when to use Workflows vs Pub/Sub.",
+      "exampleTranslation": "Core components: 1) Pub/Sub: Message broker, at-least-once delivery, global 2) Eventarc: Event routing ไป Cloud Run/Functions 3) Cloud Functions: Event handlers, small tasks 4) Cloud Run: Event consumers, larger workloads 5) Workflows: Orchestrate multi-step processes Patterns: 1) Fan-out: One event triggers multiple consumers 2) Event sourcing: Store events เป็น source of truth 3) CQRS: Separate read/write models 4) Saga: Distributed transaction coordination Use cases: Real-time analytics, IoT ingestion, order processing, notifications Best practices: Idempotent handlers, dead-letter topics, exactly-once กับ Dataflow Exam tip: รู้ Pub/Sub delivery guarantees, เมื่อไหร่ใช้ Workflows vs Pub/Sub"
+    },
+    {
+      "vocab": "What are the hybrid and multi-cloud patterns?",
+      "pronunciation": "Hybrid Multi-cloud",
+      "meaning": "Hybrid และ multi-cloud patterns มีอะไรบ้าง?",
+      "example": "Hybrid patterns: 1) Tiered: Web tier in cloud, data on-prem. 2) Partitioned: Some apps cloud, some on-prem. 3) Analytics: Data warehouse in cloud, operational on-prem. 4) Edge: Processing at edge, management in cloud. Multi-cloud patterns: 1) Arbitrage: Best service from each cloud. 2) Redundancy: DR across clouds. 3) Compliance: Data in specific regions/clouds. GCP tools: 1) Anthos: Consistent K8s across environments. 2) Cloud Interconnect/VPN: Connectivity. 3) BigQuery Omni: Analytics across clouds. 4) Traffic Director: Global load balancing. Exam tip: Know when hybrid is appropriate, Anthos capabilities.",
+      "exampleTranslation": "Hybrid patterns: 1) Tiered: Web tier ใน cloud, data on-prem 2) Partitioned: บาง apps cloud, บาง on-prem 3) Analytics: Data warehouse ใน cloud, operational on-prem 4) Edge: Processing ที่ edge, management ใน cloud Multi-cloud patterns: 1) Arbitrage: Best service จากแต่ละ cloud 2) Redundancy: DR across clouds 3) Compliance: Data ใน specific regions/clouds GCP tools: 1) Anthos: Consistent K8s across environments 2) Cloud Interconnect/VPN: Connectivity 3) BigQuery Omni: Analytics across clouds 4) Traffic Director: Global load balancing Exam tip: รู้ว่าเมื่อไหร่ hybrid เหมาะสม, Anthos capabilities"
+    },
+    {
+      "vocab": "How do you design for data analytics workloads?",
+      "pronunciation": "Analytics Architecture",
+      "meaning": "ออกแบบสำหรับ data analytics workloads อย่างไร?",
+      "example": "Data pipeline stages: 1) Ingestion: Pub/Sub (streaming), Cloud Storage (batch), Datastream (CDC). 2) Processing: Dataflow (stream/batch), Dataproc (Spark/Hadoop). 3) Storage: BigQuery (warehouse), Cloud Storage (data lake), Bigtable (time-series). 4) Analysis: BigQuery SQL, Looker, Vertex AI. 5) Serving: BigQuery BI Engine, Bigtable. Architecture patterns: 1) Lambda: Batch + stream paths. 2) Kappa: Stream-only (Dataflow). 3) Data mesh: Domain-oriented, decentralized. Key decisions: Real-time vs batch, Dataflow vs Dataproc, BigQuery vs Bigtable. Exam tip: Know when each processing tool is appropriate, data lake vs warehouse.",
+      "exampleTranslation": "Data pipeline stages: 1) Ingestion: Pub/Sub (streaming), Cloud Storage (batch), Datastream (CDC) 2) Processing: Dataflow (stream/batch), Dataproc (Spark/Hadoop) 3) Storage: BigQuery (warehouse), Cloud Storage (data lake), Bigtable (time-series) 4) Analysis: BigQuery SQL, Looker, Vertex AI 5) Serving: BigQuery BI Engine, Bigtable Architecture patterns: 1) Lambda: Batch + stream paths 2) Kappa: Stream-only (Dataflow) 3) Data mesh: Domain-oriented, decentralized Key decisions: Real-time vs batch, Dataflow vs Dataproc, BigQuery vs Bigtable Exam tip: รู้ว่าเมื่อไหร่แต่ละ processing tool เหมาะสม, data lake vs warehouse"
+    },
+    {
+      "vocab": "What is the Strangler Fig pattern for modernization?",
+      "pronunciation": "Strangler Fig Pattern",
+      "meaning": "Strangler Fig pattern สำหรับ modernization คืออะไร?",
+      "example": "Pattern: Gradually replace legacy system components with new services. How it works: 1) Create facade/proxy in front of legacy. 2) Route specific functions to new services. 3) Gradually migrate more functions. 4) Eventually retire legacy system. Benefits: Low risk, incremental progress, continuous delivery of value, rollback capability. GCP implementation: 1) API Gateway as facade. 2) Cloud Run/GKE for new services. 3) Traffic splitting for gradual rollout. 4) Monitoring both old and new. vs Big Bang: Strangler = lower risk, longer timeline. Big Bang = faster but risky. Exam tip: Know when to use strangler vs lift-and-shift vs rewrite.",
+      "exampleTranslation": "Pattern: ค่อยๆ แทนที่ legacy system components ด้วย new services วิธีทำงาน: 1) สร้าง facade/proxy หน้า legacy 2) Route specific functions ไป new services 3) ค่อยๆ migrate functions เพิ่ม 4) Eventually retire legacy system Benefits: Low risk, incremental progress, continuous delivery of value, rollback capability GCP implementation: 1) API Gateway เป็น facade 2) Cloud Run/GKE สำหรับ new services 3) Traffic splitting สำหรับ gradual rollout 4) Monitoring ทั้ง old และ new vs Big Bang: Strangler = lower risk, timeline ยาวกว่า Big Bang = เร็วกว่าแต่ risky Exam tip: รู้ว่าเมื่อไหร่ใช้ strangler vs lift-and-shift vs rewrite"
+    },
+    {
+      "vocab": "How do you design for machine learning workloads?",
+      "pronunciation": "ML Architecture",
+      "meaning": "ออกแบบสำหรับ machine learning workloads อย่างไร?",
+      "example": "ML lifecycle on GCP: 1) Data preparation: BigQuery, Dataflow, Cloud Storage. 2) Feature engineering: Vertex AI Feature Store. 3) Training: Vertex AI Training, custom containers. 4) Model management: Vertex AI Model Registry. 5) Serving: Vertex AI Prediction, Cloud Run. 6) Monitoring: Vertex AI Model Monitoring. Architecture patterns: 1) Batch prediction: Process data in batches, store results. 2) Online prediction: Real-time inference via API. 3) Edge prediction: TensorFlow Lite on devices. MLOps: Vertex AI Pipelines for CI/CD, automated retraining. Decision: AutoML vs custom training, online vs batch serving. Exam tip: Know Vertex AI components, when AutoML is appropriate.",
+      "exampleTranslation": "ML lifecycle บน GCP: 1) Data preparation: BigQuery, Dataflow, Cloud Storage 2) Feature engineering: Vertex AI Feature Store 3) Training: Vertex AI Training, custom containers 4) Model management: Vertex AI Model Registry 5) Serving: Vertex AI Prediction, Cloud Run 6) Monitoring: Vertex AI Model Monitoring Architecture patterns: 1) Batch prediction: Process data เป็น batches, store results 2) Online prediction: Real-time inference ผ่าน API 3) Edge prediction: TensorFlow Lite บน devices MLOps: Vertex AI Pipelines สำหรับ CI/CD, automated retraining Decision: AutoML vs custom training, online vs batch serving Exam tip: รู้ Vertex AI components, เมื่อไหร่ AutoML เหมาะสม"
+    }
+  ]
+}
