@@ -50,6 +50,8 @@ export const LANG_TO_TTS: Record<Language, string> = {
 };
 
 // Deck types
+export type DeckStatus = 'pending' | 'approved' | 'rejected';
+
 export interface Deck {
   id: string;
   userId: string;
@@ -60,6 +62,8 @@ export interface Deck {
   sourceLang: Language;  // Language of vocab/example
   targetLang: Language;  // Language of meaning
   cardCount: number;
+  isPublic?: boolean;    // Allow other users to view/clone this deck
+  status?: DeckStatus;   // Moderation status for public decks
   createdAt: Date;
   updatedAt: Date;
 }
