@@ -90,3 +90,6 @@ Cards collection needs composite indexes for:
 - Protected routes wrap content with `<ProtectedRoute>`
 - Toast notifications via `sonner` (`toast.success()`, `toast.error()`)
 - UI components in `components/ui/` follow shadcn/ui patterns
+
+
+## App running port 3005
