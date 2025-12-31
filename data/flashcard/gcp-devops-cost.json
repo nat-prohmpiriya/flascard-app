@@ -1,0 +1,56 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - Cost & Resource Management",
+    "description": "Cost optimization, Committed use discounts, Resource hierarchy และ billing best practices สำหรับ GCP",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "cost", "finops", "billing"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the GCP resource hierarchy?",
+      "pronunciation": "Resource Hierarchy",
+      "meaning": "GCP resource hierarchy คืออะไร?",
+      "example": "Hierarchy levels (top to bottom): 1) Organization: Root node, tied to Google Workspace/Cloud Identity. 2) Folders: Grouping mechanism, can nest. 3) Projects: Container for resources, billing boundary. 4) Resources: GCP services (VMs, buckets, etc.). IAM inheritance: Permissions flow down. Org admin → affects all. Folder admin → affects folder and below. Organization policies: Constraints at org/folder level. Examples: Restrict VM locations, disable service account keys. Best practices: 1) Use folders for environments (prod, dev) or teams. 2) Separate projects per application/environment. 3) Set org policies at highest applicable level. 4) Use meaningful project naming conventions.",
+      "exampleTranslation": "Hierarchy levels (top to bottom): 1) Organization: Root node, tied to Google Workspace/Cloud Identity 2) Folders: Grouping mechanism, nest ได้ 3) Projects: Container for resources, billing boundary 4) Resources: GCP services (VMs, buckets, etc.) IAM inheritance: Permissions flow down Org admin → affects all Folder admin → affects folder and below Organization policies: Constraints ที่ org/folder level Examples: Restrict VM locations, disable service account keys Best practices: 1) ใช้ folders สำหรับ environments (prod, dev) หรือ teams 2) Separate projects ต่อ application/environment 3) Set org policies ที่ highest applicable level 4) ใช้ meaningful project naming conventions"
+    },
+    {
+      "vocab": "How do you optimize Compute Engine costs?",
+      "pronunciation": "Compute Cost Optimization",
+      "meaning": "Optimize Compute Engine costs อย่างไร?",
+      "example": "Strategies: 1) Right-sizing: Use recommender, match VM to workload. 2) Committed Use Discounts (CUDs): 1-3 year commitments, up to 57% off. 3) Preemptible/Spot VMs: Up to 91% off, can be terminated anytime. 4) Sustained use discounts: Automatic, up to 30% for running >25% month. 5) Custom machine types: Pay only for needed vCPU/memory. 6) Sole-tenant nodes: For licensing, compliance needs. Scheduling: 1) Instance schedules: Auto start/stop dev VMs. 2) Scale down non-prod nights/weekends. Recommendations: Active Assist provides right-sizing, idle VM recommendations. Best practice: Start with right-sizing, then CUDs for predictable, Spot for fault-tolerant workloads.",
+      "exampleTranslation": "Strategies: 1) Right-sizing: ใช้ recommender, match VM กับ workload 2) Committed Use Discounts (CUDs): 1-3 year commitments, up to 57% off 3) Preemptible/Spot VMs: Up to 91% off, can be terminated anytime 4) Sustained use discounts: Automatic, up to 30% สำหรับ running >25% month 5) Custom machine types: Pay only for needed vCPU/memory 6) Sole-tenant nodes: สำหรับ licensing, compliance needs Scheduling: 1) Instance schedules: Auto start/stop dev VMs 2) Scale down non-prod nights/weekends Recommendations: Active Assist ให้ right-sizing, idle VM recommendations Best practice: Start กับ right-sizing, แล้ว CUDs สำหรับ predictable, Spot สำหรับ fault-tolerant workloads"
+    },
+    {
+      "vocab": "What are Committed Use Discounts (CUDs)?",
+      "pronunciation": "Committed Use Discounts",
+      "meaning": "Committed Use Discounts (CUDs) คืออะไร?",
+      "example": "CUDs: Commit to usage for 1 or 3 years, get discount. Types: 1) Resource-based CUDs: vCPU, memory, GPU, local SSD. Applies to: Compute Engine, GKE, Dataproc, Cloud SQL. Discount: 37% (1-year) to 55% (3-year). 2) Spend-based CUDs: Commit to dollar amount. Applies to: Cloud Run, Cloud Functions, GKE Autopilot. Discount: 17% (1-year) to 25% (3-year). Flexibility: Resource CUDs apply across machine types in region. Regional vs Global: Most CUDs are regional. Purchasing: Via console or API, auto-renewal optional. Best practice: Analyze 3-6 months usage before committing, use spend-based for variable workloads.",
+      "exampleTranslation": "CUDs: Commit to usage สำหรับ 1 หรือ 3 ปี, ได้ discount Types: 1) Resource-based CUDs: vCPU, memory, GPU, local SSD Applies to: Compute Engine, GKE, Dataproc, Cloud SQL Discount: 37% (1-year) to 55% (3-year) 2) Spend-based CUDs: Commit to dollar amount Applies to: Cloud Run, Cloud Functions, GKE Autopilot Discount: 17% (1-year) to 25% (3-year) Flexibility: Resource CUDs apply across machine types ใน region Regional vs Global: Most CUDs เป็น regional Purchasing: Via console หรือ API, auto-renewal optional Best practice: Analyze 3-6 months usage ก่อน committing, ใช้ spend-based สำหรับ variable workloads"
+    },
+    {
+      "vocab": "How do you manage and analyze GCP billing?",
+      "pronunciation": "Billing Management",
+      "meaning": "จัดการและวิเคราะห์ GCP billing อย่างไร?",
+      "example": "Billing account: Links to payment method, can have multiple projects. Billing export: 1) BigQuery: Detailed billing data, query with SQL. 2) Cloud Storage: CSV/JSON exports. BigQuery analysis: Standard SQL for cost analysis. Tables: gcp_billing_export_v1_<BILLING_ACCOUNT_ID>. Useful queries: Cost by project/service/SKU, cost trends, anomalies. Budgets: Set spending limits, alerts at thresholds (50%, 90%, 100%). Budget actions: Pub/Sub triggers for automation. Cost allocation: Labels for cost attribution (team, environment, app). Reports: Console reports, Looker Studio dashboards. Best practice: Export to BigQuery, create custom dashboards, set budgets with alerts.",
+      "exampleTranslation": "Billing account: Links to payment method, มีหลาย projects ได้ Billing export: 1) BigQuery: Detailed billing data, query ด้วย SQL 2) Cloud Storage: CSV/JSON exports BigQuery analysis: Standard SQL สำหรับ cost analysis Tables: gcp_billing_export_v1_<BILLING_ACCOUNT_ID> Useful queries: Cost by project/service/SKU, cost trends, anomalies Budgets: Set spending limits, alerts at thresholds (50%, 90%, 100%) Budget actions: Pub/Sub triggers สำหรับ automation Cost allocation: Labels สำหรับ cost attribution (team, environment, app) Reports: Console reports, Looker Studio dashboards Best practice: Export ไป BigQuery, create custom dashboards, set budgets กับ alerts"
+    },
+    {
+      "vocab": "How do you implement cost optimization for GKE?",
+      "pronunciation": "GKE Cost Optimization",
+      "meaning": "Implement cost optimization สำหรับ GKE อย่างไร?",
+      "example": "Node-level: 1) Autopilot: Pay per pod, Google manages nodes. 2) Spot VMs for fault-tolerant workloads. 3) CUDs for stable workloads. 4) Right-size node pools. Pod-level: 1) Set resource requests/limits accurately. 2) Use VPA for automatic sizing. 3) Use HPA to scale with demand. Cluster: 1) Cluster autoscaler: Scale nodes to demand. 2) Node auto-provisioning: Automatic node pool creation. 3) Scheduled scaling for predictable patterns. Multi-tenancy: 1) Namespace resource quotas. 2) Limit ranges. 3) Cost allocation via labels. GKE Usage Metering: Per-namespace cost breakdown. Best practice: Autopilot for simplicity, accurate resource requests, use Spot for batch jobs.",
+      "exampleTranslation": "Node-level: 1) Autopilot: Pay per pod, Google manages nodes 2) Spot VMs สำหรับ fault-tolerant workloads 3) CUDs สำหรับ stable workloads 4) Right-size node pools Pod-level: 1) Set resource requests/limits ให้ accurate 2) ใช้ VPA สำหรับ automatic sizing 3) ใช้ HPA scale ตาม demand Cluster: 1) Cluster autoscaler: Scale nodes ตาม demand 2) Node auto-provisioning: Automatic node pool creation 3) Scheduled scaling สำหรับ predictable patterns Multi-tenancy: 1) Namespace resource quotas 2) Limit ranges 3) Cost allocation via labels GKE Usage Metering: Per-namespace cost breakdown Best practice: Autopilot สำหรับ simplicity, accurate resource requests, ใช้ Spot สำหรับ batch jobs"
+    },
+    {
+      "vocab": "What are Labels and how to use them for cost management?",
+      "pronunciation": "Labels for Cost Management",
+      "meaning": "Labels คืออะไร และใช้สำหรับ cost management อย่างไร?",
+      "example": "Labels: Key-value pairs attached to resources. Format: key:value (lowercase, max 63 chars). Use cases: 1) Cost allocation by team/department. 2) Environment identification (prod, dev, test). 3) Application/service grouping. 4) Owner tracking. Recommended labels: 1) env (production, staging, dev). 2) team (platform, frontend, backend). 3) app (app-name). 4) cost-center (billing code). 5) owner (team or person). Billing export: Labels appear in BigQuery export. Query: GROUP BY labels.key to see cost by label. Enforcement: 1) Organization policies can't enforce labels. 2) Use Cloud Asset Inventory to audit. 3) Terraform/CI checks for label compliance. Best practice: Define standard labels org-wide, automate labeling in IaC.",
+      "exampleTranslation": "Labels: Key-value pairs attached to resources Format: key:value (lowercase, max 63 chars) Use cases: 1) Cost allocation by team/department 2) Environment identification (prod, dev, test) 3) Application/service grouping 4) Owner tracking Recommended labels: 1) env (production, staging, dev) 2) team (platform, frontend, backend) 3) app (app-name) 4) cost-center (billing code) 5) owner (team or person) Billing export: Labels appear ใน BigQuery export Query: GROUP BY labels.key เพื่อดู cost by label Enforcement: 1) Organization policies can't enforce labels 2) ใช้ Cloud Asset Inventory เพื่อ audit 3) Terraform/CI checks สำหรับ label compliance Best practice: Define standard labels org-wide, automate labeling ใน IaC"
+    }
+  ]
+}

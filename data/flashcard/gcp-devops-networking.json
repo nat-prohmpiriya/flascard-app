@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - Networking",
+    "description": "Cloud Load Balancing, Cloud NAT, Cloud DNS, VPN, Interconnect และ networking concepts สำหรับ GCP",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "networking", "load-balancing", "vpc"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are the types of Cloud Load Balancing?",
+      "pronunciation": "Load Balancer Types",
+      "meaning": "Cloud Load Balancing มีกี่ประเภท?",
+      "example": "External (internet-facing): 1) Global HTTP(S) LB: Layer 7, anycast IP, CDN integration, URL-based routing. 2) Global SSL Proxy: Layer 4, SSL termination. 3) Global TCP Proxy: Layer 4, TCP termination. 4) Regional External HTTP(S): Layer 7, single region. 5) Regional External TCP/UDP: Layer 4, network LB. Internal (private): 6) Internal HTTP(S): Layer 7, internal services. 7) Internal TCP/UDP: Layer 4, internal services. 8) Internal Regional TCP Proxy. Key decisions: Global vs Regional (latency, availability), HTTP vs TCP (protocol needs), External vs Internal (traffic source). Premium vs Standard tier: Premium = global, Standard = regional only.",
+      "exampleTranslation": "External (internet-facing): 1) Global HTTP(S) LB: Layer 7, anycast IP, CDN integration, URL-based routing 2) Global SSL Proxy: Layer 4, SSL termination 3) Global TCP Proxy: Layer 4, TCP termination 4) Regional External HTTP(S): Layer 7, single region 5) Regional External TCP/UDP: Layer 4, network LB Internal (private): 6) Internal HTTP(S): Layer 7, internal services 7) Internal TCP/UDP: Layer 4, internal services 8) Internal Regional TCP Proxy Key decisions: Global vs Regional (latency, availability), HTTP vs TCP (protocol needs), External vs Internal (traffic source) Premium vs Standard tier: Premium = global, Standard = regional only"
+    },
+    {
+      "vocab": "How do you configure Global HTTP(S) Load Balancer?",
+      "pronunciation": "HTTP(S) Load Balancer",
+      "meaning": "Configure Global HTTP(S) Load Balancer อย่างไร?",
+      "example": "Components: 1) Frontend: IP, port, protocol, SSL cert. 2) Host/path rules: URL routing. 3) Backend services: Health checks, backends (NEGs, instance groups). Architecture: Global anycast IP → Frontend → URL Map → Backend Service → Backends. Backend types: Instance groups, NEGs (Network Endpoint Groups), serverless NEGs (Cloud Run, Functions). Features: SSL termination, Cloud CDN integration, Cloud Armor, IAP. Health checks: HTTP, HTTPS, TCP, or gRPC. Session affinity: Client IP, generated cookie, header field. URL Map: Route /api/* to backend-api, /* to backend-web.",
+      "exampleTranslation": "Components: 1) Frontend: IP, port, protocol, SSL cert 2) Host/path rules: URL routing 3) Backend services: Health checks, backends (NEGs, instance groups) Architecture: Global anycast IP → Frontend → URL Map → Backend Service → Backends Backend types: Instance groups, NEGs (Network Endpoint Groups), serverless NEGs (Cloud Run, Functions) Features: SSL termination, Cloud CDN integration, Cloud Armor, IAP Health checks: HTTP, HTTPS, TCP, หรือ gRPC Session affinity: Client IP, generated cookie, header field URL Map: Route /api/* ไป backend-api, /* ไป backend-web"
+    },
+    {
+      "vocab": "What is Cloud NAT and when do you need it?",
+      "pronunciation": "Cloud NAT",
+      "meaning": "Cloud NAT คืออะไร และต้องการเมื่อไหร่?",
+      "example": "Cloud NAT: Managed network address translation for private instances. Use case: VMs without external IPs need to access internet (download packages, call external APIs). How it works: Private IP → NAT Gateway → Public IP → Internet. Configuration: 1) Create NAT gateway in Cloud Router. 2) Specify subnets or all subnets. 3) Choose automatic or manual IP allocation. Features: Automatic scaling, logging, port allocation per VM. Logging: Log NAT translations for auditing. No inbound: NAT only allows outbound connections. Port allocation: Min ports per VM (default 64), affects concurrent connections. Best practice: Use Cloud NAT for private GKE nodes, VMs without public IPs.",
+      "exampleTranslation": "Cloud NAT: Managed network address translation สำหรับ private instances Use case: VMs ไม่มี external IPs ต้องการเข้าถึง internet (download packages, call external APIs) วิธีทำงาน: Private IP → NAT Gateway → Public IP → Internet Configuration: 1) สร้าง NAT gateway ใน Cloud Router 2) Specify subnets หรือ all subnets 3) เลือก automatic หรือ manual IP allocation Features: Automatic scaling, logging, port allocation per VM Logging: Log NAT translations สำหรับ auditing No inbound: NAT อนุญาต outbound connections เท่านั้น Port allocation: Min ports per VM (default 64), affects concurrent connections Best practice: ใช้ Cloud NAT สำหรับ private GKE nodes, VMs ไม่มี public IPs"
+    },
+    {
+      "vocab": "How does Cloud DNS work?",
+      "pronunciation": "Cloud DNS",
+      "meaning": "Cloud DNS ทำงานอย่างไร?",
+      "example": "Cloud DNS: Managed authoritative DNS service. Zone types: 1) Public: Internet-accessible domains. 2) Private: VPC-internal resolution. 3) Forwarding: Forward queries to on-prem DNS. 4) Peering: Share DNS across VPCs. Record types: A, AAAA, CNAME, MX, TXT, SRV, NS, SOA. DNSSEC: Cryptographic signing for DNS security. Private zones: Resolve internal names (*.internal.company.com) within VPC. Split-horizon DNS: Same domain, different records for internal vs external. DNS policies: Inbound (on-prem can query GCP DNS), Outbound (GCP queries on-prem). Best practice: Use private zones for internal services, enable DNSSEC for public zones.",
+      "exampleTranslation": "Cloud DNS: Managed authoritative DNS service Zone types: 1) Public: Internet-accessible domains 2) Private: VPC-internal resolution 3) Forwarding: Forward queries ไป on-prem DNS 4) Peering: Share DNS across VPCs Record types: A, AAAA, CNAME, MX, TXT, SRV, NS, SOA DNSSEC: Cryptographic signing สำหรับ DNS security Private zones: Resolve internal names (*.internal.company.com) ภายใน VPC Split-horizon DNS: Same domain, records ต่างกันสำหรับ internal vs external DNS policies: Inbound (on-prem query GCP DNS ได้), Outbound (GCP query on-prem) Best practice: ใช้ private zones สำหรับ internal services, enable DNSSEC สำหรับ public zones"
+    },
+    {
+      "vocab": "What are Cloud VPN options?",
+      "pronunciation": "Cloud VPN",
+      "meaning": "Cloud VPN มี options อะไรบ้าง?",
+      "example": "Cloud VPN: Encrypted tunnel between GCP and on-prem/other clouds. Types: 1) HA VPN: 99.99% SLA, 2 tunnels required, BGP routing. 2) Classic VPN: 99.9% SLA, single tunnel, static or BGP. HA VPN setup: 1) Create HA VPN gateway (2 interfaces). 2) Create peer VPN gateway. 3) Create 2 tunnels (one per interface). 4) Configure BGP sessions. Bandwidth: Up to 3 Gbps per tunnel, aggregate with multiple tunnels. Routing: Dynamic (BGP) recommended, Static (route-based). Use cases: Hybrid cloud, DR, dev/test connectivity. vs Interconnect: VPN = over internet, encrypted, lower bandwidth. Interconnect = dedicated connection, higher bandwidth, lower latency.",
+      "exampleTranslation": "Cloud VPN: Encrypted tunnel ระหว่าง GCP และ on-prem/other clouds Types: 1) HA VPN: 99.99% SLA, ต้อง 2 tunnels, BGP routing 2) Classic VPN: 99.9% SLA, single tunnel, static หรือ BGP HA VPN setup: 1) สร้าง HA VPN gateway (2 interfaces) 2) สร้าง peer VPN gateway 3) สร้าง 2 tunnels (one per interface) 4) Configure BGP sessions Bandwidth: Up to 3 Gbps per tunnel, aggregate กับ multiple tunnels Routing: Dynamic (BGP) recommended, Static (route-based) Use cases: Hybrid cloud, DR, dev/test connectivity vs Interconnect: VPN = over internet, encrypted, bandwidth ต่ำกว่า Interconnect = dedicated connection, bandwidth สูงกว่า, latency ต่ำกว่า"
+    },
+    {
+      "vocab": "What is Cloud Interconnect?",
+      "pronunciation": "Cloud Interconnect",
+      "meaning": "Cloud Interconnect คืออะไร?",
+      "example": "Cloud Interconnect: Dedicated, high-bandwidth connection to GCP. Types: 1) Dedicated Interconnect: Physical connection at colocation facility. 10 Gbps or 100 Gbps per link, up to 200 Gbps. 99.99% SLA with redundancy. 2) Partner Interconnect: Via service provider. 50 Mbps to 50 Gbps. Good when can't reach colocation. Use cases: High bandwidth needs, low latency, consistent performance, egress cost savings. Setup: 1) Order connection (Dedicated) or contact partner. 2) Create VLAN attachments. 3) Configure BGP. Cost: Monthly port fee + egress (cheaper than internet). Decision: <10 Gbps → Partner or VPN. >10 Gbps → Dedicated. Need encryption → VPN over Interconnect.",
+      "exampleTranslation": "Cloud Interconnect: Dedicated, high-bandwidth connection ไป GCP Types: 1) Dedicated Interconnect: Physical connection ที่ colocation facility 10 Gbps หรือ 100 Gbps per link, up to 200 Gbps 99.99% SLA กับ redundancy 2) Partner Interconnect: ผ่าน service provider 50 Mbps ถึง 50 Gbps ดีเมื่อเข้าถึง colocation ไม่ได้ Use cases: High bandwidth needs, low latency, consistent performance, egress cost savings Setup: 1) Order connection (Dedicated) หรือ contact partner 2) สร้าง VLAN attachments 3) Configure BGP Cost: Monthly port fee + egress (ถูกกว่า internet) Decision: <10 Gbps → Partner หรือ VPN >10 Gbps → Dedicated ต้องการ encryption → VPN over Interconnect"
+    },
+    {
+      "vocab": "How do you design VPC networks for enterprise?",
+      "pronunciation": "VPC Design",
+      "meaning": "ออกแบบ VPC networks สำหรับ enterprise อย่างไร?",
+      "example": "Patterns: 1) Shared VPC: Centralized network, projects share subnets. Best for: Organization-wide networking, central control. 2) VPC Peering: Connect VPCs, non-transitive. Best for: Cross-project connectivity, simple setup. 3) Hub-and-spoke: Central hub VPC, spokes peer to hub. Best for: Centralized services, inspection. Shared VPC: Host project owns VPC, service projects use subnets. IAM controls who can use which subnets. Subnet design: Separate subnets per environment (dev, prod), per tier (web, app, db). CIDR planning: Plan for growth, avoid overlaps with on-prem. Firewall rules: Default deny, allow specific. Use tags and service accounts. Private Google Access: Access Google APIs without public IPs.",
+      "exampleTranslation": "Patterns: 1) Shared VPC: Centralized network, projects share subnets Best for: Organization-wide networking, central control 2) VPC Peering: Connect VPCs, non-transitive Best for: Cross-project connectivity, simple setup 3) Hub-and-spoke: Central hub VPC, spokes peer ไป hub Best for: Centralized services, inspection Shared VPC: Host project owns VPC, service projects ใช้ subnets IAM controls ใครใช้ subnet ไหนได้ Subnet design: Separate subnets ต่อ environment (dev, prod), ต่อ tier (web, app, db) CIDR planning: Plan for growth, หลีกเลี่ยง overlaps กับ on-prem Firewall rules: Default deny, allow specific ใช้ tags และ service accounts Private Google Access: Access Google APIs โดยไม่ต้องมี public IPs"
+    },
+    {
+      "vocab": "What is Private Google Access and Private Service Connect?",
+      "pronunciation": "Private Access",
+      "meaning": "Private Google Access และ Private Service Connect คืออะไร?",
+      "example": "Private Google Access (PGA): Access Google APIs from VMs without external IPs. Enable per subnet. Accesses: Cloud Storage, BigQuery, etc. via internal routes. DNS: Use private.googleapis.com or restricted.googleapis.com. Private Service Connect (PSC): Private connectivity to Google services or your own services. Types: 1) Access Google APIs: Private endpoint in your VPC. 2) Published services: Expose your service to other VPCs privately. 3) Consumer services: Access third-party services. Benefits over PGA: Dedicated IP in your VPC, firewall control, no shared IPs. Use cases: Strict security requirements, need firewall rules for API access, service mesh connectivity. Best practice: Use PSC for production, PGA for simpler setups.",
+      "exampleTranslation": "Private Google Access (PGA): Access Google APIs จาก VMs ไม่มี external IPs Enable per subnet Accesses: Cloud Storage, BigQuery, etc. ผ่าน internal routes DNS: ใช้ private.googleapis.com หรือ restricted.googleapis.com Private Service Connect (PSC): Private connectivity ไป Google services หรือ services ของคุณเอง Types: 1) Access Google APIs: Private endpoint ใน VPC ของคุณ 2) Published services: Expose service ของคุณไป VPCs อื่น privately 3) Consumer services: Access third-party services Benefits over PGA: Dedicated IP ใน VPC ของคุณ, firewall control, no shared IPs Use cases: Strict security requirements, ต้องการ firewall rules สำหรับ API access, service mesh connectivity Best practice: ใช้ PSC สำหรับ production, PGA สำหรับ simpler setups"
+    },
+    {
+      "vocab": "How do you implement zero-trust networking on GCP?",
+      "pronunciation": "Zero-Trust Networking",
+      "meaning": "Implement zero-trust networking บน GCP อย่างไร?",
+      "example": "Zero-trust: Never trust, always verify. GCP components: 1) BeyondCorp Enterprise: Context-aware access to apps. No VPN needed, verify user + device + context. 2) Identity-Aware Proxy (IAP): Protect apps with identity verification. Works with App Engine, Cloud Run, GKE, VMs. 3) VPC Service Controls: API-level perimeter. Prevent data exfiltration. 4) Context-aware access: Conditions based on IP, device, time. Implementation: 1) Remove public IPs from VMs. 2) Use IAP for SSH/RDP access. 3) Implement VPC Service Controls for sensitive data. 4) Use Workload Identity for service-to-service. 5) Network Policies in GKE. Best practice: Defense in depth - identity, network, and data protection layers.",
+      "exampleTranslation": "Zero-trust: Never trust, always verify GCP components: 1) BeyondCorp Enterprise: Context-aware access ไป apps ไม่ต้องใช้ VPN, verify user + device + context 2) Identity-Aware Proxy (IAP): Protect apps ด้วย identity verification Works กับ App Engine, Cloud Run, GKE, VMs 3) VPC Service Controls: API-level perimeter ป้องกัน data exfiltration 4) Context-aware access: Conditions based on IP, device, time Implementation: 1) Remove public IPs จาก VMs 2) ใช้ IAP สำหรับ SSH/RDP access 3) Implement VPC Service Controls สำหรับ sensitive data 4) ใช้ Workload Identity สำหรับ service-to-service 5) Network Policies ใน GKE Best practice: Defense in depth - identity, network, และ data protection layers"
+    },
+    {
+      "vocab": "What are Network Endpoint Groups (NEGs)?",
+      "pronunciation": "Network Endpoint Groups",
+      "meaning": "Network Endpoint Groups (NEGs) คืออะไร?",
+      "example": "NEG: Group of backend endpoints for load balancers. Types: 1) Zonal NEG: IP:port endpoints in a zone. Use: GKE pods, VMs with specific ports. 2) Internet NEG: External endpoints (hostname:port). Use: External backends, multi-cloud. 3) Serverless NEG: Cloud Run, Functions, App Engine. Use: Serverless backends behind global LB. 4) Private Service Connect NEG: PSC endpoints. 5) Hybrid connectivity NEG: On-prem endpoints. GKE + NEG: Container-native load balancing. Traffic goes directly to pods, not through NodePort. Benefits: Better performance, accurate health checks, preserves client IP. Setup: Create GKE service with NEG annotation, LB uses NEG automatically.",
+      "exampleTranslation": "NEG: Group of backend endpoints สำหรับ load balancers Types: 1) Zonal NEG: IP:port endpoints ใน zone Use: GKE pods, VMs กับ specific ports 2) Internet NEG: External endpoints (hostname:port) Use: External backends, multi-cloud 3) Serverless NEG: Cloud Run, Functions, App Engine Use: Serverless backends หลัง global LB 4) Private Service Connect NEG: PSC endpoints 5) Hybrid connectivity NEG: On-prem endpoints GKE + NEG: Container-native load balancing Traffic ไปตรงไป pods, ไม่ผ่าน NodePort Benefits: Performance ดีกว่า, accurate health checks, preserves client IP Setup: สร้าง GKE service กับ NEG annotation, LB ใช้ NEG อัตโนมัติ"
+    }
+  ]
+}

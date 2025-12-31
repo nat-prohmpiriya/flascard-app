@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - CI/CD Advanced",
+    "description": "Cloud Build advanced, Cloud Deploy, GitOps และ CI/CD best practices สำหรับ GCP",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "cicd", "cloud-build", "gitops"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are Cloud Build private pools?",
+      "pronunciation": "Private Pools",
+      "meaning": "Cloud Build private pools คืออะไร?",
+      "example": "Private pools: Dedicated Cloud Build workers in your VPC. Use cases: 1) Access private resources (Cloud SQL, internal services). 2) Compliance requirements (dedicated infrastructure). 3) Custom machine types. 4) Static IP requirements. Setup: 1) Create private pool in region. 2) Configure VPC peering. 3) Specify pool in cloudbuild.yaml: options.pool.name. Features: Configurable machine type (e2-medium to e2-highcpu-32), disk size. Networking: Peered to your VPC, can access private IPs. vs Default pools: Shared, no VPC access, limited machine options. Cost: Per-minute billing based on machine type. Best practice: Use for builds needing VPC access or compliance.",
+      "exampleTranslation": "Private pools: Dedicated Cloud Build workers ใน VPC ของคุณ Use cases: 1) Access private resources (Cloud SQL, internal services) 2) Compliance requirements (dedicated infrastructure) 3) Custom machine types 4) Static IP requirements Setup: 1) สร้าง private pool ใน region 2) Configure VPC peering 3) Specify pool ใน cloudbuild.yaml: options.pool.name Features: Configurable machine type (e2-medium to e2-highcpu-32), disk size Networking: Peered กับ VPC ของคุณ, access private IPs ได้ vs Default pools: Shared, no VPC access, limited machine options Cost: Per-minute billing based on machine type Best practice: ใช้สำหรับ builds ที่ต้องการ VPC access หรือ compliance"
+    },
+    {
+      "vocab": "How do you implement advanced Cloud Build triggers?",
+      "pronunciation": "Cloud Build Triggers",
+      "meaning": "Implement advanced Cloud Build triggers อย่างไร?",
+      "example": "Trigger types: 1) Push to branch: Regex pattern matching. 2) Push tag: Semantic versioning triggers. 3) Pull request: Build on PR creation/update. 4) Manual: Run with substitutions. 5) Pub/Sub: Event-driven builds. 6) Webhook: External system triggers. Advanced features: 1) Include/exclude files: Only trigger on specific paths. 2) Substitutions: Pass variables to build. 3) Approval: Require approval before build. Configuration sources: 1) cloudbuild.yaml in repo. 2) Inline in trigger. 3) Dockerfile autodetection. Substitution variables: $_CUSTOM_VAR, $BRANCH_NAME, $COMMIT_SHA, $TAG_NAME. Best practice: Use branch patterns for environments, tags for releases, PR triggers for validation.",
+      "exampleTranslation": "Trigger types: 1) Push to branch: Regex pattern matching 2) Push tag: Semantic versioning triggers 3) Pull request: Build on PR creation/update 4) Manual: Run กับ substitutions 5) Pub/Sub: Event-driven builds 6) Webhook: External system triggers Advanced features: 1) Include/exclude files: Only trigger on specific paths 2) Substitutions: Pass variables ไป build 3) Approval: Require approval ก่อน build Configuration sources: 1) cloudbuild.yaml ใน repo 2) Inline ใน trigger 3) Dockerfile autodetection Substitution variables: $_CUSTOM_VAR, $BRANCH_NAME, $COMMIT_SHA, $TAG_NAME Best practice: ใช้ branch patterns สำหรับ environments, tags สำหรับ releases, PR triggers สำหรับ validation"
+    },
+    {
+      "vocab": "What is Cloud Deploy delivery pipeline?",
+      "pronunciation": "Cloud Deploy Pipeline",
+      "meaning": "Cloud Deploy delivery pipeline คืออะไร?",
+      "example": "Delivery pipeline: Defines progression of releases through environments. Components: 1) Pipeline: Name, targets sequence, stages. 2) Target: Environment (dev, staging, prod). 3) Release: Versioned artifact to deploy. 4) Rollout: Deployment to specific target. Pipeline YAML: apiVersion: deploy.cloud.google.com/v1, kind: DeliveryPipeline. Target YAML: kind: Target, gke/run cluster reference. Flow: Create release → Rollout to first target → Promote to next target. Features: 1) Serial stages: dev → staging → prod. 2) Parallel targets: Deploy to multiple regions simultaneously. 3) Canary: Progressive deployment percentage. 4) Approvals: Manual gate before target. Best practice: Separate targets per environment, use approvals for production.",
+      "exampleTranslation": "Delivery pipeline: Defines progression ของ releases ผ่าน environments Components: 1) Pipeline: Name, targets sequence, stages 2) Target: Environment (dev, staging, prod) 3) Release: Versioned artifact ที่จะ deploy 4) Rollout: Deployment ไป specific target Pipeline YAML: apiVersion: deploy.cloud.google.com/v1, kind: DeliveryPipeline Target YAML: kind: Target, gke/run cluster reference Flow: Create release → Rollout ไป first target → Promote ไป next target Features: 1) Serial stages: dev → staging → prod 2) Parallel targets: Deploy ไปหลาย regions simultaneously 3) Canary: Progressive deployment percentage 4) Approvals: Manual gate ก่อน target Best practice: Separate targets ต่อ environment, ใช้ approvals สำหรับ production"
+    },
+    {
+      "vocab": "How do you implement canary deployments with Cloud Deploy?",
+      "pronunciation": "Canary Deployments",
+      "meaning": "Implement canary deployments กับ Cloud Deploy อย่างไร?",
+      "example": "Canary strategy: Gradually shift traffic to new version. Cloud Deploy canary: Define in target configuration. Phases: 1) canary-25: 25% traffic to new version. 2) canary-50: 50% traffic. 3) canary-75: 75% traffic. 4) stable: 100% traffic. Configuration: strategy.canary.runtimeConfig with percentages. Verification: 1) Automatic: Based on metrics. 2) Manual: Human approval between phases. Rollback: Automatic on failure or manual. GKE implementation: Uses Gateway API or Istio for traffic splitting. Cloud Run: Native traffic splitting. Best practice: Start small (5-10%), monitor metrics, automate verification, have rollback plan.",
+      "exampleTranslation": "Canary strategy: ค่อยๆ shift traffic ไป new version Cloud Deploy canary: Define ใน target configuration Phases: 1) canary-25: 25% traffic ไป new version 2) canary-50: 50% traffic 3) canary-75: 75% traffic 4) stable: 100% traffic Configuration: strategy.canary.runtimeConfig กับ percentages Verification: 1) Automatic: Based on metrics 2) Manual: Human approval ระหว่าง phases Rollback: Automatic on failure หรือ manual GKE implementation: ใช้ Gateway API หรือ Istio สำหรับ traffic splitting Cloud Run: Native traffic splitting Best practice: Start small (5-10%), monitor metrics, automate verification, มี rollback plan"
+    },
+    {
+      "vocab": "What is Config Sync and how does it enable GitOps?",
+      "pronunciation": "Config Sync GitOps",
+      "meaning": "Config Sync คืออะไร และ enable GitOps อย่างไร?",
+      "example": "Config Sync: GitOps tool for GKE, syncs Git repo to clusters. How it works: 1) Store K8s manifests in Git. 2) Config Sync watches repo. 3) Automatically applies changes to cluster. 4) Drift detection and correction. Installation: GKE add-on or standalone. Repo structure: 1) Unstructured: Flat directory. 2) Hierarchical: namespaces/, cluster/, system/. Source types: Git, OCI images, Helm charts. Multi-cluster: Same config across Fleet clusters. Features: 1) Automatic sync on commit. 2) Dry-run before apply. 3) Resource grouping. 4) Dependency ordering. vs Argo CD/Flux: Config Sync is Google-managed, native Fleet integration. Best practice: Use with Policy Controller for guardrails, hierarchical repo for multi-tenant.",
+      "exampleTranslation": "Config Sync: GitOps tool สำหรับ GKE, sync Git repo ไป clusters วิธีทำงาน: 1) Store K8s manifests ใน Git 2) Config Sync watches repo 3) Automatically applies changes ไป cluster 4) Drift detection และ correction Installation: GKE add-on หรือ standalone Repo structure: 1) Unstructured: Flat directory 2) Hierarchical: namespaces/, cluster/, system/ Source types: Git, OCI images, Helm charts Multi-cluster: Same config across Fleet clusters Features: 1) Automatic sync on commit 2) Dry-run before apply 3) Resource grouping 4) Dependency ordering vs Argo CD/Flux: Config Sync เป็น Google-managed, native Fleet integration Best practice: ใช้กับ Policy Controller สำหรับ guardrails, hierarchical repo สำหรับ multi-tenant"
+    },
+    {
+      "vocab": "How do you secure CI/CD pipelines on GCP?",
+      "pronunciation": "CI/CD Security",
+      "meaning": "Secure CI/CD pipelines บน GCP อย่างไร?",
+      "example": "Build security: 1) Use minimal base images. 2) Scan images for vulnerabilities (Artifact Registry scanning). 3) Sign images (Binary Authorization). 4) No secrets in code (use Secret Manager). Pipeline security: 1) Least privilege service accounts. 2) Workload Identity for Cloud Build. 3) Approval gates for production. 4) Audit logs enabled. Supply chain: 1) SLSA compliance levels. 2) Provenance attestations. 3) Verified base images. 4) Dependency scanning. Secret management: 1) Secret Manager integration. 2) Encrypted substitutions. 3) No plaintext secrets in build logs. Network: Private pools for VPC isolation. Best practice: Defense in depth - secure build, secure deploy, secure runtime.",
+      "exampleTranslation": "Build security: 1) ใช้ minimal base images 2) Scan images vulnerabilities (Artifact Registry scanning) 3) Sign images (Binary Authorization) 4) No secrets in code (ใช้ Secret Manager) Pipeline security: 1) Least privilege service accounts 2) Workload Identity สำหรับ Cloud Build 3) Approval gates สำหรับ production 4) Audit logs enabled Supply chain: 1) SLSA compliance levels 2) Provenance attestations 3) Verified base images 4) Dependency scanning Secret management: 1) Secret Manager integration 2) Encrypted substitutions 3) No plaintext secrets ใน build logs Network: Private pools สำหรับ VPC isolation Best practice: Defense in depth - secure build, secure deploy, secure runtime"
+    },
+    {
+      "vocab": "What is SLSA and how do you achieve it on GCP?",
+      "pronunciation": "SLSA Framework",
+      "meaning": "SLSA คืออะไร และ achieve บน GCP อย่างไร?",
+      "example": "SLSA (Supply chain Levels for Software Artifacts): Framework for supply chain security. Levels: 1) Level 1: Build process documented. 2) Level 2: Signed provenance, hosted build. 3) Level 3: Hardened builds, non-falsifiable provenance. 4) Level 4: Two-person reviewed, hermetic builds. GCP implementation: Cloud Build provides SLSA Level 3 by default. Provenance: Build metadata (who, what, when, how). Artifact Registry: Stores provenance attestations. Binary Authorization: Enforces attestation requirements. Steps to achieve: 1) Use Cloud Build (hosted, produces provenance). 2) Store in Artifact Registry. 3) Configure Binary Authorization policy. 4) Require provenance for deployment. Best practice: Aim for Level 3, use Binary Authorization for enforcement.",
+      "exampleTranslation": "SLSA (Supply chain Levels for Software Artifacts): Framework สำหรับ supply chain security Levels: 1) Level 1: Build process documented 2) Level 2: Signed provenance, hosted build 3) Level 3: Hardened builds, non-falsifiable provenance 4) Level 4: Two-person reviewed, hermetic builds GCP implementation: Cloud Build ให้ SLSA Level 3 by default Provenance: Build metadata (who, what, when, how) Artifact Registry: Stores provenance attestations Binary Authorization: Enforces attestation requirements Steps to achieve: 1) ใช้ Cloud Build (hosted, produces provenance) 2) Store ใน Artifact Registry 3) Configure Binary Authorization policy 4) Require provenance สำหรับ deployment Best practice: Aim for Level 3, ใช้ Binary Authorization สำหรับ enforcement"
+    },
+    {
+      "vocab": "How do you implement blue-green deployments on GCP?",
+      "pronunciation": "Blue-Green Deployments",
+      "meaning": "Implement blue-green deployments บน GCP อย่างไร?",
+      "example": "Blue-green: Two identical environments, instant traffic switch. GKE implementation: 1) Two deployments (blue, green). 2) Service selects one via labels. 3) Update inactive, switch service selector. Alternative: 1) Two node pools. 2) Deploy to new pool. 3) Cordon old, drain, delete. Cloud Run: 1) Deploy new revision. 2) Tag with 'green'. 3) Test via tag URL. 4) Switch traffic 100% to green. Cloud Deploy: strategy.standard with verify step. Load Balancer: 1) Two backend services. 2) Update URL map to point to new backend. Benefits: Instant rollback, zero-downtime, full testing before switch. Best practice: Automate switch, have health checks, test green thoroughly before switch.",
+      "exampleTranslation": "Blue-green: Two identical environments, instant traffic switch GKE implementation: 1) Two deployments (blue, green) 2) Service selects one via labels 3) Update inactive, switch service selector Alternative: 1) Two node pools 2) Deploy ไป new pool 3) Cordon old, drain, delete Cloud Run: 1) Deploy new revision 2) Tag ด้วย 'green' 3) Test via tag URL 4) Switch traffic 100% ไป green Cloud Deploy: strategy.standard กับ verify step Load Balancer: 1) Two backend services 2) Update URL map ชี้ไป new backend Benefits: Instant rollback, zero-downtime, full testing ก่อน switch Best practice: Automate switch, มี health checks, test green thoroughly ก่อน switch"
+    }
+  ]
+}

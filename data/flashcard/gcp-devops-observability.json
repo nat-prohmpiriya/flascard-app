@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - Observability",
+    "description": "SLO/SLI, Alerting policies, Incident management, Cloud Profiler และ observability best practices สำหรับ GCP",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "observability", "monitoring", "sre"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What are SLI, SLO, and Error Budget?",
+      "pronunciation": "SLI/SLO/Error Budget",
+      "meaning": "SLI, SLO และ Error Budget คืออะไร?",
+      "example": "SLI (Service Level Indicator): Metric measuring service performance. Examples: Availability (% successful requests), Latency (p99 < 200ms), Throughput. SLO (Service Level Objective): Target value for SLI. Example: 99.9% availability over 30 days. Error Budget: Allowed failures = 100% - SLO. 99.9% SLO = 0.1% error budget = 43.2 min/month downtime allowed. How it works: 1) Define SLIs based on user experience. 2) Set SLOs based on business needs. 3) Track error budget consumption. 4) Use error budget for releases, maintenance. Benefits: Objective reliability targets, balanced velocity vs stability. GCP: Service Monitoring for SLO tracking, alerting on burn rate.",
+      "exampleTranslation": "SLI (Service Level Indicator): Metric วัด service performance Examples: Availability (% successful requests), Latency (p99 < 200ms), Throughput SLO (Service Level Objective): Target value สำหรับ SLI Example: 99.9% availability over 30 days Error Budget: Allowed failures = 100% - SLO 99.9% SLO = 0.1% error budget = 43.2 min/month downtime allowed วิธีทำงาน: 1) Define SLIs based on user experience 2) Set SLOs based on business needs 3) Track error budget consumption 4) ใช้ error budget สำหรับ releases, maintenance Benefits: Objective reliability targets, balanced velocity vs stability GCP: Service Monitoring สำหรับ SLO tracking, alerting on burn rate"
+    },
+    {
+      "vocab": "How do you create SLOs in Cloud Monitoring?",
+      "pronunciation": "Creating SLOs",
+      "meaning": "สร้าง SLOs ใน Cloud Monitoring อย่างไร?",
+      "example": "Service Monitoring: Create services and SLOs in Cloud Monitoring. SLI types: 1) Availability: Good requests / Total requests. 2) Latency: Requests under threshold / Total requests. 3) Custom: Any metric ratio. Setup steps: 1) Define service (auto-detected or custom). 2) Create SLI (metric, good/total definition). 3) Set SLO target (e.g., 99.9%). 4) Configure compliance period (rolling 7/28/30 days). 5) Create burn rate alerts. Burn rate: How fast error budget is consumed. Alert at 2x, 10x normal burn rate. GKE/Cloud Run: Services auto-detected. Custom services: Define using service.yaml. Best practice: Start with availability SLI, add latency, align with user experience.",
+      "exampleTranslation": "Service Monitoring: สร้าง services และ SLOs ใน Cloud Monitoring SLI types: 1) Availability: Good requests / Total requests 2) Latency: Requests under threshold / Total requests 3) Custom: Any metric ratio Setup steps: 1) Define service (auto-detected หรือ custom) 2) สร้าง SLI (metric, good/total definition) 3) Set SLO target (e.g., 99.9%) 4) Configure compliance period (rolling 7/28/30 days) 5) สร้าง burn rate alerts Burn rate: ความเร็วที่ error budget ถูกใช้ Alert at 2x, 10x normal burn rate GKE/Cloud Run: Services auto-detected Custom services: Define using service.yaml Best practice: Start กับ availability SLI, add latency, align กับ user experience"
+    },
+    {
+      "vocab": "How do you configure advanced alerting policies?",
+      "pronunciation": "Advanced Alerting",
+      "meaning": "Configure advanced alerting policies อย่างไร?",
+      "example": "Alerting policy components: 1) Conditions: When to trigger. 2) Notification channels: Where to send. 3) Documentation: Runbook, context. Condition types: 1) Metric threshold: Value above/below limit. 2) Metric absence: No data received. 3) Forecast: Predicted to exceed. 4) MQL (Monitoring Query Language): Complex queries. Multi-condition: Multiple conditions with AND/OR. Duration: How long condition must be true. Notification channels: Email, SMS, Slack, PagerDuty, Pub/Sub, Webhooks. Alert policies as code: Terraform, gcloud, API. Best practices: 1) Alert on symptoms, not causes. 2) Include runbook links. 3) Use notification rate limiting. 4) Test alerts regularly. 5) Different severity levels.",
+      "exampleTranslation": "Alerting policy components: 1) Conditions: When to trigger 2) Notification channels: Where to send 3) Documentation: Runbook, context Condition types: 1) Metric threshold: Value above/below limit 2) Metric absence: No data received 3) Forecast: Predicted to exceed 4) MQL (Monitoring Query Language): Complex queries Multi-condition: Multiple conditions กับ AND/OR Duration: How long condition ต้องเป็น true Notification channels: Email, SMS, Slack, PagerDuty, Pub/Sub, Webhooks Alert policies as code: Terraform, gcloud, API Best practices: 1) Alert on symptoms, not causes 2) Include runbook links 3) ใช้ notification rate limiting 4) Test alerts regularly 5) Different severity levels"
+    },
+    {
+      "vocab": "What is Cloud Profiler and how do you use it?",
+      "pronunciation": "Cloud Profiler",
+      "meaning": "Cloud Profiler คืออะไร และใช้อย่างไร?",
+      "example": "Cloud Profiler: Continuous production profiling service. Profile types: 1) CPU time: Where CPU cycles spent. 2) Heap: Memory allocation. 3) Wall time: Total elapsed time. 4) Threads: Thread activity (Java). 5) Contention: Lock contention (Java/Go). How it works: 1) Add profiling agent to app. 2) Agent samples periodically (~10 sec/min). 3) Profiles uploaded to Cloud Profiler. 4) Analyze in console. Supported languages: Go, Java, Node.js, Python. Low overhead: <5% CPU impact. Analysis: Compare profiles over time, filter by version/zone. Use cases: Find performance bottlenecks, optimize hot paths, reduce costs. Best practice: Enable in production, compare before/after deployments.",
+      "exampleTranslation": "Cloud Profiler: Continuous production profiling service Profile types: 1) CPU time: Where CPU cycles spent 2) Heap: Memory allocation 3) Wall time: Total elapsed time 4) Threads: Thread activity (Java) 5) Contention: Lock contention (Java/Go) วิธีทำงาน: 1) Add profiling agent ไป app 2) Agent samples periodically (~10 sec/min) 3) Profiles uploaded ไป Cloud Profiler 4) Analyze ใน console Supported languages: Go, Java, Node.js, Python Low overhead: <5% CPU impact Analysis: Compare profiles over time, filter by version/zone Use cases: Find performance bottlenecks, optimize hot paths, reduce costs Best practice: Enable ใน production, compare before/after deployments"
+    },
+    {
+      "vocab": "How do you implement incident management on GCP?",
+      "pronunciation": "Incident Management",
+      "meaning": "Implement incident management บน GCP อย่างไร?",
+      "example": "Incident lifecycle: Detection → Triage → Mitigation → Resolution → Postmortem. GCP tools: 1) Cloud Monitoring: Detection via alerts. 2) Error Reporting: Automatic error grouping. 3) Cloud Logging: Investigation, log analysis. 4) Cloud Trace: Latency investigation. Integration: 1) PagerDuty: On-call management. 2) Slack: Communication. 3) Jira: Ticket tracking. Incident response: 1) Acknowledge alert. 2) Assess impact (users affected, severity). 3) Communicate status. 4) Mitigate (rollback, scale, failover). 5) Root cause analysis. Postmortem: Blameless analysis, action items, share learnings. Best practice: Define severity levels, escalation paths, regular incident drills.",
+      "exampleTranslation": "Incident lifecycle: Detection → Triage → Mitigation → Resolution → Postmortem GCP tools: 1) Cloud Monitoring: Detection via alerts 2) Error Reporting: Automatic error grouping 3) Cloud Logging: Investigation, log analysis 4) Cloud Trace: Latency investigation Integration: 1) PagerDuty: On-call management 2) Slack: Communication 3) Jira: Ticket tracking Incident response: 1) Acknowledge alert 2) Assess impact (users affected, severity) 3) Communicate status 4) Mitigate (rollback, scale, failover) 5) Root cause analysis Postmortem: Blameless analysis, action items, share learnings Best practice: Define severity levels, escalation paths, regular incident drills"
+    },
+    {
+      "vocab": "What is OpenTelemetry and how do you use it with GCP?",
+      "pronunciation": "OpenTelemetry",
+      "meaning": "OpenTelemetry คืออะไร และใช้กับ GCP อย่างไร?",
+      "example": "OpenTelemetry (OTel): Vendor-neutral observability framework. Components: 1) Traces: Distributed request tracking. 2) Metrics: Numerical measurements. 3) Logs: Event records. SDKs: Available for all major languages. GCP integration: 1) Direct export to Cloud Trace, Monitoring, Logging. 2) Use OTel Collector as intermediary. Collector: Receives, processes, exports telemetry data. Setup: 1) Add OTel SDK to app. 2) Configure exporters for GCP. 3) Auto-instrumentation for frameworks. Benefits: 1) Vendor-neutral, portable. 2) Single instrumentation, multiple backends. 3) Correlate traces, metrics, logs. Best practice: Use OTel for new apps, enables future flexibility, single instrumentation effort.",
+      "exampleTranslation": "OpenTelemetry (OTel): Vendor-neutral observability framework Components: 1) Traces: Distributed request tracking 2) Metrics: Numerical measurements 3) Logs: Event records SDKs: Available สำหรับ all major languages GCP integration: 1) Direct export ไป Cloud Trace, Monitoring, Logging 2) ใช้ OTel Collector เป็น intermediary Collector: Receives, processes, exports telemetry data Setup: 1) Add OTel SDK ไป app 2) Configure exporters สำหรับ GCP 3) Auto-instrumentation สำหรับ frameworks Benefits: 1) Vendor-neutral, portable 2) Single instrumentation, multiple backends 3) Correlate traces, metrics, logs Best practice: ใช้ OTel สำหรับ new apps, enables future flexibility, single instrumentation effort"
+    },
+    {
+      "vocab": "How do you create effective dashboards in Cloud Monitoring?",
+      "pronunciation": "Monitoring Dashboards",
+      "meaning": "สร้าง effective dashboards ใน Cloud Monitoring อย่างไร?",
+      "example": "Dashboard types: 1) Custom: Build your own. 2) Predefined: GCP service dashboards. Widget types: Line chart, stacked area, heatmap, bar chart, gauge, scorecard, text, logs panel. MQL (Monitoring Query Language): Powerful metric queries. Example: fetch gce_instance | metric compute.googleapis.com/instance/cpu/utilization. Layout: Grid-based, drag and drop. Best practices: 1) USE method: Utilization, Saturation, Errors. 2) RED method: Rate, Errors, Duration. 3) Four Golden Signals: Latency, Traffic, Errors, Saturation. Dashboard structure: 1) Overview section (key SLIs). 2) Detailed sections per component. 3) Resource utilization. Dashboard as code: JSON export/import, Terraform.",
+      "exampleTranslation": "Dashboard types: 1) Custom: Build your own 2) Predefined: GCP service dashboards Widget types: Line chart, stacked area, heatmap, bar chart, gauge, scorecard, text, logs panel MQL (Monitoring Query Language): Powerful metric queries Example: fetch gce_instance | metric compute.googleapis.com/instance/cpu/utilization Layout: Grid-based, drag and drop Best practices: 1) USE method: Utilization, Saturation, Errors 2) RED method: Rate, Errors, Duration 3) Four Golden Signals: Latency, Traffic, Errors, Saturation Dashboard structure: 1) Overview section (key SLIs) 2) Detailed sections per component 3) Resource utilization Dashboard as code: JSON export/import, Terraform"
+    },
+    {
+      "vocab": "What is log-based metrics and how do you use them?",
+      "pronunciation": "Log-based Metrics",
+      "meaning": "Log-based metrics คืออะไร และใช้อย่างไร?",
+      "example": "Log-based metrics: Create metrics from log entries. Types: 1) Counter: Count matching log entries. 2) Distribution: Track numeric values from logs. Use cases: 1) Count specific errors. 2) Track custom application events. 3) Measure values not exposed as metrics. Creating: 1) Define filter (log query). 2) Choose metric type. 3) Extract labels from log fields. Example: Count 404 errors - filter: resource.type=\"http_load_balancer\" httpRequest.status=404. Distribution example: Extract response time from log field. Labels: Add dimensions for filtering (e.g., by service, region). Use in alerting: Create alert policy on log-based metric. Best practice: Use for custom business metrics, avoid duplicating built-in metrics.",
+      "exampleTranslation": "Log-based metrics: สร้าง metrics จาก log entries Types: 1) Counter: Count matching log entries 2) Distribution: Track numeric values จาก logs Use cases: 1) Count specific errors 2) Track custom application events 3) Measure values ที่ไม่ exposed เป็น metrics Creating: 1) Define filter (log query) 2) Choose metric type 3) Extract labels จาก log fields Example: Count 404 errors - filter: resource.type=\"http_load_balancer\" httpRequest.status=404 Distribution example: Extract response time จาก log field Labels: Add dimensions สำหรับ filtering (e.g., by service, region) Use in alerting: สร้าง alert policy บน log-based metric Best practice: ใช้สำหรับ custom business metrics, หลีกเลี่ยง duplicating built-in metrics"
+    }
+  ]
+}

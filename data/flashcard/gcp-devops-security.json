@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - Security",
+    "description": "Cloud Armor, VPC Service Controls, Security Command Center และ security best practices สำหรับ GCP",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "security", "cloud-armor", "vpc-sc"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Cloud Armor and how does it protect applications?",
+      "pronunciation": "Cloud Armor Basics",
+      "meaning": "Cloud Armor คืออะไร และปกป้อง applications อย่างไร?",
+      "example": "Cloud Armor: DDoS protection and WAF for GCP applications. Works with: Global HTTP(S) Load Balancer, TCP/SSL Proxy, CDN. Protection types: 1) DDoS mitigation: Automatic, always-on, absorbs volumetric attacks. 2) WAF rules: OWASP Top 10, SQL injection, XSS. 3) Bot management: reCAPTCHA integration. 4) Rate limiting: Requests per client. 5) Geo-blocking: Allow/deny by country. Policy structure: Rules with match conditions and actions (allow, deny, rate limit, redirect). Priority: Lower number = higher priority. Preconfigured rules: SQLi, XSS, LFI, RFI, scanner detection. Adaptive Protection: ML-based anomaly detection.",
+      "exampleTranslation": "Cloud Armor: DDoS protection และ WAF สำหรับ GCP applications Works with: Global HTTP(S) Load Balancer, TCP/SSL Proxy, CDN Protection types: 1) DDoS mitigation: Automatic, always-on, absorb volumetric attacks 2) WAF rules: OWASP Top 10, SQL injection, XSS 3) Bot management: reCAPTCHA integration 4) Rate limiting: Requests per client 5) Geo-blocking: Allow/deny by country Policy structure: Rules กับ match conditions และ actions (allow, deny, rate limit, redirect) Priority: Lower number = higher priority Preconfigured rules: SQLi, XSS, LFI, RFI, scanner detection Adaptive Protection: ML-based anomaly detection"
+    },
+    {
+      "vocab": "How do you configure Cloud Armor security policies?",
+      "pronunciation": "Cloud Armor Policies",
+      "meaning": "Configure Cloud Armor security policies อย่างไร?",
+      "example": "Policy creation: gcloud compute security-policies create [NAME]. Rule components: 1) Match condition: IP ranges, region, expression. 2) Action: allow, deny(403/404/502), throttle, rate_based_ban, redirect. Expression language: request.headers, origin.ip, origin.region_code. Examples: origin.region_code == 'CN' (block China), evaluatePreconfiguredExpr('xss-stable') (block XSS). Rate limiting: rate_limit_threshold (requests), exceed_action (deny/redirect), ban_threshold (requests before ban). reCAPTCHA: redirect_type: GOOGLE_RECAPTCHA for bot challenges. Logging: Always logged to Cloud Logging. Best practice: Start in preview mode, monitor before enforcing.",
+      "exampleTranslation": "Policy creation: gcloud compute security-policies create [NAME] Rule components: 1) Match condition: IP ranges, region, expression 2) Action: allow, deny(403/404/502), throttle, rate_based_ban, redirect Expression language: request.headers, origin.ip, origin.region_code Examples: origin.region_code == 'CN' (block China), evaluatePreconfiguredExpr('xss-stable') (block XSS) Rate limiting: rate_limit_threshold (requests), exceed_action (deny/redirect), ban_threshold (requests before ban) reCAPTCHA: redirect_type: GOOGLE_RECAPTCHA สำหรับ bot challenges Logging: Always logged ไป Cloud Logging Best practice: Start in preview mode, monitor ก่อน enforcing"
+    },
+    {
+      "vocab": "What are VPC Service Controls?",
+      "pronunciation": "VPC Service Controls",
+      "meaning": "VPC Service Controls คืออะไร?",
+      "example": "VPC Service Controls (VPC-SC): Security perimeter around GCP resources. Purpose: Prevent data exfiltration, restrict API access. Key concepts: 1) Service perimeter: Boundary around projects. 2) Access levels: Conditions for access (IP, identity, device). 3) Ingress/Egress rules: Allow specific cross-perimeter access. Protected services: BigQuery, Cloud Storage, Cloud SQL, etc. How it works: APIs blocked unless within perimeter or allowed by rules. Use cases: 1) Prevent accidental public buckets. 2) Restrict data access to corporate network. 3) Compliance requirements (data residency). Dry-run mode: Test policies without enforcing. Best practice: Start with dry-run, use Access Context Manager for access levels.",
+      "exampleTranslation": "VPC Service Controls (VPC-SC): Security perimeter รอบ GCP resources Purpose: Prevent data exfiltration, restrict API access Key concepts: 1) Service perimeter: Boundary รอบ projects 2) Access levels: Conditions สำหรับ access (IP, identity, device) 3) Ingress/Egress rules: Allow specific cross-perimeter access Protected services: BigQuery, Cloud Storage, Cloud SQL, etc. วิธีทำงาน: APIs blocked unless อยู่ใน perimeter หรือ allowed by rules Use cases: 1) Prevent accidental public buckets 2) Restrict data access ไป corporate network 3) Compliance requirements (data residency) Dry-run mode: Test policies โดยไม่ enforcing Best practice: Start กับ dry-run, ใช้ Access Context Manager สำหรับ access levels"
+    },
+    {
+      "vocab": "How do you configure VPC Service Controls perimeters?",
+      "pronunciation": "VPC-SC Configuration",
+      "meaning": "Configure VPC Service Controls perimeters อย่างไร?",
+      "example": "Setup steps: 1) Create Access Context Manager policy (org level). 2) Define access levels (IP ranges, identities). 3) Create service perimeter. 4) Add projects and services to perimeter. Perimeter types: 1) Regular: Enforced perimeter. 2) Bridge: Connect perimeters (deprecated, use ingress/egress). Access levels: Basic (IP, region, device) or Custom (CEL expressions). Ingress rules: Allow external → perimeter (who can call APIs from outside). Egress rules: Allow perimeter → external (what data can go out). Example: Allow Cloud Build from outside to access Cloud Storage inside. Troubleshooting: VPC-SC logs in Cloud Logging, dry-run mode.",
+      "exampleTranslation": "Setup steps: 1) สร้าง Access Context Manager policy (org level) 2) Define access levels (IP ranges, identities) 3) สร้าง service perimeter 4) Add projects และ services ไป perimeter Perimeter types: 1) Regular: Enforced perimeter 2) Bridge: Connect perimeters (deprecated, ใช้ ingress/egress) Access levels: Basic (IP, region, device) หรือ Custom (CEL expressions) Ingress rules: Allow external → perimeter (ใครเรียก APIs จากข้างนอกได้) Egress rules: Allow perimeter → external (data อะไรออกไปได้) Example: Allow Cloud Build จากข้างนอกเข้าถึง Cloud Storage ข้างใน Troubleshooting: VPC-SC logs ใน Cloud Logging, dry-run mode"
+    },
+    {
+      "vocab": "What is Security Command Center?",
+      "pronunciation": "Security Command Center",
+      "meaning": "Security Command Center คืออะไร?",
+      "example": "Security Command Center (SCC): Centralized security management for GCP. Tiers: Standard (free), Premium (paid, more features). Features: 1) Asset inventory: All GCP resources. 2) Vulnerability scanning: Web Security Scanner, Container scanning. 3) Security findings: Misconfigurations, threats. 4) Compliance monitoring: CIS benchmarks, PCI-DSS. Premium features: 1) Security Health Analytics: Detect misconfigurations. 2) Event Threat Detection: Detect threats from logs. 3) Container Threat Detection: Runtime threats in GKE. 4) Web Security Scanner: Managed web app scanning. Findings: Critical, High, Medium, Low severity. Integration: Export to SIEM, Pub/Sub notifications. Best practice: Enable Premium for production, set up notifications for critical findings.",
+      "exampleTranslation": "Security Command Center (SCC): Centralized security management สำหรับ GCP Tiers: Standard (free), Premium (paid, features มากกว่า) Features: 1) Asset inventory: All GCP resources 2) Vulnerability scanning: Web Security Scanner, Container scanning 3) Security findings: Misconfigurations, threats 4) Compliance monitoring: CIS benchmarks, PCI-DSS Premium features: 1) Security Health Analytics: Detect misconfigurations 2) Event Threat Detection: Detect threats จาก logs 3) Container Threat Detection: Runtime threats ใน GKE 4) Web Security Scanner: Managed web app scanning Findings: Critical, High, Medium, Low severity Integration: Export ไป SIEM, Pub/Sub notifications Best practice: Enable Premium สำหรับ production, set up notifications สำหรับ critical findings"
+    },
+    {
+      "vocab": "How do you implement identity and access management best practices?",
+      "pronunciation": "IAM Best Practices",
+      "meaning": "Implement IAM best practices อย่างไร?",
+      "example": "Principles: 1) Least privilege: Minimum permissions needed. 2) Separation of duties: No single person has full control. 3) Defense in depth: Multiple security layers. Best practices: 1) Use groups, not individual users. 2) Avoid primitive roles (Owner, Editor). 3) Use predefined roles when possible. 4) Custom roles for specific needs. 5) Audit IAM regularly. Service accounts: 1) Dedicated SA per service. 2) No user-managed keys (use attached SA). 3) Workload Identity for GKE. Organization policies: Constraints at org/folder level. Examples: Disable service account key creation, restrict public IPs. IAM Recommender: ML-based suggestions to remove excess permissions. Audit: Cloud Audit Logs, IAM Analyzer.",
+      "exampleTranslation": "Principles: 1) Least privilege: Minimum permissions ที่ต้องการ 2) Separation of duties: ไม่มีคนเดียวมี full control 3) Defense in depth: หลาย security layers Best practices: 1) ใช้ groups, ไม่ใช่ individual users 2) หลีกเลี่ยง primitive roles (Owner, Editor) 3) ใช้ predefined roles เมื่อเป็นไปได้ 4) Custom roles สำหรับ specific needs 5) Audit IAM regularly Service accounts: 1) Dedicated SA ต่อ service 2) No user-managed keys (ใช้ attached SA) 3) Workload Identity สำหรับ GKE Organization policies: Constraints ที่ org/folder level Examples: Disable service account key creation, restrict public IPs IAM Recommender: ML-based suggestions เพื่อ remove excess permissions Audit: Cloud Audit Logs, IAM Analyzer"
+    },
+    {
+      "vocab": "What is Web Security Scanner?",
+      "pronunciation": "Web Security Scanner",
+      "meaning": "Web Security Scanner คืออะไร?",
+      "example": "Web Security Scanner: Managed vulnerability scanner for web applications. Detects: XSS, SQL injection, SSRF, insecure libraries, mixed content. Supported targets: App Engine, Compute Engine, GKE with public IPs. How it works: 1) Create scan config (start URLs, auth). 2) Crawler discovers pages. 3) Scanner tests for vulnerabilities. 4) Results in Security Command Center. Authentication: Google account, custom account, or none. Scan types: Managed scans (automated) or custom scans. Scheduling: One-time or recurring. Limitations: Public URLs only, may not find all vulnerabilities. Best practice: Run in staging first, use with other security tools, review results regularly.",
+      "exampleTranslation": "Web Security Scanner: Managed vulnerability scanner สำหรับ web applications Detects: XSS, SQL injection, SSRF, insecure libraries, mixed content Supported targets: App Engine, Compute Engine, GKE กับ public IPs วิธีทำงาน: 1) สร้าง scan config (start URLs, auth) 2) Crawler discovers pages 3) Scanner tests vulnerabilities 4) Results ใน Security Command Center Authentication: Google account, custom account, หรือ none Scan types: Managed scans (automated) หรือ custom scans Scheduling: One-time หรือ recurring Limitations: Public URLs เท่านั้น, อาจหา vulnerabilities ไม่ครบ Best practice: Run ใน staging ก่อน, ใช้กับ security tools อื่น, review results regularly"
+    },
+    {
+      "vocab": "How do you implement security for Cloud Storage?",
+      "pronunciation": "Cloud Storage Security",
+      "meaning": "Implement security สำหรับ Cloud Storage อย่างไร?",
+      "example": "Access control: 1) Uniform bucket-level: IAM only (recommended). 2) Fine-grained: ACLs + IAM. IAM roles: Storage Admin, Object Admin, Object Viewer, Object Creator. Public access: 1) Prevent via org policy. 2) Public access prevention setting on bucket. Encryption: 1) Google-managed keys (default). 2) CMEK (Cloud KMS). 3) CSEK (customer-supplied). Data protection: 1) Object versioning. 2) Object retention policies. 3) Bucket lock (compliance). Signed URLs/Policy documents: Time-limited access without IAM. VPC Service Controls: Prevent exfiltration. Audit: Data access logs for read/write operations. Best practice: Uniform access, CMEK for sensitive data, org policies to prevent public buckets.",
+      "exampleTranslation": "Access control: 1) Uniform bucket-level: IAM only (recommended) 2) Fine-grained: ACLs + IAM IAM roles: Storage Admin, Object Admin, Object Viewer, Object Creator Public access: 1) Prevent ผ่าน org policy 2) Public access prevention setting บน bucket Encryption: 1) Google-managed keys (default) 2) CMEK (Cloud KMS) 3) CSEK (customer-supplied) Data protection: 1) Object versioning 2) Object retention policies 3) Bucket lock (compliance) Signed URLs/Policy documents: Time-limited access โดยไม่ต้อง IAM VPC Service Controls: Prevent exfiltration Audit: Data access logs สำหรับ read/write operations Best practice: Uniform access, CMEK สำหรับ sensitive data, org policies ป้องกัน public buckets"
+    }
+  ]
+}

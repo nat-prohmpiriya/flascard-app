@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - GKE Advanced",
+    "description": "Google Kubernetes Engine advanced topics: Autopilot, Node pools, Workload Identity, Security, และ Service Mesh",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "gke", "kubernetes", "containers"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is the difference between GKE Standard and Autopilot?",
+      "pronunciation": "GKE Modes",
+      "meaning": "ความแตกต่างระหว่าง GKE Standard และ Autopilot?",
+      "example": "GKE Standard: Full control over nodes, you manage node pools, pay per node (VM). Responsibilities: Node scaling, security patches, node configuration. GKE Autopilot: Fully managed, Google manages nodes, pay per pod resources. Features: Auto node provisioning, built-in security hardening, no node SSH. Comparison: Standard = more control, custom configurations. Autopilot = less ops, cost-efficient for variable workloads. Use Standard when: Need GPU/TPU, specific machine types, DaemonSets, privileged containers. Use Autopilot when: Want minimal ops, standard workloads, predictable billing per pod.",
+      "exampleTranslation": "GKE Standard: Full control over nodes, คุณจัดการ node pools, จ่ายต่อ node (VM) Responsibilities: Node scaling, security patches, node configuration GKE Autopilot: Fully managed, Google จัดการ nodes, จ่ายต่อ pod resources Features: Auto node provisioning, built-in security hardening, no node SSH Comparison: Standard = control มากกว่า, custom configurations Autopilot = ops น้อยกว่า, cost-efficient สำหรับ variable workloads ใช้ Standard เมื่อ: ต้องการ GPU/TPU, specific machine types, DaemonSets, privileged containers ใช้ Autopilot เมื่อ: ต้องการ minimal ops, standard workloads, predictable billing per pod"
+    },
+    {
+      "vocab": "How do you configure and manage GKE node pools?",
+      "pronunciation": "Node Pools",
+      "meaning": "Configure และจัดการ GKE node pools อย่างไร?",
+      "example": "Node pool: Group of nodes with same configuration. Key settings: 1) Machine type (e2-medium, n2-standard-4, etc.). 2) Node count (initial, min, max for autoscaling). 3) Disk type/size. 4) Node labels and taints. 5) Preemptible/Spot VMs (cost saving). Autoscaling: Cluster autoscaler adds/removes nodes based on pod demand. Node auto-provisioning: Automatically create node pools for unschedulable pods. Upgrade strategies: Surge upgrade (extra nodes during upgrade), Blue-green upgrade. Best practices: Separate pools for different workloads (CPU-intensive, memory-intensive), use taints/tolerations for isolation.",
+      "exampleTranslation": "Node pool: Group of nodes ที่มี configuration เหมือนกัน Key settings: 1) Machine type (e2-medium, n2-standard-4, etc.) 2) Node count (initial, min, max สำหรับ autoscaling) 3) Disk type/size 4) Node labels และ taints 5) Preemptible/Spot VMs (ประหยัด cost) Autoscaling: Cluster autoscaler เพิ่ม/ลบ nodes ตาม pod demand Node auto-provisioning: สร้าง node pools อัตโนมัติสำหรับ unschedulable pods Upgrade strategies: Surge upgrade (extra nodes ระหว่าง upgrade), Blue-green upgrade Best practices: แยก pools สำหรับ workloads ต่างกัน (CPU-intensive, memory-intensive), ใช้ taints/tolerations สำหรับ isolation"
+    },
+    {
+      "vocab": "What is Workload Identity and why is it important?",
+      "pronunciation": "Workload Identity",
+      "meaning": "Workload Identity คืออะไร และสำคัญอย่างไร?",
+      "example": "Workload Identity: Recommended way for GKE workloads to access GCP APIs. Maps Kubernetes Service Account (KSA) to GCP Service Account (GSA). Why important: 1) No need for service account keys. 2) Per-pod identity. 3) Least privilege access. 4) Auditable via Cloud Audit Logs. Setup: 1) Enable Workload Identity on cluster. 2) Create GSA with required permissions. 3) Create KSA in namespace. 4) Bind KSA to GSA: gcloud iam service-accounts add-iam-policy-binding. 5) Annotate KSA with GSA email. Pod uses: Automatically gets GSA credentials via metadata server. Best practice: Always use Workload Identity instead of key files.",
+      "exampleTranslation": "Workload Identity: วิธีที่แนะนำสำหรับ GKE workloads เข้าถึง GCP APIs Map Kubernetes Service Account (KSA) ไป GCP Service Account (GSA) ทำไมสำคัญ: 1) ไม่ต้องใช้ service account keys 2) Per-pod identity 3) Least privilege access 4) Auditable ผ่าน Cloud Audit Logs Setup: 1) Enable Workload Identity บน cluster 2) สร้าง GSA กับ permissions ที่ต้องการ 3) สร้าง KSA ใน namespace 4) Bind KSA ไป GSA: gcloud iam service-accounts add-iam-policy-binding 5) Annotate KSA ด้วย GSA email Pod ใช้: ได้รับ GSA credentials อัตโนมัติผ่าน metadata server Best practice: ใช้ Workload Identity เสมอแทน key files"
+    },
+    {
+      "vocab": "How do you implement GKE security best practices?",
+      "pronunciation": "GKE Security",
+      "meaning": "Implement GKE security best practices อย่างไร?",
+      "example": "Cluster security: 1) Private cluster (no public IPs on nodes). 2) Master authorized networks. 3) Shielded GKE nodes. 4) Workload Identity. 5) Binary Authorization. Workload security: 1) Pod Security Standards (Restricted, Baseline). 2) Network Policies (limit pod-to-pod traffic). 3) Secrets encryption with Cloud KMS. 4) Container image scanning. Node security: 1) Auto-upgrade enabled. 2) Secure boot. 3) Containerd runtime. 4) No SSH access (Autopilot). RBAC: Limit permissions with Roles/ClusterRoles. GKE Security Posture: Dashboard showing misconfigurations. Best practice: Defense in depth - multiple layers of security.",
+      "exampleTranslation": "Cluster security: 1) Private cluster (no public IPs บน nodes) 2) Master authorized networks 3) Shielded GKE nodes 4) Workload Identity 5) Binary Authorization Workload security: 1) Pod Security Standards (Restricted, Baseline) 2) Network Policies (limit pod-to-pod traffic) 3) Secrets encryption ด้วย Cloud KMS 4) Container image scanning Node security: 1) Auto-upgrade enabled 2) Secure boot 3) Containerd runtime 4) No SSH access (Autopilot) RBAC: Limit permissions ด้วย Roles/ClusterRoles GKE Security Posture: Dashboard แสดง misconfigurations Best practice: Defense in depth - หลาย layers ของ security"
+    },
+    {
+      "vocab": "What are Network Policies in GKE?",
+      "pronunciation": "Network Policies",
+      "meaning": "Network Policies ใน GKE คืออะไร?",
+      "example": "Network Policy: Kubernetes resource to control pod-to-pod traffic. Default: All pods can communicate with all pods. Enable: Create cluster with --enable-network-policy or use Dataplane V2. Policy types: Ingress (incoming), Egress (outgoing). Selectors: podSelector (which pods policy applies to), namespaceSelector. Example: Allow only frontend pods to talk to backend. YAML: kind: NetworkPolicy, spec.podSelector, spec.ingress.from. Best practices: 1) Default deny all, then allow specific. 2) Use labels consistently. 3) Test policies in non-prod first. GKE Dataplane V2: Built on Cilium, better performance, native Network Policy support.",
+      "exampleTranslation": "Network Policy: Kubernetes resource เพื่อ control pod-to-pod traffic Default: ทุก pods สื่อสารกับทุก pods ได้ Enable: สร้าง cluster กับ --enable-network-policy หรือใช้ Dataplane V2 Policy types: Ingress (incoming), Egress (outgoing) Selectors: podSelector (pods ไหนที่ policy apply), namespaceSelector Example: Allow only frontend pods คุยกับ backend YAML: kind: NetworkPolicy, spec.podSelector, spec.ingress.from Best practices: 1) Default deny all, แล้ว allow specific 2) ใช้ labels consistently 3) Test policies ใน non-prod ก่อน GKE Dataplane V2: Built on Cilium, performance ดีกว่า, native Network Policy support"
+    },
+    {
+      "vocab": "How does GKE autoscaling work?",
+      "pronunciation": "GKE Autoscaling",
+      "meaning": "GKE autoscaling ทำงานอย่างไร?",
+      "example": "Three types of autoscaling: 1) Horizontal Pod Autoscaler (HPA): Scale pods based on CPU/memory/custom metrics. 2) Vertical Pod Autoscaler (VPA): Adjust pod resource requests/limits. 3) Cluster Autoscaler (CA): Add/remove nodes based on pending pods. HPA: Set minReplicas, maxReplicas, targetCPUUtilizationPercentage. VPA modes: Off (recommendations only), Initial (set at creation), Auto (continuous adjustment). CA: Enabled per node pool, respects PodDisruptionBudget. Node Auto-provisioning: Creates new node pools automatically. Multidimensional Pod Autoscaling: HPA + VPA together. Best practice: Set resource requests accurately for effective autoscaling.",
+      "exampleTranslation": "Three types of autoscaling: 1) Horizontal Pod Autoscaler (HPA): Scale pods ตาม CPU/memory/custom metrics 2) Vertical Pod Autoscaler (VPA): Adjust pod resource requests/limits 3) Cluster Autoscaler (CA): เพิ่ม/ลบ nodes ตาม pending pods HPA: Set minReplicas, maxReplicas, targetCPUUtilizationPercentage VPA modes: Off (recommendations only), Initial (set at creation), Auto (continuous adjustment) CA: Enabled per node pool, respects PodDisruptionBudget Node Auto-provisioning: สร้าง node pools ใหม่อัตโนมัติ Multidimensional Pod Autoscaling: HPA + VPA ด้วยกัน Best practice: Set resource requests ให้ accurate สำหรับ effective autoscaling"
+    },
+    {
+      "vocab": "What is Anthos Service Mesh and when to use it?",
+      "pronunciation": "Anthos Service Mesh",
+      "meaning": "Anthos Service Mesh คืออะไร และใช้เมื่อไหร่?",
+      "example": "Anthos Service Mesh (ASM): Managed Istio-based service mesh. Features: 1) Traffic management (canary, blue-green, traffic splitting). 2) Security (mTLS, authorization policies). 3) Observability (metrics, traces, topology). Components: Control plane (managed by Google), Data plane (Envoy sidecars). Installation: asmcli or Fleet API. Traffic features: VirtualService, DestinationRule, Gateway. Security: PeerAuthentication (mTLS), AuthorizationPolicy. Use cases: Microservices communication, zero-trust security, advanced traffic control, multi-cluster connectivity. vs Cloud Run: ASM for complex microservices needing traffic control and observability.",
+      "exampleTranslation": "Anthos Service Mesh (ASM): Managed Istio-based service mesh Features: 1) Traffic management (canary, blue-green, traffic splitting) 2) Security (mTLS, authorization policies) 3) Observability (metrics, traces, topology) Components: Control plane (managed by Google), Data plane (Envoy sidecars) Installation: asmcli หรือ Fleet API Traffic features: VirtualService, DestinationRule, Gateway Security: PeerAuthentication (mTLS), AuthorizationPolicy Use cases: Microservices communication, zero-trust security, advanced traffic control, multi-cluster connectivity vs Cloud Run: ASM สำหรับ complex microservices ที่ต้องการ traffic control และ observability"
+    },
+    {
+      "vocab": "How do you manage GKE cluster upgrades?",
+      "pronunciation": "GKE Upgrades",
+      "meaning": "จัดการ GKE cluster upgrades อย่างไร?",
+      "example": "Upgrade components: 1) Control plane (master). 2) Node pools. Release channels: Rapid (newest), Regular (balanced), Stable (most tested). Auto-upgrade: Enabled by default in release channels. Maintenance windows: Schedule when upgrades can occur. Exclusions: Block upgrades during critical periods. Upgrade strategies: 1) Surge upgrade: Add extra nodes during upgrade. 2) Blue-green: Create new node pool, migrate, delete old. Node upgrade process: Cordon → Drain → Upgrade → Uncordon. PodDisruptionBudget: Ensures minimum available pods during drain. Best practices: Use release channels, set maintenance windows, test upgrades in non-prod, have PDBs for critical workloads.",
+      "exampleTranslation": "Upgrade components: 1) Control plane (master) 2) Node pools Release channels: Rapid (newest), Regular (balanced), Stable (most tested) Auto-upgrade: Enabled by default ใน release channels Maintenance windows: Schedule ว่า upgrades เกิดได้เมื่อไหร่ Exclusions: Block upgrades ในช่วง critical periods Upgrade strategies: 1) Surge upgrade: เพิ่ม extra nodes ระหว่าง upgrade 2) Blue-green: สร้าง node pool ใหม่, migrate, delete เก่า Node upgrade process: Cordon → Drain → Upgrade → Uncordon PodDisruptionBudget: รับประกัน minimum available pods ระหว่าง drain Best practices: ใช้ release channels, set maintenance windows, test upgrades ใน non-prod, มี PDBs สำหรับ critical workloads"
+    },
+    {
+      "vocab": "What is GKE Gateway controller?",
+      "pronunciation": "GKE Gateway",
+      "meaning": "GKE Gateway controller คืออะไร?",
+      "example": "Gateway API: Next-generation Kubernetes ingress, replacing traditional Ingress. GKE Gateway controller: Google's implementation of Gateway API. Resources: 1) GatewayClass: Defines load balancer type. 2) Gateway: Defines listeners (ports, protocols). 3) HTTPRoute: Routing rules. Advantages over Ingress: 1) Multi-tenant (shared gateway, separate routes). 2) More expressive routing. 3) Better role separation. 4) Cross-namespace routing. GKE GatewayClasses: gke-l7-global-external-managed, gke-l7-regional-external-managed, gke-l7-rilb (internal). Features: Header-based routing, traffic splitting, URL rewrites, redirects. Best practice: Use Gateway API for new deployments, migrate from Ingress gradually.",
+      "exampleTranslation": "Gateway API: Next-generation Kubernetes ingress, แทนที่ traditional Ingress GKE Gateway controller: Google's implementation ของ Gateway API Resources: 1) GatewayClass: Defines load balancer type 2) Gateway: Defines listeners (ports, protocols) 3) HTTPRoute: Routing rules Advantages over Ingress: 1) Multi-tenant (shared gateway, separate routes) 2) More expressive routing 3) Better role separation 4) Cross-namespace routing GKE GatewayClasses: gke-l7-global-external-managed, gke-l7-regional-external-managed, gke-l7-rilb (internal) Features: Header-based routing, traffic splitting, URL rewrites, redirects Best practice: ใช้ Gateway API สำหรับ deployments ใหม่, migrate จาก Ingress gradually"
+    },
+    {
+      "vocab": "How do you implement multi-cluster GKE?",
+      "pronunciation": "Multi-cluster GKE",
+      "meaning": "Implement multi-cluster GKE อย่างไร?",
+      "example": "Use cases: High availability, disaster recovery, geo-distributed apps, dev/prod separation. Fleet: Logical grouping of clusters. Features: Centralized management, consistent policies. Multi-cluster Services (MCS): Service discovery across clusters. Setup: Register clusters to Fleet, enable MCS. Multi-cluster Ingress (MCI): Global load balancing across clusters. Benefits: Single anycast IP, automatic failover, geo-routing. Config Sync: GitOps for multi-cluster config management. Anthos: Full multi-cluster platform (GKE + on-prem + other clouds). Best practices: Use Fleet for management, MCS for service discovery, implement consistent security policies across clusters.",
+      "exampleTranslation": "Use cases: High availability, disaster recovery, geo-distributed apps, dev/prod separation Fleet: Logical grouping ของ clusters Features: Centralized management, consistent policies Multi-cluster Services (MCS): Service discovery across clusters Setup: Register clusters ไป Fleet, enable MCS Multi-cluster Ingress (MCI): Global load balancing across clusters Benefits: Single anycast IP, automatic failover, geo-routing Config Sync: GitOps สำหรับ multi-cluster config management Anthos: Full multi-cluster platform (GKE + on-prem + other clouds) Best practices: ใช้ Fleet สำหรับ management, MCS สำหรับ service discovery, implement consistent security policies across clusters"
+    }
+  ]
+}

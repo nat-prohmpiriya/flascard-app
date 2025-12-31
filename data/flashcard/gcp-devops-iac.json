@@ -1,0 +1,70 @@
+{
+  "version": "2.0",
+  "exportedAt": "2024-12-31T10:00:00.000Z",
+  "deck": {
+    "name": "GCP DevOps - Infrastructure as Code",
+    "description": "Terraform, Deployment Manager, และ Config Connector สำหรับ GCP infrastructure management",
+    "category": "DevOps",
+    "tags": ["gcp", "devops", "terraform", "iac", "infrastructure"],
+    "sourceLang": "en",
+    "targetLang": "th"
+  },
+  "cards": [
+    {
+      "vocab": "What is Terraform and how does it work with GCP?",
+      "pronunciation": "Terraform Basics",
+      "meaning": "Terraform คืออะไร และทำงานกับ GCP อย่างไร?",
+      "example": "Terraform: Open-source IaC tool by HashiCorp. Declarative configuration using HCL (HashiCorp Configuration Language). GCP Provider: google and google-beta providers. Key concepts: 1) Resources: GCP objects (VMs, networks, etc.). 2) State: Tracks real infrastructure. 3) Plan: Preview changes before apply. 4) Apply: Create/update resources. Workflow: Write .tf files → terraform init → terraform plan → terraform apply. State storage: Local or remote (Cloud Storage bucket recommended). Best practice: Use remote state with locking to prevent conflicts.",
+      "exampleTranslation": "Terraform: Open-source IaC tool โดย HashiCorp ใช้ declarative configuration ด้วย HCL (HashiCorp Configuration Language) GCP Provider: google และ google-beta providers Key concepts: 1) Resources: GCP objects (VMs, networks, etc.) 2) State: Track real infrastructure 3) Plan: Preview changes ก่อน apply 4) Apply: Create/update resources Workflow: เขียน .tf files → terraform init → terraform plan → terraform apply State storage: Local หรือ remote (แนะนำ Cloud Storage bucket) Best practice: ใช้ remote state กับ locking เพื่อป้องกัน conflicts"
+    },
+    {
+      "vocab": "How do you structure Terraform projects for GCP?",
+      "pronunciation": "Terraform Project Structure",
+      "meaning": "โครงสร้าง Terraform projects สำหรับ GCP อย่างไร?",
+      "example": "Recommended structure: 1) Monorepo with environments: /environments/dev, /environments/prod, /modules. 2) Separate repos per environment. Key files: main.tf (resources), variables.tf (inputs), outputs.tf (exports), terraform.tfvars (values), backend.tf (state config). Modules: Reusable components, versioned, stored in registry or git. Workspaces: Separate state per environment (dev, staging, prod). Best practices: Use modules for repeated patterns, separate state per environment, use variable files per env, implement CI/CD for terraform (Cloud Build + Terraform).",
+      "exampleTranslation": "Recommended structure: 1) Monorepo with environments: /environments/dev, /environments/prod, /modules 2) Separate repos per environment Key files: main.tf (resources), variables.tf (inputs), outputs.tf (exports), terraform.tfvars (values), backend.tf (state config) Modules: Reusable components, versioned, เก็บใน registry หรือ git Workspaces: Separate state ต่อ environment (dev, staging, prod) Best practices: ใช้ modules สำหรับ repeated patterns, แยก state ต่อ environment, ใช้ variable files ต่อ env, implement CI/CD สำหรับ terraform (Cloud Build + Terraform)"
+    },
+    {
+      "vocab": "What is Terraform state and how to manage it securely?",
+      "pronunciation": "Terraform State Management",
+      "meaning": "Terraform state คืออะไร และจัดการอย่างปลอดภัยอย่างไร?",
+      "example": "State file: JSON file tracking resource mappings and metadata. Contains sensitive data (passwords, keys). Remote backends for GCP: Cloud Storage bucket with versioning. Configuration: terraform { backend \"gcs\" { bucket = \"my-tf-state\" prefix = \"terraform/state\" } }. Security: 1) Enable bucket versioning (recovery). 2) Enable Object Lock (prevent deletion). 3) Use CMEK encryption. 4) Restrict IAM (only CI/CD service account). 5) Enable audit logging. State locking: Automatic with GCS backend, prevents concurrent modifications. Commands: terraform state list, terraform state show, terraform import.",
+      "exampleTranslation": "State file: JSON file ที่ track resource mappings และ metadata มี sensitive data (passwords, keys) Remote backends สำหรับ GCP: Cloud Storage bucket กับ versioning Configuration: terraform { backend \"gcs\" { bucket = \"my-tf-state\" prefix = \"terraform/state\" } } Security: 1) Enable bucket versioning (recovery) 2) Enable Object Lock (prevent deletion) 3) ใช้ CMEK encryption 4) Restrict IAM (only CI/CD service account) 5) Enable audit logging State locking: Automatic กับ GCS backend, ป้องกัน concurrent modifications Commands: terraform state list, terraform state show, terraform import"
+    },
+    {
+      "vocab": "How do you use Terraform modules for GCP?",
+      "pronunciation": "Terraform Modules",
+      "meaning": "ใช้ Terraform modules สำหรับ GCP อย่างไร?",
+      "example": "Modules: Reusable, encapsulated Terraform configurations. Sources: 1) Local: ./modules/vpc. 2) Git: git::https://github.com/org/module.git. 3) Terraform Registry: hashicorp/google. 4) GCS: gcs::https://storage.googleapis.com/bucket/module.zip. Google Cloud Foundation Toolkit: Official modules for GCP best practices (project-factory, network, kubernetes-engine). Usage: module \"vpc\" { source = \"terraform-google-modules/network/google\" version = \"~> 7.0\" project_id = var.project_id network_name = \"my-vpc\" }. Best practice: Pin module versions, use official Google modules when available.",
+      "exampleTranslation": "Modules: Reusable, encapsulated Terraform configurations Sources: 1) Local: ./modules/vpc 2) Git: git::https://github.com/org/module.git 3) Terraform Registry: hashicorp/google 4) GCS: gcs::https://storage.googleapis.com/bucket/module.zip Google Cloud Foundation Toolkit: Official modules สำหรับ GCP best practices (project-factory, network, kubernetes-engine) Usage: module \"vpc\" { source = \"terraform-google-modules/network/google\" version = \"~> 7.0\" project_id = var.project_id network_name = \"my-vpc\" } Best practice: Pin module versions, ใช้ official Google modules เมื่อมี"
+    },
+    {
+      "vocab": "What is Google Cloud Deployment Manager?",
+      "pronunciation": "Deployment Manager",
+      "meaning": "Google Cloud Deployment Manager คืออะไร?",
+      "example": "Deployment Manager: GCP-native IaC service. Uses YAML/Jinja2/Python templates. Components: 1) Configuration: YAML file defining resources. 2) Templates: Reusable Jinja2 or Python. 3) Deployment: Collection of resources. Features: Preview changes, automatic rollback, parallel resource creation. Commands: gcloud deployment-manager deployments create/update/delete. Limitations: GCP-only, less ecosystem than Terraform, slower updates for new features. Use cases: GCP-only environments, simple deployments, when Terraform not allowed. Comparison: Terraform preferred for multi-cloud, larger community, better state management.",
+      "exampleTranslation": "Deployment Manager: GCP-native IaC service ใช้ YAML/Jinja2/Python templates Components: 1) Configuration: YAML file defining resources 2) Templates: Reusable Jinja2 หรือ Python 3) Deployment: Collection of resources Features: Preview changes, automatic rollback, parallel resource creation Commands: gcloud deployment-manager deployments create/update/delete Limitations: GCP-only, ecosystem น้อยกว่า Terraform, updates ช้าสำหรับ features ใหม่ Use cases: GCP-only environments, simple deployments, เมื่อไม่อนุญาตใช้ Terraform Comparison: Terraform preferred สำหรับ multi-cloud, community ใหญ่กว่า, state management ดีกว่า"
+    },
+    {
+      "vocab": "What is Config Connector and when to use it?",
+      "pronunciation": "Config Connector",
+      "meaning": "Config Connector คืออะไร และใช้เมื่อไหร่?",
+      "example": "Config Connector: Kubernetes add-on to manage GCP resources via K8s manifests. How it works: Define GCP resources as K8s Custom Resources (CRDs), Config Connector reconciles with GCP. Installation: GKE add-on or manual install. Example: apiVersion: sql.cnrm.cloud.google.com/v1beta1, kind: SQLInstance. Benefits: 1) GitOps workflow with K8s tools (Argo CD, Flux). 2) Unified K8s + GCP management. 3) Familiar kubectl interface. 4) Automatic drift detection. Use cases: K8s-centric teams, GitOps adoption, managing GCP resources alongside K8s workloads. vs Terraform: Config Connector for K8s-native, Terraform for broader IaC.",
+      "exampleTranslation": "Config Connector: Kubernetes add-on เพื่อจัดการ GCP resources ผ่าน K8s manifests วิธีทำงาน: Define GCP resources เป็น K8s Custom Resources (CRDs), Config Connector reconciles กับ GCP Installation: GKE add-on หรือ manual install Example: apiVersion: sql.cnrm.cloud.google.com/v1beta1, kind: SQLInstance Benefits: 1) GitOps workflow กับ K8s tools (Argo CD, Flux) 2) Unified K8s + GCP management 3) Familiar kubectl interface 4) Automatic drift detection Use cases: K8s-centric teams, GitOps adoption, managing GCP resources alongside K8s workloads vs Terraform: Config Connector สำหรับ K8s-native, Terraform สำหรับ broader IaC"
+    },
+    {
+      "vocab": "How do you implement CI/CD for Terraform on GCP?",
+      "pronunciation": "Terraform CI/CD",
+      "meaning": "Implement CI/CD สำหรับ Terraform บน GCP อย่างไร?",
+      "example": "Pipeline stages: 1) Validate: terraform fmt -check, terraform validate. 2) Plan: terraform plan -out=plan.tfplan. 3) Security scan: tfsec, checkov, terrascan. 4) Manual approval (for prod). 5) Apply: terraform apply plan.tfplan. Cloud Build example: steps with hashicorp/terraform image. Service account: Needs permissions for managed resources. State locking: Prevents concurrent applies. Best practices: 1) Separate pipelines per environment. 2) Require PR approval before merge. 3) Plan on PR, apply on merge. 4) Store plan output as artifact. 5) Use workload identity for Cloud Build.",
+      "exampleTranslation": "Pipeline stages: 1) Validate: terraform fmt -check, terraform validate 2) Plan: terraform plan -out=plan.tfplan 3) Security scan: tfsec, checkov, terrascan 4) Manual approval (สำหรับ prod) 5) Apply: terraform apply plan.tfplan Cloud Build example: steps กับ hashicorp/terraform image Service account: ต้องมี permissions สำหรับ managed resources State locking: ป้องกัน concurrent applies Best practices: 1) Separate pipelines ต่อ environment 2) Require PR approval ก่อน merge 3) Plan on PR, apply on merge 4) Store plan output เป็น artifact 5) ใช้ workload identity สำหรับ Cloud Build"
+    },
+    {
+      "vocab": "What are Terraform best practices for GCP enterprise?",
+      "pronunciation": "Terraform Enterprise Best Practices",
+      "meaning": "Terraform best practices สำหรับ GCP enterprise?",
+      "example": "Organization: 1) Use separate projects per environment. 2) Implement folder hierarchy. 3) Centralized shared services project. Security: 1) Least privilege service accounts. 2) No hardcoded credentials. 3) Use Secret Manager for sensitive values. 4) Enable audit logging. Code quality: 1) Use terraform fmt and validate in CI. 2) Implement policy as code (Sentinel, OPA). 3) Document with terraform-docs. 4) Use pre-commit hooks. State: 1) Remote state per project/environment. 2) State file encryption. 3) Regular state backups. Modules: 1) Version all modules. 2) Use private module registry. 3) Follow Google Cloud Foundation Toolkit patterns.",
+      "exampleTranslation": "Organization: 1) ใช้ separate projects ต่อ environment 2) Implement folder hierarchy 3) Centralized shared services project Security: 1) Least privilege service accounts 2) No hardcoded credentials 3) ใช้ Secret Manager สำหรับ sensitive values 4) Enable audit logging Code quality: 1) ใช้ terraform fmt และ validate ใน CI 2) Implement policy as code (Sentinel, OPA) 3) Document ด้วย terraform-docs 4) ใช้ pre-commit hooks State: 1) Remote state ต่อ project/environment 2) State file encryption 3) Regular state backups Modules: 1) Version all modules 2) ใช้ private module registry 3) Follow Google Cloud Foundation Toolkit patterns"
+    }
+  ]
+}
