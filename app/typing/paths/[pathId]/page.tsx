@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect, useRef, use } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
@@ -45,6 +45,8 @@ export default function TypingPathPlayPage({ params }: PageProps) {
   const [loading, setLoading] = useState(true);
   const [showResults, setShowResults] = useState(false);
   const [showStageList, setShowStageList] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const autoSaveTriggeredRef = useRef(false);
 
   // Load path and current stage
   useEffect(() => {
@@ -102,6 +104,7 @@ export default function TypingPathPlayPage({ params }: PageProps) {
     setCurrentStage(stage);
     setShowResults(false);
     setShowStageList(false);
+    autoSaveTriggeredRef.current = false;
     reset();
 
     try {
@@ -113,9 +116,10 @@ export default function TypingPathPlayPage({ params }: PageProps) {
     }
   };
 
-  const handleSaveProgress = async () => {
+  const handleSaveProgress = async (showToast = true) => {
     if (!path || !currentStage) return;
 
+    setIsSaving(true);
     try {
       const updatedPath = await updateStageProgress(
         path.id,
@@ -127,19 +131,36 @@ export default function TypingPathPlayPage({ params }: PageProps) {
 
       // Check if stage was completed
       const updatedStage = updatedPath.stages[currentStage.order];
-      if (updatedStage.status === 'completed' && currentStage.status !== 'completed') {
-        toast.success('Stage completed! Next stage unlocked.');
-      } else {
-        toast.success('Progress saved!');
+      if (showToast) {
+        if (updatedStage.status === 'completed' && currentStage.status !== 'completed') {
+          toast.success('Stage completed! Next stage unlocked.');
+        } else {
+          toast.success('Progress saved!');
+        }
       }
 
       // Update current stage
       setCurrentStage(updatedStage);
     } catch (error) {
       console.error('Failed to save progress:', error);
-      toast.error('Failed to save progress');
+      if (showToast) {
+        toast.error('Failed to save progress');
+      }
+    } finally {
+      setIsSaving(false);
     }
   };
+
+  // Auto-save when typing is completed
+  useEffect(() => {
+    const autoSave = async () => {
+      if (showResults && path && currentStage && !autoSaveTriggeredRef.current) {
+        autoSaveTriggeredRef.current = true;
+        await handleSaveProgress(false);
+      }
+    };
+    autoSave();
+  }, [showResults]);
 
   const handleNextStage = async () => {
     if (!path || !currentStage) return;
@@ -162,6 +183,7 @@ export default function TypingPathPlayPage({ params }: PageProps) {
 
   const handleRestart = () => {
     setShowResults(false);
+    autoSaveTriggeredRef.current = false;
     reset();
   };
 
@@ -413,17 +435,21 @@ export default function TypingPathPlayPage({ params }: PageProps) {
                     <RotateCcw className="h-4 w-4 mr-2" />
                     Try Again
                   </Button>
-                  <Button onClick={handleSaveProgress}>
-                    Save Progress
-                  </Button>
-                  {stats.wpm >= currentStage.targetWpm &&
-                    stats.accuracy >= currentStage.targetAccuracy &&
-                    currentStage.order < path.stages.length - 1 && (
-                      <Button onClick={handleNextStage} variant="default">
-                        Next Stage
-                        <ChevronRight className="h-4 w-4 ml-2" />
-                      </Button>
-                    )}
+                  {currentStage.order < path.stages.length - 1 && (
+                    <Button onClick={handleNextStage} variant="default" disabled={isSaving}>
+                      {isSaving ? (
+                        <>
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                          Saving...
+                        </>
+                      ) : (
+                        <>
+                          Next Stage
+                          <ChevronRight className="h-4 w-4 ml-2" />
+                        </>
+                      )}
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
